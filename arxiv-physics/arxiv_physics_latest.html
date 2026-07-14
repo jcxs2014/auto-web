@@ -145,6 +145,9 @@
   .nav-toggle.off { opacity: 0.5; background: var(--bg-card); border-color: var(--border); color: var(--text-mute); }
   .theme-toggle { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; padding: 6px 12px; border-radius: 8px; font-size: 13px; color: var(--text); background: var(--accent-soft); border: 1px solid var(--accent-soft-border); cursor: pointer; transition: all 0.15s; white-space: nowrap; }
   .theme-toggle:hover { background: var(--accent-soft-border); }
+  .nav-links { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; }
+  .hamburger { display: none; align-items: center; justify-content: center; padding: 6px 12px; border-radius: 8px; font-size: 18px; line-height: 1; color: var(--text); background: var(--accent-soft); border: 1px solid var(--accent-soft-border); cursor: pointer; transition: all 0.15s; }
+  .hamburger:hover { background: var(--accent-soft-border); }
   @media (max-width: 1024px) {
     .grid { grid-template-columns: repeat(2, 1fr); }
   }
@@ -152,7 +155,11 @@
     .hero { padding: 32px 16px 28px; }
     .hero-stats { gap: 8px; }
     .chip-stat { padding: 6px 10px; font-size: 12px; }
-    .nav-inner { padding: 10px max(16px,env(safe-area-inset-right)) 10px max(16px,env(safe-area-inset-left)); }
+    .nav-inner { padding: 10px max(16px,env(safe-area-inset-right)) 10px max(16px,env(safe-area-inset-left)); flex-wrap: nowrap; overflow: visible; position: relative; gap: 8px; }
+    .hamburger { display: inline-flex; }
+    .nav-links { position: absolute; top: 100%; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 6px; padding: 10px 16px 14px; background: var(--nav-bg); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid var(--border); box-shadow: var(--shadow); }
+    .nav.menu-open .nav-links { display: flex; }
+    .nav-link { width: 100%; justify-content: space-between; padding: 11px 14px; font-size: 15px; }
     main { padding: 24px 16px 48px; }
     .grid { grid-template-columns: 1fr; gap: 12px; }
     .card { padding: 16px; }
@@ -176,7 +183,7 @@
     <span class="hero-eyebrow">⚛️ arXiv · Physics Latest</span>
     <h1 class="hero-title">物理最新论文 · 2026年7月15日 周三</h1>
     <p class="hero-sub">按提交时间倒序，每主题取最近 12 篇，共 <strong>60</strong> 篇</p>
-    <p class="hero-window">抓取时间：7月15日 04:44（北京时间） · 数据源：arXiv API (export.arxiv.org)</p>
+    <p class="hero-window">抓取时间：7月15日 04:54（北京时间） · 数据源：arXiv API (export.arxiv.org)</p>
     <p class="hero-cats">覆盖类别：<code>hep-th/hep-ph/hep-ex · physics.space-ph · gr-qc · astro-ph.HE · physics.ins-det</code></p>
     <div class="hero-stats">
       <span class="total-pill"><span class="num">60</span><span class="lbl">篇论文</span></span>
@@ -184,7 +191,7 @@
     </div>
   </div>
 </header>
-<nav class="nav"><div class="nav-inner"><a href="#hep" class="nav-link"><span class="nav-emoji">⚛️</span>高能物理<span class="nav-count">12</span></a><a href="#space" class="nav-link"><span class="nav-emoji">🛰️</span>空间物理<span class="nav-count">12</span></a><a href="#grqc" class="nav-link"><span class="nav-emoji">🕳️</span>广义相对论<span class="nav-count">12</span></a><a href="#astrohe" class="nav-link"><span class="nav-emoji">🌌</span>高能天体物理<span class="nav-count">12</span></a><a href="#detector" class="nav-link"><span class="nav-emoji">🔬</span>探测器与仪器<span class="nav-count">12</span></a><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="zh-toggle" class="nav-toggle" type="button">🌐 中文</button></div></nav>
+<nav class="nav"><div class="nav-inner"><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button><span class="nav-links"><a href="#hep" class="nav-link"><span class="nav-emoji">⚛️</span>高能物理<span class="nav-count">12</span></a><a href="#space" class="nav-link"><span class="nav-emoji">🛰️</span>空间物理<span class="nav-count">12</span></a><a href="#grqc" class="nav-link"><span class="nav-emoji">🕳️</span>广义相对论<span class="nav-count">12</span></a><a href="#astrohe" class="nav-link"><span class="nav-emoji">🌌</span>高能天体物理<span class="nav-count">12</span></a><a href="#detector" class="nav-link"><span class="nav-emoji">🔬</span>探测器与仪器<span class="nav-count">12</span></a></span><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="zh-toggle" class="nav-toggle" type="button">🌐 中文</button></div></nav>
 <main>
 
       <section id="hep" class="section">
@@ -1846,6 +1853,15 @@
       try { localStorage.setItem('theme', next); } catch(e) {}
       sync();
     });
+  })();
+  (function() {
+    var h = document.getElementById('nav-hamburger');
+    var nav = document.querySelector('.nav');
+    if (!h || !nav) return;
+    function set(open) { nav.classList.toggle('menu-open', open); h.textContent = open ? '✕' : '☰'; h.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+    h.addEventListener('click', function() { set(!nav.classList.contains('menu-open')); });
+    Array.prototype.forEach.call(nav.querySelectorAll('.nav-link'), function(a) { a.addEventListener('click', function() { set(false); }); });
+    document.addEventListener('click', function(e) { if (nav.classList.contains('menu-open') && !nav.contains(e.target)) set(false); });
   })();
 </script>
 </body>
