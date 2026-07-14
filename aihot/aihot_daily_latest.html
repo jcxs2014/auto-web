@@ -142,6 +142,8 @@
     border: 1px solid var(--border); padding: 3px 10px; border-radius: 999px;
     max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
+  .card-extra { font-size: 11px; color: var(--accent-3); background: var(--accent3-soft); border: 1px solid var(--accent3-soft-border); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .card-date { font-size: 11px; color: var(--text-mute); }
   .card-title { font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); }
   .card-summary { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
   .card-foot { display: flex; gap: 8px; margin-top: auto; padding-top: 4px; }
@@ -181,14 +183,14 @@
     <span class="hero-eyebrow">⚡ AI HOT · Daily Briefing</span>
     <h1 class="hero-title">AI 日报 · 2026年7月14日 周二</h1>
     <p class="hero-date">数据窗口：7月13日 08:00 — 7月14日 08:00（北京时间）</p>
-    <p class="hero-window">生成时间：7月14日 08:00（北京时间） · 数据源：AI HOT (aihot.virxact.com)</p>
+    <p class="hero-window">生成时间：7月14日 08:00（北京时间） · 多源聚合：AI HOT · Hugging Face · Hacker News · arXiv</p>
     <div class="hero-stats">
-      <span class="total-pill"><span class="num">12</span><span class="lbl">条精选</span></span>
-      <span class="chip-stat"><span class="chip-emoji">🧠</span><span class="chip-label">模型发布/更新</span><span class="chip-num">2</span></span><span class="chip-stat"><span class="chip-emoji">🚀</span><span class="chip-label">产品发布/更新</span><span class="chip-num">1</span></span><span class="chip-stat"><span class="chip-emoji">📰</span><span class="chip-label">行业动态</span><span class="chip-num">4</span></span><span class="chip-stat"><span class="chip-emoji">📄</span><span class="chip-label">论文研究</span><span class="chip-num">1</span></span><span class="chip-stat"><span class="chip-emoji">💡</span><span class="chip-label">技巧与观点</span><span class="chip-num">4</span></span>
+      <span class="total-pill"><span class="num">45</span><span class="lbl">条精选</span></span>
+      <span class="chip-stat"><span class="chip-emoji">🧠</span><span class="chip-label">模型发布/更新</span><span class="chip-num">2</span></span><span class="chip-stat"><span class="chip-emoji">🚀</span><span class="chip-label">产品发布/更新</span><span class="chip-num">1</span></span><span class="chip-stat"><span class="chip-emoji">📰</span><span class="chip-label">行业动态</span><span class="chip-num">4</span></span><span class="chip-stat"><span class="chip-emoji">📄</span><span class="chip-label">论文研究</span><span class="chip-num">1</span></span><span class="chip-stat"><span class="chip-emoji">💡</span><span class="chip-label">技巧与观点</span><span class="chip-num">4</span></span><span class="chip-stat"><span class="chip-emoji">🔬</span><span class="chip-label"> Hugging Face 论文</span><span class="chip-num">12</span></span><span class="chip-stat"><span class="chip-emoji">💬</span><span class="chip-label"> Hacker News 热议</span><span class="chip-num">14</span></span><span class="chip-stat"><span class="chip-emoji">📄</span><span class="chip-label"> arXiv 最新 AI</span><span class="chip-num">7</span></span>
     </div>
   </div>
 </header>
-<nav class="nav"><div class="nav-inner"><a class="home-link" href="../index.html" title="返回首页">← 首页</a><span class="nav-brand">📰 AI HOT 科技日报</span><span class="nav-links"><a href="#models" class="nav-link"><span class="nav-emoji">🧠</span>模型发布/更新<span class="nav-count">2</span></a><a href="#products" class="nav-link"><span class="nav-emoji">🚀</span>产品发布/更新<span class="nav-count">1</span></a><a href="#industry" class="nav-link"><span class="nav-emoji">📰</span>行业动态<span class="nav-count">4</span></a><a href="#papers" class="nav-link"><span class="nav-emoji">📄</span>论文研究<span class="nav-count">1</span></a><a href="#tips" class="nav-link"><span class="nav-emoji">💡</span>技巧与观点<span class="nav-count">4</span></a></span><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button></div></nav>
+<nav class="nav"><div class="nav-inner"><a class="home-link" href="../index.html" title="返回首页">← 首页</a><span class="nav-brand">📰 AI HOT 科技日报</span><span class="nav-links"><a href="#models" class="nav-link"><span class="nav-emoji">🧠</span>模型发布/更新<span class="nav-count">2</span></a><a href="#products" class="nav-link"><span class="nav-emoji">🚀</span>产品发布/更新<span class="nav-count">1</span></a><a href="#industry" class="nav-link"><span class="nav-emoji">📰</span>行业动态<span class="nav-count">4</span></a><a href="#papers" class="nav-link"><span class="nav-emoji">📄</span>论文研究<span class="nav-count">1</span></a><a href="#tips" class="nav-link"><span class="nav-emoji">💡</span>技巧与观点<span class="nav-count">4</span></a><a href="#hf" class="nav-link"><span class="nav-emoji">🔬</span> Hugging Face 论文<span class="nav-count">12</span></a><a href="#hn" class="nav-link"><span class="nav-emoji">💬</span> Hacker News 热议<span class="nav-count">14</span></a><a href="#arxiv" class="nav-link"><span class="nav-emoji">📄</span> arXiv 最新 AI<span class="nav-count">7</span></a></span><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button></div></nav>
 <main>
 
       <section id="models" class="section">
@@ -396,9 +398,500 @@
         </article>
         </div>
       </section>
+      <section id="hf" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🔬</span> Hugging Face 论文</h2>
+          <span class="sec-count">12 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Weak-to-Strong Generalization via Direct On-Policy Distillation</h3>
+          <p class="card-summary">Reinforcement learning with verifiable rewards (RLVR) is a p…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.05394" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-08</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">ABot-N1: Toward a General Visual Language Navigation Foundation Model</h3>
+          <p class="card-summary">Visual Language Navigation foundation models aim to unify de…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.10383" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-11</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory</h3>
+          <p class="card-summary">Recent VLM and VLA systems have improved robotic perception…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.10350" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-11</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">4D Human-Scene Reconstruction from Low-Overlap Captures</h3>
+          <p class="card-summary">Existing volumetric capture of dynamic human performance ach…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.09125" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-10</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">LightMem-Ego: Your AI Memory for Everyday Life</h3>
+          <p class="card-summary">Personal AI assistants on mobile and wearable devices contin…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.11487" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification</h3>
+          <p class="card-summary">Large language models (LLMs) have achieved remarkable perfor…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.11849" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Metacognition in LLMs: Foundations, Progress, and Opportunities</h3>
+          <p class="card-summary">Metacognition is a foundational component of intelligence cr…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.11881" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">EgoSteer: A Full-Stack System Towards Steerable Dexterous Manipulation from Egocentric Videos</h3>
+          <p class="card-summary">Steerability is a defining capability of generalist robot po…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.09701" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-06-21</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">09</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Proxy Exploration and Reusable Guidance: A Modular LLM Post-Training Paradigm via Proxy-Guided Update Signals</h3>
+          <p class="card-summary">Post-training is essential for refining the domain-specific…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.11505" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">10</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">NeuroCogMap Reveals Cognitive Organization of Large Language Models</h3>
+          <p class="card-summary">Understanding how complex cognitive functions are organized…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.00397" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-01</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">11</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">MET: Theory-Grounded and Culture-Aware Multilingual Moral Reasoning</h3>
+          <p class="card-summary">Language models are increasingly used for moral decision-mak…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.11736" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">12</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">CtrlVTON: Controllable Virtual Try-On via Visual-Instance-Prompt Segmentation</h3>
+          <p class="card-summary">Virtual try-on (VTO) has made significant progress in realis…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2607.09362" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-10</span>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="hn" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">💬</span> Hacker News 热议</h2>
+          <span class="sec-count">14 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 4229 · 💬 1668</span>
+          </div>
+          <h3 class="card-title">Don&#x27;t post generated/AI-edited comments. HN is for conversation between humans</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://news.ycombinator.com/newsguidelines.html#generated" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-03-11</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2544 · 💬 296</span>
+          </div>
+          <h3 class="card-title">Airfoil</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://ciechanow.ski/airfoil/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2024-02-27</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2360 · 💬 887</span>
+          </div>
+          <h3 class="card-title">Open source AI is the path forward</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2024-07-23</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2356 · 💬 2826</span>
+          </div>
+          <h3 class="card-title">My AI skeptic friends are all nuts</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://fly.io/blog/youre-all-nuts/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2025-06-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2346 · 💬 951</span>
+          </div>
+          <h3 class="card-title">An AI agent published a hit piece on me</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-02-12</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1773 · 💬 1628</span>
+          </div>
+          <h3 class="card-title">LLM Inevitabilism</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://tomrenner.com/posts/llm-inevitabilism/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2025-07-15</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1654 · 💬 1261</span>
+          </div>
+          <h3 class="card-title">Learning to Reason with LLMs</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://openai.com/index/learning-to-reason-with-llms/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2024-09-12</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1592 · 💬 131</span>
+          </div>
+          <h3 class="card-title">LLM Visualization</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://bbycroft.net/llm" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2023-12-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">09</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1351 · 💬 1056</span>
+          </div>
+          <h3 class="card-title">DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via RL</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2501.12948" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2025-01-25</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">10</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1202 · 💬 439</span>
+          </div>
+          <h3 class="card-title">A small number of samples can poison LLMs of any size</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.anthropic.com/research/small-samples-poison" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2025-10-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">11</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1359 · 💬 273</span>
+          </div>
+          <h3 class="card-title">Show HN: 40k HN comments mentioning books, extracted using deep learning</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://hacker-recommended-books.vercel.app/category/0/all-time/page/0/0" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2021-09-20</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">12</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 799 · 💬 81</span>
+          </div>
+          <h3 class="card-title">Fast.ai releases new deep learning course, libraries, and book</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.fast.ai/2020/08/21/fastai2-launch/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2020-08-21</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">13</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 794 · 💬 260</span>
+          </div>
+          <h3 class="card-title">The Limitations of Deep Learning</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://blog.keras.io/the-limitations-of-deep-learning.html" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2017-07-17</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">14</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 720 · 💬 43</span>
+          </div>
+          <h3 class="card-title">Learn TensorFlow and deep learning, without a Ph.D.</h3>
+          <p class="card-summary"></p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://cloud.google.com/blog/big-data/2017/01/learn-tensorflow-and-deep-learning-without-a-phd" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2017-01-23</span>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="arxiv" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">📄</span> arXiv 最新 AI</h2>
+          <span class="sec-count">7 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">Metacognition in LLMs: Foundations, Progress, and Opportunities</h3>
+          <p class="card-summary">Metacognition is a foundational component of intelligence cr…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2607.11881v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks</h3>
+          <p class="card-summary">We present a theoretical framework to explain the emergence…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2607.11875v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation</h3>
+          <p class="card-summary">Recent work in humanoid whole-body control has found success…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2607.11874v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias</h3>
+          <p class="card-summary">Existing studies of LLM-as-judge scoring bias work predomina…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2607.11871v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.LG]</span>
+          </div>
+          <h3 class="card-title">Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data</h3>
+          <p class="card-summary">Compression is fundamental to intelligence. A model that can…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2607.11883v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.LG]</span>
+          </div>
+          <h3 class="card-title">A Durability and Cross-Language Transfer Benchmark for a Validated Teaching-Feedback Classification Protocol</h3>
+          <p class="card-summary">Institutions collect far more open-ended teaching-evaluation…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2607.11873v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.CL]</span>
+          </div>
+          <h3 class="card-title">AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification</h3>
+          <p class="card-summary">Large language models (LLMs) have achieved remarkable perfor…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2607.11849v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-07-13</span>
+          </div>
+        </article>
+        </div>
+      </section>
 </main>
 <footer>
-  共 <strong>12</strong> 条 · 数据来源 <a href="https://aihot.virxact.com/daily/2026-07-14" target="_blank" rel="noopener noreferrer">AI HOT 日报 2026-07-14</a> ·   本页面由 AI HOT 数据接口生成 · 时间已转换为北京时间
+  共 <strong>45</strong> 条 · 多源聚合：AI HOT · Hugging Face Papers · Hacker News · arXiv cs.AI/LG/CL · 时间已转换为北京时间
 </footer>
 <script>
   (function() {
