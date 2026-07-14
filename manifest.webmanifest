@@ -1,0 +1,23 @@
+{
+  "name": "auto-web 仪表盘",
+  "short_name": "auto-web",
+  "description": "AI 热点 / arXiv 物理论文 / 综合中文热点 自动生成仪表盘",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#3b7df0",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
