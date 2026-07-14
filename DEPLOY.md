@@ -63,6 +63,49 @@ git push          # 触发 Cloudflare 自动重新部署（方式 B）
 # 方式 A 则改用：wrangler deploy
 ```
 
+## 自动更新流水线
+
+内容由每日定时任务刷新生成 HTML，之后通过本仓库的 `sync.sh` 自动上线：
+
+```bash
+# 在每日生成任务生成 HTML 之后运行
+bash /Users/jcxs2014/Sites/Workbuddy/auto-web/sync.sh
+```
+
+`sync.sh` 会依次执行：检测变更 → `git commit` → `git push`（保留版本历史）→ `wrangler deploy`（当前方式 A 上线）。无变更时直接退出，避免空部署。
+
+**前置条件（本机一次性配置）**：
+- SSH key 已加入 GitHub，且 push 时无密码短语交互（若 key 有密码短语，需用 `ssh-agent` 或改用无密码 key，否则 cron / launchd 会卡住）
+- 已执行 `wrangler login` 缓存部署令牌
+- 若改用控制台 Git 集成（方式 B），`git push` 即自动部署，`sync.sh` 中的 `wrangler deploy` 可省略（保留亦幂等无害）
+
+**定时调度（可选）**：推荐把 `sync.sh` 串到每日生成任务末尾。若需独立定时，可用 launchd（以下示例每日 03:30，须晚于生成任务完成时间）：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.auto-web.sync</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/jcxs2014/Sites/Workbuddy/auto-web/sync.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>3</integer>
+    <key>Minute</key><integer>30</integer>
+  </dict>
+  <key>WorkingDirectory</key>
+  <string>/Users/jcxs2014/Sites/Workbuddy/auto-web</string>
+</dict>
+</plist>
+```
+
+保存为 `~/Library/LaunchAgents/com.auto-web.sync.plist`，加载：`launchctl load ~/Library/LaunchAgents/com.auto-web.sync.plist`。
+
 ## Pages vs Workers + Assets 对照
 
 | | Pages（旧 / 维护中） | Workers + Static Assets（新 / 推荐） |

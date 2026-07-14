@@ -13,6 +13,12 @@
 
 入口页 `index.html` 以卡片形式链接到上述子页，CSS/JS 全部内联，子页通过相对路径引用，部署后不会断链。
 
+## 部署背景（重要）
+
+> Cloudflare 自 2025-04 起将 **Pages 列入维护模式（deprecated）**，新控制台默认只提供 "Create a Worker"。本仓库改用官方主推的 **Workers + Static Assets** 方案部署，功能等价、未来可持续维护。
+>
+> 部署配置见 `wrangler.jsonc`（仓库根），详细步骤见 `DEPLOY.md`。线上地址：**https://auto-web.jcxs2014.workers.dev**
+
 ## 目录结构
 
 ```
@@ -24,8 +30,11 @@ auto-web/
 ├── arxiv-physics/
 │   ├── arxiv_physics_latest.html   # arXiv 物理最新论文
 │   └── arxiv_physics_2026-07-14.html # arXiv 物理历史（按日期）
+├── wrangler.jsonc                  # Cloudflare Workers + Static Assets 配置
+├── sync.sh                         # 每日自动同步脚本（提交 + 推送 + 部署）
 ├── .gitignore
-└── README.md
+├── README.md
+└── DEPLOY.md
 ```
 
 ## 技术特性
@@ -34,25 +43,21 @@ auto-web/
 - **零构建**：源文件即部署文件，CI 构建命令留空
 - **自包含**：相对路径引用，可整体拷贝到任意静态托管
 
-## 部署
-
-通过 Cloudflare Pages 的 **Git 集成** 自动部署：
-
-1. Cloudflare Pages → Connect to Git → 选择 `jcxs2014/auto-web`
-2. 构建设置：**Framework preset = None**、**Build command = 留空**、**Build output directory = `.`**
-3. 部署后获得免费域名 `https://auto-web.pages.dev`
-
-### 本地更新流程
+## 本地更新流程
 
 ```bash
 cd /Users/jcxs2014/Sites/Workbuddy/auto-web
 # 修改内容后
 git add -A
 git commit -m "update content"
-git push   # 触发 Cloudflare Pages 自动重新部署
+git push                              # 方式 B（Git 集成）自动部署
+# 方式 A（CLI）则改跑：wrangler deploy
 ```
+
+每日内容由定时任务刷新后，可直接运行 `bash sync.sh` 完成"提交 → 推送 → 部署"全流程（详见 `DEPLOY.md` 的自动更新流水线一节）。
 
 ## 仓库
 
 - GitHub: https://github.com/jcxs2014/auto-web
 - 默认分支：`main`
+- 线上站点：https://auto-web.jcxs2014.workers.dev
