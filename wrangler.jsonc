@@ -5,6 +5,7 @@
   "compatibility_date": "2026-07-14",
   "assets": {
     "directory": ".",               // 静态资源目录 = 仓库根（无构建，直接托管）
+    "html_handling": "none",        // 直接以 .html 路径返回 200，消除 *.html → 无扩展名的 307 重定向
     "not_found_handling": "404-page" // 多页站用 404-page（可选自建 404.html）；勿用 single-page-application
   }
   // 未设置 main 字段 → 纯静态资源 Worker，无服务端 JS
