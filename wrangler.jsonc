@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers + Static Assets 配置（替代已弃用的 Pages）
+  // 纯静态站点，无构建步骤，仓库根目录即为站点内容
+  "name": "auto-web",
+  "compatibility_date": "2026-07-14",
+  "assets": {
+    "directory": ".",               // 静态资源目录 = 仓库根（无构建，直接托管）
+    "not_found_handling": "404-page" // 多页站用 404-page（可选自建 404.html）；勿用 single-page-application
+  }
+  // 未设置 main 字段 → 纯静态资源 Worker，无服务端 JS
+}
