@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>auto-web · 自动生成网页索引</title>
+<style>
+  :root{
+    --bg:#f4f7fb; --bg-2:#ffffff; --bg-3:#eef2f8;
+    --card:#ffffff; --card-hover:#f3f6fb;
+    --border:#e2e7f0; --border-2:#cfd8e6;
+    --text:#16202e; --text-dim:#5a6478; --text-faint:#8590a3;
+    --accent:#3b7df0; --accent-2:#6a4cf0; --accent-3:#0c9e8b;
+    --radius:16px;
+    --accent-soft:rgba(59,125,240,0.10);
+    --accent-soft-border:rgba(59,125,240,0.28);
+    --accent3-soft:rgba(12,158,139,0.10);
+    --accent3-soft-border:rgba(12,158,139,0.26);
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d1117; --bg-2:#161b22; --bg-3:#1c2330;
+    --card:#161b22; --card-hover:#1b2230;
+    --border:#2a3340; --border-2:#36415a;
+    --text:#e6edf3; --text-dim:#9aa7b4; --text-faint:#6b7686;
+    --accent:#6ea8ff; --accent-2:#8b7bff; --accent-3:#4fd1c5;
+    --radius:16px;
+    --accent-soft:rgba(110,168,255,0.06);
+    --accent-soft-border:#36415a;
+    --accent3-soft:rgba(79,209,197,0.10);
+    --accent3-soft-border:rgba(79,209,197,0.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:radial-gradient(1200px 600px at 15% -10%,rgba(110,168,255,.10),transparent 60%),
+               radial-gradient(1000px 500px at 90% 0%,rgba(139,123,255,.10),transparent 55%),
+               var(--bg);
+    color:var(--text); min-height:100vh; line-height:1.6; padding:0 20px 60px;
+  }
+  .wrap{max-width:1100px;margin:0 auto}
+
+  /* Hero */
+  .hero{padding:64px 8px 40px;text-align:center}
+  .hero .kicker{
+    display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em;
+    color:var(--accent);text-transform:uppercase;font-weight:600;
+    border:1px solid var(--border-2);border-radius:999px;padding:6px 16px;margin-bottom:22px;
+    background:var(--accent-soft);
+  }
+  .hero h1{
+    font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.02em;line-height:1.15;
+    background:linear-gradient(120deg,var(--text) 30%,var(--accent) 75%,var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .hero p{color:var(--text-dim);font-size:16px;margin-top:14px;max-width:620px;margin-left:auto;margin-right:auto}
+  .stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .stat{
+    background:var(--bg-2);border:1px solid var(--border);border-radius:14px;
+    padding:14px 22px;min-width:120px;
+  }
+  .stat b{display:block;font-size:26px;font-weight:800;color:var(--text)}
+  .stat span{font-size:12px;color:var(--text-faint);letter-spacing:.04em}
+
+  /* Section title */
+  .sec-title{display:flex;align-items:center;gap:12px;margin:46px 4px 22px}
+  .sec-title h2{font-size:20px;font-weight:700}
+  .sec-title .line{flex:1;height:1px;background:linear-gradient(90deg,var(--border-2),transparent)}
+
+  /* Grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+  .card{
+    position:relative;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:24px;display:flex;flex-direction:column;gap:14px;overflow:hidden;
+    transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  }
+  .card::before{
+    content:"";position:absolute;inset:0 0 auto 0;height:3px;
+    background:linear-gradient(90deg,var(--c1,var(--accent)),var(--c2,var(--accent-2)));
+    opacity:.9;
+  }
+  .card:hover{transform:translateY(-4px);border-color:var(--border-2);background:var(--card-hover)}
+  .card-top{display:flex;align-items:center;gap:14px}
+  .card-icon{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:26px;
+    background:linear-gradient(135deg,var(--accent-soft),var(--accent-soft));
+    border:1px solid var(--border-2);flex:none;
+  }
+  .card h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
+  .chip{
+    display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;
+    color:var(--accent-3);background:var(--accent3-soft);border:1px solid var(--accent3-soft-border);
+    border-radius:999px;padding:3px 10px;margin-top:4px;
+  }
+  .card p.desc{color:var(--text-dim);font-size:14px;flex:1}
+  .meta{display:flex;gap:16px;font-size:12px;color:var(--text-faint);border-top:1px solid var(--border);padding-top:12px}
+  .meta b{color:var(--text-dim);font-weight:600}
+  .links{display:flex;gap:10px;margin-top:4px}
+  .btn{
+    flex:1;text-align:center;text-decoration:none;font-size:14px;font-weight:600;
+    padding:10px 14px;border-radius:10px;transition:all .15s ease;
+  }
+  .btn-primary{color:#0d1117;background:linear-gradient(120deg,var(--accent),var(--accent-2));border:none}
+  .btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  .btn-ghost{color:var(--text-dim);background:var(--bg-3);border:1px solid var(--border)}
+  .btn-ghost:hover{color:var(--text);border-color:var(--border-2)}
+
+  .theme-toggle{
+    position:fixed;top:16px;right:18px;z-index:100;
+    display:inline-flex;align-items:center;gap:6px;
+    padding:8px 14px;border-radius:10px;font-size:13px;font-weight:600;
+    color:var(--text);background:var(--card);border:1px solid var(--border-2);
+    box-shadow:var(--shadow);cursor:pointer;transition:all .15s ease;
+  }
+  .theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
+
+  .empty{
+    grid-column:1/-1;text-align:center;color:var(--text-faint);
+    border:1px dashed var(--border-2);border-radius:var(--radius);padding:48px 20px;
+  }
+
+  footer{
+    text-align:center;color:var(--text-faint);font-size:12.5px;margin-top:54px;line-height:1.8;
+  }
+  footer a{color:var(--accent);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:640px){
+    .hero{padding:44px 4px 28px}
+    .grid{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+<script>
+  (function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+</head>
+<body>
+<button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">⚡ AUTO-WEB</div>
+    <h1>自动生成网页索引</h1>
+    <p>每日定时拉取并生成的资讯 / 论文仪表盘，集中在此入口。点开任意卡片即可查看当日最新内容。</p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <div class="sec-title">
+    <h2>📂 仪表盘</h2>
+    <div class="line"></div>
+  </div>
+
+  <main class="grid" id="grid"></main>
+
+  <footer>
+    本页为 <strong>auto-web</strong> 自动生成内容的统一入口 · 数据由每日定时任务刷新<br>
+    新增主题只需在页面脚本的 <code>DASHBOARDS</code> 数组中追加一项即可
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================================
+ *  DASHBOARDS —— 仪表盘清单（单一数据源，新增主题只需在此数组追加一个对象）
+ *  字段说明：
+ *    key      唯一标识（英文，用作锚点）
+ *    title    显示标题
+ *    icon     卡片图标 emoji
+ *    tag      分类标签（小徽标）
+ *    desc     一句话描述
+ *    latest   稳定书签路径（每日覆盖的最新版）
+ *    archive  历史归档目录（含 dated 副本）
+ *    updated  最近生成日期（YYYY-MM-DD，可手填或脚本维护）
+ *    scale    规模说明，如 "12 条/日" / "60 篇/日"
+ *    c1, c2   卡片顶部渐变条颜色（可选，默认蓝紫）
+ * ========================================================================= */
+const DASHBOARDS = [
+  {
+    key: "aihot",
+    title: "AI HOT 每日科技日报",
+    icon: "📰",
+    tag: "科技资讯",
+    desc: "AI HOT 每日精选 5 大版块科技动态：模型发布/更新、产品发布/更新、行业动态、论文研究、技巧与观点。",
+    latest: "aihot/aihot_daily_latest.html",
+    archive: "aihot/",
+    updated: "2026-07-14",
+    scale: "12 条 / 日",
+    c1: "#6ea8ff", c2: "#8b7bff"
+  },
+  {
+    key: "arxiv-physics",
+    title: "arXiv 物理最新论文",
+    icon: "🔭",
+    tag: "学术论文",
+    desc: "高能 / 空间 / 量子 / 引力 / 天体 / 探测器 6 主题最新预印本，含自动中文翻译与 LaTeX 公式渲染。",
+    latest: "arxiv-physics/arxiv_physics_latest.html",
+    archive: "arxiv-physics/",
+    updated: "2026-07-14",
+    scale: "60 篇 / 日",
+    c1: "#a78bfa", c2: "#6ea8ff"
+  }
+  /* 例：新增一个主题只需复制下面这段并改字段
+  ,{
+    key: "my-topic",
+    title: "我的新主题",
+    icon: "🌟",
+    tag: "分类",
+    desc: "一句话描述。",
+    latest: "my-topic/latest.html",
+    archive: "my-topic/",
+    updated: "2026-07-14",
+    scale: "N 条 / 日",
+    c1: "#4fd1c5", c2: "#6ea8ff"
+  }
+  */
+];
+
+(function render(){
+  const grid = document.getElementById("grid");
+  const stats = document.getElementById("stats");
+
+  // 统计条
+  stats.innerHTML = `
+    <div class="stat"><b>${DASHBOARDS.length}</b><span>仪表盘数量</span></div>
+    <div class="stat"><b>每日</b><span>自动刷新</span></div>
+    <div class="stat"><b>纯静态</b><span>无外部依赖</span></div>
+  `;
+
+  if(!DASHBOARDS.length){
+    grid.innerHTML = `<div class="empty">暂无仪表盘 —— 在脚本的 DASHBOARDS 数组中添加一项即可。</div>`;
+    return;
+  }
+
+  grid.innerHTML = DASHBOARDS.map(d => `
+    <article class="card" id="${d.key}" style="--c1:${d.c1||'#6ea8ff'};--c2:${d.c2||'#8b7bff'}">
+      <div class="card-top">
+        <div class="card-icon">${d.icon}</div>
+        <div>
+          <h3>${d.title}</h3>
+          <span class="chip">${d.tag}</span>
+        </div>
+      </div>
+      <p class="desc">${d.desc}</p>
+      <div class="meta">
+        <span>更新 <b>${d.updated}</b></span>
+        <span>规模 <b>${d.scale}</b></span>
+      </div>
+      <div class="links">
+        <a class="btn btn-primary" href="${d.latest}" target="_blank" rel="noopener noreferrer">打开仪表盘 →</a>
+        <a class="btn btn-ghost" href="${d.archive}" target="_blank" rel="noopener noreferrer">历史归档</a>
+      </div>
+    </article>
+  `).join("");
+})();
+</script>
+<script>
+  (function(){
+    var btn=document.getElementById('theme-toggle');
+    if(!btn)return;
+    function sync(){var dark=document.documentElement.getAttribute('data-theme')==='dark';btn.innerHTML=dark?'☀️ 亮色':'🌙 暗色';}
+    sync();
+    btn.addEventListener('click',function(){
+      var dark=document.documentElement.getAttribute('data-theme')==='dark';
+      var next=dark?'light':'dark';
+      document.documentElement.setAttribute('data-theme',next);
+      try{localStorage.setItem('theme',next);}catch(e){}
+      sync();
+    });
+  })();
+</script>
+</body>
+</html>
