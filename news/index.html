@@ -20,7 +20,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.6;transition:background .25s,color .25s}
+  background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .25s,color .25s}
 
 :root{
   --nav-line:var(--line, var(--border));
@@ -94,24 +94,24 @@ h2{font-size:20px;display:flex;align-items:center;gap:10px;margin-bottom:14px;
 }
 .card{position:relative;display:flex;flex-direction:column;gap:5px;text-decoration:none;
   background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 14px 13px 46px;
-  box-shadow:var(--shadow);transition:transform .12s,border-color .12s,background .25s;min-height:62px}
+  box-shadow:var(--shadow);transition:transform .12s,border-color .12s,background .25s;min-height:62px;min-width:0;overflow-wrap:anywhere}
 .card:hover{transform:translateY(-2px);border-color:var(--accent2)}
 .rank{position:absolute;left:12px;top:13px;width:26px;height:26px;border-radius:8px;
   display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;
   background:var(--pill-bg);color:var(--accent)}
 .card-title{font-size:15px;font-weight:600;color:var(--text);text-decoration:none;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
 .card-title.zh{color:var(--accent2)}
 .card-title:hover{color:var(--accent2)}
 .card-sub{font-size:12px;color:var(--muted);
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
 .card-sub2{font-size:12px;color:var(--muted)}
 .card-summary{font-size:13px;color:var(--muted);margin-top:2px;line-height:1.5;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
 .card.expandable{min-height:auto;padding-bottom:14px}
 .card-detail{padding-top:9px;margin-top:5px;border-top:1px dashed var(--line);
   font-size:13.5px;line-height:1.7;color:var(--text)}
-.card-detail p{margin:0 0 8px}
+.card-detail p{margin:0 0 8px;overflow-wrap:anywhere}
 .toggle{margin-top:8px;align-self:flex-start;cursor:pointer;border:1px solid var(--line);
   background:var(--pill-bg);color:var(--accent2);padding:8px 14px;border-radius:8px;font-size:13px;min-height:38px}
 .toggle:hover{border-color:var(--accent2)}
