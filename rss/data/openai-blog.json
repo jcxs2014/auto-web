@@ -1,0 +1,108 @@
+{
+  "name": "OpenAI Blog",
+  "url": "https://openai.com/news/rss.xml",
+  "category": "AI",
+  "lang": "en",
+  "entries": [
+    {
+      "title": "The US is advancing AI safety through state and federal action",
+      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+      "summary": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-15 12:00",
+      "ts": 1784116800,
+      "content": ""
+    },
+    {
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+      "summary": "Explore GPT-Red, OpenAI’s automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-15 10:00",
+      "ts": 1784109600,
+      "content": ""
+    },
+    {
+      "title": "How to manage AI investments in the agentic era",
+      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
+      "summary": "Learn how enterprises can manage AI investments in the agentic era by measuring useful work per dollar, improving efficiency, and scaling high-value workflows.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-14 10:00",
+      "ts": 1784023200,
+      "content": ""
+    },
+    {
+      "title": "How data science teams use ChatGPT Work",
+      "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+      "summary": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-14 00:00",
+      "ts": 1783987200,
+      "content": ""
+    },
+    {
+      "title": "How sales teams use ChatGPT Work",
+      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "summary": "See how sales teams can use ChatGPT Work to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-14 00:00",
+      "ts": 1783987200,
+      "content": ""
+    },
+    {
+      "title": "How Deutsche Telekom is rewiring telecommunications with AI",
+      "url": "https://openai.com/index/deutsche-telekom",
+      "summary": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-10 07:00",
+      "ts": 1783666800,
+      "content": ""
+    },
+    {
+      "title": "Getting started with ChatGPT",
+      "url": "https://openai.com/academy/getting-started",
+      "summary": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-10 00:00",
+      "ts": 1783641600,
+      "content": ""
+    },
+    {
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+      "summary": "Learn how GPT-5.6 powers Microsoft 365 Copilot with stronger AI capabilities across Word, Excel, PowerPoint, Chat, and Cowork for faster, higher-quality work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-09 13:00",
+      "ts": 1783602000,
+      "content": ""
+    },
+    {
+      "title": "GPT-5.5 Bio Bug Bounty",
+      "url": "https://openai.com/index/bio-bug-bounty",
+      "summary": "Details about the OpenAI Bio Bounty program",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-09 10:00",
+      "ts": 1783591200,
+      "content": ""
+    },
+    {
+      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+      "url": "https://openai.com/index/gpt-5-6",
+      "summary": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-09 10:00",
+      "ts": 1783591200,
+      "content": ""
+    }
+  ]
+}
