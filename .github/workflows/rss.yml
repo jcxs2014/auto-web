@@ -1,10 +1,11 @@
-name: Daily content update
+name: RSS update
 
+# 每个订阅源只保留最近 7 天文章，且希望内容尽量新鲜 → 高频更新（每 6 小时一次）
+# 对应意大利（CEST, UTC+2）02:00 / 08:00 / 14:00 / 20:00
+# GitHub 免费层 scheduled run 可能延迟数分钟~数小时，属正常。
 on:
   schedule:
-    # 每天意大利（CEST, UTC+2）06:00 / 12:00 / 18:00 各跑一次 = UTC 04:00 / 10:00 / 16:00。
-    # GitHub 免费层 scheduled run 可能有数分钟~数小时延迟，属正常。
-    - cron: "0 4,10,16 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:  # 允许在 Actions 标签手动触发一次
 
 # 允许 GITHUB_TOKEN 把生成结果推送回仓库
@@ -12,9 +13,9 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  rss:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,5 +38,11 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git
 
-      - name: Generate all pages and push
-        run: bash gen_all.sh
+      - name: Generate RSS reader
+        run: |
+          cd generators
+          python gen_rss_reader.py
+          cd ..
+
+      - name: Commit and push (rss)
+        run: bash sync.sh rss
