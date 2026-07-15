@@ -32,12 +32,15 @@ git commit -m "auto: update content $(date '+%Y-%m-%d')"
 # 2. 推送到 GitHub（保留完整版本历史）
 git push origin main
 
-# 3. 部署到 Cloudflare（当前为 Workers + Static Assets，方式 A：wrangler deploy）
-#    若已改用控制台 Git 集成（方式 B），git push 已自动部署，此步可省略（保留亦幂等无害）
+# 3. 部署到 Cloudflare：优先用本地 wrangler 部署（含 worker.js 动态代理），
+#    若未安装/未登录则退回依赖 Git 集成（git push 已自动上线）。两步均幂等无害。
 if command -v wrangler >/dev/null 2>&1; then
   wrangler deploy
+elif command -v npx >/dev/null 2>&1; then
+  echo "==> 尝试 npx wrangler deploy（未登录会自动失败，可忽略）"
+  npx --yes wrangler deploy || echo "==> wrangler deploy 未执行（需先 wrangler login）；worker 依赖 Cloudflare Git 集成自动上线"
 else
-  echo "==> 未检测到 wrangler，跳过部署（如已配置 Git 集成，git push 即自动上线）"
+  echo "==> 未检测到 wrangler/npx，跳过 worker 部署（纯静态由 git push 上线）"
 fi
 
 echo "==> [$(date '+%Y-%m-%d %H:%M:%S')] auto-web 同步完成"
