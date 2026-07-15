@@ -126,7 +126,7 @@ __FOOTER_CSS__
 .reader-meta .src-pill{font-size:11.5px}
 .reader-origin{color:var(--accent2);text-decoration:none;font-weight:600;margin-left:auto;white-space:nowrap}
 .reader-origin:hover{text-decoration:underline}
-.reader-body{font-size:17px;line-height:1.85;color:var(--text);overflow-wrap:anywhere;word-break:break-word}
+.reader-body{font-size:17px;line-height:1.85;color:var(--text);overflow-wrap:anywhere;word-break:break-word;text-align:justify;text-justify:inter-ideograph;hyphens:auto}
 .reader-body::selection{background:var(--accent2);color:#fff}
 .reader-body>p{margin:0 0 1.15em}
 .reader-body>h1,.reader-body>h2,.reader-body>h3,.reader-body>h4{line-height:1.35;font-weight:800;margin:1.6em 0 .7em}

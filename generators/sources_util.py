@@ -416,8 +416,14 @@ def fetch_article_text(url, timeout=25):
     try:
         import trafilatura
         # 优先要语义化 HTML（带段落/标题/列表等结构）
+        # favor_recall: 更宽松召回，少漏标题/引用/特殊段落
+        # include_formatting: 保留 <strong>/<em> 等强调（特殊段落）
+        # include_links: 保留文内 <a> 链接
+        # include_tables: 保留表格
         out = trafilatura.extract(page, url=url, include_comments=False,
-                                  output_format="html") or ""
+                                  output_format="html", favor_recall=True,
+                                  include_tables=True, include_formatting=True,
+                                  include_links=True) or ""
         if not out:
             # 退路：纯文本也包成 <p>，至少保留段落换行（先转义避免 < 被当标签）
             txt = trafilatura.extract(page, url=url, include_comments=False) or ""
