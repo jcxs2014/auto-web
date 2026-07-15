@@ -103,11 +103,34 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .readmore-btn{display:inline-block;background:var(--pill-bg);color:var(--accent2);border:1px solid var(--line);
   border-radius:8px;padding:5px 12px;font-size:13px;cursor:pointer;font-weight:600;margin-top:2px;align-self:flex-start;transition:border-color .15s}
 .readmore-btn:hover{border-color:var(--accent2)}
-.fulltext{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);
-  font-size:13.5px;line-height:1.75;color:var(--text);white-space:pre-wrap;
-  max-height:440px;overflow:auto}
 .notice{padding:14px 16px;border-radius:10px;background:var(--pill-bg);color:var(--muted);font-size:13.5px;margin-bottom:16px;line-height:1.7}
 .foot{text-align:center;color:var(--muted);font-size:12.5px;padding:26px 12px 10px}
+
+/* ===== 整页文章视图（极简阅读器）===== */
+.reader-overlay{position:fixed;inset:0;z-index:1000;background:var(--bg);
+  overflow-y:auto;display:none}
+.reader-overlay.open{display:block;animation:readerin .22s ease}
+@keyframes readerin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.reader-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:12px;
+  padding:12px 18px;background:var(--nav-bg);backdrop-filter:saturate(1.4) blur(10px);
+  -webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.reader-back{display:inline-flex;align-items:center;gap:6px;cursor:pointer;
+  border:1px solid var(--line);background:var(--pill-bg);color:var(--text);
+  border-radius:999px;padding:6px 15px;font-size:14px;font-weight:600;transition:border-color .15s}
+.reader-back:hover{border-color:var(--accent2)}
+.reader-srctag{color:var(--muted);font-size:13px;margin-left:auto;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;max-width:50vw}
+.reader-article{max-width:720px;margin:0 auto;padding:38px 24px 96px}
+.reader-title{font-size:clamp(23px,5vw,33px);line-height:1.3;font-weight:800;letter-spacing:.2px;margin-bottom:16px;overflow-wrap:anywhere}
+.reader-meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;
+  color:var(--muted);font-size:13.5px;padding-bottom:18px;margin-bottom:26px;
+  border-bottom:1px solid var(--line)}
+.reader-meta .src-pill{font-size:11.5px}
+.reader-origin{color:var(--accent2);text-decoration:none;font-weight:600;margin-left:auto;white-space:nowrap}
+.reader-origin:hover{text-decoration:underline}
+.reader-body{font-size:17px;line-height:1.9;color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere}
+.reader-body::selection{background:var(--accent2);color:#fff}
+@media(max-width:760px){.reader-article{padding:26px 18px 80px}.reader-body{font-size:16px}}
 
 </style>
 </head>
@@ -115,20 +138,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <nav class="nav"><div class="nav-inner"><a class="home-link" href="../index.html" title="返回首页">← 首页</a><span class="nav-brand">📡 RSS 阅读</span><span class="nav-links"><a class="nav-link" href="../hotnews/index.html">🔥 综合热点</a><a class="nav-link" href="../news/index.html">📰 新闻</a><a class="nav-link" href="../aihot/aihot_daily_latest.html">🤖 AI HOT</a><a class="nav-link" href="../arxiv-physics/arxiv_physics_latest.html">📄 arXiv</a></span><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button></div></nav>
 <header class="hero">
   <h1>📡 RSS 阅读</h1>
-  <p>自动聚合你订阅的 RSS · 每个来源保留最近 7 天文章（最多 10 篇）· 含正文全文 · 统一排版</p>
-  <p class="hero-window">本页更新：<span class="updated-badge">2026-07-15 16:16</span> · 共 <strong>16</strong> 篇</p>
+  <p>自动聚合你订阅的 RSS · 每个来源保留最近 7 天文章（最多 10 篇）· 点击进入整页阅读视图看正文全文</p>
+  <p class="hero-window">本页更新：<span class="updated-badge">2026-07-15 16:33</span> · 共 <strong>16</strong> 篇</p>
 </header>
 <main class="wrap">
   <p class="notice">⚠️ 以下订阅源本次抓取失败（不可达或返回为空），已跳过，下次自动更新会重试：<strong>见字如面</strong>、<strong>Mivansaka's Blog</strong>、<strong>木瓜园</strong>、<strong>水八口记</strong>。</p><p class="notice">🗓️ 以下订阅源已抓取成功，但最近 7 天内没有新文章（多为低频个人博客），暂不展示：<strong>燕渡寒潭</strong>、<strong>Heart in the city</strong>、<strong>Lil Moon丨Nine-Lie</strong>、<strong>小明同学</strong>、<strong>古是</strong>、<strong>公子府</strong>、<strong>威言威语</strong>、<strong>YeungYeah 的乱写地</strong>、<strong>狡猫三窝</strong>、<strong>人生随笔</strong>、<strong>落园</strong>、<strong>Huiris's log</strong>、<strong>喂马劈柴</strong>、<strong>大Joy在侃村</strong>、<strong>小球飞鱼</strong>、<strong>雅余  ·  茶余饭后，闲情雅致</strong>、<strong>大大的小蜗牛</strong>、<strong>渚碧</strong>、<strong>Randy's Blog</strong>、<strong>我道 1900的博客</strong>、<strong>梦幻辰风</strong>、<strong>迷你日志</strong>、<strong>淮城一只猫</strong>、<strong>响石潭</strong>、<strong>JiaYin's Life</strong>、<strong>Fatesinger</strong>、<strong>小陈故事</strong>、<strong>当下</strong>、<strong>梦不见的梦</strong>、<strong>破袜子</strong>。</p>
   <div class="filters"><button class="filter active" data-cat="all">全部</button><button class="filter" data-cat="博客">博客</button></div>
-  <div class="grid" id="feed-grid"><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">流浪天下</span><span class="card-date">2026-07-15 10:00</span></div><a class="card-title" href="https://mecll.com/1075.html" target="_blank" rel="noopener noreferrer">彭州小记</a><div class="card-summary">彭州只是由成都代管的一座县级市小城，地处成都平原西北边缘、龙门山脉东南侧。 彭州也是古蜀文化发祥地之一，与三星 […]</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">彭州只是由成都代管的一座县级市小城，地处成都平原西北边缘、龙门山脉东南侧。 彭州也是古蜀文化发祥地之一，与三星堆、金沙一脉同源，迄今已有 3000 多年古蜀文明史。彭州的景点我去过丹景山和白鹿小镇。和赵总一起去看老大的时候老大带我们逛了一回彭州市区。
+  <div class="grid" id="feed-grid"><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">流浪天下</span><span class="card-date">2026-07-15 10:00</span></div><a class="card-title" href="https://mecll.com/1075.html" target="_blank" rel="noopener noreferrer">彭州小记</a><div class="card-summary">彭州只是由成都代管的一座县级市小城，地处成都平原西北边缘、龙门山脉东南侧。 彭州也是古蜀文化发祥地之一，与三星 […]</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>彭州只是由成都代管的一座县级市小城，地处成都平原西北边缘、龙门山脉东南侧。 彭州也是古蜀文化发祥地之一，与三星堆、金沙一脉同源，迄今已有 3000 多年古蜀文明史。彭州的景点我去过丹景山和白鹿小镇。和赵总一起去看老大的时候老大带我们逛了一回彭州市区。
 小县城有小县城的好处，吃的、用的不缺，还不贵。
 “七佛圣地”龙兴寺
 彭州龙兴寺庙位于彭州市区龙兴北路，相传始建于东晋，初名大空寺，唐开元年间定名为龙兴寺，有近 1700 年历史，其间高僧大德纷至沓来，先后有数十名高僧在此驻锡，或为住持，其中东晋浮图澄禅师、梁代志公禅师、唐代悟达国师和道因禅师、五代预知禅师、宋代圆悟国师、明代智中一天国师七位高僧最为有名，龙兴寺因此又被称“七佛圣地”。核心地标是九十年代仿建的金刚宝座式舍利塔（亚洲同类塔之最），塔高81米，取佛家“九九归一”之意，为国内仅存的 19 座真身舍利佛塔之一；寺内有天王殿、大雄宝殿、藏经楼等规整建筑群，转经长廊、静水面倒影都是热门打卡点。
 来的时候这里正举行全国扁带公开赛，现场人非常多。
 彭州龙兴寺步行街
 紧邻龙兴寺的开放式文旅商业街区，建筑融合川西民居青瓦白墙与现代玻璃，地方不大，但采用木质连廊，连接贯穿全区的空中步道，就变成了全立体的街区。底层步行街道，有一些小吃饮品，估计生意不会太好，这里还是可以作为饭后消食逛一逛的地方。
-军屯锅魁，又称“酥锅魁”，又名“酥油千层饼”，是彭州的传统小吃。发源地彭州市军乐镇（原名军屯镇），相传为三国时蜀将屯兵扎营的地方，锅魁的雏形可能由军中干粮演变而来。香、酥、脆、细嫩化渣，确实好吃。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">KAIX.IN</span><span class="card-date">2026-07-15 09:15</span></div><a class="card-title" href="https://kaix.in/2026/0712/339a/" target="_blank" rel="noopener noreferrer">第一卷 03</a><div class="card-summary">339a 特拉需玛科说，正义就是统治者的利益，因为统治者当然也就是强者，不难推论，正义就是强者的利益。 苏格拉底这时候说了些我有点听不明白的话，他说特拉需玛科自己说利益却不让苏格拉底说利益——我想应该是翻译措辞的问题吧，我们一路读来，苏格拉底也没说什么利益啊，泛读嘛，先不查资料了，我猜大概是有利的、有用的、好的、利益，这些词在原文语言中有共通性，所以前面苏格拉底他们论证出来的正义至少应该是有用的、有利的、好的。特拉需玛科不让他们这样说，结果自己又站出来说正义是「强者的」利益。 总之，苏格拉底觉得虽然大家都说正义是某种利益，但是特拉需玛科非要加上个附加说是要「属于强者的」，那就还得继续考察论证。 339c 苏格拉底说，妳的意思是，服从统治者是正义，但是妳也承认统治者会犯错，制定法律有时候也制定错了。这个对错，暂且简化区分一下，有利于统治者的法律是对的，不利于统治者的法律是错的。因为会犯错，所</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">339a
+军屯锅魁，又称“酥锅魁”，又名“酥油千层饼”，是彭州的传统小吃。发源地彭州市军乐镇（原名军屯镇），相传为三国时蜀将屯兵扎营的地方，锅魁的雏形可能由军中干粮演变而来。香、酥、脆、细嫩化渣，确实好吃。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">KAIX.IN</span><span class="card-date">2026-07-15 09:15</span></div><a class="card-title" href="https://kaix.in/2026/0712/339a/" target="_blank" rel="noopener noreferrer">第一卷 03</a><div class="card-summary">339a 特拉需玛科说，正义就是统治者的利益，因为统治者当然也就是强者，不难推论，正义就是强者的利益。 苏格拉底这时候说了些我有点听不明白的话，他说特拉需玛科自己说利益却不让苏格拉底说利益——我想应该是翻译措辞的问题吧，我们一路读来，苏格拉底也没说什么利益啊，泛读嘛，先不查资料了，我猜大概是有利的、有用的、好的、利益，这些词在原文语言中有共通性，所以前面苏格拉底他们论证出来的正义至少应该是有用的、有利的、好的。特拉需玛科不让他们这样说，结果自己又站出来说正义是「强者的」利益。 总之，苏格拉底觉得虽然大家都说正义是某种利益，但是特拉需玛科非要加上个附加说是要「属于强者的」，那就还得继续考察论证。 339c 苏格拉底说，妳的意思是，服从统治者是正义，但是妳也承认统治者会犯错，制定法律有时候也制定错了。这个对错，暂且简化区分一下，有利于统治者的法律是对的，不利于统治者的法律是错的。因为会犯错，所</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>339a
 特拉需玛科说，正义就是统治者的利益，因为统治者当然也就是强者，不难推论，正义就是强者的利益。
 苏格拉底这时候说了些我有点听不明白的话，他说特拉需玛科自己说利益却不让苏格拉底说利益——我想应该是翻译措辞的问题吧，我们一路读来，苏格拉底也没说什么利益啊，泛读嘛，先不查资料了，我猜大概是有利的、有用的、好的、利益，这些词在原文语言中有共通性，所以前面苏格拉底他们论证出来的正义至少应该是有用的、有利的、好的。特拉需玛科不让他们这样说，结果自己又站出来说正义是「强者的」利益。
 总之，苏格拉底觉得虽然大家都说正义是某种利益，但是特拉需玛科非要加上个附加说是要「属于强者的」，那就还得继续考察论证。
@@ -151,7 +174,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 这几个段落看起来会很绕，我感觉，很大程度上是因为，大脑需要清零转换到特拉需玛科的角度才更好理解。我们默认正义是好事，而他，啊这可怜人好像活在一个崩坏的世界里，他根本就不认为正义是好的。清楚这一点之后就好理解他为什么说正义是强者的利益了，因为他也知道自己不属于强者，他觉得正义就是受伤害，就是吃亏，就是为强者的利益服务。而不正义，虽然听上去叫不正义，但它就是「统治弱者」这件事本身，它在实际上反而才是最得便宜的。
 合伙做生意，肯定谁不正义、谁无底线，谁能捞到更多好处；从事公共事务，妳不徇私舞弊中饱私囊，自然捞不到什么利益，而且因此还会遭亲朋故旧嫌弃，说妳不会做人；推演到极致，守正义终生倒大霉，越不义越幸福，滔天大恶烧杀抢掠，结果是，妳就成为了统治者啊。没听庄子说吗，「彼窃钩者诛，窃国者为诸侯」，妳们大家还愿意在这聊正义，只不过是害怕自己不正义得尺度达不到窃国的程度，因此遭受惩罚而已。
 怎么说呢，庄子都跨服共鸣了，咱们不能说特拉需玛科说的毫无道理。但是诸位，甘心吗？正义难道就真的如此一无是处？何况这一段好像全是情绪输出，有点跑题了，光说正义的人会怎样，但是何以至此呢？到底正义是什么呀，看来我们得期待苏格拉底清醒地把大家带回到原本的讨论中来。
-返回《泛读《理想国》》目录</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">Xinsenz茶話</span><span class="card-date">2026-07-14 08:08</span></div><a class="card-title" href="https://xinsenz.com/archives/3026.html" target="_blank" rel="noopener noreferrer">聚光灯下，下一个翻车的是谁</a><div class="card-summary">蒋方舟，这个与80后同成长的“才女”，翻车了，被以“学术不端”取消了硕士学位。 在我们80后同时期被冠以“才子 […]</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">没啥标准，说是就是，说不是就不是
+返回《泛读《理想国》》目录</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">Xinsenz茶話</span><span class="card-date">2026-07-14 08:08</span></div><a class="card-title" href="https://xinsenz.com/archives/3026.html" target="_blank" rel="noopener noreferrer">聚光灯下，下一个翻车的是谁</a><div class="card-summary">蒋方舟，这个与80后同成长的“才女”，翻车了，被以“学术不端”取消了硕士学位。 在我们80后同时期被冠以“才子 […]</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>没啥标准，说是就是，说不是就不是
 聚光灯下，下一个翻车的是谁
 蒋方舟，这个与80后同成长的“才女”，翻车了，被以“学术不端”取消了硕士学位。
 在我们80后同时期被冠以“才子才女”头衔的，我比较有印象的有蒋方舟、韩寒、郭敬明。实际上，这三个人的文学作品我都没看过，韩寒的《三重门》、郭敬明的《幻城》在上学时，是非常火热的，而我后面也只看过韩寒的电影《后会无期》《乘风破浪》。对于蒋方舟完全只是标签式的印象，我觉得挺有意思的反而是方舟子对蒋方舟的打假，实际上我对这两人都不太感冒。
@@ -162,7 +185,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 			- 
 			所言极是 
  
--</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">立云图志</span><span class="card-date">2026-07-14 04:00</span></div><a class="card-title" href="http://www.lopwon.com" target="_blank" rel="noopener noreferrer">2026年07月14日</a><div class="card-summary">您订阅的博客 | 立云图志 | 有更新！</div><a class="readmore" href="http://www.lopwon.com" target="_blank" rel="noopener noreferrer">阅读全文 →</a></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">KAIX.IN</span><span class="card-date">2026-07-13 07:10</span></div><a class="card-title" href="https://kaix.in/2026/0712/333a/" target="_blank" rel="noopener noreferrer">第一卷 02</a><div class="card-summary">333a 波策玛尔科说，在和平中，正义也是有用的，苏格拉底没有反驳而是顺着引导他继续得出结论：不同于医生和舵手那样特定场景才能派上用场，农夫、皮匠，在平日里也是有用的，他们要收获庄稼备制鞋子。进而又提出问题，正义呢，在平时它能满足什么需要达到什么目的？波策玛尔科说，正义除了战争中有用，平日里的契约和事务往来上也有用。 这里其实我有些不太满意，可能古时的人们生活场景比现代生活要简单得多，更愿意接受这种类比，而现代人聊天时如果做这种类比来讨论问题，我们听到最多的话可能会是：xx 和 xy 可不是一回事。不过总之，我们可以了解苏格拉底的意图，其实是想从对方的描述里找到不确切的地方，一步一步推着对方给出一个更确切的定义。 正义是还债，太「诗意」了，于是让对方更确切表达，得到：正义是把好的还给朋友把坏的给敌人。这么长的定义让人感觉不知道能干什么用，于是追问得到答复书，适合在战争时使用。那么就像医术在</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">333a
+-</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">立云图志</span><span class="card-date">2026-07-14 04:00</span></div><a class="card-title" href="http://www.lopwon.com" target="_blank" rel="noopener noreferrer">2026年07月14日</a><div class="card-summary">您订阅的博客 | 立云图志 | 有更新！</div><a class="readmore" href="http://www.lopwon.com" target="_blank" rel="noopener noreferrer">阅读全文 →</a></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">KAIX.IN</span><span class="card-date">2026-07-13 07:10</span></div><a class="card-title" href="https://kaix.in/2026/0712/333a/" target="_blank" rel="noopener noreferrer">第一卷 02</a><div class="card-summary">333a 波策玛尔科说，在和平中，正义也是有用的，苏格拉底没有反驳而是顺着引导他继续得出结论：不同于医生和舵手那样特定场景才能派上用场，农夫、皮匠，在平日里也是有用的，他们要收获庄稼备制鞋子。进而又提出问题，正义呢，在平时它能满足什么需要达到什么目的？波策玛尔科说，正义除了战争中有用，平日里的契约和事务往来上也有用。 这里其实我有些不太满意，可能古时的人们生活场景比现代生活要简单得多，更愿意接受这种类比，而现代人聊天时如果做这种类比来讨论问题，我们听到最多的话可能会是：xx 和 xy 可不是一回事。不过总之，我们可以了解苏格拉底的意图，其实是想从对方的描述里找到不确切的地方，一步一步推着对方给出一个更确切的定义。 正义是还债，太「诗意」了，于是让对方更确切表达，得到：正义是把好的还给朋友把坏的给敌人。这么长的定义让人感觉不知道能干什么用，于是追问得到答复书，适合在战争时使用。那么就像医术在</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>333a
 波策玛尔科说，在和平中，正义也是有用的，苏格拉底没有反驳而是顺着引导他继续得出结论：不同于医生和舵手那样特定场景才能派上用场，农夫、皮匠，在平日里也是有用的，他们要收获庄稼备制鞋子。进而又提出问题，正义呢，在平时它能满足什么需要达到什么目的？波策玛尔科说，正义除了战争中有用，平日里的契约和事务往来上也有用。
 这里其实我有些不太满意，可能古时的人们生活场景比现代生活要简单得多，更愿意接受这种类比，而现代人聊天时如果做这种类比来讨论问题，我们听到最多的话可能会是：xx 和 xy 可不是一回事。不过总之，我们可以了解苏格拉底的意图，其实是想从对方的描述里找到不确切的地方，一步一步推着对方给出一个更确切的定义。
 正义是还债，太「诗意」了，于是让对方更确切表达，得到：正义是把好的还给朋友把坏的给敌人。这么长的定义让人感觉不知道能干什么用，于是追问得到答复书，适合在战争时使用。那么就像医术在健康时就无用了一样，正义是否不打仗就无用？毫无争议地，大家都觉得不打仗也需要正义，所以追问出，正义在平日里有利于合伙关系。
@@ -194,7 +217,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 苏格拉底为自己辩护了几句：一个人并不知道，也没宣称知道，而且就算在某件事上有看法，又有个人禁止他说出见解，这种情况下他没法继续作答。既然妳说妳知道答案，还是妳来说，我们来听和学吧。我们众人也都附和，特拉需玛科享受赞誉又有点扭捏，嗔怪苏格拉底光跟着学也不知感恩。苏格拉底说，此言差矣，关键是我没钱啊，我能表示感谢的方式只有听到说得好的我就极力赞美吧。
 特拉需玛科终于抛出重磅论点：「那所谓正义，它不是别的，而只是那属于强者的利益，那对于强者有利的事物」。然后他还预判了苏格拉底肯定不愿意赞美。好心的苏格拉底满足了他的预判，说那我得先搞明白妳说的是什么意思；是说对于著名的拳击手牛肉有利于肌肉和体魄，因此牛肉对我们也是有利且正义的吗？
 特拉需玛科说看吧又开始歪曲别人意思了，我的意思是说，大家都知道，不论哪种政体都有统治者和被统治者，正义就是符合统治者的利益。
-返回《泛读《理想国》》目录</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">博客 on Miao Yu </span><span class="card-date">2026-07-13 00:00</span></div><a class="card-title" href="https://yufree.cn/cn/2026/07/13/prediction-2/" target="_blank" rel="noopener noreferrer">预言之二</a><div class="card-summary">十年前，我博士毕业，从离组到出国之间有一个月啥事也没有，百无聊赖就干了个早晚被做合订本的事，那就是预测未来。十年过去了，现在该验货了。 我当时预测了五件事：共享经济的繁荣与去职业化、机器与劳动力之争、老人与小孩非理性消费、保险与贫富分化、注意力争夺战与量化悲剧。但老实说当时我还是比较鸡贼的，很多东西似是而非，导致我找AI打分不同模型给的准确率都不一样。 我先说我当时肯定想不到的。第一是17年的加密货币大爆发，当然这个浪潮都没活过十年，币圈现在啥形象大家都有数，不过我其实在比特币刚出现那一年就看到并尝试过挖矿，结果直接没看明白白皮书就扔一边了。第二是短视频爆发，这个实话说我现在也没想明白，因为我到今天也不看短视频。第三是疫情，我最初出国计划就是2-4年，结果直接被逼在美国找工作。第四是特朗普，他让我放弃了追美剧转而看新闻当日常娱乐。第五就是大语言模型，图灵测试我十年前还是知道的，但确实想不到</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">十年前，我博士毕业，从离组到出国之间有一个月啥事也没有，百无聊赖就干了个早晚被做合订本的事，那就是预测未来。十年过去了，现在该验货了。
+返回《泛读《理想国》》目录</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">博客 on Miao Yu </span><span class="card-date">2026-07-13 00:00</span></div><a class="card-title" href="https://yufree.cn/cn/2026/07/13/prediction-2/" target="_blank" rel="noopener noreferrer">预言之二</a><div class="card-summary">十年前，我博士毕业，从离组到出国之间有一个月啥事也没有，百无聊赖就干了个早晚被做合订本的事，那就是预测未来。十年过去了，现在该验货了。 我当时预测了五件事：共享经济的繁荣与去职业化、机器与劳动力之争、老人与小孩非理性消费、保险与贫富分化、注意力争夺战与量化悲剧。但老实说当时我还是比较鸡贼的，很多东西似是而非，导致我找AI打分不同模型给的准确率都不一样。 我先说我当时肯定想不到的。第一是17年的加密货币大爆发，当然这个浪潮都没活过十年，币圈现在啥形象大家都有数，不过我其实在比特币刚出现那一年就看到并尝试过挖矿，结果直接没看明白白皮书就扔一边了。第二是短视频爆发，这个实话说我现在也没想明白，因为我到今天也不看短视频。第三是疫情，我最初出国计划就是2-4年，结果直接被逼在美国找工作。第四是特朗普，他让我放弃了追美剧转而看新闻当日常娱乐。第五就是大语言模型，图灵测试我十年前还是知道的，但确实想不到</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>十年前，我博士毕业，从离组到出国之间有一个月啥事也没有，百无聊赖就干了个早晚被做合订本的事，那就是预测未来。十年过去了，现在该验货了。
 我当时预测了五件事：共享经济的繁荣与去职业化、机器与劳动力之争、老人与小孩非理性消费、保险与贫富分化、注意力争夺战与量化悲剧。但老实说当时我还是比较鸡贼的，很多东西似是而非，导致我找AI打分不同模型给的准确率都不一样。
 我先说我当时肯定想不到的。第一是17年的加密货币大爆发，当然这个浪潮都没活过十年，币圈现在啥形象大家都有数，不过我其实在比特币刚出现那一年就看到并尝试过挖矿，结果直接没看明白白皮书就扔一边了。第二是短视频爆发，这个实话说我现在也没想明白，因为我到今天也不看短视频。第三是疫情，我最初出国计划就是2-4年，结果直接被逼在美国找工作。第四是特朗普，他让我放弃了追美剧转而看新闻当日常娱乐。第五就是大语言模型，图灵测试我十年前还是知道的，但确实想不到后面的大语言模型这么个形态。其余的诸如气候变化、元宇宙、房价崩盘啥的要么已经没了或我压根就不打算考虑，要么已经是常识了。
 现在再回看当时的预测，第一项对了一半，那就是去职业化，共享经济被资本玩成了跟以前差不多的价格，没有我预想的乐观，但去职业化的另一个名字零工经济或者说斜杠青年基本说对了，普通人开启第二职业在过去十年已经从小众变成日常。但这也对应了另一个问题，那就是编制，当前国内对编制或体制内的追求已经非理性了，编制外或者临时工合同工已经越来越普遍，青年就业率现在非常低，就业临时化说好听了就是去职业化，有啥干啥，很多人进了体制也是为了更好开展第二职业。
@@ -223,7 +246,7 @@ AI泡沫
 这个大概率是在未来十年的后期。南部边境现在已经有跨境打工的报道了，先放开东南亚然后非洲是大趋势，服务业劳动力短缺大概率用移民比用机器人便宜。这里既是说国家间移民，也是说都市圈间与乡村的移民，采茶女与麦客，内部所有剩余劳动力都会被日结工资吸引到具体劳动场景里。一个真正的现代国家不可能是单一民族国家。
 家庭结构解体
 家庭本质上是应对稀缺性的经济单位，但对于当前国内经济水平，一个人也能过好。家庭结构在未来会继续解体，非婚生子女也好，单亲家庭也好都将越来越普遍。那些经历过家庭美好一面的人会怀念过去，而抱怨原生家庭的一代人也会成为父母或选择自己过，这里面会上演多少故事我不知道，但一定是我这一代人要面临的课题。
-你要是对上面任何一条感到陌生，那么恭喜你，继续探索世界吧。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">透明日报</span><span class="card-date">2026-07-12 23:45</span></div><a class="card-title" href="https://daily.xlab.app/d/20260712/" target="_blank" rel="noopener noreferrer">透明日报20260712期</a><div class="card-summary">透明日报第20260712期 订阅 今日文章：社会*1</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">透明日报20260712期
+你要是对上面任何一条感到陌生，那么恭喜你，继续探索世界吧。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">透明日报</span><span class="card-date">2026-07-12 23:45</span></div><a class="card-title" href="https://daily.xlab.app/d/20260712/" target="_blank" rel="noopener noreferrer">透明日报20260712期</a><div class="card-summary">透明日报第20260712期 订阅 今日文章：社会*1</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>透明日报20260712期
 透明日报第20260712期 订阅
 今日文章：社会*1
 社会
@@ -231,7 +254,7 @@ AI泡沫
 第三篇很有意思的类比
 有一个行业的经济模式如下：在盈利之前需要投入数十亿美元的前期资本。核心服务的定价接近边际成本。为用户创造了巨大的价值，但建设者几乎一无所获。持续投资下一代基础设施的压力巨大。我说的不是人工智能实验室，而是香港的地铁系统。
 铁路运营高峰期三年的收益仅能覆盖其中的 8%。铁路运营从未通过票价实现自给自足，其设计初衷也并非如此
-如今，港铁拥有13个购物中心，管理着车站上方的47个开发项目，而房地产业务贡献了大部分实际利润</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">流浪天下</span><span class="card-date">2026-07-12 14:40</span></div><a class="card-title" href="https://mecll.com/1061.html" target="_blank" rel="noopener noreferrer">独生子女如何继承农村房产</a><div class="card-summary">前段时间在处理父母离世后农村老宅的继承事宜。本来没想要去办理继承，房子本身经济价值有限，而我更珍视老屋承载的儿 […]</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">前段时间在处理父母离世后农村老宅的继承事宜。本来没想要去办理继承，房子本身经济价值有限，而我更珍视老屋承载的儿时旧日时光。一如博物馆中的馆藏，房老屋里的一墙一瓦，一桌一凳，日常旧物，都沉淀着父辈亲人点滴过往。身处老宅之中，得以跨越岁月时空，与逝去亲人隔空相望。独生子女继承农村住宅手续繁杂，这段经历或许有一些借鉴意义，于是梳理整个过程，落笔留存。
+如今，港铁拥有13个购物中心，管理着车站上方的47个开发项目，而房地产业务贡献了大部分实际利润</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">流浪天下</span><span class="card-date">2026-07-12 14:40</span></div><a class="card-title" href="https://mecll.com/1061.html" target="_blank" rel="noopener noreferrer">独生子女如何继承农村房产</a><div class="card-summary">前段时间在处理父母离世后农村老宅的继承事宜。本来没想要去办理继承，房子本身经济价值有限，而我更珍视老屋承载的儿 […]</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>前段时间在处理父母离世后农村老宅的继承事宜。本来没想要去办理继承，房子本身经济价值有限，而我更珍视老屋承载的儿时旧日时光。一如博物馆中的馆藏，房老屋里的一墙一瓦，一桌一凳，日常旧物，都沉淀着父辈亲人点滴过往。身处老宅之中，得以跨越岁月时空，与逝去亲人隔空相望。独生子女继承农村住宅手续繁杂，这段经历或许有一些借鉴意义，于是梳理整个过程，落笔留存。
 准备工作
 在 AI 的协助下搜集了农村房产继承相关的政策和办事流程。
 根据《中华人民共和国民法典》继承编的规定，第一顺序继承人是：配偶、父母、子女。举例来说，如果是父亲先离世，没有立下什么遗嘱，他名下的房产、存款等夫妻共同财产，就先得分出一半归母亲所有（国家要优先考虑老人的养老）。剩余的一半才作为遗产，再由母亲、独生子女、爷爷奶奶共同分割；若爷爷奶奶随后离世，他们继承的份额，又会转由父亲的兄弟姐妹来继承。
@@ -301,7 +324,7 @@ AI泡沫
 - 支持现金 / 扫码
 - 可以邮寄
  
-办理完公证书的手续，打车送大哥回镇上，又和大姐一起坐车到市里。公证书大约要两个周以后寄给我，后面有空再说办理房产权的事吧，那又是另外一个很麻烦的故事了。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">KAIX.IN</span><span class="card-date">2026-07-12 13:51</span></div><a class="card-title" href="https://kaix.in/2026/0712/327a/" target="_blank" rel="noopener noreferrer">第一卷 01</a><div class="card-summary">327a 开篇伊始，是一段唠家常1。苏格拉底和格劳康一起去海港看完祀神节庆典，当地人波策玛尔科一伙跑来留客说：知道妳们正要回家，但我们人多势众，妳们争不过我们的，就听我们的留下来吧，和我们这些人聊聊天，何况晚上还有通宵晚会呢。苏格拉底也没再多推辞。整体气氛算是融洽。 327c 一行人来到了波策玛尔科的家里，见到了他的一大家子人，以及别的一些朋友。波策玛尔科的老父亲凯帕洛，头上戴着一个花冠——不知怎么，我脑海里希腊人的样子就该是这样的——被众人簇拥着，进入了我们的视野。他和苏格拉底寒暄起来，说自己要不是年老，肯定会经常主动去找苏格拉底交谈，因为「愈是别的有关肉体的快乐渐渐消减，也就愈是欲求朋友间的讨论交谈，并且愈是感到它的欢乐和愉快」。 这引出了关于年老的讨论，苏格拉底说，上了年岁的人像是先行者，已经把我们或许要走的路走过了，所以其实很愿意和上了年岁的人交流，希望能了解一些经验和看法。 32</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">327a
+办理完公证书的手续，打车送大哥回镇上，又和大姐一起坐车到市里。公证书大约要两个周以后寄给我，后面有空再说办理房产权的事吧，那又是另外一个很麻烦的故事了。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">KAIX.IN</span><span class="card-date">2026-07-12 13:51</span></div><a class="card-title" href="https://kaix.in/2026/0712/327a/" target="_blank" rel="noopener noreferrer">第一卷 01</a><div class="card-summary">327a 开篇伊始，是一段唠家常1。苏格拉底和格劳康一起去海港看完祀神节庆典，当地人波策玛尔科一伙跑来留客说：知道妳们正要回家，但我们人多势众，妳们争不过我们的，就听我们的留下来吧，和我们这些人聊聊天，何况晚上还有通宵晚会呢。苏格拉底也没再多推辞。整体气氛算是融洽。 327c 一行人来到了波策玛尔科的家里，见到了他的一大家子人，以及别的一些朋友。波策玛尔科的老父亲凯帕洛，头上戴着一个花冠——不知怎么，我脑海里希腊人的样子就该是这样的——被众人簇拥着，进入了我们的视野。他和苏格拉底寒暄起来，说自己要不是年老，肯定会经常主动去找苏格拉底交谈，因为「愈是别的有关肉体的快乐渐渐消减，也就愈是欲求朋友间的讨论交谈，并且愈是感到它的欢乐和愉快」。 这引出了关于年老的讨论，苏格拉底说，上了年岁的人像是先行者，已经把我们或许要走的路走过了，所以其实很愿意和上了年岁的人交流，希望能了解一些经验和看法。 32</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>327a
 开篇伊始，是一段唠家常1。苏格拉底和格劳康一起去海港看完祀神节庆典，当地人波策玛尔科一伙跑来留客说：知道妳们正要回家，但我们人多势众，妳们争不过我们的，就听我们的留下来吧，和我们这些人聊聊天，何况晚上还有通宵晚会呢。苏格拉底也没再多推辞。整体气氛算是融洽。
 327c
 一行人来到了波策玛尔科的家里，见到了他的一大家子人，以及别的一些朋友。波策玛尔科的老父亲凯帕洛，头上戴着一个花冠——不知怎么，我脑海里希腊人的样子就该是这样的——被众人簇拥着，进入了我们的视野。他和苏格拉底寒暄起来，说自己要不是年老，肯定会经常主动去找苏格拉底交谈，因为「愈是别的有关肉体的快乐渐渐消减，也就愈是欲求朋友间的讨论交谈，并且愈是感到它的欢乐和愉快」。
@@ -322,7 +345,7 @@ AI泡沫
 那么好了，健康一事，医生最有能力；航海一事，舵手最有能力；说到正义，什么时候显现它把利益归之于朋友而把损害归之于敌人的能力？波策马尔科说是在进行战争的时候。苏格拉底继续说，可是，健康无忧的时候，医生就没用了，不出海时，舵手也没用了，难道，不打仗时，正义的人也没用了吗？波策马尔科连忙否认说，哎哎，我可没这么想啊！
 - 
 因为是泛读，许多字眼就不细扣了，比如第一句话写苏格拉底走「下去」到普埃依拉埃厄，如果扣字眼，可能就不只是从高海拔的地点走到低海拔的海港去，还可以解读为下去到洞穴——著名的洞穴譬喻，或者哲学要下去到平凡人当中；以及，波策玛尔科遣小厮跑过去「命令」苏格拉底等人停下来等候，不同译本用词不一，除了有这位名字就有统帅、战争等含义的强权色彩的人物用命令一词顺理成章之外，可能还可以朝着世俗权力对自由思想有某种粗暴限制这个方向去联想。 ↩︎ 
-返回《泛读《理想国》》目录</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">SKYue's Home</span><span class="card-date">2026-07-12 10:36</span></div><a class="card-title" href="https://www.skyue.com/26071218.html" target="_blank" rel="noopener noreferrer">搬家</a><div class="card-summary">在《装修日记（4）》中预告过7月搬家，本周五正式搬入未名府新家，周末收拾了两天。从上周末开始，就在紫樾府陆陆续续打包行李，在这里住了一年，东西还真不少。找蓝犀牛搬家，约了最大的厢货。</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">搬家
+返回《泛读《理想国》》目录</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">SKYue's Home</span><span class="card-date">2026-07-12 10:36</span></div><a class="card-title" href="https://www.skyue.com/26071218.html" target="_blank" rel="noopener noreferrer">搬家</a><div class="card-summary">在《装修日记（4）》中预告过7月搬家，本周五正式搬入未名府新家，周末收拾了两天。从上周末开始，就在紫樾府陆陆续续打包行李，在这里住了一年，东西还真不少。找蓝犀牛搬家，约了最大的厢货。</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>搬家
 在《装修日记（4）》中预告过7月搬家，本周五正式搬入未名府新家，周末收拾了两天。
 从上周末开始，就在紫樾府陆陆续续打包行李，在这里住了一年，东西还真不少。找蓝犀牛搬家，约了最大的厢货。
 刚到未名府，堆满行李的客厅。
@@ -331,7 +354,7 @@ AI泡沫
 有财和有福很快适应了新家和猫别墅，新家所有犄角旮旯都被它们探索了一遍。
 最近两年搬家太多，这次应该能稳定下来了。住着按自己想法装修的房子，就是舒服。
 有个插曲，原计划周六搬家，因为「巴威」台风，我们决定提前到周五。周五傍晚搬完家，到楼下盒马NB买东西，发现盒马NB都被扫空了。
-周末两天，风有一点、雨也有一点，但不像台风天，外卖也没停。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">邹江博客</span><span class="card-date">2026-07-12 09:48</span></div><a class="card-title" href="https://www.zoujiang.com/1068.html" target="_blank" rel="noopener noreferrer">警惕网络黑产：记一次微博账号交易的未遂经历与法律思考</a><div class="card-summary">月初的时候登录了我已经停用了四年多的微博账号，12 万粉丝，高信用评分老号（粉丝掺了不少水分）。浏览私信的时候，发现有好几个陌生人的私信，大多数都是问我的闲置微博号卖不卖。有几个账号已经封禁了，...</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">警惕网络黑产：记一次微博账号交易的未遂经历与法律思考
+周末两天，风有一点、雨也有一点，但不像台风天，外卖也没停。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">邹江博客</span><span class="card-date">2026-07-12 09:48</span></div><a class="card-title" href="https://www.zoujiang.com/1068.html" target="_blank" rel="noopener noreferrer">警惕网络黑产：记一次微博账号交易的未遂经历与法律思考</a><div class="card-summary">月初的时候登录了我已经停用了四年多的微博账号，12 万粉丝，高信用评分老号（粉丝掺了不少水分）。浏览私信的时候，发现有好几个陌生人的私信，大多数都是问我的闲置微博号卖不卖。有几个账号已经封禁了，...</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>警惕网络黑产：记一次微博账号交易的未遂经历与法律思考
 月初的时候登录了我已经停用了四年多的微博账号，12 万粉丝，高信用评分老号（粉丝掺了不少水分）。浏览私信的时候，发现有好几个陌生人的私信，大多数都是问我的闲置微博号卖不卖。有几个账号已经封禁了，可能频繁私信。其中有一个，我访问了她的微博主页，简介上有一个微信号，我就添加了。
 她的朋友圈发了接近两年的关于收微博实时号类的信息。我刚开始以为这种号贩子是买来做饭圈文化、充当水军做数据的，而且号贩子是和我用微信对接的，就放下了戒备心。微博账号我记得是可以更换实名认证的。我把微博 ID 发给她看，让她报个价，她回复大概 1.3K 左右。
 我想行啊，四年没登录的账号还能变现也不错了，我也不知道行情价。
@@ -349,9 +372,9 @@ AI泡沫
 “私下买卖实名账号，轻则违规封号，重则面临罚款。别信什么‘免责协议’，在法律面前那就是废纸一张。只要实名没改，哪天号拿去搞诈骗、搞赌博，警察叔叔第一个找的就是你，这种‘甩锅’局，咱们坚决不接。”
 这也就是为什么这类交易极易踩中“帮信罪”的红线的原因。近年来“断卡行动”雷霆出击，帮信罪和掩隐罪早已成为年轻人最容易“中招”的两大罪名，千万别因为一时贪小便宜，给自己惹上刑事风险。
 - 上一篇: 十几年后，我的菜又熟了
-- 下一篇: 没有了</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">KAIX.IN</span><span class="card-date">2026-07-12 05:14</span></div><a class="card-title" href="https://kaix.in/2026/0712/" target="_blank" rel="noopener noreferrer">泛读《理想国》</a><div class="card-summary">多年前第一次读《理想国》也是囫囵吞枣，但是依然十分喜欢——不知道是因为它把一些我边读边想到的问题和反驳都一一做了解答，让我产生了和两千年的人在对话的愉快感受；还是那种为求准确翻译而稍显繁琐的句式，让我得以暂时摆脱现代汉语，体验另一种可能性。 我始终羡慕那些博览群书的人，小时候，渴望自己一夜之间读完所有名著，但是慢慢不得不接受，有些事，只能日拱一卒。这一次重读，当然我还是没有能力读得精细，还是泛读而已。再次体验阅读的乐趣，以及，享受被时间带领着从开头到结束。 《理想国》我读的是顾寿观译本，另外王太庆译本的《柏拉图对话集》我也十分喜欢，稍作推荐： fin. 激赏！来信。</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">多年前第一次读《理想国》也是囫囵吞枣，但是依然十分喜欢——不知道是因为它把一些我边读边想到的问题和反驳都一一做了解答，让我产生了和两千年的人在对话的愉快感受；还是那种为求准确翻译而稍显繁琐的句式，让我得以暂时摆脱现代汉语，体验另一种可能性。
+- 下一篇: 没有了</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">KAIX.IN</span><span class="card-date">2026-07-12 05:14</span></div><a class="card-title" href="https://kaix.in/2026/0712/" target="_blank" rel="noopener noreferrer">泛读《理想国》</a><div class="card-summary">多年前第一次读《理想国》也是囫囵吞枣，但是依然十分喜欢——不知道是因为它把一些我边读边想到的问题和反驳都一一做了解答，让我产生了和两千年的人在对话的愉快感受；还是那种为求准确翻译而稍显繁琐的句式，让我得以暂时摆脱现代汉语，体验另一种可能性。 我始终羡慕那些博览群书的人，小时候，渴望自己一夜之间读完所有名著，但是慢慢不得不接受，有些事，只能日拱一卒。这一次重读，当然我还是没有能力读得精细，还是泛读而已。再次体验阅读的乐趣，以及，享受被时间带领着从开头到结束。 《理想国》我读的是顾寿观译本，另外王太庆译本的《柏拉图对话集》我也十分喜欢，稍作推荐： fin. 激赏！来信。</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>多年前第一次读《理想国》也是囫囵吞枣，但是依然十分喜欢——不知道是因为它把一些我边读边想到的问题和反驳都一一做了解答，让我产生了和两千年的人在对话的愉快感受；还是那种为求准确翻译而稍显繁琐的句式，让我得以暂时摆脱现代汉语，体验另一种可能性。
 我始终羡慕那些博览群书的人，小时候，渴望自己一夜之间读完所有名著，但是慢慢不得不接受，有些事，只能日拱一卒。这一次重读，当然我还是没有能力读得精细，还是泛读而已。再次体验阅读的乐趣，以及，享受被时间带领着从开头到结束。
-《理想国》我读的是顾寿观译本，另外王太庆译本的《柏拉图对话集》我也十分喜欢，稍作推荐：</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">土木坛子</span><span class="card-date">2026-07-11 16:00</span></div><a class="card-title" href="https://tumutanzi.com/archives/17616" target="_blank" rel="noopener noreferrer">SpaceX的IPO新股申购记</a><div class="card-summary">人类历史上目前最大市值的IPO是上个月6月12日的SpaceX，这固然有马斯克画的大饼，但是本着对新生事物宁可 […]</div><a class="readmore" href="https://tumutanzi.com/archives/17616" target="_blank" rel="noopener noreferrer">阅读全文 →</a></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">非理勿试</span><span class="card-date">2026-07-11 15:34</span></div><a class="card-title" href="https://www.ntiy.com/2365.html" target="_blank" rel="noopener noreferrer">“散帅”成违禁词？我不理解</a><div class="card-summary">上周我学到一个新词：散帅。 结合这个词本身的构造和用法，不难看出，它是和“集美”相对应的一个词，用来指代男性。另外，我还顺便学到了“大蓝赢”“马根”这些分别对应“小红书”“牛逼”的词。我觉得很有意思。...</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">上周我学到一个新词：散帅。
+《理想国》我读的是顾寿观译本，另外王太庆译本的《柏拉图对话集》我也十分喜欢，稍作推荐：</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">土木坛子</span><span class="card-date">2026-07-11 16:00</span></div><a class="card-title" href="https://tumutanzi.com/archives/17616" target="_blank" rel="noopener noreferrer">SpaceX的IPO新股申购记</a><div class="card-summary">人类历史上目前最大市值的IPO是上个月6月12日的SpaceX，这固然有马斯克画的大饼，但是本着对新生事物宁可 […]</div><a class="readmore" href="https://tumutanzi.com/archives/17616" target="_blank" rel="noopener noreferrer">阅读全文 →</a></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">非理勿试</span><span class="card-date">2026-07-11 15:34</span></div><a class="card-title" href="https://www.ntiy.com/2365.html" target="_blank" rel="noopener noreferrer">“散帅”成违禁词？我不理解</a><div class="card-summary">上周我学到一个新词：散帅。 结合这个词本身的构造和用法，不难看出，它是和“集美”相对应的一个词，用来指代男性。另外，我还顺便学到了“大蓝赢”“马根”这些分别对应“小红书”“牛逼”的词。我觉得很有意思。...</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>上周我学到一个新词：散帅。
 结合这个词本身的构造和用法，不难看出，它是和“集美”相对应的一个词，用来指代男性。另外，我还顺便学到了“大蓝赢”“马根”这些分别对应“小红书”“牛逼”的词。我觉得很有意思。它像一种语言艺术，也像中文互联网在高压表达环境里长出来的某种自救机制。
 但没过多久，在一些平台（抖音、小红书）上，“散帅”这个词已经被封了，不能搜索，也不能发布。
 这让我很难理解。
@@ -365,7 +388,7 @@ AI泡沫
 这本质上是在杀死汉语。当然，准确地说，它杀不死汉语，只能不断污染汉语、折磨还想正常说话的人。
 人从来不会因为厕所被没了，就失去拉屎的需求。每拆掉一间厕所，原厕所附近的某个角落、某片草丛、某个小树林，就会变成新的厕所。语言也是一样的。
 你可以封掉一个词，但你封不掉那个词要承载的意思；你可以禁掉一种说法，但你禁不掉人想骂人、想讽刺、想发泄、想把话说出来的欲望。
-就算全世界最后只剩下两个还能用的词，其中也至少会有一个，可以被用来骂人。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">伪医生律师的博客</span><span class="card-date">2026-07-10 08:27</span></div><a class="card-title" href="https://chidd.net/2026/07/10/about-ai.html" target="_blank" rel="noopener noreferrer">关于AI的一些碎片思考</a><div class="card-summary">无可否认，当前我们已处于AI时代。 昨天晚上在翻阅近期的一些杂志时，赫然发现，《财新》周刊最近的几期封面报道内...</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">共计 1392 个字符，预计需要花费 4 分钟才能阅读完成。
+就算全世界最后只剩下两个还能用的词，其中也至少会有一个，可以被用来骂人。</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">伪医生律师的博客</span><span class="card-date">2026-07-10 08:27</span></div><a class="card-title" href="https://chidd.net/2026/07/10/about-ai.html" target="_blank" rel="noopener noreferrer">关于AI的一些碎片思考</a><div class="card-summary">无可否认，当前我们已处于AI时代。 昨天晚上在翻阅近期的一些杂志时，赫然发现，《财新》周刊最近的几期封面报道内...</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>共计 1392 个字符，预计需要花费 4 分钟才能阅读完成。
 无可否认，当前我们已处于AI时代。
 昨天晚上在翻阅近期的一些杂志时，赫然发现，《财新》周刊最近的几期封面报道内容几乎全是关于AI主题的，TOKEN、算力、模型……
 AI已经深度介入我们的生活，也如同所有新技术的初始阶段一样：我们会迷茫，管理措施跟不上技术迭代的速度，会有由乱而治的过程，会有瓶颈，会趋于稳定，然后等待下一次技术变革。
@@ -400,7 +423,7 @@ AI生成短剧、电影，让自己脑海想法更容易变为现实画面。
 AI能够替代或辅助大部分可通过电脑完成的工作。
 文案、创意、统计、分析、管理，AI会比我们想象中更快的速度来全面替代。
 人类原创的能力会不会越来越弱、直至退化？
-纯手工搓代码古法编程方式还会不会存在？</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">君子不器</span><span class="card-date">2026-07-09 11:25</span></div><a class="card-title" href="https://www.colinjiang.com/archives/2026-06-pets-and-reflections.html" target="_blank" rel="noopener noreferrer">2026年6月 新成员、旧告别与生活的一地鸡毛</a><div class="card-summary">五月份家里那只鹦鹉走后，空落落了挺久。好在六月迎来了两个新成员：小太阳“多多”和和尚鹦鹉“团团”。这两只小家伙 […]</div><button class="readmore-btn" type="button" onclick="toggleFull(this)">📖 阅读全文</button><div class="fulltext" style="display:none">五月份家里那只鹦鹉走后，空落落了挺久。好在六月迎来了两个新成员：小太阳“多多”和和尚鹦鹉“团团”。这两只小家伙比之前的更亲人，最喜欢的动作就是钻到手心里撒娇，那种温热、蓬松的触感，真的很治愈。
+纯手工搓代码古法编程方式还会不会存在？</div></div><div class="card" data-cat="博客"><div class="card-top"><span class="src-pill" style="background:#6b7688">君子不器</span><span class="card-date">2026-07-09 11:25</span></div><a class="card-title" href="https://www.colinjiang.com/archives/2026-06-pets-and-reflections.html" target="_blank" rel="noopener noreferrer">2026年6月 新成员、旧告别与生活的一地鸡毛</a><div class="card-summary">五月份家里那只鹦鹉走后，空落落了挺久。好在六月迎来了两个新成员：小太阳“多多”和和尚鹦鹉“团团”。这两只小家伙 […]</div><button class="readmore-btn" type="button" onclick="openReader(this)">📖 阅读全文</button><div class="article-body" hidden>五月份家里那只鹦鹉走后，空落落了挺久。好在六月迎来了两个新成员：小太阳“多多”和和尚鹦鹉“团团”。这两只小家伙比之前的更亲人，最喜欢的动作就是钻到手心里撒娇，那种温热、蓬松的触感，真的很治愈。
 不过，因为精力实在照顾不过来，家里的两只刺猬在这个月送给新主人了。有些不舍，但看它们去到能全心全意照顾它们的地方也是好事，很感谢它们曾带给全家人的快乐。
 除了家里的新旧交替，这个月最让我抓狂的其实是我的博客。前阵子网站突然宕机了，想登录宝塔面板后台去排查，发现连宝塔也死活登录不上。那两天反复折腾服务器、查配置，可以说是焦头烂额。好在最后总算是把问题解决了，能看到这篇文字，说明我的小站总算又坚强地活了过来。
 对孩子来说，六月则是幸福感爆棚的一个月。高考、端午、中考接踵而至，连带着她也跟着放了好几次假。不过出来混总是要还的，假期一结束，迎头撞上的就是期末复习冲刺了。
@@ -412,6 +435,19 @@ AI能够替代或辅助大部分可通过电脑完成的工作。
 <footer class="foot">
   订阅源配置见仓库 <code>rss/feeds.json</code> · 每源最新 10 篇，旧文自动淘汰 · 由 GitHub Actions 定时拉取
 </footer>
+
+<!-- 整页文章视图（极简阅读器）：点击卡片「阅读全文」后铺满全屏展示正文 -->
+<div class="reader-overlay" id="reader" role="dialog" aria-modal="true" aria-label="文章阅读视图">
+  <div class="reader-bar">
+    <button class="reader-back" type="button" onclick="closeReader()">← 返回列表</button>
+    <span class="reader-srctag" id="reader-srctag"></span>
+  </div>
+  <article class="reader-article">
+    <h1 class="reader-title" id="reader-title"></h1>
+    <div class="reader-meta" id="reader-meta"></div>
+    <div class="reader-body" id="reader-body"></div>
+  </article>
+</div>
 <script>
   (function(){
     var btn=document.getElementById('theme-toggle');
@@ -439,13 +475,39 @@ AI能够替代或辅助大部分可通过电脑完成的工作。
         c.style.display=(cat==='all'||c.getAttribute('data-cat')===cat)?'':'none';
       });
     });});
-    window.toggleFull=function(btn){
-      var box=btn.nextElementSibling;
-      if(!box)return;
-      var open=box.style.display!=='none';
-      box.style.display=open?'none':'block';
-      btn.textContent=open?'📖 阅读全文':'📕 收起全文';
+    // 整页文章视图：从卡片读取标题/来源/日期/正文/原文链接，注入阅读器并铺满全屏
+    var reader=document.getElementById('reader');
+    window.openReader=function(btn){
+      var card=btn.closest('.card'); if(!card)return;
+      var srcEl=card.querySelector('.src-pill');
+      var dateEl=card.querySelector('.card-date');
+      var titleEl=card.querySelector('.card-title');
+      var bodyEl=card.querySelector('.article-body');
+      document.getElementById('reader-srctag').textContent=srcEl?srcEl.textContent:'';
+      document.getElementById('reader-title').textContent=titleEl?titleEl.textContent:'';
+      var meta=document.getElementById('reader-meta'); meta.innerHTML='';
+      if(srcEl){var p=document.createElement('span');p.className='src-pill';
+        p.style.background=srcEl.style.background;p.textContent=srcEl.textContent;meta.appendChild(p);}
+      if(dateEl&&dateEl.textContent){var d=document.createElement('span');d.textContent=dateEl.textContent;meta.appendChild(d);}
+      var href=titleEl?titleEl.getAttribute('href'):'';
+      if(href){var a=document.createElement('a');a.className='reader-origin';a.href=href;
+        a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看原文 →';meta.appendChild(a);}
+      document.getElementById('reader-body').textContent=bodyEl?bodyEl.textContent:'';
+      reader.classList.add('open'); reader.scrollTop=0;
+      document.body.style.overflow='hidden';
+      try{history.pushState({reader:1},'');}catch(e){}
     };
+    window.closeReader=function(){
+      reader.classList.remove('open');
+      document.body.style.overflow='';
+    };
+    // ESC 关闭 + 浏览器返回键关闭
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&reader.classList.contains('open'))closeReader();
+    });
+    window.addEventListener('popstate',function(){
+      if(reader.classList.contains('open'))closeReader();
+    });
   })();
 </script>
 </body>
