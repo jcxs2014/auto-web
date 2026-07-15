@@ -1,0 +1,41 @@
+name: Daily content update
+
+on:
+  schedule:
+    # 每天 UTC 06:00 ≈ 意大利（CEST, UTC+2）08:00。
+    # GitHub 免费层 scheduled run 可能有数分钟~数小时延迟，属正常。
+    - cron: "0 6 * * *"
+  workflow_dispatch:  # 允许在 Actions 标签手动触发一次
+
+# 允许 GITHUB_TOKEN 把生成结果推送回仓库
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git for push
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git
+
+      - name: Generate all pages and push
+        run: bash gen_all.sh

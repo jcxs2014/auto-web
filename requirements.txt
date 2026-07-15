@@ -1,0 +1,2 @@
+# 生成脚本的唯一第三方依赖（其余均为 Python 标准库）
+feedparser
