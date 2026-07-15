@@ -24,12 +24,6 @@
     "lang": "zh"
   },
   {
-    "name": "我的天",
-    "url": "http://www.xlanda.net/feed/atom",
-    "category": "博客",
-    "lang": "zh"
-  },
-  {
     "name": "流浪天下",
     "url": "https://maie.name/feed",
     "category": "博客",
@@ -50,12 +44,6 @@
   {
     "name": "古是",
     "url": "https://adminsun.com/feed",
-    "category": "博客",
-    "lang": "zh"
-  },
-  {
-    "name": "如是乎 · 生活百味随笔",
-    "url": "http://rushihu.com/feed",
     "category": "博客",
     "lang": "zh"
   },
@@ -102,12 +90,6 @@
     "lang": "zh"
   },
   {
-    "name": "牧羊人",
-    "url": "https://www.shephe.com?feed=rss",
-    "category": "博客",
-    "lang": "zh"
-  },
-  {
     "name": "人生随笔",
     "url": "http://thinkinlife.org/feed/",
     "category": "博客",
@@ -122,12 +104,6 @@
   {
     "name": "Huiris's log",
     "url": "https://huiris.com/feed",
-    "category": "博客",
-    "lang": "zh"
-  },
-  {
-    "name": "拾风",
-    "url": "https://www.coolblood.cn?feed=rss2",
     "category": "博客",
     "lang": "zh"
   },
@@ -210,12 +186,6 @@
     "lang": "zh"
   },
   {
-    "name": "漫漫长路",
-    "url": "https://mmcl.net/feed/",
-    "category": "博客",
-    "lang": "zh"
-  },
-  {
     "name": "立云图志",
     "url": "http://www.lopwon.com/feed/",
     "category": "博客",
@@ -228,26 +198,8 @@
     "lang": "zh"
   },
   {
-    "name": "汝者非鱼",
-    "url": "https://rzfyu.com/feed",
-    "category": "博客",
-    "lang": "zh"
-  },
-  {
-    "name": "灰常记忆",
-    "url": "https://bestcherish.com/feed",
-    "category": "博客",
-    "lang": "zh"
-  },
-  {
     "name": "淮城一只猫",
     "url": "https://iiong.com/feed",
-    "category": "博客",
-    "lang": "zh"
-  },
-  {
-    "name": "不曾长大",
-    "url": "https://qfsyj.com/feed",
     "category": "博客",
     "lang": "zh"
   },
