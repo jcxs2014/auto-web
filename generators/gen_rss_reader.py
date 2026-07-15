@@ -7,7 +7,7 @@ gen_rss_reader.py —— 自动拉取 RSS 订阅，统一排版成阅读页。
   1. 自动拉取 RSS 订阅（由 GitHub Actions 每日 06/12/18 点运行）
   2. 保存文章到 GitHub 仓库（每源最近 7 天内的文章存于 rss/data/<slug>.json，含正文全文）
   3. 每个订阅源只保留最近 7 天内的文章（最多 10 篇），更陈旧的丢弃
-  4. 统一排版（单一卡片样式，按日期倒序，可按分类筛选；卡片内可展开正文全文）
+  4. 统一排版（单一卡片样式，按日期倒序，可按分类筛选；点击进入整页文章视图/极简阅读器看全文）
   5. 旧文章自动删除（每次重跑只写最近 7 天的文章，旧文不进 JSON = 自然淘汰）
   6. 正文全文：对每篇展示中的文章用 trafilatura 抽取正文，存进仓库并内联展示（抓取失败则回退外链）
   7. 源健康检测（garss 式）：抓取状态持久化到 rss/feed_health.json，连续 3 次失败自动停用该源，
@@ -101,11 +101,34 @@ __FOOTER_CSS__
 .readmore-btn{display:inline-block;background:var(--pill-bg);color:var(--accent2);border:1px solid var(--line);
   border-radius:8px;padding:5px 12px;font-size:13px;cursor:pointer;font-weight:600;margin-top:2px;align-self:flex-start;transition:border-color .15s}
 .readmore-btn:hover{border-color:var(--accent2)}
-.fulltext{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);
-  font-size:13.5px;line-height:1.75;color:var(--text);white-space:pre-wrap;
-  max-height:440px;overflow:auto}
 .notice{padding:14px 16px;border-radius:10px;background:var(--pill-bg);color:var(--muted);font-size:13.5px;margin-bottom:16px;line-height:1.7}
 .foot{text-align:center;color:var(--muted);font-size:12.5px;padding:26px 12px 10px}
+
+/* ===== 整页文章视图（极简阅读器）===== */
+.reader-overlay{position:fixed;inset:0;z-index:1000;background:var(--bg);
+  overflow-y:auto;display:none}
+.reader-overlay.open{display:block;animation:readerin .22s ease}
+@keyframes readerin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.reader-bar{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:12px;
+  padding:12px 18px;background:var(--nav-bg);backdrop-filter:saturate(1.4) blur(10px);
+  -webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.reader-back{display:inline-flex;align-items:center;gap:6px;cursor:pointer;
+  border:1px solid var(--line);background:var(--pill-bg);color:var(--text);
+  border-radius:999px;padding:6px 15px;font-size:14px;font-weight:600;transition:border-color .15s}
+.reader-back:hover{border-color:var(--accent2)}
+.reader-srctag{color:var(--muted);font-size:13px;margin-left:auto;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;max-width:50vw}
+.reader-article{max-width:720px;margin:0 auto;padding:38px 24px 96px}
+.reader-title{font-size:clamp(23px,5vw,33px);line-height:1.3;font-weight:800;letter-spacing:.2px;margin-bottom:16px;overflow-wrap:anywhere}
+.reader-meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;
+  color:var(--muted);font-size:13.5px;padding-bottom:18px;margin-bottom:26px;
+  border-bottom:1px solid var(--line)}
+.reader-meta .src-pill{font-size:11.5px}
+.reader-origin{color:var(--accent2);text-decoration:none;font-weight:600;margin-left:auto;white-space:nowrap}
+.reader-origin:hover{text-decoration:underline}
+.reader-body{font-size:17px;line-height:1.9;color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere}
+.reader-body::selection{background:var(--accent2);color:#fff}
+@media(max-width:760px){.reader-article{padding:26px 18px 80px}.reader-body{font-size:16px}}
 """
 
 TEMPLATE = """<!doctype html>
@@ -125,7 +148,7 @@ __PAGE_CSS__
 __NAV_HTML__
 <header class="hero">
   <h1>📡 RSS 阅读</h1>
-  <p>自动聚合你订阅的 RSS · 每个来源保留最近 7 天文章（最多 10 篇）· 含正文全文 · 统一排版</p>
+  <p>自动聚合你订阅的 RSS · 每个来源保留最近 7 天文章（最多 10 篇）· 点击进入整页阅读视图看正文全文</p>
   <p class="hero-window">本页更新：<span class="updated-badge">__UPDATED__</span> · 共 <strong>__TOTAL__</strong> 篇</p>
 </header>
 <main class="wrap">
@@ -137,6 +160,19 @@ __FOOTER_HTML__
 <footer class="foot">
   订阅源配置见仓库 <code>rss/feeds.json</code> · 每源最新 10 篇，旧文自动淘汰 · 由 GitHub Actions 定时拉取
 </footer>
+
+<!-- 整页文章视图（极简阅读器）：点击卡片「阅读全文」后铺满全屏展示正文 -->
+<div class="reader-overlay" id="reader" role="dialog" aria-modal="true" aria-label="文章阅读视图">
+  <div class="reader-bar">
+    <button class="reader-back" type="button" onclick="closeReader()">← 返回列表</button>
+    <span class="reader-srctag" id="reader-srctag"></span>
+  </div>
+  <article class="reader-article">
+    <h1 class="reader-title" id="reader-title"></h1>
+    <div class="reader-meta" id="reader-meta"></div>
+    <div class="reader-body" id="reader-body"></div>
+  </article>
+</div>
 <script>
   (function(){
     var btn=document.getElementById('theme-toggle');
@@ -164,13 +200,39 @@ __FOOTER_HTML__
         c.style.display=(cat==='all'||c.getAttribute('data-cat')===cat)?'':'none';
       });
     });});
-    window.toggleFull=function(btn){
-      var box=btn.nextElementSibling;
-      if(!box)return;
-      var open=box.style.display!=='none';
-      box.style.display=open?'none':'block';
-      btn.textContent=open?'📖 阅读全文':'📕 收起全文';
+    // 整页文章视图：从卡片读取标题/来源/日期/正文/原文链接，注入阅读器并铺满全屏
+    var reader=document.getElementById('reader');
+    window.openReader=function(btn){
+      var card=btn.closest('.card'); if(!card)return;
+      var srcEl=card.querySelector('.src-pill');
+      var dateEl=card.querySelector('.card-date');
+      var titleEl=card.querySelector('.card-title');
+      var bodyEl=card.querySelector('.article-body');
+      document.getElementById('reader-srctag').textContent=srcEl?srcEl.textContent:'';
+      document.getElementById('reader-title').textContent=titleEl?titleEl.textContent:'';
+      var meta=document.getElementById('reader-meta'); meta.innerHTML='';
+      if(srcEl){var p=document.createElement('span');p.className='src-pill';
+        p.style.background=srcEl.style.background;p.textContent=srcEl.textContent;meta.appendChild(p);}
+      if(dateEl&&dateEl.textContent){var d=document.createElement('span');d.textContent=dateEl.textContent;meta.appendChild(d);}
+      var href=titleEl?titleEl.getAttribute('href'):'';
+      if(href){var a=document.createElement('a');a.className='reader-origin';a.href=href;
+        a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看原文 →';meta.appendChild(a);}
+      document.getElementById('reader-body').textContent=bodyEl?bodyEl.textContent:'';
+      reader.classList.add('open'); reader.scrollTop=0;
+      document.body.style.overflow='hidden';
+      try{history.pushState({reader:1},'');}catch(e){}
     };
+    window.closeReader=function(){
+      reader.classList.remove('open');
+      document.body.style.overflow='';
+    };
+    // ESC 关闭 + 浏览器返回键关闭
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&reader.classList.contains('open'))closeReader();
+    });
+    window.addEventListener('popstate',function(){
+      if(reader.classList.contains('open'))closeReader();
+    });
   })();
 </script>
 </body>
@@ -324,8 +386,8 @@ def main():
         body = e.get("content", "")
         if body:
             action = (f'<button class="readmore-btn" type="button" '
-                      f'onclick="toggleFull(this)">📖 阅读全文</button>'
-                      f'<div class="fulltext" style="display:none">{esc(body)}</div>')
+                      f'onclick="openReader(this)">📖 阅读全文</button>'
+                      f'<div class="article-body" hidden>{esc(body)}</div>')
         else:
             action = (f'<a class="readmore" href="{esc(url)}" '
                       f'target="_blank" rel="noopener noreferrer">阅读全文 →</a>')
