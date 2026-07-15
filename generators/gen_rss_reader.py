@@ -5,16 +5,17 @@ gen_rss_reader.py —— 自动拉取 RSS 订阅，统一排版成阅读页。
 
 满足的需求：
   1. 自动拉取 RSS 订阅（由 GitHub Actions 每日 06/12/18 点运行）
-  2. 保存文章到 GitHub 仓库（每源最新 10 篇存于 rss/data/<slug>.json）
-  3. 每个订阅源只保留最新 10 篇
+  2. 保存文章到 GitHub 仓库（每源最近 7 天内的文章存于 rss/data/<slug>.json）
+  3. 每个订阅源只保留最近 7 天内的文章（最多 10 篇），更陈旧的丢弃
   4. 统一排版（单一卡片样式，按日期倒序，可按分类筛选）
-  5. 旧文章自动删除（每次重跑只写最新 10 篇，旧文不进 JSON = 自然淘汰）
+  5. 旧文章自动删除（每次重跑只写最近 7 天的文章，旧文不进 JSON = 自然淘汰）
 
 订阅源来自仓库根 rss/feeds.json（用户直接编辑增删，push 后下次 CI 生效）。
 """
 
 import json
 import sys
+import time
 from pathlib import Path
 from datetime import datetime
 
@@ -27,6 +28,7 @@ FEEDS_FILE = ROOT / "rss" / "feeds.json"
 DATA_DIR = ROOT / "rss" / "data"
 OUT_HTML = ROOT / "rss" / "index.html"
 PER_FEED = 10
+MAX_AGE_DAYS = 7  # 仅保留最近 N 天内的文章，更陈旧的一律丢弃（避免 2019 之类旧文混入）
 
 NAV_LINKS = (
     '<a class="nav-link" href="../hotnews/index.html">🔥 综合热点</a>'
@@ -112,7 +114,7 @@ __PAGE_CSS__
 __NAV_HTML__
 <header class="hero">
   <h1>📡 RSS 阅读</h1>
-  <p>自动聚合你订阅的 RSS · 每个来源保留最新 10 篇 · 统一排版</p>
+  <p>自动聚合你订阅的 RSS · 每个来源保留最近 7 天文章（最多 10 篇）· 统一排版</p>
   <p class="hero-window">本页更新：<span class="updated-badge">__UPDATED__</span> · 共 <strong>__TOTAL__</strong> 篇</p>
 </header>
 <main class="wrap">
@@ -196,6 +198,9 @@ def main():
     feeds = load_feeds()
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+    # 新鲜度截点：只保留该时间戳之后的文章，更早的丢弃
+    cutoff = time.time() - MAX_AGE_DAYS * 86400
+
     all_entries = []
     unavailable = []
     for f in feeds:
@@ -205,6 +210,10 @@ def main():
             entries = fetch_rss(f["url"], name, max_n=PER_FEED)
         except Exception:
             entries = []
+        # 新鲜度过滤：丢弃超过 MAX_AGE_DAYS 天的陈旧文章；
+        # 抓取时拿不到可靠时间（ts<=0）的条目无法判断是否过期，保守保留。
+        entries = [e for e in entries
+                   if (e.get("ts") or 0) <= 0 or (e.get("ts") or 0) >= cutoff]
         if not entries:
             unavailable.append(name)
         # 保存该源最新 10 篇到仓库（旧文不写入 = 自动删除）
