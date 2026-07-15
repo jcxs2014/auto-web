@@ -1,10 +1,12 @@
 name: Daily content update
 
 on:
-  schedule:
-    # 每天 UTC 06:00 ≈ 意大利（CEST, UTC+2）08:00。
-    # GitHub 免费层 scheduled run 可能有数分钟~数小时延迟，属正常。
-    - cron: "0 6 * * *"
+  # 定时已暂停（保留手动触发）。
+  # 如需恢复每日自动生成，取消下面 schedule 块的注释即可。
+  # schedule:
+  #   # 每天 UTC 06:00 ≈ 意大利（CEST, UTC+2）08:00。
+  #   # GitHub 免费层 scheduled run 可能有数分钟~数小时延迟，属正常。
+  #   - cron: "0 6 * * *"
   workflow_dispatch:  # 允许在 Actions 标签手动触发一次
 
 # 允许 GITHUB_TOKEN 把生成结果推送回仓库
