@@ -27,6 +27,7 @@ import calendar
 import html
 import json
 import re
+import ssl
 import sys
 import time
 import concurrent.futures
@@ -46,20 +47,58 @@ _REQUEST_GAP = 1.0
 _last_req = 0.0
 
 
+# SSL 上下文：优先用 certifi 提供的 CA 包（解决托管 Python 缺少系统证书导致的
+# "unable to get local issuer certificate"）；certifi 不可用时回退系统默认上下文。
+_SSL_CTX = None
+
+
+def _ssl_context():
+    global _SSL_CTX
+    if _SSL_CTX is not None:
+        return _SSL_CTX
+    try:
+        import certifi
+        ctx = ssl.create_default_context(cafile=certifi.where())
+    except Exception:  # noqa: BLE001
+        ctx = ssl.create_default_context()
+    _SSL_CTX = ctx
+    return ctx
+
+
 def http_get(url, timeout=25):
-    """返回 (status, data)。任何异常都吞掉，返回 (-1, 错误信息)。"""
+    """返回 (status, data)。任何异常都吞掉，返回 (-1, 错误信息)。
+
+    健壮性增强：
+      - https 请求使用 certifi CA 包做证书校验，避免托管环境缺少系统证书而误报失败；
+      - 若 https 因 SSL/连接问题失败，自动用 http:// 重试一次（部分站点证书过期或无 https）。
+    回退仅在失败时触发，不影响本就正常的 https 源。
+    """
     global _last_req
     now = time.time()
     if now - _last_req < _REQUEST_GAP:
         time.sleep(_REQUEST_GAP - (now - _last_req))
     _last_req = time.time()
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    try:
+
+    def _open(u):
+        req = urllib.request.Request(u, headers={"User-Agent": UA})
+        if u.startswith("https://"):
+            with urllib.request.urlopen(req, timeout=timeout, context=_ssl_context()) as r:
+                return r.status, r.read().decode("utf-8", "replace")
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return r.status, r.read().decode("utf-8", "replace")
+
+    try:
+        return _open(url)
     except urllib.error.HTTPError as e:
         return e.code, f"HTTP {e.code}"
     except Exception as e:  # noqa: BLE001
+        if url.startswith("https://"):
+            try:
+                return _open("http://" + url[8:])
+            except urllib.error.HTTPError as e2:
+                return e2.code, f"HTTP {e2.code}"
+            except Exception as e2:  # noqa: BLE001
+                return -1, f"{type(e2).__name__}: {e2}"
         return -1, f"{type(e).__name__}: {e}"
 
 
