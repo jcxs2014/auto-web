@@ -2,3 +2,5 @@
 feedparser
 # RSS 抓取用 certifi 提供 CA 证书包，避免托管 Python 缺系统证书导致 https 源误报失败
 certifi
+# RSS 阅读页全文抽取（trafilatura 抽取文章正文，存进仓库并内联展示）
+trafilatura

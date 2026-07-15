@@ -5,10 +5,11 @@ gen_rss_reader.py —— 自动拉取 RSS 订阅，统一排版成阅读页。
 
 满足的需求：
   1. 自动拉取 RSS 订阅（由 GitHub Actions 每日 06/12/18 点运行）
-  2. 保存文章到 GitHub 仓库（每源最近 7 天内的文章存于 rss/data/<slug>.json）
+  2. 保存文章到 GitHub 仓库（每源最近 7 天内的文章存于 rss/data/<slug>.json，含正文全文）
   3. 每个订阅源只保留最近 7 天内的文章（最多 10 篇），更陈旧的丢弃
-  4. 统一排版（单一卡片样式，按日期倒序，可按分类筛选）
+  4. 统一排版（单一卡片样式，按日期倒序，可按分类筛选；卡片内可展开正文全文）
   5. 旧文章自动删除（每次重跑只写最近 7 天的文章，旧文不进 JSON = 自然淘汰）
+  6. 正文全文：对每篇展示中的文章用 trafilatura 抽取正文，存进仓库并内联展示（抓取失败则回退外链）
 
 订阅源来自仓库根 rss/feeds.json（用户直接编辑增删，push 后下次 CI 生效）。
 """
@@ -20,7 +21,7 @@ from pathlib import Path
 from datetime import datetime
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from sources_util import fetch_rss
+from sources_util import fetch_rss, fetch_article_text
 from nav_util import NAV_CSS, build_nav, FOOTER_CSS, build_footer
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -93,6 +94,12 @@ __FOOTER_CSS__
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
 .readmore{display:inline-block;color:var(--accent2);font-weight:600;text-decoration:none;font-size:13px;margin-top:2px}
 .readmore:hover{text-decoration:underline}
+.readmore-btn{display:inline-block;background:var(--pill-bg);color:var(--accent2);border:1px solid var(--line);
+  border-radius:8px;padding:5px 12px;font-size:13px;cursor:pointer;font-weight:600;margin-top:2px;align-self:flex-start;transition:border-color .15s}
+.readmore-btn:hover{border-color:var(--accent2)}
+.fulltext{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);
+  font-size:13.5px;line-height:1.75;color:var(--text);white-space:pre-wrap;
+  max-height:440px;overflow:auto}
 .notice{padding:14px 16px;border-radius:10px;background:var(--pill-bg);color:var(--muted);font-size:13.5px;margin-bottom:16px;line-height:1.7}
 .foot{text-align:center;color:var(--muted);font-size:12.5px;padding:26px 12px 10px}
 """
@@ -114,7 +121,7 @@ __PAGE_CSS__
 __NAV_HTML__
 <header class="hero">
   <h1>📡 RSS 阅读</h1>
-  <p>自动聚合你订阅的 RSS · 每个来源保留最近 7 天文章（最多 10 篇）· 统一排版</p>
+  <p>自动聚合你订阅的 RSS · 每个来源保留最近 7 天文章（最多 10 篇）· 含正文全文 · 统一排版</p>
   <p class="hero-window">本页更新：<span class="updated-badge">__UPDATED__</span> · 共 <strong>__TOTAL__</strong> 篇</p>
 </header>
 <main class="wrap">
@@ -153,6 +160,13 @@ __FOOTER_HTML__
         c.style.display=(cat==='all'||c.getAttribute('data-cat')===cat)?'':'none';
       });
     });});
+    window.toggleFull=function(btn){
+      var box=btn.nextElementSibling;
+      if(!box)return;
+      var open=box.style.display!=='none';
+      box.style.display=open?'none':'block';
+      btn.textContent=open?'📖 阅读全文':'📕 收起全文';
+    };
   })();
 </script>
 </body>
@@ -215,6 +229,13 @@ def main():
         # 抓取时拿不到可靠时间（ts<=0）的条目无法判断是否过期，保守保留。
         entries = [e for e in raw
                    if (e.get("ts") or 0) <= 0 or (e.get("ts") or 0) >= cutoff]
+        # 全文抓取：仅对通过新鲜度过滤、会展示的文章抽取正文（存进仓库 + 内联展示），
+        # 失败/无正文的条目留空，回退为外链「阅读全文」。
+        for e in entries:
+            try:
+                e["content"] = fetch_article_text(e.get("url", ""))
+            except Exception:
+                e["content"] = ""
         if not raw:
             unavailable.append(name)      # 真没抓到 → 源可能有问题
         elif not entries:
@@ -252,16 +273,25 @@ def main():
         color = CAT_COLOR.get(cat, DEFAULT_COLOR)
         date = e.get("date", "")
         summ = e.get("summary", "")
+        url = e.get("url", "")
+        body = e.get("content", "")
+        if body:
+            action = (f'<button class="readmore-btn" type="button" '
+                      f'onclick="toggleFull(this)">📖 阅读全文</button>'
+                      f'<div class="fulltext" style="display:none">{esc(body)}</div>')
+        else:
+            action = (f'<a class="readmore" href="{esc(url)}" '
+                      f'target="_blank" rel="noopener noreferrer">阅读全文 →</a>')
         cards_html += (
-            f'<a class="card" data-cat="{esc(cat)}" href="{esc(e.get("url",""))}" '
-            f'target="_blank" rel="noopener noreferrer">'
+            f'<div class="card" data-cat="{esc(cat)}">'
             f'<div class="card-top">'
             f'<span class="src-pill" style="background:{color}">{esc(e["_src"])}</span>'
             f'<span class="card-date">{esc(date)}</span></div>'
-            f'<div class="card-title">{esc(e.get("title",""))}</div>'
+            f'<a class="card-title" href="{esc(url)}" '
+            f'target="_blank" rel="noopener noreferrer">{esc(e.get("title",""))}</a>'
             + (f'<div class="card-summary">{esc(summ)}</div>' if summ else "")
-            + f'<span class="readmore">阅读全文 →</span>'
-            f'</a>'
+            + action
+            + f'</div>'
         )
     if not cards_html:
         cards_html = '<p class="notice">本次抓取未获取到任何文章（订阅源暂不可达或返回为空）。下次自动更新会重试。</p>'

@@ -366,6 +366,25 @@ def fetch_rss(url, source_name, max_n=10):
     return out
 
 
+def fetch_article_text(url, timeout=25):
+    """抓取文章正文（全文），用 trafilatura 抽取正文。失败 / 无正文返回空串。
+
+    仅用于 RSS 阅读页把全文也存进仓库（统一格式内联展示）。
+    复用 http_get（UA + 限流 + https→http 回退），抽取失败不影响整页。
+    """
+    if not url:
+        return ""
+    st, html = http_get(url, timeout=timeout)
+    if st != 200 or not html:
+        return ""
+    try:
+        import trafilatura
+        text = trafilatura.extract(html, url=url, include_comments=False)
+    except Exception:  # noqa: BLE001
+        return ""
+    return (text or "").strip()
+
+
 def fetch_prl_crossref(max_n=10):
     """PRL 最新正式发表（Crossref，按 PRL 的 ISSN 0031-9007 取最近发表）。"""
     url = ("https://api.crossref.org/journals/0031-9007/works?sort=published"
