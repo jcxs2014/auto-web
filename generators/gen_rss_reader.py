@@ -202,20 +202,23 @@ def main():
     cutoff = time.time() - MAX_AGE_DAYS * 86400
 
     all_entries = []
-    unavailable = []
+    unavailable = []   # 抓取失败：源不可达 / 返回为空 / 解析错误 → 真正的源不可用
+    no_recent = []     # 抓取成功，但最近 N 天内没有新文章（低频博客）→ 非故障
     for f in feeds:
         name = f.get("name") or f.get("url")
         cat = f.get("category", "其它")
         try:
-            entries = fetch_rss(f["url"], name, max_n=PER_FEED)
+            raw = fetch_rss(f["url"], name, max_n=PER_FEED)
         except Exception:
-            entries = []
+            raw = []
         # 新鲜度过滤：丢弃超过 MAX_AGE_DAYS 天的陈旧文章；
         # 抓取时拿不到可靠时间（ts<=0）的条目无法判断是否过期，保守保留。
-        entries = [e for e in entries
+        entries = [e for e in raw
                    if (e.get("ts") or 0) <= 0 or (e.get("ts") or 0) >= cutoff]
-        if not entries:
-            unavailable.append(name)
+        if not raw:
+            unavailable.append(name)      # 真没抓到 → 源可能有问题
+        elif not entries:
+            no_recent.append(name)        # 抓到了，但都是 N 天前的旧文
         # 保存该源最新 10 篇到仓库（旧文不写入 = 自动删除）
         slug = slugify(name)
         store = {
@@ -264,10 +267,17 @@ def main():
         cards_html = '<p class="notice">本次抓取未获取到任何文章（订阅源暂不可达或返回为空）。下次自动更新会重试。</p>'
 
     notice_html = ""
+    parts = []
     if unavailable:
-        notice_html = ('<p class="notice">⚠️ 以下订阅源本次未返回内容，已跳过：'
-                       + "、".join(f"<strong>{esc(u)}</strong>" for u in unavailable)
-                       + "。其余来源正常展示。</p>")
+        parts.append(
+            '⚠️ 以下订阅源本次抓取失败（不可达或返回为空），已跳过，下次自动更新会重试：'
+            + "、".join(f"<strong>{esc(u)}</strong>" for u in unavailable) + "。")
+    if no_recent:
+        parts.append(
+            f"🗓️ 以下订阅源已抓取成功，但最近 {MAX_AGE_DAYS} 天内没有新文章（多为低频个人博客），暂不展示："
+            + "、".join(f"<strong>{esc(u)}</strong>" for u in no_recent) + "。")
+    if parts:
+        notice_html = "".join(f'<p class="notice">{p}</p>' for p in parts)
 
     now = datetime.now()
     updated = now.strftime("%Y-%m-%d %H:%M")
@@ -282,7 +292,9 @@ def main():
             .replace("__FILTERS__", filters_html)
             .replace("__CARDS__", cards_html))
     OUT_HTML.write_text(html, encoding="utf-8")
-    print(f"RSS 阅读页已生成：{len(feeds)} 个订阅源，{len(all_entries)} 篇文章 -> {OUT_HTML}")
+    print(f"RSS 阅读页已生成：{len(feeds)} 个订阅源，"
+          f"{len(all_entries)} 篇近{MAX_AGE_DAYS}天文章，"
+          f"{len(unavailable)} 个抓取失败，{len(no_recent)} 个无近{MAX_AGE_DAYS}天新文 -> {OUT_HTML}")
 
 
 if __name__ == "__main__":
