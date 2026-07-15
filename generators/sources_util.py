@@ -421,13 +421,15 @@ def fetch_article_text(url, timeout=25):
         import trafilatura
         # 优先要语义化 HTML（带段落/标题/列表等结构）
         # favor_recall: 更宽松召回，少漏标题/引用/特殊段落
-        # include_formatting: 保留 <strong>/<em> 等强调（特殊段落）
-        # include_links: 保留文内 <a> 链接
+        # include_links: 保留文内 <a> 链接（与 formatting 无关，单独控制）
         # include_tables: 保留表格
+        # 注意「不开」 include_formatting：trafilatura 开启后会对大段正文
+        # 过度套用 <strong>/<i> 行内强调（实测 databricks 近乎整篇被包进 <i>、
+        # 另有大量 <strong> 导致满屏加粗/斜体）。标题/引用/代码块等结构标签
+        # 由 trafilatura 默认产出、不受该开关影响，故关闭以换取干净排版。
         out = trafilatura.extract(page, url=url, include_comments=False,
                                   output_format="html", favor_recall=True,
-                                  include_tables=True, include_formatting=True,
-                                  include_links=True) or ""
+                                  include_tables=True, include_links=True) or ""
         if not out:
             # 退路：纯文本也包成 <p>，至少保留段落换行（先转义避免 < 被当标签）
             txt = trafilatura.extract(page, url=url, include_comments=False) or ""
