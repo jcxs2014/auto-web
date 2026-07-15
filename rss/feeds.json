@@ -1,12 +1,326 @@
 [
-  { "name": "共和报 Repubblica",     "url": "https://www.repubblica.it/rss/homepage.xml",        "category": "意大利", "lang": "it" },
-  { "name": "晚邮报 Corriere",       "url": "https://xml.corriere.it/rss/homepage.xml",          "category": "意大利", "lang": "it" },
-  { "name": "24小时太阳报 Sole24",   "url": "https://www.ilsole24ore.com/rss/inews.xml",         "category": "意大利", "lang": "it" },
-  { "name": "Politico Europe",       "url": "https://www.politico.eu/section/europe/rss/",       "category": "欧盟",   "lang": "en" },
-  { "name": "Le Monde",              "url": "https://www.lemonde.fr/rss/une.xml",                "category": "欧盟",   "lang": "fr" },
-  { "name": "BBC News",              "url": "https://feeds.bbci.co.uk/news/rss.xml",             "category": "国际",   "lang": "en" },
-  { "name": "Hacker News",           "url": "https://hnrss.org/frontpage",                       "category": "科技",   "lang": "en" },
-  { "name": "The Verge",             "url": "https://www.theverge.com/rss/index.xml",            "category": "科技",   "lang": "en" },
-  { "name": "Ars Technica",          "url": "http://feeds.arstechnica.com/arstechnica/index",    "category": "科技",   "lang": "en" },
-  { "name": "Nature",                "url": "https://www.nature.com/nature.rss",                 "category": "学术",   "lang": "en" }
+  {
+    "name": "燕渡寒潭",
+    "url": "https://hisherry.com/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "Heart in the city",
+    "url": "http://csxq.com/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "Lil Moon丨Nine-Lie",
+    "url": "https://nine-lie.com/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "小明同学",
+    "url": "https://jcxs2014.github.io/feed.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "我的天",
+    "url": "http://www.xlanda.net/feed/atom",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "流浪天下",
+    "url": "https://maie.name/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "伪医生律师的博客",
+    "url": "https://chidd.net/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "Xinsenz茶話",
+    "url": "https://xinsenz.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "古是",
+    "url": "https://adminsun.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "如是乎 · 生活百味随笔",
+    "url": "http://rushihu.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "公子府",
+    "url": "https://www.gongzi.org/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "威言威语",
+    "url": "https://www.weisay.com/blog/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "YeungYeah 的乱写地",
+    "url": "https://scottyeung.top/atom.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "见字如面",
+    "url": "https://hiwannz.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "Mivansaka's Blog",
+    "url": "https://mivansaka.xyz/feed.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "狡猫三窝",
+    "url": "https://slykiten.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "KAIX.IN",
+    "url": "https://kaix.in/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "牧羊人",
+    "url": "https://www.shephe.com?feed=rss",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "人生随笔",
+    "url": "http://thinkinlife.org/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "落园",
+    "url": "http://www.loyhome.com/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "Huiris's log",
+    "url": "https://huiris.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "拾风",
+    "url": "https://www.coolblood.cn?feed=rss2",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "喂马劈柴",
+    "url": "https://blog.shaoxiao.net/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "大Joy在侃村",
+    "url": "http://giantjoy.net/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "小球飞鱼",
+    "url": "https://mantyke.icu/index.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "雅余  ·  茶余饭后，闲情雅致",
+    "url": "https://www.yayu.net/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "大大的小蜗牛",
+    "url": "https://eallion.com/atom.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "渚碧",
+    "url": "https://jubeny.com/feed.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "博客 on Miao Yu ",
+    "url": "https://yufree.cn/cn/index.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "透明日报",
+    "url": "https://daily.xlab.app/atom.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "Randy's Blog",
+    "url": "https://lutaonan.com/rss.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "我道 1900的博客",
+    "url": "http://1900.live/rss/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "土木坛子",
+    "url": "https://tumutanzi.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "梦幻辰风",
+    "url": "https://www.mhcf.net/rss.php",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "非理勿试",
+    "url": "https://www.ntiy.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "漫漫长路",
+    "url": "https://mmcl.net/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "立云图志",
+    "url": "http://www.lopwon.com/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "迷你日志",
+    "url": "https://minirizhi.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "汝者非鱼",
+    "url": "https://rzfyu.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "灰常记忆",
+    "url": "https://bestcherish.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "淮城一只猫",
+    "url": "https://iiong.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "不曾长大",
+    "url": "https://qfsyj.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "响石潭",
+    "url": "https://www.xiangshitan.com/feed.php",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "JiaYin's Life",
+    "url": "https://imjiayin.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "Fatesinger",
+    "url": "https://fatesinger.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "SKYue's Home",
+    "url": "https://www.skyue.com/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "小陈故事",
+    "url": "https://www.chener.net/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "木瓜园",
+    "url": "https://muguayuan.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "水八口记",
+    "url": "https://blog.shuiba.co/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "当下",
+    "url": "https://blog.fueis.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "邹江博客",
+    "url": "https://www.zoujiang.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "君子不器",
+    "url": "https://www.colinjiang.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "梦不见的梦",
+    "url": "https://www.friendcc.com/feed/",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "破袜子",
+    "url": "https://pewae.com/feed",
+    "category": "博客",
+    "lang": "zh"
+  }
 ]
