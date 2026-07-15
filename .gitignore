@@ -4,3 +4,7 @@
 # Editor / OS temp
 *.swp
 Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
