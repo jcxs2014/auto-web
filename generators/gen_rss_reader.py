@@ -133,6 +133,9 @@ __FOOTER_CSS__
 .reader-body>h2{font-size:1.5em}.reader-body>h3{font-size:1.28em}.reader-body>h4{font-size:1.12em}
 .reader-body a{color:var(--accent2);text-decoration:underline;text-underline-offset:2px}
 .reader-body strong,.reader-body b{font-weight:700}
+/* 中和斜体：trafilatura 抽取常把整段正文误标为斜体（<i>/<em>），且中文斜体为强制倾斜、观感差，
+   统一按正常字形显示；真正的强调仍由 <strong>/<b> 加粗承担 */
+.reader-body em,.reader-body i,.reader-body cite,.reader-body var,.reader-body dfn{font-style:normal}
 .reader-body blockquote{margin:1.1em 0;padding:.4em 1.1em;border-left:3px solid var(--accent2);
   background:var(--pill-bg);color:var(--muted);border-radius:0 8px 8px 0}
 .reader-body blockquote p{margin:.4em 0}
