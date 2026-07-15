@@ -57,12 +57,12 @@ PAGE_CSS = """
 :root{
   --bg:#f4f7fb; --card:#ffffff; --text:#1a2233; --muted:#6b7688; --line:#e6ebf2;
   --accent:#e63946; --accent2:#1d8fe1; --nav-bg:rgba(255,255,255,.72);
-  --pill-bg:rgba(0,0,0,.05); --shadow:0 2px 10px rgba(20,40,80,.06);
+  --pill-bg:rgba(0,0,0,.05); --code-bg:#eef2f7; --shadow:0 2px 10px rgba(20,40,80,.06);
 }
 [data-theme="dark"]{
   --bg:#0f1420; --card:#161d2e; --text:#e6ebf5; --muted:#8b97ad; --line:#26314a;
   --accent:#ff5c6a; --accent2:#4cb3ff; --nav-bg:rgba(20,28,44,.72);
-  --pill-bg:rgba(255,255,255,.08); --shadow:0 2px 14px rgba(0,0,0,.35);
+  --pill-bg:rgba(255,255,255,.08); --code-bg:#0b0f18; --shadow:0 2px 14px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
@@ -126,8 +126,31 @@ __FOOTER_CSS__
 .reader-meta .src-pill{font-size:11.5px}
 .reader-origin{color:var(--accent2);text-decoration:none;font-weight:600;margin-left:auto;white-space:nowrap}
 .reader-origin:hover{text-decoration:underline}
-.reader-body{font-size:17px;line-height:1.9;color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere}
+.reader-body{font-size:17px;line-height:1.85;color:var(--text);overflow-wrap:anywhere;word-break:break-word}
 .reader-body::selection{background:var(--accent2);color:#fff}
+.reader-body>p{margin:0 0 1.15em}
+.reader-body>h1,.reader-body>h2,.reader-body>h3,.reader-body>h4{line-height:1.35;font-weight:800;margin:1.6em 0 .7em}
+.reader-body>h2{font-size:1.5em}.reader-body>h3{font-size:1.28em}.reader-body>h4{font-size:1.12em}
+.reader-body a{color:var(--accent2);text-decoration:underline;text-underline-offset:2px}
+.reader-body strong,.reader-body b{font-weight:700}
+.reader-body blockquote{margin:1.1em 0;padding:.4em 1.1em;border-left:3px solid var(--accent2);
+  background:var(--pill-bg);color:var(--muted);border-radius:0 8px 8px 0}
+.reader-body blockquote p{margin:.4em 0}
+.reader-body pre{margin:1.1em 0;padding:14px 16px;background:var(--code-bg);border:1px solid var(--line);
+  border-radius:10px;overflow:auto;font-size:13.5px;line-height:1.6}
+.reader-body code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em;
+  background:var(--code-bg);border:1px solid var(--line);border-radius:5px;padding:.1em .4em}
+.reader-body pre code{border:0;background:none;padding:0}
+.reader-body ul,.reader-body ol{margin:0 0 1.1em;padding-left:1.5em}
+.reader-body li{margin:.35em 0}
+.reader-body img{max-width:100%;height:auto;border-radius:10px;margin:1em 0;display:block}
+.reader-body figure{margin:1.2em 0;text-align:center}
+.reader-body figure img{margin:0 auto}
+.reader-body figcaption{font-size:13px;color:var(--muted);margin-top:.4em}
+.reader-body hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+.reader-body table{border-collapse:collapse;width:100%;margin:1.1em 0;font-size:14px}
+.reader-body th,.reader-body td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+.reader-body th{background:var(--pill-bg);font-weight:700}
 @media(max-width:760px){.reader-article{padding:26px 18px 80px}.reader-body{font-size:16px}}
 """
 
@@ -217,7 +240,7 @@ __FOOTER_HTML__
       var href=titleEl?titleEl.getAttribute('href'):'';
       if(href){var a=document.createElement('a');a.className='reader-origin';a.href=href;
         a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看原文 →';meta.appendChild(a);}
-      document.getElementById('reader-body').textContent=bodyEl?bodyEl.textContent:'';
+      document.getElementById('reader-body').innerHTML=bodyEl?bodyEl.innerHTML:'';
       reader.classList.add('open'); reader.scrollTop=0;
       document.body.style.overflow='hidden';
       try{history.pushState({reader:1},'');}catch(e){}
@@ -387,7 +410,7 @@ def main():
         if body:
             action = (f'<button class="readmore-btn" type="button" '
                       f'onclick="openReader(this)">📖 阅读全文</button>'
-                      f'<div class="article-body" hidden>{esc(body)}</div>')
+                      f'<div class="article-body" hidden>{body}</div>')
         else:
             action = (f'<a class="readmore" href="{esc(url)}" '
                       f'target="_blank" rel="noopener noreferrer">阅读全文 →</a>')

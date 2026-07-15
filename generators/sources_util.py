@@ -366,23 +366,69 @@ def fetch_rss(url, source_name, max_n=10):
     return out
 
 
-def fetch_article_text(url, timeout=25):
-    """抓取文章正文（全文），用 trafilatura 抽取正文。失败 / 无正文返回空串。
+# 阅读器正文允许保留的标签（其余标签连同其属性一并剥除，仅留文本）
+_ARTICLE_ALLOWED_TAGS = {
+    "p", "br", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li",
+    "blockquote", "pre", "code", "a", "img", "figure", "figcaption",
+    "strong", "em", "b", "i", "u", "span", "hr", "table", "thead",
+    "tbody", "tr", "td", "th", "sub", "sup", "mark", "del", "ins",
+}
+# 会被整段丢弃（含内部文本）的危险/无意义块
+_ARTICLE_DROP_BLOCKS = ("script", "style", "iframe", "object", "embed", "noscript", "link", "meta")
 
-    仅用于 RSS 阅读页把全文也存进仓库（统一格式内联展示）。
-    复用 http_get（UA + 限流 + https→http 回退），抽取失败不影响整页。
+
+def _sanitize_article_html(h):
+    """极简白名单清洗：仅保留排版用标签，去掉脚本/事件属性/危险协议。"""
+    if not h:
+        return ""
+    # 1) 整段丢弃危险/无意义的块级内容（含其内部一切）
+    h = re.sub(r"<(%s)[^>]*>.*?</\1>" % "|".join(_ARTICLE_DROP_BLOCKS),
+               "", h, flags=re.S | re.I)
+    # 2) 剥掉外层 html / head / body 包裹
+    h = re.sub(r"</?(html|head|body)[^>]*>", "", h, flags=re.I)
+    # 3) 去掉不在白名单的标签（保留其内部文本）
+    h = re.sub(r"<(/?)([a-zA-Z0-9]+)([^>]*)>",
+               lambda m: m.group(0) if m.group(2).lower() in _ARTICLE_ALLOWED_TAGS else "",
+               h)
+    # 4) 去掉所有 on* 事件属性
+    h = re.sub(r"\s+on[a-z]+\s*=\s*(\"[^\"]*\"|'[^']*'|[^\s>]+)", "", h, flags=re.I)
+    # 5) 去掉 javascript: 协议的链接/资源
+    h = re.sub(r'(href|src)\s*=\s*("javascript:[^"]*"|\'javascript:[^\']*\')',
+               "", h, flags=re.I)
+    return h.strip()
+
+
+def fetch_article_text(url, timeout=25):
+    """抓取文章正文（全文），用 trafilatura 抽取**语义化 HTML**。
+
+    返回清洗后的 HTML 字符串（含 <p>/<h*>/<blockquote>/<pre>/<ul> 等排版标签），
+    阅读器用 innerHTML 渲染即可获得真正的段落 / 标题 / 引用排版。
+    失败 / 无正文返回空串（卡片仍回退为外链）。
+
+    仅用于 RSS 阅读页把全文也存进仓库。复用 http_get（UA + 限流 + https→http 回退），
+    抽取失败不影响整页。
     """
     if not url:
         return ""
-    st, html = http_get(url, timeout=timeout)
-    if st != 200 or not html:
+    st, page = http_get(url, timeout=timeout)
+    if st != 200 or not page:
         return ""
     try:
         import trafilatura
-        text = trafilatura.extract(html, url=url, include_comments=False)
+        # 优先要语义化 HTML（带段落/标题/列表等结构）
+        out = trafilatura.extract(page, url=url, include_comments=False,
+                                  output_format="html") or ""
+        if not out:
+            # 退路：纯文本也包成 <p>，至少保留段落换行（先转义避免 < 被当标签）
+            txt = trafilatura.extract(page, url=url, include_comments=False) or ""
+            out = "\n".join(f"<p>{html.escape(ln)}</p>"
+                            for ln in (txt or "").split("\n\n") if ln.strip())
+        out = _sanitize_article_html(out)
+        # 去掉正文里重复的 h1 标题（阅读器顶部已单独展示标题）
+        out = re.sub(r"^\s*<h1[^>]*>.*?</h1>", "", out, flags=re.S | re.I)
     except Exception:  # noqa: BLE001
         return ""
-    return (text or "").strip()
+    return out
 
 
 def fetch_prl_crossref(max_n=10):

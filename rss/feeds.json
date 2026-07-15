@@ -274,5 +274,161 @@
     "url": "https://pewae.com/feed",
     "category": "博客",
     "lang": "zh"
+  },
+  {
+    "name": "阮一峰的网络日志",
+    "url": "https://www.ruanyifeng.com/blog/atom.xml",
+    "category": "周刊",
+    "lang": "zh"
+  },
+  {
+    "name": "潮流周刊",
+    "url": "https://weekly.tw93.fun/rss.xml",
+    "category": "周刊",
+    "lang": "zh"
+  },
+  {
+    "name": "猫鱼周刊",
+    "url": "https://ameow.xyz/feed.xml",
+    "category": "周刊",
+    "lang": "zh"
+  },
+  {
+    "name": "美团技术团队",
+    "url": "https://tech.meituan.com/feed/",
+    "category": "技术",
+    "lang": "zh"
+  },
+  {
+    "name": "量子位",
+    "url": "https://www.qbitai.com/feed",
+    "category": "资讯",
+    "lang": "zh"
+  },
+  {
+    "name": "爱范儿",
+    "url": "http://www.ifanr.com/feed",
+    "category": "资讯",
+    "lang": "zh"
+  },
+  {
+    "name": "宝玉的分享",
+    "url": "https://baoyu.io/feed.xml",
+    "category": "博客",
+    "lang": "zh"
+  },
+  {
+    "name": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "category": "AI",
+    "lang": "en"
+  },
+  {
+    "name": "OpenAI Blog",
+    "url": "https://openai.com/news/rss.xml",
+    "category": "AI",
+    "lang": "en"
+  },
+  {
+    "name": "AWS Machine Learning Blog",
+    "url": "https://aws.amazon.com/blogs/amazon-ai/feed/",
+    "category": "AI",
+    "lang": "en"
+  },
+  {
+    "name": "Latent Space",
+    "url": "https://www.latent.space/feed",
+    "category": "AI",
+    "lang": "en"
+  },
+  {
+    "name": "The GitHub Blog",
+    "url": "https://github.blog/feed/",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "Google Cloud Blog",
+    "url": "https://cloudblog.withgoogle.com/rss/",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "Engineering at Meta",
+    "url": "https://engineering.fb.com/feed/",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "Microsoft Azure Blog",
+    "url": "https://azure.microsoft.com/en-us/blog/feed/",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "The Cloudflare Blog",
+    "url": "https://blog.cloudflare.com/rss",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "ByteByteGo Newsletter",
+    "url": "https://blog.bytebytego.com/feed",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "Stack Overflow Blog",
+    "url": "http://blog.stackoverflow.com/feed/",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/news/rss/",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "Next.js Blog",
+    "url": "https://nextjs.org/feed.xml",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "Node.js Blog",
+    "url": "https://nodejs.org/en/feed/blog.xml",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "Databricks",
+    "url": "https://www.databricks.com/feed",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "Vercel News",
+    "url": "https://vercel.com/atom",
+    "category": "技术",
+    "lang": "en"
+  },
+  {
+    "name": "The Keyword (Google)",
+    "url": "https://blog.google/rss",
+    "category": "资讯",
+    "lang": "en"
+  },
+  {
+    "name": "InfoQ",
+    "url": "http://www.infoq.com/rss/rss.action",
+    "category": "资讯",
+    "lang": "en"
+  },
+  {
+    "name": "Simon Willison's Weblog",
+    "url": "https://simonwillison.net/atom/everything/",
+    "category": "博客",
+    "lang": "en"
   }
 ]
