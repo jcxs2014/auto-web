@@ -119,14 +119,14 @@ __FOOTER_CSS__
 .reader-srctag{color:var(--muted);font-size:13px;margin-left:auto;white-space:nowrap;
   overflow:hidden;text-overflow:ellipsis;max-width:50vw}
 .reader-article{max-width:720px;margin:0 auto;padding:38px 24px 96px}
-.reader-title{font-size:clamp(23px,5vw,33px);line-height:1.3;font-weight:800;letter-spacing:.2px;margin-bottom:16px;overflow-wrap:anywhere}
+.reader-title{font-size:clamp(23px,5vw,33px);line-height:1.3;font-weight:800;letter-spacing:.2px;margin-bottom:16px;overflow-wrap:anywhere;font-style:normal}
 .reader-meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;
   color:var(--muted);font-size:13.5px;padding-bottom:18px;margin-bottom:26px;
-  border-bottom:1px solid var(--line)}
+  border-bottom:1px solid var(--line);font-style:normal}
 .reader-meta .src-pill{font-size:11.5px}
 .reader-origin{color:var(--accent2);text-decoration:none;font-weight:600;margin-left:auto;white-space:nowrap}
 .reader-origin:hover{text-decoration:underline}
-.reader-body{font-size:17px;line-height:1.85;color:var(--text);overflow-wrap:anywhere;word-break:break-word;text-align:justify;text-justify:inter-ideograph;hyphens:auto}
+.reader-body{font-size:17px;line-height:1.85;color:var(--text);overflow-wrap:anywhere;word-break:break-word;text-align:justify;text-justify:inter-ideograph;hyphens:auto;font-style:normal}
 .reader-body::selection{background:var(--accent2);color:#fff}
 .reader-body>p{margin:0 0 1.15em}
 .reader-body>h1,.reader-body>h2,.reader-body>h3,.reader-body>h4{line-height:1.35;font-weight:800;margin:1.6em 0 .7em}

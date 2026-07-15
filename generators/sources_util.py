@@ -367,10 +367,14 @@ def fetch_rss(url, source_name, max_n=10):
 
 
 # 阅读器正文允许保留的标签（其余标签连同其属性一并剥除，仅留文本）
+# 注意：斜体类标签（i/em/cite/var/dfn）故意不放进来——trafilatura 抽取时
+# 常把整段正文误标为 <i>，且中文无原生斜体字形、浏览器强制倾斜观感差；
+# 更危险的是其 <i> 常不闭合，会泄漏斜体样式污染后续整段 DOM（整站斜体）。
+# 故直接剥除这些标签（保留内部文本），真正的强调由 <strong>/<b> 加粗承担。
 _ARTICLE_ALLOWED_TAGS = {
     "p", "br", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li",
     "blockquote", "pre", "code", "a", "img", "figure", "figcaption",
-    "strong", "em", "b", "i", "u", "span", "hr", "table", "thead",
+    "strong", "b", "u", "span", "hr", "table", "thead",
     "tbody", "tr", "td", "th", "sub", "sup", "mark", "del", "ins",
 }
 # 会被整段丢弃（含内部文本）的危险/无意义块
