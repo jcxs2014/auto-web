@@ -220,8 +220,9 @@ def main():
             e["_src"] = name
             all_entries.append(e)
 
-    # 按发布时间倒序
-    all_entries.sort(key=lambda e: _date_ts(e.get("date")), reverse=True)
+    # 按发布时间倒序（优先用抓取时算好的 ts，缺失时回退解析 date 字符串）
+    all_entries.sort(
+        key=lambda e: e.get("ts") or _date_ts(e.get("date")), reverse=True)
 
     # 分类筛选条
     cats = []
