@@ -10,6 +10,8 @@ gen_rss_reader.py —— 自动拉取 RSS 订阅，统一排版成阅读页。
   4. 统一排版（单一卡片样式，按日期倒序，可按分类筛选；卡片内可展开正文全文）
   5. 旧文章自动删除（每次重跑只写最近 7 天的文章，旧文不进 JSON = 自然淘汰）
   6. 正文全文：对每篇展示中的文章用 trafilatura 抽取正文，存进仓库并内联展示（抓取失败则回退外链）
+  7. 源健康检测（garss 式）：抓取状态持久化到 rss/feed_health.json，连续 3 次失败自动停用该源，
+     页面单独提示；恢复成功自动启用。feeds.json 保持人工所有、不被改写。
 
 订阅源来自仓库根 rss/feeds.json（用户直接编辑增删，push 后下次 CI 生效）。
 """
@@ -27,9 +29,11 @@ from nav_util import NAV_CSS, build_nav, FOOTER_CSS, build_footer
 ROOT = Path(__file__).resolve().parent.parent
 FEEDS_FILE = ROOT / "rss" / "feeds.json"
 DATA_DIR = ROOT / "rss" / "data"
+HEALTH_FILE = ROOT / "rss" / "feed_health.json"
 OUT_HTML = ROOT / "rss" / "index.html"
 PER_FEED = 10
 MAX_AGE_DAYS = 7  # 仅保留最近 N 天内的文章，更陈旧的一律丢弃（避免 2019 之类旧文混入）
+MAX_FAILS = 3      # 连续抓取失败达到该次数即自动停用该源（garss 式健康检测）
 
 NAV_LINKS = (
     '<a class="nav-link" href="../hotnews/index.html">🔥 综合热点</a>'
@@ -191,6 +195,25 @@ def load_feeds():
     return [f for f in d if isinstance(f, dict) and f.get("url")]
 
 
+def load_health():
+    """读取各源的健康状态：{url: {fails, last_ok, last_err, last_try, disabled}}。"""
+    if not HEALTH_FILE.exists():
+        return {}
+    try:
+        d = json.loads(HEALTH_FILE.read_text(encoding="utf-8"))
+        return d if isinstance(d, dict) else {}
+    except Exception:
+        return {}
+
+
+def save_health(health):
+    try:
+        HEALTH_FILE.write_text(
+            json.dumps(health, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+
+
 def _date_ts(s):
     if not s:
         return 0
@@ -216,15 +239,24 @@ def main():
     cutoff = time.time() - MAX_AGE_DAYS * 86400
 
     all_entries = []
-    unavailable = []   # 抓取失败：源不可达 / 返回为空 / 解析错误 → 真正的源不可用
+    unavailable = []   # 本次抓取失败（瞬时），下次自动重试
     no_recent = []     # 抓取成功，但最近 N 天内没有新文章（低频博客）→ 非故障
+    disabled = []      # 连续失败达阈值、已自动停用（含失败原因）
+    health = load_health()
+    now_iso = datetime.now().strftime("%Y-%m-%d %H:%M")
     for f in feeds:
         name = f.get("name") or f.get("url")
+        url = f["url"]
         cat = f.get("category", "其它")
+        # 健康状态（跨运行持久化，用于自动停用判定）
+        h = health.setdefault(
+            url, {"fails": 0, "last_ok": "", "last_err": "", "last_try": "", "disabled": False})
         try:
-            raw = fetch_rss(f["url"], name, max_n=PER_FEED)
-        except Exception:
+            raw = fetch_rss(url, name, max_n=PER_FEED)
+            err = ""
+        except Exception as ex:
             raw = []
+            err = str(ex)[:160]
         # 新鲜度过滤：丢弃超过 MAX_AGE_DAYS 天的陈旧文章；
         # 抓取时拿不到可靠时间（ts<=0）的条目无法判断是否过期，保守保留。
         entries = [e for e in raw
@@ -236,14 +268,28 @@ def main():
                 e["content"] = fetch_article_text(e.get("url", ""))
             except Exception:
                 e["content"] = ""
-        if not raw:
-            unavailable.append(name)      # 真没抓到 → 源可能有问题
+        # 更新健康状态（garss 式：成功清零，失败累加；达阈值则停用，恢复成功自动启用）
+        if raw:
+            h["fails"] = 0
+            h["disabled"] = False
+            h["last_err"] = ""
+            h["last_ok"] = now_iso
+        else:
+            h["fails"] = h.get("fails", 0) + 1
+            h["last_err"] = err or "返回为空或解析失败"
+            h["last_try"] = now_iso
+            if h["fails"] >= MAX_FAILS:
+                h["disabled"] = True
+        if h["disabled"]:
+            disabled.append((name, h))     # 已停用 → 单独提示
+        elif not raw:
+            unavailable.append(name)       # 真没抓到 → 源可能有问题
         elif not entries:
-            no_recent.append(name)        # 抓到了，但都是 N 天前的旧文
-        # 保存该源最新 10 篇到仓库（旧文不写入 = 自动删除）
+            no_recent.append(name)         # 抓到了，但都是 N 天前的旧文
+        # 保存该源最新 10 篇到仓库（失败也写空，便于识别）
         slug = slugify(name)
         store = {
-            "name": name, "url": f["url"], "category": cat,
+            "name": name, "url": url, "category": cat,
             "lang": f.get("lang", ""), "entries": entries[:PER_FEED],
         }
         (DATA_DIR / f"{slug}.json").write_text(
@@ -252,6 +298,7 @@ def main():
             e["_cat"] = cat
             e["_src"] = name
             all_entries.append(e)
+    save_health(health)
 
     # 按发布时间倒序（优先用抓取时算好的 ts，缺失时回退解析 date 字符串）
     all_entries.sort(
@@ -306,6 +353,16 @@ def main():
         parts.append(
             f"🗓️ 以下订阅源已抓取成功，但最近 {MAX_AGE_DAYS} 天内没有新文章（多为低频个人博客），暂不展示："
             + "、".join(f"<strong>{esc(u)}</strong>" for u in no_recent) + "。")
+    if disabled:
+        items = []
+        for n, h in disabled:
+            items.append(
+                f"<strong>{esc(n)}</strong>"
+                f"（连续 {h.get('fails', 0)} 次失败：{esc(h.get('last_err', ''))}；"
+                f"最近尝试 {esc(h.get('last_try', ''))}）")
+        parts.append(
+            f"🚫 以下订阅源已连续 {MAX_FAILS} 次抓取失败，已自动停用（不再抓取，"
+            f"直到某次恢复成功自动启用）：<br>" + "<br>".join(items) + "。")
     if parts:
         notice_html = "".join(f'<p class="notice">{p}</p>' for p in parts)
 
@@ -324,7 +381,8 @@ def main():
     OUT_HTML.write_text(html, encoding="utf-8")
     print(f"RSS 阅读页已生成：{len(feeds)} 个订阅源，"
           f"{len(all_entries)} 篇近{MAX_AGE_DAYS}天文章，"
-          f"{len(unavailable)} 个抓取失败，{len(no_recent)} 个无近{MAX_AGE_DAYS}天新文 -> {OUT_HTML}")
+          f"{len(unavailable)} 个抓取失败，{len(no_recent)} 个无近{MAX_AGE_DAYS}天新文，"
+          f"{len(disabled)} 个已停用 -> {OUT_HTML}")
 
 
 if __name__ == "__main__":

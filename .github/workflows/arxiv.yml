@@ -48,4 +48,4 @@ jobs:
           cd ..
 
       - name: Commit and push (arxiv)
-        run: bash sync.sh arxiv
+        run: bash sync.sh arxiv arxiv-physics

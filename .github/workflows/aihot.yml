@@ -48,4 +48,4 @@ jobs:
           cd ..
 
       - name: Commit and push (aihot)
-        run: bash sync.sh aihot
+        run: bash sync.sh aihot aihot

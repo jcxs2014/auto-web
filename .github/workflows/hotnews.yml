@@ -49,4 +49,4 @@ jobs:
           cd ..
 
       - name: Commit and push (hotnews)
-        run: bash sync.sh hotnews
+        run: bash sync.sh hotnews hotnews news
