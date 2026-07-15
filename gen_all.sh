@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # gen_all.sh — 一键生成全部页面并同步上线
-# 依次生成：综合热点(hot) → 全球新闻(news) → AI HOT 日报 → arXiv 物理，最后 git 提交推送
+# 依次生成：综合热点(hot) → 全球新闻(news) → AI HOT 日报 → arXiv 物理 → RSS 阅读，最后 git 提交推送
 #
 # 用法：
 #   bash /Users/jcxs2014/Sites/Workbuddy/auto-web/gen_all.sh
@@ -42,6 +42,7 @@ run_gen "综合中文热点(hot)"  gen_hotnews.py hot
 run_gen "全球新闻(news)"      gen_hotnews.py news
 run_gen "AI HOT 每日科技日报"  gen_aihot_daily.py
 run_gen "arXiv 物理最新论文"   gen_arxiv_physics.py
+run_gen "RSS 阅读订阅"         gen_rss_reader.py
 
 echo "===== 页面生成结束，开始同步 ====="
 

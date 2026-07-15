@@ -181,6 +181,7 @@ def build_html(d: dict) -> tuple[str, str, int, dict]:
         f'<a href="#{SECTION_ANCHORS[l]}" class="nav-link"><span class="nav-emoji">{SECTION_EMOJI[l]}</span>{l}<span class="nav-count">{section_counts[l]}</span></a>'
         for l in SECTION_ORDER
     )
+    nav_items += '<a class="nav-link" href="../rss/index.html">📡 RSS</a>'
 
     sections_html = []
     for label, indexed in grouped:

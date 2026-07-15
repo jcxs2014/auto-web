@@ -1,0 +1,88 @@
+{
+  "name": "BBC News",
+  "url": "https://feeds.bbci.co.uk/news/rss.xml",
+  "category": "国际",
+  "lang": "en",
+  "entries": [
+    {
+      "title": "Iran threatens to block more trade routes as US launches fresh strikes",
+      "url": "https://www.bbc.co.uk/news/articles/c9323zgq6wvo?at_medium=RSS&at_campaign=rss",
+      "summary": "US President Donald Trump vowed to strike Iran's bridges and power plants next week if the country does not return to talks.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Wed, 15 Jul 2026"
+    },
+    {
+      "title": "I still feel pain of '98 but this can be different for England, says Shearer",
+      "url": "https://www.bbc.co.uk/sport/football/articles/c6212j5zw3ko?at_medium=RSS&at_campaign=rss",
+      "summary": "England's defeat by Argentina at the 1998 World Cup still burns deep for Alan Shearer, but he explains why this team can take their chance to change their lives forever.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Wed, 15 Jul 2026"
+    },
+    {
+      "title": "Midnight social media curfew proposed for UK teens aged 16 and 17 - but they can opt out",
+      "url": "https://www.bbc.co.uk/news/articles/c982857nlrlo?at_medium=RSS&at_campaign=rss",
+      "summary": "The government also wants 'addictive' app features such as auto-play and infinite scroll to be set to be disabled.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Wed, 15 Jul 2026"
+    },
+    {
+      "title": "Travellers warned of methanol poisoning risks in new campaign",
+      "url": "https://www.bbc.co.uk/news/articles/c9929dg5l5lo?at_medium=RSS&at_campaign=rss",
+      "summary": "Holidaymakers are urged to understand the dangers and symptoms of methanol poisoning.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Wed, 15 Jul 2026"
+    },
+    {
+      "title": "UK's extreme weather is the new normal, Met Office says",
+      "url": "https://www.bbc.co.uk/news/articles/c802041g4v8o?at_medium=RSS&at_campaign=rss",
+      "summary": "The latest report on the UK's climate warns cold mountainous areas are also being lost.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Wed, 15 Jul 2026"
+    },
+    {
+      "title": "After record heat, could the Atlantic make Britain's weather even more extreme?",
+      "url": "https://www.bbc.co.uk/news/articles/c992e8g10nmo?at_medium=RSS&at_campaign=rss",
+      "summary": "As temperatures rise, scientists are investigating whether a changing Atlantic could bring more volatile weather to the UK",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Tue, 14 Jul 2026"
+    },
+    {
+      "title": "How will Buy Now Pay Later changes affect you?",
+      "url": "https://www.bbc.co.uk/news/articles/c9q283r9px3o?at_medium=RSS&at_campaign=rss",
+      "summary": "Consumers should be better protected as Buy Now Pay Later lenders now require authorisation to operate.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Wed, 15 Jul 2026"
+    },
+    {
+      "title": "Briton's Iran jail sentence extended by two years, family says",
+      "url": "https://www.bbc.co.uk/news/articles/c4gygp4pk31o?at_medium=RSS&at_campaign=rss",
+      "summary": "Relatives of Craig Foreman say his punishment is being extended for talking to the media from jail.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Wed, 15 Jul 2026"
+    },
+    {
+      "title": "Three killed as Russian bombing of Odesa continues",
+      "url": "https://www.bbc.co.uk/news/articles/c8929jv8kdzo?at_medium=RSS&at_campaign=rss",
+      "summary": "In recent days, Russia and Ukraine have launched attacks on each others' infrastructure for shipping goods.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Wed, 15 Jul 2026"
+    },
+    {
+      "title": "Police say Ann Widdecombe killed in 'targeted attack' as motive investigated",
+      "url": "https://www.bbc.co.uk/news/articles/c0ryr74zjzvo?at_medium=RSS&at_campaign=rss",
+      "summary": "Counter terror police say they have obtained a warrant to hold a 28-year-old suspect for up to seven days.",
+      "source": "BBC News",
+      "extra": "",
+      "date": "Tue, 14 Jul 2026"
+    }
+  ]
+}

@@ -559,7 +559,7 @@ def main():
         OUTPUT_DIR = NEWS_OUTPUT_DIR
         brand = "📰 全球新闻"
         hero_title = "全球新闻 · 多源聚合"
-        extra_nav = '<a class="nav-link" href="../hotnews/index.html">🔥 综合热点</a>'
+        extra_nav = '<a class="nav-link" href="../hotnews/index.html">🔥 综合热点</a><a class="nav-link" href="../rss/index.html">📡 RSS</a>'
         dated_prefix = "news_"
         archive_title = "全球新闻"
         archive_desc = "按生成日期排列的历史副本，每日自动追加。"
@@ -568,7 +568,7 @@ def main():
         OUTPUT_DIR = HOT_OUTPUT_DIR
         brand = "🔥 综合中文热点"
         hero_title = "综合中文热点 · 实时聚合"
-        extra_nav = '<a class="nav-link" href="../news/index.html">📰 新闻</a>'
+        extra_nav = '<a class="nav-link" href="../news/index.html">📰 新闻</a><a class="nav-link" href="../rss/index.html">📡 RSS</a>'
         dated_prefix = "hotnews_"
         archive_title = "综合中文热点"
         archive_desc = "按生成日期排列的历史副本，每日自动追加。"

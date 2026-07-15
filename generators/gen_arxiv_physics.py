@@ -289,6 +289,7 @@ def build_html(theme_papers: list[tuple[str, list[dict]]], jitems: list[dict], n
         f'<a href="#{anchor}" class="nav-link"><span class="nav-emoji">{emoji}</span>{name}<span class="nav-count">{theme_counts[name]}</span></a>'
         for name, _, emoji, anchor in THEMES
     )
+    nav_items += '<a class="nav-link" href="../rss/index.html">📡 RSS</a>'
 
     # Sections
     sections_html = []
