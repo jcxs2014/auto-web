@@ -1,7 +1,7 @@
 {
   "name": "auto-web 仪表盘",
   "short_name": "auto-web",
-  "description": "AI 热点 / arXiv 物理论文 / 综合中文热点 自动生成仪表盘",
+  "description": "AI 热点日报 / arXiv 物理论文 / 综合中文热点 / 科技新闻 / RSS 订阅 自动生成仪表盘",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

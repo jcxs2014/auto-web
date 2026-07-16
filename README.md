@@ -4,12 +4,15 @@
 
 ## 简介
 
-`auto-web` 是一个自包含的静态网页门户，作为多个自动化信息面板的统一入口。当前包含两大板块：
+`auto-web` 是一个自包含的静态网页门户，作为多个自动化信息面板的统一入口。当前包含五大板块：
 
 | 板块 | 路径 | 内容 |
 |------|------|------|
 | **AIHot 每日科技日报** | `aihot/` | 每日自动抓取的科技/AI 资讯聚合仪表盘 |
 | **arXiv 物理论文** | `arxiv-physics/` | arXiv 物理方向最新论文索引仪表盘 |
+| **综合中文热点** | `hotnews/` | 实时聚合的中文热点资讯 |
+| **科技新闻** | `news/` | 综合科技新闻聚合 |
+| **RSS 订阅阅读器** | `rss/` | 自维护订阅源（72 源）的整页文章阅读器，支持翻译 |
 
 入口页 `index.html` 以卡片形式链接到上述子页，CSS/JS 全部内联，子页通过相对路径引用，部署后不会断链。
 
@@ -23,15 +26,33 @@
 
 ```
 auto-web/
-├── index.html                      # 门户首页（卡片入口）
-├── aihot/
-│   ├── aihot_daily_latest.html     # AIHot 最新日报
-│   └── aihot_daily_2026-07-14.html # AIHot 历史日报（按日期）
-├── arxiv-physics/
-│   ├── arxiv_physics_latest.html   # arXiv 物理最新论文
-│   └── arxiv_physics_2026-07-14.html # arXiv 物理历史（按日期）
+├── index.html                      # 门户首页（卡片入口，更新日期由 CI 每小时自动刷新）
+├── aihot/                          # AIHot 每日科技日报
+│   ├── aihot_daily_latest.html     # 最新日报
+│   ├── aihot_daily_2026-07-16.html # 历史日报（按日期）
+│   └── archive.html                # 归档索引
+├── arxiv-physics/                  # arXiv 物理论文
+│   ├── arxiv_physics_latest.html
+│   ├── arxiv_physics_2026-07-16.html
+│   └── archive.html
+├── hotnews/                        # 综合中文热点
+│   ├── index.html
+│   ├── hotnews_2026-07-16.html
+│   └── archive.html
+├── news/                           # 科技新闻
+│   ├── index.html
+│   ├── news_2026-07-16.html
+│   └── archive.html
+├── rss/                            # RSS 订阅阅读器（订阅配置在 feeds.json）
+│   ├── index.html                  # 阅读器页面
+│   ├── data/                       # 各源最新内容快照（CI 生成）
+│   ├── feeds.json                  # 订阅源列表
+│   └── feed_health.json            # 源健康状态（CI 生成）
+├── generators/                     # 各仪表盘生成器（Python）
+├── .github/workflows/              # CI：aihot / arxiv / hotnews / rss / index（每小时或每日）
 ├── wrangler.jsonc                  # Cloudflare Workers + Static Assets 配置
 ├── sync.sh                         # 每日自动同步脚本（提交 + 推送 + 部署）
+├── manifest.webmanifest           # PWA 清单
 ├── .gitignore
 ├── README.md
 └── DEPLOY.md
