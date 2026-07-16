@@ -234,6 +234,9 @@ __FOOTER_HTML__
       var dateEl=card.querySelector('.card-date');
       var titleEl=card.querySelector('.card-title');
       var bodyEl=card.querySelector('.article-body');
+      // 让全屏阅读区继承文章语言，浏览器才会对英文等外语文章提供翻译
+      var lang=bodyEl?bodyEl.getAttribute('lang'):'';
+      if(lang){reader.setAttribute('lang',lang);}else{reader.removeAttribute('lang');}
       document.getElementById('reader-srctag').textContent=srcEl?srcEl.textContent:'';
       document.getElementById('reader-title').textContent=titleEl?titleEl.textContent:'';
       var meta=document.getElementById('reader-meta'); meta.innerHTML='';
@@ -250,6 +253,7 @@ __FOOTER_HTML__
     };
     window.closeReader=function(){
       reader.classList.remove('open');
+      reader.removeAttribute('lang');
       document.body.style.overflow='';
     };
     // ESC 关闭 + 浏览器返回键关闭
@@ -385,6 +389,7 @@ def main():
         for e in entries:
             e["_cat"] = cat
             e["_src"] = name
+            e["_lang"] = f.get("lang", "")   # 源语言，落到正文 DOM 供浏览器翻译识别
             all_entries.append(e)
     save_health(health)
 
@@ -411,9 +416,10 @@ def main():
         url = e.get("url", "")
         body = e.get("content", "")
         if body:
+            lang_attr = f' lang="{esc(e.get("_lang", ""))}"' if e.get("_lang") else ""
             action = (f'<button class="readmore-btn" type="button" '
                       f'onclick="openReader(this)">📖 阅读全文</button>'
-                      f'<div class="article-body" hidden>{body}</div>')
+                      f'<div class="article-body" hidden{lang_attr}>{body}</div>')
         else:
             action = (f'<a class="readmore" href="{esc(url)}" '
                       f'target="_blank" rel="noopener noreferrer">阅读全文 →</a>')
