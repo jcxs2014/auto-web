@@ -21,6 +21,7 @@ import sys
 import time
 from pathlib import Path
 from datetime import datetime
+from urllib.parse import quote
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sources_util import fetch_rss, fetch_article_text
@@ -31,6 +32,60 @@ FEEDS_FILE = ROOT / "rss" / "feeds.json"
 DATA_DIR = ROOT / "rss" / "data"
 HEALTH_FILE = ROOT / "rss" / "feed_health.json"
 OUT_HTML = ROOT / "rss" / "index.html"
+TRANSLATE_HTML = ROOT / "rss" / "translate.html"
+# 翻译中转页：真实 https URL、<html lang="en"> 的独立页。打开即被浏览器识别为外语，
+# 弹出原生「是否翻译此页」提示（不离开本站、不跳原文站）。JS 按 ?src=<源slug>&id=<文章url>
+# 读取 rss/data/<slug>.json 中对应文章的正文渲染。
+TRANSLATE_TEMPLATE = r"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-language" content="en">
+<title>翻译 · RSS</title>
+<style>
+  body{font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 80px;color:#1a1a1a;background:#fff;word-wrap:break-word}
+  .bar{position:sticky;top:0;background:#f3f6fa;border-bottom:1px solid #e3e8ef;padding:10px 14px;font-size:13.5px;color:#555;margin:-24px -18px 22px}
+  .bar a{color:#1a6fc4;text-decoration:none}.bar b{color:#111}
+  h1{font-size:24px;line-height:1.35;margin:0 0 14px;font-weight:800}
+  img{max-width:100%;height:auto;border-radius:8px;margin:1em 0}a{color:#1a6fc4}
+  p{margin:0 0 1.1em}blockquote{border-left:3px solid #1a6fc4;margin:1em 0;padding:.3em 1em;color:#444}
+  .err{padding:40px 0;color:#c0392b;font-size:15px}
+</style>
+</head>
+<body>
+  <div class="bar">🌐 浏览器可能提示「翻译此页」 · 来源：<b id="src"></b> · <a id="origin" href="#" target="_blank" rel="noopener noreferrer">查看原文 →</a></div>
+  <h1 id="title"></h1>
+  <div id="article"></div>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search);
+  var src=q.get('src'), id=q.get('id');
+  var titleEl=document.getElementById('title');
+  var srcEl=document.getElementById('src');
+  var artEl=document.getElementById('article');
+  var originEl=document.getElementById('origin');
+  if(!src||!id){titleEl.textContent='参数缺失（需要 src 与 id）';return;}
+  fetch('data/'+encodeURIComponent(src)+'.json').then(function(r){
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json();
+  }).then(function(d){
+    var entries=d.entries||[];
+    var e=null;
+    for(var i=0;i<entries.length;i++){ if(entries[i].url===id){e=entries[i];break;} }
+    if(!e){titleEl.textContent='未找到该文章（可能已超出近 7 天保留期）';return;}
+    document.title=(d.name||'翻译')+' · RSS';
+    if(srcEl)srcEl.textContent=d.name||'';
+    titleEl.textContent=e.title||'(无标题)';
+    if(originEl&&e.url)originEl.href=e.url;
+    artEl.innerHTML=e.content||e.summary||'(该源未抓取全文，仅有摘要)';
+  }).catch(function(err){
+    titleEl.textContent='加载失败：'+err.message;
+  });
+})();
+</script>
+</body>
+</html>"""
 PER_FEED = 10
 MAX_AGE_DAYS = 7  # 仅保留最近 N 天内的文章，更陈旧的一律丢弃（避免 2019 之类旧文混入）
 MAX_FAILS = 3      # 连续抓取失败达到该次数即自动停用该源（garss 式健康检测）
@@ -272,12 +327,17 @@ __FOOTER_HTML__
       if(dateEl&&dateEl.textContent){var d=document.createElement('span');d.textContent=dateEl.textContent;meta.appendChild(d);}
       var href=titleEl?titleEl.getAttribute('href'):'';
       if(href){
-        // 非中文文章：点「翻译」把本文作为独立 lang=<源语言> 文档新开标签页，
-        // 浏览器据此自动识别为外语并弹出原生「是否翻译此页」提示（内容仍在站内，不跳原文站）
+        // 非中文文章：点「翻译」打开站内 translate.html（真实 https URL、lang=en），
+        // 浏览器据此弹出原生「是否翻译此页」提示（不离开本站）
         if(lang && lang!=='zh' && lang!=='zh-CN'){
-          var t=document.createElement('button');t.type='button';t.className='reader-translate';
-          t.textContent='🌐 翻译';t.onclick=function(){openNativeTranslate(btn);};
-          meta.appendChild(t);
+          var card=btn.closest('.card');
+          var dslug=card?card.getAttribute('data-slug'):'';
+          if(dslug){
+            var t=document.createElement('a');t.className='reader-translate';
+            t.href='translate.html?src='+encodeURIComponent(dslug)+'&id='+encodeURIComponent(href);
+            t.target='_blank';t.rel='noopener noreferrer';t.textContent='🌐 翻译';
+            meta.appendChild(t);
+          }
         }
         var a=document.createElement('a');a.className='reader-origin';a.href=href;
         a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看原文 →';meta.appendChild(a);
@@ -286,48 +346,6 @@ __FOOTER_HTML__
       reader.classList.add('open'); reader.scrollTop=0;
       document.body.style.overflow='hidden';
       try{history.pushState({reader:1},'');}catch(e){}
-    };
-    // 把英文等外语文章作为独立 lang=<源语言> 文档在新标签页打开，
-    // 浏览器据此自动识别为外语并弹出原生「是否翻译此页」提示（不离站、不跳原文）
-    window.openNativeTranslate=function(btn){
-      try{
-        var card=btn.closest('.card'); if(!card)return;
-        var bodyEl=card.querySelector('.article-body');
-        var titleEl=card.querySelector('.card-title');
-        var srcEl=card.querySelector('.src-pill');
-        var lang=bodyEl?bodyEl.getAttribute('lang'):'en'; if(!lang)lang='en';
-        var title=titleEl?titleEl.textContent:'';
-        var src=srcEl?srcEl.textContent:'';
-        var href=titleEl?titleEl.getAttribute('href'):'';
-        var body=bodyEl?bodyEl.innerHTML:'';
-        var w=window.open('','_blank');
-        if(!w){ // 弹窗被拦截时回退到 Google 翻译
-          if(href)window.open('https://translate.google.com/translate?sl=auto&tl=zh-CN&u='+encodeURIComponent(href),'_blank');
-          return;
-        }
-        var esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;');};
-        var doc=w.document; doc.open();
-        doc.write('<!DOCTYPE html><html lang="'+esc(lang)+'"><head><meta charset="utf-8">'
-          +'<meta http-equiv="content-language" content="'+esc(lang)+'">'
-          +'<meta name="viewport" content="width=device-width,initial-scale=1">'
-          +'<title>'+esc(title)+'</title>'
-          +'<style>body{font:16px/1.75 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:740px;margin:0 auto;padding:28px 20px 80px;color:#1a1a1a;background:#fff;word-wrap:break-word}'
-          +'.bar{position:sticky;top:0;background:#f3f6fa;border-bottom:1px solid #e3e8ef;padding:10px 16px;font-size:13.5px;color:#555;margin:-28px -20px 26px}'
-          +'.bar a{color:#1a6fc4;text-decoration:none}.bar b{color:#111}'
-          +'h1{font-size:25px;line-height:1.35;margin:0 0 10px;font-weight:800}'
-          +'img{max-width:100%;height:auto;border-radius:8px;margin:1em 0}a{color:#1a6fc4}'
-          +'p{margin:0 0 1.1em}blockquote{border-left:3px solid #1a6fc4;margin:1em 0;padding:.3em 1em;color:#444}</style>'
-          +'</head><body>'
-          +'<div class="bar">🌐 浏览器可能提示「翻译此页」 · 来源：<b>'+esc(src)+'</b>'
-          + (href?' · <a href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">查看原文 →</a>':'')
-          +'</div>'
-          +'<h1>'+esc(title)+'</h1>'
-          + body
-          +'</body></html>');
-        doc.close();
-      }catch(e){
-        if(href)window.open('https://translate.google.com/translate?sl=auto&tl=zh-CN&u='+encodeURIComponent(href),'_blank');
-      }
     };
     window.closeReader=function(){
       reader.classList.remove('open');
@@ -514,16 +532,24 @@ def main():
         summ = e.get("summary", "")
         url = e.get("url", "")
         body = e.get("content", "")
+        lang = e.get("_lang", "")
+        src_slug = slugify(e.get("_src", ""))
+        trans_link = ""
+        if body and lang and lang not in ("zh", "zh-CN"):
+            trans_href = f"translate.html?src={quote(src_slug)}&id={quote(url)}"
+            trans_link = (f'<a class="reader-translate" href="{esc(trans_href)}" '
+                          f'target="_blank" rel="noopener noreferrer">🌐 翻译</a>')
         if body:
-            lang_attr = f' lang="{esc(e.get("_lang", ""))}"' if e.get("_lang") else ""
+            lang_attr = f' lang="{esc(lang)}"' if lang else ""
             action = (f'<button class="readmore-btn" type="button" '
                       f'onclick="openReader(this)">📖 阅读全文</button>'
-                      f'<div class="article-body" hidden{lang_attr}>{body}</div>')
+                      + trans_link
+                      + f'<div class="article-body" hidden{lang_attr}>{body}</div>')
         else:
             action = (f'<a class="readmore" href="{esc(url)}" '
                       f'target="_blank" rel="noopener noreferrer">阅读全文 →</a>')
         cards_html += (
-            f'<div class="card" data-cat="{esc(cat)}">'
+            f'<div class="card" data-cat="{esc(cat)}" data-slug="{esc(src_slug)}">'
             f'<div class="card-top">'
             f'<span class="src-pill" style="background:{color}">{esc(e["_src"])}</span>'
             f'<span class="card-date">{esc(date)}</span></div>'
@@ -572,6 +598,8 @@ def main():
             .replace("__FILTERS__", filters_html)
             .replace("__CARDS__", cards_html))
     OUT_HTML.write_text(html, encoding="utf-8")
+    # 翻译中转页：真实 https URL、lang=en 的独立页，打开即触发浏览器原生翻译提示
+    TRANSLATE_HTML.write_text(TRANSLATE_TEMPLATE, encoding="utf-8")
     print(f"RSS 阅读页已生成：{len(feeds)} 个订阅源，"
           f"{len(all_entries)} 篇近{MAX_AGE_DAYS}天文章，"
           f"{len(unavailable)} 个抓取失败，{len(no_recent)} 个无近{MAX_AGE_DAYS}天新文，"
