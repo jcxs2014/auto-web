@@ -434,44 +434,48 @@
   {
     "name": "卫报 (英国)",
     "url": "https://www.theguardian.com/world/rss",
-    "category": "卫报",
+    "category": "期刊",
     "lang": "en"
   },
   {
     "name": "纽约时报",
     "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-    "category": "纽约时报",
-    "lang": "en"
+    "category": "期刊",
+    "lang": "en",
+    "fulltext": false
   },
   {
     "name": "半岛电视台",
     "url": "https://www.aljazeera.com/xml/rss/all.xml",
-    "category": "半岛电视台",
+    "category": "期刊",
     "lang": "en"
   },
   {
     "name": "德国之声",
     "url": "https://rss.dw.com/rdf/rss-en-all",
-    "category": "德国之声",
+    "category": "期刊",
     "lang": "en"
   },
   {
     "name": "华盛顿邮报",
     "url": "https://feeds.washingtonpost.com/rss/world",
-    "category": "华盛顿邮报",
-    "lang": "en"
+    "category": "期刊",
+    "lang": "en",
+    "fulltext": false
   },
   {
     "name": "金融时报",
     "url": "https://www.ft.com/rss/home",
-    "category": "金融时报",
-    "lang": "en"
+    "category": "期刊",
+    "lang": "en",
+    "fulltext": false
   },
   {
     "name": "经济学人",
     "url": "https://www.economist.com/finance-and-economics/rss.xml",
-    "category": "经济学人",
-    "lang": "en"
+    "category": "期刊",
+    "lang": "en",
+    "fulltext": false
   },
   {
     "name": "NPR 新闻",
@@ -482,19 +486,20 @@
   {
     "name": "彭博",
     "url": "https://feeds.bloomberg.com/markets/news.rss",
-    "category": "彭博",
-    "lang": "en"
+    "category": "期刊",
+    "lang": "en",
+    "fulltext": false
   },
   {
     "name": "大西洋月刊",
     "url": "https://www.theatlantic.com/feed/all/",
-    "category": "大西洋月刊",
+    "category": "期刊",
     "lang": "en"
   },
   {
     "name": "连线 (Wired)",
     "url": "https://www.wired.com/feed/rss",
-    "category": "技术",
+    "category": "期刊",
     "lang": "en"
   }
 ]
