@@ -42,15 +42,37 @@ NAV_LINKS = (
     '<a class="nav-link" href="../arxiv-physics/arxiv_physics_latest.html">📄 arXiv</a>'
 )
 
-# 分类配色（源标签背景用）
+# 分类配色（源标签背景 / 分块色点用）。覆盖 feeds.json 中的所有分类。
 CAT_COLOR = {
-    "意大利": "#e63946",
-    "欧盟":   "#1d8fe1",
-    "国际":   "#7b61ff",
-    "科技":   "#0aa67a",
-    "学术":   "#e08e0b",
+    # 中文博客（独立成块）
+    "中文博客": "#e8543f",
+    "外文博客": "#64748b",
+    # 报刊 / 杂志 / 财经：按报名各自独立
+    "卫报":      "#1a6fc4",
+    "纽约时报":  "#111827",
+    "半岛电视台": "#0a7d5a",
+    "德国之声":  "#d97706",
+    "华盛顿邮报": "#b91c1c",
+    "金融时报":  "#7c3aed",
+    "彭博":      "#0e7490",
+    "经济学人":  "#b45309",
+    "大西洋月刊": "#4338ca",
+    # 其余类型
+    "周刊": "#db2777",
+    "资讯": "#0aa67a",
+    "技术": "#2563eb",
+    "AI":   "#7b61ff",
+    "广播": "#0891b2",
 }
 DEFAULT_COLOR = "#6b7688"
+
+# 分块（section）的展示顺序：中文博客独立在前，其次各家报刊，再其余类型
+GROUP_ORDER = [
+    "中文博客",
+    "卫报", "纽约时报", "半岛电视台", "德国之声", "华盛顿邮报",
+    "金融时报", "彭博", "经济学人", "大西洋月刊",
+    "周刊", "资讯", "技术", "AI", "广播", "外文博客",
+]
 
 # 主题变量与页面样式（与 hotnews 模板保持一致，支持明暗切换）
 PAGE_CSS = """
@@ -103,6 +125,15 @@ __FOOTER_CSS__
 .readmore-btn:hover{border-color:var(--accent2)}
 .notice{padding:14px 16px;border-radius:10px;background:var(--pill-bg);color:var(--muted);font-size:13.5px;margin-bottom:16px;line-height:1.7}
 .foot{text-align:center;color:var(--muted);font-size:12.5px;padding:26px 12px 10px}
+
+/* ===== 分块标题（中文博客 / 各家报刊 各自成块）===== */
+.section-head{grid-column:1/-1;display:flex;align-items:center;gap:10px;
+  margin:24px 2px 6px;padding:7px 0 8px;border-bottom:2px solid var(--line)}
+.section-head:first-child{margin-top:6px}
+.section-head .dot{width:11px;height:11px;border-radius:3px;flex:none}
+.section-head h2{font-size:17px;font-weight:800;letter-spacing:.3px;line-height:1.2}
+.section-head .cnt{font-size:12px;color:var(--muted);margin-left:2px}
+.section-head .cnt::before{content:"· ";opacity:.6}
 
 /* ===== 整页文章视图（极简阅读器）===== */
 .reader-overlay{position:fixed;inset:0;z-index:1000;background:var(--bg);
@@ -226,7 +257,7 @@ __FOOTER_HTML__
       filters.forEach(function(x){x.classList.remove('active');});
       f.classList.add('active');
       var cat=f.getAttribute('data-cat');
-      grid.querySelectorAll('.card').forEach(function(c){
+      grid.querySelectorAll('.card,.section-head').forEach(function(c){
         c.style.display=(cat==='all'||c.getAttribute('data-cat')===cat)?'':'none';
       });
     });});
@@ -407,24 +438,39 @@ def main():
             all_entries.append(e)
     save_health(health)
 
-    # 按发布时间倒序（优先用抓取时算好的 ts，缺失时回退解析 date 字符串）
-    all_entries.sort(
-        key=lambda e: e.get("ts") or _date_ts(e.get("date")), reverse=True)
+    # 排序：先按分块顺序（GROUP_ORDER），块内按发布时间倒序
+    # （优先用抓取时算好的 ts，缺失时回退解析 date 字符串）
+    def _sort_key(e):
+        cat = e["_cat"]
+        gi = GROUP_ORDER.index(cat) if cat in GROUP_ORDER else len(GROUP_ORDER)
+        return (gi, -(e.get("ts") or _date_ts(e.get("date"))))
+    all_entries.sort(key=_sort_key)
 
-    # 分类筛选条
-    cats = []
+    # 分类筛选条（按 GROUP_ORDER 排列，未列出的类排在最后）
+    seen = []
     for e in all_entries:
-        if e["_cat"] not in cats:
-            cats.append(e["_cat"])
+        if e["_cat"] not in seen:
+            seen.append(e["_cat"])
+    seen.sort(key=lambda c: GROUP_ORDER.index(c) if c in GROUP_ORDER else len(GROUP_ORDER))
+    cats = seen
     filters_html = '<button class="filter active" data-cat="all">全部</button>'
     for c in cats:
         filters_html += f'<button class="filter" data-cat="{esc(c)}">{esc(c)}</button>'
 
-    # 卡片
+    # 卡片（按分块顺序，每块首个卡片前插入全宽分块标题）
     cards_html = ""
+    last_cat = None
     for e in all_entries:
         cat = e["_cat"]
         color = CAT_COLOR.get(cat, DEFAULT_COLOR)
+        if cat != last_cat:
+            cnt = sum(1 for x in all_entries if x["_cat"] == cat)
+            cards_html += (
+                f'<div class="section-head" data-cat="{esc(cat)}">'
+                f'<span class="dot" style="background:{color}"></span>'
+                f'<h2>{esc(cat)}</h2>'
+                f'<span class="cnt">{cnt} 篇</span></div>')
+            last_cat = cat
         date = e.get("date", "")
         summ = e.get("summary", "")
         url = e.get("url", "")
