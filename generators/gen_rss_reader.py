@@ -151,7 +151,7 @@ __FOOTER_CSS__
 .reader-origin:hover{text-decoration:underline}
 .reader-translate{display:inline-flex;align-items:center;gap:4px;color:var(--accent2);
   text-decoration:none;font-weight:600;white-space:nowrap;border:1px solid var(--accent2);
-  border-radius:999px;padding:3px 12px;transition:background .15s}
+  border-radius:999px;padding:3px 12px;transition:background .15s;background:none;font:inherit;cursor:pointer}
 .reader-translate:hover{background:var(--accent-soft)}
 .reader-body{font-size:17px;line-height:1.85;color:var(--text);overflow-wrap:anywhere;word-break:break-word;text-align:justify;text-justify:inter-ideograph;hyphens:auto;font-style:normal}
 .reader-body::selection{background:var(--accent2);color:#fff}
@@ -261,7 +261,7 @@ __FOOTER_HTML__
       var dateEl=card.querySelector('.card-date');
       var titleEl=card.querySelector('.card-title');
       var bodyEl=card.querySelector('.article-body');
-      // 让全屏阅读区继承文章语言，浏览器才会对英文等外语文章提供翻译
+      // 阅读区标注文章语言（语义/无障碍用；浏览器原生翻译是文档级，不会因此弹提示）
       var lang=bodyEl?bodyEl.getAttribute('lang'):'';
       if(lang){reader.setAttribute('lang',lang);}else{reader.removeAttribute('lang');}
       document.getElementById('reader-srctag').textContent=srcEl?srcEl.textContent:'';
@@ -272,12 +272,11 @@ __FOOTER_HTML__
       if(dateEl&&dateEl.textContent){var d=document.createElement('span');d.textContent=dateEl.textContent;meta.appendChild(d);}
       var href=titleEl?titleEl.getAttribute('href'):'';
       if(href){
-        // 非中文文章：提供「翻译」按钮，直接调 Google 翻译打开原文译文
-        // （整页 lang=zh-CN 导致浏览器原生翻译不触发，故用显式按钮兜底）
+        // 非中文文章：点「翻译」把本文作为独立 lang=<源语言> 文档新开标签页，
+        // 浏览器据此自动识别为外语并弹出原生「是否翻译此页」提示（内容仍在站内，不跳原文站）
         if(lang && lang!=='zh' && lang!=='zh-CN'){
-          var gt='https://translate.google.com/translate?sl=auto&tl=zh-CN&u='+encodeURIComponent(href);
-          var t=document.createElement('a');t.className='reader-translate';t.href=gt;
-          t.target='_blank';t.rel='noopener noreferrer';t.textContent='🌐 翻译';
+          var t=document.createElement('button');t.type='button';t.className='reader-translate';
+          t.textContent='🌐 翻译';t.onclick=function(){openNativeTranslate(btn);};
           meta.appendChild(t);
         }
         var a=document.createElement('a');a.className='reader-origin';a.href=href;
@@ -287,6 +286,48 @@ __FOOTER_HTML__
       reader.classList.add('open'); reader.scrollTop=0;
       document.body.style.overflow='hidden';
       try{history.pushState({reader:1},'');}catch(e){}
+    };
+    // 把英文等外语文章作为独立 lang=<源语言> 文档在新标签页打开，
+    // 浏览器据此自动识别为外语并弹出原生「是否翻译此页」提示（不离站、不跳原文）
+    window.openNativeTranslate=function(btn){
+      try{
+        var card=btn.closest('.card'); if(!card)return;
+        var bodyEl=card.querySelector('.article-body');
+        var titleEl=card.querySelector('.card-title');
+        var srcEl=card.querySelector('.src-pill');
+        var lang=bodyEl?bodyEl.getAttribute('lang'):'en'; if(!lang)lang='en';
+        var title=titleEl?titleEl.textContent:'';
+        var src=srcEl?srcEl.textContent:'';
+        var href=titleEl?titleEl.getAttribute('href'):'';
+        var body=bodyEl?bodyEl.innerHTML:'';
+        var w=window.open('','_blank');
+        if(!w){ // 弹窗被拦截时回退到 Google 翻译
+          if(href)window.open('https://translate.google.com/translate?sl=auto&tl=zh-CN&u='+encodeURIComponent(href),'_blank');
+          return;
+        }
+        var esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;');};
+        var doc=w.document; doc.open();
+        doc.write('<!DOCTYPE html><html lang="'+esc(lang)+'"><head><meta charset="utf-8">'
+          +'<meta http-equiv="content-language" content="'+esc(lang)+'">'
+          +'<meta name="viewport" content="width=device-width,initial-scale=1">'
+          +'<title>'+esc(title)+'</title>'
+          +'<style>body{font:16px/1.75 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:740px;margin:0 auto;padding:28px 20px 80px;color:#1a1a1a;background:#fff;word-wrap:break-word}'
+          +'.bar{position:sticky;top:0;background:#f3f6fa;border-bottom:1px solid #e3e8ef;padding:10px 16px;font-size:13.5px;color:#555;margin:-28px -20px 26px}'
+          +'.bar a{color:#1a6fc4;text-decoration:none}.bar b{color:#111}'
+          +'h1{font-size:25px;line-height:1.35;margin:0 0 10px;font-weight:800}'
+          +'img{max-width:100%;height:auto;border-radius:8px;margin:1em 0}a{color:#1a6fc4}'
+          +'p{margin:0 0 1.1em}blockquote{border-left:3px solid #1a6fc4;margin:1em 0;padding:.3em 1em;color:#444}</style>'
+          +'</head><body>'
+          +'<div class="bar">🌐 浏览器可能提示「翻译此页」 · 来源：<b>'+esc(src)+'</b>'
+          + (href?' · <a href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">查看原文 →</a>':'')
+          +'</div>'
+          +'<h1>'+esc(title)+'</h1>'
+          + body
+          +'</body></html>');
+        doc.close();
+      }catch(e){
+        if(href)window.open('https://translate.google.com/translate?sl=auto&tl=zh-CN&u='+encodeURIComponent(href),'_blank');
+      }
     };
     window.closeReader=function(){
       reader.classList.remove('open');
