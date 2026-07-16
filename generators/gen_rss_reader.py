@@ -534,16 +534,10 @@ def main():
         body = e.get("content", "")
         lang = e.get("_lang", "")
         src_slug = slugify(e.get("_src", ""))
-        trans_link = ""
-        if body and lang and lang not in ("zh", "zh-CN"):
-            trans_href = f"translate.html?src={quote(src_slug)}&id={quote(url)}"
-            trans_link = (f'<a class="reader-translate" href="{esc(trans_href)}" '
-                          f'target="_blank" rel="noopener noreferrer">🌐 翻译</a>')
         if body:
             lang_attr = f' lang="{esc(lang)}"' if lang else ""
             action = (f'<button class="readmore-btn" type="button" '
                       f'onclick="openReader(this)">📖 阅读全文</button>'
-                      + trans_link
                       + f'<div class="article-body" hidden{lang_attr}>{body}</div>')
         else:
             action = (f'<a class="readmore" href="{esc(url)}" '
