@@ -1,11 +1,11 @@
-name: News update
+name: Hot update
 
-# 全球新闻(news)：中/意/法/英/日/欧盟/卫报/纽时等 12 家报刊
-# 国际新闻非实时性，保持每天 3 次（热点已拆到 hot.yml 每 2 小时）
-# 每天意大利（CEST, UTC+2）06:05 / 12:05 / 18:05 各跑一次（分钟错峰，降低与其它模块并发 push 冲突）
+# 综合中文热点（hot）：百度热搜 / 微博热搜 / 今日头条热榜 / 国际热点
+# 热榜为分钟级变化，从原 hotnews.yml 拆出独立 workflow，提高到每 2 小时一次
+# 每天意大利（CEST, UTC+2）00:03 / 02:03 / ... / 22:03 各跑一次（偶数整点，分钟错峰）
 on:
   schedule:
-    - cron: "5 4,10,16 * * *"
+    - cron: "3 */2 * * *"
   workflow_dispatch:  # 允许在 Actions 标签手动触发一次
 
 # 允许 GITHUB_TOKEN 把生成结果推送回仓库
@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  news:
+  hot:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -42,11 +42,11 @@ jobs:
       - name: Pull latest before generate
         run: git pull --rebase origin main || true
 
-      - name: Generate 全球新闻
+      - name: Generate 综合中文热点
         run: |
           cd generators
-          python gen_hotnews.py news
+          python gen_hotnews.py hot
           cd ..
 
-      - name: Commit and push (news)
-        run: bash sync.sh news news
+      - name: Commit and push (hot)
+        run: bash sync.sh hot hotnews

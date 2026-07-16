@@ -5,7 +5,8 @@
 # 用法：
 #   bash sync.sh <模块标签> <产物路径1> [<产物路径2> ...]
 #     rss  : bash sync.sh rss rss/index.html rss/data rss/feed_health.json
-#     hotnews: bash sync.sh hotnews hotnews news
+#     hot:     bash sync.sh hot hotnews
+#     news:    bash sync.sh news news
 #     aihot: bash sync.sh aihot aihot
 #     arxiv: bash sync.sh arxiv arxiv-physics
 #   bash sync.sh            # 不带参数时退化为 git add -A（本地 gen_all.sh 用）

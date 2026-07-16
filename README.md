@@ -49,7 +49,7 @@ auto-web/
 │   ├── feeds.json                  # 订阅源列表
 │   └── feed_health.json            # 源健康状态（CI 生成）
 ├── generators/                     # 各仪表盘生成器（Python）
-├── .github/workflows/              # CI：aihot / arxiv / hotnews / rss / index（每小时或每日）
+├── .github/workflows/              # CI：aihot / arxiv / hot / news / rss / index（每小时或每日）
 ├── wrangler.jsonc                  # Cloudflare Workers + Static Assets 配置
 ├── sync.sh                         # 每日自动同步脚本（提交 + 推送 + 部署）
 ├── manifest.webmanifest           # PWA 清单
