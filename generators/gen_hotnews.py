@@ -57,8 +57,8 @@ PER_PLATFORM = {
     "bili": 15,
     "intl": 30,
     # 新闻页各源（卡片含摘要，单源条数适度收敛）
-    "chinanews": 18, "repubblica": 18, "corriere": 18, "sole24": 18,
-    "politico": 18, "eu_google": 18, "bbc": 18, "xinhua": 18,
+    "chinanews": 18, "repubblica": 18, "france24": 18, "sole24": 18,
+    "politico": 18, "eu_google": 18, "bbc": 18, "nhk": 18,
 }
 
 
@@ -217,6 +217,46 @@ def fmt_pubdate(s):
         return ""
 
 
+def freshen_news(items, max_age_days=7, now=None):
+    """新闻时效性保护：按发布时间倒序，丢弃超过 max_age_days 天的陈旧条目。
+
+    设计要点：
+      - 仅用于新闻页（新闻按时间排序才有意义；热榜按热度排序，不可乱序）。
+      - 无法解析发布时间的条目保守保留（无法判断是否过期，宁留勿删）。
+      - 排序后最新鲜的内容自然排到各区头条，避免 RSS 顺序错乱导致的旧闻置顶。
+    """
+    if now is None:
+        now = datetime.now(timezone.utc)
+
+    def _dt(it):
+        s = it.get("published", "")
+        if not s:
+            return None
+        try:
+            d = parsedate_to_datetime(s)
+        except Exception:
+            return None
+        if d is None:
+            return None
+        if d.tzinfo is None:
+            d = d.replace(tzinfo=timezone.utc)
+        return d
+
+    kept, dropped = [], 0
+    for it in items:
+        d = _dt(it)
+        if d is not None and (now - d).days > max_age_days:
+            dropped += 1
+            continue
+        kept.append(it)
+    kept.sort(key=lambda x: (_dt(x) or datetime.min.replace(tzinfo=timezone.utc)),
+              reverse=True)
+    if dropped:
+        print(f"    [时效] 丢弃 {dropped} 条超过 {max_age_days} 天的陈旧内容")
+    return kept
+
+
+
 def parse_chinanews(root):
     """中新网 RSS：返回 [{title, url, summary, published}]，summary 为纯文本摘要。"""
     out = []
@@ -264,8 +304,8 @@ def fetch_rss_news(url, name):
 def fetch_repubblica():
     return fetch_rss_news("https://www.repubblica.it/rss/homepage/rss2.0.xml", "共和报")
 
-def fetch_corriere():
-    return fetch_rss_news("https://www.corriere.it/rss/homepage.xml", "晚邮报")
+def fetch_france24():
+    return fetch_rss_news("https://www.france24.com/en/rss", "France24 国际台")
 
 def fetch_sole24():
     return fetch_rss_news("https://www.ilsole24ore.com/rss/italia.xml", "24小时太阳报")
@@ -279,8 +319,8 @@ def fetch_eu_google():
 def fetch_bbc():
     return fetch_rss_news("https://feeds.bbci.co.uk/news/rss.xml", "BBC News")
 
-def fetch_xinhua_en():
-    return fetch_rss_news("http://www.xinhuanet.com/english/rss/worldrss.xml", "新华社英文")
+def fetch_nhk():
+    return fetch_rss_news("https://www3.nhk.or.jp/rss/news/cat0.xml", "NHK 日本")
 
 
 def fetch_intl():
@@ -326,8 +366,8 @@ NEWS_SOURCES = [
      "loader": fetch_chinanews, "expandable": True, "bilingual": True, "sl": "zh-CN"},
     {"id": "repubblica", "name": "共和报 (意大利)", "emoji": "🇮🇹", "anchor": "repubblica",
      "loader": fetch_repubblica, "expandable": True, "bilingual": True, "sl": "auto"},
-    {"id": "corriere", "name": "晚邮报 (意大利)", "emoji": "🇮🇹", "anchor": "corriere",
-     "loader": fetch_corriere, "expandable": True, "bilingual": True, "sl": "auto"},
+    {"id": "france24", "name": "France24 国际台", "emoji": "🇫🇷", "anchor": "france24",
+     "loader": fetch_france24, "expandable": True, "bilingual": True, "sl": "auto"},
     {"id": "sole24", "name": "24小时太阳报 (意大利)", "emoji": "🇮🇹", "anchor": "sole24",
      "loader": fetch_sole24, "expandable": True, "bilingual": True, "sl": "auto"},
     {"id": "politico", "name": "Politico Europe", "emoji": "🇪🇺", "anchor": "politico",
@@ -336,8 +376,8 @@ NEWS_SOURCES = [
      "loader": fetch_eu_google, "expandable": True, "bilingual": True, "sl": "auto"},
     {"id": "bbc", "name": "BBC News", "emoji": "🇬🇧", "anchor": "bbc",
      "loader": fetch_bbc, "expandable": True, "bilingual": True, "sl": "auto"},
-    {"id": "xinhua", "name": "新华社英文", "emoji": "🇨🇳", "anchor": "xinhua",
-     "loader": fetch_xinhua_en, "expandable": True, "bilingual": True, "sl": "en"},
+    {"id": "nhk", "name": "NHK 日本", "emoji": "🇯🇵", "anchor": "nhk",
+     "loader": fetch_nhk, "expandable": True, "bilingual": True, "sl": "en"},
 ]
 
 
@@ -586,6 +626,9 @@ def main():
                     err = note
                 if not items:
                     ok, err = False, (err or "无数据")
+            # 新闻时效性保护：仅新闻页按发布时间倒序 + 丢弃 >7 天旧闻
+            if mode == "news" and items:
+                items = freshen_news(items, max_age_days=7)
             else:
                 data = fetch_json(src["url"])
                 items = src["parser"](data)
