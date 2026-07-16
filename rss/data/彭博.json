@@ -1,0 +1,108 @@
+{
+  "name": "彭博",
+  "url": "https://feeds.bloomberg.com/markets/news.rss",
+  "category": "彭博",
+  "lang": "en",
+  "entries": [
+    {
+      "title": "Oil Traders Crowd Into Cheap TACO Hedge as Iran War Amps Up",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/oil-traders-crowd-around-cheap-taco-hedge-as-iran-war-escalates",
+      "summary": "An unusual options trade is becoming a favored hedge against the risks of sudden U-turns in US President Donald Trump’s stance on Iran, a dynamic that has repeatedly whipsawed markets in recent months.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-16 16:40",
+      "ts": 1784220016,
+      "content": ""
+    },
+    {
+      "title": "China Beef Curbs Start Rippling Across Brazil Meat Industry",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/china-s-beef-curbs-start-rippling-across-brazil-meat-industry",
+      "summary": "Brazil is starting to feel the impact of China’s beef import quota, with lower shipments to the country’s largest overseas market reverberating across the entire supply chain.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-16 17:06",
+      "ts": 1784221597,
+      "content": ""
+    },
+    {
+      "title": "Chipmaker Rout Hits Stocks on AI Spending Worries: Markets Wrap",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-15/stock-market-today-dow-s-p-live-updates",
+      "summary": "A selloff in chipmakers dragged down stocks amid concerns over whether massive artificial-intelligence investments will justify lofty valuations, with a resurgence in geopolitical risks also weighing on sentiment.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-15 22:07",
+      "ts": 1784153267,
+      "content": ""
+    },
+    {
+      "title": "Korea ETF’s (EWY) Record Inflow Fuels SK Hynix Proxy Play",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/korea-etf-s-ewy-record-inflow-fuels-sk-hynix-proxy-play",
+      "summary": "A record inflow hit the largest US-listed South Korea exchange-traded fund, as investors seeking exposure to SK Hynix Inc. piled into the ETF as a proxy at a time when the chipmaker’s new American depositary receipts trade at a substantial premium to its local shares.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-16 18:26",
+      "ts": 1784226372,
+      "content": ""
+    },
+    {
+      "title": "Chevron Plans to Sign Iraq Oil Accord, Seeks Hormuz Bypass",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/chevron-to-sign-oil-investment-accords-with-iraq-on-friday",
+      "summary": "Chevron Corp. expects to sign accords with Iraq on Friday that will advance its negotiations about investing in large oil fields and a pipeline to bypass the Strait of Hormuz.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-16 15:52",
+      "ts": 1784217146,
+      "content": ""
+    },
+    {
+      "title": "Latest Oil Market News and Analysis for July 16",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-15/latest-oil-market-news-and-analysis-for-july-16",
+      "summary": "Oil dipped, though is still higher for the week, as traders balanced profit-taking with concerns about disruptions to Middle East flows.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-15 22:02",
+      "ts": 1784152921,
+      "content": ""
+    },
+    {
+      "title": "Emerging Currencies Dip as Dollar Gains Over Iran Worries",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/emerging-stocks-slump-as-korea-curbs-fan-selloff-in-chip-giants",
+      "summary": "Most developing-world currencies fell Thursday as renewed tensions in the Middle East sparked a flight to haven assets, pushing the dollar higher.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-16 09:13",
+      "ts": 1784193200,
+      "content": ""
+    },
+    {
+      "title": "Fed’s Logan Favors Modestly Higher Rates to Lower Inflation",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/fed-s-logan-favors-modestly-higher-rates-to-lower-inflation",
+      "summary": "Federal Reserve Bank of Dallas President Lorie Logan called for higher interest rates, saying inflation does not appear to be heading sustainably back to the central bank’s 2% target.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-16 17:15",
+      "ts": 1784222100,
+      "content": ""
+    },
+    {
+      "title": "Apollo Bets on Mexico With $20 Billion Target for Private Credit",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/apollo-bets-on-mexico-with-20-billion-target-for-private-credit",
+      "summary": "Apollo Global Management Inc. plans to put as much as $20 billion to work financing projects in Mexico as the giant asset manager seeks new outlets for its private credit business.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-16 17:30",
+      "ts": 1784223016,
+      "content": ""
+    },
+    {
+      "title": "Balbec Secures $930 Million in Commitments for Asset-Based Credit Fund",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/balbec-raises-930-million-for-flagship-fund-s-first-close",
+      "summary": "Alternative asset manager Balbec Capital LP has obtained commitments of more than $930 million for its latest flagship fund that will invest in a variety of asset-based credit, according to a filing on Thursday.",
+      "source": "彭博",
+      "extra": "",
+      "date": "2026-07-16 15:33",
+      "ts": 1784216006,
+      "content": ""
+    }
+  ]
+}

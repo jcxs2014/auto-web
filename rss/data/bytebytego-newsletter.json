@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "A Guide to Multi-Tenancy: Benefits and Challenges",
+      "url": "https://blog.bytebytego.com/p/a-guide-to-multi-tenancy-benefits",
+      "summary": "In this article, we will understand multi-tenant architecture from the basics, along with its various benefits and challenges.",
+      "source": "ByteByteGo Newsletter",
+      "extra": "",
+      "date": "2026-07-16 16:37",
+      "ts": 1784219828,
+      "content": "\n    <p>Every software company that builds an application serving more than one customer has to answer this question.</p>\n    <p>Should each customer get a separate copy of the system, or should they all share one?</p>\n    <p>Running a dedicated copy per customer is easy to reason about, but the cost of maintaining hundreds of separate copies increases with every new customer. On the other hand, sharing a single system across all customers is far cheaper. This is why most of the software we use every day is built to be shared rather than duplicated. Such systems are known as multi-tenant systems, where each customer is a tenant that shares resources with other tenants.</p>\n    <p>However, sharing is also where the difficulty begins.</p>\n    <p>Once many customers rely on the same database, the same servers, and the same background jobs, their fortunes become linked. For example, one customer running a heavy report can slow the service for everyone alongside them. A single faulty deployment can impact all of them at once instead of just the customer. And the most serious risk is around data leaks, where one customer is shown data that belongs to another. All of these situations have to be actively handled by a multi-tenant system.</p>\n    <p>In this article, we will understand multi-tenant architecture from the basics, along with its various benefits and challenges. Here’s a quick overview of what we will cover:</p>\n    <ul>\n      <li>\n        <p style=\"text-align: justify;\">What a tenant really is.</p>\n      </li>\n      <li>\n        <p style=\"text-align: justify;\">Where each customer’s data can physically live, from one shared set of tables to a database of its own, and what each of those options costs.</p>\n      </li>\n      <li>\n        <p style=\"text-align: justify;\">Why the same choice between isolating and sharing also includes the compute layer and beyond, not only in the database.</p>\n      </li>\n      <li>\n        <p style=\"text-align: justify;\">The noisy neighbor problem, and why sharing can impact fairness and force a team to rebuild it with quotas and limits.</p>\n      </li>\n      <li>\n        <p style=\"text-align: justify;\">The role of blast radius in such an architecture.</p>\n      </li>\n      <li>\n        <p style=\"text-align: justify;\">The concept of tenant context that runs through every part of the system.</p>\n      </li>\n    </ul>"
+    },
+    {
       "title": "AI Customer Support at Scale: The Travel Industry’s $Billion Bet",
       "url": "https://blog.bytebytego.com/p/ai-customer-support-at-scale-the",
       "summary": "In this article, we will look more closely at the different solutions by following the support pipeline from first principles, show why a tail of cases resists automation regardless of model quality, and use these three approaches to understand how these can be handled.",
@@ -53,16 +63,6 @@
       "date": "2026-07-10 15:32",
       "ts": 1783697524,
       "content": "\n    <p>Our 7th cohort of Becoming an AI Engineer starts tomorrow, Saturday, July 11. This is a live, cohort-based course created in collaboration with best-selling author Ali Aminian and published by ByteByteGo.</p>\n    <p>Here’s what makes this cohort special:</p>\n    <ul>\n      <li>\n        <p>Learn by doing: Build real world AI applications, not just by watching videos.</p>\n      </li>\n      <li>\n        <p>Structured, systematic learning path: Follow a carefully designed curriculum that takes you step by step, from fundamentals to advanced topics.</p>\n      </li>\n      <li>\n        <p>Live feedback and mentorship: Get direct feedback from instructors and peers.</p>\n      </li>\n      <li>\n        <p>Community driven: Learning alone is hard. Learning with a community is easy!</p>\n      </li>\n    </ul>\n    <p>We are focused on skill building, not just theory or passive learning. Our goal is for every participant to walk away with a strong foundation for building AI systems.</p>\n    <p>If you want to start learning AI from scratch, this is the perfect platform for you to begin.</p>"
-    },
-    {
-      "title": "Streaming vs Batch: Two Philosophies of Data Processing",
-      "url": "https://blog.bytebytego.com/p/streaming-vs-batch-two-philosophies",
-      "summary": "When is the data complete enough to be moved to the compute stage?",
-      "source": "ByteByteGo Newsletter",
-      "extra": "",
-      "date": "2026-07-09 15:31",
-      "ts": 1783611070,
-      "content": "\n    <p>Every system that processes data eventually has to answer one question. When is the data complete enough to be moved to the compute stage?</p>\n    <p>A program adding up a day’s sales needs to know whether all of today’s sales have actually arrived. For data stored in a file, the answer is trivial because the file has an end. However, for data that arrives continuously and never stops, there is no clean answer, and how a system resolves that gap is the difference between batch processing and streaming.</p>\n    <p>Batch processing waits for completeness. It collects data up to a natural boundary, a closing time, or a finished file, and then computes over the whole set at once. Streaming prioritizes completeness for speed. It produces answers continuously from data that is still arriving, which means it has to estimate when enough data has come in and handle the cases where that estimate is wrong. This trade-off between completeness and latency is the key consideration when dealing with streaming and batch.</p>\n    <p>In this article, we will cover the strategies on each side and what each one costs.</p>\n    <ul>\n      <li>\n        <p style=\"text-align: justify;\">On the batch side, that means full and incremental loads and large-window aggregation, with micro-batch sitting in between.</p>\n      </li>\n      <li>\n        <p style=\"text-align: justify;\">On the streaming side, the territory runs through tumbling, sliding, and session windows, watermarks and late data, the lambda and kappa architectures, and the often-misunderstood meaning of exactly-once processing.</p>\n      </li>\n    </ul>"
     }
   ]
 }
