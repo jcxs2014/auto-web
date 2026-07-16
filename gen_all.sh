@@ -44,6 +44,9 @@ run_gen "AI HOT 每日科技日报"  gen_aihot_daily.py
 run_gen "arXiv 物理最新论文"   gen_arxiv_physics.py
 run_gen "RSS 阅读订阅"         gen_rss_reader.py
 
+# 各子仪表盘生成后，刷新根目录索引页的"更新日期"
+run_gen "索引页日期"            gen_dashboard_index.py
+
 echo "===== 页面生成结束，开始同步 ====="
 
 # 提交并推送到 GitHub（Cloudflare Git 集成自动上线）
