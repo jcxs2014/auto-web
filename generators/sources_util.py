@@ -38,6 +38,7 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 
 import feedparser
+from lxml import html as lxml_html
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
@@ -379,24 +380,74 @@ _ARTICLE_ALLOWED_TAGS = {
 }
 # 会被整段丢弃（含内部文本）的危险/无意义块
 _ARTICLE_DROP_BLOCKS = ("script", "style", "iframe", "object", "embed", "noscript", "link", "meta")
+# 正文内允许保留的属性（其余一律剥除，避免 on* 事件 / 危险协议）
+_ARTICLE_SAFE_ATTRS = {"href", "src", "alt", "title", "class"}
+
+
+def _is_safe_url(u):
+    """拒绝 javascript:/vbscript:/data:/file: 等危险协议，其余放行。"""
+    u2 = (u or "").strip().lower()
+    return not u2.startswith(("javascript:", "vbscript:", "data:", "file:"))
+
+
+def _render_article_el(el):
+    """递归白名单序列化单个 lxml 元素。
+
+    未闭合标签由 lxml 解析阶段自动补闭，从根本上避免开标签蔓延污染后续
+    DOM（之前 <i>/<a> 泄漏、大段文字被识别为超链接的根因）。
+    """
+    tag = el.tag
+    # 注释 / 处理指令（lxml 用函数对象表示）—— 直接丢弃
+    if not isinstance(tag, str):
+        return ""
+    # 危险/无意义块：整段丢弃（含内部文本），但保留其后的兄弟文本
+    if tag in _ARTICLE_DROP_BLOCKS:
+        return el.tail or ""
+    text = el.text or ""
+    if tag in _ARTICLE_ALLOWED_TAGS:
+        attrs = []
+        for k, v in el.attrib.items():
+            kl = k.lower()
+            if kl in _ARTICLE_SAFE_ATTRS:
+                if kl in ("href", "src") and not _is_safe_url(v):
+                    continue
+                attrs.append('%s="%s"' % (k, html.escape(v, quote=True)))
+        attr_str = (" " + " ".join(attrs)) if attrs else ""
+        inner = text + "".join(_render_article_el(c) for c in el)
+        # 空链接（既无文本也无子节点）直接丢弃，避免无意义的 <a></a>
+        if tag == "a" and not inner.strip():
+            return el.tail or ""
+        return "<%s%s>%s</%s>%s" % (tag, attr_str, inner, tag, el.tail or "")
+    # 不在白名单：压平（保留内部文本与子节点），丢弃标签本身
+    return text + "".join(_render_article_el(c) for c in el) + (el.tail or "")
 
 
 def _sanitize_article_html(h):
-    """极简白名单清洗：仅保留排版用标签，去掉脚本/事件属性/危险协议。"""
+    """白名单清洗：用 lxml 解析（自动闭合未闭合标签）后仅保留排版标签。
+
+    之所以不用纯正则：正则无法闭合未关闭的 <a>/<i> 等开标签。源站常把整块
+    内容包进一个链接，抽取时被截断导致开标签一直开着，浏览器把后续所有文字
+    都渲染成超链接（大段文字被识别为超链接）。lxml 解析会正确补闭，杜绝蔓延。
+    """
     if not h:
         return ""
-    # 1) 整段丢弃危险/无意义的块级内容（含其内部一切）
+    try:
+        root = lxml_html.fragment_fromstring(h, create_parent="div")
+        return (root.text or "") + "".join(_render_article_el(c) for c in root).strip()
+    except Exception:
+        # 兜底：退化到纯正则白名单清洗（不保证闭合）
+        return _sanitize_regex_fallback(h)
+
+
+def _sanitize_regex_fallback(h):
+    """旧版正则白名单（lxml 不可用时的兜底，可能残留未闭合标签）。"""
     h = re.sub(r"<(%s)[^>]*>.*?</\1>" % "|".join(_ARTICLE_DROP_BLOCKS),
                "", h, flags=re.S | re.I)
-    # 2) 剥掉外层 html / head / body 包裹
     h = re.sub(r"</?(html|head|body)[^>]*>", "", h, flags=re.I)
-    # 3) 去掉不在白名单的标签（保留其内部文本）
     h = re.sub(r"<(/?)([a-zA-Z0-9]+)([^>]*)>",
                lambda m: m.group(0) if m.group(2).lower() in _ARTICLE_ALLOWED_TAGS else "",
                h)
-    # 4) 去掉所有 on* 事件属性
     h = re.sub(r"\s+on[a-z]+\s*=\s*(\"[^\"]*\"|'[^']*'|[^\s>]+)", "", h, flags=re.I)
-    # 5) 去掉 javascript: 协议的链接/资源
     h = re.sub(r'(href|src)\s*=\s*("javascript:[^"]*"|\'javascript:[^\']*\')',
                "", h, flags=re.I)
     return h.strip()
