@@ -540,7 +540,7 @@ def build_html(theme_papers: list[tuple[str, list[dict]]], jitems: list[dict], n
     <span class="hero-eyebrow">⚛️ arXiv · Physics Latest</span>
     <h1 class="hero-title">物理最新论文 · {today_str}</h1>
     <p class="hero-sub">按提交时间倒序，每主题取最近 {PER_THEME} 篇，共 <strong>{total}</strong> 篇</p>
-    <p class="hero-window">抓取时间：{fetch_time} · 数据源：arXiv API · Nature Physics · Science · PRL（含已正式发表期刊）</p>
+    <p class="hero-window">抓取时间：{fetch_time} · 数据源：arXiv API · Nature 主刊 / Nature Physics / Nature Communications / PNAS / Science / PRL（含已正式发表期刊）</p>
     <p class="hero-cats">覆盖类别：<code>{html.escape(cats_str)}</code></p>
     <div class="hero-stats">
       <span class="total-pill"><span class="num">{total}</span><span class="lbl">篇论文</span></span>
@@ -554,7 +554,7 @@ def build_html(theme_papers: list[tuple[str, list[dict]]], jitems: list[dict], n
 </main>
 {build_footer()}
 <footer>
-  共 <strong>{total}</strong> 篇 · 数据来源 arXiv.org + 前沿期刊（Nature Physics / Science / PRL）· 时间已转换为北京时间 · 摘要悬停可看全文 · 数学公式由 <a href="https://www.mathjax.org" target="_blank" rel="noopener noreferrer">MathJax</a> 渲染（需联网）· 中文译文由 Google 翻译（仅供参考，以英文原文为准）
+  共 <strong>{total}</strong> 篇 · 数据来源 arXiv.org + 前沿期刊（Nature 主刊 / Nature Physics / Nature Communications / PNAS / Science / PRL）· 时间已转换为北京时间 · 摘要悬停可看全文 · 数学公式由 <a href="https://www.mathjax.org" target="_blank" rel="noopener noreferrer">MathJax</a> 渲染（需联网）· 中文译文由 Google 翻译（仅供参考，以英文原文为准）
 </footer>
 {TOGGLE_SCRIPT}
 <script>
@@ -621,15 +621,21 @@ def main():
         print(f"[arxiv] 翻译完成：{ok} 篇成功", flush=True)
 
     # 前沿期刊：同样抓取并翻译中文，风格与 arXiv 论文卡一致（在 build_html 前完成，传入 jitems）
+    # 注：Nature 正刊（主刊 nature.com/nature）与 Nature Physics（子刊 nphys）是不同 RSS，
+    # 正刊覆盖全学科、为旗舰刊；此处一并收录以补全「顶尖综合/物理期刊」矩阵。
+    # 均经 2026-07-16 探针验证可达（Nature 正刊 75 条 / Nature Comm 8 条 / PNAS 100 条 / Science / PRL 正常）。
     journal_feeds = [
+        ("https://www.nature.com/nature/rss/getrss.html", "Nature 主刊"),
         ("https://www.nature.com/nphys/rss/getrss.html", "Nature Physics"),
+        ("https://www.nature.com/ncomms/rss/getrss.html", "Nature Communications"),
+        ("https://www.pnas.org/rss/current.xml", "PNAS"),
         ("https://www.science.org/rss/news_current.xml", "Science"),
     ]
     jitems = []
     for _url, _name in journal_feeds:
         jitems.extend(fetch_rss(_url, _name, max_n=6))
     jitems.extend(fetch_prl_crossref(max_n=6))
-    jitems = dedup(jitems)[:18]
+    jitems = dedup(jitems)[:30]
     if do_translate and jitems:
         print(f"[arxiv] 翻译前沿期刊中文（{len(jitems)} 条）...", flush=True)
         for it in jitems:

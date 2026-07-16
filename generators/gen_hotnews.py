@@ -59,6 +59,7 @@ PER_PLATFORM = {
     # 新闻页各源（卡片含摘要，单源条数适度收敛）
     "chinanews": 18, "repubblica": 18, "france24": 18, "sole24": 18,
     "politico": 18, "eu_google": 18, "bbc": 18, "nhk": 18,
+    "guardian": 18, "nyt": 18, "aljazeera": 18, "wapo": 18,
 }
 
 
@@ -323,6 +324,20 @@ def fetch_nhk():
     return fetch_rss_news("https://www3.nhk.or.jp/rss/news/cat0.xml", "NHK 日本")
 
 
+# ---- 新闻页增补：国际知名报刊（2026-07-16 探针验证可达）----
+def fetch_guardian():
+    return fetch_rss_news("https://www.theguardian.com/world/rss", "卫报 (英国)")
+
+def fetch_nyt_world():
+    return fetch_rss_news("https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "纽约时报 (国际)")
+
+def fetch_aljazeera():
+    return fetch_rss_news("https://www.aljazeera.com/xml/rss/all.xml", "半岛电视台")
+
+def fetch_wapo_world():
+    return fetch_rss_news("https://feeds.washingtonpost.com/rss/world", "华盛顿邮报 (国际)")
+
+
 def fetch_intl():
     """国际热点：Google News 英文头条为主，失败回退 Hacker News。返回 (items, note)。"""
     note = ""
@@ -378,6 +393,14 @@ NEWS_SOURCES = [
      "loader": fetch_bbc, "expandable": True, "bilingual": True, "sl": "auto"},
     {"id": "nhk", "name": "NHK 日本", "emoji": "🇯🇵", "anchor": "nhk",
      "loader": fetch_nhk, "expandable": True, "bilingual": True, "sl": "en"},
+    {"id": "guardian", "name": "卫报 (英国)", "emoji": "🇬🇧", "anchor": "guardian",
+     "loader": fetch_guardian, "expandable": True, "bilingual": True, "sl": "auto"},
+    {"id": "nyt", "name": "纽约时报 (国际)", "emoji": "🇺🇸", "anchor": "nyt",
+     "loader": fetch_nyt_world, "expandable": True, "bilingual": True, "sl": "en"},
+    {"id": "aljazeera", "name": "半岛电视台", "emoji": "🇶🇦", "anchor": "aljazeera",
+     "loader": fetch_aljazeera, "expandable": True, "bilingual": True, "sl": "en"},
+    {"id": "wapo", "name": "华盛顿邮报 (国际)", "emoji": "🇺🇸", "anchor": "wapo",
+     "loader": fetch_wapo_world, "expandable": True, "bilingual": True, "sl": "en"},
 ]
 
 
