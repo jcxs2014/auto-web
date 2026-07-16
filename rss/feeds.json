@@ -438,13 +438,6 @@
     "lang": "en"
   },
   {
-    "name": "纽约时报",
-    "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-    "category": "期刊",
-    "lang": "en",
-    "fulltext": false
-  },
-  {
     "name": "半岛电视台",
     "url": "https://www.aljazeera.com/xml/rss/all.xml",
     "category": "期刊",
@@ -457,38 +450,10 @@
     "lang": "en"
   },
   {
-    "name": "华盛顿邮报",
-    "url": "https://feeds.washingtonpost.com/rss/world",
-    "category": "期刊",
-    "lang": "en",
-    "fulltext": false
-  },
-  {
-    "name": "金融时报",
-    "url": "https://www.ft.com/rss/home",
-    "category": "期刊",
-    "lang": "en",
-    "fulltext": false
-  },
-  {
-    "name": "经济学人",
-    "url": "https://www.economist.com/finance-and-economics/rss.xml",
-    "category": "期刊",
-    "lang": "en",
-    "fulltext": false
-  },
-  {
     "name": "NPR 新闻",
     "url": "https://feeds.npr.org/1001/rss.xml",
     "category": "广播",
     "lang": "en"
-  },
-  {
-    "name": "彭博",
-    "url": "https://feeds.bloomberg.com/markets/news.rss",
-    "category": "期刊",
-    "lang": "en",
-    "fulltext": false
   },
   {
     "name": "大西洋月刊",
