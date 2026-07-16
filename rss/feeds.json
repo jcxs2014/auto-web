@@ -466,5 +466,59 @@
     "url": "https://www.wired.com/feed/rss",
     "category": "期刊",
     "lang": "en"
+  },
+  {
+    "name": "Alan Jacobs (ayjay)",
+    "url": "https://blog.ayjay.org/feed/",
+    "category": "读书",
+    "lang": "en"
+  },
+  {
+    "name": "Good e-Reader",
+    "url": "https://goodereader.com/blog/feed",
+    "category": "读书",
+    "lang": "en"
+  },
+  {
+    "name": "The Guardian Books",
+    "url": "https://www.theguardian.com/books/rss",
+    "category": "读书",
+    "lang": "en"
+  },
+  {
+    "name": "Five Books",
+    "url": "https://fivebooks.com/feed/",
+    "category": "读书",
+    "lang": "en"
+  },
+  {
+    "name": "Longreads",
+    "url": "https://longreads.com/feed/",
+    "category": "读书",
+    "lang": "en"
+  },
+  {
+    "name": "The New York Review of Books",
+    "url": "https://www.nybooks.com/rss/",
+    "category": "读书",
+    "lang": "en"
+  },
+  {
+    "name": "The Paris Review Blog",
+    "url": "https://www.theparisreview.org/blog/feed/",
+    "category": "读书",
+    "lang": "en"
+  },
+  {
+    "name": "Open Culture",
+    "url": "https://www.openculture.com/feed",
+    "category": "读书",
+    "lang": "en"
+  },
+  {
+    "name": "明周文化",
+    "url": "https://www.mpweekly.com/culture/feed",
+    "category": "读书",
+    "lang": "zh"
   }
 ]
