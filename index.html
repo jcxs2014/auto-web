@@ -111,6 +111,8 @@
   .btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px)}
   .btn-ghost{color:var(--text-dim);background:var(--bg-3);border:1px solid var(--border)}
   .btn-ghost:hover{color:var(--text);border-color:var(--border-2)}
+  .btn-disabled{color:var(--text-faint);background:var(--bg-3);border:1px solid var(--border);cursor:not-allowed;opacity:.72}
+  .btn-disabled:hover{color:var(--text-faint);border-color:var(--border);transform:none}
 
   .theme-toggle{
     position:fixed;top:16px;right:18px;z-index:100;
@@ -196,7 +198,7 @@ const DASHBOARDS = [
     desc: "AI HOT 每日精选 5 大版块科技动态：模型发布/更新、产品发布/更新、行业动态、论文研究、技巧与观点。",
     latest: "aihot/aihot_daily_latest.html",
     archive: "aihot/archive.html",
-    updated: "2026-07-15",
+    updated: "2026-07-16",
     scale: "12 条 / 日",
     c1: "#6ea8ff", c2: "#8b7bff"
   },
@@ -243,8 +245,8 @@ const DASHBOARDS = [
     tag: "自定义订阅",
     desc: "自动拉取你配置在 rss/feeds.json 的 RSS 订阅，每个来源保留最新 10 篇，统一排版、可按分类筛选，旧文自动淘汰。",
     latest: "rss/index.html",
-    archive: "rss/",
-    updated: "2026-07-15",
+    archive: "",   // 空 = 不归档（渲染为禁用按钮「不归档」，不跳转）
+    updated: "2026-07-16",
     scale: "每源 10 篇",
     c1: "#1d8fe1", c2: "#7b61ff"
   }
@@ -296,7 +298,9 @@ const DASHBOARDS = [
       </div>
       <div class="links">
         <a class="btn btn-primary" href="${d.latest}" target="_blank" rel="noopener noreferrer">打开仪表盘 →</a>
-        <a class="btn btn-ghost" href="${d.archive}" target="_blank" rel="noopener noreferrer">历史归档</a>
+        ${d.archive
+          ? `<a class="btn btn-ghost" href="${d.archive}" target="_blank" rel="noopener noreferrer">历史归档</a>`
+          : `<span class="btn btn-ghost btn-disabled" title="RSS 为实时订阅，仅保留每源最新内容、旧文自动淘汰，不留存历史归档">不归档</span>`}
       </div>
     </article>
   `).join("");
