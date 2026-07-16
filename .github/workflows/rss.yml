@@ -49,4 +49,4 @@ jobs:
           cd ..
 
       - name: Commit and push (rss)
-        run: bash sync.sh rss rss/index.html rss/data rss/feed_health.json
+        run: bash sync.sh rss rss/index.html rss/translate.html rss/data rss/feed_health.json
