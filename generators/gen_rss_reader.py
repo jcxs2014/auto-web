@@ -126,6 +126,10 @@ __FOOTER_CSS__
 .reader-meta .src-pill{font-size:11.5px}
 .reader-origin{color:var(--accent2);text-decoration:none;font-weight:600;margin-left:auto;white-space:nowrap}
 .reader-origin:hover{text-decoration:underline}
+.reader-translate{display:inline-flex;align-items:center;gap:4px;color:var(--accent2);
+  text-decoration:none;font-weight:600;white-space:nowrap;border:1px solid var(--accent2);
+  border-radius:999px;padding:3px 12px;transition:background .15s}
+.reader-translate:hover{background:var(--accent-soft)}
 .reader-body{font-size:17px;line-height:1.85;color:var(--text);overflow-wrap:anywhere;word-break:break-word;text-align:justify;text-justify:inter-ideograph;hyphens:auto;font-style:normal}
 .reader-body::selection{background:var(--accent2);color:#fff}
 .reader-body>p{margin:0 0 1.15em}
@@ -244,8 +248,18 @@ __FOOTER_HTML__
         p.style.background=srcEl.style.background;p.textContent=srcEl.textContent;meta.appendChild(p);}
       if(dateEl&&dateEl.textContent){var d=document.createElement('span');d.textContent=dateEl.textContent;meta.appendChild(d);}
       var href=titleEl?titleEl.getAttribute('href'):'';
-      if(href){var a=document.createElement('a');a.className='reader-origin';a.href=href;
-        a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看原文 →';meta.appendChild(a);}
+      if(href){
+        // 非中文文章：提供「翻译」按钮，直接调 Google 翻译打开原文译文
+        // （整页 lang=zh-CN 导致浏览器原生翻译不触发，故用显式按钮兜底）
+        if(lang && lang!=='zh' && lang!=='zh-CN'){
+          var gt='https://translate.google.com/translate?sl=auto&tl=zh-CN&u='+encodeURIComponent(href);
+          var t=document.createElement('a');t.className='reader-translate';t.href=gt;
+          t.target='_blank';t.rel='noopener noreferrer';t.textContent='🌐 翻译';
+          meta.appendChild(t);
+        }
+        var a=document.createElement('a');a.className='reader-origin';a.href=href;
+        a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看原文 →';meta.appendChild(a);
+      }
       document.getElementById('reader-body').innerHTML=bodyEl?bodyEl.innerHTML:'';
       reader.classList.add('open'); reader.scrollTop=0;
       document.body.style.overflow='hidden';
