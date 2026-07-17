@@ -72,12 +72,6 @@
     "lang": "zh"
   },
   {
-    "name": "Mivansaka's Blog",
-    "url": "https://mivansaka.xyz/feed.xml",
-    "category": "中文博客",
-    "lang": "zh"
-  },
-  {
     "name": "狡猫三窝",
     "url": "https://slykiten.com/feed",
     "category": "中文博客",
@@ -230,12 +224,6 @@
   {
     "name": "小陈故事",
     "url": "https://www.chener.net/feed/",
-    "category": "中文博客",
-    "lang": "zh"
-  },
-  {
-    "name": "木瓜园",
-    "url": "https://muguayuan.com/feed",
     "category": "中文博客",
     "lang": "zh"
   },
