@@ -59,7 +59,38 @@ NAV_CSS = """
   .nav-link{width:100%;justify-content:space-between;padding:11px 14px;font-size:15px;border-radius:10px}
   .nav-count{font-size:12px}
 }
+/* Google 网站翻译器：隐藏其默认顶部横幅（避免把页面下推）；让小工具融入导航栏 */
+.goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}
+body{top:0!important}
+#google_translate_element{display:inline-flex;align-items:center;font-size:13px;color:var(--text)}
+#google_translate_element .goog-te-gadget{font-size:13px!important;color:var(--text)}
+#google_translate_element .goog-te-gadget-simple{background:var(--pill-bg);border:1px solid var(--nav-line);border-radius:999px;padding:3px 8px}
+#google_translate_element img{display:none!important}
+#google_translate_element select{font-size:13px;color:var(--text)}
+@media(max-width:1024px){
+  #google_translate_element{order:6;margin-left:auto}
+}
 """
+
+
+# Google 网站翻译器（整页片段级翻译）：声明页面主语言为 zh-CN，
+# 用户选「中文」时仅将检测为外文的文章翻成中文、中文 UI 保持不动。
+# 依赖外部 https://translate.google.com 的 JS；国内可能慢/被墙，
+# 加载失败则该 div 为空，不影响站点其他功能（优雅降级）。
+TRANSLATE_WIDGET = (
+    '<div id="google_translate_element"></div>'
+    '<script>'
+    'function googleTranslateElementInit(){'
+    '  try{ new google.translate.TranslateElement({'
+    '    pageLanguage:"zh-CN",'
+    '    includedLanguages:"en,zh-CN,ja,fr,de,ko,ru,es,it,pt",'
+    '    layout:google.translate.TranslateElement.InlineLayout.SIMPLE,'
+    '    autoDisplay:false'
+    '  }, "google_translate_element"); }catch(e){}'
+    '}'
+    '</script>'
+    '<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>'
+)
 
 
 def build_nav(brand, nav_links_html, extra_html="", home_href="../index.html"):
@@ -79,6 +110,7 @@ def build_nav(brand, nav_links_html, extra_html="", home_href="../index.html"):
         '<button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button>'
         '<button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button>'
         '</div></nav>'
+        + TRANSLATE_WIDGET
     )
 
 
