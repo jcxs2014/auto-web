@@ -67,18 +67,35 @@ body{top:0!important}
 #google_translate_element .goog-te-gadget-simple{background:var(--pill-bg);border:1px solid var(--nav-line);border-radius:999px;padding:3px 8px}
 #google_translate_element img{display:none!important}
 #google_translate_element select{font-size:13px;color:var(--text)}
+/* 翻译控件容器：Google 条 + Bing 兜底链接 并排；Bing 作为 Google 加载失败时的国内兜底 */
+.nav-translate{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
+.nav-bing-translate{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;
+  background:var(--pill-bg);border:1px solid var(--nav-line);color:var(--text);
+  text-decoration:none;font-size:13px;white-space:nowrap;transition:border-color .15s,background .15s}
+.nav-bing-translate:hover{border-color:var(--accent)}
+.nav-bing-translate.warn{border-color:#d97706;background:#fff7ed;color:#b45309}
 @media(max-width:1024px){
-  #google_translate_element{order:6;margin-left:auto}
+  .nav-translate{width:100%;margin-left:0;justify-content:flex-start;
+    padding:8px max(16px,env(safe-area-inset-left)) 2px max(16px,env(safe-area-inset-left));
+    border-top:1px solid var(--nav-line)}
 }
 """
 
 
-# Google 网站翻译器（整页片段级翻译）：声明页面主语言为 zh-CN，
-# 用户选「中文」时仅将检测为外文的文章翻成中文、中文 UI 保持不动。
-# 依赖外部 https://translate.google.com 的 JS；国内可能慢/被墙，
-# 加载失败则该 div 为空，不影响站点其他功能（优雅降级）。
+# 翻译控件（双保险）：
+# 1) Google 网站翻译器（整页片段级翻译）：声明页面主语言为 zh-CN，
+#    用户选「中文」时仅将检测为外文的文章翻成中文、中文 UI 保持不动。
+#    依赖外部 https://translate.google.com 的 JS；国内可能慢/被墙，
+#    加载失败则该 div 为空，不影响站点其他功能（优雅降级）。
+# 2) 「🌐 Bing 翻译」链接：常驻兜底，点开把当前页交给 cn.bing.com 整页翻译
+#    （国内可达）。若 3.5s 后 Google 仍未注入翻译控件（即加载失败），
+#    则把 Bing 链接高亮为警告态，引导用户改用 Bing。
 TRANSLATE_WIDGET = (
+    '<span id="nav-translate" class="nav-translate">'
     '<div id="google_translate_element"></div>'
+    '<a id="nav-bing-translate" class="nav-bing-translate" href="#" '
+    'onclick="openBingTranslate();return false;" '
+    'title="用 Bing 整页翻译（国内可用）">🌐 Bing 翻译</a>'
     '<script>'
     'function googleTranslateElementInit(){'
     '  try{ new google.translate.TranslateElement({'
@@ -88,8 +105,18 @@ TRANSLATE_WIDGET = (
     '    autoDisplay:false'
     '  }, "google_translate_element"); }catch(e){}'
     '}'
+    'function openBingTranslate(){'
+    '  var u=encodeURIComponent(location.href);'
+    '  window.open("https://cn.bing.com/translator?from=en&to=zh-CHS&text="+u,"_blank");'
+    '}'
+    'setTimeout(function(){'
+    '  var g=document.querySelector(".goog-te-combo");'
+    '  var b=document.getElementById("nav-bing-translate");'
+    '  if(!g && b){ b.classList.add("warn"); b.title="Google 翻译不可用，请改用 Bing 翻译"; }'
+    '},3500);'
     '</script>'
     '<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>'
+    '</span>'
 )
 
 
