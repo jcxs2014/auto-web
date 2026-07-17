@@ -1,0 +1,38 @@
+{
+  "name": "The Paris Review Blog",
+  "url": "https://www.theparisreview.org/blog/feed/",
+  "category": "读书",
+  "lang": "en",
+  "entries": [
+    {
+      "title": "A City Bigger Than a Bomb: Dispatch from Beirut",
+      "url": "https://www.theparisreview.org/blog/2026/07/15/a-city-bigger-than-a-bomb/",
+      "summary": "“For almost a year after October 7, Israel’s war with Lebanon remained an oddly prim, choreographed conflict on the border.”",
+      "source": "The Paris Review Blog",
+      "extra": "",
+      "date": "2026-07-15 15:14",
+      "ts": 1784128462,
+      "content": ""
+    },
+    {
+      "title": "Making of a Poem: Zain Baweja on “Gloss”",
+      "url": "https://www.theparisreview.org/blog/2026/07/14/zain-baweja-on-gloss/",
+      "summary": "“My notes began to look like a glossary for some absent text.”",
+      "source": "The Paris Review Blog",
+      "extra": "",
+      "date": "2026-07-14 15:03",
+      "ts": 1784041433,
+      "content": ""
+    },
+    {
+      "title": "The Hydration-Break World Cup",
+      "url": "https://www.theparisreview.org/blog/2026/07/10/the-hydration-break-world-cup/",
+      "summary": "“How much can fans conveniently forget in order to enjoy the games? The answer, evidently, is a lot.”",
+      "source": "The Paris Review Blog",
+      "extra": "",
+      "date": "2026-07-10 14:27",
+      "ts": 1783693647,
+      "content": ""
+    }
+  ]
+}
