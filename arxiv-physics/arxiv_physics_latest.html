@@ -97,7 +97,7 @@
 .home-link:hover,.theme-toggle:hover,.nav-toggle:hover{border-color:var(--accent)}
 .hamburger{border-radius:10px;font-size:18px;line-height:1;display:none;justify-content:center}
 .nav-toggle.off{opacity:.5}
-@media(max-width:768px){
+@media(max-width:1024px){
   .nav-inner{flex-wrap:nowrap;gap:10px}
   .nav-brand{font-size:16px;margin-right:auto}
   .hamburger{display:inline-flex}
@@ -108,6 +108,26 @@
   .nav.menu-open .nav-links{display:flex}
   .nav-link{width:100%;justify-content:space-between;padding:11px 14px;font-size:15px;border-radius:10px}
   .nav-count{font-size:12px}
+}
+/* Google 网站翻译器：隐藏其默认顶部横幅（避免把页面下推）；让小工具融入导航栏 */
+.goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}
+body{top:0!important}
+#google_translate_element{display:inline-flex;align-items:center;font-size:13px;color:var(--text)}
+#google_translate_element .goog-te-gadget{font-size:13px!important;color:var(--text)}
+#google_translate_element .goog-te-gadget-simple{background:var(--pill-bg);border:1px solid var(--nav-line);border-radius:999px;padding:3px 8px}
+#google_translate_element img{display:none!important}
+#google_translate_element select{font-size:13px;color:var(--text)}
+/* 翻译控件容器：Google 条 + Bing 兜底链接 并排；Bing 作为 Google 加载失败时的国内兜底 */
+.nav-translate{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
+.nav-bing-translate{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;
+  background:var(--pill-bg);border:1px solid var(--nav-line);color:var(--text);
+  text-decoration:none;font-size:13px;white-space:nowrap;transition:border-color .15s,background .15s}
+.nav-bing-translate:hover{border-color:var(--accent)}
+.nav-bing-translate.warn{border-color:#d97706;background:#fff7ed;color:#b45309}
+@media(max-width:1024px){
+  .nav-translate{width:100%;margin-left:0;justify-content:flex-start;
+    padding:8px max(16px,env(safe-area-inset-left)) 2px max(16px,env(safe-area-inset-left));
+    border-top:1px solid var(--nav-line)}
 }
 
   
@@ -206,7 +226,7 @@
     <span class="hero-eyebrow">⚛️ arXiv · Physics Latest</span>
     <h1 class="hero-title">物理最新论文 · 2026年7月17日 周五</h1>
     <p class="hero-sub">按提交时间倒序，每主题取最近 12 篇，共 <strong>60</strong> 篇</p>
-    <p class="hero-window">抓取时间：7月17日 16:26（北京时间） · 数据源：arXiv API · Nature 主刊 / Nature Physics / Nature Communications / PNAS / Science / PRL（含已正式发表期刊）</p>
+    <p class="hero-window">抓取时间：7月17日 22:00（北京时间） · 数据源：arXiv API · Nature 主刊 / Nature Physics / Nature Communications / PNAS / Science / PRL（含已正式发表期刊）</p>
     <p class="hero-cats">覆盖类别：<code>hep-th/hep-ph/hep-ex · physics.space-ph · gr-qc · astro-ph.HE · physics.ins-det</code></p>
     <div class="hero-stats">
       <span class="total-pill"><span class="num">60</span><span class="lbl">篇论文</span></span>
@@ -214,7 +234,7 @@
     </div>
   </div>
 </header>
-<nav class="nav"><div class="nav-inner"><a class="home-link" href="../index.html" title="返回首页">← 首页</a><span class="nav-brand">🔭 arXiv 物理最新论文</span><span class="nav-links"><a href="#hep" class="nav-link"><span class="nav-emoji">⚛️</span>高能物理<span class="nav-count">12</span></a><a href="#space" class="nav-link"><span class="nav-emoji">🛰️</span>空间物理<span class="nav-count">12</span></a><a href="#grqc" class="nav-link"><span class="nav-emoji">🕳️</span>广义相对论<span class="nav-count">12</span></a><a href="#astrohe" class="nav-link"><span class="nav-emoji">🌌</span>高能天体物理<span class="nav-count">12</span></a><a href="#detector" class="nav-link"><span class="nav-emoji">🔬</span>探测器与仪器<span class="nav-count">12</span></a><a class="nav-link" href="../rss/index.html">📡 RSS</a><a href="#journals" class="nav-link"><span class="nav-emoji">🏛️</span>前沿期刊<span class="nav-count">30</span></a></span><button id="zh-toggle" class="nav-toggle" type="button">🌐 中文</button><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button></div></nav>
+<nav class="nav"><div class="nav-inner"><a class="home-link" href="../index.html" title="返回首页">← 首页</a><span class="nav-brand">🔭 arXiv 物理最新论文</span><span class="nav-links"><a href="#hep" class="nav-link"><span class="nav-emoji">⚛️</span>高能物理<span class="nav-count">12</span></a><a href="#space" class="nav-link"><span class="nav-emoji">🛰️</span>空间物理<span class="nav-count">12</span></a><a href="#grqc" class="nav-link"><span class="nav-emoji">🕳️</span>广义相对论<span class="nav-count">12</span></a><a href="#astrohe" class="nav-link"><span class="nav-emoji">🌌</span>高能天体物理<span class="nav-count">12</span></a><a href="#detector" class="nav-link"><span class="nav-emoji">🔬</span>探测器与仪器<span class="nav-count">12</span></a><a class="nav-link" href="../rss/index.html">📡 RSS</a><a href="#journals" class="nav-link"><span class="nav-emoji">🏛️</span>前沿期刊<span class="nav-count">30</span></a></span><button id="zh-toggle" class="nav-toggle" type="button">🌐 中文</button><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button></div></nav><span id="nav-translate" class="nav-translate"><div id="google_translate_element"></div><a id="nav-bing-translate" class="nav-bing-translate" href="#" onclick="openBingTranslate();return false;" title="用 Bing 整页翻译（国内可用）">🌐 Bing 翻译</a><script>function googleTranslateElementInit(){  try{ new google.translate.TranslateElement({    pageLanguage:"zh-CN",    includedLanguages:"en,zh-CN,ja,fr,de,ko,ru,es,it,pt",    layout:google.translate.TranslateElement.InlineLayout.SIMPLE,    autoDisplay:false  }, "google_translate_element"); }catch(e){}}function openBingTranslate(){  var u=encodeURIComponent(location.href);  window.open("https://cn.bing.com/translator?from=en&to=zh-CHS&text="+u,"_blank");}setTimeout(function(){  var g=document.querySelector(".goog-te-combo");  var b=document.getElementById("nav-bing-translate");  if(!g && b){ b.classList.add("warn"); b.title="Google 翻译不可用，请改用 Bing 翻译"; }},3500);</script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script></span>
 <main>
 
       <section id="hep" class="section">
@@ -241,7 +261,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">14 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:59（北京时间）</span>
           </div>
@@ -267,7 +287,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">14 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:59（北京时间）</span>
           </div>
@@ -293,7 +313,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">14 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:54（北京时间）</span>
           </div>
@@ -319,7 +339,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">14 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:47（北京时间）</span>
           </div>
@@ -345,7 +365,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">14 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:34（北京时间）</span>
           </div>
@@ -371,7 +391,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">15 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:21（北京时间）</span>
           </div>
@@ -397,7 +417,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">15 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:18（北京时间）</span>
           </div>
@@ -414,7 +434,7 @@
             <span class="arxiv-id">2607.15212v1</span>
           </div>
           <h3 class="card-title">Magnetic corrections to the fermionic Casimir effect with Lorentz symmetry violation and a compactified extra dimension</h3>
-          <p class="card-title-zh no-math">🌐 对洛伦兹对称性破坏和压缩额外维度的费米卡西米尔效应的磁校正</p>
+          <p class="card-title-zh no-math">🌐 对洛伦兹对称性破坏和压缩额外维度的费米卡西米尔效应的磁修正</p>
           <p class="card-authors">Andrea Erdas</p>
           <p class="card-summary-short no-math" onclick="toggleCard(this)">In this work I study the effect of a magnetic field on the Casimir effect due to a massive, charged fermion field that violates Lorentz invariance in an aether-like manner while maintaining CPT, in a space with one toroidally compactified extra dimension. I take the fermion field to obey MIT bag boundary conditions on two identical square parallel plates. I do this investigation using the zeta fun… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
@@ -423,7 +443,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">15 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:13（北京时间）</span>
           </div>
@@ -449,7 +469,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">15 小时前</span>
+            <span class="meta-rel">21 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 00:47（北京时间）</span>
           </div>
@@ -475,7 +495,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">15 小时前</span>
+            <span class="meta-rel">21 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 00:39（北京时间）</span>
           </div>
@@ -501,7 +521,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">15 小时前</span>
+            <span class="meta-rel">21 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 00:38（北京时间）</span>
           </div>
@@ -527,7 +547,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">16 小时前</span>
+            <span class="meta-rel">22 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 23:53（北京时间）</span>
           </div>
@@ -641,7 +661,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">2 天前</span>
+            <span class="meta-rel">3 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月14日 18:25（北京时间）</span>
           </div>
@@ -771,7 +791,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">6 天前</span>
+            <span class="meta-rel">7 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月10日 21:13（北京时间）</span>
           </div>
@@ -823,7 +843,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">7 天前</span>
+            <span class="meta-rel">8 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月9日 21:22（北京时间）</span>
           </div>
@@ -885,7 +905,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">14 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:54（北京时间）</span>
           </div>
@@ -911,7 +931,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">15 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:21（北京时间）</span>
           </div>
@@ -937,7 +957,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">16 小时前</span>
+            <span class="meta-rel">21 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 00:18（北京时间）</span>
           </div>
@@ -963,7 +983,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">16 小时前</span>
+            <span class="meta-rel">22 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 23:51（北京时间）</span>
           </div>
@@ -989,7 +1009,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">16 小时前</span>
+            <span class="meta-rel">22 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 23:49（北京时间）</span>
           </div>
@@ -1011,11 +1031,11 @@
           <p class="card-summary-short no-math" onclick="toggleCard(this)">The Burst Alert Telescope (BAT) onboard the Neil Gehrels Swift Observatory is capable of localizing gamma-ray transients with arcminute precision, enabling rapid multi-wavelength follow-up. However, onboard triggering is disabled during spacecraft slews, preventing the autonomous detection and localization of transients occurring during these intervals. We present here BAT-GLIMPSE, a fully autonom… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
             <p class="card-summary-en">The Burst Alert Telescope (BAT) onboard the Neil Gehrels Swift Observatory is capable of localizing gamma-ray transients with arcminute precision, enabling rapid multi-wavelength follow-up. However, onboard triggering is disabled during spacecraft slews, preventing the autonomous detection and localization of transients occurring during these intervals. We present here BAT-GLIMPSE, a fully autonomous, open-source pipeline for the low-latency localization of transient gamma-ray sources in Swift-BAT data. Making use of the BatAnalysis package, the pipeline combines coded-mask imaging and mosaic techniques, automatically selecting the appropriate analysis according to the spacecraft attitude and enabling localization searches during both pointing observations and spacecraft slews. We validate the performance of BAT-GLIMPSE on a sample of 66 GRBs reported in GUANO circulars. The pipeline successfully recovers arcminute positions for 43 events, consistent with published localizations, with typical offsets of $\lesssim5$ arcminutes. Approximately $88\%$ of the GRBs occurring during spacecraft slews are recovered through imaging or mosaic analyses. During the fourth LIGO-Virgo-KAGRA observing run, the role of BAT-GLIMPSE was crucial in the search for gamma-ray counterparts of gravitational waves, particularly in response to pre-merger alerts which triggered the slew of the Swift spacecraft with extremely low latency. Operating synergistically with NITRATES, BAT-GLIMPSE fills the critical gap left by slew intervals and, together, the two pipelines are estimated to double the onboard arcminute-localization rate of Swift-BAT, unlocking the full potential of the Swift mission for time-domain and multi-messenger astrophysics.</p>
-            <p class="card-summary-zh no-math">尼尔·盖尔斯·斯威夫特天文台上的爆发警报望远镜 (BAT) 能够以弧分精度定位伽马射线瞬变，从而实现快速的多波长跟踪。然而，在航天器旋转期间，机载触发被禁用，从而阻止了在这些间隔期间发生的瞬变的自主检测和定位。我们在此介绍 BAT-GLIMPSE，这是一个完全自主的开源管道，用于 Swift-BAT 数据中瞬态伽马射线源的低延迟定位。该管道利用 BatAnalysis 软件包，结合了编码掩模成像和镶嵌技术，根据航天器姿态自动选择适当的分析，并在指向观测和航天器回转过程中实现定位搜索。我们在 GUANO 通报中报告的 66 个伽玛暴样本上验证了 BAT-GLIMPSE 的性能。该管道成功恢复了 43 个事件的弧分位置，与已发布的本地化一致，典型偏移量为 $\lesssim5$ 弧分。通过成像或镶嵌分析恢复了航天器旋转期间发生的大约 88\%$ 伽玛暴。在第四次 LIGO-Virgo-KAGRA 观测运行期间，BAT-GLIMPSE 在寻找引力波的伽马射线对应物方面发挥了至关重要的作用，特别是在响应合并前警报时，该警报以极低的延迟触发了 Swift 航天器的回转。 BAT-GLIMPSE 与 NITRATES 协同运行，填补了转换间隔留下的关键空白，并且这两条管道预计将使 Swift-BAT 的机载弧分定位率提高一倍，从而释放 Swift 任务在时域和多信使天体物理学方面的全部潜力。</p>
+            <p class="card-summary-zh no-math">尼尔·盖尔斯·斯威夫特天文台上的爆发警报望远镜 (BAT) 能够以弧分精度定位伽马射线瞬变，从而实现快速的多波长跟踪。然而，在航天器旋转期间，机载触发被禁用，从而阻止了在这些间隔期间发生的瞬变的自主检测和定位。我们在此介绍 BAT-GLIMPSE，这是一个完全自主的开源管道，用于 Swift-BAT 数据中瞬态伽马射线源的低延迟定位。该管道利用 BatAnalysis 软件包，结合了编码掩模成像和镶嵌技术，根据航天器姿态自动选择适当的分析，并在指向观测和航天器回转过程中实现定位搜索。我们在 GUANO 通告中报告的 66 个伽玛暴样本上验证了 BAT-GLIMPSE 的性能。该管道成功恢复了 43 个事件的弧分位置，与已发布的本地化一致，典型偏移量为 $\lesssim5$ 弧分。通过成像或镶嵌分析恢复了航天器旋转期间发生的大约 88\%$ 伽玛暴。在第四次 LIGO-Virgo-KAGRA 观测运行期间，BAT-GLIMPSE 在寻找引力波的伽马射线对应物方面发挥了至关重要的作用，特别是在响应合并前警报时，该警报以极低的延迟触发了 Swift 航天器的回转。 BAT-GLIMPSE 与 NITRATES 协同运行，填补了转换间隔留下的关键空白，并且这两条管道预计将使 Swift-BAT 的机载弧分定位率提高一倍，从而释放 Swift 任务在时域和多信使天体物理学方面的全部潜力。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">16 小时前</span>
+            <span class="meta-rel">22 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 23:41（北京时间）</span>
           </div>
@@ -1041,7 +1061,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">17 小时前</span>
+            <span class="meta-rel">23 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 22:43（北京时间）</span>
           </div>
@@ -1067,7 +1087,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">18 小时前</span>
+            <span class="meta-rel">23 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 22:01（北京时间）</span>
           </div>
@@ -1093,7 +1113,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">18 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 21:53（北京时间）</span>
           </div>
@@ -1119,7 +1139,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">19 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 20:43（北京时间）</span>
           </div>
@@ -1145,7 +1165,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">19 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 20:29（北京时间）</span>
           </div>
@@ -1171,7 +1191,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">20 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 20:07（北京时间）</span>
           </div>
@@ -1207,7 +1227,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">14 小时前</span>
+            <span class="meta-rel">20 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 01:44（北京时间）</span>
           </div>
@@ -1233,7 +1253,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">16 小时前</span>
+            <span class="meta-rel">21 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月17日 00:16（北京时间）</span>
           </div>
@@ -1255,11 +1275,11 @@
           <p class="card-summary-short no-math" onclick="toggleCard(this)">The Burst Alert Telescope (BAT) onboard the Neil Gehrels Swift Observatory is capable of localizing gamma-ray transients with arcminute precision, enabling rapid multi-wavelength follow-up. However, onboard triggering is disabled during spacecraft slews, preventing the autonomous detection and localization of transients occurring during these intervals. We present here BAT-GLIMPSE, a fully autonom… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
             <p class="card-summary-en">The Burst Alert Telescope (BAT) onboard the Neil Gehrels Swift Observatory is capable of localizing gamma-ray transients with arcminute precision, enabling rapid multi-wavelength follow-up. However, onboard triggering is disabled during spacecraft slews, preventing the autonomous detection and localization of transients occurring during these intervals. We present here BAT-GLIMPSE, a fully autonomous, open-source pipeline for the low-latency localization of transient gamma-ray sources in Swift-BAT data. Making use of the BatAnalysis package, the pipeline combines coded-mask imaging and mosaic techniques, automatically selecting the appropriate analysis according to the spacecraft attitude and enabling localization searches during both pointing observations and spacecraft slews. We validate the performance of BAT-GLIMPSE on a sample of 66 GRBs reported in GUANO circulars. The pipeline successfully recovers arcminute positions for 43 events, consistent with published localizations, with typical offsets of $\lesssim5$ arcminutes. Approximately $88\%$ of the GRBs occurring during spacecraft slews are recovered through imaging or mosaic analyses. During the fourth LIGO-Virgo-KAGRA observing run, the role of BAT-GLIMPSE was crucial in the search for gamma-ray counterparts of gravitational waves, particularly in response to pre-merger alerts which triggered the slew of the Swift spacecraft with extremely low latency. Operating synergistically with NITRATES, BAT-GLIMPSE fills the critical gap left by slew intervals and, together, the two pipelines are estimated to double the onboard arcminute-localization rate of Swift-BAT, unlocking the full potential of the Swift mission for time-domain and multi-messenger astrophysics.</p>
-            <p class="card-summary-zh no-math">尼尔·盖尔斯·斯威夫特天文台上的爆发警报望远镜 (BAT) 能够以弧分精度定位伽马射线瞬变，从而实现快速的多波长跟踪。然而，在航天器旋转期间，机载触发被禁用，从而阻止了在这些间隔期间发生的瞬变的自主检测和定位。我们在此介绍 BAT-GLIMPSE，这是一个完全自主的开源管道，用于 Swift-BAT 数据中瞬态伽马射线源的低延迟定位。该管道利用 BatAnalysis 软件包，结合了编码掩模成像和镶嵌技术，根据航天器姿态自动选择适当的分析，并在指向观测和航天器回转过程中实现定位搜索。我们在 GUANO 通报中报告的 66 个伽玛暴样本上验证了 BAT-GLIMPSE 的性能。该管道成功恢复了 43 个事件的弧分位置，与已发布的本地化一致，典型偏移量为 $\lesssim5$ 弧分。通过成像或镶嵌分析恢复了航天器旋转期间发生的大约 88\%$ 伽玛暴。在第四次 LIGO-Virgo-KAGRA 观测运行期间，BAT-GLIMPSE 在寻找引力波的伽马射线对应物方面发挥了至关重要的作用，特别是在响应合并前警报时，该警报以极低的延迟触发了 Swift 航天器的回转。 BAT-GLIMPSE 与 NITRATES 协同运行，填补了转换间隔留下的关键空白，并且这两条管道预计将使 Swift-BAT 的机载弧分定位率提高一倍，从而释放 Swift 任务在时域和多信使天体物理学方面的全部潜力。</p>
+            <p class="card-summary-zh no-math">尼尔·盖尔斯·斯威夫特天文台上的爆发警报望远镜 (BAT) 能够以弧分精度定位伽马射线瞬变，从而实现快速的多波长跟踪。然而，在航天器旋转期间，机载触发被禁用，从而阻止了在这些间隔期间发生的瞬变的自主检测和定位。我们在此介绍 BAT-GLIMPSE，这是一个完全自主的开源管道，用于 Swift-BAT 数据中瞬态伽马射线源的低延迟定位。该管道利用 BatAnalysis 软件包，结合了编码掩模成像和镶嵌技术，根据航天器姿态自动选择适当的分析，并在指向观测和航天器回转过程中实现定位搜索。我们在 GUANO 通告中报告的 66 个伽玛暴样本上验证了 BAT-GLIMPSE 的性能。该管道成功恢复了 43 个事件的弧分位置，与已发布的本地化一致，典型偏移量为 $\lesssim5$ 弧分。通过成像或镶嵌分析恢复了航天器旋转期间发生的大约 88\%$ 伽玛暴。在第四次 LIGO-Virgo-KAGRA 观测运行期间，BAT-GLIMPSE 在寻找引力波的伽马射线对应物方面发挥了至关重要的作用，特别是在响应合并前警报时，该警报以极低的延迟触发了 Swift 航天器的回转。 BAT-GLIMPSE 与 NITRATES 协同运行，填补了转换间隔留下的关键空白，并且这两条管道预计将使 Swift-BAT 的机载弧分定位率提高一倍，从而释放 Swift 任务在时域和多信使天体物理学方面的全部潜力。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">16 小时前</span>
+            <span class="meta-rel">22 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 23:41（北京时间）</span>
           </div>
@@ -1285,7 +1305,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">18 小时前</span>
+            <span class="meta-rel">23 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 22:13（北京时间）</span>
           </div>
@@ -1311,7 +1331,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">18 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 21:35（北京时间）</span>
           </div>
@@ -1337,7 +1357,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">18 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 21:31（北京时间）</span>
           </div>
@@ -1363,7 +1383,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">19 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 20:43（北京时间）</span>
           </div>
@@ -1389,7 +1409,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">21 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 18:46（北京时间）</span>
           </div>
@@ -1415,7 +1435,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">22 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 18:09（北京时间）</span>
           </div>
@@ -1458,7 +1478,7 @@
             <span class="arxiv-id">2607.14670v1</span>
           </div>
           <h3 class="card-title">Cosmogenic photon fluxes at ultra-high energies</h3>
-          <p class="card-title-zh no-math">🌐 超高能量下的宇宙光子通量</p>
+          <p class="card-title-zh no-math">🌐 Cosmogenic photon fluxes at ultra-high energies</p>
           <p class="card-authors">Marcus Niechciol 等</p>
           <p class="card-summary-short no-math" onclick="toggleCard(this)">During their propagation, ultra-high energy cosmic rays produce cosmogenic photons. The expected flux level of these photons may vary by orders of magnitude depending on parameters such as the spectrum and composition of cosmic rays at injection or the source distance. We investigate the photon yields for various assumptions on injection parameters. The photon yield is largest for proton-emitting… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
@@ -1529,7 +1549,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">18 小时前</span>
+            <span class="meta-rel">23 小时前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 22:10（北京时间）</span>
           </div>
@@ -1555,7 +1575,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">19 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 20:34（北京时间）</span>
           </div>
@@ -1581,7 +1601,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">21 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 19:15（北京时间）</span>
           </div>
@@ -1607,7 +1627,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">22 小时前</span>
+            <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月16日 18:11（北京时间）</span>
           </div>
@@ -1789,7 +1809,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">昨天</span>
+            <span class="meta-rel">2 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月15日 21:43（北京时间）</span>
           </div>
@@ -1815,7 +1835,7 @@
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">昨天</span>
+            <span class="meta-rel">2 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">7月15日 19:40（北京时间）</span>
           </div>
@@ -1838,6 +1858,90 @@
           <div class="card-head">
             <span class="seq">01</span>
             <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            <span class="journal-date">2026-07-17 00:00</span>
+          </div>
+          <h3 class="card-title">Wearable sensors on the face are invisible to the eye</h3>
+          <p class="card-title-zh no-math">🌐 脸上的可穿戴传感器是肉眼看不见的</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 17 July 2026; doi:10.1038/d41586-026-02193-1Electrodes that measure brain waves and more cannot be seen or felt. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 17 July 2026; doi:10.1038/d41586-026-02193-1Electrodes that measure brain waves and more cannot be seen or felt.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 7 月 17 日； doi:10.1038/d41586-026-02193-1测量脑电波等的电极是看不见或摸不着的。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02193-1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            <span class="journal-date">2026-07-17 00:00</span>
+          </div>
+          <h3 class="card-title">Why pain hurts more when we’re lonely, and the myth of original sin: Books in brief</h3>
+          <p class="card-title-zh no-math">🌐 为什么当我们孤独时痛苦会更痛，以及原罪的神话：书籍简介</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 17 July 2026; doi:10.1038/d41586-026-02264-3Andrew Robinson reviews five of the best science picks. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 17 July 2026; doi:10.1038/d41586-026-02264-3Andrew Robinson reviews five of the best science picks.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 7 月 17 日； doi:10.1038/d41586-026-02264-3安德鲁·罗宾逊评论了五个最佳科学精选。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02264-3" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            <span class="journal-date">2026-07-17 00:00</span>
+          </div>
+          <h3 class="card-title">Found: a rocky exoplanet with an atmosphere — could it host life?</h3>
+          <p class="card-title-zh no-math">🌐 发现：一颗有大气层的岩石系外行星——它能孕育生命吗？</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 17 July 2026; doi:10.1038/d41586-026-02200-5Astronomers have spotted helium escaping from LHS 1140b, an exoplanet orbiting in its star’s ‘habitable zone’. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 17 July 2026; doi:10.1038/d41586-026-02200-5Astronomers have spotted helium escaping from LHS 1140b, an exoplanet orbiting in its star’s ‘habitable zone’.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 7 月 17 日； doi:10.1038/d41586-026-02200-5天文学家发现氦气从LHS 1140b（一颗在其恒星的“宜居带”中运行的系外行星）逸出。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02200-5" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            <span class="journal-date">2026-07-17 00:00</span>
+          </div>
+          <h3 class="card-title">Man’s ability to make sperm restored after testicular tissue transplant: what scientists think</h3>
+          <p class="card-title-zh no-math">🌐 男性在睾丸组织移植后恢复精子的能力：科学家的想法</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 17 July 2026; doi:10.1038/d41586-026-02191-3Testicle sample removed from a ten-year-old before chemotherapy and frozen proves viable 16 years later. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 17 July 2026; doi:10.1038/d41586-026-02191-3Testicle sample removed from a ten-year-old before chemotherapy and frozen proves viable 16 years later.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 7 月 17 日； doi:10.1038/d41586-026-02191-3在化疗前从一名 10 岁儿童身上取出睾丸样本并冷冻，16 年后证明是可行的。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02191-3" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
             <span class="journal-date">2026-07-16 00:00</span>
           </div>
           <h3 class="card-title">Why do astronauts’ bodies waste away? Space-station study points to mitochondria</h3>
@@ -1857,7 +1961,7 @@
 
         <article class="card">
           <div class="card-head">
-            <span class="seq">02</span>
+            <span class="seq">06</span>
             <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
             <span class="journal-date">2026-07-16 00:00</span>
           </div>
@@ -1872,90 +1976,6 @@
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
             <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02214-z" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-            
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <span class="seq">03</span>
-            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
-            <span class="journal-date">2026-07-16 00:00</span>
-          </div>
-          <h3 class="card-title">A global capital for AI safety is emerging — and it&#x27;s not in Silicon Valley</h3>
-          <p class="card-title-zh no-math">🌐 全球人工智能安全之都正在兴起——但它并不在硅谷</p>
-          
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 16 July 2026; doi:10.1038/d41586-026-01389-9The United Kingdom is gaining influence through its growing AI-safety ecosystem. <span class="more-hint">…展开全文 ▾</span></p>
-          <div class="card-summary-full">
-            <p class="card-summary-en">Nature, Published online: 16 July 2026; doi:10.1038/d41586-026-01389-9The United Kingdom is gaining influence through its growing AI-safety ecosystem.</p>
-            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 7 月 16 日； doi:10.1038/d41586-026-01389-9英国正在通过其不断发展的人工智能安全生态系统获得影响力。</p>
-          </div>
-          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
-          <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-01389-9" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-            
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <span class="seq">04</span>
-            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
-            <span class="journal-date">2026-07-16 00:00</span>
-          </div>
-          <h3 class="card-title">Will making ‘replication studies’ easier to find help science self-correct?</h3>
-          <p class="card-title-zh no-math">🌐 让“复制研究”更容易找到有助于科学的自我纠正吗？</p>
-          
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 16 July 2026; doi:10.1038/d41586-026-02175-3Project on peer-review platform Pubpeer aims to make replication studies more visible. <span class="more-hint">…展开全文 ▾</span></p>
-          <div class="card-summary-full">
-            <p class="card-summary-en">Nature, Published online: 16 July 2026; doi:10.1038/d41586-026-02175-3Project on peer-review platform Pubpeer aims to make replication studies more visible.</p>
-            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 7 月 16 日； doi:10.1038/d41586-026-02175-3同行评审平台 Pubpeer 上的项目旨在使复制研究更加可见。</p>
-          </div>
-          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
-          <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02175-3" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-            
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <span class="seq">05</span>
-            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
-            <span class="journal-date">2026-07-16 00:00</span>
-          </div>
-          <h3 class="card-title">‘Explosive diarrhoea’ outbreak grips US: how researchers are hunting its source</h3>
-          <p class="card-title-zh no-math">🌐 “爆炸性腹泻”爆发席卷美国：研究人员如何寻找其来源</p>
-          
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 16 July 2026; doi:10.1038/d41586-026-02225-wCases have hit record levels, and scientists are racing to pinpoint where the Cyclospora parasite entered the food supply. <span class="more-hint">…展开全文 ▾</span></p>
-          <div class="card-summary-full">
-            <p class="card-summary-en">Nature, Published online: 16 July 2026; doi:10.1038/d41586-026-02225-wCases have hit record levels, and scientists are racing to pinpoint where the Cyclospora parasite entered the food supply.</p>
-            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 7 月 16 日； doi:10.1038/d41586-026-02225-w 病例数已达到创纪录水平，科学家们正在竞相查明环孢子虫寄生虫进入食物供应的位置。</p>
-          </div>
-          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
-          <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02225-w" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-            
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <span class="seq">06</span>
-            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
-            <span class="journal-date">2026-07-15 00:00</span>
-          </div>
-          <h3 class="card-title">Selectivity Emerges from Indiscriminate Photoreduction</h3>
-          <p class="card-title-zh no-math">🌐 不加区别的光还原产生选择性</p>
-          
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 15 July 2026; doi:10.1038/s41586-026-10897-7Selectivity Emerges from Indiscriminate Photoreduction <span class="more-hint">…展开全文 ▾</span></p>
-          <div class="card-summary-full">
-            <p class="card-summary-en">Nature, Published online: 15 July 2026; doi:10.1038/s41586-026-10897-7Selectivity Emerges from Indiscriminate Photoreduction</p>
-            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 7 月 15 日； doi:10.1038/s41586-026-10897-7不加选择的光还原产生选择性</p>
-          </div>
-          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
-          <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41586-026-10897-7" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -2090,19 +2110,19 @@
           <div class="card-head">
             <span class="seq">13</span>
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
-            <span class="journal-date">2026-07-16 00:00</span>
+            <span class="journal-date">2026-07-17 00:00</span>
           </div>
-          <h3 class="card-title">Base-catalyzed regioselective C(sp3)–Si bond activation of silacyclobutanes and benzosilacyclobutenes</h3>
-          <p class="card-title-zh no-math">🌐 硅杂环丁烷和苯并硅杂环丁烯的碱催化区域选择性C(sp3)-Si键活化</p>
+          <h3 class="card-title">Reduced melanocortin tone modulates feeding during pregnancy in mice</h3>
+          <p class="card-title-zh no-math">🌐 黑皮质素张力降低可调节小鼠怀孕期间的喂养</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75467-xHerein, a transition-metal- and ligand-free, base-catalyzed regioselective C(sp3)–Si bond activation of silacyclobutanes (SCBs) and benzosilacyclobutenes (BSBs) has been developed. <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75650-0Pregnancy increases food intake in mothers to provide sufficient nutrients for the developing offspring. Here, Possa-Paranhos et al., demonstrate that this increased feeding is mediated by reduced activity of the ce… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75467-xHerein, a transition-metal- and ligand-free, base-catalyzed regioselective C(sp3)–Si bond activation of silacyclobutanes (SCBs) and benzosilacyclobutenes (BSBs) has been developed.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 16 日； doi:10.1038/s41467-026-75467-x本文开发了一种不含过渡金属和配体的碱催化区域选择性 C(sp3)-Si 键活化硅杂环丁烷 (SCB) 和苯并硅杂环丁烯 (BSB)。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75650-0Pregnancy increases food intake in mothers to provide sufficient nutrients for the developing offspring. Here, Possa-Paranhos et al., demonstrate that this increased feeding is mediated by reduced activity of the central melanocortin pathway.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 17 日； doi:10.1038/s41467-026-75650-0怀孕会增加母亲的食物摄入量，为发育中的后代提供足够的营养。 Possa-Paranhos 等人在此证明，这种进食增加是由中枢黑皮质素通路活性降低介导的。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75467-x" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75650-0" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -2111,19 +2131,19 @@
           <div class="card-head">
             <span class="seq">14</span>
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
-            <span class="journal-date">2026-07-16 00:00</span>
+            <span class="journal-date">2026-07-17 00:00</span>
           </div>
-          <h3 class="card-title">Pseudo point nodal superconducting gap in spin-triplet UTe2</h3>
-          <p class="card-title-zh no-math">🌐 自旋三重态 UTe2 中的伪点节点超导能隙</p>
+          <h3 class="card-title">Distinct Roles of Deep and Superficial Cortical Layers in Tone Prediction, Comparison, and Adaptation in Human Auditory Cortices</h3>
+          <p class="card-title-zh no-math">🌐 深层和浅层皮质层在人类听觉皮层音调预测、比较和适应中的不同作用</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75566-9The authors report thermal conductivity measurements on UTe2 down to 50 mK. From the data, they argue that UTe2 exhibits a fully-gapped state with a pseudo point-nodal structure, where gap minima along the b axis ap… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75662-wThis 7T fMRI study investigates predictive and adaptive processes in the auditory cortex: deep layers form expectations, superficial layers align predictions with stimulus preferences, and repetition suppression act… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75566-9The authors report thermal conductivity measurements on UTe2 down to 50 mK. From the data, they argue that UTe2 exhibits a fully-gapped state with a pseudo point-nodal structure, where gap minima along the b axis approach but never reach zero.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 16 日； doi:10.1038/s41467-026-75566-9作者报告了 UTe2 的热导率测量值低至 50 mK。根据数据，他们认为 UTe2 表现出具有伪点节点结构的全能隙状态，其中沿 b 轴的能隙最小值接近但从未达到零。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75662-wThis 7T fMRI study investigates predictive and adaptive processes in the auditory cortex: deep layers form expectations, superficial layers align predictions with stimulus preferences, and repetition suppression acts as a uniform local gain control.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 17 日； doi:10.1038/s41467-026-75662-w 这项 7T fMRI 研究调查了听觉皮层中的预测和适应性过程：深层形成期望，浅层将预测与刺激偏好对齐，重复抑制充当统一的局部增益控制。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75566-9" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75662-w" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -2132,19 +2152,19 @@
           <div class="card-head">
             <span class="seq">15</span>
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
-            <span class="journal-date">2026-07-16 00:00</span>
+            <span class="journal-date">2026-07-17 00:00</span>
           </div>
-          <h3 class="card-title">Author Correction: Molecular mechanisms of receptor recognition and antibody neutralization of coxsackievirus A6</h3>
-          <p class="card-title-zh no-math">🌐 作者更正：柯萨奇病毒A6受体识别和抗体中和的分子机制</p>
+          <h3 class="card-title">Core elements play distinct roles in promoter birth and transcriptional regulation</h3>
+          <p class="card-title-zh no-math">🌐 核心元件在启动子诞生和转录调控中发挥独特作用</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75441-7Author Correction: Molecular mechanisms of receptor recognition and antibody neutralization of coxsackievirus A6 <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75686-2Understanding how core promoter elements influence transcription is fundamental to modeling bacterial gene regulation. Here, the authors perform a systematic and quantitative dissection showing that, while the –10 e… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75441-7Author Correction: Molecular mechanisms of receptor recognition and antibody neutralization of coxsackievirus A6</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 16 日； doi:10.1038/s41467-026-75441-7作者更正：柯萨奇病毒A6受体识别和抗体中和的分子机制</p>
+            <p class="card-summary-en">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75686-2Understanding how core promoter elements influence transcription is fundamental to modeling bacterial gene regulation. Here, the authors perform a systematic and quantitative dissection showing that, while the –10 element is essential for promoter emergence from random sequences, the −35 element primarily fine-tun</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 17 日； doi:10.1038/s41467-026-75686-2了解核心启动子元件如何影响转录对于模拟细菌基因调控至关重要。在这里，作者进行了系统和定量的剖析，表明虽然 –10 元件对于启动子从随机序列中出现至关重要，但 -35 元件主要微调</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75441-7" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75686-2" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -2153,19 +2173,19 @@
           <div class="card-head">
             <span class="seq">16</span>
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
-            <span class="journal-date">2026-07-16 00:00</span>
+            <span class="journal-date">2026-07-17 00:00</span>
           </div>
-          <h3 class="card-title">A generalized Knudsen theory for gas transport in disordered porous materials</h3>
-          <p class="card-title-zh no-math">🌐 无序多孔材料中气体传输的广义努森理论</p>
+          <h3 class="card-title">Visualizing excitonic states in constructed cyclic molecular architectures by tip-enhanced photoluminescence</h3>
+          <p class="card-title-zh no-math">🌐 通过尖端增强光致发光可视化构建的循环分子结构中的激子态</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75656-8Here authors present a theory to predict gas flow in disordered porous materials. Using only porosity and pore size, the model accurately calculates gas permeability and selectivity, which can guide the design of ga… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75721-2Researchers visualized how energy is distributed in artificial molecular rings with sub-nanometer resolution. They found that two perpendicular transition dipoles enable dipole rotation, while hollow rings support e… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75656-8Here authors present a theory to predict gas flow in disordered porous materials. Using only porosity and pore size, the model accurately calculates gas permeability and selectivity, which can guide the design of gas separation membranes.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 16 日； doi:10.1038/s41467-026-75656-8这里作者提出了一种预测无序多孔材料中气体流动的理论。该模型仅使用孔隙率和孔径大小，即可准确计算气体渗透率和选择性，可以指导气体分离膜的设计。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75721-2Researchers visualized how energy is distributed in artificial molecular rings with sub-nanometer resolution. They found that two perpendicular transition dipoles enable dipole rotation, while hollow rings support energy-retaining dark states.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 17 日； doi:10.1038/s41467-026-75721-2研究人员以亚纳米分辨率可视化了能量在人造分子环中的分布情况。他们发现两个垂直的跃迁偶极子能够实现偶极子旋转，而空心环则支持能量保持的暗态。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75656-8" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75721-2" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -2174,19 +2194,19 @@
           <div class="card-head">
             <span class="seq">17</span>
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
-            <span class="journal-date">2026-07-16 00:00</span>
+            <span class="journal-date">2026-07-17 00:00</span>
           </div>
-          <h3 class="card-title">Reconstitution of Ras-PI3Kγ membrane communication and feedback using light-induced signaling inputs</h3>
-          <p class="card-title-zh no-math">🌐 使用光诱导信号输入重建 Ras-PI3Kγ 膜通讯和反馈</p>
+          <h3 class="card-title">Misregulation of T-box transcription factors drives BNP–NPR1 signalling underlying chronic itch</h3>
+          <p class="card-title-zh no-math">🌐 T-box转录因子的错误调节驱动慢性瘙痒背后的BNP-NPR1信号传导</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75652-yPositive feedback loops regulate amplification of membrane signaling reactions. Here, Doerr et al. investigate how feedback circuits, activation thresholds, and diffusion dictate the spatiotemporal dynamics of recon… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75726-xHere, the authors show that TBX20 helps drive long-lasting itch by boosting BNP signalling in skin and nerves. In mice, blocking this pathway reduced itching, inflammation, and skin damage, suggesting a potential tr… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75652-yPositive feedback loops regulate amplification of membrane signaling reactions. Here, Doerr et al. investigate how feedback circuits, activation thresholds, and diffusion dictate the spatiotemporal dynamics of reconstituted Ras-PI3K membrane signaling using light-induced inputs.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 16 日； doi:10.1038/s41467-026-75652-y正反馈回路调节膜信号反应的放大。在这里，杜尔等人。研究反馈电路、激活阈值和扩散如何决定使用光诱导输入重建 Ras-PI3K 膜信号传导的时空动力学。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-75726-xHere, the authors show that TBX20 helps drive long-lasting itch by boosting BNP signalling in skin and nerves. In mice, blocking this pathway reduced itching, inflammation, and skin damage, suggesting a potential treatment target for chronic itch.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 17 日； doi:10.1038/s41467-026-75726-xHere，作者表明 TBX20 通过增强皮肤和神经中的 BNP 信号传导来帮助驱除持久瘙痒。在小鼠中，阻断该通路可减少瘙痒、炎症和皮肤损伤，这表明这是慢性瘙痒的潜在治疗目标。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75652-y" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75726-x" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -2195,19 +2215,19 @@
           <div class="card-head">
             <span class="seq">18</span>
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
-            <span class="journal-date">2026-07-16 00:00</span>
+            <span class="journal-date">2026-07-17 00:00</span>
           </div>
-          <h3 class="card-title">Structural and spectroscopic characterization of a Tb(IV) polyoxometalate</h3>
-          <p class="card-title-zh no-math">🌐 Tb(IV) 多金属氧酸盐的结构和光谱表征</p>
+          <h3 class="card-title">The Japanese Palaeolithic deserves more attention in Western narratives about human expansion across Asia</h3>
+          <p class="card-title-zh no-math">🌐 在西方关于人类在亚洲扩张的叙述中，日本的旧石器时代值得更多关注</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75657-7Here, authors describe how polyoxometalate chemistry can overcome intrinsic redox and reactivity limitations in aqueous media to allow for structural and spectroscopic characterization of terbium in the +4 oxidation… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-74116-7Japan deserves more attention than it has so far received in Western narratives about the expansion of humans across Asia. It has over 10,000 Palaeolithic sites, many of which are well-dated. Japan provides excellen… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 16 July 2026; doi:10.1038/s41467-026-75657-7Here, authors describe how polyoxometalate chemistry can overcome intrinsic redox and reactivity limitations in aqueous media to allow for structural and spectroscopic characterization of terbium in the +4 oxidation state.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 16 日； doi:10.1038/s41467-026-75657-7在这里，作者描述了多金属氧酸盐化学如何克服水介质中固有的氧化还原和反应性限制，以允许对+4氧化态的铽进行结构和光谱表征。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 17 July 2026; doi:10.1038/s41467-026-74116-7Japan deserves more attention than it has so far received in Western narratives about the expansion of humans across Asia. It has over 10,000 Palaeolithic sites, many of which are well-dated. Japan provides excellent examples of Pleistocene sea-faring and long-distance Palaeolithic exchange networks. Okinawa in th</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 7 月 17 日； doi:10.1038/s41467-026-74116-7日本值得比西方关于人类在亚洲扩张的叙述中得到更多的关注。它拥有 10,000 多个旧石器时代遗址，其中许多遗址的年代都已确定。日本提供了更新世航海和远距离旧石器时代交流网络的绝佳范例。冲绳在 th</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-75657-7" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-74116-7" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
