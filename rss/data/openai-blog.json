@@ -83,16 +83,6 @@
       "date": "2026-07-10 07:00",
       "ts": 1783666800,
       "content": ""
-    },
-    {
-      "title": "Getting started with ChatGPT",
-      "url": "https://openai.com/academy/getting-started",
-      "summary": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-10 00:00",
-      "ts": 1783641600,
-      "content": ""
     }
   ]
 }
