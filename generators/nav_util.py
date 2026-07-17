@@ -47,7 +47,7 @@ NAV_CSS = """
 .home-link:hover,.theme-toggle:hover,.nav-toggle:hover{border-color:var(--accent)}
 .hamburger{border-radius:10px;font-size:18px;line-height:1;display:none;justify-content:center}
 .nav-toggle.off{opacity:.5}
-@media(max-width:768px){
+@media(max-width:1024px){
   .nav-inner{flex-wrap:nowrap;gap:10px}
   .nav-brand{font-size:16px;margin-right:auto}
   .hamburger{display:inline-flex}
