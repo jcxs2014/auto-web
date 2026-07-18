@@ -45,32 +45,16 @@ TRANSLATE_TEMPLATE = r"""<!DOCTYPE html>
 <title>翻译 · RSS</title>
 <style>
   body{font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 80px;color:#1a1a1a;background:#fff;word-wrap:break-word}
-  .bar{position:sticky;top:0;background:#f3f6fa;border-bottom:1px solid #e3e8ef;padding:10px 14px;font-size:13.5px;color:#555;margin:-24px -18px 22px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .bar{position:sticky;top:0;background:#f3f6fa;border-bottom:1px solid #e3e8ef;padding:10px 14px;font-size:13.5px;color:#555;margin:-24px -18px 22px}
   .bar a{color:#1a6fc4;text-decoration:none}.bar b{color:#111}
-  .bar .spacer{flex:1 1 auto}
-  .bar-link{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#fff;border:1px solid #cdd6e0;color:#1a6fc4;text-decoration:none;font-size:13px;cursor:pointer;transition:border-color .15s}
-  .bar-link:hover{border-color:#1a6fc4}
-  .bar-link.warn{border-color:#d97706;background:#fff7ed;color:#b45309}
-  .bar-btn{font:inherit;font-size:13px;color:#1a6fc4;background:#fff;border:1px solid #cdd6e0;border-radius:999px;padding:4px 11px;cursor:pointer;transition:border-color .15s,background .15s}
-  .bar-btn:hover{border-color:#1a6fc4;background:#eef4fb}
-  .bar-btn:disabled{color:#aaa;border-color:#e3e8ef;cursor:not-allowed;background:#fff}
   h1{font-size:24px;line-height:1.35;margin:0 0 14px;font-weight:800}
   img{max-width:100%;height:auto;border-radius:8px;margin:1em 0}a{color:#1a6fc4}
   p{margin:0 0 1.1em}blockquote{border-left:3px solid #1a6fc4;margin:1em 0;padding:.3em 1em;color:#444}
   .err{padding:40px 0;color:#c0392b;font-size:15px}
-  .hint{margin-top:12px;font-size:13px;color:#b45309;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:10px 12px;line-height:1.7}
-  .goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}
-  body{top:0!important}
 </style>
 </head>
 <body>
-  <div class="bar">
-    🌐 浏览器可能提示「翻译此页」 · 来源：<b id="src"></b>
-    · <a id="origin" href="#" target="_blank" rel="noopener noreferrer">查看原文 →</a>
-    <span class="spacer"></span>
-    <a id="bingLink" class="bar-link" href="#" onclick="openBingTranslate();return false;" title="用 Bing 整页翻译（国内可用）">🌐 Bing 翻译</a>
-    <button id="saveOffline" class="bar-btn" type="button" disabled title="把当前文章导出为可离线打开、可翻译的单文件 HTML">📥 保存离线版</button>
-  </div>
+  <div class="bar">🌐 浏览器可能提示「翻译此页」 · 来源：<b id="src"></b> · <a id="origin" href="#" target="_blank" rel="noopener noreferrer">查看原文 →</a></div>
   <h1 id="title"></h1>
   <div id="article"></div>
 <script>
@@ -81,24 +65,7 @@ TRANSLATE_TEMPLATE = r"""<!DOCTYPE html>
   var srcEl=document.getElementById('src');
   var artEl=document.getElementById('article');
   var originEl=document.getElementById('origin');
-  var saveBtn=document.getElementById('saveOffline');
-  var bingLink=document.getElementById('bingLink');
-  var CURRENT={title:'',content:'',url:'',name:''};
-
-  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){
-    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-
-  if(!src||!id){titleEl.textContent='参数缺失（需要 src 与 id）';saveBtn.disabled=true;return;}
-
-  var isFile = location.protocol==='file:';
-  if(isFile){
-    var hint=document.createElement('div');
-    hint.className='hint';
-    hint.innerHTML='你正在以「本地文件」方式打开本页。浏览器会拦截对本地 JSON 的读取，正文可能为空。'
-      +'请联网后从站点打开本文，再点「📥 保存离线版」下载一份含正文、可翻译的单文件。';
-    artEl.appendChild(hint);
-  }
-
+  if(!src||!id){titleEl.textContent='参数缺失（需要 src 与 id）';return;}
   fetch('data/'+encodeURIComponent(src)+'.json').then(function(r){
     if(!r.ok) throw new Error('HTTP '+r.status);
     return r.json();
@@ -106,71 +73,15 @@ TRANSLATE_TEMPLATE = r"""<!DOCTYPE html>
     var entries=d.entries||[];
     var e=null;
     for(var i=0;i<entries.length;i++){ if(entries[i].url===id){e=entries[i];break;} }
-    if(!e){titleEl.textContent='未找到该文章（可能已超出近 7 天保留期）';saveBtn.disabled=true;return;}
+    if(!e){titleEl.textContent='未找到该文章（可能已超出近 7 天保留期）';return;}
     document.title=(d.name||'翻译')+' · RSS';
     if(srcEl)srcEl.textContent=d.name||'';
     titleEl.textContent=e.title||'(无标题)';
     if(originEl&&e.url)originEl.href=e.url;
     artEl.innerHTML=e.content||e.summary||'(该源未抓取全文，仅有摘要)';
-    CURRENT={title:e.title||'(无标题)', content:e.content||e.summary||'', url:e.url||'', name:d.name||''};
-    saveBtn.disabled=false;
   }).catch(function(err){
-    if(!isFile){ titleEl.textContent='加载失败：'+err.message; }
-    saveBtn.disabled=true;
+    titleEl.textContent='加载失败：'+err.message;
   });
-
-  // Bing 兜底：直接把「正文文本」交给 Bing 整页翻译（URL 模式对本地文件 / JS 渲染页无效）
-  window.openBingTranslate=function(){
-    var text=(CURRENT.content||'').replace(/<[^>]+>/g,'').trim().slice(0,5000);
-    if(!text){ window.open('https://cn.bing.com/translator?from=en&to=zh-CHS','_blank'); return; }
-    window.open('https://cn.bing.com/translator?from=en&to=zh-CHS&text='+encodeURIComponent(text),'_blank');
-  };
-
-  // 保存离线版：把正文内联进一份自包含 HTML（lang=en），下载后本地打开即可翻译
-  saveBtn.addEventListener('click', function(){
-    if(!CURRENT.content){ alert('文章尚未加载完成，请稍候再试'); return; }
-    var html=buildOfflineHtml(CURRENT);
-    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
-    var a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);
-    a.download=(CURRENT.title||'article').replace(/[\\/:*?"<>|]+/g,'_').slice(0,80)+'.html';
-    document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1500);
-  });
-
-  function buildOfflineHtml(c){
-    var css='body{font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:760px;margin:0 auto;padding:24px 18px 80px;color:#1a1a1a;background:#fff;word-wrap:break-word}'
-      +'h1{font-size:24px;line-height:1.35;margin:0 0 14px;font-weight:800}'
-      +'img{max-width:100%;height:auto;border-radius:8px;margin:1em 0}a{color:#1a6fc4}'
-      +'p{margin:0 0 1.1em}blockquote{border-left:3px solid #1a6fc4;margin:1em 0;padding:.3em 1em;color:#444}'
-      +'.off-bar{position:sticky;top:0;background:#f3f6fa;border-bottom:1px solid #e3e8ef;padding:10px 14px;font-size:13.5px;color:#555;display:flex;align-items:center;gap:8px;flex-wrap:wrap}'
-      +'.off-bar a{color:#1a6fc4;text-decoration:none}'
-      +'.off-bar .bing{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#fff;border:1px solid #cdd6e0;color:#1a6fc4;text-decoration:none;font-size:13px}'
-      +'.off-bar .bing:hover{border-color:#1a6fc4}.off-bar .bing.warn{border-color:#d97706;background:#fff7ed;color:#b45309}'
-      +'.goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}body{top:0!important}'
-      +'#google_translate_element{display:inline-flex;align-items:center;font-size:13px}'
-      +'#google_translate_element .goog-te-gadget-simple{background:#fff;border:1px solid #cdd6e0;border-radius:999px;padding:3px 8px}'
-      +'#google_translate_element img{display:none!important}';
-    var bar='<div class="off-bar">🌐 翻译：'
-      +'<span id="google_translate_element"></span>'
-      +'<a class="bing" href="#" onclick="openBingTranslate();return false;" title="用 Bing 整页翻译（国内可用）">🌐 Bing 翻译</a>'
-      +'<span style="margin-left:auto"><a href="'+esc(c.url)+'" target="_blank" rel="noopener noreferrer">查看原文 →</a></span></div>';
-    var script='<script>'
-      +'function googleTranslateElementInit(){try{new google.translate.TranslateElement({pageLanguage:"en",includedLanguages:"zh-CN,ja,fr,de,ko,ru,es,it,pt",layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},"google_translate_element");}catch(e){}}'
-      +'function openBingTranslate(){var t=document.getElementById("__art").innerText.replace(/\s+/g," ").trim().slice(0,5000);window.open("https://cn.bing.com/translator?from=en&to=zh-CHS&text="+encodeURIComponent(t),"_blank");}'
-      +'setTimeout(function(){var g=document.querySelector(".goog-te-combo");var b=document.querySelector(".bing");if(!g&&b){b.classList.add("warn");b.title="Google 翻译不可用，请改用 Bing 翻译";}},3500);'
-      +'<\/script>'
-      +'<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async><\/script>';
-    return '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
-      +'<meta name="viewport" content="width=device-width,initial-scale=1">'
-      +'<meta http-equiv="content-language" content="en">'
-      +'<title>'+esc(c.title)+' · 离线翻译版</title><style>'+css+'</style></head><body>'
-      +bar
-      +'<h1>'+esc(c.title)+'</h1>'
-      +'<article id="__art">'+c.content+'</article>'
-      +script
-      +'</body></html>';
-  }
 })();
 </script>
 </body>
