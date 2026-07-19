@@ -143,6 +143,40 @@
     .stat{padding:12px 16px;min-width:96px}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+
+  /* Weather card */
+  .weather-card{
+    position:relative;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:18px 24px;margin:0 4px 8px;display:flex;flex-direction:column;gap:14px;overflow:hidden;
+  }
+  .weather-card::before{
+    content:"";position:absolute;inset:0 0 auto 0;height:3px;
+    background:linear-gradient(90deg,#6ea8ff,#4fd1c5);opacity:.9;
+  }
+  .weather-cities{display:flex;gap:8px;flex-wrap:wrap}
+  .weather-city{
+    font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;
+    background:var(--bg-3);border:1px solid var(--border);color:var(--text-dim);
+    cursor:pointer;transition:all .15s ease;white-space:nowrap;font-family:inherit;
+  }
+  .weather-city:hover{border-color:var(--border-2);color:var(--text)}
+  .weather-city.active{background:var(--accent-soft);border-color:var(--accent-soft-border);color:var(--accent)}
+  .weather-main{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .weather-emoji{font-size:38px;line-height:1}
+  .weather-temp{font-size:42px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .weather-desc{font-size:16px;color:var(--text);font-weight:600}
+  .weather-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--text-dim)}
+  .weather-meta span{display:inline-flex;align-items:center;gap:5px}
+  .weather-meta b{color:var(--text);font-weight:600}
+  .weather-range b.hi{color:#ff6b6b;font-weight:700}
+  .weather-range b.lo{color:#4fd1c5;font-weight:700}
+  .weather-loading{color:var(--text-faint);font-size:14px;padding:6px 0}
+  .weather-err{color:#ff6b6b;font-size:13px;padding:6px 0}
+  @media(max-width:640px){
+    .weather-card{padding:14px 18px}
+    .weather-temp{font-size:36px}.weather-emoji{font-size:32px}
+    .weather-meta{gap:14px}
+  }
 </style>
 <script>
   (function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
@@ -158,6 +192,11 @@
     <p>每日定时拉取并生成的资讯 / 论文仪表盘，集中在此入口。点开任意卡片即可查看当日最新内容。</p>
     <div class="stats" id="stats"></div>
   </header>
+
+  <section class="weather-card" id="weatherCard" aria-label="天气">
+    <div class="weather-cities" id="weatherCities"></div>
+    <div id="weatherBody"><div class="weather-loading">天气加载中…</div></div>
+  </section>
 
   <div class="sec-title">
     <h2>📂 仪表盘</h2>
@@ -304,6 +343,83 @@ const DASHBOARDS = [
       </div>
     </article>
   `).join("");
+})();
+</script>
+<script>
+/* 天气卡片：Open-Meteo（免费、免 key、CORS 友好），前端直取，localStorage 记忆选中城市 */
+(function(){
+  var CITIES=[
+    {n:'佩鲁贾',lat:43.1122,lon:12.3888},
+    {n:'北京',lat:39.9042,lon:116.4074},
+    {n:'合肥',lat:31.8206,lon:117.2272},
+    {n:'广州',lat:23.1291,lon:113.2644},
+    {n:'榆林',lat:38.2854,lon:109.7348},
+    {n:'南昌',lat:28.6820,lon:115.8579}
+  ];
+  var WMO={
+    0:['☀️','晴'],1:['🌤️','晴间多云'],2:['⛅','多云'],3:['☁️','阴'],
+    45:['🌫️','雾'],48:['🌫️','冻雾'],
+    51:['🌦️','毛毛雨'],53:['🌦️','毛毛雨'],55:['🌧️','毛毛雨'],
+    56:['🌧️','冻毛毛雨'],57:['🌧️','冻毛毛雨'],
+    61:['🌧️','小雨'],63:['🌧️','中雨'],65:['🌧️','大雨'],
+    66:['🌧️','冻雨'],67:['🌧️','冻雨'],
+    71:['🌨️','小雪'],73:['🌨️','中雪'],75:['❄️','大雪'],77:['❄️','米雪'],
+    80:['🌦️','阵雨'],81:['🌧️','阵雨'],82:['⛈️','强阵雨'],
+    85:['🌨️','阵雪'],86:['❄️','强阵雪'],
+    95:['⛈️','雷暴'],96:['⛈️','雷暴伴冰雹'],99:['⛈️','雷暴伴冰雹']
+  };
+  var KEY='weather-city-idx';
+  var idx=0;
+  try{var s=parseInt(localStorage.getItem(KEY));if(!isNaN(s)&&s>=0&&s<CITIES.length)idx=s;}catch(e){}
+  var citiesEl=document.getElementById('weatherCities');
+  var bodyEl=document.getElementById('weatherBody');
+  if(!citiesEl||!bodyEl)return;
+  function renderCities(){
+    citiesEl.innerHTML=CITIES.map(function(c,i){
+      return '<button type="button" class="weather-city'+(i===idx?' active':'')+'" data-i="'+i+'">'+c.n+'</button>';
+    }).join('');
+    Array.prototype.forEach.call(citiesEl.querySelectorAll('.weather-city'),function(b){
+      b.addEventListener('click',function(){
+        idx=parseInt(b.getAttribute('data-i'));
+        try{localStorage.setItem(KEY,String(idx));}catch(e){}
+        renderCities();load();
+      });
+    });
+  }
+  function load(){
+    var c=CITIES[idx];
+    bodyEl.innerHTML='<div class="weather-loading">「'+c.n+'」天气加载中…</div>';
+    var url='https://api.open-meteo.com/v1/forecast?latitude='+c.lat+'&longitude='+c.lon+
+      '&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m'+
+      '&daily=temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=1';
+    fetch(url).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+    .then(function(d){
+      var cur=d.current||{},dn=d.daily||{};
+      var w=WMO[cur.weather_code]||['🌡️','未知'];
+      var t=Math.round(cur.temperature_2m);
+      var feel=Math.round(cur.apparent_temperature);
+      var hi=dn.temperature_2m_max?Math.round(dn.temperature_2m_max[0]):null;
+      var lo=dn.temperature_2m_min?Math.round(dn.temperature_2m_min[0]):null;
+      var range=(hi!==null&&lo!==null)?
+        '<span class="weather-range">↑<b class="hi">'+hi+'°</b> ↓<b class="lo">'+lo+'°</b></span>':'';
+      bodyEl.innerHTML=
+        '<div class="weather-main">'+
+          '<span class="weather-emoji">'+w[0]+'</span>'+
+          '<span class="weather-temp">'+t+'°</span>'+
+          '<span class="weather-desc">'+w[1]+'</span>'+
+        '</div>'+
+        '<div class="weather-meta">'+
+          '<span>体感 <b>'+feel+'°</b></span>'+
+          '<span>湿度 <b>'+cur.relative_humidity_2m+'%</b></span>'+
+          '<span>风速 <b>'+Math.round(cur.wind_speed_10m)+' km/h</b></span>'+
+          range+
+        '</div>';
+    }).catch(function(e){
+      bodyEl.innerHTML='<div class="weather-err">「'+c.n+'」天气加载失败：'+e.message+'（Open-Meteo 可能不可达）</div>';
+    });
+  }
+  renderCities();load();
+  setInterval(load,600000); // 每 10 分钟刷新
 })();
 </script>
 <script>
