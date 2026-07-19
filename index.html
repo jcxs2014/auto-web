@@ -171,7 +171,8 @@
   .weather-range b.hi{color:#ff6b6b;font-weight:700}
   .weather-range b.lo{color:#4fd1c5;font-weight:700}
   .weather-loading{color:var(--text-faint);font-size:14px;padding:6px 0}
-  .weather-err{color:#ff6b6b;font-size:13px;padding:6px 0}
+  .weather-err{color:#ff6b6b;font-size:13px;padding:6px 0;line-height:1.7}
+  .weather-err code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--bg-3);padding:1px 5px;border-radius:4px;font-size:12px;color:var(--text-dim)}
   @media(max-width:640px){
     .weather-card{padding:14px 18px}
     .weather-temp{font-size:36px}.weather-emoji{font-size:32px}
@@ -388,6 +389,10 @@ const DASHBOARDS = [
   }
   function load(){
     var c=CITIES[idx];
+    if(location.protocol==='file:'){
+      bodyEl.innerHTML='<div class="weather-err">本地文件（file://）模式下浏览器禁止联网 fetch，天气无法加载。<br>请访问线上站点，或用本地服务器打开：在项目目录执行 <code>python3 -m http.server</code> 后访问 <code>localhost:8000</code>。</div>';
+      return;
+    }
     bodyEl.innerHTML='<div class="weather-loading">「'+c.n+'」天气加载中…</div>';
     var url='https://api.open-meteo.com/v1/forecast?latitude='+c.lat+'&longitude='+c.lon+
       '&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m'+
