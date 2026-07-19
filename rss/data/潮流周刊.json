@@ -5,6 +5,16 @@
   "lang": "zh",
   "entries": [
     {
+      "title": "第274期 - 海阔天空",
+      "url": "https://weekly.tw93.fun/posts/274/",
+      "summary": "封面图拍摄于深圳的一个晚上，刚下完雨，天空很清晰，这栋楼叫海阔天空雅居，甚至还能看到远方的百度。 记录每周看到的接地气的潮流技术，筛选后发布于此，觉得不错可关注此周刊，方便获取更新通知 潮流工具 wong2 做了一个用来查看 Codex 额度重置的工具 https://codex-resets.com/ 挺有意思，Codex 的使用额度什么时候重置，主要看 @thsottiaux 什么时候发推宣布，感觉像是他手里有个开关。没有固定时间表，也没有更新日志，这个工具会帮你盯着他的推特，只要发了重置消息就告诉你，哈哈哈。话说我最近的 Codex 额度完全用不完了。 Trees：一个好看的文件树渲染库 https://trees.software/ 这个文件树渲染得真好看，我挺喜欢这种简单又好看的东西，如果你要做编辑器的侧边栏文件树，可以参考一下。 Bark：可给自己的 iPhone 推送消息的开",
+      "source": "潮流周刊",
+      "extra": "",
+      "date": "2026-07-20 00:00",
+      "ts": 1784505600,
+      "content": "  \n<p>封面图拍摄于深圳的一个晚上，刚下完雨，天空很清晰，这栋楼叫海阔天空雅居，甚至还能看到远方的百度。</p><blockquote><p>记录每周看到的接地气的潮流技术，筛选后发布于此，觉得不错可关注此周刊，方便获取更新通知</p></blockquote><h2>潮流工具</h2><p>wong2 做了一个用来查看 Codex 额度重置的工具<br></br>\n<a href=\"https://codex-resets.com/\">https://codex-resets.com/</a><br></br>\n挺有意思，Codex 的使用额度什么时候重置，主要看 @thsottiaux 什么时候发推宣布，感觉像是他手里有个开关。没有固定时间表，也没有更新日志，这个工具会帮你盯着他的推特，只要发了重置消息就告诉你，哈哈哈。话说我最近的 Codex 额度完全用不完了。<br></br>\n</p><p>Trees：一个好看的文件树渲染库<br></br>\n<a href=\"https://trees.software/\">https://trees.software/</a><br></br>\n这个文件树渲染得真好看，我挺喜欢这种简单又好看的东西，如果你要做编辑器的侧边栏文件树，可以参考一下。<br></br>\n</p><p>Bark：可给自己的 iPhone 推送消息的开源工具<br></br>\n<a href=\"https://github.com/Finb/Bark\">https://github.com/Finb/Bark</a><br></br>\n一款开源免费的通知推送 App，基于 APNs 实现，不会额外消耗设备电量，也支持 iOS 通知的多种高级功能：推送分组、自定义图标和铃声、时效性通知、重要警告等。<br></br>\n</p><p>WhatCable：搞清楚你的 USB-C 线能做什么<br></br>\n<a href=\"https://www.whatcable.uk/\">https://www.whatcable.uk/</a><br></br>\n这个工具可以清楚告诉你一根 USB-C 线能做什么，比如线缆速度、充电限制和已连接的设备。你还可以给线缆命名，让它持续跟踪实际表现，之后就能知道为什么这根线充电慢，或为什么接不了显示器。思路挺好，不过比较小众。<br></br>\n</p><h2>随便看看</h2><p>Phistory：看看主流 AI Coding 工具的系统提示词每次更新了啥<br></br>\n<a href=\"https://phistory.cc/?agent=claude-code&amp;from=2.1.141&amp;to=2.1.215\">https://phistory.cc/?agent=claude-code&from=2.1.141&to=2.1.215</a><br></br>\n很适合想研究 AI Coding 迭代变化的朋友，网站用 diff 把每次改动展示得很清楚。<br></br>\n</p><p>这个网站收集了非常好看的 Mac App<br></br>\n<a href=\"https://macapp.supply/\">https://macapp.supply/</a><br></br>\n网站本身也设计得不错，里面收集的 Mac App 整体质感也很可以，挺值得学习。<br></br>\n</p><p>Anthropic 如何使用 Claude Code 进行大规模代码迁移<br></br>\n<a href=\"https://claude.com/blog/ai-code-migration\">https://claude.com/blog/ai-code-migration</a><br></br>\n这篇 Claude 官方博客挺值得一看，讲了 Bun 把百万行代码从 Zig 移植到 Rust 的过程，对大公司迁移老旧的大型仓库也有一些参考。<br></br>\n</p>"
+    },
+    {
       "title": "第273期 - 一堆椅子",
       "url": "https://weekly.tw93.fun/posts/273/",
       "summary": "封面图拍摄于天目里一家店的门口，放着一堆椅子，写着以物为介，拥抱传统，我相比起 AI 世界更加喜欢现实世界，也更加向往真实的感受。 记录每周看到的接地气的潮流技术，筛选后发布于此，觉得不错可关注此周刊，方便获取更新通知 潮流工具 最近我非常喜欢的地铁的背景音 https://www.yamanote.fun/ 作者把山手线的车站旋律、广播、车门提示音和列车声音融合在一起，营造出这条东京人最喜爱的环线铁路的完整听觉体验，非常有意思，当做背景音乐我很喜欢，和我当时坐的时候感觉非常一样。 杀死 AI slop https://killaislop.com/ 哈哈，我也非常不喜欢那种 AI 做出来的丑丑的东西，发现了 yetone 做的这个网站，很有意思，把很多丑的案例帮你展示出来了，同时还给了你一个 skill 去帮你清理干净，我用这个也验证了一下我做的所有的东西，还好没有命中。 AppPort",
