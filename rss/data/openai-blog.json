@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Safety and alignment in an era of long-horizon models",
+      "url": "https://openai.com/index/safety-alignment-long-horizon-models",
+      "summary": "OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-20 10:00",
+      "ts": 1784541600,
+      "content": ""
+    },
+    {
       "title": "A scorecard for the AI age",
       "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
       "summary": "Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
