@@ -164,8 +164,9 @@
   .wx-scene{position:absolute;inset:0;overflow:hidden;z-index:0}
   .wx-scene::after{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(20,30,50,.42),transparent);z-index:1}
   .wx-info{position:absolute;left:0;right:0;bottom:0;padding:16px 20px 18px;z-index:2}
-  .wx-names{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .wx-names{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
   .wx-cn{font-size:21px;font-weight:800;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.35)}
+  .wx-clock{margin-left:auto;font-size:14px;font-weight:700;letter-spacing:.5px;color:rgba(255,255,255,.92);font-variant-numeric:tabular-nums;text-shadow:0 1px 4px rgba(0,0,0,.35)}
   .wx-en{font-size:12.5px;letter-spacing:.6px;color:rgba(255,255,255,.85)}
   .wx-row1{display:flex;align-items:flex-end;justify-content:space-between;margin-top:6px}
   .wx-temp{font-weight:800;font-size:46px;line-height:.9;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3);letter-spacing:-.02em}
@@ -241,7 +242,7 @@
       <div class="wx-scene" id="wxScene"></div>
       <div class="wx-loading" id="wxLoading">天气加载中…</div>
       <div class="wx-info" id="wxInfo" style="display:none">
-        <div class="wx-names"><span class="wx-cn" id="wxCn"></span><span class="wx-en" id="wxEn"></span></div>
+        <div class="wx-names"><span class="wx-cn" id="wxCn"></span><span class="wx-en" id="wxEn"></span><span class="wx-clock" id="wxClock"></span></div>
         <div class="wx-row1">
           <div class="wx-temp" id="wxTemp"></div>
           <div class="wx-cond" id="wxCond"></div>
@@ -402,12 +403,12 @@ const DASHBOARDS = [
 /* 天气卡片：Open-Meteo（免费、免 key、CORS 友好），场景化动态天空，6 城市可切换，localStorage 记忆 */
 (function(){
   var CITIES=[
-    {n:'佩鲁贾',en:'Perugia',lat:43.1122,lon:12.3888},
-    {n:'北京',en:'Beijing',lat:39.9042,lon:116.4074},
-    {n:'合肥',en:'Hefei',lat:31.8206,lon:117.2272},
-    {n:'广州',en:'Guangzhou',lat:23.1291,lon:113.2644},
-    {n:'榆林',en:'Yulin',lat:38.2854,lon:109.7348},
-    {n:'南昌',en:'Nanchang',lat:28.6820,lon:115.8579}
+    {n:'佩鲁贾',en:'Perugia',lat:43.1122,lon:12.3888,tz:'Europe/Rome'},
+    {n:'北京',en:'Beijing',lat:39.9042,lon:116.4074,tz:'Asia/Shanghai'},
+    {n:'合肥',en:'Hefei',lat:31.8206,lon:117.2272,tz:'Asia/Shanghai'},
+    {n:'广州',en:'Guangzhou',lat:23.1291,lon:113.2644,tz:'Asia/Shanghai'},
+    {n:'榆林',en:'Yulin',lat:38.2854,lon:109.7348,tz:'Asia/Shanghai'},
+    {n:'南昌',en:'Nanchang',lat:28.6820,lon:115.8579,tz:'Asia/Shanghai'}
   ];
   // WMO weather_code → [场景, 中文标签]；isDay=0 时晴/晴间多云走 night 场景
   function wmoToScene(code,isDay){
@@ -438,6 +439,7 @@ const DASHBOARDS = [
   var condEl=document.getElementById('wxCond');
   var metaEl=document.getElementById('wxMeta');
   var cardEl=document.getElementById('wxCard');
+  var clockEl=document.getElementById('wxClock');
   if(!citiesEl||!cardEl)return;
   function rnd(a,b){return a+Math.random()*(b-a);}
   function cloudHTML(n,dark){
@@ -472,7 +474,7 @@ const DASHBOARDS = [
       b.addEventListener('click',function(){
         idx=parseInt(b.getAttribute('data-i'));
         try{localStorage.setItem(KEY,String(idx));}catch(e){}
-        renderCities();load();
+        renderCities();load();tick();
       });
     });
   }
@@ -485,6 +487,12 @@ const DASHBOARDS = [
     cardEl.className='wx-card sky-cloudy';
   }
   function sign(v){return (v<0?'−':'')+Math.abs(v);}
+  function fmtClock(tz){
+    try{
+      return new Intl.DateTimeFormat('zh-CN',{timeZone:tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date());
+    }catch(e){ return '--:--:--'; }
+  }
+  function tick(){ if(clockEl){ var c=CITIES[idx]; clockEl.textContent=fmtClock(c.tz); } }
   function load(){
     var c=CITIES[idx];
     if(location.protocol==='file:'){
@@ -514,8 +522,9 @@ const DASHBOARDS = [
       showState('「'+c.n+'」天气加载失败：'+e.message+'<br>（Open-Meteo 可能不可达）',true);
     });
   }
-  renderCities();load();
-  setInterval(load,600000); // 每 10 分钟刷新
+  renderCities();load();tick();
+  setInterval(load,600000); // 每 10 分钟刷新天气
+  setInterval(tick,1000);   // 当地时钟每秒走字
 })();
 </script>
 <script>
