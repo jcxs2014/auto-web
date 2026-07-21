@@ -649,14 +649,17 @@ def main():
                     err = note
                 if not items:
                     ok, err = False, (err or "无数据")
-            # 新闻时效性保护：仅新闻页按发布时间倒序 + 丢弃 >7 天旧闻
-            if mode == "news" and items:
-                items = freshen_news(items, max_age_days=7)
-            else:
+            elif "url" in src and "parser" in src:
                 data = fetch_json(src["url"])
                 items = src["parser"](data)
                 if not items:
                     ok, err = False, "接口返回空列表（可能结构变化或暂时无数据）"
+            else:
+                ok, err = False, "源配置缺少 loader 或 url/parser"
+
+            # 新闻时效性保护：仅新闻页按发布时间倒序 + 丢弃 >7 天旧闻
+            if mode == "news" and items:
+                items = freshen_news(items, max_age_days=7)
             # 双语源：服务端同步翻译标题（sl 默认 en，新闻页用 auto / 中文源用 zh-CN）
             if src.get("bilingual") and items:
                 zhs = translate_texts([it["title"] for it in items], sl=src.get("sl", "en"))
