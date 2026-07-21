@@ -73,26 +73,6 @@
       "date": "2026-07-14 10:00",
       "ts": 1784023200,
       "content": ""
-    },
-    {
-      "title": "How sales teams use ChatGPT Work",
-      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "summary": "See how sales teams can use ChatGPT Work to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-14 00:00",
-      "ts": 1783987200,
-      "content": ""
-    },
-    {
-      "title": "How data science teams use ChatGPT Work",
-      "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
-      "summary": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-14 00:00",
-      "ts": 1783987200,
-      "content": ""
     }
   ]
 }
