@@ -47,27 +47,24 @@
   }
   .wrap{max-width:1100px;margin:0 auto}
 
-  /* Hero */
-  .hero{padding:34px 8px 20px;text-align:center}
-  .hero .kicker{
-    display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;
-    color:var(--accent);text-transform:uppercase;font-weight:600;
-    border:1px solid var(--border-2);border-radius:999px;padding:5px 14px;margin-bottom:14px;
+  /* Top nav */
+  .top-nav{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    padding:18px 4px 14px;flex-wrap:wrap;
+  }
+  .top-nav .brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .top-nav .brand-kicker{
+    display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.1em;
+    color:var(--accent);font-weight:700;text-transform:uppercase;
+    border:1px solid var(--border-2);border-radius:999px;padding:3px 10px;
     background:var(--accent-soft);
   }
-  .hero h1{
-    font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.2;
+  .top-nav .brand-name{
+    font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.2;
     background:linear-gradient(120deg,var(--text) 30%,var(--accent) 75%,var(--accent-2));
     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
   }
-  .hero p{color:var(--text-dim);font-size:14.5px;margin-top:8px;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.55}
-  .stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-  .stat{
-    background:var(--bg-2);border:1px solid var(--border);border-radius:12px;
-    padding:9px 16px;min-width:96px;
-  }
-  .stat b{display:block;font-size:20px;font-weight:800;color:var(--text)}
-  .stat span{font-size:11px;color:var(--text-faint);letter-spacing:.04em}
+  .top-nav .brand-sub{font-size:13px;color:var(--text-dim);font-weight:500}
 
   /* Section title */
   .sec-title{display:flex;align-items:center;gap:12px;margin:46px 4px 22px}
@@ -115,11 +112,10 @@
   .btn-disabled:hover{color:var(--text-faint);border-color:var(--border);transform:none}
 
   .theme-toggle{
-    position:fixed;top:16px;right:18px;z-index:100;
-    display:inline-flex;align-items:center;gap:6px;
+    display:inline-flex;align-items:center;gap:6px;flex:none;
     padding:8px 14px;border-radius:10px;font-size:13px;font-weight:600;
     color:var(--text);background:var(--card);border:1px solid var(--border-2);
-    box-shadow:var(--shadow);cursor:pointer;transition:all .15s ease;
+    cursor:pointer;transition:all .15s ease;
   }
   .theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
 
@@ -136,12 +132,11 @@
 
   @media (max-width:640px){
     body{padding:0 14px 48px}
-    .hero{padding:22px 4px 14px}
     .grid{grid-template-columns:1fr}
     .card{padding:20px 18px}
     .card-icon{width:46px;height:46px;font-size:23px}
-    .stat{padding:8px 12px;min-width:80px}
-    .stat b{font-size:18px}
+    .top-nav{padding:14px 4px 10px}
+    .top-nav .brand-sub{display:none}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
 
@@ -226,15 +221,15 @@
 </script>
 </head>
 <body>
-<button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button>
 <div class="wrap">
-
-  <header class="hero">
-    <div class="kicker">⚡ SKYSCOPE</div>
-    <h1>观象</h1>
-    <p>每日定时拉取并生成的资讯 / 论文仪表盘，集中在此入口。点开任意卡片即可查看当日最新内容。</p>
-    <div class="stats" id="stats"></div>
-  </header>
+  <nav class="top-nav" aria-label="主导航">
+    <div class="brand">
+      <span class="brand-kicker">⚡ SKYSCOPE</span>
+      <span class="brand-name">观象</span>
+      <span class="brand-sub">每日资讯与论文仪表盘</span>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button>
+  </nav>
 
   <section class="weather-wrap" id="weatherWrap" aria-label="天气">
     <div class="weather-cities" id="weatherCities"></div>
@@ -361,14 +356,6 @@ const DASHBOARDS = [
 
 (function render(){
   const grid = document.getElementById("grid");
-  const stats = document.getElementById("stats");
-
-  // 统计条
-  stats.innerHTML = `
-    <div class="stat"><b>${DASHBOARDS.length}</b><span>仪表盘数量</span></div>
-    <div class="stat"><b>每日</b><span>自动刷新</span></div>
-    <div class="stat"><b>纯静态</b><span>无外部依赖</span></div>
-  `;
 
   if(!DASHBOARDS.length){
     grid.innerHTML = `<div class="empty">暂无仪表盘 —— 在脚本的 DASHBOARDS 数组中添加一项即可。</div>`;
