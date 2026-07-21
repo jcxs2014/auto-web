@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Introducing the ChatGPT for small business program",
+      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-21 17:00",
+      "ts": 1784653200,
+      "content": ""
+    },
+    {
       "title": "Safety and alignment in an era of long-horizon models",
       "url": "https://openai.com/index/safety-alignment-long-horizon-models",
       "summary": "OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment.",
