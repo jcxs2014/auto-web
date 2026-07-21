@@ -3,5 +3,16 @@
   "url": "https://nodejs.org/en/feed/blog.xml",
   "category": "技术",
   "lang": "en",
-  "entries": []
+  "entries": [
+    {
+      "title": "Monday, July 27, 2026 Security Releases",
+      "url": "https://nodejs.org/en/blog/vulnerability/july-2026-security-releases",
+      "summary": "",
+      "source": "Node.js Blog",
+      "extra": "",
+      "date": "2026-07-21 03:00",
+      "ts": 1784602800,
+      "content": "<p><a href=\"https://nodejs.org/en/about/eol\">OpenJS Ecosystem Sustainability Program partners</a></p><h1>Monday, July 27, 2026 Security Releases</h1><p>The Node.js Project</p><h1><a href=\"https://nodejs.org#summary\">Summary</a></h1>\n<p>The Node.js project will release new versions of the 26.x, 24.x, 22.x releases lines on or shortly after, Monday, July 27, 2026 in order to address:</p><p>The highest severity issue fixed in this release is HIGH.</p><h2><a href=\"https://nodejs.org#impact\">Impact</a></h2>\n<p>The highest severity issue fixed in the 26.x release line is HIGH. The highest severity issue fixed in the 24.x release line is HIGH. The highest severity issue fixed in the 22.x release line is HIGH.</p><p>It's important to note that End-of-Life versions are always affected when a security release occurs.\nTo ensure your system's security, please use an up-to-date version as outlined in our\n<a href=\"https://github.com/nodejs/release#release-schedule\">Release Schedule</a>.</p><h2><a href=\"https://nodejs.org#release-timing\">Release timing</a></h2>\n<p>Releases will be available on, or shortly after, Monday, July 27, 2026.</p><h2><a href=\"https://nodejs.org#contact-and-future-updates\">Contact and future updates</a></h2>\n<p>The current Node.js security policy can be found at <a href=\"https://nodejs.org/en/security/\">https://nodejs.org/en/security/</a>.\nPlease follow the process outlined in <a href=\"https://github.com/nodejs/node/blob/master/SECURITY.md\">https://github.com/nodejs/node/blob/master/SECURITY.md</a> if you wish to report a vulnerability in Node.js.</p><p>Subscribe to the low-volume announcement-only nodejs-sec mailing list at <a href=\"https://groups.google.com/forum/#!forum/nodejs-sec\">https://groups.google.com/forum/#!forum/nodejs-sec</a> to stay up to date on security vulnerabilities and security-related releases of Node.js and the projects maintained in the nodejs GitHub organization.</p>"
+    }
+  ]
 }
