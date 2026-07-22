@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Building AI infrastructure with the Effingham County community",
+      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
+      "summary": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-22 13:00",
+      "ts": 1784725200,
+      "content": ""
+    },
+    {
+      "title": "Introducing OpenAI Presence",
+      "url": "https://openai.com/index/introducing-openai-presence",
+      "summary": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-22 05:30",
+      "ts": 1784698200,
+      "content": ""
+    },
+    {
       "title": "Introducing the ChatGPT for small business program",
       "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
       "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
@@ -72,26 +92,6 @@
       "extra": "",
       "date": "2026-07-16 00:00",
       "ts": 1784160000,
-      "content": ""
-    },
-    {
-      "title": "The US is advancing AI safety through state and federal action",
-      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
-      "summary": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-15 12:00",
-      "ts": 1784116800,
-      "content": ""
-    },
-    {
-      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-      "summary": "Explore GPT-Red, OpenAI’s automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-15 10:00",
-      "ts": 1784109600,
       "content": ""
     }
   ]
