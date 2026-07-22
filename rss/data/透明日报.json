@@ -5,6 +5,16 @@
   "lang": "zh",
   "entries": [
     {
+      "title": "透明日报20260722期",
+      "url": "https://daily.xlab.app/d/20260722/",
+      "summary": "透明日报第20260722期 订阅 今日文章：技术*1",
+      "source": "透明日报",
+      "extra": "",
+      "date": "2026-07-22 23:45",
+      "ts": 1784763900,
+      "content": "\n    <p>透明日报第20260722期 <a href=\"https://daily.xlab.app/about/\">订阅</a></p>\n    <p>今日文章：<a href=\"https://daily.xlab.app/d/20260722/#%E6%8A%80%E6%9C%AF\">技术</a>*1</p>\n    <h2>技术</h2>\n    <h3>• <a href=\"https://openai.com/index/hugging-face-model-evaluation-security-incident/\">OpenAI and Hugging Face partner to address security incident during model evaluation</a></h3>\n    <p>GPT在测试评估的时候为了走捷径直接获取答案，从测试环境逃逸，并且入侵了hugging face，太魔幻了</p>"
+    },
+    {
       "title": "透明日报20260719期",
       "url": "https://daily.xlab.app/d/20260719/",
       "summary": "透明日报第20260719期 订阅 今日文章：其他*1",
