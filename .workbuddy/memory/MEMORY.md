@@ -45,3 +45,17 @@
 2. RSS 阅读器：直接往 rss/feeds.json 加条目（带 lang=en 触发翻译按钮）。
 3. 新闻页：gen_hotnews.py 加 fetch_*（复用 fetch_rss_news）+ NEWS_SOURCES + PER_PLATFORM。
 4. 前沿期刊：gen_arxiv_physics.py 的 journal_feeds 加 (url, name)。
+
+## Mac mini 宿主角色与跨设备协作规则（本机操作守则 · 项目级）
+> 本规则随仓库走，Mac mini 与 MacBook 两台机器 clone 后均可读，用于跨设备协作时明确维护边界。
+
+- **身份**：本机 WorkBuddy 运行在**家里 Mac mini** 上，是工作区 `/Users/jcxs2014/Sites/Workbuddy` 的宿主与维护方。
+- **1. 目录归属**：该工作区中除 `docs/` 外，所有其他目录（`auto-web/`、`frontend/` 等）均由本机创建并持续维护，是各项目的**权威副本**；本机可直接读写。
+- **2. 分工模式**：与用户的 MacBook 分布式协作、各干各的，不强制统一。MacBook 是用户随身主力机；本机常开，适合跑重任务 / 后台。
+- **3. 跨设备改动边界（重要）**：非 `docs/` 目录由本机维护。当用户请求改动这些目录时，先确认改动将在哪台机器进行——
+  - 若在本机（Mac mini）操作：直接进行。
+  - 若意图在 MacBook 本地改动：必须提醒用户，非 `docs/` 目录由本机维护、MacBook 本地**不要直接改**；正确做法二选一：(a) 在 MacBook 上用远程桌面（屏幕共享 / Tailscale）连回本机操作；或 (b) 在 MacBook 本地**新建独立项目**，不要直接在现有项目上改。
+  - 目的：避免同一项目在两台机器各改一版、最终不一致。
+- **4. `docs/` 例外**：`docs/` 由用户自行维护，本机与 MacBook 均可直接读写，无需提醒。
+- **5. 远程桌面按需开启**：本机屏幕共享 / Tailscale「Allow incoming connections」**仅在用户需要远程访问时才开启**，平时保持关闭以减小暴露面。
+- **6. 只读分析免打扰**：查看、搜索、分析非 `docs/` 目录等只读操作允许直接进行，不必打扰用户；只有会改变文件或服务状态的操作才需先确认。
