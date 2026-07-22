@@ -46,8 +46,8 @@
 3. 新闻页：gen_hotnews.py 加 fetch_*（复用 fetch_rss_news）+ NEWS_SOURCES + PER_PLATFORM。
 4. 前沿期刊：gen_arxiv_physics.py 的 journal_feeds 加 (url, name)。
 
-## Mac mini 宿主角色与跨设备协作规则（本机操作守则 · 项目级）
-> 本规则随仓库走，Mac mini 与 MacBook 两台机器 clone 后均可读，用于跨设备协作时明确维护边界。
+## Mac mini 宿主角色与跨设备协作规则（本机操作守则 · 工作区级：/Users/jcxs2014/Sites/Workbuddy）
+> 本规则为**工作区级别**（作用于 `/Users/jcxs2014/Sites/Workbuddy` 整个目录，含 auto-web/frontend/docs），非 auto-web 项目专属。随 auto-web 仓库走，Mac mini 与 MacBook 两台机器 clone 后均可读，用于跨设备协作时明确维护边界。
 
 - **身份**：本机 WorkBuddy 运行在**家里 Mac mini** 上，是工作区 `/Users/jcxs2014/Sites/Workbuddy` 的宿主与维护方。
 - **1. 目录归属**：该工作区中除 `docs/` 外，所有其他目录（`auto-web/`、`frontend/` 等）均由本机创建并持续维护，是各项目的**权威副本**；本机可直接读写。
