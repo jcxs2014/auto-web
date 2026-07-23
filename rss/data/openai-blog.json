@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Launching Health in ChatGPT",
+      "url": "https://openai.com/index/health-in-chatgpt",
+      "summary": "Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-23 00:00",
+      "ts": 1784764800,
+      "content": ""
+    },
+    {
       "title": "Building AI infrastructure with the Effingham County community",
       "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
       "summary": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-07-20 10:00",
       "ts": 1784541600,
-      "content": ""
-    },
-    {
-      "title": "A scorecard for the AI age",
-      "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
-      "summary": "Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-17 10:00",
-      "ts": 1784282400,
       "content": ""
     }
   ]
