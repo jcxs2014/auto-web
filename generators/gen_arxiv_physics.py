@@ -22,6 +22,7 @@ import json
 import sys
 import time
 import urllib.request
+import urllib.error
 import urllib.parse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
@@ -132,8 +133,9 @@ def translate_paper(title: str, summary_short: str) -> tuple[str, str]:
     return zh.strip(), ""  # 分隔符被吞，整段当标题译文
 
 
-def fetch_theme(theme_cats: list[str]) -> list[dict]:
-    """Query arXiv for one theme's categories, return list of paper dicts."""
+def fetch_theme(theme_cats: list[str], max_retries: int = 4) -> list[dict]:
+    """Query arXiv for one theme's categories, return list of paper dicts.
+    对 arXiv 限流(429)/5xx/网络异常做指数退避重试，避免偶发限流直接落空。"""
     ors = " OR ".join(f"cat:{c}" for c in theme_cats)
     params = {
         "search_query": ors,
@@ -144,45 +146,63 @@ def fetch_theme(theme_cats: list[str]) -> list[dict]:
     }
     url = BASE + "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/atom+xml"})
-    papers = []
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            xml_bytes = resp.read()
-        root = ET.fromstring(xml_bytes)
-        for entry in root.findall("a:entry", NS):
-            arxiv_id_raw = clean(entry.findtext("a:id", "", NS))  # http://arxiv.org/abs/XXXXvN
-            arxiv_id = arxiv_id_raw.split("/abs/")[-1]
-            title = clean(entry.findtext("a:title", "", NS))
-            summary = clean(entry.findtext("a:summary", "", NS))
-            published = clean(entry.findtext("a:published", "", NS))
-            updated = clean(entry.findtext("a:updated", "", NS))
-            authors = [clean(a.text or "") for a in entry.findall("a:author/a:name", NS)]
-            pc = entry.find("arxiv:primary_category", NS)
-            primary_cat = pc.get("term", "") if pc is not None else ""
-            # links
-            abs_url = arxiv_id_raw
-            pdf_url = ""
-            for ln in entry.findall("a:link", NS):
-                rel = ln.get("rel", "")
-                if rel == "alternate":
-                    abs_url = ln.get("href", abs_url)
-                elif rel == "related" and ln.get("type", "") == "application/pdf":
-                    pdf_url = ln.get("href", "")
-            if not pdf_url:
-                pdf_url = f"https://arxiv.org/pdf/{arxiv_id}"
-            papers.append({
-                "arxiv_id": arxiv_id,
-                "title": title,
-                "summary": summary,
-                "published": published,
-                "updated": updated,
-                "authors": authors,
-                "primary_cat": primary_cat,
-                "abs_url": abs_url,
-                "pdf_url": pdf_url,
-            })
-    except Exception as e:
-        print(f"[arxiv] WARN 主题 {theme_cats} 拉取失败: {e}", file=sys.stderr)
+    papers: list[dict] = []
+    last_err = ""
+    for attempt in range(max_retries):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                xml_bytes = resp.read()
+            root = ET.fromstring(xml_bytes)
+            for entry in root.findall("a:entry", NS):
+                arxiv_id_raw = clean(entry.findtext("a:id", "", NS))  # http://arxiv.org/abs/XXXXvN
+                arxiv_id = arxiv_id_raw.split("/abs/")[-1]
+                title = clean(entry.findtext("a:title", "", NS))
+                summary = clean(entry.findtext("a:summary", "", NS))
+                published = clean(entry.findtext("a:published", "", NS))
+                updated = clean(entry.findtext("a:updated", "", NS))
+                authors = [clean(a.text or "") for a in entry.findall("a:author/a:name", NS)]
+                pc = entry.find("arxiv:primary_category", NS)
+                primary_cat = pc.get("term", "") if pc is not None else ""
+                # links
+                abs_url = arxiv_id_raw
+                pdf_url = ""
+                for ln in entry.findall("a:link", NS):
+                    rel = ln.get("rel", "")
+                    if rel == "alternate":
+                        abs_url = ln.get("href", abs_url)
+                    elif rel == "related" and ln.get("type", "") == "application/pdf":
+                        pdf_url = ln.get("href", "")
+                if not pdf_url:
+                    pdf_url = f"https://arxiv.org/pdf/{arxiv_id}"
+                papers.append({
+                    "arxiv_id": arxiv_id,
+                    "title": title,
+                    "summary": summary,
+                    "published": published,
+                    "updated": updated,
+                    "authors": authors,
+                    "primary_cat": primary_cat,
+                    "abs_url": abs_url,
+                    "pdf_url": pdf_url,
+                })
+            return papers
+        except urllib.error.HTTPError as e:
+            last_err = f"HTTP {e.code}"
+            if e.code == 429:
+                wait = min(15 * (2 ** attempt), 120)
+                print(f"[arxiv] WARN 主题 {theme_cats} 被限流(429)，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
+            else:
+                wait = min(15 * (attempt + 1), 90)
+                print(f"[arxiv] WARN 主题 {theme_cats} {last_err}，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
+            time.sleep(wait)
+            continue
+        except Exception as e:
+            last_err = str(e)
+            wait = min(15 * (attempt + 1), 90)
+            print(f"[arxiv] WARN 主题 {theme_cats} 拉取异常：{e}，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
+            time.sleep(wait)
+            continue
+    print(f"[arxiv] ERROR 主题 {theme_cats} 重试 {max_retries} 次仍失败（{last_err}），本主题返回空。", file=sys.stderr)
     return papers
 
 
@@ -606,6 +626,16 @@ def main():
         papers = fetch_theme(cats)
         print(f"[arxiv]   得到 {len(papers)} 篇", flush=True)
         theme_papers.append((name, papers, emoji, anchor))
+
+    # 抓取健康度守卫：arXiv 全部限流/故障时，不生成、不覆盖已有好数据（避免线上被空数据冲掉）
+    arxiv_total = sum(len(p) for _, p, _, _ in theme_papers)
+    themes_ok = sum(1 for _, p, _, _ in theme_papers if len(p) > 0)
+    if arxiv_total == 0:
+        print("[arxiv] ERROR 全部主题抓取失败（arXiv 限流或故障），保留上次数据，不覆盖、退出。", file=sys.stderr)
+        sys.exit(1)
+    if themes_ok < 4:
+        print(f"[arxiv] ERROR 仅 {themes_ok}/5 主题抓到数据（疑似 arXiv 限流），保留上次数据，不覆盖、退出。", file=sys.stderr)
+        sys.exit(1)
 
     if do_translate:
         print("[arxiv] 开始翻译为中文（每篇 1 次调用，约 30 秒）...", flush=True)
