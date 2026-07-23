@@ -15,6 +15,16 @@
       "content": ""
     },
     {
+      "title": "How news organizations are using AI to advance their vital missions",
+      "url": "https://openai.com/index/how-news-organizations-are-using-ai",
+      "summary": "News organizations are using AI to strengthen reporting, grow audiences, and improve business operations, with OpenAI tools supporting journalists and publishers worldwide.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-22 13:00",
+      "ts": 1784725200,
+      "content": ""
+    },
+    {
       "title": "Advancing the next era of national science",
       "url": "https://openai.com/index/advancing-the-next-era-of-national-science",
       "summary": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
@@ -32,6 +42,16 @@
       "extra": "",
       "date": "2026-07-22 05:30",
       "ts": 1784698200,
+      "content": ""
+    },
+    {
+      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+      "url": "https://openai.com/index/ntt-data",
+      "summary": "NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-22 00:00",
+      "ts": 1784678400,
       "content": ""
     },
     {
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-07-17 10:00",
       "ts": 1784282400,
-      "content": ""
-    },
-    {
-      "title": "Why teens deserve access to safe AI",
-      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
-      "summary": "Learn how OpenAI is making ChatGPT safer for teens with age-appropriate protections, learning tools, parental controls, and expert partnerships.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-16 16:00",
-      "ts": 1784217600,
-      "content": ""
-    },
-    {
-      "title": "How Cars24 scales conversations and builds faster with OpenAI",
-      "url": "https://openai.com/index/cars24",
-      "summary": "Cars24 uses OpenAI-powered voice and chat agents to handle 1M+ monthly conversation minutes, recover 12% of lost leads, and bring agentic workflows to teams across the company.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-16 00:00",
-      "ts": 1784160000,
       "content": ""
     }
   ]
