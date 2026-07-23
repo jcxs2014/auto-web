@@ -39,6 +39,7 @@
 - ⚠️ 已回退的误判方案（勿复用）：曾误判「保存到桌面不翻译」是 `file://` 另存为导致本地 fetch 拦截，加了「📥 保存离线版」按钮；后澄清场景是**整站装成桌面 app（PWA `standalone`）**而非单页 `file://` 另存，已 revert。真正根因是 standalone 抑制原生翻译。`file://` 另存不是主场景，不要再为此改代码。
 - gen_hotnews 主循环必须用 `if/elif/else` 区分「有 loader 的源」与「有 url+parser 的源」：国际热点(intl)用 loader、没有 `url` 键，若误写成两个独立 `if` 的 `else` 去 `fetch_json(src['url'])` 会触发 `KeyError: 'url'`（2026-07-21 修复）。
 - 死源：corriere(冻2024)/xinhua_en(死2018) 已换 France24/NHK；加任何源前务必探针验证可达。
+- ⚠️ **arXiv 429 限流（2026-07-23 踩坑）**：arXiv API 频繁返回 `HTTP 429 Rate exceeded`（GitHub 共享 IP 也被限），旧 `fetch_theme` 用 `except` 静默吞异常返回 `[]`，导致空主题照样生成 HTML 并提交、**把之前的好数据冲掉**。现象：7/18、7/22、7/23 线上 arxiv 仅 30 篇（主题1 hep + 期刊），其余 4 主题（space-ph/gr-qc/astro-ph.HE/ins-det）全空。**修复（commit 3b9ac0c）**：`fetch_theme` 加 429/5xx 指数退避重试（max_retries=4，等 15/30/60/120s）；`main()` 翻译前加守卫——arXiv 总篇数=0 或成功主题<4 则 `sys.exit(1)`，**不写文件、不覆盖已有好数据**（CI 生成步骤失败即不提交，线上保留上次好数据）。切记：arxiv 抓取失败时宁可留旧数据，绝不要用空数据覆盖。
 
 ## 加订阅源标准流程
 1. 用 feedparser+certifi 探针（看 entries 数、bozo），排除 404/410/被墙。
