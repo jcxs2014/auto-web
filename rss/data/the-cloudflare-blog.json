@@ -7,7 +7,7 @@
     {
       "title": "Introducing Cache Response Rules",
       "url": "https://blog.cloudflare.com/introducing-cache-response-rules/",
-      "summary": "Perhaps you’ve seen something that should sail out of cache get dragged back to the origin by a stray Set-Cookie or Cache-Control, headers that can be hard to change on the origin itself. Cache Response Rules is the fix, applied at the right time.",
+      "summary": "Perhaps you’ve seen something that should sail out of cache get dragged back to the origin by a stray Set-Cookie or Cache-Control, headers that can be difficult to change on the origin itself. Cache Response Rules is the fix, applied at the right time.",
       "source": "The Cloudflare Blog",
       "extra": "",
       "date": "2026-07-23 18:40",
