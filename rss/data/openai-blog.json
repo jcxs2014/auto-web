@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How AI is expanding what people do at work",
+      "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
+      "summary": "New OpenAI research shows how AI is expanding what workers do, with ChatGPT users taking on tasks across roles and reshaping job boundaries.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-27 03:30",
+      "ts": 1785123000,
+      "content": ""
+    },
+    {
       "title": "Launching Health in ChatGPT",
       "url": "https://openai.com/index/health-in-chatgpt",
       "summary": "Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-07-21 00:00",
       "ts": 1784592000,
-      "content": ""
-    },
-    {
-      "title": "Safety and alignment in an era of long-horizon models",
-      "url": "https://openai.com/index/safety-alignment-long-horizon-models",
-      "summary": "OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-20 10:00",
-      "ts": 1784541600,
       "content": ""
     }
   ]
