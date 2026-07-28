@@ -5,9 +5,9 @@
   "lang": "en",
   "entries": [
     {
-      "title": "Natural disasters and government interference: examining Q2 2026’s major Internet disruption event",
+      "title": "Natural disasters and government interference: examining Q2 2026’s major Internet disruption events",
       "url": "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/",
-      "summary": "Cloudflare Radar tracked Internet disruptions driven by natural disasters, government-mandated shutdowns, and DNSSEC key rollovers over the last quarter. This blog post analyzes traffic telemetry to explain how these events impacted global connectivity.",
+      "summary": "Cloudflare Radar tracked Internet disruptions driven by natural disasters, government-mandated shutdowns, and DNSSEC key rollovers over the last quarter. This post analyzes traffic telemetry to explain how these events impacted global connectivity.",
       "source": "The Cloudflare Blog",
       "extra": "",
       "date": "2026-07-28 13:00",
