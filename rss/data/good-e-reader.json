@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "First Look at the Meebook E6 e-reader",
+      "url": "https://goodereader.com/blog/electronic-readers/first-look-at-the-meebook-e6-e-reader",
+      "summary": "For an unboxing and first-hand look at the physical page-turn buttons, bezel design, and user interface of the Meebook E6 watch this video. The post First Look at the Meebook E6 e-reader first appeared on Good e-Reader.",
+      "source": "Good e-Reader",
+      "extra": "",
+      "date": "2026-07-28 03:19",
+      "ts": 1785208746,
+      "content": "<p>Meebook has just released its first new e-reader in a couple of years, called the Meebook E6. The Meebook E6 is a 6-inch E-Ink e-reader running Android 11, with physical page-turn buttons, a sharp 300 PPI display, and access to the Google Play Store.</p>\n    <p>The Meebook E6 features a 6-inch E-Ink screen with a resolution of 1448×1072 and 300 PPI. It has an adjustable front-lit display and a warm lighting system to read during the day or night. The industrial design of the unit has a recessed screen, physical page-turn buttons, and a matcha green color scheme; it has the same color as the base Kindle.</p>\n    <p>Under the hood is a Quad-core 1.8 GHz processor with 3 GB of RAM and 32 GB of internal storage. A MicroSD card slot supports memory cards up to 512 GB. Listen to podcasts, audiobooks, or music with the built-in speaker, or connect to Bluetooth 5.0 with wireless headphones or earbuds. Make voice calls or use communication apps via the microphone. Download firmware updates, use apps, or surf the web with Wi-Fi. It is powered by a 2200 mAh battery and weighs approximately 180–190 g.</p>\n    <p>It is running a pretty old version of Google Android, by e-reader standards: Android 11. Many flagship apps will be dropping support for this outdated OS, so bear that in mind if you do anything else but read with Kindle, Kobo, NOOK or read manga, comics, webtoons, magazines, or newspapers. If you want to load in your own e-books, the E6 supports EPUB, FB2, DJVU, PDF, TXT, DOC, DOCX, MOBI, CBE, CBZ, AZW3, and HTML.</p>\n    <p>Michael Kozlowski has written about audiobooks, e-books and e-readers for the past eighteen years. He Lives in Vancouver, British Columbia, Canada.</p>"
+    },
+    {
       "title": "Amazon revises Product Page for Kindle Paperwhite Kids",
       "url": "https://goodereader.com/blog/kindle/amazon-revises-product-page-for-kindle-paperwhite-kids",
       "summary": "The \"Summer Edition\" case is a newly released, official Amazon cover included as an option with the Kindle Paperwhite Kids bundle. The post Amazon revises Product Page for Kindle Paperwhite Kids first appeared on Good e-Reader.",
@@ -93,16 +103,6 @@
       "date": "2026-07-23 23:20",
       "ts": 1784848838,
       "content": "<p>XTEINK is a Chinese technology brand known for creating ultra-thin, distraction-free pocket <a href=\"https://goodereader.com/blog/electronic-readers/the-xteink-x4-pro-is-now-available\">E-Ink e-readers</a> designed to snap magnetically to the back of a smartphone like a MagSafe accessory. These viral, “purse-sized” devices are engineered for digital minimalism, featuring ultra-light builds, zero notifications, and weeks of battery life. Onyx Boox has realized these guys are controlling the small-sized e-reader market and is working on their own product called the BOOX Picco.</p>\n    <p>The BOOX Picco 3.97inch e-reader and is currently being teased by Onyx Boox. It will feature a black-and-white e-paper display with E INK technology. Users will be able to read during the day or night via the front-lit display, and upgraded storage will be available via an SD card. There appear to be buttons on the promotional image for page turns, it is also heavily rumoured this device is apart of a new Tile product line.</p>\n    <p>If Onyx wants to compete against XTEINK, they will have to keep the price down to around $99 to $129 maximum. This will likely result in some sacrifices, such as not using a touchscreen and having very limited tech specs and a custom UI that is geared towards reading and not much else. It is likely it will have a tiled design, which are a series of UI elements that are locked into positioned, so think the Neoreader app for reading, a music player, podcast player and that is about it. For users who want a better experience, such as installing apps, there is always the Palma 2 that retails for 269.99.</p>\n    <p>Michael Kozlowski has written about audiobooks, e-books and e-readers for the past eighteen years. He Lives in Vancouver, British Columbia, Canada.</p>"
-    },
-    {
-      "title": "Kindle Read Sample button is now working again",
-      "url": "https://goodereader.com/blog/kindle/kindle-read-sample-button-is-now-working-again",
-      "summary": "There was a major bug that prevented people from reading Kindle Book Samples, three days later the issue has been fixed by Amazon. The post Kindle Read Sample button is now working again first appeared on Good e-Reader.",
-      "source": "Good e-Reader",
-      "extra": "",
-      "date": "2026-07-23 05:07",
-      "ts": 1784783256,
-      "content": "<p>Three days after being <a href=\"https://goodereader.com/blog/kindle/read-sample-on-books-is-broken-on-amazon\">completely broken</a>, the Read Sample button on Kindle Books is now working again. Customers can now use the Amazon website on an internet browser, mobile website, or the Kindle reading app for Android and iOS.</p>\n    <p>Initially, when the Read Sample button was broken, there was no way to read the first few chapters for free to see if buying the book was a worthwhile investment. Now that the sample button is fixed, customers can once again use it on all of their devices and on the Amazon website.</p>\n    <p>The “Read Sample” (or “Look Inside”) button allows you to preview the first chapter of a book before purchasing. On the Amazon website, it is typically located below the book’s cover image. If you are using a mobile device, you will usually see a “Look Inside the Book” sticker instead.</p>\n    <p>Michael Kozlowski has written about audiobooks, e-books and e-readers for the past eighteen years. He Lives in Vancouver, British Columbia, Canada.</p>"
     }
   ]
 }
