@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "We’re launching Lyria 3.5 in Google Flow Music, with advances across musicality, lyrics, vocals, and creative control.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/",
+      "summary": "Our newest music generation model, Lyria 3.5, delivers significant advancements across musicality, lyrics, and vocal quality, empowering you to craft richer tracks. We’r…",
+      "source": "The Keyword (Google)",
+      "extra": "",
+      "date": "2026-07-29 16:00",
+      "ts": 1785340800,
+      "content": "\n    <p>Our newest music generation model, Lyria 3.5, delivers significant advancements across musicality, lyrics, and vocal quality, empowering you to craft richer tracks. We’re rolling it out today in <a href=\"http://flowmusic.google/\">Google Flow Music</a>, where we want to help you create songs you love, with creative control.</p>\n    <p>Here's what’s new:</p>\n    <ul>\n      <li>Improved musicality: Create richer, more complex melodic structures that sound more natural.</li>\n      <li>Enhanced lyrics: Generate higher quality lyrics with improved prompt adherence and structural awareness.</li>\n      <li>Improved vocals: Bring more expression and emotion to your songs with more realistic and emotionally nuanced vocals, plus improved pronunciation.</li>\n      <li>Creative control: More easily control the tempo and duration of your outputs.</li>\n    </ul>\n    <p>Try it today in <a href=\"http://flowmusic.google/\">Flow Music</a>.</p>"
+    },
+    {
+      "title": "Prepare for the holiday season with July’s Demand Gen Drop.",
+      "url": "https://blog.google/products/ads-commerce/demand-gen-drop-july-2026/",
+      "summary": "Prepare for the holiday season with upgraded tROAS bidding, Checkout Links, and more from YouTube’s July Demand Gen Drop.",
+      "source": "The Keyword (Google)",
+      "extra": "",
+      "date": "2026-07-29 15:30",
+      "ts": 1785339000,
+      "content": "\n    <p>Holiday shopping is deeply personal. That’s why consumers seeking authentic human connection turn to video — and real people — for the visual validation that guides their choices. In fact, 94% of holiday shoppers who used YouTube reported taking further steps toward their purchase after watching a related video.\n\n\n<a href=\"https://blog.google#footnote-1\">\n  1\n</a>\n</p>\n    <p>Turn holiday inspiration into bottom-line growth with these new retail best practices:</p>\n    <ul>\n      <li>Drive shoppers directly from Demand Gen campaigns to your website’s optimized checkout or cart page with <a href=\"https://support.google.com/google-ads/answer/16218300\">Checkout Links</a>, which are now available in nine new markets.<a href=\"https://blog.google#footnote-2\">2</a>On average, advertisers who provided Checkout URLs<a href=\"https://business.google.com/us/accelerate/announcements/checkout-links/\">boosted conversions by 6% on Demand Gen</a>.<a href=\"https://blog.google#footnote-3\">3</a></li>\n      <li>Use upgraded <a href=\"https://support.google.com/google-ads/answer/6268637\">Target ROAS (tROAS) bidding</a>to prevent the system from being overly cautious early on so your campaigns hit their targets faster.</li>\n      <li>Create frictionless commercial experiences by integrating <a href=\"https://support.google.com/google-ads/answer/13721750\">product feeds</a>, amplifying creator content with<a href=\"https://support.google.com/youtube/answer/16984119\">affiliate partnerships boost</a>, and driving purchases directly from YouTube ads via checkout links or<a href=\"https://support.google.com/merchants/answer/16837055\">Universal Commerce Protocol (UCP)</a>, (available in US only).</li>\n    </ul>\n    <p>Ready to capture your next wave of seasonal growth? Access the new <a href=\"https://services.google.com/fh/files/misc/youtube_demand_gen_for_retail_best_practices.pdf\">2026 Demand Gen Retail guide</a>.</p>"
+    },
+    {
+      "title": "Gemini for macOS adds new natural language capabilities",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os/",
+      "summary": "Gemini for macOS language capabilities",
+      "source": "The Keyword (Google)",
+      "extra": "",
+      "date": "2026-07-29 15:00",
+      "ts": 1785337200,
+      "content": "\n    <p>The Gemini app for macOS was built to keep you in your flow. Today, we’re introducing a new way to create, edit, and summarize with Gemini using just your voice, right where you are already working.</p>\n    <p>By long-pressing the Fn key, you can speak naturally into any window on your desktop. By default, this enables intelligent dictation, letting you easily transcribe your spoken words into clean, polished text — automatically removing the “ums” and “ahs,” catching mid-sentence corrections, and dropping the formatted text instantly at your cursor.</p>\n    <p>If you want Gemini to do more than intelligently transcribe, you can opt into Gemini reasoning through your settings. Once enabled, Gemini can understand the context on your screen to help you execute complex tasks. For example, you can:</p>\n    <ul>\n      <li>Extract and summarize information: Highlight local files, images, or documents on your desktop and tell Gemini exactly what you need. For example, you can say \"Read these vet files and summarize my dog's medical history in an email to the kennel.\"</li>\n      <li>Compose and rewrite text: Highlight text anywhere on your screen and use your voice to instantly rewrite it, tweak the tone, and drop the polished version right where you need it. Try saying, “Turn these notes into an executive summary with a TL;DR at the top.”</li>\n      <li>Generate and edit images: Use your voice to create visuals when conceptualizing an idea or enhancing a travel itinerary, or iterate on a design on your desktop by referencing it to request quick updates. Try saying, \"Take this illustration and generate a dark-mode version of it.\"</li>\n    </ul>\n    <p>This new voice capability is rolling out globally to all users of the Gemini app for macOS in English, with more languages coming soon. Download the app at <a href=\"https://gemini.google/mac/\">gemini.google/mac</a> to get started.</p>"
+    },
+    {
       "title": "How Gemini Flash agents are helping a Michigan dairy farmer",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/using-gemini-to-manage-farm/",
       "summary": "Using Gemini to manage a farm",
@@ -73,36 +103,6 @@
       "date": "2026-07-28 01:00",
       "ts": 1785200400,
       "content": "\n    <p>The Google AI Futures Fund backs the startups that are building what’s next in AI — and we’re extending our support to Japan. In partnership with Japanese telecom leader KDDI, we’re launching the AI Startup Support Program to accelerate the most innovative AI-native Japanese startups. This initiative is built on our conviction that Japan is home to some of the most visionary AI builders in the world.</p>\n    <p>Selected startups will receive:</p>\n    <ul>\n      <li>Joint funding: Equity investments from both the AI Futures Fund and KDDI Open Innovation Fund.</li>\n      <li>The latest AI models: Early access to some of Google’s most advanced AI tools — including Gemini, Nano Banana, and Lyria — plus, opportunities to provide feedback to the researchers building them.</li>\n      <li>Compute credits: Google Cloud credits, as well as credits for sovereign Gemini and GPUs, uniquely provisioned in Japan via KDDI’s Osaka-Sakai Data Center.</li>\n      <li>Dedicated support: Hands-on technical support from a network of Google and KDDI researchers, engineers, product managers, and more, as well as distribution and business opportunities.</li>\n    </ul>\n    <p>Learn more about the program on the <a href=\"https://labs.google/aifuturesfund/startupsupportprogram\">AI Futures Fund website</a>. We encourage any Japanese team with an ambitious vision to apply.</p>"
-    },
-    {
-      "title": "NOAA and Google Cloud collaborate to advance weather forecasting.",
-      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/noaa-google-cloud-weather-forecasting/",
-      "summary": "Google Cloud is now providing high-performance computing infrastructure for NOAA’s supercomputing system.",
-      "source": "The Keyword (Google)",
-      "extra": "",
-      "date": "2026-07-27 17:00",
-      "ts": 1785171600,
-      "content": "\n    <p>Accurate weather forecasting saves lives and protects infrastructure, but predicting complex global atmospheric patterns requires immense computing power. NOAA (National Oceanic and Atmospheric Administration) is taking a major leap forward by selecting Google Cloud as the primary provider of high-performance computing (HPC) infrastructure for its Weather and Climate Operational Supercomputing System (WCOSS).</p>\n    <p>By transitioning to Google Cloud’s H4D virtual machines, NOAA becomes one of the first major global weather centers to move operational numerical weather prediction directly to the public cloud. This migration gives meteorologists and researchers unprecedented scale, speed, and AI capabilities to run massive simulations, refine prediction models, and issue faster, life-saving early warnings.</p>\n    <p>Read more on the <a href=\"https://cloud.google.com/blog/topics/public-sector/modernizing-the-skies-noaa-google-cloud-collaborate-advance-weather-forecasting?e=48754805\">Google Cloud blog</a>.</p>"
-    },
-    {
-      "title": "Google is signing the EU AI Act Code of Practice on Transparency of AI-Generated Content.",
-      "url": "https://blog.google/company-news/outreach-and-initiatives/public-policy/eu-ai-act-transparency-code-of-practice/",
-      "summary": "G in Google colours",
-      "source": "The Keyword (Google)",
-      "extra": "",
-      "date": "2026-07-24 14:00",
-      "ts": 1784901600,
-      "content": "\n    <p>We’re signing the <a href=\"https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content\">EU AI Act Code of Practice on Transparency of AI-Generated Content</a> to help support the responsible use of AI in Europe. This builds on our 2025 signing of the <a href=\"https://blog.google/company-news/inside-google/around-the-globe/google-europe/eu-ai-code-practice/\">GPAI Code of Practice</a> and aligns with our ongoing work to adopt and accelerate the <a href=\"https://c2pa.org/\">C2PA</a> industry standard and to develop AI transparency tools — including <a href=\"https://deepmind.google/models/synthid/\">SynthID</a>. SynthID is our industry-leading digital watermarking technology that helps people understand how content was created and edited. To promote trust across platforms, we have also been partnering with third-party AI labs like Apple, Eleven Labs, Kakao, NVIDIA, and OpenAI to drive industry-wide adoption of interoperable watermarking tools using SynthID.</p>\n    <p>While we support transparency, we are concerned that adding more regulatory complexity — as technical solutions are still evolving — could contradict Europe’s goals for competitiveness and simplification. It also risks confusing the people these rules are meant to help. If online content is flooded with overlapping AI labels and legal disclosures, it becomes harder for people to get the clear context they need.</p>\n    <p>As this code is implemented, we will work together with regulators and partners to build practical solutions that provide real transparency and help people make informed decisions about the content they see online.</p>"
-    },
-    {
-      "title": "Play Points members and comic book fans can score exclusive rewards with Google Play",
-      "url": "https://blog.google/products-and-platforms/platforms/google-play/comic-con-san-diego/",
-      "summary": "Overview of The Auction by Google Play",
-      "source": "The Keyword (Google)",
-      "extra": "",
-      "date": "2026-07-23 17:00",
-      "ts": 1784826000,
-      "content": "\n    <p>Google Play is returning to Comic-Con® International with even more ways for Google Play Points members to get rewarded — both on the ground and online. Starting today, you can visit our immersive auction house live in San Diego to score physical collectibles from fan favorites like MARVEL Strike Force and Crunchyroll, plus unlock exclusive perks and rare rewards from anywhere with our digital rewards case and Play Points Use tab. Here’s what to look for.</p>\n    <h2>Score exclusive rewards on Google Play</h2>\n    <p>There’s something for every Google Play Points member, and the more points you have, the more ways you can redeem them. Here’s how.</p>\n    <ul>\n      <li>Digital rewards case: Starting today, Gold+ members can unlock an exclusive digital rewards case on Google Play for a special chance to score points boosters and surprise collectibles\n\n\n<a href=\"https://blog.google#footnote-1\">1</a>. Just look for it on the You tab or the Perks tab of Play Points home.</li>\n      <li>Use tab: For instant rewards, head to the Use tab, where all Play Points members can redeem points for unique, high-demand gear, including the sold-out Gen 2 Backbone One | DEATH STRANDING 2 Limited Edition controller.</li>\n    </ul>\n    <h2>Visit The Auction by Google Play</h2>\n    <p>For those joining us on the ground in San Diego, get ready for The Auction by Google Play. From July 23 to 25, step into an immersive space where tokens earned on-site are your currency. Kick off the fun at our giant gacha. Then move through the space knowing everyone walks away with rewards, whether you’re redeeming tokens for a custom tote bag or uniquely crafted keepsakes at the keychain charm bar or trading them at the rewards counter.</p>\n    <p>Just make sure to save some tokens for the grand finale on July 25 at 5 p.m. PT, featuring a live auction hosted by Quenlin Blackwell, where you can bid live on premium, high-value rewards, including an Emerald Gemagotchi Necklace with white diamond buttons on a 14K gold ball chain, a Herman Miller Vantum Gaming Chair, and more.</p>\n    <p>If you’re a Play Points member, you get perks right at the door with priority fast-track entry to both the general space and the live auction, along with a stash of special bonus tokens at check-in scaled to your membership tier. After checking in, members will unlock exclusive rewards.</p>\n    <p>Not a member? <a href=\"https://support.google.com/googleplay/answer/9077312?hl=en&amp;co=GENIE.CountryCode%3DUS\">Join the Google Play Points program</a> to get more of what you want for doing what you love.</p>"
     }
   ]
 }
