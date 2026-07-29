@@ -20,7 +20,7 @@ sources_util.py —— 多数据源抓取工具，供 AI 新闻页 / 物理论�
   - arXiv cs.AI/LG/CL      : http://export.arxiv.org/api/query
   - Nature Physics RSS     : https://www.nature.com/nphys/rss/getrss.html
   - Science 新闻 RSS       : https://www.science.org/rss/news_current.xml
-  - PRL (Crossref by ISSN) : https://api.crossref.org/journals/0031-9007/works
+  - PRL (arXiv API by journal_ref) : https://export.arxiv.org/api/query?search_query=jr:"PhysRevLett"
 """
 
 import calendar
@@ -494,32 +494,53 @@ def fetch_article_text(url, timeout=25):
     return out
 
 
-def fetch_prl_crossref(max_n=10):
-    """PRL 最新正式发表（Crossref，按 PRL 的 ISSN 0031-9007 取最近发表）。"""
-    url = ("https://api.crossref.org/journals/0031-9007/works?sort=published"
-           "&order=desc&rows=" + str(max_n) +
-           "&select=title,published,DOI,URL,author")
+def fetch_prl_arxiv(max_n=10):
+    """PRL 最新正式发表（arXiv API 按 journal_ref=PhysRevLett 检索，直接带 arXiv 主分类）。
+
+    相比 Crossref 按 ISSN 取最近发表，本函数用 arXiv 的 jr: 检索，
+    每条自带 primary_category（即 arXiv 学科分类，如 quant-ph / cond-mat.mes-hall / hep-ph），
+    便于在仪表盘按「arXiv 类别」区分 PRL 主题；同时自带摘要（Crossref 版无摘要）。
+    """
+    url = ("https://export.arxiv.org/api/query?search_query=jr:%22PhysRevLett%22"
+           "&sortBy=submittedDate&sortOrder=descending&start=0&max_results=" + str(max_n))
     st, data = http_get(url)
     if st != 200:
         return []
     try:
-        j = json.loads(data)
+        ns = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
+        root = ET.fromstring(data)
     except Exception:  # noqa: BLE001
         return []
     out = []
-    for it in j.get("message", {}).get("items", []):
-        ts = it.get("title", [""])
-        t = ts[0] if ts else ""
-        if not t:
+    for e in root.findall("a:entry", ns):
+        title = _clean(e.findtext("a:title", "", ns))
+        if not title:
             continue
-        doi = it.get("DOI", "")
+        aid_raw = e.findtext("a:id", "", ns)
+        aid = aid_raw.split("/abs/")[-1] if aid_raw else ""
+        summary = _clean(e.findtext("a:summary", "", ns))
+        pc = e.find("arxiv:primary_category", ns)
+        arxiv_cat = pc.get("term", "") if pc is not None else ""
+        published = _clean(e.findtext("a:published", "", ns))[:10]
+        # 优先取 journal DOI 链接（rel=related, title=doi），回退 arXiv abs
+        doi_url = ""
+        for ln in e.findall("a:link", ns):
+            if ln.get("title") == "doi":
+                doi_url = ln.get("href", "")
+                break
+        if not doi_url:
+            journal_ref = e.findtext("arxiv:journal_ref", "", ns) or ""
+            m = re.search(r"10\.\d{4,9}/[^\s,]+", journal_ref)
+            if m:
+                doi_url = "https://doi.org/" + m.group(0)
         out.append({
-            "title": _clean(t),
-            "url": f"https://doi.org/{doi}" if doi else it.get("URL", ""),
-            "summary": "",
+            "title": title,
+            "url": doi_url or (f"https://arxiv.org/abs/{aid}" if aid else ""),
+            "summary": summary[:400],
             "source": "PRL",
             "extra": "Physical Review Letters",
-            "date": str(it.get("published", {}).get("date-parts", [[""]])[0][0]),
+            "arxiv_cat": arxiv_cat,
+            "date": published,
         })
     return out
 
