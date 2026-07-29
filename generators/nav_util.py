@@ -48,9 +48,13 @@ NAV_CSS = """
 .hamburger{border-radius:10px;font-size:18px;line-height:1;display:none;justify-content:center}
 .nav-toggle.off{opacity:.5}
 @media(max-width:1024px){
-  .nav-inner{flex-wrap:nowrap;gap:10px}
-  .nav-brand{font-size:16px;margin-right:auto}
-  .hamburger{display:inline-flex}
+  /* 单行布局：品牌可收缩+省略号兜底，其余控件不收缩，确保汉堡永远落在右 padding 内、绝不溢出视口 */
+  .nav-inner{flex-wrap:nowrap;gap:8px;overflow:hidden}
+  .nav-brand{font-size:15px;margin-right:auto;flex:1 1 auto;min-width:0;
+    display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .home-link{padding:5px 9px;font-size:12.5px;flex-shrink:0}
+  .theme-toggle,.nav-toggle{padding:5px 9px;font-size:12.5px;flex-shrink:0}
+  .hamburger{flex-shrink:0;display:inline-flex}
   .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:6px;
     padding:10px max(16px,env(safe-area-inset-left)) 14px max(16px,env(safe-area-inset-right));
     background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
