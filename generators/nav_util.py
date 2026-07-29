@@ -31,8 +31,8 @@ NAV_CSS = """
 .nav{position:sticky;top:0;z-index:30;background:var(--nav-bg);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-bottom:1px solid var(--nav-line)}
-.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;
-  padding:11px max(20px,env(safe-area-inset-right)) 11px max(20px,env(safe-area-inset-left))}
+.nav-inner{max-width:1180px;width:100%;margin:0 auto;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;
+  padding:11px max(20px,env(safe-area-inset-right)) 11px max(20px,env(safe-area-inset-left));overflow-x:clip}
 .nav-brand{font-weight:800;font-size:17px;margin-right:auto;display:flex;align-items:center;gap:7px;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex:1 1 auto;min-width:0;scrollbar-width:none}
 .nav-links::-webkit-scrollbar{display:none}
@@ -58,6 +58,9 @@ NAV_CSS = """
   .nav.menu-open .nav-links{display:flex}
   .nav-link{width:100%;justify-content:space-between;padding:11px 14px;font-size:15px;border-radius:10px}
   .nav-count{font-size:12px}
+  /* 翻译控件默认收进汉堡抽屉，避免与汉堡并排横向溢出视口 */
+  .nav-translate{display:none}
+  .nav.menu-open .nav-translate{display:inline-flex}
 }
 /* Google 网站翻译器：隐藏其默认顶部横幅（避免把页面下推）；让小工具融入导航栏 */
 .goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}

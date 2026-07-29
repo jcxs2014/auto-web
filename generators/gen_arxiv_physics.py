@@ -560,7 +560,7 @@ def build_html(theme_papers: list[tuple[str, list[dict]]], jitems: list[dict], n
     <span class="hero-eyebrow">⚛️ arXiv · Physics Latest</span>
     <h1 class="hero-title">物理最新论文 · {today_str}</h1>
     <p class="hero-sub">按提交时间倒序，每主题取最近 {PER_THEME} 篇，共 <strong>{total}</strong> 篇</p>
-    <p class="hero-window">抓取时间：{fetch_time} · 数据源：arXiv API · Nature 主刊 / Nature Physics / Nature Communications / PNAS / Science / PRL（含已正式发表期刊）</p>
+    <p class="hero-window">抓取时间：{fetch_time} · 数据源：arXiv API · Nature 主刊 / Nature Physics / Nature Communications / Science / PRL（含已正式发表期刊）</p>
     <p class="hero-cats">覆盖类别：<code>{html.escape(cats_str)}</code></p>
     <div class="hero-stats">
       <span class="total-pill"><span class="num">{total}</span><span class="lbl">篇论文</span></span>
@@ -574,7 +574,7 @@ def build_html(theme_papers: list[tuple[str, list[dict]]], jitems: list[dict], n
 </main>
 {build_footer()}
 <footer>
-  共 <strong>{total}</strong> 篇 · 数据来源 arXiv.org + 前沿期刊（Nature 主刊 / Nature Physics / Nature Communications / PNAS / Science / PRL）· 时间已转换为北京时间 · 摘要悬停可看全文 · 数学公式由 <a href="https://www.mathjax.org" target="_blank" rel="noopener noreferrer">MathJax</a> 渲染（需联网）· 中文译文由 Google 翻译（仅供参考，以英文原文为准）
+  共 <strong>{total}</strong> 篇 · 数据来源 arXiv.org + 前沿期刊（Nature 主刊 / Nature Physics / Nature Communications / Science / PRL）· 时间已转换为北京时间 · 摘要悬停可看全文 · 数学公式由 <a href="https://www.mathjax.org" target="_blank" rel="noopener noreferrer">MathJax</a> 渲染（需联网）· 中文译文由 Google 翻译（仅供参考，以英文原文为准）
 </footer>
 {TOGGLE_SCRIPT}
 <script>
@@ -658,13 +658,13 @@ def main():
         ("https://www.nature.com/nature/rss/getrss.html", "Nature 主刊"),
         ("https://www.nature.com/nphys/rss/getrss.html", "Nature Physics"),
         ("https://www.nature.com/ncomms/rss/getrss.html", "Nature Communications"),
-        ("https://www.pnas.org/rss/current.xml", "PNAS"),
         ("https://www.science.org/rss/news_current.xml", "Science"),
     ]
     jitems = []
     for _url, _name in journal_feeds:
         jitems.extend(fetch_rss(_url, _name, max_n=6))
-    jitems.extend(fetch_prl_crossref(max_n=6))
+    # PRL 前置到前列，避免被 dedup[:30] 截断（原来追加在末尾，被前面 30 条期刊占满而丢失）
+    jitems = fetch_prl_crossref(max_n=6) + jitems
     jitems = dedup(jitems)[:30]
     if do_translate and jitems:
         print(f"[arxiv] 翻译前沿期刊中文（{len(jitems)} 条）...", flush=True)
