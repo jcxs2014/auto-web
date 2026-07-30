@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+      "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+      "summary": "How two API settings improved GPT-5.6 performance on ARC-AGI-3, boosting scores and efficiency by retaining reasoning and enabling compaction.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-29 15:00",
+      "ts": 1785337200,
+      "content": ""
+    },
+    {
       "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
       "url": "https://openai.com/index/chatgpt-for-academic-researchers",
       "summary": "OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.",
@@ -12,6 +22,16 @@
       "extra": "",
       "date": "2026-07-29 10:00",
       "ts": 1785319200,
+      "content": ""
+    },
+    {
+      "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
+      "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
+      "summary": "GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-29 00:00",
+      "ts": 1785283200,
       "content": ""
     },
     {
@@ -32,16 +52,6 @@
       "extra": "",
       "date": "2026-07-27 03:30",
       "ts": 1785123000,
-      "content": ""
-    },
-    {
-      "title": "Launching Health in ChatGPT",
-      "url": "https://openai.com/index/health-in-chatgpt",
-      "summary": "Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-23 00:00",
-      "ts": 1784764800,
       "content": ""
     }
   ]
