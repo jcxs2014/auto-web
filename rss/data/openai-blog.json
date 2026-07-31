@@ -5,9 +5,29 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Disrupting a Criminal Scam Operation",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+      "summary": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-04 00:00",
+      "ts": 1785801600,
+      "content": ""
+    },
+    {
       "title": "Advancing responsible AI across Europe",
       "url": "https://openai.com/index/advancing-responsible-ai-across-europe",
       "summary": "OpenAI shares how its safety, security, transparency, and provenance practices support responsible AI governance in Europe. The work will continue as the EU AI Act advances.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-07-31 15:00",
+      "ts": 1785510000,
+      "content": ""
+    },
+    {
+      "title": "Building abundant intelligence",
+      "url": "https://openai.com/index/building-abundant-intelligence",
+      "summary": "A full-stack approach to making advanced AI more capable, more affordable, and more widely useful.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-07-31 15:00",
@@ -82,16 +102,6 @@
       "extra": "",
       "date": "2026-07-28 17:00",
       "ts": 1785258000,
-      "content": ""
-    },
-    {
-      "title": "How AI is expanding what people do at work",
-      "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
-      "summary": "New OpenAI research shows how AI is expanding what workers do, with ChatGPT users taking on tasks across roles and reshaping job boundaries.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-27 03:30",
-      "ts": 1785123000,
       "content": ""
     }
   ]
