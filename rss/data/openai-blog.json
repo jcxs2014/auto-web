@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How we built a realtime system for responsive voice AI in six months",
+      "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+      "summary": "GPT-Live enables continuous voice interaction with AI, using a turnless speech model and low-latency architecture for faster, more natural conversations.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-03 07:00",
+      "ts": 1785740400,
+      "content": ""
+    },
+    {
+      "title": "Circles powers telco personalization with OpenAI technology",
+      "url": "https://openai.com/index/circles",
+      "summary": "Circles uses the OpenAI API and Codex to power AI-native telco experiences, increasing ARPU by 22%, reducing churn by 9%, and improving development efficiency.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-03 00:00",
+      "ts": 1785715200,
+      "content": ""
+    },
+    {
       "title": "Ten advances in mathematics and theoretical computer science",
       "url": "https://openai.com/index/ten-advances-in-mathematics",
       "summary": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-07-29 15:00",
       "ts": 1785337200,
-      "content": ""
-    },
-    {
-      "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
-      "url": "https://openai.com/index/chatgpt-for-academic-researchers",
-      "summary": "OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-29 10:00",
-      "ts": 1785319200,
-      "content": ""
-    },
-    {
-      "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
-      "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
-      "summary": "GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-29 00:00",
-      "ts": 1785283200,
       "content": ""
     }
   ]
