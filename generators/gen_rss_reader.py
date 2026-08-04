@@ -27,6 +27,7 @@ from urllib.parse import quote
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sources_util import fetch_rss, fetch_article_text
 from nav_util import NAV_CSS, build_nav, FOOTER_CSS, build_footer
+from sanitize_util import sanitize_html
 
 ROOT = Path(__file__).resolve().parent.parent
 FEEDS_FILE = ROOT / "rss" / "feeds.json"
@@ -419,34 +420,6 @@ __FOOTER_HTML__
 def slugify(s):
     s = "".join(ch if (ch.isalnum() or ch in "-_") else "-" for ch in (s or "").lower())
     return s.strip("-") or "feed"
-
-
-# 文章正文（来自 trafilatura 等抽取器）可能包含字面 <script>/<style>/<iframe>
-# 等标签（尤其技术类文章会讨论这些标签本身）。直接内联进页面会让浏览器把
-# 正文里的 <script> 当成真脚本标签，吞掉后续真正的 JS（如 openReader 定义），
-# 导致整页「阅读全文」按钮全部失效。sanitize 用于：
-#   1) 整段移除成对的 <script>/<style>/<iframe>/<object>/<embed>/<link>/<meta>/<noscript> 块
-#   2) 把残留的未配对标签字面转义为文本（如文章讨论 «<script> tag»）
-#   3) 剥离 on* 事件属性与 javascript: 协议链接（防 XSS）
-# 保留 p/a/img/code/pre/blockquote/h1-4/ul/ol/table 等安全排版标签。
-_DANGER_BLOCK = re.compile(
-    r"<(script|style|iframe|object|embed|link|meta|noscript)\b[^>]*>.*?</\1>",
-    re.I | re.S)
-_DANGER_OPEN = re.compile(r"<(script|style|iframe|object|embed|link|meta|noscript)\b[^>]*/?>", re.I)
-_DANGER_CLOSE = re.compile(r"</(script|style|iframe|object|embed|link|meta|noscript)\s*>", re.I)
-_ON_ATTR = re.compile(r"\s+on\w+\s*=\s*(\"[^\"]*\"|'[^']*'|[^\s>]+)", re.I)
-_JS_URI = re.compile(r"(href|src)\s*=\s*(\"javascript:[^\"]*\"|'javascript:[^']*')", re.I)
-
-
-def sanitize_html(html):
-    if not html:
-        return html
-    html = _DANGER_BLOCK.sub("", html)             # 配对危险块整段移除
-    html = _DANGER_OPEN.sub("&lt;\\1", html)        # 残留未配对开始标签 → 文本
-    html = _DANGER_CLOSE.sub("&lt;/\\1&gt;", html)  # 残留未配对结束标签 → 文本
-    html = _ON_ATTR.sub("", html)                   # 移除 on* 事件属性
-    html = _JS_URI.sub("", html)                    # 移除 javascript: 协议链接
-    return html
 
 
 def load_feeds():
