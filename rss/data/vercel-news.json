@@ -5,7 +5,7 @@
   "lang": "en",
   "entries": [
     {
-      "title": "Vercel supports Next.js 16.3",
+      "title": "Next.js 16.3 support on Vercel",
       "url": "https://vercel.com/blog/vercel-supports-next-js-16-3",
       "summary": "Yesterday the Next.js team announced the release of Next.js 16.3, with leaner prefetching, immutable static assets, and instant navigations. As part of this release, we worked with the Next.js team to fully support 16.3 on Vercel, including better performance and additional observability. Applications that have upgraded have seen:Fewer prefetch requests: Apps upgrading from 16.2 to 16.3 saw 45% fe",
       "source": "Vercel News",
