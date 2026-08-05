@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Third-party cyber evaluations involving OpenAI models",
+      "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+      "summary": "OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-04 19:00",
+      "ts": 1785870000,
+      "content": ""
+    },
+    {
       "title": "New ways to learn and teach with ChatGPT Work and Codex",
       "url": "https://openai.com/index/learn-teach-chatgpt-work-codex",
       "summary": "Explore new education plugins for ChatGPT Work and Codex that help K–12 teachers, college educators, and students learn, teach, research, and build.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-07-31 00:00",
       "ts": 1785456000,
-      "content": ""
-    },
-    {
-      "title": "Advancing the price-performance frontier with GPT-5.6",
-      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
-      "summary": "Explore lower GPT‑5.6 pricing for Luna and Terra—and how OpenAI’s more efficient models help enterprises deploy AI workflows at scale.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-30 10:00",
-      "ts": 1785405600,
       "content": ""
     }
   ]
