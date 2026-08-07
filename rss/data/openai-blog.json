@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+      "summary": "ChatGPT introduces improved GPT-5.6 Sol with better accuracy and consistency, plus expanded access for free users and unlimited everyday chats with GPT-5.6 Luna.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-06 10:00",
+      "ts": 1786010400,
+      "content": ""
+    },
+    {
+      "title": "Working with the American Psychological Association on youth mental health and AI",
+      "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
+      "summary": "OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-06 06:00",
+      "ts": 1785996000,
+      "content": ""
+    },
+    {
+      "title": "From asking to doing: How the world is putting ChatGPT to work",
+      "url": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+      "summary": "New OpenAI Signals data shows how people use ChatGPT worldwide, with country-level insights on adoption, usage trends, and evolving behavior.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-06 00:00",
+      "ts": 1785974400,
+      "content": ""
+    },
+    {
       "title": "Third-party cyber evaluations involving OpenAI models",
       "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
       "summary": "OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-07-31 15:00",
       "ts": 1785510000,
-      "content": ""
-    },
-    {
-      "title": "Building abundant intelligence",
-      "url": "https://openai.com/index/building-abundant-intelligence",
-      "summary": "A full-stack approach to making advanced AI more capable, more affordable, and more widely useful.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-31 15:00",
-      "ts": 1785510000,
-      "content": ""
-    },
-    {
-      "title": "Univé builds an AI-ready workforce",
-      "url": "https://openai.com/index/unive",
-      "summary": "See how Univé built an AI-ready workforce with ChatGPT Enterprise by combining leadership, responsible governance, and employee-led innovation to transform work at scale.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-31 07:00",
-      "ts": 1785481200,
-      "content": ""
-    },
-    {
-      "title": "Disrupting a Criminal Scam Operation",
-      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
-      "summary": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-31 00:00",
-      "ts": 1785456000,
       "content": ""
     }
   ]
