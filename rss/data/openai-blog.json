@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
+      "url": "https://openai.com/index/hsp-gruppe",
+      "summary": "Discover how HSP GRUPPE uses ChatGPT Enterprise to boost productivity, improve work quality, and create more capacity for tax advisory and client service.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-07 09:00",
+      "ts": 1786093200,
+      "content": ""
+    },
+    {
       "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
       "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
       "summary": "ChatGPT introduces improved GPT-5.6 Sol with better accuracy and consistency, plus expanded access for free users and unlimited everyday chats with GPT-5.6 Luna.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-08-01 00:00",
       "ts": 1785542400,
-      "content": ""
-    },
-    {
-      "title": "Advancing responsible AI across Europe",
-      "url": "https://openai.com/index/advancing-responsible-ai-across-europe",
-      "summary": "OpenAI shares how its safety, security, transparency, and provenance practices support responsible AI governance in Europe. The work will continue as the EU AI Act advances.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-07-31 15:00",
-      "ts": 1785510000,
       "content": ""
     }
   ]
