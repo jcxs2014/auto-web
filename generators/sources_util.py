@@ -20,7 +20,9 @@ sources_util.py —— 多数据源抓取工具，供 AI 新闻页 / 物理论�
   - arXiv cs.AI/LG/CL      : http://export.arxiv.org/api/query
   - Nature Physics RSS     : https://www.nature.com/nphys/rss/getrss.html
   - Science 新闻 RSS       : https://www.science.org/rss/news_current.xml
-  - PRL (arXiv API by journal_ref) : https://export.arxiv.org/api/query?search_query=jr:"PhysRevLett"
+  - PRL (APS RSS + Editors' Suggestion) : https://feeds.aps.org/rss/recent/prl.xml
+  - PRL Editors' Suggestion RSS          : https://feeds.aps.org/rss/recent/prlsuggestions.xml
+  - PRL arXiv 分类反查 (辅助)             : https://export.arxiv.org/api/query?search_query=jr:"PhysRevLett"
 """
 
 import calendar
@@ -500,6 +502,8 @@ def fetch_prl_arxiv(max_n=10):
     相比 Crossref 按 ISSN 取最近发表，本函数用 arXiv 的 jr: 检索，
     每条自带 primary_category（即 arXiv 学科分类，如 quant-ph / cond-mat.mes-hall / hep-ph），
     便于在仪表盘按「arXiv 类别」区分 PRL 主题；同时自带摘要（Crossref 版无摘要）。
+
+    同时交叉比对 APS Editors' Suggestion RSS feed，标注哪些文章是 Editor's Suggestion。
     """
     url = ("https://export.arxiv.org/api/query?search_query=jr:%22PhysRevLett%22"
            "&sortBy=submittedDate&sortOrder=descending&start=0&max_results=" + str(max_n))
@@ -511,6 +515,10 @@ def fetch_prl_arxiv(max_n=10):
         root = ET.fromstring(data)
     except Exception:  # noqa: BLE001
         return []
+
+    # 获取 Editors' Suggestion 集合（vol.page 键），失败则空集
+    suggestion_keys = fetch_prl_editors_suggestions()
+
     out = []
     for e in root.findall("a:entry", ns):
         title = _clean(e.findtext("a:title", "", ns))
@@ -528,11 +536,21 @@ def fetch_prl_arxiv(max_n=10):
             if ln.get("title") == "doi":
                 doi_url = ln.get("href", "")
                 break
+        journal_ref = e.findtext("arxiv:journal_ref", "", ns) or ""
         if not doi_url:
-            journal_ref = e.findtext("arxiv:journal_ref", "", ns) or ""
             m = re.search(r"10\.\d{4,9}/[^\s,]+", journal_ref)
             if m:
                 doi_url = "https://doi.org/" + m.group(0)
+
+        # 交叉比对 Editor's Suggestion：从 journal_ref 提取 vol.page
+        is_suggestion = False
+        if suggestion_keys:
+            # 匹配 "PhysRevLett.137.060802" 或 "PhysRevLett 137 060802" 等
+            m = re.search(r"PhysRevLett[.\s]+(\d+)[.\s]+(\d+)", journal_ref, re.I)
+            if m:
+                vol_page = f"{m.group(1)}.{m.group(2)}"
+                is_suggestion = vol_page in suggestion_keys
+
         out.append({
             "title": title,
             "url": doi_url or (f"https://arxiv.org/abs/{aid}" if aid else ""),
@@ -541,7 +559,156 @@ def fetch_prl_arxiv(max_n=10):
             "extra": "Physical Review Letters",
             "arxiv_cat": arxiv_cat,
             "date": published,
+            "editors_suggestion": is_suggestion,
         })
+    return out
+
+
+def fetch_prl_editors_suggestions():
+    """获取 PRL Editors' Suggestion 文章集合（来自 APS 官方 RSS feed）。
+
+    返回一个 set，元素为归一化的 "vol.page" 字符串（如 "137.060802"），
+    供 fetch_prl_arxiv 交叉标注哪些文章是 Editor's Suggestion。
+
+    APS feed URL: https://feeds.aps.org/rss/recent/prlsuggestions.xml
+    """
+    url = "https://feeds.aps.org/rss/recent/prlsuggestions.xml"
+    st, data = http_get(url)
+    if st != 200:
+        return set()
+    try:
+        ns = {
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "rss": "http://purl.org/rss/1.0/",
+            "dc": "http://purl.org/dc/elements/1.1/",
+            "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+        }
+        root = ET.fromstring(data)
+    except Exception:  # noqa: BLE001
+        return set()
+    keys = set()
+    for item in root.findall(".//rss:item", ns):
+        vol = (item.findtext("prism:volume", "", ns) or "").strip()
+        page = (item.findtext("prism:startingPage", "", ns) or "").strip()
+        if vol and page:
+            keys.add(f"{vol}.{page}")
+    return keys
+
+
+def _extract_aps_summary(desc):
+    """从 APS RSS description 提取纯文本摘要。
+
+    APS description 格式: "Author(s): ...<br/><p>摘要正文...</p>"
+    取 <p> 标签内容、去 HTML 标签、压缩空白。
+    """
+    if not desc:
+        return ""
+    # 取 <p>...</p> 里的内容（跳过第一个 <p>Author(s)...</p>）
+    parts = re.findall(r"<p>(.*?)</p>", desc, re.S)
+    if len(parts) >= 2:
+        txt = parts[1]  # 第二个 <p> 是摘要
+    elif parts:
+        txt = parts[0]
+    else:
+        txt = desc
+    # 去 HTML 标签
+    txt = re.sub(r"<[^>]+>", " ", txt)
+    txt = re.sub(r"\s+", " ", txt).strip()
+    return txt
+
+
+def _build_arxiv_prl_cat_map(max_n=80):
+    """从 arXiv 构建 vol.page → arxiv_cat 映射（仅覆盖有 arXiv 预印本的 PRL 文章）。
+
+    用于给 APS RSS 来的文章反查 arXiv 学科分类。
+    """
+    url = ("https://export.arxiv.org/api/query?search_query=jr:%22PhysRevLett%22"
+           "&sortBy=submittedDate&sortOrder=descending&start=0&max_results=" + str(max_n))
+    st, data = http_get(url)
+    if st != 200:
+        return {}
+    try:
+        ns = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
+        root = ET.fromstring(data)
+    except Exception:  # noqa: BLE001
+        return {}
+    cat_map = {}
+    for e in root.findall("a:entry", ns):
+        jref = e.findtext("arxiv:journal_ref", "", ns) or ""
+        m = re.search(r"PhysRevLett[.\s]+(\d+)[.\s]+(\d+)", jref, re.I)
+        if not m:
+            continue
+        vol_page = f"{m.group(1)}.{m.group(2)}"
+        pc = e.find("arxiv:primary_category", ns)
+        cat = pc.get("term", "") if pc is not None else ""
+        if cat:
+            cat_map[vol_page] = cat
+    return cat_map
+
+
+def fetch_prl_aps(max_n=6):
+    """PRL 最新正式发表（来自 APS 官方 RSS feed），含 Editors' Suggestion 标注。
+
+    APS RSS 提供比 arXiv jr: 检索更及时的文章列表（最新卷号），
+    且可直接交叉比对 Editors' Suggestion feed 标注推荐文章。
+    同时从 arXiv 反查 arXiv 主分类（有预印本的文章才有）。
+
+    返回结构与 fetch_prl_arxiv 一致，额外带 editors_suggestion 布尔字段。
+    """
+    # 1. 获取 Editors' Suggestion 集合
+    suggestion_keys = fetch_prl_editors_suggestions()
+
+    # 2. 获取 APS PRL RSS
+    url = "https://feeds.aps.org/rss/recent/prl.xml"
+    st, data = http_get(url)
+    if st != 200:
+        return []
+    try:
+        ns = {
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "rss": "http://purl.org/rss/1.0/",
+            "dc": "http://purl.org/dc/elements/1.1/",
+            "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+            "content": "http://purl.org/rss/1.0/modules/content/",
+        }
+        root = ET.fromstring(data)
+    except Exception:  # noqa: BLE001
+        return []
+
+    # 3. 构建 arXiv vol.page → arxiv_cat 映射
+    arxiv_cat_map = _build_arxiv_prl_cat_map()
+
+    out = []
+    for item in root.findall(".//rss:item", ns):
+        title = re.sub(r"<[^>]+>", "", (item.findtext("rss:title", "", ns) or "").strip())
+        if not title:
+            continue
+        link = (item.findtext("rss:link", "", ns) or "").strip()
+        desc = item.findtext("rss:description", "", ns) or ""
+        summary = _extract_aps_summary(desc)
+        vol = (item.findtext("prism:volume", "", ns) or "").strip()
+        page = (item.findtext("prism:startingPage", "", ns) or "").strip()
+        date = (item.findtext("dc:date", "", ns) or "").strip()[:10]
+
+        # Editor's Suggestion 标注
+        vol_page = f"{vol}.{page}" if vol and page else ""
+        is_suggestion = bool(suggestion_keys and vol_page in suggestion_keys)
+
+        # arXiv 分类反查
+        arxiv_cat = arxiv_cat_map.get(vol_page, "")
+
+        out.append({
+            "title": title,
+            "url": link,
+            "summary": summary[:400],
+            "source": "PRL",
+            "extra": "Physical Review Letters",
+            "arxiv_cat": arxiv_cat,
+            "date": date,
+            "editors_suggestion": is_suggestion,
+        })
+        if len(out) >= max_n:
+            break
     return out
 
 

@@ -29,7 +29,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from archive_util import write_archive
 from nav_util import NAV_CSS, build_nav, FOOTER_CSS, build_footer
-from sources_util import fetch_rss, fetch_prl_arxiv, dedup
+from sources_util import fetch_rss, fetch_prl_aps, dedup
 
 BASE = "https://export.arxiv.org/api/query"
 
@@ -254,6 +254,10 @@ def render_journal_card(it: dict, seq: int) -> str:
     arxiv_cat = it.get("arxiv_cat", "")
     arxiv_cat_html = (f'<span class="arxiv-cat-chip" title="arXiv 主分类">{html.escape(arxiv_cat)}</span>'
                       if arxiv_cat else "")
+    # Editor's Suggestion 徽章（来自 APS 官方 RSS feed 交叉比对）
+    ed_sug_html = ""
+    if it.get("editors_suggestion"):
+        ed_sug_html = '<span class="ed-sug-chip" title="APS Editors\' Suggestion">⭐ Editor\'s Suggestion</span>'
     summary_full = html.escape(it.get("summary", ""))
     summary_short = html.escape(cn_truncate(it.get("summary", ""), 300))
     zh_title = it.get("zh_title", "")
@@ -278,6 +282,7 @@ def render_journal_card(it: dict, seq: int) -> str:
             <span class="seq">{seq:02d}</span>
             <span class="source-chip" title="{source}">{source}</span>
             {arxiv_cat_html}
+            {ed_sug_html}
             {date_html}
           </div>
           <h3 class="card-title">{title}</h3>
@@ -511,6 +516,7 @@ def build_html(theme_papers: list[tuple[str, list[dict]]], jitems: list[dict], n
   }}
   .source-chip {{ font-size: 11px; color: var(--accent-3); background: var(--accent3-soft); border: 1px solid var(--accent3-soft-border); padding: 3px 8px; border-radius: 999px; font-family: "SF Mono","JetBrains Mono",Menlo,monospace; }}
   .arxiv-cat-chip {{ font-size: 11px; color: var(--accent-2); background: rgba(59,125,240,0.10); border: 1px solid rgba(59,125,240,0.28); padding: 3px 8px; border-radius: 999px; font-family: "SF Mono","JetBrains Mono",Menlo,monospace; }}
+  .ed-sug-chip {{ font-size: 11px; color: #b8860b; background: rgba(255,193,7,0.12); border: 1px solid rgba(255,193,7,0.35); padding: 3px 8px; border-radius: 999px; white-space: nowrap; }}
   .arxiv-id {{ font-size: 11px; color: var(--text-mute); font-family: "SF Mono","JetBrains Mono",Menlo,monospace; margin-left: auto; }}
   .journal-date {{ font-size: 11px; color: var(--text-mute); }}
   .journal-tag {{ font-size: 11px; color: var(--accent-3); background: var(--accent3-soft); border: 1px solid var(--accent3-soft-border); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }}
@@ -670,7 +676,7 @@ def main():
     for _url, _name in journal_feeds:
         jitems.extend(fetch_rss(_url, _name, max_n=6))
     # PRL 前置到前列，避免被 dedup[:30] 截断（原来追加在末尾，被前面 30 条期刊占满而丢失）
-    jitems = fetch_prl_arxiv(max_n=6) + jitems
+    jitems = fetch_prl_aps(max_n=6) + jitems
     jitems = dedup(jitems)[:30]
     if do_translate and jitems:
         print(f"[arxiv] 翻译前沿期刊中文（{len(jitems)} 条）...", flush=True)
