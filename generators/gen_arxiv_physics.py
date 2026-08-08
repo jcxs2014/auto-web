@@ -677,7 +677,30 @@ def main():
         jitems.extend(fetch_rss(_url, _name, max_n=6))
     # PRL 前置到前列，避免被 dedup[:30] 截断（原来追加在末尾，被前面 30 条期刊占满而丢失）
     jitems = fetch_prl_aps(max_n=6) + jitems
-    jitems = dedup(jitems)[:30]
+    jitems = dedup(jitems)
+    # 时效保护：丢弃超过 14 天的期刊文章（防止 RSS 返回旧文 / arXiv jr: 滞后文章混入）
+    cutoff = datetime.now(timezone.utc) - timedelta(days=14)
+    fresh = []
+    dropped = 0
+    for it in jitems:
+        d = it.get("date", "")
+        keep = True
+        if d:
+            for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%d"):
+                try:
+                    dt = datetime.strptime(d[:len(fmt) + 1].strip(), fmt).replace(tzinfo=timezone.utc)
+                    if dt < cutoff:
+                        keep = False
+                    break
+                except ValueError:
+                    continue
+        if keep:
+            fresh.append(it)
+        else:
+            dropped += 1
+    if dropped:
+        print(f"[arxiv] 时效保护：丢弃 {dropped} 条超过 14 天的期刊旧文")
+    jitems = fresh[:30]
     if do_translate and jitems:
         print(f"[arxiv] 翻译前沿期刊中文（{len(jitems)} 条）...", flush=True)
         for it in jitems:
