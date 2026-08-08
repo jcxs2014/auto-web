@@ -5,7 +5,7 @@
   "lang": "en",
   "entries": [
     {
-      "title": "Making navigations instant in v0",
+      "title": "Making Navigations Instant in v0",
       "url": "https://nextjs.org/blog/making-v0-navigations-instant",
       "summary": "The case study behind Instant Navigations in Next.js 16.3, and how we made v0's navigations instant using tests and a coding agent.",
       "source": "Next.js Blog",
