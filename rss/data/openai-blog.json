@@ -93,16 +93,6 @@
       "date": "2026-08-03 07:00",
       "ts": 1785740400,
       "content": ""
-    },
-    {
-      "title": "Circles powers telco personalization with OpenAI technology",
-      "url": "https://openai.com/index/circles",
-      "summary": "Circles uses the OpenAI API and Codex to power AI-native telco experiences, increasing ARPU by 22%, reducing churn by 9%, and improving development efficiency.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-03 00:00",
-      "ts": 1785715200,
-      "content": ""
     }
   ]
 }
