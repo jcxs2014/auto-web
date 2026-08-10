@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Venmo is giving you a new way to pay on Google Play.",
+      "url": "https://blog.google/products-and-platforms/platforms/google-play/venmo-google-play-store/",
+      "summary": "Venmo is now available as a payment option on Google Play, giving you more flexibility at checkout.",
+      "source": "The Keyword (Google)",
+      "extra": "",
+      "date": "2026-08-10 12:00",
+      "ts": 1786363200,
+      "content": "\n    <p>Venmo is now available as a payment option on Google Play, giving you more flexibility at checkout. Starting today, you can link your Venmo account to the Google Play Store to bring the digital wallet you already trust to the apps, games and digital content you love most.</p>\n    <p>Whether you use your Venmo balance or a linked payment method, you’ll have a new way to level up in your favorite games, manage your subscriptions and tip the creators who inspire you.</p>\n    <p>It’s the secure, fast, and social experience you know, now ready to use across Google Play. To update the way you pay on Play, go to your payment methods in the Google Play Store to link your Venmo account.</p>"
+    },
+    {
       "title": "See what 5 builders are making with Gemini Omni",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders/",
       "summary": "Gemini Omni images",
@@ -93,16 +103,6 @@
       "date": "2026-08-03 16:00",
       "ts": 1785772800,
       "content": "\n    <p>We’ve been a proud part of the Austin community for nearly 20 years, moving from our first campus in North Austin to our current one downtown and growing to thousands of employees. And now, we’re deepening our commitment to the Lone Star State with our newest office and Google.org nonprofit venue at Sail Tower.</p>\n    <p>Located in the heart of the city, this iconic sail-shaped building is a celebration of Texas culture, greeting Googlers with bright colors and local artwork. We’ve designed each floor around a different Texas region, paying homage to the desert wildflowers of Big Bend, the hiking trails of Hill Country, and the thunderstorms of Marfa. The workspace also provides a variety of flexible areas for collaboration, innovation, and focused work, including outdoor terraces with native Texas plants and inspiring views.</p>\n    <p>Beyond serving as a new home for Googlers, Sail Tower will also welcome in the Austin community. We’re opening a new Google.org venue for nonprofit programming, and local (Austin metro area) nonprofits can book the space for board meetings, workshops, classes, and community events at no cost. <a href=\"https://communityspace.withgoogle.com/austin\">Learn more.</a></p>\n    <p>“Spaces like this are absolutely vital for Austin’s nonprofit community,” said Austin Mayor Kirk Watson. “When good neighbors and partners like Google open doors to our local visionaries, they’re not just offering a physical space, they’re strengthening the fabric of Austin and helping our community thrive.”</p>\n    <p>We’re excited for Sail Tower to become a hub for connection and technological advancement in Austin for years to come.</p>"
-    },
-    {
-      "title": "Inside our 353,000-person vibe coding course",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
-      "summary": "Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube",
-      "source": "The Keyword (Google)",
-      "extra": "",
-      "date": "2026-08-03 15:00",
-      "ts": 1785769200,
-      "content": "\n    <p>AI is moving faster than traditional methods of learning and teaching can keep up with it. With new concepts, skills, ideas, and tools arriving almost daily, we needed a new way to teach and learn these new technologies.</p>\n    <p>Since Google and Kaggle’s first “5 Day Intensive” course in 2024 more than 2 million learners and developers have participated in the multimodal, no cost courses. Our latest collaboration, the 5-Day AI Agents: Intensive Vibe Coding Course with Google, had over 353,000 registered participants. Together, we explored the frontier of vibe coding, where people program through natural language. Our courses navigated the entire lifecycle of designing, securing, and deploying production-grade AI agents in the cloud. The response proved that developers are ready to graduate their prototypes \"from vibe to live”.</p>\n    <p>Hundreds of thousands of learners gathered across codelabs and technical whitepapers to collaborate in real time. The heart of this collaboration was on <a href=\"https://discord.com/invite/kaggle\">Kaggle's Discord</a>, where over 392,000 active participants swapped code, debugged together, and formed study groups.</p>\n    <p>The capstone projects brought the week’s learning into action. We received over 6,000 project submissions from more than 12,000 active capstone participants.</p>\n    <p>The projects demonstrated the immense creativity, technical skill, and imagination of the global AI developer community. From advanced digital humanities tools like the historical manuscript transcription pipeline <a href=\"https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/palimpsest\">Palimpsest</a>, to sophisticated space-weather research systems like<a href=\"https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/project-aries\"> Project ARIES</a>, the caliber of submissions made it incredibly difficult to narrow down the top entries. You can explore all the winning teams and their <a href=\"https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/hackathon-winners\">capstone projects</a> on our website.</p>\n    <p>We look forward to continuing our partnership and exploring future learning opportunities. If you’re interested in learning more, you can continue honing your skills through ongoing <a href=\"https://www.kaggle.com/competitions\">Kaggle competitions</a> and stay connected with fellow learners on the <a href=\"https://discord.com/invite/kaggle\">Kaggle Discord</a>. For those who missed the live event in June but still want to learn, all course content remains available as a self-paced <a href=\"https://www.kaggle.com/learn-guide/5-day-agents-vibecoding\">Kaggle Learn guide</a>.</p>"
     }
   ]
 }
