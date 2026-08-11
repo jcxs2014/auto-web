@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Vercel Connect now supports CLI setup for 100+ connectors",
+      "url": "https://vercel.com/changelog/vercel-cli-100-services",
+      "summary": "You can now integrate 100+ services through Vercel Connect from the CLI. Previously, vercel connect create completed setup in the terminal for some services, and opened the dashboard for everything else.Pass the service name to create a connector, then attach it to your project:The CLI pre-populates the brand name, icon, auth type, and MCP or discovery URL, then prompts for any credentials the ser",
+      "source": "Vercel News",
+      "extra": "",
+      "date": "2026-08-11 19:00",
+      "ts": 1786474800,
+      "content": "<p>You can now integrate 100+ services through Vercel Connect from the CLI. Previously, </p><pre>vercel connect create</pre> completed setup in the terminal for some services, and opened the dashboard for everything else.\n    <p>Pass the service name to create a connector, then attach it to your project:</p>\n    <pre>\n      <pre>vercel connect create shopify --name acme-shopvercel connect attach shopify/acme-shop --project my-app --environment production</pre>\n    </pre>\n    <p>Use the Vercel CLI to add the Shopify connector</p>\n    <p>The CLI pre-populates the brand name, icon, auth type, and MCP or discovery URL, then prompts for any credentials the service requires and creates the connector.</p>\n    <p>After attaching the connector, call </p><pre>getToken</pre> with its UID (<pre>service/name</pre>) to request a short-lived, scoped token from the provider:\n    <pre>\n      <pre>import { getToken } from '@vercel/connect';\nconst token = await getToken('shopify/acme-shop', {  subject: { type: 'app' },  scopes: ['write_products'],});\nawait fetch(`https://acme.myshopify.com/admin/api/2026-01/graphql.json`, {  method: 'POST',  headers: {    'X-Shopify-Access-Token': token,    'Content-Type': 'application/json',  },  body: JSON.stringify({    query: `mutation {      productUpdate(product: { id: \"gid://shopify/Product/123\", title: \"Restocked: Acme Mug\" }) {        product { id }      }    }`,  }),});</pre>\n    </pre>\n    <p>Update a product in your Shopify store with the Vercel Connect credential</p>\n    <p>Get started by browsing the <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F~%2Fconnect%2Fbrowse\">connectors directory</a>, or read the <a href=\"https://vercel.com/docs/cli/connect\">CLI reference</a>.</p>\n    <p>Vercel Connect is in beta and available on all plans. Features and behavior, including available connectors and trigger forwarding, may change before general availability. Usage is subject to the <a href=\"https://vercel.com/docs/release-phases/public-beta-agreement\">Beta Agreement</a> and <a href=\"https://vercel.com/docs/connect/legal\">Vercel Connect terms</a>.</p>"
+    },
+    {
       "title": "A sandbox without a network boundary is only half a sandbox",
       "url": "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox",
       "summary": "Running untrusted code safely requires more than separating it from the host. You also have to control what that code can reach.This matters more as AI agents gain the ability to read files, execute commands, install packages, and generate programs of their own. A microVM can prevent that code from accessing the host or another workload. By itself, it cannot stop the code from exfiltrating data, p",
@@ -93,16 +103,6 @@
       "date": "2026-08-07 04:00",
       "ts": 1786075200,
       "content": "<p>You can now bundle multiple agent skills into a shareable pack on <a href=\"https://skills.sh\">skills.sh</a>.</p>\n    <p>Build a pack from community skills, your own local folders and zips, or public and private GitHub repositories.</p>\n    <p>Every pack is unlisted, with its own URL. Share that link with a single person, or your whole team to standardize the skills across your projects.</p>\n    <p>Install a pack with one command:</p>\n    <pre>\n      <pre>npx skills add https://skills.sh/p/<pack-id></pre>\n    </pre>\n    <p>Run </p><pre>npx skills update</pre> to update a pack to its latest version.\n    <p>Explore and create packs at <a href=\"https://skills.sh/packs\">skills.sh/packs</a>.</p>"
-    },
-    {
-      "title": "Free domain now included with new Pro subscriptions",
-      "url": "https://vercel.com/changelog/free-domain-now-included-with-new-pro-subscriptions",
-      "summary": "New Pro subscriptions now include a domain free for the first year. The offer covers six TLDs:.online .site .space .store .tech .websiteEach team has 30 days after subscribing to claim one domain, either at checkout or later from the domain search in the dashboard.After the first year, your domain will renew automatically at the regular price shown at checkout when you claim it.See the free domain",
-      "source": "Vercel News",
-      "extra": "",
-      "date": "2026-08-07 00:00",
-      "ts": 1786060800,
-      "content": "<p>New <a href=\"https://vercel.com/docs/plans/pro-plan\">Pro</a> subscriptions now include a domain free for the first year. </p>\n    <p>The offer covers six TLDs:</p>\n    <p></p><pre>.online</pre> <pre>.site</pre> <pre>.space</pre> <pre>.store</pre> <pre>.tech</pre> <pre>.website</pre>\n    <p>Each team has 30 days after subscribing to claim one domain, either at checkout or later from the <a href=\"https://vercel.com/domains\">domain search</a> in the dashboard.</p>\n    <p>After the first year, your domain will <a href=\"https://vercel.com/docs/domains/working-with-domains/renew-a-domain\">renew automatically</a> at the regular price shown at checkout when you claim it.</p>\n    <p>See the <a href=\"https://vercel.com/docs/domains/free-domain-with-pro\">free domain FAQ</a> for the full terms.</p>"
     }
   ]
 }
