@@ -65,6 +65,26 @@
       "content": ""
     },
     {
+      "title": "How Zapier transformed core marketing processes with ChatGPT Work",
+      "url": "https://openai.com/index/zapier",
+      "summary": "The enterprise marketing team at Zapier uses ChatGPT Work to reduce the number of drop-offs in its lead funnel, build campaign assets, and automate reporting.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-10 00:00",
+      "ts": 1786320000,
+      "content": ""
+    },
+    {
+      "title": "Virgin Atlantic sharpens customer journeys with ChatGPT Work",
+      "url": "https://openai.com/index/virgin-atlantic/chatgpt-work",
+      "summary": "Virgin Atlantic is accelerating research, product planning, and decision-making with ChatGPT Work, helping teams connect signals across the customer journey.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-10 00:00",
+      "ts": 1786320000,
+      "content": ""
+    },
+    {
       "title": "Responding to the next frontier of critical cyber capabilities",
       "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
       "summary": "OpenAI is sharing preliminary cybersecurity evaluations for Astra and the steps we’re taking to strengthen safeguards and security controls.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-08-07 09:00",
       "ts": 1786093200,
-      "content": ""
-    },
-    {
-      "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
-      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
-      "summary": "ChatGPT introduces improved GPT-5.6 Sol with better accuracy and consistency, plus expanded access for free users and unlimited everyday chats with GPT-5.6 Luna.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-06 10:00",
-      "ts": 1786010400,
-      "content": ""
-    },
-    {
-      "title": "Working with the American Psychological Association on youth mental health and AI",
-      "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
-      "summary": "OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-06 06:00",
-      "ts": 1785996000,
       "content": ""
     }
   ]
