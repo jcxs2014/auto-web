@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The builder’s guide to GPT‑5.6",
+      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+      "summary": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-13 11:00",
+      "ts": 1786618800,
+      "content": ""
+    },
+    {
+      "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+      "url": "https://openai.com/index/previewing-ultrafast",
+      "summary": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-13 10:00",
+      "ts": 1786615200,
+      "content": ""
+    },
+    {
+      "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer",
+      "url": "https://openai.com/index/dali-rajic-chief-revenue-officer",
+      "summary": "OpenAI appoints Dali Rajic as Chief Revenue Officer to lead its global revenue organization and help businesses realize the full value of AI.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-13 09:00",
+      "ts": 1786611600,
+      "content": ""
+    },
+    {
       "title": "From assistance to execution: How enterprises put AI to work",
       "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
       "summary": "OpenAI research reveals how enterprises are adopting agentic AI, using ChatGPT and Codex, and how frontier firms are pulling ahead in AI adoption.",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-08-10 17:00",
       "ts": 1786381200,
-      "content": ""
-    },
-    {
-      "title": "Putting frontier cyber models in more trusted hands",
-      "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
-      "summary": "Approved Daybreak partners can use OpenAI’s frontier cyber models to deliver authorized, governed cybersecurity services to customers.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-10 10:00",
-      "ts": 1786356000,
-      "content": ""
-    },
-    {
-      "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
-      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
-      "summary": "Meet GPT-5.6-Cyber, OpenAI’s cybersecurity-specific model available through Daybreak Red for authorized vulnerability research, exploit validation, and security testing.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-10 10:00",
-      "ts": 1786356000,
-      "content": ""
-    },
-    {
-      "title": "Premium seats are coming to ChatGPT Business",
-      "url": "https://openai.com/index/premium-seats-chatgpt-business",
-      "summary": "Premium seats are coming to ChatGPT Business. Sign up by August 20 to get $100 in workspace credits and unlock higher usage for your team's most demanding work.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-10 00:00",
-      "ts": 1786320000,
       "content": ""
     }
   ]
