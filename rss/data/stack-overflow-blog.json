@@ -23,16 +23,6 @@
       "date": "2026-08-11 07:40",
       "ts": 1786434000,
       "content": "<p>Ryan is joined by Coder’s Rob Whiteley to chat about why tokenmaxxing isn’t proving real value and just triggering Goodhart’s Law, how release speed and PR merges can help you measure agentic outcomes with or without a human-in-the-loop, and what the democratization of skills means for junior developers and the talent pipeline.</p>\n    <p>Coder is a self-hosted platform that lets you securely run cloud development environments and AI coding agents on your own internal infrastructure.</p>"
-    },
-    {
-      "title": "How to be fearlessly AI native",
-      "url": "https://stackoverflow.blog/2026/08/07/how-to-be-fearlessly-ai-native/",
-      "summary": "Ryan welcomes McLaren Stanley, Senior Principal Engineer for Amazon Stores, to discuss what it actually takes to make teams AI native, why agentic engineering is shifting code bottlenecks downstream to testing and deployment, and why robust validation is essential to build trust and enable “fearless commits.”",
-      "source": "Stack Overflow Blog",
-      "extra": "",
-      "date": "2026-08-07 07:40",
-      "ts": 1786088400,
-      "content": "<p>Ryan welcomes McLaren Stanley, Senior Principal Engineer for Amazon Stores, to discuss what it actually takes to make teams AI native, why agentic engineering is shifting code bottlenecks downstream to testing and deployment, and why robust validation is essential to build trust and enable “fearless commits.”</p>\n    <p>You can learn more about how Amazon’s frontier teams became AI native on the AWS blog.</p>"
     }
   ]
 }
