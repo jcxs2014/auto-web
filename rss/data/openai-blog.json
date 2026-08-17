@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "New policy ideas for the Intelligence Age",
+      "url": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
+      "summary": "OpenAI funds 14 independent projects exploring new AI policy ideas to expand economic opportunity and strengthen societal resilience in the Intelligence Age.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-17 03:15",
+      "ts": 1786936500,
+      "content": ""
+    },
+    {
       "title": "The builder’s guide to GPT‑5.6",
       "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
       "summary": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
@@ -82,26 +92,6 @@
       "extra": "",
       "date": "2026-08-10 14:00",
       "ts": 1786370400,
-      "content": ""
-    },
-    {
-      "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
-      "url": "https://openai.com/index/model-ml",
-      "summary": "Model ML uses GPT-5.6 Sol to carry finance work from research and analysis through editable, traceable PowerPoint decks and Excel workbooks.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-10 12:00",
-      "ts": 1786363200,
-      "content": ""
-    },
-    {
-      "title": "What building an AI-native finance function taught me",
-      "url": "https://openai.com/index/building-an-ai-native-finance-function",
-      "summary": "OpenAI CFO Sarah Friar shares five lessons for building an AI-native finance function, from automated forecasting to stronger controls and AI ROI.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-10 17:00",
-      "ts": 1786381200,
       "content": ""
     }
   ]
