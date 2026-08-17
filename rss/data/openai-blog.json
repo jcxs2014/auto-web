@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The Defender’s Window",
+      "url": "https://openai.com/index/the-defenders-window",
+      "summary": "AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-17 05:30",
+      "ts": 1786944600,
+      "content": ""
+    },
+    {
+      "title": "OpenAI joins PORTS-Pike project",
+      "url": "https://openai.com/index/openai-joins-ports-pike-project",
+      "summary": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-17 05:00",
+      "ts": 1786942800,
+      "content": ""
+    },
+    {
       "title": "New policy ideas for the Intelligence Age",
       "url": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
       "summary": "OpenAI funds 14 independent projects exploring new AI policy ideas to expand economic opportunity and strengthen societal resilience in the Intelligence Age.",
@@ -82,16 +102,6 @@
       "extra": "",
       "date": "2026-08-11 10:00",
       "ts": 1786442400,
-      "content": ""
-    },
-    {
-      "title": "OpenAI’s letter to Governor Abbott on responsible AI infrastructure in Texas",
-      "url": "https://openai.com/index/responsible-ai-infrastructure-texas",
-      "summary": "OpenAI sent Governor Greg Abbott a letter outlining its commitment to responsible AI infrastructure in Texas. The letter supports reliable, transparent growth that benefits Texans.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-10 14:00",
-      "ts": 1786370400,
       "content": ""
     }
   ]
