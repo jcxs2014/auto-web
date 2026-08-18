@@ -25,6 +25,16 @@
       "content": ""
     },
     {
+      "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+      "url": "https://openai.com/index/asana",
+      "summary": "Asana used OpenAI Codex to replace an outdated testing system in two weeks, completing work expected to take five years for about $12K.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-18 07:00",
+      "ts": 1787036400,
+      "content": ""
+    },
+    {
       "title": "The Defender’s Window",
       "url": "https://openai.com/index/the-defenders-window",
       "summary": "AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-08-12 06:00",
       "ts": 1786514400,
-      "content": ""
-    },
-    {
-      "title": "How RingCentral builds AI-native work from engineering to ops",
-      "url": "https://openai.com/index/ringcentral",
-      "summary": "See how RingCentral uses ChatGPT Work and Codex to accelerate AI product development and centralize operational intelligence across engineering and operations.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-12 00:00",
-      "ts": 1786492800,
       "content": ""
     }
   ]

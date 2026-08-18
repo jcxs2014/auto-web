@@ -5,14 +5,14 @@
   "lang": "en",
   "entries": [
     {
-      "title": "What does an agentic SDLC actually look like?",
-      "url": "https://stackoverflow.blog/2026/08/18/what-does-an-agentic-sdlc-actually-look-like/",
+      "title": "Building an agentic SDLC with a QA engineering mindset",
+      "url": "https://stackoverflow.blog/2026/08/18/building-an-agentic-sdlc-with-a-qa-engineering-mindset/",
       "summary": "Ryan welcomes Suneet Malhotra, Senior Manager of Test Engineering at Motorola Solutions, to chat about building end-to-end agentic SDLC pipelines using MCPs, using Cohen’s kappa to evaluate multiple LLMs-as-judges, and how you can improve requirements by shifting QA left through a specification enrichment stage immediately after the design phase.",
       "source": "Stack Overflow Blog",
       "extra": "",
       "date": "2026-08-18 07:40",
       "ts": 1787038800,
-      "content": "<p>Ryan welcomes Suneet Malhotra, Senior Manager of Test Engineering at Motorola Solutions, to chat about building end-to-end agentic SDLC pipelines using MCPs, using Cohen’s kappa to evaluate multiple LLMs-as-judges, and how you can improve requirements by shifting QA left through a specification enrichment stage immediately after the design phase.</p>\n    <p>You can learn more about Suneet’s five-agent SDLC (and see the companion code) on his GitHub.</p>"
+      "content": "<p>You can learn more about Suneet’s five-agent SDLC (and see the companion code) on <a href=\"https://github.com/SuneetMalhotra\">his GitHub</a>.</p>\n    <p>Read the papers discussed: <a href=\"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6963910\">Cross-Layer Observability for LLM-Assisted Test Automation: A Reference Architecture and Web Feasibility Study</a> and <a href=\"https://zenodo.org/records/20618807\">Cross-Layer Observability for LLM-Assisted Test Automation — Reference Implementation and Evaluation Data (v1.5.2, JSS In-Practice)</a>.</p>\n    <p>Connect with Suneet on <a href=\"https://www.linkedin.com/in/suneet-m/\">LinkedIn</a> and see more of his work on <a href=\"https://suneetmalhotra.com/\">his website</a>.</p>\n    <p>Congrats to user <a href=\"https://stackoverflow.com/users/1421110/sanjay\">Sanjay</a> for winning a Great Question badge for asking <a href=\"https://stackoverflow.com/questions/24939843/what-does-it-mean-to-fork-on-github\">What does it mean to fork on GitHub?</a>.</p>"
     },
     {
       "title": "No Dumb Questions: What is AI context architecture? Why not just build your own?",
