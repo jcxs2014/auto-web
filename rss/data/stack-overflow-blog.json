@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "What does an agentic SDLC actually look like?",
+      "url": "https://stackoverflow.blog/2026/08/18/what-does-an-agentic-sdlc-actually-look-like/",
+      "summary": "Ryan welcomes Suneet Malhotra, Senior Manager of Test Engineering at Motorola Solutions, to chat about building end-to-end agentic SDLC pipelines using MCPs, using Cohen’s kappa to evaluate multiple LLMs-as-judges, and how you can improve requirements by shifting QA left through a specification enrichment stage immediately after the design phase.",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-08-18 07:40",
+      "ts": 1787038800,
+      "content": "<p>Ryan welcomes Suneet Malhotra, Senior Manager of Test Engineering at Motorola Solutions, to chat about building end-to-end agentic SDLC pipelines using MCPs, using Cohen’s kappa to evaluate multiple LLMs-as-judges, and how you can improve requirements by shifting QA left through a specification enrichment stage immediately after the design phase.</p>\n    <p>You can learn more about Suneet’s five-agent SDLC (and see the companion code) on his GitHub.</p>"
+    },
+    {
       "title": "No Dumb Questions: What is AI context architecture? Why not just build your own?",
       "url": "https://stackoverflow.blog/2026/08/14/ndq-ai-context-architecture-build-buy/",
       "summary": "In this No Dumb Questions, Phoebe asks Stack’s Engineering Manager Doug Whitley and Product Manager Ash Zade everything she wants to know about AI context architecture. What exactly is it? Why is it so important? What makes for good AI context architecture? Why buy one when you can build your own?",
