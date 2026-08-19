@@ -338,6 +338,19 @@ const DASHBOARDS = [
     scale: "每源 10 篇",
     c1: "#1d8fe1", c2: "#7b61ff"
   }
+  ,{
+    key: "english-read",
+    title: "EnglishRead 英语阅读",
+    icon: "📚",
+    tag: "外部工具",
+    desc: "英语阅读练习站点，精选文章与阅读训练，由 jcxs2014 维护。",
+    latest: "https://jcxs2014.github.io/EnglishRead/",
+    archive: "",   // 外部站点，无本站归档
+    updated: "—",
+    scale: "外部站点",
+    latestLabel: "访问站点 →",
+    c1: "#f59e0b", c2: "#ef4444"
+  }
   /* 例：新增一个主题只需复制下面这段并改字段
   ,{
     key: "my-topic",
@@ -377,10 +390,10 @@ const DASHBOARDS = [
         <span>规模 <b>${d.scale}</b></span>
       </div>
       <div class="links">
-        <a class="btn btn-primary" href="${d.latest}" target="_blank" rel="noopener noreferrer">打开仪表盘 →</a>
+        <a class="btn btn-primary" href="${d.latest}" target="_blank" rel="noopener noreferrer">${d.latestLabel || "打开仪表盘 →"}</a>
         ${d.archive
           ? `<a class="btn btn-ghost" href="${d.archive}" target="_blank" rel="noopener noreferrer">历史归档</a>`
-          : `<span class="btn btn-ghost btn-disabled" title="RSS 为实时订阅，仅保留每源最新内容、旧文自动淘汰，不留存历史归档">不归档</span>`}
+          : `<span class="btn btn-ghost btn-disabled" title="该来源为外部站点或实时订阅，本站不留存历史归档副本">不归档</span>`}
       </div>
     </article>
   `).join("");
