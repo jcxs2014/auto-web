@@ -5,9 +5,29 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Strengthening democratic oversight in national security",
+      "url": "https://openai.com/index/strengthening-democratic-oversight-in-national-security",
+      "summary": "OpenAI launches an initiative to strengthen democratic oversight of AI in national security, supporting government institutions with tools, training, and expertise.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-18 19:00",
+      "ts": 1787079600,
+      "content": ""
+    },
+    {
       "title": "Partnering with CodeAI to prepare the first AI generation",
       "url": "https://openai.com/index/partnering-with-codeai",
       "summary": "OpenAI and CodeAI are partnering to help students build AI literacy, think critically about AI, and develop the skills to use and shape it responsibly.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-18 11:00",
+      "ts": 1787050800,
+      "content": ""
+    },
+    {
+      "title": "Pacing model development in an era of cyber-critical capabilities",
+      "url": "https://openai.com/index/pacing-model-development-cyber-capabilities",
+      "summary": "OpenAI is strengthening monitoring, alignment, and security for frontier AI models. See how new safeguards are guiding the pace of model development.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-08-18 11:00",
@@ -22,6 +42,16 @@
       "extra": "",
       "date": "2026-08-18 11:00",
       "ts": 1787050800,
+      "content": ""
+    },
+    {
+      "title": "How NVIDIA scales expertise with ChatGPT Work",
+      "url": "https://openai.com/index/nvidia/chatgpt-work",
+      "summary": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-18 00:00",
+      "ts": 1787011200,
       "content": ""
     },
     {
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-08-13 11:00",
       "ts": 1786618800,
-      "content": ""
-    },
-    {
-      "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
-      "url": "https://openai.com/index/previewing-ultrafast",
-      "summary": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-13 10:00",
-      "ts": 1786615200,
-      "content": ""
-    },
-    {
-      "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer",
-      "url": "https://openai.com/index/dali-rajic-chief-revenue-officer",
-      "summary": "OpenAI appoints Dali Rajic as Chief Revenue Officer to lead its global revenue organization and help businesses realize the full value of AI.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-13 09:00",
-      "ts": 1786611600,
-      "content": ""
-    },
-    {
-      "title": "From assistance to execution: How enterprises put AI to work",
-      "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
-      "summary": "OpenAI research reveals how enterprises are adopting agentic AI, using ChatGPT and Codex, and how frontier firms are pulling ahead in AI adoption.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-12 06:00",
-      "ts": 1786514400,
       "content": ""
     }
   ]
