@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "ChatGPT Ads expands across Europe",
+      "url": "https://openai.com/index/chatgpt-ads-expands-across-europe",
+      "summary": "ChatGPT Ads is expanding to 31 European markets. Learn how advertisers can reach people as they explore, compare options, and make decisions.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-18 22:00",
+      "ts": 1787090400,
+      "content": ""
+    },
+    {
       "title": "Strengthening democratic oversight in national security",
       "url": "https://openai.com/index/strengthening-democratic-oversight-in-national-security",
       "summary": "OpenAI launches an initiative to strengthen democratic oversight of AI in national security, supporting government institutions with tools, training, and expertise.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-08-17 03:15",
       "ts": 1786936500,
-      "content": ""
-    },
-    {
-      "title": "The builder’s guide to GPT‑5.6",
-      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
-      "summary": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-13 11:00",
-      "ts": 1786618800,
       "content": ""
     }
   ]
