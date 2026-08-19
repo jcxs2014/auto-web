@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Offering Zero Data Retention for frontier models",
+      "url": "https://openai.com/index/our-commitment-to-zero-data-retention",
+      "summary": "OpenAI reaffirms Zero Data Retention for eligible API customers and previews Private Safety Processing for advanced AI safety without compromising data privacy.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-19 19:00",
+      "ts": 1787166000,
+      "content": ""
+    },
+    {
+      "title": "Replit expands access to software creation with GPT-5.6 Luna",
+      "url": "https://openai.com/index/replit",
+      "summary": "Replit introduces Free Mode, powered by GPT-5.6 Luna, so anyone can turn ideas into working software without worrying about token costs.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-19 07:00",
+      "ts": 1787122800,
+      "content": ""
+    },
+    {
       "title": "ChatGPT Ads expands across Europe",
       "url": "https://openai.com/index/chatgpt-ads-expands-across-europe",
       "summary": "ChatGPT Ads is expanding to 31 European markets. Learn how advertisers can reach people as they explore, compare options, and make decisions.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-08-17 05:30",
       "ts": 1786944600,
-      "content": ""
-    },
-    {
-      "title": "OpenAI joins PORTS-Pike project",
-      "url": "https://openai.com/index/openai-joins-ports-pike-project",
-      "summary": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-17 05:00",
-      "ts": 1786942800,
-      "content": ""
-    },
-    {
-      "title": "New policy ideas for the Intelligence Age",
-      "url": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
-      "summary": "OpenAI funds 14 independent projects exploring new AI policy ideas to expand economic opportunity and strengthen societal resilience in the Intelligence Age.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-17 03:15",
-      "ts": 1786936500,
       "content": ""
     }
   ]
