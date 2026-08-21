@@ -3,5 +3,16 @@
   "url": "https://tumutanzi.com/feed",
   "category": "中文博客",
   "lang": "zh",
-  "entries": []
+  "entries": [
+    {
+      "title": "AI可能会给金融行业带来阵痛",
+      "url": "https://tumutanzi.com/archives/17622",
+      "summary": "最近金融领域的软件安全漏洞一再被黑客发现并利用，给用户们造成了巨大的损失。一个很大的原因是人工智能AI的流行， […]",
+      "source": "土木坛子",
+      "extra": "",
+      "date": "2026-08-14 16:00",
+      "ts": 1786723228,
+      "content": ""
+    }
+  ]
 }
