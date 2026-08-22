@@ -5,7 +5,7 @@
   "lang": "en",
   "entries": [
     {
-      "title": "Say it once: introducing Bot Preference SynC",
+      "title": "Say it once: introducing Bot Preference Sync",
       "url": "https://blog.cloudflare.com/bot-preference-sync/",
       "summary": "Cloudflare's new Bot Preference Sync automatically aligns your robots.txt file with your AI bot policies for Search, Agent, and Training. Easily manage which bots access your content without maintaining static files.",
       "source": "The Cloudflare Blog",
