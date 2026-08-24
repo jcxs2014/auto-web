@@ -57,9 +57,9 @@ PER_PLATFORM = {
     "bili": 15,
     "intl": 30,
     # 新闻页各源（卡片含摘要，单源条数适度收敛）
-    "chinanews": 18, "repubblica": 18, "france24": 18, "sole24": 18,
-    "politico": 18, "eu_google": 18, "bbc": 18, "nhk": 18,
-    "guardian": 18, "nyt": 18, "aljazeera": 18, "wapo": 18,
+    "chinanews": 18, "repubblica": 18,
+    "politico": 18, "bbc": 18,
+    "nyt": 18, "aljazeera": 18,
 }
 
 
@@ -305,37 +305,18 @@ def fetch_rss_news(url, name):
 def fetch_repubblica():
     return fetch_rss_news("https://www.repubblica.it/rss/homepage/rss2.0.xml", "共和报")
 
-def fetch_france24():
-    return fetch_rss_news("https://www.france24.com/en/rss", "France24 国际台")
-
-def fetch_sole24():
-    return fetch_rss_news("https://www.ilsole24ore.com/rss/italia.xml", "24小时太阳报")
-
 def fetch_politico():
     return fetch_rss_news("https://www.politico.eu/feed/", "Politico Europe")
-
-def fetch_eu_google():
-    return fetch_rss_news("https://news.google.com/rss/search?q=European%20Union&hl=en-US&gl=US&ceid=US:en", "欧盟·Google News")
 
 def fetch_bbc():
     return fetch_rss_news("https://feeds.bbci.co.uk/news/rss.xml", "BBC News")
 
-def fetch_nhk():
-    return fetch_rss_news("https://www3.nhk.or.jp/rss/news/cat0.xml", "NHK 日本")
-
-
 # ---- 新闻页增补：国际知名报刊（2026-07-16 探针验证可达）----
-def fetch_guardian():
-    return fetch_rss_news("https://www.theguardian.com/world/rss", "卫报 (英国)")
-
 def fetch_nyt_world():
     return fetch_rss_news("https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "纽约时报 (国际)")
 
 def fetch_aljazeera():
     return fetch_rss_news("https://www.aljazeera.com/xml/rss/all.xml", "半岛电视台")
-
-def fetch_wapo_world():
-    return fetch_rss_news("https://feeds.washingtonpost.com/rss/world", "华盛顿邮报 (国际)")
 
 
 def fetch_intl():
@@ -381,26 +362,14 @@ NEWS_SOURCES = [
      "loader": fetch_chinanews, "expandable": True, "bilingual": True, "sl": "zh-CN"},
     {"id": "repubblica", "name": "共和报 (意大利)", "emoji": "🇮🇹", "anchor": "repubblica",
      "loader": fetch_repubblica, "expandable": True, "bilingual": True, "sl": "auto"},
-    {"id": "france24", "name": "France24 国际台", "emoji": "🇫🇷", "anchor": "france24",
-     "loader": fetch_france24, "expandable": True, "bilingual": True, "sl": "auto"},
-    {"id": "sole24", "name": "24小时太阳报 (意大利)", "emoji": "🇮🇹", "anchor": "sole24",
-     "loader": fetch_sole24, "expandable": True, "bilingual": True, "sl": "auto"},
     {"id": "politico", "name": "Politico Europe", "emoji": "🇪🇺", "anchor": "politico",
      "loader": fetch_politico, "expandable": True, "bilingual": True, "sl": "auto"},
-    {"id": "eu_google", "name": "欧盟 · Google News", "emoji": "🇪🇺", "anchor": "eu_google",
-     "loader": fetch_eu_google, "expandable": True, "bilingual": True, "sl": "auto"},
     {"id": "bbc", "name": "BBC News", "emoji": "🇬🇧", "anchor": "bbc",
      "loader": fetch_bbc, "expandable": True, "bilingual": True, "sl": "auto"},
-    {"id": "nhk", "name": "NHK 日本", "emoji": "🇯🇵", "anchor": "nhk",
-     "loader": fetch_nhk, "expandable": True, "bilingual": True, "sl": "en"},
-    {"id": "guardian", "name": "卫报 (英国)", "emoji": "🇬🇧", "anchor": "guardian",
-     "loader": fetch_guardian, "expandable": True, "bilingual": True, "sl": "auto"},
     {"id": "nyt", "name": "纽约时报 (国际)", "emoji": "🇺🇸", "anchor": "nyt",
      "loader": fetch_nyt_world, "expandable": True, "bilingual": True, "sl": "en"},
     {"id": "aljazeera", "name": "半岛电视台", "emoji": "🇶🇦", "anchor": "aljazeera",
      "loader": fetch_aljazeera, "expandable": True, "bilingual": True, "sl": "en"},
-    {"id": "wapo", "name": "华盛顿邮报 (国际)", "emoji": "🇺🇸", "anchor": "wapo",
-     "loader": fetch_wapo_world, "expandable": True, "bilingual": True, "sl": "en"},
 ]
 
 
