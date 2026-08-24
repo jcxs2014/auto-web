@@ -2,12 +2,10 @@
 """
 arXiv 物理最新论文 HTML 仪表盘生成器（自包含、可被定时任务调用）。
 
-领域（6 主题 / 8 arXiv 类别）：
+领域（3 主题 / 5 arXiv 类别）：
   高能物理      : hep-th, hep-ph, hep-ex
   空间物理      : physics.space-ph
-  广义相对论    : gr-qc
   高能天体物理  : astro-ph.HE
-  探测器与仪器  : physics.ins-det
 
 流程：
   1. 按主题分别调 https://export.arxiv.org/api/query （sortBy=submittedDate desc, max_results=PER_THEME）
@@ -39,15 +37,13 @@ OUTPUT_BASE = Path(__file__).resolve().parent.parent
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 BJ = timezone(timedelta(hours=8))
 
-# 5 themes in fixed display order: (主题名, [arXiv categories], emoji, anchor)
+# 3 themes in fixed display order: (主题名, [arXiv categories], emoji, anchor)
 THEMES = [
     ("高能物理",       ["hep-th", "hep-ph", "hep-ex"],          "⚛️", "hep"),
     ("空间物理",       ["physics.space-ph"],                    "🛰️", "space"),
-    ("广义相对论",     ["gr-qc"],                               "🕳️", "grqc"),
     ("高能天体物理",   ["astro-ph.HE"],                         "🌌", "astrohe"),
-    ("探测器与仪器",   ["physics.ins-det"],                     "🔬", "detector"),
 ]
-PER_THEME = 12  # 每主题最多取多少篇（务必为 3 的倍数：列数固定为桌面3/平板2/手机1，保证各行都满，无孤卡）
+PER_THEME = 6  # 每主题最多取多少篇（务必为 3 的倍数：列数固定为桌面3/平板2/手机1，保证各行都满，无孤卡）
 
 # 中文翻译（Google 非官方 client=gtx 接口，无需 key）。失败优雅降级为只显示英文。
 TRANSLATE_ZH = True
@@ -645,8 +641,8 @@ def main():
     if arxiv_total == 0:
         print("[arxiv] ERROR 全部主题抓取失败（arXiv 限流或故障），保留上次数据，不覆盖、退出。", file=sys.stderr)
         sys.exit(1)
-    if themes_ok < 4:
-        print(f"[arxiv] ERROR 仅 {themes_ok}/5 主题抓到数据（疑似 arXiv 限流），保留上次数据，不覆盖、退出。", file=sys.stderr)
+    if themes_ok < 2:
+        print(f"[arxiv] ERROR 仅 {themes_ok}/3 主题抓到数据（疑似 arXiv 限流），保留上次数据，不覆盖、退出。", file=sys.stderr)
         sys.exit(1)
 
     if do_translate:
