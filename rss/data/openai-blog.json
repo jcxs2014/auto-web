@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Disrupting a new covert influence campaign from Russia",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
+      "summary": "OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based think tank and a “sovereignty” index praising Russia and criticizing the West.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-25 00:00",
+      "ts": 1787616000,
+      "content": ""
+    },
+    {
       "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
       "url": "https://openai.com/index/gpt-5-6-in-kiro",
       "summary": "GPT‑5.6 is now available in Kiro, helping developers plan, build, review, and test software with better price-performance.",
@@ -72,36 +82,6 @@
       "extra": "",
       "date": "2026-08-18 19:00",
       "ts": 1787079600,
-      "content": ""
-    },
-    {
-      "title": "Partnering with CodeAI to prepare the first AI generation",
-      "url": "https://openai.com/index/partnering-with-codeai",
-      "summary": "OpenAI and CodeAI are partnering to help students build AI literacy, think critically about AI, and develop the skills to use and shape it responsibly.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-18 11:00",
-      "ts": 1787050800,
-      "content": ""
-    },
-    {
-      "title": "Pacing model development in an era of cyber-critical capabilities",
-      "url": "https://openai.com/index/pacing-model-development-cyber-capabilities",
-      "summary": "OpenAI is strengthening monitoring, alignment, and security for frontier AI models. See how new safeguards are guiding the pace of model development.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-18 11:00",
-      "ts": 1787050800,
-      "content": ""
-    },
-    {
-      "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
-      "url": "https://openai.com/index/chatgpt-for-teens",
-      "summary": "ChatGPT for Teens helps teens learn, think critically, and use AI with confidence, with stronger built-in protections, healthy-use features, and additional controls for parents.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-18 11:00",
-      "ts": 1787050800,
       "content": ""
     }
   ]
