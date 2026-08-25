@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "llm-anthropic 0.27",
+      "url": "https://simonwillison.net/2026/Aug/24/llm-anthropic/",
+      "summary": "Release: llm-anthropic 0.27 This release of the Anthropic plugin for LLM mainly provides compatibility with the recently released anthropic v1.0.0 Python library, which switches from httpx to httpx2. OpenAI made the same change in their v3.0.0 release two weeks ago. Anthropic provide this migration guide for upgrading to 1.0, so I prompted Fable 5 in Claude Code with: Upgrade to anthropic>=1 - rea",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-08-24 16:27",
+      "ts": 1787588824,
+      "content": "<p>24th August 2026</p>\n    <p>This release of the Anthropic plugin for <a href=\"https://llm.datasette.io/\">LLM</a> mainly provides compatibility with the recently released <a href=\"https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0\">anthropic v1.0.0</a> Python library, which switches from </p><pre>httpx</pre> to <a href=\"https://github.com/pydantic/httpx2\">httpx2</a>. OpenAI made the same change in their <a href=\"https://github.com/openai/openai-python/releases/tag/v3.0.0\">v3.0.0 release</a> two weeks ago.\n    <p>Anthropic provide this <a href=\"https://github.com/anthropics/anthropic-sdk-python/blob/v1.0.0/MIGRATION.md\">migration guide</a> for upgrading to 1.0, so I prompted Fable 5 in Claude Code with:</p>\n    <blockquote>\n<p></p><pre>Upgrade to anthropic>=1 - read https://raw.githubusercontent.com/anthropics/anthropic-sdk-python/refs/heads/main/MIGRATION.md and get the tests passing</pre></blockquote>\n    <p>Here's <a href=\"https://github.com/simonw/llm-anthropic/pull/84\">the resulting PR</a>.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/\">Conceptual integrity and counting lines of code</a> - 19th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/16/qwen-38-27b/\">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a> - 16th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/7/openai-timeline/\">Now we have a timeline of the OpenAI accidental attack against Hugging Face</a> - 7th August 2026</li>\n    </ul>"
+    },
+    {
       "title": "Your executable is a SQLite database",
       "url": "https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/",
       "summary": "Your executable is a SQLite database Farid Zakaria describes a neat Linux pattern for creating a SQLite database file that can be directly used as an executable binary. The trick sets the SQLite file format's 4-byte application ID (68 bytes into the file) to SELF, standing for Structured Executable & Linkable Format. The various components of the ELF executable format are then arranged into a numb",
@@ -93,16 +103,6 @@
       "date": "2026-08-21 16:07",
       "ts": 1787328452,
       "content": "<p>21st August 2026 - Link Blog</p>\n    <p><a href=\"https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/\">Stop Making TUIs</a>. Thomas Ptacek advocates for building real native user interfaces for even the smallest of personal tools, because coding agents have reduced the cost of getting a usable-enough GUI up and running to almost nothing.</p>\n    <p>I wrote about my vibe-coded bandwidth and GPU monitoring macOS task bar apps <a href=\"https://simonwillison.net/2026/Mar/27/vibe-coding-swiftui/\">back in March</a>, and I'm still using both of those on a daily basis.</p>\n    <p>I'm not habitually knocking out real UIs for my other projects yet, but I'm running out of excuses!</p>\n    <p>Thomas:</p>\n    <blockquote>\n<p>If you haven’t tried your hand at turning one of your 500 throwaway CLIs into a native app, you’re doing yourself a disservice. Go build a native UI. It’ll probably change the way you think.</p></blockquote>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/\">Conceptual integrity and counting lines of code</a> - 19th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/16/qwen-38-27b/\">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a> - 16th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/7/openai-timeline/\">Now we have a timeline of the OpenAI accidental attack against Hugging Face</a> - 7th August 2026</li>\n    </ul>"
-    },
-    {
-      "title": "Quoting Matt Webb",
-      "url": "https://simonwillison.net/2026/Aug/21/matt-webb/",
-      "summary": "After I released version 1.0, I figured I would have to do the rotations myself. So I sat down with ChatGPT and I didn’t get it to write the code, but I got it to educate me. With a patient, interactive tutor, I was able to finally do what I hadn’t by reading books and asking mathematician friends – I learnt how to use quaternions just enough to make the app work. So learning doesn’t stop just bec",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-08-21 15:06",
-      "ts": 1787324786,
-      "content": "<p>21st August 2026</p>\n    <blockquote>\n      <p>After I released version 1.0, I figured I would have to do the rotations myself. So I sat down with ChatGPT and I didn’t get it to write the code, but I got it to educate me. With a patient, interactive tutor, I was able to finally do what I hadn’t by reading books and asking mathematician friends – I learnt how to use quaternions just enough to make the app work.</p>\n      <p>So learning doesn’t stop just because I outsource a bunch of thinking to AI. It pushes me to learn more. I like that as an outcome.</p>\n    </blockquote>\n    <p>— <a href=\"https://interconnected.org/home/2026/08/21/galactic\">Matt Webb</a>, Galactic Compass 2: now with new augmented reality mode</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/\">Conceptual integrity and counting lines of code</a> - 19th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/16/qwen-38-27b/\">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a> - 16th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/7/openai-timeline/\">Now we have a timeline of the OpenAI accidental attack against Hugging Face</a> - 7th August 2026</li>\n    </ul>"
     }
   ]
 }
