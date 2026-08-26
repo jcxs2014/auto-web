@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How loveholidays is making everyone a builder with Codex",
+      "url": "https://openai.com/index/loveholidays",
+      "summary": "Discover how loveholidays uses OpenAI Codex to make software development accessible across the business, helping teams turn ideas into products faster.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-26 00:00",
+      "ts": 1787702400,
+      "content": ""
+    },
+    {
       "title": "The full stack behind abundant intelligence",
       "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
       "summary": "OpenAI CFO Sarah Friar explains how advances across chips, compute, models, and products compound to deliver more useful intelligence at greater scale and lower cost.",
@@ -82,16 +92,6 @@
       "extra": "",
       "date": "2026-08-19 19:00",
       "ts": 1787166000,
-      "content": ""
-    },
-    {
-      "title": "Replit expands access to software creation with GPT-5.6 Luna",
-      "url": "https://openai.com/index/replit",
-      "summary": "Replit introduces Free Mode, powered by GPT-5.6 Luna, so anyone can turn ideas into working software without worrying about token costs.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-19 07:00",
-      "ts": 1787122800,
       "content": ""
     }
   ]

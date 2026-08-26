@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Quoting Paul Dix",
+      "url": "https://simonwillison.net/2026/Aug/26/paul-dix/",
+      "summary": "The fact that AI wrote 1M LOC and then refined it over the course of the next couple of months to produce a reliable piece of software that is currently running on millions of developer machines is absolutely mind blowing. And you can say, “well it’s not that impressive because they had an oracle to compare against, so it was simple to go from one language to another”, but I think that’s selling t",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-08-26 08:07",
+      "ts": 1787731675,
+      "content": "<p>26th August 2026</p>\n    <blockquote>\n      <p>The fact that AI wrote 1M LOC and then refined it over the course of the next couple of months to produce a reliable piece of software that is currently running on millions of developer machines is absolutely mind blowing. And you can say, “well it’s not that impressive because they had an oracle to compare against, so it was simple to go from one language to another”, but I think that’s selling this entire thing short. If you can build a verification system and give proper direction, AI can produce a highly complex, highly sophisticated piece of software and it can continue to refine it until it just works.</p>\n    </blockquote>\n    <p>— <a href=\"https://pauldix.com/the-end-of-programming\">Paul Dix</a>, The end of programming</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/\">Conceptual integrity and counting lines of code</a> - 19th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/16/qwen-38-27b/\">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a> - 16th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/7/openai-timeline/\">Now we have a timeline of the OpenAI accidental attack against Hugging Face</a> - 7th August 2026</li>\n    </ul>"
+    },
+    {
       "title": "EVE Online: The Move to Python 3 Begins!",
       "url": "https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/",
       "summary": "EVE Online: The Move to Python 3 Begins! EVE Online has been one of the most interesting case studies in Python at scale for over twenty years now. They've been running on Stackless Python since their launch in 2003, and their last major upgrade was 16 years ago, to Stackless Python 2.7 in 2010. Their upgrade to Python 3 will start using the futurize script against 2.4 million lines of code, follo",
@@ -93,16 +103,6 @@
       "date": "2026-08-21 17:16",
       "ts": 1787332573,
       "content": "<p>21st August 2026</p>\n    <p>Fresh installs of LLM stopped working the other day because the OpenAI Python library dropped its usage of </p><pre>httpx</pre>, and it turned out LLM depended on that library but only installed it via a transitive <pre>openai</pre> dependency.\n    <p>This dot-release fixes that for the moment by pinning to </p><pre>openai<3</pre>, and a soon-to-drop 0.33 release will switch from <pre>httpx</pre> to <a href=\"https://github.com/pydantic/httpx2\">httpx2</a>.\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/\">Conceptual integrity and counting lines of code</a> - 19th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/16/qwen-38-27b/\">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a> - 16th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/7/openai-timeline/\">Now we have a timeline of the OpenAI accidental attack against Hugging Face</a> - 7th August 2026</li>\n    </ul>"
-    },
-    {
-      "title": "llm-openrouter 0.7",
-      "url": "https://simonwillison.net/2026/Aug/21/llm-openrouter/",
-      "summary": "Release: llm-openrouter 0.7 Now that this plugin is compatible with LLM 0.32 it can display the reasoning traces for LLMs available through OpenRouter. Updated for compatibility with LLM 0.32. Models now use OpenRouter's implementation of the Responses API. Three new server-side tools: Shell, WebFetch, and WebSearch. Enable these with options like -T WebSearch. Tags: llm, openrouter",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-08-21 16:58",
-      "ts": 1787331499,
-      "content": "<p>21st August 2026</p>\n    <p>Now that this plugin is compatible with <a href=\"https://simonwillison.net/2026/Aug/4/new-release-of-llm/\">LLM 0.32</a> it can display the reasoning traces for LLMs available through OpenRouter.</p>\n    <blockquote>\n<ul></ul><li>Updated for compatibility with</li><a href=\"https://llm.datasette.io/en/stable/changelog.html#v0-32\">LLM 0.32</a>.<li>Models now use OpenRouter's implementation of the</li><a href=\"https://openrouter.ai/docs/api_reference/responses/overview\">Responses API</a>.<li>Three new server-side tools:</li><a href=\"https://github.com/simonw/llm-openrouter#shell\">Shell</a>, <a href=\"https://github.com/simonw/llm-openrouter#web-fetch\">WebFetch</a>, and <a href=\"https://github.com/simonw/llm-openrouter#web-search\">WebSearch</a>. Enable these with options like <pre>-T WebSearch</pre>.</blockquote>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/\">Conceptual integrity and counting lines of code</a> - 19th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/16/qwen-38-27b/\">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a> - 16th August 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Aug/7/openai-timeline/\">Now we have a timeline of the OpenAI accidental attack against Hugging Face</a> - 7th August 2026</li>\n    </ul>"
     }
   ]
 }
