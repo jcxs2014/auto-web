@@ -25,6 +25,16 @@
       "content": ""
     },
     {
+      "title": "The Hugging Face incident and the road ahead",
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
+      "summary": "OpenAI shares findings from the Hugging Face security incident and the steps we’re taking to strengthen AI model security, monitoring, and alignment.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-26 00:00",
+      "ts": 1787702400,
+      "content": ""
+    },
+    {
       "title": "How loveholidays is making everyone a builder with Codex",
       "url": "https://openai.com/index/loveholidays",
       "summary": "Discover how loveholidays uses OpenAI Codex to make software development accessible across the business, helping teams turn ideas into products faster.",
@@ -82,26 +92,6 @@
       "extra": "",
       "date": "2026-08-24 12:00",
       "ts": 1787572800,
-      "content": ""
-    },
-    {
-      "title": "Introducing AI Futures",
-      "url": "https://openai.com/index/introducing-ai-futures",
-      "summary": "Introducing AI Futures, a new OpenAI blog exploring how transformative AI could reshape power, governance, the economy, and individual freedom.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-20 07:00",
-      "ts": 1787209200,
-      "content": ""
-    },
-    {
-      "title": "Stampli cuts launch hours by 68% using ChatGPT Work",
-      "url": "https://openai.com/index/stampli",
-      "summary": "With a fixed deadline and design resources committed elsewhere, Stampli used Codex and ChatGPT Work to compress weeks of launch production into days.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-20 00:00",
-      "ts": 1787184000,
       "content": ""
     }
   ]
