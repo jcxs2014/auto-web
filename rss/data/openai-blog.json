@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Supporting Thailand’s next generation of AI startups",
+      "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+      "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-28 02:00",
+      "ts": 1787882400,
+      "content": ""
+    },
+    {
       "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
       "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
       "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
@@ -88,16 +98,6 @@
       "title": "Disrupting a new covert influence campaign from Russia",
       "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
       "summary": "OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based think tank and a “sovereignty” index praising Russia and criticizing the West.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-25 00:00",
-      "ts": 1787616000,
-      "content": ""
-    },
-    {
-      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
-      "url": "https://openai.com/index/introducing-admin-plugin",
-      "summary": "Use the Admin plugin for ChatGPT Work and Codex to analyze workspace usage, manage members and permissions, adjust limits, and act on admin requests.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-08-25 00:00",
