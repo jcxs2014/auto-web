@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-08-28 06:00",
+      "ts": 1787896800,
+      "content": ""
+    },
+    {
       "title": "Supporting Thailand’s next generation of AI startups",
       "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
       "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-08-25 07:00",
       "ts": 1787641200,
-      "content": ""
-    },
-    {
-      "title": "Disrupting a new covert influence campaign from Russia",
-      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "summary": "OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based think tank and a “sovereignty” index praising Russia and criticizing the West.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-25 00:00",
-      "ts": 1787616000,
       "content": ""
     }
   ]
