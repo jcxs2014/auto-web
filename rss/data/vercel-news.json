@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "MiniMax H3 and H3 Max are 50% off on AI Gateway",
+      "url": "https://vercel.com/changelog/minimax-h3-and-h3-max-are-50-off-on-ai-gateway",
+      "summary": "MiniMax H3 and H3 Max are 50% off on AI Gateway from August 30 through September 13, in partnership with MiniMax.The discount covers requests billed through AI Gateway, at every duration and in every aspect ratio the model supports.H3 generates 2K video from a text prompt, a starting image, a pair of first and last frames, or reference images, video, and audio.H3 Max trades resolution for speed: i",
+      "source": "Vercel News",
+      "extra": "",
+      "date": "2026-08-30 00:00",
+      "ts": 1788048000,
+      "content": "<p>MiniMax H3 and H3 Max are 50% off on AI Gateway from August 30 through September 13, in partnership with MiniMax.</p>\n    <p>The discount covers requests billed through AI Gateway, at every duration and in every aspect ratio the model supports.</p>\n    <p>H3 generates 2K video from a text prompt, a starting image, a pair of first and last frames, or reference images, video, and audio.</p>\n    <p>H3 Max trades resolution for speed: it renders faster at 480p and 768p, and it takes a text prompt or a starting image.</p>\n    <p>The model IDs (minimax/minimax-h3 and minimax/minimax-h3-max) are unchanged, so requests you already send pick up the discounted rate with no code change:</p>\n    <p>import{ experimental_generateVideo as generateVideo }from'ai';</p>\n    <p>const{ videos }=awaitgenerateVideo({</p>\n    <p>model:'minimax/minimax-h3-max',</p>\n    <p>prompt:'San Francisco sunrise on a weekend morning.',</p>\n    <p>duration:5,</p>\n    <p>poll:{ timeoutMs:600000},</p>\n    <p>});</p>\n    <p>Renders take minutes, so poll runs the generation as a background job and makes short status requests until it lands, rather than holding one long request open. See asynchronous generation for the webhook and start-and-status routes.</p>"
+    },
+    {
       "title": "Hy4 Preview now available on AI Gateway",
       "url": "https://vercel.com/changelog/hy4-preview-now-available-on-ai-gateway",
       "summary": "Hy4 Preview from Tencent is now available on AI Gateway.Hy4 Preview is an open-source Mixture-of-Experts model with 770B total parameters and 49B active per token, aimed at long-horizon coding, document analysis, game development, and scientific reasoning. It serves a context window of 1M tokens.To use Hy4 Preview, set model to tencent/hy4-preview in the AI SDK:To use it in a coding agent, see the",
@@ -93,16 +103,6 @@
       "date": "2026-08-26 00:00",
       "ts": 1787702400,
       "content": "<p>Muse Image from Meta Superintelligence Labs is now available on AI Gateway. It is their first image model and a separate family from Muse Spark, returning images rather than text. Send a prompt and get an image back, or send an image with an instruction and get it changed. One model does both, so you don't switch models to move from generating to editing.</p>\n    <p>To use Muse Image, set model to meta/muse-image-1.0 and call generateImage from the AI SDK:</p>\n    <p>import{ generateImage }from'ai';</p>\n    <p>const{ images }=awaitgenerateImage({</p>\n    <p>model:'meta/muse-image-1.0',</p>\n    <p>prompt:'A conference poster for a talk on database indexes.',</p>\n    <p>});</p>\n    <p>To steer the result toward art you already have, pass reference images in prompt.images alongside the text, and the model blends them into what it draws.</p>\n    <p>AI Gateway provides a unified API for calling models, tracking usage and cost, failover, and performance optimizations for higher-than-provider uptime. It includes built-in custom reporting, budgets for API keys, routing rules, and more.</p>\n    <p>AI Gateway reflects provider pricing with no markup and does not charge a platform fee on inference, including on Bring Your Own Key (BYOK) requests.</p>"
-    },
-    {
-      "title": "Gemini 3.5 Transcribe now available on AI Gateway",
-      "url": "https://vercel.com/changelog/gemini-3-5-transcribe-now-available-on-ai-gateway",
-      "summary": "Gemini 3.5 Transcribe from Google is now available on AI Gateway for recorded and live audio:google/gemini-3.5-transcribe transcribes a complete audio file in one request.google/gemini-3.5-transcribe-live transcribes audio over a WebSocket and returns text as the audio arrives.Both models automatically detect more than 85 languages, including when a speaker switches languages. You can also provide",
-      "source": "Vercel News",
-      "extra": "",
-      "date": "2026-08-26 00:00",
-      "ts": 1787702400,
-      "content": "<p>Gemini 3.5 Transcribe from Google is now available on AI Gateway for recorded and live audio:</p>\n    <p>google/gemini-3.5-transcribe transcribes a complete audio file in one request.</p>\n    <p>google/gemini-3.5-transcribe-live transcribes audio over a WebSocket and returns text as the audio arrives.</p>\n    <p>Both models automatically detect more than 85 languages, including when a speaker switches languages. You can also provide custom vocabulary to improve the transcription of names, technical terms, and uncommon spellings. The model for complete recordings can also identify speakers and return word-level timestamps.</p>\n    <p>Streaming transcription is available in AI SDK 7. Install the latest AI SDK and AI Gateway provider:</p>\n    <p>npminstall ai@latest @ai-sdk/gateway@latest</p>\n    <p>Install the packages required for streaming transcription.</p>"
     }
   ]
 }
