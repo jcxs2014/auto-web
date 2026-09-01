@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How AI-native companies turn workflows into operating capability",
+      "url": "https://openai.com/index/ai-native-company-workflows",
+      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-01 17:00",
+      "ts": 1788282000,
+      "content": ""
+    },
+    {
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "url": "https://openai.com/index/path-to-astra",
+      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-01 13:00",
+      "ts": 1788267600,
+      "content": ""
+    },
+    {
+      "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+      "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+      "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-01 12:00",
+      "ts": 1788264000,
+      "content": ""
+    },
+    {
       "title": "OpenAI supports California’s bill to advance youth AI safety",
       "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
       "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-08-27 03:00",
       "ts": 1787799600,
-      "content": ""
-    },
-    {
-      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
-      "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
-      "summary": "ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI tools, training, and support to over 100,000 more educators and staff.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-26 10:00",
-      "ts": 1787738400,
-      "content": ""
-    },
-    {
-      "title": "Learning never stops: How AI makes learning continuous",
-      "url": "https://openai.com/index/learning-never-stops",
-      "summary": "OpenAI’s new report explores how students and educators use ChatGPT to make learning more continuous, with support that extends beyond the classroom.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-26 10:00",
-      "ts": 1787738400,
-      "content": ""
-    },
-    {
-      "title": "The Hugging Face incident and the road ahead",
-      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-      "summary": "OpenAI shares findings from the Hugging Face security incident and the steps we’re taking to strengthen AI model security, monitoring, and alignment.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-26 00:00",
-      "ts": 1787702400,
       "content": ""
     }
   ]
