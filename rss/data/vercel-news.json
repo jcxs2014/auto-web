@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "AWS PrivateLink is now available on Pro and Enterprise",
+      "url": "https://vercel.com/changelog/aws-privatelink-is-now-available-on-pro-and-enterprise",
+      "summary": "AWS PrivateLink is now available for Pro and Enterprise teams as part of Advanced Networking. It allows Vercel Functions and builds to connect to AWS-hosted services without sending traffic over the public internet.Use it to reach AWS-hosted databases such as RDS, Aurora, and Neon; SaaS services such as Snowflake and MongoDB Atlas; internal services behind an AWS Network Load Balancer; and S3 or D",
+      "source": "Vercel News",
+      "extra": "",
+      "date": "2026-09-01 00:00",
+      "ts": 1788220800,
+      "content": "<p><a href=\"https://vercel.com/docs/networking/privatelink\">AWS PrivateLink</a> is now available for Pro and Enterprise teams as part of Advanced Networking. It allows Vercel Functions and builds to connect to AWS-hosted services without sending traffic over the public internet.</p>\n    <p>Use it to reach AWS-hosted databases such as RDS, Aurora, and Neon; SaaS services such as Snowflake and MongoDB Atlas; internal services behind an AWS Network Load Balancer; and S3 or DynamoDB through gateway endpoints.</p>\n    <p>To configure PrivateLink, open your project's <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F%5Bproject%5D%2Fsettings%2Fnetworking\">Networking settings</a> and enable Advanced Networking. Select New Connection, then enter the service name and region. </p>\n    <p>The service must accept connections from all AWS principals or allowlist the IAM role Vercel provides for your team.</p>\n    <p>Vercel creates the connection and provides a stable hostname. Use this hostname from your Functions and builds to reach the service privately.</p>\n    <p>Pricing:</p>\n    <ul>\n      <li>\n        <p>The first AWS PrivateLink connection is included with Advanced Networking. Each additional connection costs $30 per month.</p>\n      </li>\n      <li>\n        <p>PrivateLink data transfer costs $0.04 per GB.</p>\n      </li>\n    </ul>\n    <p>Learn more in the <a href=\"https://vercel.com/docs/networking/privatelink\">AWS PrivateLink documentation</a>.</p>"
+    },
+    {
       "title": "fx is now available in the AI SDK harness layer",
       "url": "https://vercel.com/changelog/fx-ai-sdk-harness-adapter",
       "summary": "The AI SDK harness layer now supports fx, Vercel's lightweight, open-source coding agent. The harness layer provides one API for running coding agents in your application, so you can add fx without building a separate integration.Configure HarnessAgent with the official @ai-sdk/harness-fx adapter: The @ai-sdk/harness-fx adapter connects to fx over the Agent Client Protocol (ACP) using @ai-sdk/harn",
@@ -93,16 +103,6 @@
       "date": "2026-08-28 00:00",
       "ts": 1787875200,
       "content": "<p>You can now run <a href=\"https://platform.claude.com/docs/en/managed-agents/overview\">Claude Managed Agents</a> with <a href=\"https://chat-sdk.dev/\">Chat SDK</a>.</p>\n    <p>Claude Managed Agents handles the agent loop server-side, including the model, tools, session state, and sandboxed web research. That means you can ship a Slack research bot built on Claude Managed Agents and Chat SDK, with one persistent session per thread and streamed briefs with sources.</p>\n    <h3><a href=\"https://vercel.com#what-you-get\">Copy link to heading</a>What you get</h3>\n    <ul>\n      <li>\n        <p>Token-by-token streaming: Replies render as the model writes them, over a single streamed response.</p>\n      </li>\n      <li>\n        <p>Live activity feed: Tool calls and model requests are available during the turn, so you can surface a trace in the chat.</p>\n      </li>\n      <li>\n        <p>No database to run: The Managed Agents session stores the conversation, so the sidebar, transcript, and replay read from it, no server-side state of your own.</p>\n      </li>\n      <li>\n        <p>Portability by design: Swapping a few lines in the handler moves your agent to Teams, Google Chat, Discord, WhatsApp, and 30+ other platforms.</p>\n      </li>\n    </ul>\n    <h3><a href=\"https://vercel.com#get-started\">Copy link to heading</a>Get started</h3>\n    <p>To try Claude Managed Agents with Chat SDK:</p>\n    <ul>\n      <li><p>Deploy a</p><a href=\"https://vercel.fyi/claude-research-analyst\">Slack research agent on Vercel</a> in one click</li>\n      <li><p>Follow the</p><a href=\"https://vercel.com/kb/guide/claude-managed-agents-chat-sdk\">step-by-step guide</a> or view the <a href=\"https://github.com/vercel-labs/cma-chat-sdk\">template source</a></li>\n    </ul>"
-    },
-    {
-      "title": "Cursor is now available in the AI SDK harness layer",
-      "url": "https://vercel.com/changelog/cursor-ai-sdk-harness-adapter",
-      "summary": "The AI SDK harness layer now supports Cursor through the official @ai-sdk/harness-cursor adapter. The harness layer lets your application run different coding agents through the same HarnessAgent interface, so you can switch agents without changing your application code. Pass cursor to HarnessAgent:Under the hood, the adapter uses @ai-sdk/harness-acp to connect Cursor to HarnessAgent through the A",
-      "source": "Vercel News",
-      "extra": "",
-      "date": "2026-08-27 14:47",
-      "ts": 1787842020,
-      "content": "<p>The <a href=\"https://vercel.com/changelog/program-agent-harnesses-with-ai-sdk\">AI SDK harness layer</a> now supports Cursor through the official </p><pre>@ai-sdk/harness-cursor</pre> adapter. The harness layer lets your application run different coding agents through the same <pre>HarnessAgent</pre> interface, so you can switch agents without changing your application code. \n    <p>Pass </p><pre>cursor</pre> to <pre>HarnessAgent</pre>:\n    <pre>\n      <pre>import { HarnessAgent } from '@ai-sdk/harness/agent';import { cursor } from '@ai-sdk/harness-cursor';\nconst agent = new HarnessAgent({  harness: cursor,});</pre>\n    </pre>\n    <p>Create a HarnessAgent that runs Cursor.</p>\n    <p>Under the hood, the adapter uses <a href=\"https://vercel.com/changelog/use-acp-compatible-harnesses-with-the-ai-sdk-harness-layer\"><pre>@ai-sdk/harness-acp</pre></a> to connect Cursor to </p><pre>HarnessAgent</pre> through the Agent Client Protocol (ACP). \n    <p>Supported harnesses now include, in addition to Cursor, Claude Code, Cline, Codex, Deep Agents, Grok Build, OpenCode, and Pi, with more coming soon.</p>\n    <p>Read the <a href=\"https://ai-sdk.dev/v7/providers/ai-sdk-harnesses/cursor\">Cursor harness documentation</a> to get started. </p>"
     }
   ]
 }
