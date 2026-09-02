@@ -35,6 +35,16 @@
       "content": ""
     },
     {
+      "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
+      "url": "https://openai.com/index/gilbert-tobin",
+      "summary": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-01 01:00",
+      "ts": 1788224400,
+      "content": ""
+    },
+    {
       "title": "OpenAI supports California’s bill to advance youth AI safety",
       "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
       "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-08-27 09:00",
       "ts": 1787821200,
-      "content": ""
-    },
-    {
-      "title": "Expanding OpenAI’s presence in Brazil",
-      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
-      "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-27 03:00",
-      "ts": 1787799600,
       "content": ""
     }
   ]
