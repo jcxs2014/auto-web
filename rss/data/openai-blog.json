@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+      "url": "https://openai.com/index/atv-big-air-tour",
+      "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-02 12:00",
+      "ts": 1788350400,
+      "content": ""
+    },
+    {
       "title": "How AI-native companies turn workflows into operating capability",
       "url": "https://openai.com/index/ai-native-company-workflows",
       "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-08-28 02:00",
       "ts": 1787882400,
-      "content": ""
-    },
-    {
-      "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
-      "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
-      "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-27 09:00",
-      "ts": 1787821200,
       "content": ""
     }
   ]
