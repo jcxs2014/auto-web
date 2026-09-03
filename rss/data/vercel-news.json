@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Cursor Cloud Agents can now run in Vercel Sandbox",
+      "url": "https://vercel.com/changelog/run-cursor-cloud-agents-vercel-sandbox",
+      "summary": "Cursor Cloud Agents can now run in Vercel Sandbox instead of Cursor's hosted machines. Cursor manages the agent harness and inference loop. Its Self-Hosted Machines APIs let you supply the execution environment where agents clone repositories, edit files, and run commands and tests. Self-Hosted Machines requires a Cursor Enterprise plan.Vercel Sandbox provides that execution environment as an isol",
+      "source": "Vercel News",
+      "extra": "",
+      "date": "2026-09-03 15:00",
+      "ts": 1788447600,
+      "content": "<p><a href=\"https://cursor.com/docs/cloud-agent\">Cursor Cloud Agents</a> can now run in <a href=\"https://vercel.com/docs/sandbox\">Vercel Sandbox</a> instead of Cursor's hosted machines. </p>\n    <p>Cursor manages the agent harness and inference loop. Its <a href=\"https://cursor.com/docs/cloud-agent/self-hosted\">Self-Hosted Machines</a> APIs let you supply the execution environment where agents clone repositories, edit files, and run commands and tests. Self-Hosted Machines requires a Cursor Enterprise plan.</p>\n    <p>Vercel Sandbox provides that execution environment as an isolated Firecracker microVM for each agent request. <a href=\"https://vercel.com/docs/functions)\">Vercel Functions</a> and <a href=\"https://vercel.com/workflow\">Vercel Workflow</a> form a durable control plane that claims queued agent requests, provisions workers, monitors sessions, and cleans up automatically.</p>\n    <p>With this architecture, you get:</p>\n    <ul>\n      <li>\n        <p>A scale-to-zero worker pool without long-lived virtual machines</p>\n      </li>\n      <li>\n        <p>A dedicated, isolated Sandbox for every agent request</p>\n      </li>\n      <li>\n        <p>Durable retries when a worker or session fails</p>\n      </li>\n      <li>\n        <p>Short-lived, user-scoped credentials inside each Sandbox</p>\n      </li>\n    </ul>\n    <p>Follow the <a href=\"https://vercel.com/kb/guide/cursor-vercel-sandbox\">step-by-step guide</a> to deploy the reference implementation to your own Vercel account, or learn more in the <a href=\"https://vercel.com/docs/sandbox\">Vercel Sandbox documentation</a>.</p>"
+    },
+    {
       "title": "Basic build machines are now available on Pro and Enterprise",
       "url": "https://vercel.com/changelog/basic-build-machines",
       "summary": "Pro and Enterprise teams can now select Basic build machines. Basic build machines have 2 vCPUs and 8 GB of memory, offering a more cost-efficient option for smaller apps or agents that build with fewer resources. New Pro and Enterprise projects still default to Elastic build machines, which scale automatically and are recommended for most use cases. To use Basic build machines, update your projec",
@@ -93,16 +103,6 @@
       "date": "2026-09-01 00:00",
       "ts": 1788220800,
       "content": "<p><a href=\"https://vercel.com/docs/networking/privatelink\">AWS PrivateLink</a> is now available for Pro and Enterprise teams as part of Advanced Networking. It allows Vercel Functions and builds to connect to AWS-hosted services without sending traffic over the public internet.</p>\n    <p>Use it to reach AWS-hosted databases such as RDS, Aurora, and Neon; SaaS services such as Snowflake and MongoDB Atlas; internal services behind an AWS Network Load Balancer; and S3 or DynamoDB through gateway endpoints.</p>\n    <p>To configure PrivateLink, open your project's <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F%5Bproject%5D%2Fsettings%2Fnetworking\">Networking settings</a> and enable Advanced Networking. Select New Connection, then enter the service name and region. </p>\n    <p>The service must accept connections from all AWS principals or allowlist the IAM role Vercel provides for your team.</p>\n    <p>Vercel creates the connection and provides a stable hostname. Use this hostname from your Functions and builds to reach the service privately.</p>\n    <p>Pricing:</p>\n    <ul>\n      <li>\n        <p>The first AWS PrivateLink connection is included with Advanced Networking. Each additional connection costs $30 per month.</p>\n      </li>\n      <li>\n        <p>PrivateLink data transfer costs $0.04 per GB.</p>\n      </li>\n    </ul>\n    <p>Learn more in the <a href=\"https://vercel.com/docs/networking/privatelink\">AWS PrivateLink documentation</a>.</p>"
-    },
-    {
-      "title": "fx is now available in the AI SDK harness layer",
-      "url": "https://vercel.com/changelog/fx-ai-sdk-harness-adapter",
-      "summary": "The AI SDK harness layer now supports fx, Vercel's lightweight, open-source coding agent. The harness layer provides one API for running coding agents in your application, so you can add fx without building a separate integration.Configure HarnessAgent with the official @ai-sdk/harness-fx adapter: The @ai-sdk/harness-fx adapter connects to fx over the Agent Client Protocol (ACP) using @ai-sdk/harn",
-      "source": "Vercel News",
-      "extra": "",
-      "date": "2026-08-31 06:00",
-      "ts": 1788156000,
-      "content": "<p>The <a href=\"https://vercel.com/changelog/program-agent-harnesses-with-ai-sdk\">AI SDK harness layer</a> now supports <a href=\"https://fx.sh\">fx</a>, Vercel's lightweight, open-source coding agent. The harness layer provides one API for running coding agents in your application, so you can add fx without building a separate integration.</p>\n    <p>Configure </p><pre>HarnessAgent</pre> with the official <pre>@ai-sdk/harness-fx</pre> adapter: \n    <pre>\n      <pre>import { HarnessAgent } from '@ai-sdk/harness/agent';import { fx } from '@ai-sdk/harness-fx';\nconst agent = new HarnessAgent({  harness: fx,});</pre>\n    </pre>\n    <p>Run fx through the HarnessAgent interface.</p>\n    <p>The </p><pre>@ai-sdk/harness-fx</pre> adapter connects to fx over the Agent Client Protocol (ACP) using <a href=\"https://vercel.com/changelog/use-acp-compatible-harnesses-with-the-ai-sdk-harness-layer\"><pre>@ai-sdk/harness-acp</pre></a>.\n    <p>fx joins Claude Code, Cline, Codex, Cursor, Deep Agents, Grok Build, OpenCode, and Pi in the list of supported harnesses.</p>\n    <p>Read the <a href=\"https://ai-sdk.dev/v7/providers/ai-sdk-harnesses/fx\">fx harness documentation</a> to get started.</p>"
     }
   ]
 }
