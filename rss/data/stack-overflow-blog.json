@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How to build a secure-by-default AI coding agent",
+      "url": "https://stackoverflow.blog/2026/09/04/how-to-build-a-secure-by-default-ai-coding-agent/",
+      "summary": "Ryan chats with Greg Jennings, VP of Engineering for AI Products at Anaconda, about what it takes to build a secure-by-default AI coding agent, why prompts shouldn't be treated as strict security guardrails, and how Anaconda is using strategic acquisitions to secure the AI software supply chain.",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-09-04 07:40",
+      "ts": 1788507600,
+      "content": "<p><a href=\"https://www.anaconda.com/\">Anaconda</a> is a foundational platform for Python data science and machine learning, providing secure software supply chain governance and enterprise AI infrastructure.</p>\n    <h1>How to build a secure-by-default AI coding agent</h1>\n    <p>Ryan chats with Greg Jennings, VP of Engineering for AI Products at Anaconda, about what it takes to build a secure-by-default AI coding agent, why prompts shouldn't be treated as strict security guardrails, and how Anaconda is using strategic acquisitions to secure the AI software supply chain.</p>"
+    },
+    {
       "title": "Elevating security, control, and accessibility: Stack Internal 2026.6",
       "url": "https://stackoverflow.blog/2026/09/03/security-control-and-accessibility-si-2026-6/",
       "summary": "In our 2026.6 release, we are shipping updates across administrative security, programmatic API control, developer portal integrations, and platform-wide accessibility—ensuring both your engineers and your AI agents act on verified, decision-grade knowledge.",
