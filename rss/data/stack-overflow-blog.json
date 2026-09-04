@@ -33,16 +33,6 @@
       "date": "2026-09-01 07:40",
       "ts": 1788248400,
       "content": "<p>Ryan sits down with Tim Lindholm, an early contributor to the Java language at Sun Microsystems, to chat about what it was like building one of the most popular programming languages ever at its inception, why it was strategically important for the Java team to create a cross-platform ABI to compete with Windows NT, and how applets were initially just an interesting demo.</p>\n    <p>Watch the new documentary by Cult.Repo on YouTube to learn more about the early history of Java and the people who built it.</p>"
-    },
-    {
-      "title": "When you keep AI Lean, you keep AI correct",
-      "url": "https://stackoverflow.blog/2026/08/28/when-you-keep-ai-lean-you-keep-ai-correct/",
-      "summary": "Ryan chats with Leo de Moura, Senior Principal Applied Scientist at AWS and the creator of the Lean language, about proving correctness in AI agents with the Lean language, how automated reasoning complements probabilistic AI models, and the use of AI for continuous code optimization.",
-      "source": "Stack Overflow Blog",
-      "extra": "",
-      "date": "2026-08-28 07:40",
-      "ts": 1787902800,
-      "content": "<p>Ryan chats with Leo de Moura, Senior Principal Applied Scientist at AWS and the creator of the Lean language, about proving correctness in AI agents with the Lean language, how automated reasoning complements probabilistic AI models, and the use of AI for continuous code optimization.</p>\n    <p>Lean is a functional programming language and proof assistant that allows developers to write programs and verify their mathematical correctness within the exact same system.</p>"
     }
   ]
 }
