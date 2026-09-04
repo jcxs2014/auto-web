@@ -5,6 +5,46 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-03 13:15",
+      "ts": 1788441300,
+      "content": ""
+    },
+    {
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-03 12:00",
+      "ts": 1788436800,
+      "content": ""
+    },
+    {
+      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
+      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-03 12:00",
+      "ts": 1788436800,
+      "content": ""
+    },
+    {
+      "title": "Safety overview: GPT-6 Astra",
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+      "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-03 00:00",
+      "ts": 1788393600,
+      "content": ""
+    },
+    {
       "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
       "url": "https://openai.com/index/atv-big-air-tour",
       "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
@@ -62,46 +102,6 @@
       "extra": "",
       "date": "2026-08-31 07:00",
       "ts": 1788159600,
-      "content": ""
-    },
-    {
-      "title": "Polimill builds Japan's next-generation public AI infrastructure",
-      "url": "https://openai.com/index/polimill",
-      "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-31 07:00",
-      "ts": 1788159600,
-      "content": ""
-    },
-    {
-      "title": "A milestone in expanding access to AI",
-      "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
-      "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-31 04:00",
-      "ts": 1788148800,
-      "content": ""
-    },
-    {
-      "title": "Our decision on Cursor following its acquisition by SpaceX",
-      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-      "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-28 06:00",
-      "ts": 1787896800,
-      "content": ""
-    },
-    {
-      "title": "Supporting Thailand’s next generation of AI startups",
-      "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
-      "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-28 02:00",
-      "ts": 1787882400,
       "content": ""
     }
   ]
