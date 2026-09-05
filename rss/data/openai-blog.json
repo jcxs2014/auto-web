@@ -35,6 +35,16 @@
       "content": ""
     },
     {
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "url": "https://openai.com/index/gpt-6-astra",
+      "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-03 11:00",
+      "ts": 1788433200,
+      "content": ""
+    },
+    {
       "title": "Safety overview: GPT-6 Astra",
       "url": "https://openai.com/index/safety-overview-gpt-6-astra",
       "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-01 01:00",
       "ts": 1788224400,
-      "content": ""
-    },
-    {
-      "title": "OpenAI supports California’s bill to advance youth AI safety",
-      "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
-      "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-08-31 07:00",
-      "ts": 1788159600,
       "content": ""
     }
   ]
