@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "An Alien Mind",
+      "url": "https://openai.com/index/an-alien-mind",
+      "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-06 09:00",
+      "ts": 1788685200,
+      "content": ""
+    },
+    {
+      "title": "Research acceleration: The view inside OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-06 08:00",
+      "ts": 1788681600,
+      "content": ""
+    },
+    {
       "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
       "url": "https://openai.com/index/daybreak-for-frontline-defenders",
       "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
@@ -15,9 +35,9 @@
       "content": ""
     },
     {
-      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
-      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-03 12:00",
@@ -25,9 +45,9 @@
       "content": ""
     },
     {
-      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
-      "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
-      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
+      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-03 12:00",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-09-01 13:00",
       "ts": 1788267600,
-      "content": ""
-    },
-    {
-      "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
-      "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
-      "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-01 12:00",
-      "ts": 1788264000,
-      "content": ""
-    },
-    {
-      "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
-      "url": "https://openai.com/index/gilbert-tobin",
-      "summary": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-01 01:00",
-      "ts": 1788224400,
       "content": ""
     }
   ]
