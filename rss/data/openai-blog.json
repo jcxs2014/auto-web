@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The Work Now Within Reach",
+      "url": "https://openai.com/index/the-work-now-within-reach",
+      "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-08 13:00",
+      "ts": 1788872400,
+      "content": ""
+    },
+    {
+      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+      "summary": "OpenAI is expanding support for journalism with tools, training, and partnerships for students, educators, journalists, and news organizations.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-08 00:00",
+      "ts": 1788825600,
+      "content": ""
+    },
+    {
       "title": "Supporting independent journalism in Ukraine",
       "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
       "summary": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
@@ -45,9 +65,9 @@
       "content": ""
     },
     {
-      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
-      "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
-      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
+      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-03 12:00",
@@ -55,9 +75,9 @@
       "content": ""
     },
     {
-      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
-      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-03 12:00",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-09-03 00:00",
       "ts": 1788393600,
-      "content": ""
-    },
-    {
-      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
-      "url": "https://openai.com/index/atv-big-air-tour",
-      "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-02 12:00",
-      "ts": 1788350400,
-      "content": ""
-    },
-    {
-      "title": "How AI-native companies turn workflows into operating capability",
-      "url": "https://openai.com/index/ai-native-company-workflows",
-      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-01 17:00",
-      "ts": 1788282000,
       "content": ""
     }
   ]
