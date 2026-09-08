@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "url": "https://openai.com/index/codex-quantum-computing-experiments",
+      "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-08 17:00",
+      "ts": 1788886800,
+      "content": ""
+    },
+    {
       "title": "The Work Now Within Reach",
       "url": "https://openai.com/index/the-work-now-within-reach",
       "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
@@ -15,9 +25,49 @@
       "content": ""
     },
     {
+      "title": "Introducing ChatGPT Images 2.5",
+      "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+      "summary": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-08 11:30",
+      "ts": 1788867000,
+      "content": ""
+    },
+    {
+      "title": "On the Navier–Stokes Millennium Prize Problem",
+      "url": "https://openai.com/index/navier-stokes-solution",
+      "summary": "We’re sharing an AI-generated solution to the Navier–Stokes Millennium Prize Problem, including a writeup and a formal proof in Lean.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-08 10:00",
+      "ts": 1788861600,
+      "content": ""
+    },
+    {
+      "title": "Funding grants for new research into AI and teen development",
+      "url": "https://openai.com/index/teen-development-research-grants",
+      "summary": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-08 09:00",
+      "ts": 1788858000,
+      "content": ""
+    },
+    {
       "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
       "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
       "summary": "OpenAI is expanding support for journalism with tools, training, and partnerships for students, educators, journalists, and news organizations.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-08 00:00",
+      "ts": 1788825600,
+      "content": ""
+    },
+    {
+      "title": "1Password increases engineering productivity 21% with Codex",
+      "url": "https://openai.com/index/1password",
+      "summary": "Engineers at 1Password use Codex to rapidly build new features and internal tools, reaching production-readiness while maintaining rigorous security policies.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-08 00:00",
@@ -52,56 +102,6 @@
       "extra": "",
       "date": "2026-09-06 08:00",
       "ts": 1788681600,
-      "content": ""
-    },
-    {
-      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
-      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
-      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-03 13:15",
-      "ts": 1788441300,
-      "content": ""
-    },
-    {
-      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
-      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-03 12:00",
-      "ts": 1788436800,
-      "content": ""
-    },
-    {
-      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
-      "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
-      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-03 12:00",
-      "ts": 1788436800,
-      "content": ""
-    },
-    {
-      "title": "GPT-6 Astra: A new generation of intelligence",
-      "url": "https://openai.com/index/gpt-6-astra",
-      "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-03 11:00",
-      "ts": 1788433200,
-      "content": ""
-    },
-    {
-      "title": "Safety overview: GPT-6 Astra",
-      "url": "https://openai.com/index/safety-overview-gpt-6-astra",
-      "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-03 00:00",
-      "ts": 1788393600,
       "content": ""
     }
   ]
