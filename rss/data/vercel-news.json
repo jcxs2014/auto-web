@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Password Protection is now priced per project on Pro",
+      "url": "https://vercel.com/changelog/password-protection-now-costs-20-per-project-per-month-on-pro",
+      "summary": "Pro teams can now enable Password Protection for $20 per project per month. It requires visitors to enter a password you set to view the project's deployments.Previously, Pro teams needed to purchase password protection for every project at the team level, but now it can be purchased individually. To enable Password Protection for a project, open Security in the sidebar, select Deployment Protecti",
+      "source": "Vercel News",
+      "extra": "",
+      "date": "2026-09-09 06:00",
+      "ts": 1788933600,
+      "content": "<p>Pro teams can now enable <a href=\"https://vercel.com/docs/deployment-protection/methods-to-protect-deployments/password-protection\">Password Protection</a> for $20 per project per month. It requires visitors to enter a password you set to view the project's deployments.</p>\n    <p>Previously, Pro teams needed to purchase password protection for every project at the team level, but now it can be purchased individually.<br></br>To enable Password Protection for a project, open Security in the sidebar, select <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F%5Bproject%5D%2Fsettings%2Fdeployment-protection&amp;title=Deployment+Protection\">Deployment Protection</a>, and turn it on. Disable it to stop future charges for that project.</p>\n    <p>Learn more about <a href=\"https://vercel.com/docs/deployment-protection/usage-and-pricing\">Deployment Protection usage and pricing</a> in the documentation.</p>"
+    },
+    {
+      "title": "Protect production deployments for free on every plan",
+      "url": "https://vercel.com/changelog/protect-production-deployments-for-free-on-every-plan",
+      "summary": "Vercel Authentication can now protect every deployment URL for a project, including its production domains, at no additional cost on Hobby, Pro, and Enterprise. Previously, protecting all deployments with Vercel Authentication required the $150-per-month Advanced Deployment Protection add-on.When enabled, only visitors who sign in to Vercel and have access to the project can open protected deploym",
+      "source": "Vercel News",
+      "extra": "",
+      "date": "2026-09-09 06:00",
+      "ts": 1788933600,
+      "content": "<p><a href=\"https://vercel.com/docs/deployment-protection/methods-to-protect-deployments/vercel-authentication\">Vercel Authentication</a> can now protect every deployment URL for a project, including its production domains, at no additional cost on Hobby, Pro, and Enterprise. Previously, protecting all deployments with Vercel Authentication required the $150-per-month Advanced Deployment Protection add-on.</p>\n    <p>When enabled, only visitors who sign in to Vercel and have access to the project can open protected deployments. Use it for internal tools, private dashboards, and sites that aren’t yet ready to launch.</p>\n    <p>From your project, open Security in the sidebar, select <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F%5Bproject%5D%2Fsettings%2Fdeployment-protection&amp;title=Deployment+Protection\">Deployment Protection</a>, then choose All Deployments from the dropdown.</p>\n    <p>You can also set this configuration as your <a href=\"https://vercel.com/docs/deployment-protection#how-team-default-settings-apply-to-new-projects\">team default</a>, so Vercel Authentication protects all deployments for every new project. </p>\n    <p><a href=\"https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/deployment-protection-exceptions\">Deployment Protection Exceptions</a> are also now free on every plan. Exceptions let you make specific preview domains public while the project’s other deployments remain protected.</p>\n    <p>Learn more in the <a href=\"https://vercel.com/docs/deployment-protection/usage-and-pricing\">Deployment Protection</a> documentation.</p>"
+    },
+    {
       "title": "Vercel Sandbox routing is now 18x faster globally",
       "url": "https://vercel.com/changelog/vercel-sandbox-routing-is-now-18x-faster-globally",
       "summary": "Requests to Vercel Sandbox public domains are now routed 18x faster.Domains created with the sandbox.domain() SDK call are now resolved from the nearest regional replica, instead of a single centralized store. Incoming requests reach the process running in the sandbox with less latency.Median domain lookup latency dropped from 62ms to 3.4ms (18x faster). The improvement is largest in regions farth",
@@ -83,16 +103,6 @@
       "date": "2026-09-03 01:00",
       "ts": 1788397200,
       "content": "<p>Pro and Enterprise teams can now select Basic build machines.</p>\n    <p>Basic build machines have 2 vCPUs and 8 GB of memory, offering a more cost-efficient option for smaller apps or agents that build with fewer resources. New Pro and Enterprise projects still default to <a href=\"https://vercel.com/changelog/elastic-build-machines-is-now-ga\">Elastic build machines</a>, which scale automatically and are recommended for most use cases. </p>\n    <p>To use Basic build machines, update your project configuration in <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F~%2Fsettings%2Fbuild-and-deployment%23build-machines\">team settings</a>, <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F%5Bproject%5D%2Fsettings%2Fbuild-and-deployment%23build-machine\">project settings</a>, or with Vercel CLI </p><pre>59.6.0</pre> or later:\n    <pre>\n      <pre>vc project update --build-machine basic</pre>\n    </pre>\n    <p>Hobby accounts continue to build on the same 2 vCPU machines, now called Basic build machines.</p>\n    <p>Basic build machines are charged at the same $0.0035 per vCPU per minute, which works out to $0.007 per build minute. See the <a href=\"https://vercel.com/docs/pricing#builds\">pricing page</a> or read the <a href=\"https://vercel.com/docs/builds\">build machines documentation</a>.</p>"
-    },
-    {
-      "title": "Free domain with Pro offer now includes .app and .dev",
-      "url": "https://vercel.com/changelog/app-and-dev-domains-included-with-free-domain-for-pro",
-      "summary": "We recently announced that all Pro teams can claim a free domain for one year. That offer now includes .app and .dev, bringing the eligible TLDs to eight:.app.dev.online.site.space.store.tech.websiteThe offer still covers one domain per team, and premium domains are not eligible. After the first year, your domain will renew automatically at the regular price shown at checkout when you claim it.Cla",
-      "source": "Vercel News",
-      "extra": "",
-      "date": "2026-09-02 07:00",
-      "ts": 1788332400,
-      "content": "<p>We recently announced that all <a href=\"https://vercel.com/docs/plans/pro-plan\">Pro</a> teams can claim <a href=\"https://vercel.com/changelog/free-domain-for-one-year-now-for-all-pro-teams\">a free domain for one year</a>. That offer now includes </p><pre>.app</pre> and <pre>.dev</pre>, bringing the eligible TLDs to eight:\n    <ul>\n      <li>\n        <pre>.app</pre>\n      </li>\n      <li>\n        <pre>.dev</pre>\n      </li>\n      <li>\n        <pre>.online</pre>\n      </li>\n      <li>\n        <pre>.site</pre>\n      </li>\n      <li>\n        <pre>.space</pre>\n      </li>\n      <li>\n        <pre>.store</pre>\n      </li>\n      <li>\n        <pre>.tech</pre>\n      </li>\n      <li>\n        <pre>.website</pre>\n      </li>\n    </ul>\n    <p>The offer still covers one domain per team, and premium domains are not eligible. After the first year, your domain will <a href=\"https://vercel.com/docs/domains/working-with-domains/renew-a-domain\">renew automatically</a> at the regular price shown at checkout when you claim it.</p>\n    <p>Claim yours at <a href=\"https://vercel.com/domains\">vercel.com/domains</a>, and see the <a href=\"https://vercel.com/docs/domains/free-domain-with-pro\">free domain FAQ</a> for full terms.</p>"
     }
   ]
 }
