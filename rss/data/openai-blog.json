@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Paul Christiano joins OpenAI Foundation Board",
+      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+      "summary": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-09 17:00",
+      "ts": 1788973200,
+      "content": ""
+    },
+    {
       "title": "How GPT-5.6 Sol helps run quantum computing experiments",
       "url": "https://openai.com/index/codex-quantum-computing-experiments",
       "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-06 09:00",
       "ts": 1788685200,
-      "content": ""
-    },
-    {
-      "title": "Research acceleration: The view inside OpenAI",
-      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
-      "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-06 08:00",
-      "ts": 1788681600,
       "content": ""
     }
   ]
