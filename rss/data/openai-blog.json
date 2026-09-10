@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+      "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-10 16:00",
+      "ts": 1789056000,
+      "content": ""
+    },
+    {
       "title": "Now everyone can put data to work",
       "url": "https://openai.com/index/put-data-to-work",
       "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
@@ -15,6 +25,16 @@
       "content": ""
     },
     {
+      "title": "Introducing ChatGPT for Financial Services",
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
+      "summary": "Introducing ChatGPT for Financial Services, combining built-in financial data and GPT-6 Astra for research, modeling, and client-ready materials.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-10 07:00",
+      "ts": 1789023600,
+      "content": ""
+    },
+    {
       "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
       "url": "https://openai.com/index/expanding-ai-access-us-government",
       "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
@@ -22,6 +42,26 @@
       "extra": "",
       "date": "2026-09-10 07:00",
       "ts": 1789023600,
+      "content": ""
+    },
+    {
+      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-10 00:00",
+      "ts": 1788998400,
+      "content": ""
+    },
+    {
+      "title": "Introducing the Agents API",
+      "url": "https://openai.com/index/introducing-the-agents-api",
+      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-10 00:00",
+      "ts": 1788998400,
       "content": ""
     },
     {
@@ -62,46 +102,6 @@
       "extra": "",
       "date": "2026-09-08 17:00",
       "ts": 1788886800,
-      "content": ""
-    },
-    {
-      "title": "The Work Now Within Reach",
-      "url": "https://openai.com/index/the-work-now-within-reach",
-      "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-08 13:00",
-      "ts": 1788872400,
-      "content": ""
-    },
-    {
-      "title": "Introducing ChatGPT Images 2.5",
-      "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
-      "summary": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-08 11:30",
-      "ts": 1788867000,
-      "content": ""
-    },
-    {
-      "title": "On the Navier–Stokes Millennium Prize Problem",
-      "url": "https://openai.com/index/navier-stokes-solution",
-      "summary": "We’re sharing an AI-generated solution to the Navier–Stokes Millennium Prize Problem, including a writeup and a formal proof in Lean.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-08 10:00",
-      "ts": 1788861600,
-      "content": ""
-    },
-    {
-      "title": "Funding grants for new research into AI and teen development",
-      "url": "https://openai.com/index/teen-development-research-grants",
-      "summary": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-08 09:00",
-      "ts": 1788858000,
       "content": ""
     }
   ]
