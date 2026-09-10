@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The AI policy window is open. We need to act.",
+      "url": "https://openai.com/index/ai-policy-window",
+      "summary": "Chris Lehane argues that stronger AI capabilities require stronger safety evidence, shared standards, and durable policy action while the policy window remains open.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-09 13:00",
+      "ts": 1788958800,
+      "content": ""
+    },
+    {
+      "title": "GPT-6 Astra: The next generation in intelligence for work",
+      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+      "summary": "Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-09 11:00",
+      "ts": 1788951600,
+      "content": ""
+    },
+    {
       "title": "Paul Christiano joins OpenAI Foundation Board",
       "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
       "summary": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-09-08 00:00",
       "ts": 1788825600,
-      "content": ""
-    },
-    {
-      "title": "Supporting independent journalism in Ukraine",
-      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
-      "summary": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-07 00:00",
-      "ts": 1788739200,
-      "content": ""
-    },
-    {
-      "title": "An Alien Mind",
-      "url": "https://openai.com/index/an-alien-mind",
-      "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-06 09:00",
-      "ts": 1788685200,
       "content": ""
     }
   ]
