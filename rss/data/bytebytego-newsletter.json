@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Learn Claude Code, evals, AI systems, and more: ByteByteGo Live is here",
+      "url": "https://blog.bytebytego.com/p/learn-claude-code-evals-ai-systems",
+      "summary": "Most online courses never get finished (~4% completion). Live cohorts get ~40%, roughly 10x higher. Live courses are the only courses people actually finish. So we’re launching ByteByteGo Live.",
+      "source": "ByteByteGo Newsletter",
+      "extra": "",
+      "date": "2026-09-11 15:32",
+      "ts": 1789140736,
+      "content": "<p>Most online courses never get finished (~4% completion). Live cohorts get ~40%, roughly 10x higher. Live courses are the only courses people actually finish.</p>\n    <p>So we’re launching ByteByteGo Live. The lineup:</p>\n    <ul>\n      <li>\n        <p>Build with Claude Code (John Kim, Senior Staff Engineer @ Meta, starting in a few days)</p>\n      </li>\n      <li>\n        <p>Build Production Grade AI Systems (Tanya Roosta, Director @ AMD, PhD UC Berkeley)</p>\n      </li>\n      <li>\n        <p>AI Engineering Fundamentals (Ali Aminian, Google, bestselling author)</p>\n      </li>\n      <li>\n        <p>AI Evals in Practice (Manjeet Singh, Senior Director @ Salesforce)</p>\n      </li>\n      <li>\n        <p>AI Cost Optimization (Jeremy Hintz, Engineering Lead @ Meta)</p>\n      </li>\n      <li>\n        <p>Rebuild YouTube with AI (Mikhail Sychev, Staff Software Engineer @ Google)</p>\n      </li>\n      <li>\n        <p>Trust-optimized AI Development (Kent Beck, Creator of TDD)</p>\n      </li>\n    </ul>\n    <p>One membership includes every live course we run over the next 12 months, including new ones added along the way.</p>"
+    },
+    {
       "title": "A Guide to Application Networking Basics",
       "url": "https://blog.bytebytego.com/p/a-guide-to-application-networking",
       "summary": "In this article, we will look at the various aspects of networking in detail.",
