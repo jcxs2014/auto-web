@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "AI cybersecurity is a cat and mouse game",
+      "url": "https://stackoverflow.blog/2026/09/11/ai-cybersecurity-is-a-cat-and-mouse-game/",
+      "summary": "Ryan chats with Sam Curry, CSO at Zscaler, about where human intelligence sits in the new security landscape with AI, why shifting security protections closer to applications helps limit probes for vulnerabilities, and why building more resilient code infrastructure is the best way to address the vulnerabilities AI does discover.",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-09-11 07:40",
+      "ts": 1789112400,
+      "content": "<p>Ryan chats with Sam Curry, CSO at Zscaler, about where human intelligence sits in the new security landscape with AI, why shifting security protections closer to applications helps limit probes for vulnerabilities, and why building more resilient code infrastructure is the best way to address the vulnerabilities AI does discover.</p>\n    <p>Zscaler is a cybersecurity company that provides cloud-based security solutions, zero trust architecture, and TLS inspection to help organizations securely operate in multi-tenant environments.</p>"
+    },
+    {
       "title": "(Re)introducing Developer Story",
       "url": "https://stackoverflow.blog/2026/09/10/re-introducing-developer-story/",
       "summary": "For the past few years, we’ve been looking at ways to bring a little more of the individual developer back to Stack.",
@@ -33,16 +43,6 @@
       "date": "2026-09-08 07:40",
       "ts": 1788853200,
       "content": "<p>Ryan chats with Srini Venkatesan, CTO at PayPal, about validating AI-generated deterministic code for security, developing autonomous SDLC harnesses with iterative feedback loops, and creating a seamless headless checkout experience.</p>\n    <p>This episode with Paypal’s CTO Srini Venkatesan was recorded at the Ai4 conference.</p>\n    <p>Listen to our other Ai4 conversation with Greg Jennings, VP of Engineering for AI Products at Anaconda, about building secure-by-default AI coding agents here.</p>"
-    },
-    {
-      "title": "How to build a secure-by-default AI coding agent",
-      "url": "https://stackoverflow.blog/2026/09/04/how-to-build-a-secure-by-default-ai-coding-agent/",
-      "summary": "Ryan chats with Greg Jennings, VP of Engineering for AI Products at Anaconda, about what it takes to build a secure-by-default AI coding agent, why prompts shouldn't be treated as strict security guardrails, and how Anaconda is using strategic acquisitions to secure the AI software supply chain.",
-      "source": "Stack Overflow Blog",
-      "extra": "",
-      "date": "2026-09-04 07:40",
-      "ts": 1788507600,
-      "content": "<p><a href=\"https://www.anaconda.com/\">Anaconda</a> is a foundational platform for Python data science and machine learning, providing secure software supply chain governance and enterprise AI infrastructure.</p>\n    <h1>How to build a secure-by-default AI coding agent</h1>\n    <p>Ryan chats with Greg Jennings, VP of Engineering for AI Products at Anaconda, about what it takes to build a secure-by-default AI coding agent, why prompts shouldn't be treated as strict security guardrails, and how Anaconda is using strategic acquisitions to secure the AI software supply chain.</p>"
     }
   ]
 }
