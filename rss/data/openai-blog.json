@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+      "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-11 10:00",
+      "ts": 1789120800,
+      "content": ""
+    },
+    {
       "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
       "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
       "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-09 17:00",
       "ts": 1788973200,
-      "content": ""
-    },
-    {
-      "title": "How GPT-5.6 Sol helps run quantum computing experiments",
-      "url": "https://openai.com/index/codex-quantum-computing-experiments",
-      "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-08 17:00",
-      "ts": 1788886800,
       "content": ""
     }
   ]
