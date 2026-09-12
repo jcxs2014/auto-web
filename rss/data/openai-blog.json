@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-14 00:00",
+      "ts": 1789344000,
+      "content": ""
+    },
+    {
       "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
       "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
       "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
@@ -12,6 +22,16 @@
       "extra": "",
       "date": "2026-09-11 10:00",
       "ts": 1789120800,
+      "content": ""
+    },
+    {
+      "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+      "url": "https://openai.com/index/cognition-devin-testing-with-astra",
+      "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-11 16:00",
+      "ts": 1789142400,
       "content": ""
     },
     {
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-09-09 13:00",
       "ts": 1788958800,
-      "content": ""
-    },
-    {
-      "title": "GPT-6 Astra: The next generation in intelligence for work",
-      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
-      "summary": "Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-09 11:00",
-      "ts": 1788951600,
-      "content": ""
-    },
-    {
-      "title": "Paul Christiano joins OpenAI Foundation Board",
-      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
-      "summary": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-09 17:00",
-      "ts": 1788973200,
       "content": ""
     }
   ]

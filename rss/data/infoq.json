@@ -5,7 +5,7 @@
   "lang": "en",
   "entries": [
     {
-      "title": "NVIDIA Personal AI Router Distributes AI Tasks Across Local Compute",
+      "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
       "url": "https://www.infoq.com/news/2026/09/nvidia-pair-ai-task-router/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
       "summary": "NVIDIA Personal AI Router (PAIR), now available in beta, lets you combine the inference capacity of multiple computers on your local network and automatically distribute AI requests among them. It is primarily designed for local multi-agent AI workloads, where multiple independent model calls can otherwise overwhelm one GPU. By Sergio De Simone",
       "source": "InfoQ",
