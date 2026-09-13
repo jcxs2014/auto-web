@@ -3,16 +3,5 @@
   "url": "https://daily.xlab.app/atom.xml",
   "category": "中文博客",
   "lang": "zh",
-  "entries": [
-    {
-      "title": "透明日报20260905期",
-      "url": "https://daily.xlab.app/d/20260905/",
-      "summary": "透明日报第20260905期 订阅 今日文章：互联网*1，文娱*1",
-      "source": "透明日报",
-      "extra": "",
-      "date": "2026-09-05 23:45",
-      "ts": 1788651900,
-      "content": "\n    <p>透明日报第20260905期 <a href=\"https://daily.xlab.app/about/\">订阅</a></p>\n    <h2>互联网</h2>\n    <h3>• <a href=\"https://www.bilibili.com/video/BV1XNtJ6UEmm/\">和曾鸣聊产业史观：残酷的真相、会消亡的公司、优秀≠卓越、“OAI、Anth大概率不是原生时代大赢家” </a></h3>\n    <blockquote>\n<p>不管怎么战略选择，你都很难在一直牌桌上</p><p>这一点也不让人绝望，人有生老病死，公司也有，所以新公司才有机会，年轻人才有梦想</p></blockquote>\n    <blockquote>\n<p>人太累的时候是没有创新的，在紧绷高压环境的组织里也很难有创新</p></blockquote>\n    <blockquote>\n<p>从小到大有多少兴趣被压抑了，在最早的时间，为了不输在起跑线上，被按在了原来世界的固定模式里</p></blockquote>\n    <h2>文娱</h2>\n    <h3>• [宝丽来？拍立得？可以但没必要</h3>\n    <p>](<a href=\"https://www.bilibili.com/video/BV1djtE6HEXf/\">https://www.bilibili.com/video/BV1djtE6HEXf/</a>)</p>\n    <p>一次成像产出的是一个物件，一个孤品，一个可实际交付的作品</p>\n    <p>相机简单到看起来像玩具，可控的东西越少，越需要了解机器的脾气</p>"
-    }
-  ]
+  "entries": []
 }
