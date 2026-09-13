@@ -3,5 +3,16 @@
   "url": "https://daily.xlab.app/atom.xml",
   "category": "中文博客",
   "lang": "zh",
-  "entries": []
+  "entries": [
+    {
+      "title": "透明日报20260913期",
+      "url": "https://daily.xlab.app/d/20260913/",
+      "summary": "透明日报第20260913期 订阅 今日文章：其他*1，技术*2",
+      "source": "透明日报",
+      "extra": "",
+      "date": "2026-09-13 23:45",
+      "ts": 1789343100,
+      "content": "\n    <p>透明日报第20260913期 <a href=\"https://daily.xlab.app/about/\">订阅</a></p>\n    <h2>其他</h2>\n    <h3>• <a href=\"https://aresluna.org/the-hardest-working-font-in-manhattan/\">The hardest working font in Manhattan</a></h3>\n    <h2>技术</h2>\n    <h3>• <a href=\"https://alexzhang13.github.io/blog/2026/harness/\">Language model harnesses are compositional generalizers</a></h3>\n    <p>非常有趣的观点，harness是帮助模型拆解问题，将所有问题拆成模型熟悉的小问题</p>\n    <p>模型要学习拆解任务和解决任务，但可以在同一种表达上做训练和推理，比如编码能力</p>\n    <p>拆解再递归解决本身没有问题，但我觉得这可能短期有效，但不会是一个最终方案（对AGI模型和harness来说都是），因为在复杂问题上拆解问题比解决问题要难</p>\n    <h3>• <a href=\"https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians\">AI Isn’t Outthinking Mathematicians. It’s Out-Remembering Them.</a></h3>\n    <p>模型在数学上表现很好，一部分是有反馈，另一个是数学证明的推理过程本身和模型上下文/思维链异曲同工</p>\n    <p>结合上篇，编码和数学证明我觉得都算是某种通用的表达，但这种表达显然是有上限的，而且不能解决所有问题</p>"
+    }
+  ]
 }
