@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "url": "https://openai.com/index/fyxer",
+      "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-14 12:00",
+      "ts": 1789387200,
+      "content": ""
+    },
+    {
       "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
       "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
       "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-10 00:00",
       "ts": 1788998400,
-      "content": ""
-    },
-    {
-      "title": "The AI policy window is open. We need to act.",
-      "url": "https://openai.com/index/ai-policy-window",
-      "summary": "Chris Lehane argues that stronger AI capabilities require stronger safety evidence, shared standards, and durable policy action while the policy window remains open.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-09 13:00",
-      "ts": 1788958800,
       "content": ""
     }
   ]
