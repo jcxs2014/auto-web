@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Helping older adults use AI in everyday life",
+      "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+      "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-16 16:00",
+      "ts": 1789574400,
+      "content": ""
+    },
+    {
+      "title": "Reimagining advertising with AI",
+      "url": "https://openai.com/index/reimagining-advertising-with-ai",
+      "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-16 13:00",
+      "ts": 1789563600,
+      "content": ""
+    },
+    {
       "title": "How Fyxer built an AI executive assistant people trust",
       "url": "https://openai.com/index/fyxer",
       "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-09-10 07:00",
       "ts": 1789023600,
-      "content": ""
-    },
-    {
-      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
-      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
-      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-10 00:00",
-      "ts": 1788998400,
-      "content": ""
-    },
-    {
-      "title": "Introducing the Agents API",
-      "url": "https://openai.com/index/introducing-the-agents-api",
-      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-10 00:00",
-      "ts": 1788998400,
       "content": ""
     }
   ]
