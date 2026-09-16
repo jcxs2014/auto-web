@@ -25,6 +25,26 @@
       "content": ""
     },
     {
+      "title": "How to connect AI usage to business value",
+      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-16 12:00",
+      "ts": 1789560000,
+      "content": ""
+    },
+    {
+      "title": "How workers are unlocking new ways of working",
+      "url": "https://openai.com/index/unlocking-new-ways-of-working",
+      "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-16 09:00",
+      "ts": 1789549200,
+      "content": ""
+    },
+    {
       "title": "How Fyxer built an AI executive assistant people trust",
       "url": "https://openai.com/index/fyxer",
       "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-09-10 15:00",
       "ts": 1789052400,
-      "content": ""
-    },
-    {
-      "title": "Introducing ChatGPT for Financial Services",
-      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
-      "summary": "Introducing ChatGPT for Financial Services, combining built-in financial data and GPT-6 Astra for research, modeling, and client-ready materials.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-10 07:00",
-      "ts": 1789023600,
-      "content": ""
-    },
-    {
-      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
-      "url": "https://openai.com/index/expanding-ai-access-us-government",
-      "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-10 07:00",
-      "ts": 1789023600,
       "content": ""
     }
   ]
