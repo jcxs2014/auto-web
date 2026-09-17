@@ -35,6 +35,10 @@ BASE_ENDPOINTS = ["https://export.arxiv.org/api/query"]
 
 # 真实浏览器 UA：arXiv/Fastly 对云主机（GitHub Actions 的 Azure IP）上携带描述型 UA 的
 # 请求更容易触发 406 内容协商拦截，故主用浏览器 UA；描述型 UA 仅作礼貌备选。
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+# arXiv 专用：带可描述的项目身份（arXiv 官方建议含联系方式），降低被 406/限流概率
+ARXIV_UA = "auto-web/1.0 (arXiv physics daily digest; +https://github.com/jcxs2014/auto-web)"
+
 BROWSER_HEADERS = {"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"}
 BROWSER_STAR_HEADERS = {"User-Agent": UA, "Accept": "*/*", "Accept-Language": "en-US,en;q=0.9"}
 POLITE_HEADERS = {"User-Agent": ARXIV_UA}
@@ -44,9 +48,6 @@ HEADER_VARIANTS = [BROWSER_HEADERS, BROWSER_STAR_HEADERS, POLITE_HEADERS]
 # 生成网页统一存放目录：按类型分子文件夹
 # 基于脚本位置推导仓库根（generators/ 的上一级），CI 与本地通用
 OUTPUT_BASE = Path(__file__).resolve().parent.parent
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-# arXiv 专用：带可描述的项目身份（arXiv 官方建议含联系方式），降低被 406/限流概率
-ARXIV_UA = "auto-web/1.0 (arXiv physics daily digest; +https://github.com/jcxs2014/auto-web)"
 BJ = timezone(timedelta(hours=8))
 
 # 3 themes in fixed display order: (主题名, [arXiv categories], emoji, anchor)
