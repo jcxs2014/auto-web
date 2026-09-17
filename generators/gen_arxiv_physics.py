@@ -30,20 +30,16 @@ from archive_util import write_archive
 from nav_util import NAV_CSS, build_nav, FOOTER_CSS, build_footer
 from sources_util import fetch_rss, fetch_prl_aps, dedup
 
-# arXiv API 查询端点（仅 export.arxiv.org 可靠；arxiv.org/api/query 实测返回 406）
-BASE_ENDPOINTS = ["https://export.arxiv.org/api/query"]
-
-# 真实浏览器 UA：arXiv/Fastly 对云主机（GitHub Actions 的 Azure IP）上携带描述型 UA 的
-# 请求更容易触发 406 内容协商拦截，故主用浏览器 UA；描述型 UA 仅作礼貌备选。
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-# arXiv 专用：带可描述的项目身份（arXiv 官方建议含联系方式），降低被 406/限流概率
-ARXIV_UA = "auto-web/1.0 (arXiv physics daily digest; +https://github.com/jcxs2014/auto-web)"
-
-BROWSER_HEADERS = {"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"}
-BROWSER_STAR_HEADERS = {"User-Agent": UA, "Accept": "*/*", "Accept-Language": "en-US,en;q=0.9"}
-POLITE_HEADERS = {"User-Agent": ARXIV_UA}
-# 重试中轮换请求头变体（主用无 Accept，兜底 Accept:*/*，礼貌备选描述型 UA）以自愈
-HEADER_VARIANTS = [BROWSER_HEADERS, BROWSER_STAR_HEADERS, POLITE_HEADERS]
+# arXiv 数据改用 INSPIRE-HEP API 获取。
+# 原因：arXiv 官方 API（export.arxiv.org）被 Fastly 对 GitHub Actions 的 Azure 出口 IP 针对性
+# 返回 406（纯 IP 维度拦截，与请求头无关；轮换浏览器 UA 仍 406）。INSPIRE-HEP 由 CERN 运营，
+# 索引全部 arXiv 论文并保留精确 arXiv 分类（arxiv_eprints.categories），从云上（ubuntu-latest）
+# 可正常访问，故在此改用其 API，输出（arXiv ID / 标题 / 摘要 / 作者 / 分类 / 日期）与之前一致。
+INSPIRE_BASE = "https://inspirehep.net/api/literature"
+# INSPIRE 要求 User-Agent 含可联系信息，便于进入礼貌池、避免限流
+INSPIRE_UA = "auto-web/1.0 (arXiv physics daily digest; mailto:jcxs2014@example.com; +https://github.com/jcxs2014/auto-web)"
+# 仅取渲染所需字段，减小响应体积
+INSPIRE_FIELDS = "arxiv_eprints,titles,authors,abstracts,earliest_date,preprint_date"
 
 # 生成网页统一存放目录：按类型分子文件夹
 # 基于脚本位置推导仓库根（generators/ 的上一级），CI 与本地通用
@@ -63,11 +59,8 @@ TRANSLATE_ZH = True
 TRANSLATE_SLEEP = 0.5  # 翻译调用间隔（秒），降低被限流风险
 TRANSLATE_ENDPOINT = "https://translate.googleapis.com/translate_a/single"
 
-NS = {
-    "a": "http://www.w3.org/2005/Atom",
-    "arxiv": "http://arxiv.org/schemas/atom",
-    "os": "http://a9.com/-/spec/opensearch/1.1/",
-}
+# 通用 HTTP User-Agent（翻译等杂项请求使用；INSPIRE 抓取用专用 INSPIRE_UA）
+HTTP_UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
 # MathJax v3（SVG 输出，无字体加载问题）。非 f-string，花括号为字面量。
 # 需联网加载；离线时数学公式以 LaTeX 原文显示（仍可读）。
@@ -120,7 +113,7 @@ def translate_to_zh(text: str) -> str:
         return ""
     try:
         url = TRANSLATE_ENDPOINT + "?client=gtx&sl=en&tl=zh-CN&dt=t&q=" + urllib.parse.quote(text)
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        req = urllib.request.Request(url, headers={"User-Agent": HTTP_UA})
         with urllib.request.urlopen(req, timeout=20) as resp:
             data = json.loads(resp.read().decode("utf-8"))
         return "".join(seg[0] for seg in data[0] if seg and seg[0])
@@ -142,82 +135,76 @@ def translate_paper(title: str, summary_short: str) -> tuple[str, str]:
     return zh.strip(), ""  # 分隔符被吞，整段当标题译文
 
 
-def fetch_theme(theme_cats: list[str], max_retries: int = 6) -> list[dict]:
-    """Query arXiv for one theme's categories, return list of paper dicts.
-    对 arXiv 的 406(请求头协商)/429(限流)/5xx/网络异常做退避重试 + 随机抖动。
-    关键背景：GitHub Actions 的 Azure IP 常被 arXiv/Fastly 针对性返回 406（实测本机 Mac
-    同款请求均 200，唯独云主机 406），故在重试中轮换请求头变体以自愈；若仍失败，
-    根治方案是把该 job 改到本机（Mac mini）self-hosted runner（见 .github/workflows/arxiv.yml）。"""
-    ors = " OR ".join(f"cat:{c}" for c in theme_cats)
+def fetch_theme(theme_cats: list[str], max_retries: int = 4) -> list[dict]:
+    """Query INSPIRE-HEP for one theme's arXiv categories, return list of paper dicts.
+
+    INSPIRE-HEP（CERN）索引全部 arXiv 论文并保留精确 arXiv 分类，查询语法
+    arxiv_eprints.categories:<cat>，多分类用 OR 连接；按 mostrecent 排序。
+    选用 INSPIRE 的原因：arXiv 官方 API（export.arxiv.org）被 Fastly 对 GitHub Actions 的
+    Azure 出口 IP 针对性返回 406（纯 IP 维度拦截，与请求头无关），而 INSPIRE 从云上可达，
+    输出（arXiv ID / 标题 / 摘要 / 作者 / 分类 / 日期）与之前一致。
+    对 429(限流)/5xx/网络异常做退避重试 + 随机抖动。"""
+    or_parts = [f"arxiv_eprints.categories:{c}" for c in theme_cats]
+    q = " OR ".join(or_parts)
+    theme_cats_set = set(theme_cats)
     params = {
-        "search_query": ors,
-        "start": "0",
-        "max_results": str(PER_THEME),
-        "sortBy": "submittedDate",
-        "sortOrder": "descending",
+        "q": q,
+        "sort": "mostrecent",
+        "size": str(PER_THEME),
+        "fields": INSPIRE_FIELDS,
     }
+    url = INSPIRE_BASE + "?" + urllib.parse.urlencode(params)
+    headers = {"User-Agent": INSPIRE_UA, "Accept": "application/json"}
     papers: list[dict] = []
     last_err = ""
     for attempt in range(max_retries):
-        endpoint = BASE_ENDPOINTS[attempt % len(BASE_ENDPOINTS)]
-        headers = HEADER_VARIANTS[attempt % len(HEADER_VARIANTS)]
-        url = endpoint + "?" + urllib.parse.urlencode(params)
         try:
             req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=30) as resp:
-                xml_bytes = resp.read()
-            root = ET.fromstring(xml_bytes)
-            for entry in root.findall("a:entry", NS):
-                arxiv_id_raw = clean(entry.findtext("a:id", "", NS))  # http://arxiv.org/abs/XXXXvN
-                arxiv_id = arxiv_id_raw.split("/abs/")[-1]
-                title = clean(entry.findtext("a:title", "", NS))
-                summary = clean(entry.findtext("a:summary", "", NS))
-                published = clean(entry.findtext("a:published", "", NS))
-                updated = clean(entry.findtext("a:updated", "", NS))
-                authors = [clean(a.text or "") for a in entry.findall("a:author/a:name", NS)]
-                pc = entry.find("arxiv:primary_category", NS)
-                primary_cat = pc.get("term", "") if pc is not None else ""
-                # links
-                abs_url = arxiv_id_raw
-                pdf_url = ""
-                for ln in entry.findall("a:link", NS):
-                    rel = ln.get("rel", "")
-                    if rel == "alternate":
-                        abs_url = ln.get("href", abs_url)
-                    elif rel == "related" and ln.get("type", "") == "application/pdf":
-                        pdf_url = ln.get("href", "")
-                if not pdf_url:
-                    pdf_url = f"https://arxiv.org/pdf/{arxiv_id}"
+                raw = resp.read()
+            data = json.loads(raw)
+            for hit in data.get("hits", {}).get("hits", []):
+                m = hit.get("metadata", {})
+                eprints = m.get("arxiv_eprints") or []
+                if not eprints:
+                    continue
+                arxiv_id = eprints[0].get("value", "")
+                if not arxiv_id:
+                    continue
+                cats = eprints[0].get("categories", [])
+                # 优先展示本主题请求的 arXiv 分类（论文常带多个分类，避免 chip 显示兄弟分类）
+                primary_cat = next((c for c in cats if c in theme_cats_set), cats[0]) if cats else ""
+                titles = m.get("titles") or []
+                title = titles[0].get("title", "") if titles else ""
+                abstracts = m.get("abstracts") or []
+                summary = abstracts[0].get("value", "") if abstracts else ""
+                authors = [a.get("full_name", "") for a in (m.get("authors") or [])]
+                authors = [a for a in authors if a]
+                # 日期：preprint_date 优先，否则 earliest_date（格式 YYYY-MM-DD）
+                date = m.get("preprint_date") or m.get("earliest_date") or ""
                 papers.append({
                     "arxiv_id": arxiv_id,
                     "title": title,
                     "summary": summary,
-                    "published": published,
-                    "updated": updated,
+                    "published": date,
+                    "updated": date,
                     "authors": authors,
                     "primary_cat": primary_cat,
-                    "abs_url": abs_url,
-                    "pdf_url": pdf_url,
+                    "abs_url": f"https://arxiv.org/abs/{arxiv_id}",
+                    "pdf_url": f"https://arxiv.org/pdf/{arxiv_id}",
                 })
             return papers
         except urllib.error.HTTPError as e:
             last_err = f"HTTP {e.code}"
-            if e.code == 406:
-                wait = min(15 * (attempt + 1), 90)
-                print(f"[arxiv] WARN 主题 {theme_cats} 406(请求头协商/可能被云IP拦截)，轮换请求头重试 {attempt+1}/{max_retries} ...", file=sys.stderr)
-            elif e.code == 429:
-                wait = min(15 * (2 ** attempt), 120)
-                print(f"[arxiv] WARN 主题 {theme_cats} 被限流(429)，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
-            else:
-                wait = min(15 * (attempt + 1), 90)
-                print(f"[arxiv] WARN 主题 {theme_cats} {last_err}，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
-            time.sleep(wait + random.uniform(0, 5))
+            wait = min(15 * (2 ** attempt), 120)
+            print(f"[arxiv] WARN 主题 {theme_cats} INSPIRE {last_err}，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
+            time.sleep(wait + random.uniform(0, 3))
             continue
         except Exception as e:
             last_err = str(e)
             wait = min(15 * (attempt + 1), 90)
-            print(f"[arxiv] WARN 主题 {theme_cats} 拉取异常：{e}，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
-            time.sleep(wait + random.uniform(0, 5))
+            print(f"[arxiv] WARN 主题 {theme_cats} INSPIRE 拉取异常：{e}，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
+            time.sleep(wait + random.uniform(0, 3))
             continue
     print(f"[arxiv] ERROR 主题 {theme_cats} 重试 {max_retries} 次仍失败（{last_err}），本主题返回空。", file=sys.stderr)
     return papers

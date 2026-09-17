@@ -3,11 +3,10 @@ name: arXiv update
 # arXiv 物理最新论文
 # 每天意大利（CEST, UTC+2）08:15 / 14:15 / 20:15 各跑一次（分钟错峰，降低与其它模块并发 push 冲突）
 #
-# ⚠️ 为什么用 self-hosted macOS runner：
-#   arXiv/Fastly 在 2026 起对 GitHub Actions 的 Azure 出口 IP 针对性返回 HTTP 406（内容协商拦截），
-#   与请求头无关（实测轮换浏览器 UA 仍 406）。本机 Mac mini 的 IP 干净、同款请求均返回 200，
-#   故 arxiv 抓取必须跑在 Mac mini 上（需在本机一次性注册 self-hosted runner，见仓库说明）。
-#   其它模块（news/rss/hot 等）不受影响，仍跑 ubuntu-latest。
+# arXiv 数据改用 INSPIRE-HEP API（见 generators/gen_arxiv_physics.py 顶部说明）：
+#   arXiv 官方 API（export.arxiv.org）被 Fastly 对 GitHub Actions 的 Azure 出口 IP 针对性返回
+#   HTTP 406（纯 IP 维度拦截，与请求头无关，轮换浏览器 UA 仍 406）。INSPIRE-HEP 由 CERN 运营、
+#   索引全部 arXiv 论文并保留精确 arXiv 分类，从云上（ubuntu-latest）可正常访问，故全部跑云端。
 on:
   schedule:
     - cron: "15 6,12,18 * * *"
@@ -19,7 +18,7 @@ permissions:
 
 jobs:
   arxiv:
-    runs-on: [self-hosted, macOS]
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Checkout
