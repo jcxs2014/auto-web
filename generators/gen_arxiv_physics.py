@@ -223,8 +223,17 @@ def cn_truncate(s: str, n: int = 400) -> str:
     return cut.rstrip() + "…"
 
 
-def relative_time(iso: str, now: datetime) -> str:
+def _parse_dt(iso: str) -> datetime:
+    """把 ISO 字符串解析为带时区的 datetime；若原始无时区信息（如 INSPIRE 的
+    'YYYY-MM-DD' 纯日期），按 UTC 处理，避免与 now（aware）相减时抛 TypeError。"""
     dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
+def relative_time(iso: str, now: datetime) -> str:
+    dt = _parse_dt(iso)
     delta = now - dt
     secs = int(delta.total_seconds())
     if secs < 60:
@@ -239,7 +248,7 @@ def relative_time(iso: str, now: datetime) -> str:
 
 
 def bj_human(iso: str) -> str:
-    dt = datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(BJ)
+    dt = _parse_dt(iso).astimezone(BJ)
     return f"{dt.month}月{dt.day}日 {dt.strftime('%H:%M')}（北京时间）"
 
 
