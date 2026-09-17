@@ -1,20 +1,47 @@
 # ⚠️ 临时诊断工作流：探测 GitHub Actions 的 Azure 出口 IP 能否访问 arXiv RSS。
+#
 # 背景：arXiv 官方 API（export.arxiv.org/api/query）对 Azure IP 返回 406，已改用 INSPIRE-HEP；
-# 但 INSPIRE 对 physics.space-ph 有约 7 天索引滞后。本探针用于确认「云端能否改用 arXiv RSS
-# 作为 space-ph 的补充/兜底数据源」。仅在 Actions 页面手动触发，不参与定时调度；结论确定后删除。
+# 但 INSPIRE 对 physics.space-ph 有约 7 天索引滞后（hep-th / astro-ph.HE 无滞后）。
+# 本探针用于确认「云端能否改用 arXiv RSS 作为 space-ph 的新鲜数据源」。
+#
+# 与常规工作流不同：结果会写入仓库根 probe-rss-result.txt 并提交，
+# 便于在无法下载 CI 日志（需 admin 权限）时也能读到结论。
+# 临时挂每小时调度以自动收集结果；结论确定后删除本文件与结果文件。
 name: Probe arXiv RSS
 
 on:
-  workflow_dispatch:  # 仅手动触发
+  workflow_dispatch:  # 手动触发
+  schedule:
+    - cron: "27 * * * *"  # 临时：每小时跑一次，自动收集结论
+
+permissions:
+  contents: write
 
 jobs:
   probe:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: 探测各端点可达性
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git for push
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git
+
+      - name: Pull latest before probe
+        run: git pull --rebase origin main || true
+
+      - name: 探测各端点可达性并写入结果文件
         run: |
           UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          OUT=probe-rss-result.txt
 
           probe() {
             label="$1"; url="$2"
@@ -22,22 +49,29 @@ jobs:
             size=$(wc -c < /tmp/body 2>/dev/null | tr -d ' ' || echo 0)
             items=$(grep -o "<item>" /tmp/body 2>/dev/null | wc -l | tr -d ' ')
             newest=$(grep -o "<pubDate>[^<]*" /tmp/body 2>/dev/null | head -1 | sed 's/<pubDate>//')
-            echo "HTTP=${code}  bytes=${size}  items=${items}  newest=${newest}   ← ${label}"
+            echo "HTTP=${code}  bytes=${size}  items=${items}  newest=${newest}   <= ${label}"
           }
 
-          echo "################ 1. arXiv RSS（本次要测的目标） ################"
-          probe "RSS  https export.arxiv.org  space-ph" "https://export.arxiv.org/rss/physics.space-ph"
-          probe "RSS  https arxiv.org         space-ph" "https://arxiv.org/rss/physics.space-ph"
-          probe "RSS  http  export.arxiv.org  space-ph" "http://export.arxiv.org/rss/physics.space-ph"
-          probe "RSS  https export.arxiv.org  astro-ph.HE" "https://export.arxiv.org/rss/astro-ph.HE"
+          {
+            echo "# arXiv RSS 云端可达性探针结果"
+            echo "生成时间(UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
+            echo "Runner: ubuntu-latest  | 仓库: ${{ github.repository }}"
+            echo ""
+            echo "== 1. arXiv RSS（本次要测的目标）=="
+            probe "RSS  https export.arxiv.org  space-ph"    "https://export.arxiv.org/rss/physics.space-ph"
+            probe "RSS  https arxiv.org         space-ph"    "https://arxiv.org/rss/physics.space-ph"
+            probe "RSS  http  export.arxiv.org  space-ph"    "http://export.arxiv.org/rss/physics.space-ph"
+            probe "RSS  https export.arxiv.org  astro-ph.HE" "https://export.arxiv.org/rss/astro-ph.HE"
+            echo ""
+            echo "== 2. 对照组（已知结论，用于验证探针环境一致）=="
+            probe "API  export.arxiv.org/api/query  [预期 406，已知被封]" \
+              "https://export.arxiv.org/api/query?search_query=cat:physics.space-ph&max_results=1"
+            probe "INSPIRE literature API          [预期 200，当前在用源]" \
+              "https://inspirehep.net/api/literature?q=arxiv_eprints.categories:physics.space-ph&size=1"
+            echo ""
+            echo "判读：第 1 组若出现 HTTP=200 且 items>0 => 云端可用 arXiv RSS（新鲜度优于 INSPIRE）；"
+            echo "      若全是 406/403 => 维持 INSPIRE 现状。"
+          } | tee "$OUT"
 
-          echo ""
-          echo "################ 2. 对照组（已知结论，用于验证探针环境） ################"
-          probe "API  export.arxiv.org/api/query    [预期 406，已知被封]" \
-            "https://export.arxiv.org/api/query?search_query=cat:physics.space-ph&max_results=1"
-          probe "INSPIRE literature API             [预期 200，当前在用源]" \
-            "https://inspirehep.net/api/literature?q=arxiv_eprints.categories:physics.space-ph&size=1"
-
-          echo ""
-          echo "结论判读：若第 1 组出现 HTTP=200 且 items>0，说明云端可用 arXiv RSS，"
-          echo "可给 space-ph 加 RSS 兜底（新鲜度优于 INSPIRE）；若全是 406/403，则维持 INSPIRE 现状。"
+      - name: Commit and push (probe)
+        run: bash sync.sh probe probe-rss-result.txt
