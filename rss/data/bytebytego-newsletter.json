@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Migrations at Scale: Changing the Application Engine at 30,000 Feet",
+      "url": "https://blog.bytebytego.com/p/migrations-at-scale-changing-the",
+      "summary": "In this article, we will look at how migrations work at scale and the key strategies that can help make it as efficient as possible.",
+      "source": "ByteByteGo Newsletter",
+      "extra": "",
+      "date": "2026-09-17 15:31",
+      "ts": 1789659064,
+      "content": "<p>Consider a hypothetical scenario in which an online shopping platform has become extremely successful. It has outgrown its original database. This causes order histories to load very slowly. Maintenance takes much longer than it used to. And engineers spend way too much time managing the workload and the system’s limitations.</p>\n    <p>The engineering team behind this system wants to replace the database and migrate the data to a new database that promises better performance. But you cannot take a popular online store offline to make the switch. Customers are always placing orders, changing addresses, and requesting refunds. The shop can’t be shut down just like that.</p>\n    <p>This scenario offers a glimpse of the main challenge inherent in production migrations. How do you change a working system while still running the service that people depend on? At scale, copying existing data during such migrations can take days. Also, many supporting applications may depend on the component being replaced. Every intermediate step needs to work while ordinary business continues.</p>\n    <p>In this article, we will look at how migrations work at scale and the key strategies that can help make it as efficient as possible.</p>"
+    },
+    {
       "title": "How LLMs Can Find a Needle in a Haystack",
       "url": "https://blog.bytebytego.com/p/how-llms-can-find-a-needle-in-a-haystack",
       "summary": "In this article, we are going to look at how LLMs can find a needle in a haystack.",
@@ -63,16 +73,6 @@
       "date": "2026-09-11 15:32",
       "ts": 1789140736,
       "content": "<p>Most online courses never get finished (~4% completion). Live cohorts get ~40%, roughly 10x higher. Live courses are the only courses people actually finish.</p>\n    <p>So we’re launching ByteByteGo Live. The lineup:</p>\n    <ul>\n      <li>\n        <p>Build with Claude Code (John Kim, Senior Staff Engineer @ Meta, starting in a few days)</p>\n      </li>\n      <li>\n        <p>Build Production Grade AI Systems (Tanya Roosta, Director @ AMD, PhD UC Berkeley)</p>\n      </li>\n      <li>\n        <p>AI Engineering Fundamentals (Ali Aminian, Google, bestselling author)</p>\n      </li>\n      <li>\n        <p>AI Evals in Practice (Manjeet Singh, Senior Director @ Salesforce)</p>\n      </li>\n      <li>\n        <p>AI Cost Optimization (Jeremy Hintz, Engineering Lead @ Meta)</p>\n      </li>\n      <li>\n        <p>Rebuild YouTube with AI (Mikhail Sychev, Staff Software Engineer @ Google)</p>\n      </li>\n      <li>\n        <p>Trust-optimized AI Development (Kent Beck, Creator of TDD)</p>\n      </li>\n    </ul>\n    <p>One membership includes every live course we run over the next 12 months, including new ones added along the way.</p>"
-    },
-    {
-      "title": "A Guide to Application Networking Basics",
-      "url": "https://blog.bytebytego.com/p/a-guide-to-application-networking",
-      "summary": "In this article, we will look at the various aspects of networking in detail.",
-      "source": "ByteByteGo Newsletter",
-      "extra": "",
-      "date": "2026-09-10 15:31",
-      "ts": 1789054288,
-      "content": "<p>Imagine a simple scenario where an e-commerce web application calls an API endpoint that returns information about a customer order.</p>\n    <p>At the application level, this looks like a pretty simple operation. But a lot is happening under the hood. First, the client queries the DNS for the IP address linked to the API endpoint. DNS might return the address of a load balancer rather than the address of a specific application server. The operating system then determines how packets should be sent to that IP address. It might choose to send them through the local network, an internet service provider (ISP), or several other routers. The ultimate goal is for the data packets to reach the destination network.</p>\n    <p>The most common protocol used for this is HTTP. However, before HTTP can send the request, the client usually needs to establish some form of connection with the destination server.</p>\n    <p>With traditional HTTPS, this means setting up a TCP connection. In this type of connection, the client and server perform a handshake by exchanging some initial packets so that both sides know a connection has been established. The client and server then perform a TLS handshake. Only after this can the HTTP request be sent securely. A load balancer receives it, selects a healthy application instance, and forwards the request. The application performs its work and sends the response back through the same path.</p>\n    <p>All of this falls under the realm of networking. Due to its ubiquitous nature, networking becomes an extremely important discipline for developers to master. In this article, we will look at the various aspects of networking in detail.</p>"
     }
   ]
 }

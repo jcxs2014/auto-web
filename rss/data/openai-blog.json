@@ -93,16 +93,6 @@
       "date": "2026-09-11 16:00",
       "ts": 1789142400,
       "content": ""
-    },
-    {
-      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
-      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
-      "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-10 16:00",
-      "ts": 1789056000,
-      "content": ""
     }
   ]
 }
