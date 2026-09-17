@@ -1,0 +1,16 @@
+# arXiv RSS 云端可达性探针结果
+生成时间(UTC): 2026-09-17 19:44:54
+Runner: ubuntu-latest  | 仓库: jcxs2014/auto-web
+
+== 1. arXiv RSS（本次要测的目标）==
+HTTP=200  bytes=7472  items=3  newest=Thu, 17 Sep 2026 00:00:00 -0400   <= RSS  https export.arxiv.org  space-ph
+HTTP=302  bytes=288  items=0  newest=   <= RSS  https arxiv.org         space-ph
+HTTP=301  bytes=0  items=0  newest=   <= RSS  http  export.arxiv.org  space-ph
+HTTP=200  bytes=89116  items=41  newest=Thu, 17 Sep 2026 00:00:00 -0400   <= RSS  https export.arxiv.org  astro-ph.HE
+
+== 2. 对照组（已知结论，用于验证探针环境一致）==
+HTTP=200  bytes=3813  items=0  newest=   <= API  export.arxiv.org/api/query  [预期 406，已知被封]
+HTTP=200  bytes=22264  items=0  newest=   <= INSPIRE literature API          [预期 200，当前在用源]
+
+判读：第 1 组若出现 HTTP=200 且 items>0 => 云端可用 arXiv RSS（新鲜度优于 INSPIRE）；
+      若全是 406/403 => 维持 INSPIRE 现状。
