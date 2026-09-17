@@ -19,6 +19,7 @@ import html
 import json
 import sys
 import time
+import random
 import urllib.request
 import urllib.error
 import urllib.parse
@@ -29,12 +30,23 @@ from archive_util import write_archive
 from nav_util import NAV_CSS, build_nav, FOOTER_CSS, build_footer
 from sources_util import fetch_rss, fetch_prl_aps, dedup
 
-BASE = "https://export.arxiv.org/api/query"
+# arXiv API 查询端点（仅 export.arxiv.org 可靠；arxiv.org/api/query 实测返回 406）
+BASE_ENDPOINTS = ["https://export.arxiv.org/api/query"]
+
+# 真实浏览器 UA：arXiv/Fastly 对云主机（GitHub Actions 的 Azure IP）上携带描述型 UA 的
+# 请求更容易触发 406 内容协商拦截，故主用浏览器 UA；描述型 UA 仅作礼貌备选。
+BROWSER_HEADERS = {"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"}
+BROWSER_STAR_HEADERS = {"User-Agent": UA, "Accept": "*/*", "Accept-Language": "en-US,en;q=0.9"}
+POLITE_HEADERS = {"User-Agent": ARXIV_UA}
+# 重试中轮换请求头变体（主用无 Accept，兜底 Accept:*/*，礼貌备选描述型 UA）以自愈
+HEADER_VARIANTS = [BROWSER_HEADERS, BROWSER_STAR_HEADERS, POLITE_HEADERS]
 
 # 生成网页统一存放目录：按类型分子文件夹
 # 基于脚本位置推导仓库根（generators/ 的上一级），CI 与本地通用
 OUTPUT_BASE = Path(__file__).resolve().parent.parent
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+# arXiv 专用：带可描述的项目身份（arXiv 官方建议含联系方式），降低被 406/限流概率
+ARXIV_UA = "auto-web/1.0 (arXiv physics daily digest; +https://github.com/jcxs2014/auto-web)"
 BJ = timezone(timedelta(hours=8))
 
 # 3 themes in fixed display order: (主题名, [arXiv categories], emoji, anchor)
@@ -129,9 +141,12 @@ def translate_paper(title: str, summary_short: str) -> tuple[str, str]:
     return zh.strip(), ""  # 分隔符被吞，整段当标题译文
 
 
-def fetch_theme(theme_cats: list[str], max_retries: int = 4) -> list[dict]:
+def fetch_theme(theme_cats: list[str], max_retries: int = 6) -> list[dict]:
     """Query arXiv for one theme's categories, return list of paper dicts.
-    对 arXiv 限流(429)/5xx/网络异常做指数退避重试，避免偶发限流直接落空。"""
+    对 arXiv 的 406(请求头协商)/429(限流)/5xx/网络异常做退避重试 + 随机抖动。
+    关键背景：GitHub Actions 的 Azure IP 常被 arXiv/Fastly 针对性返回 406（实测本机 Mac
+    同款请求均 200，唯独云主机 406），故在重试中轮换请求头变体以自愈；若仍失败，
+    根治方案是把该 job 改到本机（Mac mini）self-hosted runner（见 .github/workflows/arxiv.yml）。"""
     ors = " OR ".join(f"cat:{c}" for c in theme_cats)
     params = {
         "search_query": ors,
@@ -140,12 +155,14 @@ def fetch_theme(theme_cats: list[str], max_retries: int = 4) -> list[dict]:
         "sortBy": "submittedDate",
         "sortOrder": "descending",
     }
-    url = BASE + "?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/atom+xml"})
     papers: list[dict] = []
     last_err = ""
     for attempt in range(max_retries):
+        endpoint = BASE_ENDPOINTS[attempt % len(BASE_ENDPOINTS)]
+        headers = HEADER_VARIANTS[attempt % len(HEADER_VARIANTS)]
+        url = endpoint + "?" + urllib.parse.urlencode(params)
         try:
+            req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=30) as resp:
                 xml_bytes = resp.read()
             root = ET.fromstring(xml_bytes)
@@ -184,19 +201,22 @@ def fetch_theme(theme_cats: list[str], max_retries: int = 4) -> list[dict]:
             return papers
         except urllib.error.HTTPError as e:
             last_err = f"HTTP {e.code}"
-            if e.code == 429:
+            if e.code == 406:
+                wait = min(15 * (attempt + 1), 90)
+                print(f"[arxiv] WARN 主题 {theme_cats} 406(请求头协商/可能被云IP拦截)，轮换请求头重试 {attempt+1}/{max_retries} ...", file=sys.stderr)
+            elif e.code == 429:
                 wait = min(15 * (2 ** attempt), 120)
                 print(f"[arxiv] WARN 主题 {theme_cats} 被限流(429)，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
             else:
                 wait = min(15 * (attempt + 1), 90)
                 print(f"[arxiv] WARN 主题 {theme_cats} {last_err}，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
-            time.sleep(wait)
+            time.sleep(wait + random.uniform(0, 5))
             continue
         except Exception as e:
             last_err = str(e)
             wait = min(15 * (attempt + 1), 90)
             print(f"[arxiv] WARN 主题 {theme_cats} 拉取异常：{e}，重试 {attempt+1}/{max_retries}，等待 {wait}s ...", file=sys.stderr)
-            time.sleep(wait)
+            time.sleep(wait + random.uniform(0, 5))
             continue
     print(f"[arxiv] ERROR 主题 {theme_cats} 重试 {max_retries} 次仍失败（{last_err}），本主题返回空。", file=sys.stderr)
     return papers
