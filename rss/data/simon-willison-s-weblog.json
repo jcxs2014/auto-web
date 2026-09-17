@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "datasette 1.0a40",
+      "url": "https://simonwillison.net/2026/Sep/16/datasette/",
+      "summary": "Release: datasette 1.0a40 Same security fix as 0.65.5, plus some neat new features and bug fixes: Plugins can now launch and manage background tasks using the new datasette.add_background_task() method. Thanks, Alex Garcia. I've migrated Datasette to httpx2 for features like the internal datasette.client.get() method. A whole lot of bug fixes, many of them stemming from a recent effort to triage i",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-09-16 23:51",
+      "ts": 1789602703,
+      "content": "<p>16th September 2026</p>\n    <p>Same security fix as <a href=\"https://simonwillison.net/2026/Sep/16/datasette-2/\">0.65.5</a>, plus some neat new features and bug fixes:</p>\n    <ul>\n      <li>Plugins can now launch and manage background tasks using the new <a href=\"https://docs.datasette.io/en/latest/internals.html#datasette-add-background-task\">datasette.add_background_task()</a> method. Thanks, <a href=\"https://alexgarcia.xyz/\">Alex Garcia</a>.</li>\n      <li>I've migrated Datasette to <a href=\"https://github.com/pydantic/httpx2\">httpx2</a> for features like the internal <pre>datasette.client.get()</pre> method.</li>\n      <li>A whole lot of <a href=\"https://docs.datasette.io/en/latest/changelog.html#a40-2026-09-16\">bug fixes</a>, many of them stemming from a recent effort to triage issues for a 1.0 stable release.</li>\n    </ul>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
+    },
+    {
+      "title": "datasette 0.65.5",
+      "url": "https://simonwillison.net/2026/Sep/16/datasette-2/",
+      "summary": "Release: datasette 0.65.5 Security fix for an issue where a trailing newline in a requested table name could bypass table permissions and expose private rows, reported by dpfkdlemtp in GHSA-h547-rmjf-5m2m. Tags: security, datasette",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-09-16 23:51",
+      "ts": 1789602668,
+      "content": "<p>16th September 2026</p>\n    <p>Security fix for an issue where a trailing newline in a requested table name could bypass table permissions and expose private rows, reported by <a href=\"https://github.com/dpfkdlemtp\">dpfkdlemtp</a> in <a href=\"https://github.com/simonw/datasette/security/advisories/GHSA-h547-rmjf-5m2m\">GHSA-h547-rmjf-5m2m</a>.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
+    },
+    {
       "title": "Claude Cowork and chat are now one Claude",
       "url": "https://simonwillison.net/2026/Sep/16/one-claude/",
       "summary": "Claude Cowork and chat are now one Claude In hopefully good news for anyone who, like me, was increasingly confused at Cowork v.s. Claude v.s. Claude Code: Starting today, Claude Cowork and chat are merging into one Claude. Bring a quick question, or hand over a report due at noon, and Claude takes it from there, even after you’ve closed your laptop. [...] This is rolling out to Pro and Max plans ",
@@ -83,26 +103,6 @@
       "date": "2026-09-13 23:58",
       "ts": 1789343894,
       "content": "<p>13th September 2026</p><p><a href=\"https://simonwillison.net/elsewhere/release/\">Release</a></p><p><a href=\"https://github.com/simonw/shot-scraper/releases/tag/1.12\">shot-scraper 1.12</a>— A CLI utility for taking screenshots of websites, recording video demos and scraping sites using JavaScript</p><p>I've added WebP support to my <a href=\"https://shot-scraper.datasette.io/\">shot-scraper</a> screenshot automation tool. You can now take a WebP screenshot of a web page like this:</p><pre><pre>shot-scraper https://simonwillison.net -o screenshot.webp --quality 80\n</pre></pre>\n<p>The </p><pre>--quality</pre> option sets the quality - without that option the WebP file will be lossless.<p>In my experience WebP screenshots are almost always significantly smaller in file size than their JPEG or PNG equivalents. See <a href=\"https://github.com/simonw/shot-scraper/pull/210\">the PR</a> for some examples.</p><p>I shipped this feature so I could use it to generate the screenshot <a href=\"https://simonwillison.net/2026/Sep/14/commit-rewriter/\">for my new commit-rewriter tool</a>.</p><h2>Recent articles</h2><ul><li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li><li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li><li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li></ul>"
-    },
-    {
-      "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
-      "url": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
-      "summary": "Here's a neat thing I had ChatGPT Work with GPT-6 Astra (Max) do this morning: I live at . Figure out 5K and 10K running routes from me that loop from my house. Use OSM data. It worked for 27 minutes and produced exactly what I'd asked for, as both an embedded visualization and downloadable GPX file and GeoJSON files. Here's that 5K route: When I asked it how it had created the route, it replied: ",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-09-12 23:56",
-      "ts": 1789257402,
-      "content": "<h2>Generating running routes with GPT-6 Astra and ChatGPT Work</h2>\n    <p>12th September 2026</p>\n    <p>Here’s a neat thing I had <a href=\"https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/\">ChatGPT Work</a> with GPT-6 Astra (Max) do this morning:</p>\n    <blockquote>\n<p></p><pre>I live at <my address>. Figure out 5K and 10K running routes from me that loop from my house. Use OSM data.</pre></blockquote>\n    <p>It worked for 27 minutes and produced exactly what I’d asked for, as both an embedded visualization and downloadable GPX file and GeoJSON files. Here’s that 5K route:</p>\n    <p>When I asked it how it had created the route, it replied:</p>\n    <blockquote>\n<p>I used Nominatim to locate the address and Overpass to download local OpenStreetMap roads and trails, then calculated the loops locally.</p></blockquote>\n    <p>Frustratingly, the actual code it ran and exact details of what it did weren’t visible to me in the ChatGPT UI. I see this lack of transparency is an anti-feature.</p>\n    <p>By the time I thought to ask for a copy of the Python code it had used, ChatGPT was unable to provide it. This appears to be because the thread had been compacted. I think any LLM system that uses compaction needs to both preserve the pre-compacted text and make that text available via agent tool calls, to protect against this kind of problem.</p>\n    <p>As for displaying the map to me, that used the <a href=\"https://codex-tool-reference.simonw.chatgpt.site/skills/visualize\">visualize skill</a>. It created a file called </p><pre>/workspace/el-granada-5k-share.html</pre> to embed directly into the ChatGPT UI.\n    <p>Here’s <a href=\"https://gist.github.com/simonw/ea652573c8ff5378b218cb10c8c5a480\">a copy of that HTML</a>, which starts like this:</p>\n    <pre><div id=\"eg-share-loop\">\n  <div class=\"viz-row\"><h3>El Granada harbor loop</h3><span class=\"text-small\">5.1 km</span></div>\n  <div id=\"eg-share-stage\"></div>\n  <div class=\"text-small text-muted\">Map data © <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap contributors</a></div>\n  \n  \n  \n  &lt;script\n  (() => {\n    const root=document.getElementById('eg-share-loop');</pre>\n    <p>The </p><pre>&lt;script</pre> element contains the full geometry needed to render both the running route and the map itself, using D3, which is loaded from an allow-listed CDN location described in this section of <a href=\"https://codex-tool-reference.simonw.chatgpt.site/skills/visualize\">the visualize skill</a>:\n    <blockquote>\n<h3>External resources</h3><ul></ul><li>The CSP allows only</li><pre>cdnjs.cloudflare.com</pre>, <pre>esm.sh</pre>, <pre>cdn.jsdelivr.net</pre>, <pre>unpkg.com</pre>, <pre>fonts.googleapis.com</pre>, <pre>fonts.gstatic.com</pre>, and <pre>fonts.bunny.net</pre>. Other origins are blocked and fail silently.</blockquote>\n    <h2>More recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
-    },
-    {
-      "title": "California Brown Pelican",
-      "url": "https://simonwillison.net/2026/Sep/12/sighting-399708714/",
-      "summary": "California Brown Pelican, in San Mateo County, CA, USThe Pacifica Pier shut down at the start of June after a crack in the concrete walkway made access to the pier unsafe. It has since been entirely taken over by pelicans! Tags: wildlife",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-09-12 21:16",
-      "ts": 1789247769,
-      "content": "<p>12th September 2026</p>\n    <p>The Pacifica Pier shut down at the start of June after a crack in the concrete walkway made access to the pier unsafe.</p>\n    <p>It has since been entirely taken over by pelicans!</p>"
     }
   ]
 }
