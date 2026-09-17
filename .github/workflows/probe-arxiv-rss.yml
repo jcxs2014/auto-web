@@ -1,0 +1,43 @@
+# ⚠️ 临时诊断工作流：探测 GitHub Actions 的 Azure 出口 IP 能否访问 arXiv RSS。
+# 背景：arXiv 官方 API（export.arxiv.org/api/query）对 Azure IP 返回 406，已改用 INSPIRE-HEP；
+# 但 INSPIRE 对 physics.space-ph 有约 7 天索引滞后。本探针用于确认「云端能否改用 arXiv RSS
+# 作为 space-ph 的补充/兜底数据源」。仅在 Actions 页面手动触发，不参与定时调度；结论确定后删除。
+name: Probe arXiv RSS
+
+on:
+  workflow_dispatch:  # 仅手动触发
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 探测各端点可达性
+        run: |
+          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+
+          probe() {
+            label="$1"; url="$2"
+            code=$(curl -sS -o /tmp/body -w "%{http_code}" -m 30 -A "$UA" "$url" 2>/dev/null || echo "CURL_FAIL")
+            size=$(wc -c < /tmp/body 2>/dev/null | tr -d ' ' || echo 0)
+            items=$(grep -o "<item>" /tmp/body 2>/dev/null | wc -l | tr -d ' ')
+            newest=$(grep -o "<pubDate>[^<]*" /tmp/body 2>/dev/null | head -1 | sed 's/<pubDate>//')
+            echo "HTTP=${code}  bytes=${size}  items=${items}  newest=${newest}   ← ${label}"
+          }
+
+          echo "################ 1. arXiv RSS（本次要测的目标） ################"
+          probe "RSS  https export.arxiv.org  space-ph" "https://export.arxiv.org/rss/physics.space-ph"
+          probe "RSS  https arxiv.org         space-ph" "https://arxiv.org/rss/physics.space-ph"
+          probe "RSS  http  export.arxiv.org  space-ph" "http://export.arxiv.org/rss/physics.space-ph"
+          probe "RSS  https export.arxiv.org  astro-ph.HE" "https://export.arxiv.org/rss/astro-ph.HE"
+
+          echo ""
+          echo "################ 2. 对照组（已知结论，用于验证探针环境） ################"
+          probe "API  export.arxiv.org/api/query    [预期 406，已知被封]" \
+            "https://export.arxiv.org/api/query?search_query=cat:physics.space-ph&max_results=1"
+          probe "INSPIRE literature API             [预期 200，当前在用源]" \
+            "https://inspirehep.net/api/literature?q=arxiv_eprints.categories:physics.space-ph&size=1"
+
+          echo ""
+          echo "结论判读：若第 1 组出现 HTTP=200 且 items>0，说明云端可用 arXiv RSS，"
+          echo "可给 space-ph 加 RSS 兜底（新鲜度优于 INSPIRE）；若全是 406/403，则维持 INSPIRE 现状。"
