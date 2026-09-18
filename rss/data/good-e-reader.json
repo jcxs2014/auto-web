@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Kobo changes its ebook Price Match System",
+      "url": "https://goodereader.com/blog/kobo-ereader-news/kobo-changes-its-ebook-price-match-system",
+      "summary": "Rakuten Kobo has changed its Price Match Guarantee and will no longer provide an extra 10% savings. The post Kobo changes its ebook Price Match System first appeared on Good e-Reader.",
+      "source": "Good e-Reader",
+      "extra": "",
+      "date": "2026-09-18 14:46",
+      "ts": 1789742795,
+      "content": "<p>Rakuten Kobo offers a <a href=\"https://help.kobo.com/hc/en-us/articles/360017606774-Kobo-s-Price-Match-Guarantee\">Price Match Guarantee</a> for eBooks and audiobooks, allowing you to receive store credit for the price difference if you find the same digital title cheaper elsewhere. The service launched in 2016, but Kobo does not price-match hardware like e-readers or accessories. </p>\n    <p>Kobo has just changed the terms of its <a href=\"https://pricematchrakutenkobo.zendesk.com/hc/en-us/requests/new\">Price Match system</a>. Previously, you would receive the price difference plus an additional 10% discount. The company has been emailing customers and was told the following: “We would like to inform you that we have updated our Price Match Guarantee policy. The update removes the additional 10% discount previously offered on top of the competitor’s price. Going forward, our Price Match Guarantee will only match the verified competitor’s price.</p>\n    <p>One downside of the change is that Kobo’s credits don’t account for sales tax paid on the higher of the two prices. The 10% helped to close that gap.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
+    },
+    {
       "title": "Ugreen annouces Spectra E INK Case for iPhone 18 Pro",
       "url": "https://goodereader.com/blog/e-paper/ugreen-annouces-spectra-e-ink-case-for-iphone-18-pro",
       "summary": "UGREEN's Magic E-ink Screen Case is a new protective accessory for the iPhone 18 Pro and Pro Max that adds a color E-Ink display to the back of the phone The post Ugreen annouces Spectra E INK Case for iPhone 18 Pro first appeared on Good e-Reader.",
@@ -93,16 +103,6 @@
       "date": "2026-09-16 00:03",
       "ts": 1789517025,
       "content": "<p>The XTEINK S4 is an upcoming 4.3-inch pocket e-ink e-reader from Chinese tech startup Xteink. Serving as the highly anticipated successor to the ultra-thin XTEINK X4, the S4 shifts from a proprietary Linux-based OS to an open Android 11 platform. This change allows readers to natively sideload Android APKs like Kindle, Kobo, and KOReader.</p>\n    <p>The XTEINK S4 is a pocket-sized e-reader with a 4.3-inch E-ink touchscreen at 220 PPI, built into a compact frame that weighs just 95 grams and measures 6.98 mm thick. Abandoning its predecessor’s restrictive custom firmware, the device runs on an open 32-bit Android 11 operating system, giving users the flexibility to sideload major reading apps like Kindle, Kobo, and KOReader. The hardware layout retains the brand’s signature physical side page-turn buttons alongside a single front home button, and it incorporates built-in magnets on the backplate to snap seamlessly onto MagSafe-compatible phone cases.</p>\n    <p>Internally, the device runs on 2GB of RAM and 32GB of built-in storage for local digital libraries. To address previous layout limitations, it includes an integrated, temperature-adjustable cool and warm front light for reading in the dark, along with a vastly expanded 1,400mAh battery. Connectivity includes built-in Wi-Fi and Bluetooth for wireless book transfers or audio listening, plus a primary USB-C port for charging and data syncing.</p>\n    <p>This device is currently only available in China, but the company will likely release it internationally in the coming months.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
-    },
-    {
-      "title": "Amazon brought influences to Lab126",
-      "url": "https://goodereader.com/blog/kindle/amazon-brought-influences-to-lab126",
-      "summary": "Amazon invited a number of young book influencers to tour their secretive RND LAB126 in California. The post Amazon brought influences to Lab126 first appeared on Good e-Reader.",
-      "source": "Good e-Reader",
-      "extra": "",
-      "date": "2026-09-15 04:34",
-      "ts": 1789446882,
-      "content": "<p>Amazon Lab126 is Amazon’s research, development, and hardware engineering subsidiary located in Sunnyvale, California, within the San Francisco Bay Area. Researchers developed the Kindle, Fire tablets, and Fire TV products there. They continue to develop the next generation products here, such as the Kindle Scribe Colorsoft.</p>\n    <p>A couple of days ago, Amazon invited a bunch of young influencers to tour the facility. This included Lottie Smalley, Khalilah D, and Kendall Ferrari. They spoke with several executives and researchers at the facility to learn about industrial design and product development.</p>\n    <p>Amazon has plans to release a number of new <a href=\"https://goodereader.com/blog/kindle/amazon-will-release-many-new-kindles-in-late-2026\"> e-readers</a> this year. They will likely incorporate a faster processor and more RAM in order to take advantage of AI features that are more advanced than Kindle Recaps and Story So Far. One of the big changes will be user-replaceable batteries that use common screws on the back panel for easy removal, and not using glue to hold the battery in place. They are primarily refreshing the Kindle lineup to remain in coplience to a new <a href=\"https://goodereader.com/blog/electronic-readers/e-reader-companies-woefully-underprepared-for-new-eu-battery-law\">EU battery law taking effect</a> in early 2027.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
     }
   ]
 }
