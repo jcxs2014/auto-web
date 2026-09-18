@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "url": "https://openai.com/index/cooley-gopublic",
+      "summary": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-17 12:00",
+      "ts": 1789646400,
+      "content": ""
+    },
+    {
       "title": "Introducing Astra for Law",
       "url": "https://openai.com/index/astra-for-law",
       "summary": "OpenAI for Law brings frontier intelligence for law, custom firm workflows, connected legal data sources, and legal-grade controls for confidential client work.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-11 10:00",
       "ts": 1789120800,
-      "content": ""
-    },
-    {
-      "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
-      "url": "https://openai.com/index/cognition-devin-testing-with-astra",
-      "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-11 16:00",
-      "ts": 1789142400,
       "content": ""
     }
   ]
