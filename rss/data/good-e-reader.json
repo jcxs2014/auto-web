@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Ugreen annouces Spectra E INK Case for iPhone 18 Pro",
+      "url": "https://goodereader.com/blog/e-paper/ugreen-annouces-spectra-e-ink-case-for-iphone-18-pro",
+      "summary": "UGREEN's Magic E-ink Screen Case is a new protective accessory for the iPhone 18 Pro and Pro Max that adds a color E-Ink display to the back of the phone The post Ugreen annouces Spectra E INK Case for iPhone 18 Pro first appeared on Good e-Reader.",
+      "source": "Good e-Reader",
+      "extra": "",
+      "date": "2026-09-18 06:53",
+      "ts": 1789714417,
+      "content": "<p>The UGREEN Magic E-ink Screen Case for the iPhone 18 Pro integrates a six-color e-ink display on the back, offering a budget-friendly, creative canvas for personalization. While it offers traditional drop protection features and syncs custom images via a companion app, the panel is strictly static and lacks interactive functions, video playback, or global pricing details.</p>\n    <p>You get a full-color E Ink display, as the name suggests, that you can use to show photos stored on your iPhone. You sync the case to the device, then send digital images to the extra screen. It was announced on <a href=\"https://weibo.com/2884361740/RilLT5wlW\">Ugreen’s Weibo feed</a> alongside several other iPhone accessories. It is also unknown if the accessory will launch outside China.</p>\n    <p>I think this device uses a Spectra Panel, since the product uses six colors; it must use the E Ink Spectra 6 display, which features six primary base colors: black, white, red, yellow, blue, and green.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
+    },
+    {
       "title": "TICKEY is a new e-paper badge now on Crowdfunding",
       "url": "https://goodereader.com/blog/e-paper/tickey-is-a-new-e-paper-badge-now-on-crowdfunding",
       "summary": "The ENILINX TICKEY is a pocket-sized, 3.7-inch color e-Paper smart badge and digital desk display. The post TICKEY is a new e-paper badge now on Crowdfunding first appeared on Good e-Reader.",
@@ -93,16 +103,6 @@
       "date": "2026-09-15 04:34",
       "ts": 1789446882,
       "content": "<p>Amazon Lab126 is Amazon’s research, development, and hardware engineering subsidiary located in Sunnyvale, California, within the San Francisco Bay Area. Researchers developed the Kindle, Fire tablets, and Fire TV products there. They continue to develop the next generation products here, such as the Kindle Scribe Colorsoft.</p>\n    <p>A couple of days ago, Amazon invited a bunch of young influencers to tour the facility. This included Lottie Smalley, Khalilah D, and Kendall Ferrari. They spoke with several executives and researchers at the facility to learn about industrial design and product development.</p>\n    <p>Amazon has plans to release a number of new <a href=\"https://goodereader.com/blog/kindle/amazon-will-release-many-new-kindles-in-late-2026\"> e-readers</a> this year. They will likely incorporate a faster processor and more RAM in order to take advantage of AI features that are more advanced than Kindle Recaps and Story So Far. One of the big changes will be user-replaceable batteries that use common screws on the back panel for easy removal, and not using glue to hold the battery in place. They are primarily refreshing the Kindle lineup to remain in coplience to a new <a href=\"https://goodereader.com/blog/electronic-readers/e-reader-companies-woefully-underprepared-for-new-eu-battery-law\">EU battery law taking effect</a> in early 2027.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
-    },
-    {
-      "title": "Amazon changes all images for Kindle books to AVIF",
-      "url": "https://goodereader.com/blog/kindle/amazon-changes-all-images-for-kindle-books-to-avif",
-      "summary": "The main Amazon website now serves Kindle Book and Kindle E-Reader images as AVIF, not PNG or JPEG. The post Amazon changes all images for Kindle books to AVIF first appeared on Good e-Reader.",
-      "source": "Good e-Reader",
-      "extra": "",
-      "date": "2026-09-15 03:57",
-      "ts": 1789444646,
-      "content": "<p>Amazon has changed some product images on its website across all properties from PNG or JPEG to .avif. This also affects Kindle Book cover art and Kindle e-reader images. The only way to download the files in the old format is to open a private browser and download them, but it remains to be seen how long this will work.</p>\n    <p>AVIF (AV1 Image File Format) is a modern, open-source, and royalty-free image file format used to store still and animated images with much smaller file sizes than traditional formats like JPEG or PNG. The Alliance for Open Media (a group including tech giants like Google, Netflix, Amazon, and Microsoft) developed it and first released it in 2019. The format improves site loading speeds, which is why Amazon is slowly adopting it.</p>\n    <p>One downside of the new image format is that users can no longer simply download the files and post them on their own websites, since most CMSs, such as WordPress, do not natively support it. Calibre, a popular e-book management program, also doesn’t support the format, so users must source cover art from Open Library instead of Amazon.</p>\n    <p>These e-book and product image issues occur only on the main Amazon website and some international versions; Amazon Canada still serves them with JPEG and PNG.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
     }
   ]
 }

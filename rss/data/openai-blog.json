@@ -93,16 +93,6 @@
       "date": "2026-09-14 00:00",
       "ts": 1789344000,
       "content": ""
-    },
-    {
-      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
-      "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-11 10:00",
-      "ts": 1789120800,
-      "content": ""
     }
   ]
 }

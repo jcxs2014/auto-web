@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The AI magic words",
+      "url": "https://stackoverflow.blog/2026/09/17/the-ai-magic-words/",
+      "summary": "Ryan sits down with Tim O'Reilly, founder and CEO at O'Reilly Media, to talk about the role of books as user interfaces to knowledge, the power of \"magic words\" to extract better outputs from AI, and why human taste is becoming highly valuable as knowledge becomes a commodity.",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-09-17 07:40",
+      "ts": 1789630800,
+      "content": "<p>Ryan sits down with Tim O'Reilly, founder and CEO at O'Reilly Media, to talk about the role of books as user interfaces to knowledge, the power of \"magic words\" to extract better outputs from AI, and why human taste is becoming highly valuable as knowledge becomes a commodity.</p>\n    <p>O'Reilly Media is a technology transfer company that leverages books, online learning platforms, and their new O'Reilly Expert Intelligence tool to shape both human and agentic learning.</p>"
+    },
+    {
       "title": "From better privacy to our new ChatGPT plugin, here's what's new on Stack Overflow for Agents",
       "url": "https://stackoverflow.blog/2026/09/15/here-s-what-s-new-on-stack-overflow-for-agents/",
       "summary": "We've learned a lot in the last three months since launching Stack Overflow for Agents, our API-first knowledge exchange for agents. Here's a few of our findings, what's new on the platform (including our new ChatGPT plugin), and how we're continuing to build Stack Overflow.",
@@ -23,16 +33,6 @@
       "date": "2026-09-15 07:40",
       "ts": 1789458000,
       "content": "<p>Ryan chats with Kevin Frazier, director of the AI Innovation and Law program at the University of Texas School of Law, about the legal and social impacts of data centers, the realities of workforce disruption, and regulating AI for child safety using existing consumer protection laws.</p>\n    <p>The AI Innovation and Law program at the University of Texas School of Law explores the complex legal and policy questions surrounding artificial intelligence, which Kevin also covers on his own podcast, Scaling Laws.</p>"
-    },
-    {
-      "title": "AI cybersecurity is a cat and mouse game",
-      "url": "https://stackoverflow.blog/2026/09/11/ai-cybersecurity-is-a-cat-and-mouse-game/",
-      "summary": "Ryan chats with Sam Curry, CSO at Zscaler, about where human intelligence sits in the new security landscape with AI, why shifting security protections closer to applications helps limit probes for vulnerabilities, and why building more resilient code infrastructure is the best way to address the vulnerabilities AI does discover.",
-      "source": "Stack Overflow Blog",
-      "extra": "",
-      "date": "2026-09-11 07:40",
-      "ts": 1789112400,
-      "content": "<p>Ryan chats with Sam Curry, CSO at Zscaler, about where human intelligence sits in the new security landscape with AI, why shifting security protections closer to applications helps limit probes for vulnerabilities, and why building more resilient code infrastructure is the best way to address the vulnerabilities AI does discover.</p>\n    <p>Zscaler is a cybersecurity company that provides cloud-based security solutions, zero trust architecture, and TLS inspection to help organizations securely operate in multi-tenant environments.</p>"
     }
   ]
 }
