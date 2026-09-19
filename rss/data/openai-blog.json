@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Introducing the Australian Youth Safety Blueprint",
+      "url": "https://openai.com/index/australian-youth-safety-blueprint",
+      "summary": "OpenAI introduces the Australian Youth Safety Blueprint, a six-pillar roadmap for safer AI experiences that protect and empower young people.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-18 12:00",
+      "ts": 1789732800,
+      "content": ""
+    },
+    {
       "title": "How Cooley is accelerating IPO work with ChatGPT",
       "url": "https://openai.com/index/cooley-gopublic",
       "summary": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-14 12:00",
       "ts": 1789387200,
-      "content": ""
-    },
-    {
-      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-      "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-14 00:00",
-      "ts": 1789344000,
       "content": ""
     }
   ]
