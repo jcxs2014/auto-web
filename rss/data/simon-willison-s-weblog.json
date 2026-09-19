@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "California Sea Lion, Brandt's Cormorant",
+      "url": "https://simonwillison.net/2026/Sep/19/sighting-401567341/",
+      "summary": "California Sea Lion, Brandt's Cormorant, in Pillar Point Harbor, CA, USI only noticed this after I had taken the photo: Morris the Northern Gannet is peeking out from behind the base of the sign. Tags: wildlife",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-09-19 17:10",
+      "ts": 1789837808,
+      "content": "<p>Sponsored by:Teleport — See what 13 engineers learned from “pressure washing” their codebase using LLMs for 90 days. Hint: Quality > quantity for finding security vulnerabilities.</p>\n    <p>19th September 2026</p>\n    <p>Sighting10:10 AM – 10:10 AM— California Sea Lion, Brandt's Cormorant, in Pillar Point Harbor, CA, US</p>\n    <p>I only noticed this after I had taken the photo: Morris the Northern Gannet is peeking out from behind the base of the sign.</p>"
+    },
+    {
       "title": "Gemini Hacked Three Companies in First Known Breakout by Google’s AI",
       "url": "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/",
       "summary": "Gemini Hacked Three Companies in First Known Breakout by Google’s AI Gemini finally caught up on Felony Bench! The hacks, which the company confirmed on Friday, occurred in May as part of a test run by the company Irregular, which was also involved in similar incidents disclosed by OpenAI, Anthropic and Meta. In one of the cases, the model guessed passwords until it gained access to a protected sy",
@@ -17,12 +27,12 @@
     {
       "title": "Note on 18th September 2026",
       "url": "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
-      "summary": "Being a computer scientist who refuses to find anything about LLMs interesting right now is a bit like being a geneticist who refuses to find anything interesting about the recently opened Jurassic Park. Tags: llms, ai, generative-ai",
+      "summary": "Being a computer scientist who refuses to find anything about LLMs interesting right now is a bit like being a geneticist who refuses to find anything interesting about the recently opened Jurassic Park. Skeptical geneticist: \"pfft, it's just frog DNA. And they deliberately let them eat people for the marketing.\" Tags: llms, ai, generative-ai",
       "source": "Simon Willison's Weblog",
       "extra": "",
       "date": "2026-09-18 19:21",
       "ts": 1789759292,
-      "content": "<p>18th September 2026</p>\n    <p>Being a computer scientist who refuses to find anything about LLMs interesting right now is a bit like being a geneticist who refuses to find anything interesting about the recently opened Jurassic Park.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
+      "content": "<p>18th September 2026</p>\n    <p>Being a computer scientist who refuses to find anything about LLMs interesting right now is a bit like being a geneticist who refuses to find anything interesting about the recently opened Jurassic Park.</p>\n    <p>Skeptical geneticist: \"pfft, it's just frog DNA. And they deliberately let them eat people for the marketing.\"</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
     },
     {
       "title": "Quoting Thariq Shihipar",
@@ -93,16 +103,6 @@
       "date": "2026-09-16 23:51",
       "ts": 1789602668,
       "content": "<p>16th September 2026</p>\n    <p>Security fix for an issue where a trailing newline in a requested table name could bypass table permissions and expose private rows, reported by <a href=\"https://github.com/dpfkdlemtp\">dpfkdlemtp</a> in <a href=\"https://github.com/simonw/datasette/security/advisories/GHSA-h547-rmjf-5m2m\">GHSA-h547-rmjf-5m2m</a>.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
-    },
-    {
-      "title": "Claude Cowork and chat are now one Claude",
-      "url": "https://simonwillison.net/2026/Sep/16/one-claude/",
-      "summary": "Claude Cowork and chat are now one Claude In hopefully good news for anyone who, like me, was increasingly confused at Cowork v.s. Claude v.s. Claude Code: Starting today, Claude Cowork and chat are merging into one Claude. Bring a quick question, or hand over a report due at noon, and Claude takes it from there, even after you’ve closed your laptop. [...] This is rolling out to Pro and Max plans ",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-09-16 18:09",
-      "ts": 1789582189,
-      "content": "<p>16th September 2026 - Link Blog</p>\n    <p><a href=\"https://claude.com/blog/cowork-is-now-claude\">Claude Cowork and chat are now one Claude</a> (<a href=\"https://news.ycombinator.com/item?id=49729412\">via</a>) In hopefully good news for anyone who, like me, was increasingly confused at Cowork v.s. Claude v.s. Claude Code:</p>\n    <blockquote>\n<p>Starting today, Claude Cowork and chat are merging into one Claude. Bring a quick question, or hand over a report due at noon, and Claude takes it from there, even after you’ve closed your laptop. [...]</p><p>This is rolling out to Pro and Max plans first, in the Claude app on web, desktop, and mobile over the coming weeks to existing and new users on these plans.</p></blockquote>\n    <p>I guess this means Claude is becoming a general agent in its own right. Echoes of OpenAI renaming their Codex desktop app to ChatGPT a few weeks ago.</p>\n    <p>On the one hand, this saves me some work, in that I was planning to finally figure out the boundaries between Cowork and regular Claude and write a follow-up to my piece on <a href=\"https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/\">Understanding ChatGPT Work</a>.</p>\n    <p>I have a hunch that figuring out what this actually means in terms of features and surfaces is still going to take quite a bit of work.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
     }
   ]
 }
