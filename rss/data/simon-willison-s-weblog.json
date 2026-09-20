@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "datasette-auth-github 1.0",
+      "url": "https://simonwillison.net/2026/Sep/19/datasette-auth-github/",
+      "summary": "Release: datasette-auth-github 1.0 I run this GitHub login plugin on the agent.datasette.io demo site and I noticed that my authenticated sessions weren't lasting very long. It turned out that the plugin was setting cookies without a Max-Age parameter, so they were expiring at the end of a browser session (which in Mobile Safari seems to happen pretty often, independently of how you are using the ",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-09-19 19:52",
+      "ts": 1789847522,
+      "content": "<p>19th September 2026</p>\n    <p>I run this GitHub login plugin on the <a href=\"https://agent.datasette.io/\">agent.datasette.io</a> demo site and I noticed that my authenticated sessions weren't lasting very long. It turned out that the plugin was setting cookies without a </p><pre>Max-Age</pre> parameter, so they were expiring at the end of a browser session (which in Mobile Safari seems to happen pretty often, independently of how you are using the app.)\n    <p>I fixed that in <a href=\"https://github.com/simonw/datasette-auth-github/issues/80\">#80</a> and, since this plugin has been around for quite a while and is tested against both Datasette 0.65.x and Datasette 1.0ax, I decided to bump it up to a 1.0 release. I'm trying to get better at promoting stable plugins to 1.0.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
+    },
+    {
       "title": "California Sea Lion, Brandt's Cormorant",
       "url": "https://simonwillison.net/2026/Sep/19/sighting-401567341/",
       "summary": "California Sea Lion, Brandt's Cormorant, in Pillar Point Harbor, CA, USI only noticed this after I had taken the photo: Morris the Northern Gannet is peeking out from behind the base of the sign. Tags: wildlife",
@@ -93,16 +103,6 @@
       "date": "2026-09-16 23:51",
       "ts": 1789602703,
       "content": "<p>16th September 2026</p>\n    <p>Same security fix as <a href=\"https://simonwillison.net/2026/Sep/16/datasette-2/\">0.65.5</a>, plus some neat new features and bug fixes:</p>\n    <ul>\n      <li>Plugins can now launch and manage background tasks using the new <a href=\"https://docs.datasette.io/en/latest/internals.html#datasette-add-background-task\">datasette.add_background_task()</a> method. Thanks, <a href=\"https://alexgarcia.xyz/\">Alex Garcia</a>.</li>\n      <li>I've migrated Datasette to <a href=\"https://github.com/pydantic/httpx2\">httpx2</a> for features like the internal <pre>datasette.client.get()</pre> method.</li>\n      <li>A whole lot of <a href=\"https://docs.datasette.io/en/latest/changelog.html#a40-2026-09-16\">bug fixes</a>, many of them stemming from a recent effort to triage issues for a 1.0 stable release.</li>\n    </ul>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
-    },
-    {
-      "title": "datasette 0.65.5",
-      "url": "https://simonwillison.net/2026/Sep/16/datasette-2/",
-      "summary": "Release: datasette 0.65.5 Security fix for an issue where a trailing newline in a requested table name could bypass table permissions and expose private rows, reported by dpfkdlemtp in GHSA-h547-rmjf-5m2m. Tags: security, datasette",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-09-16 23:51",
-      "ts": 1789602668,
-      "content": "<p>16th September 2026</p>\n    <p>Security fix for an issue where a trailing newline in a requested table name could bypass table permissions and expose private rows, reported by <a href=\"https://github.com/dpfkdlemtp\">dpfkdlemtp</a> in <a href=\"https://github.com/simonw/datasette/security/advisories/GHSA-h547-rmjf-5m2m\">GHSA-h547-rmjf-5m2m</a>.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/\">OpenAI agents attacked RubyGems back in May</a> - 12th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/8/on-navier-stokes/\">Some thoughts on the Navier–Stokes Millennium Prize Problem</a> - 8th September 2026</li>\n    </ul>"
     }
   ]
 }

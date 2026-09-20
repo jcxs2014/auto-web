@@ -3,5 +3,26 @@
   "url": "https://tumutanzi.com/feed",
   "category": "中文博客",
   "lang": "zh",
-  "entries": []
+  "entries": [
+    {
+      "title": "允许自己错过",
+      "url": "https://tumutanzi.com/archives/17641",
+      "summary": "如果你有一定的投资经历，假设投资了A虽然收益还可以，可偏偏半道出现了B，涨幅比A大得多，并且你在关注B的时候， […]",
+      "source": "土木坛子",
+      "extra": "",
+      "date": "2026-09-17 16:00",
+      "ts": 1789660805,
+      "content": ""
+    },
+    {
+      "title": "人生经营的终极目标",
+      "url": "https://tumutanzi.com/archives/17629",
+      "summary": "网友Alex Xu博主分享了一个有意思的话题，一下子就把我吸引住了。他说： 如果把人生当企业来经营，经营得好有 […]",
+      "source": "土木坛子",
+      "extra": "",
+      "date": "2026-09-13 16:00",
+      "ts": 1789315247,
+      "content": ""
+    }
+  ]
 }
