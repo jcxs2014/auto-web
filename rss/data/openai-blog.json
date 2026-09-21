@@ -5,6 +5,46 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Advisory Group on Mathematics and Artificial Intelligence",
+      "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+      "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-21 12:00",
+      "ts": 1789992000,
+      "content": ""
+    },
+    {
+      "title": "Building standards for the next phase of AI",
+      "url": "https://openai.com/index/building-standards-next-phase-ai",
+      "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-21 10:00",
+      "ts": 1789984800,
+      "content": ""
+    },
+    {
+      "title": "Expanding OpenAI Academy with new learning paths",
+      "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
+      "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-21 07:00",
+      "ts": 1789974000,
+      "content": ""
+    },
+    {
+      "title": "How V7 gives AI agents institutional memory",
+      "url": "https://openai.com/index/v7",
+      "summary": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-21 00:00",
+      "ts": 1789948800,
+      "content": ""
+    },
+    {
       "title": "Introducing the Australian Youth Safety Blueprint",
       "url": "https://openai.com/index/australian-youth-safety-blueprint",
       "summary": "OpenAI introduces the Australian Youth Safety Blueprint, a six-pillar roadmap for safer AI experiences that protect and empower young people.",
@@ -62,46 +102,6 @@
       "extra": "",
       "date": "2026-09-16 12:00",
       "ts": 1789560000,
-      "content": ""
-    },
-    {
-      "title": "How to connect AI usage to business value",
-      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
-      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-16 12:00",
-      "ts": 1789560000,
-      "content": ""
-    },
-    {
-      "title": "Our framework for reporting model misalignment",
-      "url": "https://openai.com/index/model-misalignment-reporting-framework",
-      "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-16 17:00",
-      "ts": 1789578000,
-      "content": ""
-    },
-    {
-      "title": "How workers are unlocking new ways of working",
-      "url": "https://openai.com/index/unlocking-new-ways-of-working",
-      "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-16 09:00",
-      "ts": 1789549200,
-      "content": ""
-    },
-    {
-      "title": "How Fyxer built an AI executive assistant people trust",
-      "url": "https://openai.com/index/fyxer",
-      "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-14 12:00",
-      "ts": 1789387200,
       "content": ""
     }
   ]
