@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "US e-book revenues were down 3.4% in July 2026",
+      "url": "https://goodereader.com/blog/e-book-news/us-e-book-revenues-were-down-3-4-in-july-2026",
+      "summary": "The United States Publishing Industry is up 14.0% for the Month of July and up 5.4% Year-To-Date. The post US e-book revenues were down 3.4% in July 2026 first appeared on Good e-Reader.",
+      "source": "Good e-Reader",
+      "extra": "",
+      "date": "2026-09-22 15:00",
+      "ts": 1790089258,
+      "content": "<p>E-book revenue in the United States fell 3.4% to $85.3 million for the month, while Digital Audiobook revenues rose 12.4% to $103.1 million. Physical Audio revenues were up 36.7% to $400 thousand. Year-to-date e-book revenues were down 3.1% compared to 2025, totaling $601.4 million. Digital Audiobook revenue was up 12.6% to $700.9 million, while Physical Audio revenue was down 8.0% to $3.1 million.</p>\n    <p>Hardback revenues were up 18.5%, coming in at $242.5 million; Paperbacks were up 25.2%, with $311.6 million in revenue; Mass Market was down 43.7% to $5.8 million; and Special Bindings were down 1.0%, with $20.6 million in revenue. Year-to-date Hardback revenues were up 1.4% year-to-date, coming in at $1.8 billion; Paperbacks were up 10.8%, with $2.0 billion in revenue; Mass Market was down 62.7% to $20.7 million; and Special Bindings were up 16.3%, with $132.1 million in revenue.</p>\n    <p>AAP StatShot reports the monthly and yearly net revenue of publishing houses from U.S. sales to bookstores, wholesalers, direct-to-consumer, online retailers, and other channels. StatShot draws revenue data from more than 1,416 publishers.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
+    },
+    {
       "title": "Webcomics are winning over Gen Z",
       "url": "https://goodereader.com/blog/business-news/webcomics-are-winning-over-gen-z",
       "summary": "Readers enjoy webcomics more than top celebrities: 80% of readers love/like webcomics, a share higher than that of beloved celebrities. Zendaya, Lady Gaga, and Pedro Pascal. The post Webcomics are winning over Gen Z first appeared on Good e-Reader.",
@@ -93,16 +103,6 @@
       "date": "2026-09-18 06:53",
       "ts": 1789714417,
       "content": "<p>The UGREEN Magic E-ink Screen Case for the iPhone 18 Pro integrates a six-color e-ink display on the back, offering a budget-friendly, creative canvas for personalization. While it offers traditional drop protection features and syncs custom images via a companion app, the panel is strictly static and lacks interactive functions, video playback, or global pricing details.</p>\n    <p>You get a full-color E Ink display, as the name suggests, that you can use to show photos stored on your iPhone. You sync the case to the device, then send digital images to the extra screen. It was announced on <a href=\"https://weibo.com/2884361740/RilLT5wlW\">Ugreen’s Weibo feed</a> alongside several other iPhone accessories. It is also unknown if the accessory will launch outside China.</p>\n    <p>I think this device uses a Spectra Panel, since the product uses six colors; it must use the E Ink Spectra 6 display, which features six primary base colors: black, white, red, yellow, blue, and green.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
-    },
-    {
-      "title": "TICKEY is a new e-paper badge now on Crowdfunding",
-      "url": "https://goodereader.com/blog/e-paper/tickey-is-a-new-e-paper-badge-now-on-crowdfunding",
-      "summary": "The ENILINX TICKEY is a pocket-sized, 3.7-inch color e-Paper smart badge and digital desk display. The post TICKEY is a new e-paper badge now on Crowdfunding first appeared on Good e-Reader.",
-      "source": "Good e-Reader",
-      "extra": "",
-      "date": "2026-09-17 21:56",
-      "ts": 1789682184,
-      "content": "<p>The ENILINX TICKEY is a highly versatile, pocket-sized 3.7-inch color e-Paper smart badge and desk display. Launched through a highly successful <a href=\"https://www.kickstarter.com/projects/enilinx/ticket-refresh-it-new-clip-it-on-carry-your-moment\">Kickstarter campaign</a> that raised over $900,000, it’s a premium, non-disposable accessory that serves multiple roles, including an event badge, bag charm, desk display, or digital fridge note.</p>\n    <p>The ENILINX TICKEY is a pocket-sized smart badge with a 3.7-inch color e-Paper screen that renders 48+ native colors and uses zero power to maintain static images. Encased in a slim, ultra-thin anodized aluminum body with customizable front frames, the hardware includes a versatile mounting array with a clip ring, built-in magnetic back, and integrated desk stand. It delivers exceptional power efficiency, letting its rechargeable battery last up to two months on a single charge under daily use.</p>\n    <p>Under the hood, the device runs on an Espressif ESP32-S3 microcontroller, making it fully open-source and highly programmable for custom firmware development. It features robust wireless connectivity with Wi-Fi, Bluetooth, and NFC integration, enabling seamless smartphone customization via companion apps alongside instant digital business card or URL sharing. These specifications allow the badge to dynamically shift roles between a wearable event accessory, an automated desk display, a system monitoring dashboard, or an interactive smart home node.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
     }
   ]
 }

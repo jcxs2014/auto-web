@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Better prompt caching for GPT-6",
+      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+      "summary": "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-22 21:00",
+      "ts": 1790110800,
+      "content": ""
+    },
+    {
+      "title": "Introducing GPT-6 Sol and Luna",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "summary": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-22 18:00",
+      "ts": 1790100000,
+      "content": ""
+    },
+    {
+      "title": "Priorities and principles for effective third party assessments",
+      "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+      "summary": "OpenAI outlines priorities and principles for rigorous, secure, and independent third-party AI safety assessments of frontier models and safeguards.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-22 00:00",
+      "ts": 1790035200,
+      "content": ""
+    },
+    {
       "title": "Advisory Group on Mathematics and Artificial Intelligence",
       "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
       "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-09-17 12:00",
       "ts": 1789646400,
-      "content": ""
-    },
-    {
-      "title": "Introducing Astra for Law",
-      "url": "https://openai.com/index/astra-for-law",
-      "summary": "OpenAI for Law brings frontier intelligence for law, custom firm workflows, connected legal data sources, and legal-grade controls for confidential client work.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-17 00:00",
-      "ts": 1789603200,
-      "content": ""
-    },
-    {
-      "title": "Helping older adults use AI in everyday life",
-      "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
-      "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-16 16:00",
-      "ts": 1789574400,
-      "content": ""
-    },
-    {
-      "title": "Reimagining advertising with AI",
-      "url": "https://openai.com/index/reimagining-advertising-with-ai",
-      "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-16 13:00",
-      "ts": 1789563600,
       "content": ""
     }
   ]
