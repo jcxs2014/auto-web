@@ -15,6 +15,16 @@
       "content": ""
     },
     {
+      "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+      "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+      "summary": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-21 12:00",
+      "ts": 1789992000,
+      "content": ""
+    },
+    {
       "title": "Building standards for the next phase of AI",
       "url": "https://openai.com/index/building-standards-next-phase-ai",
       "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-16 13:00",
       "ts": 1789563600,
-      "content": ""
-    },
-    {
-      "title": "Hex turns complex analysis into visual reports with GPT‑6 Astra",
-      "url": "https://openai.com/index/hex-gpt-6-astra",
-      "summary": "GPT-6 Astra helps Hex’s data agents turn answers into interactive visualizations that employees are proud to share.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-16 12:00",
-      "ts": 1789560000,
       "content": ""
     }
   ]

@@ -3,5 +3,16 @@
   "url": "https://nextjs.org/feed.xml",
   "category": "技术",
   "lang": "en",
-  "entries": []
+  "entries": [
+    {
+      "title": "Upcoming Next.js Security Update for a Critical Upstream Issue",
+      "url": "https://nextjs.org/blog/upcoming-nextjs-security-release-september-22-2026",
+      "summary": "Next.js 16.3.6 and 15.5.26 are planned for a critical out-of-band security update on September 22, 2026.",
+      "source": "Next.js Blog",
+      "extra": "",
+      "date": "2026-09-21 20:00",
+      "ts": 1790020800,
+      "content": "<p><a href=\"https://nextjs.org/blog\">Back to Blog</a></p><p>Monday, September 21st 2026</p><h1>Upcoming Next.js Security Update for a Critical Upstream Issue</h1>Posted by<p>A critical security issue has been identified in an upstream dependency. We plan to publish Next.js 16.3.6 and 15.5.26 in an out-of-band update on September 22, 2026.</p><p>The full advisory, <a href=\"https://github.com/vercel/next.js/security/advisories/GHSA-vcvr-r3jv-pc5j\">GHSA-vcvr-r3jv-pc5j</a>, will be published with the update and include impact, affected versions, and upgrade instructions. Upgrade to Next.js 16.3.6 or 15.5.26 as soon as they are available.</p><h2>Our security program</h2><p>We work with security researchers to secure Next.js and other open source frameworks through <a href=\"https://hackerone.com/vercel-open-source\">Vercel's Open Source Bug Bounty</a>. Anyone interested in contributing to the security of eligible frameworks is encouraged to participate there.</p><p>Any questions or concerns regarding our security programs or vulnerability management can be sent to <a href=\"mailto:security@vercel.com\">security@vercel.com</a>.</p>"
+    }
+  ]
 }
