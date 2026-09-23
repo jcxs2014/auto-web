@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Multiplayer AI: Why your team (and its agents) need a group chat",
+      "url": "https://stackoverflow.blog/2026/09/23/multiplayer-ai-why-your-team-and-its-agents-need-a-group-chat/",
+      "summary": "Ryan chats with the GM of Slack, Rob Seaman, about how their new Code Channels feature is bringing multiplayer AI to your team chats.",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-09-23 04:40",
+      "ts": 1790138400,
+      "content": "<h2>SPONSORED BY SLACK BY SALESFORCE</h2>\n    <p>In this episode, Ryan chats with the GM of Slack, Rob Seaman, about how their new Code Channels feature is bringing multiplayer AI to your team chats. They discuss how most interactions with coding agents become siloed context, why a party chat with devs and agents flattens writing code and code review into a single step, and why a Slack channel might be a better dev environment than a terminal.</p>\n    <p>Episode notes:</p>\n    <p>Check out the article Rob mentioned: <a href=\"https://x.com/tobi/status/2053121182044451016\">Learning on the shop floor</a>.</p>\n    <p>If you want to code multiplayer, check out <a href=\"http://slack.com/slack-code\">Code Channels</a>.</p>\n    <p>Connect with Rob by email at <a href=\"mailto:rseaman@slack-corp.com\">rseaman@slack-corp.com</a>, on <a href=\"https://www.linkedin.com/in/seamanrob/\">LinkedIn</a>, or <a href=\"https://x.com/rseaman2\">Twitter</a>.</p>\n    <p>Congrats to Populist badge winner <a href=\"https://stackoverflow.com/users/558711/petro-sidlovskyy\">petro.sidlovskyy</a> for dropping a great answer on <a href=\"https://stackoverflow.com/questions/4652454/whats-the-best-way-to-ensure-a-base-classs-static-constructor-is-called/4652926#4652926\">What's the best way to ensure a base class's static constructor is called?</a>.</p>"
+    },
+    {
       "title": "Haters think AI agents can't write GPU code? This'll ROCm",
       "url": "https://stackoverflow.blog/2026/09/22/haters-think-ai-can-t-gpu-code-this-ll-rocm/",
       "summary": "Ryan chats with Anush Elangovan, VP of Software at AMD, about ROCm's open-source unified toolchain for GPUs, how agentic AI is drastically lowering the barrier to entry for low-level hardware programming, and the rapid convergence of software and hardware development timelines.",
