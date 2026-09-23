@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Unlimited Vercel Blob stores on every plan",
+      "url": "https://vercel.com/changelog/unlimited-vercel-blob-stores-on-every-plan",
+      "summary": "You can now create as many Vercel Blob stores as you need. The previous limits of 100 stores on Hobby, 500 on Pro, and 1,000 on Enterprise no longer apply.Blob store creation is now billed alongside other Blob Advanced Operations, including put(), copy(), and list() calls. On Pro that's $5.00 per million. On Hobby it counts toward the 2,000 free operations you get each month. Deleting a store is f",
+      "source": "Vercel News",
+      "extra": "",
+      "date": "2026-09-23 18:00",
+      "ts": 1790186400,
+      "content": "<p>You can now create as many <a href=\"https://vercel.com/docs/vercel-blob\">Vercel Blob</a> stores as you need. The previous limits of 100 stores on Hobby, 500 on Pro, and 1,000 on Enterprise no longer apply.</p>\n    <p>Blob store creation is now billed alongside other <a href=\"https://vercel.com/docs/vercel-blob/usage-and-pricing#pricing\">Blob Advanced Operations</a>, including </p><pre>put()</pre>, <pre>copy()</pre>, and <pre>list()</pre> calls. On Pro that's $5.00 per million. On Hobby it counts toward the 2,000 free operations you get each month. Deleting a store is free.\n    <p>Create a new store whenever you want a hard boundary instead of a pathname convention:</p>\n    <ul>\n      <li>\n        <p>Separate production, staging, and preview data, and hand each environment its own credential.</p>\n      </li>\n      <li>\n        <p>Create a store per customer in a multi-tenant app, so you can export or delete one tenant's data in a single call.</p>\n      </li>\n      <li>\n        <p>Spin up a store for a preview branch or a migration, then delete it when you're done.</p>\n      </li>\n    </ul>\n    <p>Storage, operations, and data transfer are still billed on what you use, so splitting the same data across more stores costs the same.</p>\n    <p>Store creation shows up under Blob Advanced Operations on your usage page and in the <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F~%2Fobservability%2Fblob&amp;title=Go+to+Blob+Observability\">Observability dashboard</a>.</p>\n    <p>Learn more in the <a href=\"https://vercel.com/docs/vercel-blob/usage-and-pricing\">Vercel Blob Pricing documentation</a>.</p>"
+    },
+    {
       "title": "Drives for Vercel Sandbox are now in public beta",
       "url": "https://vercel.com/changelog/drives-for-vercel-sandbox-are-now-in-public-beta",
       "summary": "Drives for Vercel Sandbox are now available in public beta on Hobby, Pro, and Enterprise.A Drive is persistent storage that you mount as a directory in a Vercel Sandbox. It isn’t tied to a single sandbox, so you can reuse the same Drive across runs and different sandbox instances.Use Drives to preserve an agent's workspace or on-disk memory, or to reuse datasets, models, and dependency trees.Creat",
@@ -93,16 +103,6 @@
       "date": "2026-09-18 20:00",
       "ts": 1789761600,
       "content": "<p>Enterprise teams on Flexible Commitment plans can now use <a href=\"https://vercel.com/docs/spend-management\">Spend Management</a>, already <a href=\"https://vercel.com/changelog/spend-management-now-enabled-by-default-on-pro\">available on Pro</a>, at no additional cost.</p>\n    <p>You can set a budget at any time in <a href=\"https://vercel.com/d?to=%2F%5Bteam%5D%2F%7E%2Fsettings%2Fbilling&amp;title=Go+to+Spend+Management\">Spend Management settings</a>.</p>\n    <p>Set a budget per billing cycle, and when your team's metered usage approaches or crosses it, Spend Management can send email notifications, trigger a webhook, or pause the production deployments of all projects. The amount governs the metered usage that draws down from your prepaid balance. Setting an amount does not stop usage on its own; pausing is opt-in, and it does not stop AI Gateway or v0 usage.</p>\n    <p>Learn more in the <a href=\"https://vercel.com/docs/spend-management\">Spend Management docs</a>.</p>"
-    },
-    {
-      "title": "WebMCP support now available in mcp-handler",
-      "url": "https://vercel.com/changelog/webmcp-mcp-handler",
-      "summary": "mcp-handler now has experimental support for WebMCP, the proposed web standard for exposing tools to in-browser agents. Add a single script tag to your site, and your existing MCP tools become available there too.Opt tools in by adding them to the experimental_webMcp object:Then load the script from your MCP endpoint with the ?webmcp-script parameter:The script registers those tools with the page ",
-      "source": "Vercel News",
-      "extra": "",
-      "date": "2026-09-18 18:00",
-      "ts": 1789754400,
-      "content": "<p></p><pre>mcp-handler</pre> now has experimental support for <a href=\"https://github.com/webmachinelearning/webmcp\">WebMCP</a>, the proposed web standard for exposing tools to in-browser agents. Add a single script tag to your site, and your existing MCP tools become available there too.\n    <p>Opt tools in by adding them to the </p><pre>experimental_webMcp</pre> object:\n    <p>app/api/mcp/route.ts</p>\n    <pre>\n      <pre>import { createMcpHandler } from \"mcp-handler\";\nconst handler = createMcpHandler(  (server) => {    server.registerTool(\"roll_dice\", /* ... */);  },  {    experimental_webMcp: {      tools: [\"roll_dice\"],    },  },);\nexport { handler as GET, handler as POST };</pre>\n    </pre>\n    <p>Then load the script from your MCP endpoint with the </p><pre>?webmcp-script</pre> parameter:\n    <pre>\n      <pre></pre>\n    </pre>\n    <p>The script registers those tools with the page and proxies each call back to your MCP server as the signed-in user, so authenticated tools work without a browser-side OAuth flow.</p>\n    <p>Upgrade to </p><pre>mcp-handler@2.2.0</pre> and read the <a href=\"https://github.com/vercel/mcp-handler/blob/main/docs/WEBMCP.md\">documentation</a> to get started."
     }
   ]
 }
