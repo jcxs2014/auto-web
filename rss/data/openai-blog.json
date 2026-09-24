@@ -75,6 +75,16 @@
       "content": ""
     },
     {
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "summary": "ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-23 02:00",
+      "ts": 1790128800,
+      "content": ""
+    },
+    {
       "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
       "url": "https://openai.com/index/airbnb-gpt-6-astra",
       "summary": "Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-23 00:00",
       "ts": 1790121600,
-      "content": ""
-    },
-    {
-      "title": "Better prompt caching for GPT-6",
-      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
-      "summary": "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-22 21:00",
-      "ts": 1790110800,
       "content": ""
     }
   ]
