@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "LAST CALL FOR ENROLLMENT: Rebuild YouTube with AI",
+      "url": "https://blog.bytebytego.com/p/last-call-for-enrollment-rebuild",
+      "summary": "Rebuild YouTube with AI, taught by a former YouTube engineer, kicks off on Saturday, September 26. Enrollment closes in 24 hours.",
+      "source": "ByteByteGo Newsletter",
+      "extra": "",
+      "date": "2026-09-25 15:02",
+      "ts": 1790348573,
+      "content": "<p>Rebuild YouTube with AI, taught by a former YouTube engineer, kicks off on Saturday, September 26. <a href=\"https://go.bytebytego.com/youtubeai-c1-substack\">Enrollment closes in 24 hours</a>.</p>\n    <h2>What you will learn</h2>\n    <ul>\n      <li>\n        <p>Scope a realistic MVP. Decide which YouTube features to build and break the work into manageable tasks.</p>\n      </li>\n      <li>\n        <p>Work with agents. Plan changes, review generated code, and recover from bad diffs or sessions that go off track.</p>\n      </li>\n      <li>\n        <p>Build across the stack. Turn mockups into React pages and build a backend with Postgres, authentication, and video uploads.</p>\n      </li>\n      <li>\n        <p>Add semantic search and related videos. Use multimodal embeddings and understand how this approach differs from production recommendation systems.</p>\n      </li>\n      <li>\n        <p>Test and deploy your app. Check features with Playwright, deploy to Vercel, and track watch time in an admin dashboard.</p>\n      </li>\n    </ul>\n    <p>This course is part of ByteByteGo Live, giving you 12 full months of access to all current and upcoming courses.</p>\n    <h2>More live courses we offer:</h2>\n    <ul>\n      <li>\n        <p>AI Evals in Practice for Engineers and PMs: Six weeks with Manjeet Singh, Senior Director at Salesforce.</p>\n      </li>\n      <li>\n        <p>AI Cost Optimization: Four weeks with Jeremy Hintz, Engineering Lead at Meta.</p>\n      </li>\n      <li>\n        <p>AI Engineering Fundamentals: Four weeks with Ali Aminian (Google, bestselling author).</p>\n      </li>\n      <li>\n        <p>Build with Claude Code: Two day intensive with John Kim, Senior Staff Engineer at Meta.</p>\n      </li>\n      <li>\n        <p>Build Production Grade AI Systems: Six weeks with Tanya Roosta, Director at AMD, with a PhD from UC Berkeley.</p>\n      </li>\n      <li>\n        <p>Trust optimized AI Development: Two day intensive with Kent Beck, creator of TDD.</p>\n      </li>\n    </ul>"
+    },
+    {
       "title": "The Life of Data: From Creation to Deletion",
       "url": "https://blog.bytebytego.com/p/the-life-of-data-from-creation-to",
       "summary": "In this article, we are going to look at the entire data lifecycle from creation to deletion and the decisions that need to be taken at each step.",

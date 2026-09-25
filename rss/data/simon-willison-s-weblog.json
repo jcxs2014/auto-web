@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Northern Gannet, Great Blue Heron, California Brown Pelican",
+      "url": "https://simonwillison.net/2026/Sep/25/sighting-403293902/",
+      "summary": "Northern Gannet, Great Blue Heron, California Brown Pelican, in Monterey Bay National Marine Sanctuary, CA, US, CANew 200-800mm Canon EF lens got me my best photo of Morris yet. They really like hanging out under that sign in the harbor! Tags: photography, wildlife",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-09-25 02:07",
+      "ts": 1790302024,
+      "content": "<p>Sponsored by:Teleport — See what 13 engineers learned from “pressure washing” their codebase using LLMs for 90 days. Hint: Quality > quantity for finding security vulnerabilities.</p>\n    <p>25th September 2026</p>\n    <p>Sighting7:07 PM – 7:27 PM— Northern Gannet, Great Blue Heron, California Brown Pelican, in Monterey Bay National Marine Sanctuary, CA, US, CA</p>\n    <p>New 200-800mm Canon EF lens got me my best photo of Morris yet. They really like hanging out under that sign in the harbor!</p>"
+    },
+    {
+      "title": "Note on 24th September 2026",
+      "url": "https://simonwillison.net/2026/Sep/24/harder/",
+      "summary": "The more time I spend working with coding agents, the more convinced I am that they make software engineering even harder. We can do amazing things with them, but unlocking their full potential requires extraordinary discipline and knowledge. Tags: coding-agents, ai, llms",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-09-24 23:31",
+      "ts": 1790292668,
+      "content": "<p>24th September 2026</p>\n    <p>The more time I spend working with coding agents, the more convinced I am that they make software engineering even harder.</p>\n    <p>We can do amazing things with them, but unlocking their full potential requires extraordinary discipline and knowledge.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/\">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</a> - 22nd September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/21/jev/\">Jev introduces a new shape of LLM - System One, aka Decision Models</a> - 21st September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n    </ul>"
+    },
+    {
       "title": "commit-rewriter 0.2",
       "url": "https://simonwillison.net/2026/Sep/24/commit-rewriter/",
       "summary": "Release: commit-rewriter 0.2 Support for branches other than the default branch. Use uvx commit-rewriter --branch other to run against another branch. #3 Tags: git",
@@ -83,26 +103,6 @@
       "date": "2026-09-22 18:03",
       "ts": 1790100201,
       "content": "<p>22nd September 2026</p>\n    <blockquote>\n      <p>Hey, you know it's like super obvious if you're using AI to write your scripts for TikTok and YouTube, right? [...] It's not just the general AI-isms of \"it's not X, it's Y\", or the rule of three, or the really weird broken staccato-like way of writing where you just say a lot of things with all these punctuation marks. and it sounds really deep, but it's not.</p>\n      <p>It's the lack of anything. It's the lack of a definitive sort of spear of your voice. It's the fact I can tell you don't have opinions about the thing that you're talking about.</p>\n    </blockquote>\n    <p>— <a href=\"https://www.tiktok.com/@therealcornpop/video/7687243097801051422\">@therealcornpop</a>, on TikTok</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/\">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</a> - 22nd September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/21/jev/\">Jev introduces a new shape of LLM - System One, aka Decision Models</a> - 21st September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n    </ul>"
-    },
-    {
-      "title": "llm-anthropic 0.29",
-      "url": "https://simonwillison.net/2026/Sep/22/llm-anthropic/",
-      "summary": "Release: llm-anthropic 0.29 Adds support for Claude Opus 5.5: llm -m claude-opus-5.5 \"prompt goes here\" Tags: llm, anthropic",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-09-22 17:14",
-      "ts": 1790097295,
-      "content": "<p>22nd September 2026</p>\n    <p>Adds support for <a href=\"https://www.anthropic.com/claude-opus-5-5\">Claude Opus 5.5</a>:</p>\n    <pre>\n      <pre>llm -m claude-opus-5.5 \"prompt goes here\"\n</pre>\n    </pre>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/\">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</a> - 22nd September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/21/jev/\">Jev introduces a new shape of LLM - System One, aka Decision Models</a> - 21st September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li>\n    </ul>"
-    },
-    {
-      "title": "llm-typesafe 0.1a0",
-      "url": "https://simonwillison.net/2026/Sep/22/llm-typesafe/",
-      "summary": "Release: llm-typesafe 0.1a0 I built this new plugin for LLM to add support for TypeSafe AI's new Jev model. Install it like this: llm install llm-typesafe Then set an API key (get one here, the waitlist seems to move pretty fast): llm keys set typesafe # Paste key And now you can ask yes/no \"noul\" questions like this: llm -m jev 'Please refund my last payment.' \\ -s 'Does this message explicitly r",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-09-22 15:54",
-      "ts": 1790092456,
-      "content": "<p>22nd September 2026</p><p>I built this new plugin for <a href=\"https://llm.datasette.io/\">LLM</a> to add support for <a href=\"https://simonwillison.net/2026/Sep/21/jev/\">TypeSafe AI's new Jev model</a>. Install it like this:</p><pre><pre>llm install llm-typesafe\n</pre></pre>\n<p>Then set an API key (<a href=\"https://console.typesafe.ai/\">get one here</a>, the waitlist seems to move pretty fast):</p><pre><pre>llm keys set typesafe\n# Paste key\n</pre></pre>\n<p>And now you can ask yes/no \"noul\" questions like this:</p><pre><pre>llm -m jev 'Please refund my last payment.' \\\n  -s 'Does this message explicitly request a refund?'\n</pre></pre>\n<p>Output:</p><pre><pre>{\"type\": \"noul\", \"noul\": 0.99}\n</pre></pre>\n<p>Or choice questions like this:</p><pre>cat message.txt | llm -m jev \\\n  -s 'Which team should handle this message? If billing and technical issues both occur, choose billing.' \\\n  -o answer_type choice \\\n  -o criteria '{\n    \"billing\":\"Charges, invoices, payments, or refunds\",\n    \"technical\":\"Problems installing or using the product\",\n    \"other\":\"Neither category fits\"\n  }'</pre><p>Or scoring questions like this:</p><pre>cat report.txt | llm -m jev \\\n  -s 'How reproducible is the problem described in this report?' \\\n  -o answer_type score \\\n  -o criteria '[\n    \"No reproduction instructions\",\n    \"Some instructions, but important steps are missing\",\n    \"Complete steps with expected and actual results\"\n  ]'</pre><p>See <a href=\"https://github.com/simonw/llm-typesafe/blob/main/README.md\">the README</a> for more details.</p><h2>Recent articles</h2><ul><li><a href=\"https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/\">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</a> - 22nd September 2026</li><li><a href=\"https://simonwillison.net/2026/Sep/21/jev/\">Jev introduces a new shape of LLM - System One, aka Decision Models</a> - 21st September 2026</li><li><a href=\"https://simonwillison.net/2026/Sep/12/astra-running-routes/\">Generating running routes with GPT-6 Astra and ChatGPT Work</a> - 12th September 2026</li></ul>"
     }
   ]
 }
