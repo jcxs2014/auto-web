@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-28 07:00",
+      "ts": 1790578800,
+      "content": ""
+    },
+    {
+      "title": "Are you a Codex Original?",
+      "url": "https://openai.com/form/codex-originals",
+      "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about your story and project below.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-28 00:00",
+      "ts": 1790553600,
+      "content": ""
+    },
+    {
+      "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+      "url": "https://openai.com/index/basis-tax-workbook-with-astra",
+      "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-28 00:00",
+      "ts": 1790553600,
+      "content": ""
+    },
+    {
       "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
       "url": "https://openai.com/index/proaction",
       "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-09-23 12:00",
       "ts": 1790164800,
-      "content": ""
-    },
-    {
-      "title": "Introducing MentalHealthBench",
-      "url": "https://openai.com/index/introducing-mentalhealthbench",
-      "summary": "MentalHealthBench is an expert-informed benchmark for evaluating helpful and safe AI responses across realistic mental health conversations.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-23 10:00",
-      "ts": 1790157600,
-      "content": ""
-    },
-    {
-      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
-      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
-      "summary": "ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-23 02:00",
-      "ts": 1790128800,
-      "content": ""
-    },
-    {
-      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
-      "url": "https://openai.com/index/airbnb-gpt-6-astra",
-      "summary": "Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-23 01:00",
-      "ts": 1790125200,
       "content": ""
     }
   ]
