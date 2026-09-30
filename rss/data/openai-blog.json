@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Disrupting a coordinated model-distillation campaign",
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+      "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-30 10:30",
+      "ts": 1790764200,
+      "content": ""
+    },
+    {
+      "title": "Helping small businesses put AI to work",
+      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+      "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-09-30 10:00",
+      "ts": 1790762400,
+      "content": ""
+    },
+    {
       "title": "Introducing GPT-6.1 Sol",
       "url": "https://openai.com/index/introducing-gpt-6-1-sol",
       "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
@@ -35,9 +55,9 @@
       "content": ""
     },
     {
-      "title": "Towards safety cases for frontier AI training",
-      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-      "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
+      "title": "How we will do better for Australia",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+      "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-28 19:00",
@@ -45,9 +65,9 @@
       "content": ""
     },
     {
-      "title": "How we will do better for Australia",
-      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-      "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+      "title": "Towards safety cases for frontier AI training",
+      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+      "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-28 19:00",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-09-28 00:00",
       "ts": 1790553600,
-      "content": ""
-    },
-    {
-      "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
-      "url": "https://openai.com/index/proaction",
-      "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-25 19:00",
-      "ts": 1790362800,
-      "content": ""
-    },
-    {
-      "title": "Two years of OpenAI Academy",
-      "url": "https://openai.com/index/two-years-of-openai-academy",
-      "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-23 16:00",
-      "ts": 1790179200,
       "content": ""
     }
   ]
