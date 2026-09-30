@@ -3,5 +3,16 @@
   "url": "https://jubeny.com/feed.xml",
   "category": "中文博客",
   "lang": "zh",
-  "entries": []
+  "entries": [
+    {
+      "title": "免费音乐的破解之道",
+      "url": "https://jubeny.com/2026/09/unlock-free-music/",
+      "summary": "听歌用了很多年的Spotify，加入过不同的家庭车，随着最后一班车的解散，懒得去寻新车，也不想自己开车，于是顺势转用免费的Youtube Music。 使用Youtube Music有三种途径——网页版、官方App和三方App，但哪一种都不太令人满意。",
+      "source": "渚碧",
+      "extra": "",
+      "date": "2026-09-30 00:34",
+      "ts": 1790728460,
+      "content": "\n    <p>听歌用了很多年的Spotify，加入过不同的家庭车，随着最后一班车的解散，懒得去寻新车，也不想自己开车，于是顺势转用免费的Youtube Music。</p>\n    <p>使用Youtube Music有三种途径——网页版、官方App和三方App，但哪一种都不太令人满意。</p>\n    <p>网页版没有广告，但操作不便，也不能缓存歌曲。官方App好像有广告和功能限制，但可以通过ReVanced工具解锁，不过API请求有时会失败而无法加载歌曲。我用过的三方App有RiMusic和SimpMusic。RiMusic已经停止更新，而且歌单超过100首会自动截断，这一点让人无法忍受。SimpMusic使用体验也不好，播放过程中会频繁自动停止，午睡时经常会因此醒来，没找到原因也没找到解决办法。</p>\n    <p>YouTubeMusic除了客户端的不易用，对网络要求也高，而且推荐和歌单功能更不及Spotify，于是又转回了Spotify。</p>\n    <p>美区、日区的Spotify都有免费版可用，只是听几首歌之后会有几十秒的广告，一开始我权当练习听力的机会，以为可以忍受。但广告相比歌曲仍是噪音，午睡时听到广告会不自觉醒来，听到歌曲又能安然入睡，于是萌生了去广告的想法。</p>\n    <p>检索之后，找到了RVX-Spotify这个工具，使用前提是手机需要Root，并安装LSPosed框架。我的手机早已Root，但安装Riru-LSPosed模块时遇到问题，它与已安装的Zigysk是互斥的，无法同时启用。简单搜索后，找到了适配Zigysk的Xposed框架Vector。</p>\n    <p>接下来安装RVX-Spotify的App，在Vector的管理页面启用即可。这一步又遇到了问题，启用后打开Spotify时有报错</p><pre>Error while apply following Hooks: UnlockPremium</pre>，播放几首歌曲后会出现闪退，估计是在插播广告处卡死了。根据网上的信息，应该是Spotify的版本太新了，换成9.0的版本（比如9.0.98.1187）就能正常使用了。\n    <p>隔了一段时间重新使用Spotify，能流畅地听歌、不用自己翻找歌曲是多么的享受。</p>"
+    }
+  ]
 }
