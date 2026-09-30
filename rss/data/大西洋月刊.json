@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The Great Data-Center Rebellion",
+      "url": "https://www.theatlantic.com/magazine/2026/11/data-center-resistance-movement/688671/?utm_source=feed",
+      "summary": "Could a new populist movement help save American democracy?",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-09-30 12:00",
+      "ts": 1790769600,
+      "content": ""
+    },
+    {
+      "title": "Nazi Analogies Rarely Help",
+      "url": "https://www.theatlantic.com/culture/2026/09/missed-opportunity-documentary-movie-naza/688832/?utm_source=feed",
+      "summary": "NAZA, a provocative Israeli documentary, should make viewers think about their own moral parameters. Instead, it distances them from the war.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-09-30 11:30",
+      "ts": 1790767800,
+      "content": ""
+    },
+    {
+      "title": "Right-Wing Groups Are Making Money Off John Fetterman",
+      "url": "https://www.theatlantic.com/politics/2026/09/fetterman-gop-senate-fundraising/688824/?utm_source=feed",
+      "summary": "After losing his Democratic fundraisers, the Pennsylvania senator found a new firm with MAGA-world ties.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-09-30 10:00",
+      "ts": 1790762400,
+      "content": ""
+    },
+    {
       "title": "The DOJ’s Collapsing Probe Into a Supposed Anti-Trump Conspiracy",
       "url": "https://www.theatlantic.com/newsletters/2026/09/trump-justice-department-conspiracy-fbi/688833/?utm_source=feed",
       "summary": "It’s buckling under the weight of strategic errors, staff turnover, and, most of all, the facts.",
@@ -17,7 +47,7 @@
     {
       "title": "Why Do AI Agents Sound So Frustrated?",
       "url": "https://www.theatlantic.com/technology/2026/09/why-do-ai-agents-sound-so-frustrated/688828/?utm_source=feed",
-      "summary": "\"ARGH... WHY IS THIS SO HARD.\"",
+      "summary": "“ARGH ... WHY IS THIS SO HARD.”",
       "source": "大西洋月刊",
       "extra": "",
       "date": "2026-09-29 19:55",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-09-29 13:48",
       "ts": 1790689715,
-      "content": ""
-    },
-    {
-      "title": "The Mysteries of Human Personality",
-      "url": "https://www.theatlantic.com/books/2026/09/robert-kolker-vanishing-family-dementia-book-review/688818/?utm_source=feed",
-      "summary": "Robert Kolker’s latest book, The Vanishing Family, tracks the effects of inherited dementia and the many transformations that follow.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-09-29 13:00",
-      "ts": 1790686800,
-      "content": ""
-    },
-    {
-      "title": "Can the Polls Possibly Be Right?",
-      "url": "https://www.theatlantic.com/politics/2026/09/midterm-polls-democrats-senate/688809/?utm_source=feed",
-      "summary": "Democrats are now favored to take back the Senate, a prospect that seemed far-fetched a year ago.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-09-29 12:00",
-      "ts": 1790683200,
-      "content": ""
-    },
-    {
-      "title": "ICE Deportees Are Vanishing Into Salvadoran Prisons",
-      "url": "https://www.theatlantic.com/politics/2026/09/el-salvador-bukele-trump-ice-deportation/688799/?utm_source=feed",
-      "summary": "The world moved on after Kilmar Abrego Garcia, but people continue to disappear.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-09-29 12:00",
-      "ts": 1790683200,
       "content": ""
     }
   ]
