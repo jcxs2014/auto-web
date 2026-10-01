@@ -235,7 +235,7 @@ body{top:0!important}
     <span class="hero-eyebrow">⚛️ arXiv · Physics Latest</span>
     <h1 class="hero-title">物理最新论文 · 2026年10月1日 周四</h1>
     <p class="hero-sub">按提交时间倒序，每主题取最近 6 篇，共 <strong>18</strong> 篇</p>
-    <p class="hero-window">抓取时间：10月1日 06:11（北京时间） · 数据源：arXiv API · Nature 主刊 / Nature Physics / Nature Communications / Science / PRL（含已正式发表期刊）</p>
+    <p class="hero-window">抓取时间：10月1日 21:05（北京时间） · 数据源：arXiv API · Nature 主刊 / Nature Physics / Nature Communications / Science / PRL（含已正式发表期刊）</p>
     <p class="hero-cats">覆盖类别：<code>hep-th/hep-ph/hep-ex · physics.space-ph · astro-ph.HE</code></p>
     <div class="hero-stats">
       <span class="total-pill"><span class="num">18</span><span class="lbl">篇论文</span></span>
@@ -258,25 +258,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">01</span>
             <span class="source-chip" title="arXiv 主分类">hep-ph</span>
-            <span class="arxiv-id">2609.38094</span>
+            <span class="arxiv-id">2609.40008</span>
           </div>
-          <h3 class="card-title">Dimensionally consistent surrogate modelling through dimensional analysis and harmonic expansions</h3>
-          <p class="card-title-zh no-math">🌐 通过维度分析和调和展开实现维度一致的代理建模</p>
-          <p class="card-authors">Tarrus, Ernest 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Dimensional homogeneity is a fundamental constraint on physically meaningful models, requiring invariance under changes of units. We present a data-driven method for constructing surrogate models that satisfy this constraint at the level of the hypothesis class. Starting from a dimension matrix of measured variables, the method derives Buckingham $Π$-groups, constructs admissible dimensional prefa… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">PINNing the pion: conformal deep learning for $F_π(s)$ and the $(g-2)_μ$ hadronic contribution</h3>
+          <p class="card-title-zh no-math">🌐 锁定π介子：$F_π(s)$ 和 $(g-2)_μ$ 强子贡献的共形深度学习</p>
+          <p class="card-authors">Goel, Mayank 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Extracting the pion electromagnetic form factor $F_π(s)$ through phenomenological curve-fitting models introduces model dependence, unphysical artefacts, and kinematic inconsistencies. We introduce a Physics-Informed Neural Network (PINN) embedded in a conformal $z$-plane that constructs $F_π(s)$ directly from first principles across spacelike and timelike domains: charge normalisation and Schwarz… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Dimensional homogeneity is a fundamental constraint on physically meaningful models, requiring invariance under changes of units. We present a data-driven method for constructing surrogate models that satisfy this constraint at the level of the hypothesis class. Starting from a dimension matrix of measured variables, the method derives Buckingham $Π$-groups, constructs admissible dimensional prefactors, and approximates the remaining dimensionless dependence using truncated harmonic expansions on normalized invariant domains. Once the prefactor and dictionary are fixed, the coefficients are obtained from a regularized linear regression problem. We test the approach on the simple pendulum, Planck&#x27;s black-body law, the double-pendulum Lyapunov field, and an experimental COBE/FIRAS black-body spectrum dataset. The results show that dimensional constraints improve conditioning, robustness to noise, and sample efficiency relative to unconstrained baselines, while the choice of dictionary becomes important in non-periodic or multi-invariant settings. The learned expressions are explicit and inexpensive to evaluate, which makes them useful as surrogate models for structured physical problems.</p>
-            <p class="card-summary-zh no-math">维度同质性是物理意义模型的基本约束，要求在单位变化下保持不变性。我们提出了一种数据驱动的方法来构建在假设类级别满足此约束的代理模型。该方法从测量变量的维数矩阵开始，导出 Buckingham $Π$-群，构造可接受的维数前因子，并使用归一化不变域上的截断调和展开来近似剩余的无量纲依赖性。一旦前因子和字典被固定，系数就可以从正则化线性回归问题中获得。我们在单摆、普朗克黑体定律、双摆 Lyapunov 场和实验性 COBE/FIRAS 黑体光谱数据集上测试了该方法。结果表明，相对于无约束基线，维度约束提高了调节能力、对噪声的鲁棒性和样本效率，而字典的选择在非周期性或多不变设置中变得很重要。学习到的表达式是明确的且评估成本低廉，这使得它们可用作结构化物理问题的替代模型。</p>
+            <p class="card-summary-en">Extracting the pion electromagnetic form factor $F_π(s)$ through phenomenological curve-fitting models introduces model dependence, unphysical artefacts, and kinematic inconsistencies. We introduce a Physics-Informed Neural Network (PINN) embedded in a conformal $z$-plane that constructs $F_π(s)$ directly from first principles across spacelike and timelike domains: charge normalisation and Schwarz reflection are enforced by construction, while Cauchy-Riemann analyticity, dispersion relations, Watson&#x27;s theorem, and perturbative QCD asymptotics enter through the loss functional. Thus, the fundamental S-matrix principles dictate the form factor&#x27;s behaviour while data act as constraints. Mapping the cut complex plane onto the unit disk bounds the Hessian norm and prevents Neural Tangent Kernel spectral starvation, two known failure modes of deep-learning optimisation. Besides $e^+e^-$ scattering data, we also incorporate $τ$-decay data through a switch that isolates the pure isovector form factor natively, bypassing model-dependent isospin-breaking pre-corrections. The network organically yields an interior zero-free form factor, while the framework tests experimental tensions around the $ρ(770)$ peak against analyticity and dispersion constraints. We obtain model-independent estimates of the pion charge radius, $\langle r_π^2 \rangle = 0.435 \pm 0.008_{\text{stat}} \pm 0.007_{\text{cali}}$ fm$^2$, the second-sheet pole parameters, $m_ρ^{\text{pole}} = 761.72\pm 1.04$ MeV and $Γ_ρ^{\text{pole}} = 135.99 \pm 1.20$ MeV, and the two-pion contribution to the muon anomalous magnetic moment, $a_μ^{ππ} = (506.48 \pm 2.02_{\text{stat}} \pm 1.70_{\text{cali}}) \times 10^{-10}$.</p>
+            <p class="card-summary-zh no-math">通过唯象曲线拟合模型提取π介子电磁形状因子$F_π(s)$会引入模型依赖性、非物理伪影和运动学不一致。我们引入了嵌入在共形 $z$ 平面中的物理信息神经网络 (PINN)，该网络直接从类空域和类时域的第一原理构造 $F_π(s)$：通过构造强制执行电荷归一化和施瓦茨反射，而柯西-黎曼解析性、色散关系、沃森定理和微扰 QCD 渐近通过损失函数进入。因此，基本的 S 矩阵原理决定了外形尺寸的行为，而数据则充当约束。将切复平面映射到单位圆盘上可以限制 Hessian 范数，并防止神经正切核谱饥饿（深度学习优化的两种已知故障模式）。除了 $e^+e^-$ 散射数据外，我们还通过一个开关合并 $τ$ 衰变数据，该开关本身隔离纯等矢量形状因子，绕过模型相关的等位自旋破坏预校正。该网络有机地产生内部零自由形状因子，而该框架则根据分析性和色散约束测试 $ρ(770)$ 峰值周围的实验张力。我们获得了与模型无关的π介子电荷半径估计，$\langle r_π^2 \rangle = 0.435 \pm 0.008_{\text{stat}} \pm 0.007_{\text{cali}}$ fm$^2$，第二层极参数$m_ρ^{\text{pole}} = 761.72\pm 1.04$ MeV和$Γ_ρ^{\text{pole}} = 135.99 \pm 1.20$ MeV，以及二π介子对μ子反常磁矩的贡献，$a_μ^{ππ} = (506.48 \pm 2.02_{\text{stat}} \pm 1.70_{\text{cali}}) \times 10^{-10}$。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.38094" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.38094" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.40008" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.40008" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -284,25 +284,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">02</span>
             <span class="source-chip" title="arXiv 主分类">hep-th</span>
-            <span class="arxiv-id">2609.36548</span>
+            <span class="arxiv-id">2609.38815</span>
           </div>
-          <h3 class="card-title">Classical Shadows of Higher-Form BRST Anomalies</h3>
-          <p class="card-title-zh no-math">🌐 更高形式 BRST 异常的经典阴影</p>
-          <p class="card-authors">Shen, Ruizhi 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">We formulate a precise sense in which a BRST anomaly may possess a classical phase space shadow. It is the non-equivariance class of a Hamiltonian symmetry action on covariant phase space. To organize this statement, we introduce the Weil covariant phase space bicomplex, whose basic subcomplex controls equivariant Hamiltonian lifts. We then compare this purely classical class with local BRST desce… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">Relative entropy of entanglement and tripartite minimal surface</h3>
+          <p class="card-title-zh no-math">🌐 纠缠相对熵和三方最小表面</p>
+          <p class="card-authors">Mori, Takato 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We propose a holographic dual of the relative entropy of entanglement for a boundary tripartition $A:B:C$. Our proposal is that, at the leading order, \begin{align} E_R(ρ_{AB}) = \frac{1}{4G_N}\Big[\mathrm{Area}(Γ_{\min}) - \mathrm{Area}(γ_{AB})\Big] \notag \end{align} where $Γ_{\min}$ is the minimal bulk tripartition surface and $γ_{AB}$ is the minimal surface homologous to $AB$. For a general ra… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">We formulate a precise sense in which a BRST anomaly may possess a classical phase space shadow. It is the non-equivariance class of a Hamiltonian symmetry action on covariant phase space. To organize this statement, we introduce the Weil covariant phase space bicomplex, whose basic subcomplex controls equivariant Hamiltonian lifts. We then compare this purely classical class with local BRST descent. For a Hamiltonian admissible mixed transgression, the ghost-number-two descendant $a^{2}_{d-1}$ defines a deghostification map to the charge algebra, which is generated by the failure of the Cartan representative to be equivariant. The induced cohomology class is independent of Bardeen type changes of descent representative. Thus the classical anomaly is a shadow of the BRST anomaly in the precise sense that both are realizations of the same Weil transgression class, while remaining objects of different theories. As an explicit example, we analyze a five dimensional inflow transgression and show that the classical charge cocycle and the BRST descendant arise as two realizations of the same Weil transgression class.</p>
-            <p class="card-summary-zh no-math">我们提出了一种精确的感觉，其中 BRST 异常可能具有经典的相空间阴影。它是协变相空间上哈密顿对称作用的非等变类。为了组织这个陈述，我们引入了 Weil 协变相空间双复形，其基本子复形控制等变哈密顿升力。然后我们将这个纯经典类与本地 BRST 血统进行比较。对于哈密顿量允许的混合越界，幻影二号后代 $a^{2}_{d-1}$ 定义了电荷代数的去幻影化映射，该映射是由于嘉当代表不等变而生成的。诱导上同调类与下降代表的 Bardeen 型变化无关。因此，经典异常是 BRST 异常的影子，确切地说，两者都是同一 Weil 越界类的实现，同时仍然是不同理论的对象。作为一个明确的例子，我们分析了五维流入海侵，并表明经典电荷共循环和 BRST 后代是作为同一 Weil 海侵类的两种实现而出现的。</p>
+            <p class="card-summary-en">We propose a holographic dual of the relative entropy of entanglement for a boundary tripartition $A:B:C$. Our proposal is that, at the leading order, \begin{align} E_R(ρ_{AB}) = \frac{1}{4G_N}\Big[\mathrm{Area}(Γ_{\min}) - \mathrm{Area}(γ_{AB})\Big] \notag \end{align} where $Γ_{\min}$ is the minimal bulk tripartition surface and $γ_{AB}$ is the minimal surface homologous to $AB$. For a general random tensor network, we prove the corresponding upper bound by constructing a separable state associated with $Γ_{\min}$ and evaluating its relative entropy. We also establish the matching lower bound rigorously for networks of one, two, and three Haar random tensors by bounding the maximal tripartite product-state overlap. In appropriate geometries, the minimal tripartition surface can form a nontrivial tri-junction resembling the Mercedes logo. The proof proceeds by sequential optimization over candidate product states, which has a natural geometric interpretation as a local search for the minimal tripartition surface.</p>
+            <p class="card-summary-zh no-math">我们提出了边界三分 $A:B:C$ 的纠缠相对熵的全息对偶。我们的建议是，在领先顺序上， \begin{align} E_R(ρ_{AB}) = \frac{1}{4G_N}\Big[\mathrm{Area}(Γ_{\min}) - \mathrm{Area}(γ_{AB})\Big] \notag \end{align} 其中 $Γ_{\min}$ 是最小体三部分表面，$γ_{AB}$ 是同系于的最小表面$AB$。对于一般的随机张量网络，我们通过构造与$ Γ_ {\ min} $相关的可分离状态并评估其相对熵来证明相应的上限。我们还通过限制最大三方产品状态重叠来严格为一个、两个和三个 Haar 随机张量的网络建立匹配下界。在适当的几何形状中，最小三分表面可以形成类似于梅赛德斯标志的重要三联结。该证明通过对候选产品状态进行顺序优化来进行，其具有自然的几何解释作为最小三分表面的局部搜索。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.36548" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.36548" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.38815" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.38815" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -310,51 +310,51 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">03</span>
             <span class="source-chip" title="arXiv 主分类">hep-th</span>
-            <span class="arxiv-id">2609.37074</span>
+            <span class="arxiv-id">2609.38700</span>
           </div>
-          <h3 class="card-title">Notes on algebraic perspective on neural network conformal theories</h3>
-          <p class="card-title-zh no-math">🌐 神经网络共形理论的代数视角笔记</p>
-          <p class="card-authors">Leutheusser, Sam 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Neural network conformal theories were first introduced in \cite{Halverson:2024axc} and exact two-, three- and four-point correlators were computed from an ensemble of infinite-width neural networks. In particular, the four-point correlator of any scalar operator satisfied crossing-symmetry and conformal block decomposition across different channels were in agreement without any constraint on mome… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">Non-Semisimple Integrability and Dynamical Limits</h3>
+          <p class="card-title-zh no-math">🌐 非半简单可积性和动态极限</p>
+          <p class="card-authors">Pribytok, Anton</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We investigate Jordan structure and dynamical limits in six families of integrable spin-$\frac{1}{2}$ chains obtained from the boost automorphism method. Local operator algebras connect nilpotent evolution on finite periodic chains to central defects in spectral additivity, polynomial unipotent $R$-matrices and constant braid limits. For conservative endpoint erosion, we determine the characterist… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Neural network conformal theories were first introduced in \cite{Halverson:2024axc} and exact two-, three- and four-point correlators were computed from an ensemble of infinite-width neural networks. In particular, the four-point correlator of any scalar operator satisfied crossing-symmetry and conformal block decomposition across different channels were in agreement without any constraint on moments. An infinite tower of degenerate operators with the same scaling dimension were found. In this note, we take a closer look at the structure of correlators and relation between operators. We also layout a recipe to construct the algebra of the theory.</p>
-            <p class="card-summary-zh no-math">神经网络共形理论首先在 \cite{Halverson:2024axc} 中引入，并从无限宽度神经网络的集合中计算出精确的两点、三点和四点相关器。特别是，任何标量算子的四点相关器都满足交叉对称性，并且跨不同通道的共形块分解是一致的，并且对矩没有任何约束。发现了具有相同缩放维度的退化算子的无限塔。在这篇文章中，我们将仔细研究相关器的结构和运算符之间的关系。我们还设计了一个构建理论代数的方法。</p>
+            <p class="card-summary-en">We investigate Jordan structure and dynamical limits in six families of integrable spin-$\frac{1}{2}$ chains obtained from the boost automorphism method. Local operator algebras connect nilpotent evolution on finite periodic chains to central defects in spectral additivity, polynomial unipotent $R$-matrices and constant braid limits. For conservative endpoint erosion, we determine the characteristic and minimal polynomials and show that the Jordan partition can change while both polynomials remain unchanged. We also identify the deletion limits that distinguish the parity obstruction to removing signs by diagonal similarity in Class 5 from the parity nilpotent dependence in Class 6. Matching expansions and fragmentation recursions yield exact amplitudes and survival probabilities for processes with killing. In addition, we establish criteria excluding conservative Markov realizations and determine which conservative completions of specified reaction densities admit regular $R$-matrices of difference form.</p>
+            <p class="card-summary-zh no-math">我们研究了从 boost 自同构方法获得的六族可积自旋 $\frac{1}{2}$ 链中的 Jordan 结构和动力学极限。局部算子代数将有限周期链上的幂零演化与谱可加性、多项式单能 $R$ 矩阵和常数编织极限中的中心缺陷联系起来。对于保守端点侵蚀，我们确定特征多项式和最小多项式，并表明乔丹分区可以改变，而两个多项式保持不变。我们还确定了删除限制，该限制将第 5 类中通过对角线相似性消除符号的奇偶校验障碍与第 6 类中的奇偶校验幂零依赖区分开来。匹配扩展和碎片递归为具有终止的进程产生精确的幅度和生存概率。此外，我们建立了排除保守马尔可夫实现的标准，并确定指定反应密度的哪些保守完成承认差分形式的常规 $R$ 矩阵。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.37074" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.37074" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.38700" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.38700" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
         <article class="card">
           <div class="card-head">
             <span class="seq">04</span>
-            <span class="source-chip" title="arXiv 主分类">hep-ph</span>
-            <span class="arxiv-id">2609.37738</span>
+            <span class="source-chip" title="arXiv 主分类">hep-th</span>
+            <span class="arxiv-id">2609.38702</span>
           </div>
-          <h3 class="card-title">Breaking the Spin Degeneracy for Distributions of Off-Diagonal Scattering Matrix Elements in the Case of Symplectic Symmetry</h3>
-          <p class="card-title-zh no-math">🌐 辛对称情况下打破非对角散射矩阵元分布的自旋简并性</p>
-          <p class="card-authors">Gluth, Nils 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Recently derived exact expressions for the distributions of scattering matrix elements show that all combinations of ingoing and outgoing spin orientations are equally distributed. We propose a model suitable for experimental realization that breaks this degeneracy by introducing a spin preference in the channels. With the help of supersymmetry we derive a corresponding nonlinear sigma model. We e… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">$K_{\mathfrak{q}}$-algebras</h3>
+          <p class="card-title-zh no-math">🌐 $K_{\mathfrak{q}}$-代数</p>
+          <p class="card-authors">Gaiotto, Davide</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We introduce the notion of $K_{\mathfrak{q}}$-algebra, a conjectural axiomatization of the fusion algebra of rotation-equivariant BPS line defects in a 4d ${\cal N}=2$ Supersymmetric Quantum Field Theory. We also introduce the notion of RG flow of $K_{\mathfrak{q}}$-algebras, a conjectural axiomatization of the action of Seiberg-Witten type RG flows on line defects. These definitions enrich the th… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Recently derived exact expressions for the distributions of scattering matrix elements show that all combinations of ingoing and outgoing spin orientations are equally distributed. We propose a model suitable for experimental realization that breaks this degeneracy by introducing a spin preference in the channels. With the help of supersymmetry we derive a corresponding nonlinear sigma model. We exactly calculate the distributions of real and imaginary part in first order of the parameter measuring the preference. Quite remarkably, while breaking the spin degeneracy leads to different distributions for the favored and unfavored spin orientation, the real and imaginary parts of these altered distributions are the same as in the case of unbroken spin degeneracy.</p>
-            <p class="card-summary-zh no-math">最近导出的散射矩阵元素分布的精确表达式表明，传入和传出自旋方向的所有组合都是均匀分布的。我们提出了一种适合实验实现的模型，通过在通道中引入自旋偏好来打破这种简并性。借助超对称性，我们推导出相应的非线性西格玛模型。我们精确地计算了测量偏好的参数的一阶实部和虚部的分布。非常值得注意的是，虽然打破自旋简并性会导致有利和不利自旋方向的不同分布，但这些改变的分布的实部和虚部与未破坏自旋简并性的情况相同。</p>
+            <p class="card-summary-en">We introduce the notion of $K_{\mathfrak{q}}$-algebra, a conjectural axiomatization of the fusion algebra of rotation-equivariant BPS line defects in a 4d ${\cal N}=2$ Supersymmetric Quantum Field Theory. We also introduce the notion of RG flow of $K_{\mathfrak{q}}$-algebras, a conjectural axiomatization of the action of Seiberg-Witten type RG flows on line defects. These definitions enrich the theory of cluster algebras, $K$-theoretic Coulomb branch algebras, skein algebras and quantum groups.</p>
+            <p class="card-summary-zh no-math">我们引入了 $K_{\mathfrak{q}}$-代数的概念，这是 4d ${\cal N}=2$ 超对称量子场论中旋转等变 BPS 线缺陷的融合代数的猜想公理化。我们还介绍了 $K_{\mathfrak{q}}$ 代数的 RG 流的概念，这是 Seiberg-Witten 型 RG 流对线缺陷的作用的猜想公理化。这些定义丰富了簇代数、$K$理论库仑支代数、绞纱代数和量子群的理论。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.37738" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.37738" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.38702" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.38702" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -362,25 +362,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">05</span>
             <span class="source-chip" title="arXiv 主分类">hep-th</span>
-            <span class="arxiv-id">2609.37949</span>
+            <span class="arxiv-id">2609.39468</span>
           </div>
-          <h3 class="card-title">Higher-dimensional full vertex algebras and systems of conformally covariant correlation functions</h3>
-          <p class="card-title-zh no-math">🌐 高维全顶点代数和共形协变相关函数系统</p>
-          <p class="card-authors">Moriwaki, Yuto</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">We formulate a class of systems of Euclidean correlation functions for compact $d$-dimensional conformal field theories which are not necessarily unitary. We also introduce conformal $d$-vertex algebras, $d$-dimensional analogues of full vertex algebras, and prove that such an algebra is obtained from every system of conformally covariant correlation functions. Finally, for each $d\geq 2$, we cons… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">Global Integrated Null Energy Contribution : Classification of Traversable Wormholes</h3>
+          <p class="card-title-zh no-math">🌐 全球综合零能量贡献：可穿越虫洞的分类</p>
+          <p class="card-authors">Chakrabarti, Soumya</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We argue that the local violation of null energy condition at the throat of a traversable wormhole does not necessarily indicate that the total volume integrated null energy contribution is negative. It is already known that it can be arbitrarily close to zero. We show that it can even be positive and use this argument to reconstruct a family of wormhole geometries. We also propose a novel classif… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">We formulate a class of systems of Euclidean correlation functions for compact $d$-dimensional conformal field theories which are not necessarily unitary. We also introduce conformal $d$-vertex algebras, $d$-dimensional analogues of full vertex algebras, and prove that such an algebra is obtained from every system of conformally covariant correlation functions. Finally, for each $d\geq 2$, we construct a family of examples satisfying these axioms, corresponding to generalized free scalar fields. For $d&gt;2$, this family contains both unitary and non-unitary examples.</p>
-            <p class="card-summary-zh no-math">我们为紧凑的$d$维共形场论制定了一类欧几里得相关函数系统，该系统不一定是酉的。我们还介绍了共形 $d$ 顶点代数、$d$ 维全顶点代数的类似物，并证明这样的代数是从每个共形协变相关函数的系统中获得的。最后，对于每个 $d\geq 2$，我们构造一系列满足这些公理的示例，对应于广义自由标量场。对于 $d&gt;2$，该族包含单一和非单一示例。</p>
+            <p class="card-summary-en">We argue that the local violation of null energy condition at the throat of a traversable wormhole does not necessarily indicate that the total volume integrated null energy contribution is negative. It is already known that it can be arbitrarily close to zero. We show that it can even be positive and use this argument to reconstruct a family of wormhole geometries. We also propose a novel classification of traversable wormholes based on the global volume integrated measure of null energy condition.</p>
+            <p class="card-summary-zh no-math">我们认为，可穿越虫洞喉部零能量条件的局部违反并不一定表明总体积积分零能量贡献为负。众所周知，它可以任意接近于零。我们证明它甚至可以是正的，并利用这个论点来重建一系列虫洞几何形状。我们还提出了一种基于零能量条件的全局体积综合测量的可穿越虫洞的新分类。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.37949" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.37949" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.39468" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.39468" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -388,25 +388,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">06</span>
             <span class="source-chip" title="arXiv 主分类">hep-th</span>
-            <span class="arxiv-id">2609.38030</span>
+            <span class="arxiv-id">2609.39694</span>
           </div>
-          <h3 class="card-title">Diagrammatic construction of GKZ systems for polygonal functions</h3>
-          <p class="card-title-zh no-math">🌐 多边形函数 GKZ 系统的图解结构</p>
-          <p class="card-authors">Alkalaev, K.B. 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">We investigate the recently introduced polygonal hypergeometric functions [arXiv:2502.12127, arXiv:2507.01904], which are conjectured to evaluate multipoint parametric one-loop conformal integrals in arbitrary dimensions. These functions can be systematically constructed using a diagrammatic algorithm that operates in terms of simple planar shapes. Given an $n$-point polygonal power series, we for… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">Gravitational Memory: an approximate description</h3>
+          <p class="card-title-zh no-math">🌐 引力记忆：近似描述</p>
+          <p class="card-authors">Zhao, Q.-L. 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">The large-distance behaviour of a sandwich gravitational wave can be approximated by a continuous but not necessarily smooth profile, providing us with a simplified description of particle motion. Our approximate model is consistent with the Carroll symmetry. Our strategy is illustrated by the Poschl-Teller profile. <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">We investigate the recently introduced polygonal hypergeometric functions [arXiv:2502.12127, arXiv:2507.01904], which are conjectured to evaluate multipoint parametric one-loop conformal integrals in arbitrary dimensions. These functions can be systematically constructed using a diagrammatic algorithm that operates in terms of simple planar shapes. Given an $n$-point polygonal power series, we formulate the corresponding GKZ hypergeometric system, which admits an explicit diagrammatic interpretation. In particular, the transianic matrix, which encodes all the relevant diagrammatic data, determines the corresponding toric matrix along with a basis of the lattice of relations, thereby singling out a finite subsystem of $n(n-3)/2$ toric equations. This finite subsystem consists of second- and third-order equations, whereas the full toric family also includes higher-order ones. We illustrate the general procedure with several prominent examples of polygonal functions, including the fourth Appell and the Srivastava--Daoust functions.</p>
-            <p class="card-summary-zh no-math">我们研究了最近引入的多边形超几何函数 [arXiv:2502.12127, arXiv:2507.01904]，它们被推测用于评估任意维度的多点参数单环共形积分。这些函数可以使用根据简单平面形状进行操作的图解算法来系统地构建。给定 $n$ 点多边形幂级数，我们制定相应的 GKZ 超几何系统，该系统允许明确的图解解释。特别是，对所有相关图表数据进行编码的瞬变矩阵确定了相应的环面矩阵以及关系格的基础，从而选出$n(n-3)/2$环面方程的有限子系统。该有限子系统由二阶和三阶方程组成，而完整的复曲面族还包括高阶方程。我们用几个突出的多边形函数示例来说明一般过程，包括第四个 Appell 函数和 Srivastava-Daoust 函数。</p>
+            <p class="card-summary-en">The large-distance behaviour of a sandwich gravitational wave can be approximated by a continuous but not necessarily smooth profile, providing us with a simplified description of particle motion. Our approximate model is consistent with the Carroll symmetry. Our strategy is illustrated by the Poschl-Teller profile.</p>
+            <p class="card-summary-zh no-math">三明治引力波的大距离行为可以用连续但不一定平滑的轮廓来近似，为我们提供了粒子运动的简化描述。我们的近似模型与卡罗尔对称性一致。 Poschl-Teller 简介说明了我们的策略。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.38030" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.38030" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.39694" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.39694" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
         </div>
@@ -436,7 +436,7 @@ body{top:0!important}
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">6 天前</span>
+            <span class="meta-rel">7 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">9月24日 08:00（北京时间）</span>
           </div>
@@ -462,7 +462,7 @@ body{top:0!important}
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">13 天前</span>
+            <span class="meta-rel">14 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">9月17日 08:00（北京时间）</span>
           </div>
@@ -488,7 +488,7 @@ body{top:0!important}
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">22 天前</span>
+            <span class="meta-rel">23 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">9月8日 08:00（北京时间）</span>
           </div>
@@ -514,7 +514,7 @@ body{top:0!important}
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">23 天前</span>
+            <span class="meta-rel">24 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">9月7日 08:00（北京时间）</span>
           </div>
@@ -540,7 +540,7 @@ body{top:0!important}
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">33 天前</span>
+            <span class="meta-rel">34 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">8月28日 08:00（北京时间）</span>
           </div>
@@ -562,11 +562,11 @@ body{top:0!important}
           <p class="card-summary-short no-math" onclick="toggleCard(this)">Accreting X-ray pulsars have long been expected to show large linear polarisation below the cyclotron resonance. In the standard picture, this follows from two facts: radiative opacities in the strongly magnetised neutron star environment depend strongly on polarisation mode, and the emission comes from compact polar regions. The emerging radiation should therefore be locally polarised and add alm… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
             <p class="card-summary-en">Accreting X-ray pulsars have long been expected to show large linear polarisation below the cyclotron resonance. In the standard picture, this follows from two facts: radiative opacities in the strongly magnetised neutron star environment depend strongly on polarisation mode, and the emission comes from compact polar regions. The emerging radiation should therefore be locally polarised and add almost coherently, with a polarisation angle tracing the projected magnetic field as in the rotating-vector model. Recent X-ray polarimetric observations, instead, show modest polarisation fractions and position angle swings that often depart from this simple picture. Here we show that propagation through the magnetosphere of an accreting neutron star can naturally produce both effects. Using general-relativistic ray tracing and Stokes-parameter transport, we find that photons emitted from compact polar regions acquire ray-dependent polarisation angle offsets in two ways. First, nearly field-aligned trajectories can cross local non-adiabatic pockets inside the QED birefringent region. Second, photons that intersect the plasma-loaded accretion flow accumulate additional phase shifts between plasma normal modes. Both effects broaden the distribution of polarisation angles across the ray bundle and reduce the hotspot-integrated linear polarisation, while also producing systematic deviations from rotating-vector-model expectations. Magnetospheric propagation should therefore be treated as part of the polarimetric transfer problem in accreting X-ray pulsars, and may help explain the observed low polarisation fractions and anomalous angle swings.</p>
-            <p class="card-summary-zh no-math">长期以来人们一直期望吸积X射线脉冲星在回旋共振以下表现出大的线性偏振。在标准图中，这源于两个事实：强磁化中子星环境中的辐射不透明度很大程度上取决于极化模式，并且发射来自致密的极地区域。因此，出现的辐射应该是局部偏振的，并且几乎相干地相加，偏振角跟踪投影磁场，如旋转矢量模型中一样。相反，最近的 X 射线偏振观测显示出适度的偏振分数和位置角摆动，这通常与这张简单的图片不同。在这里，我们证明，通过吸积中子星磁层的传播可以自然地产生这两种效应。使用广义相对论射线追踪和斯托克斯参数传输，我们发现从致密极区发射的光子以两种方式获得与射线相关的偏振角偏移。首先，几乎场对准的轨迹可以穿过 QED 双折射区域内的局部非绝热口袋。其次，与等离子体负载吸积流相交的光子在等离子体正常模式之间积累额外的相移。这两种效应都会扩大光束中偏振角的分布，并减少热点积分线性偏振，同时也会产生与旋转矢量模型预期的系统偏差。因此，磁层传播应被视为吸积 X 射线脉冲星中偏振传递问题的一部分，并且可能有助于解释观察到的低偏振分数和异常角度摆动。</p>
+            <p class="card-summary-zh no-math">长期以来人们一直期望吸积X射线脉冲星在回旋共振以下表现出大的线性偏振。在标准图中，这源于两个事实：强磁化中子星环境中的辐射不透明度很大程度上取决于极化模式，并且发射来自致密的极地区域。因此，出现的辐射应该是局部偏振的，并且几乎相干地相加，偏振角跟踪投影磁场，如旋转矢量模型中一样。相反，最近的 X 射线偏振观测显示出适度的偏振分数和位置角摆动，这通常与这张简单的图片不同。在这里，我们表明，通过吸积中子星磁层的传播可以自然地产生这两种效应。使用广义相对论射线追踪和斯托克斯参数传输，我们发现从致密极区发射的光子以两种方式获得与射线相关的偏振角偏移。首先，几乎场对准的轨迹可以穿过 QED 双折射区域内的局部非绝热口袋。其次，与等离子体负载吸积流相交的光子在等离子体正常模式之间积累额外的相移。这两种效应都会扩大光束中偏振角的分布，并减少热点积分线性偏振，同时也会产生与旋转矢量模型预期的系统偏差。因此，磁层传播应被视为吸积 X 射线脉冲星中偏振传递问题的一部分，并且可能有助于解释观察到的低偏振分数和异常角度摆动。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
-            <span class="meta-rel">34 天前</span>
+            <span class="meta-rel">35 天前</span>
             <span class="meta-sep">·</span>
             <span class="meta-bj">8月27日 08:00（北京时间）</span>
           </div>
@@ -590,25 +590,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">01</span>
             <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
-            <span class="arxiv-id">2609.34102</span>
+            <span class="arxiv-id">2609.38694</span>
           </div>
-          <h3 class="card-title">Discovery of a 62-min long-period transient with near-orthogonal rotator geometry</h3>
-          <p class="card-title-zh no-math">🌐 发现具有近正交旋转器几何形状的 62 分钟长周期瞬态</p>
-          <p class="card-authors">Hyman, Scott D. 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">We report the serendipitous discovery of J155543.7$-$563102 (hereafter LPT J1555$-$5631) with a period of 62.2 min in MeerKAT and ASKAP survey data. The source emitted bright (10-30 mJy), steep-spectrum ($α\sim-1.5$), highly polarized radio pulses during a 15-hr active window in May 2022, with no other quiescent or pulsed emission detected before or after over $\sim5$ years. The mean light curve e… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">HLX-1 as a Repeating Partial Tidal Disruption Event around an Intermediate-Mass Black Hole</h3>
+          <p class="card-title-zh no-math">🌐 HLX-1 作为中等质量黑洞周围重复的部分潮汐扰动事件</p>
+          <p class="card-authors">Yu, Fangyuan 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">ESO 243$-$49 HLX--1 is one of the first known compelling intermediate-mass black hole (IMBH) candidates, but the origin of its recurrent X-ray outbursts remains unsettled. In this work we fit the HLX--1 outbursts simultaneously with a relativistic thin-disk time-dependent model. The black-hole and disk-geometry parameters are tied across epochs, while the injected mass and timing parameters are fi… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">We report the serendipitous discovery of J155543.7$-$563102 (hereafter LPT J1555$-$5631) with a period of 62.2 min in MeerKAT and ASKAP survey data. The source emitted bright (10-30 mJy), steep-spectrum ($α\sim-1.5$), highly polarized radio pulses during a 15-hr active window in May 2022, with no other quiescent or pulsed emission detected before or after over $\sim5$ years. The mean light curve exhibits two alternating pulses per cycle. A main pulse (MP) and an interpulse (IP) separated by $Δϕ=165.4^\circ$ with similar amplitudes, but different polarization properties: the wider MP (3.9%) is partially linearly and circularly polarized and shows a constant polarization position angle, while the narrow IP (1.1%) is $\sim$100% circularly polarized. We classify LPT J1555$-$5631 as a near-orthogonal rotator, for which emission from both magnetic poles is visible during one rotation and the magnetic and rotation axes are almost perpendicular. The 14.6$^\circ$ deviation from an antipodal separation and the nearly constant polarization position angle suggest that the emission does not arise from the standard dipolar polar-cap geometry of ordinary pulsars, but instead originates within a broader, more complex magnetosphere. The observed properties of LPT J1555$-$5631 can be accommodated by extended emission regions, and favor coherent emission mechanisms such as the electron cyclotron maser instability, although they do not uniquely determine the progenitor or emission physics. If these inferences apply more broadly to the LPT population, they could account for why their beam widths are decoupled from rotation periods, the prevalence of flat polarization position angles, and may favor an elevated incidence of orthogonal rotators.</p>
-            <p class="card-summary-zh no-math">我们在 MeerKAT 和 ASKAP 调查数据中报告了偶然发现的 J155543.7$-$563102（以下简称 LPT J1555$-$5631），周期为 62.2 分钟。该源在 2022 年 5 月的 15 小时活动窗口期间发射了明亮（10-30 mJy）、陡峭频谱（$α\sim-1.5$）、高度极化的射电脉冲，在 $\sim5$ 年之前或之后没有检测到其他静态或脉冲发射。平均光变曲线每个周期呈现两个交替脉冲。主脉冲 (MP) 和脉冲间 (IP) 由 $Δψ=165.4^\circ$ 分开，具有相似的幅度，但不同的偏振特性：较宽的 MP (3.9%) 部分线性和圆偏振，并显示恒定的偏振位置角，而窄 IP (1.1%) 为 $\sim$100% 圆偏振。我们将 LPT J1555$-$5631 归类为近正交旋转器，在一次旋转期间可以看到两个磁极的发射，并且磁轴和旋转轴几乎垂直。与对极分离的 14.6$^\circ$ 偏差和几乎恒定的偏振位置角表明，发射并非源自普通脉冲星的标准偶极极冠几何结构，而是源自更广泛、更复杂的磁层。 LPT J1555$-$5631 观察到的特性可以通过扩展的发射区域来适应，并且有利于相干发射机制，例如电子回旋脉塞不稳定性，尽管它们不能唯一地确定祖体或发射物理。如果这些推论更广泛地适用于 LPT 群体，它们可以解释为什么它们的波束宽度与旋转周期、平坦偏振位置角的普遍性脱钩，并且可能有利于正交旋转器的发生率升高。</p>
+            <p class="card-summary-en">ESO 243$-$49 HLX--1 is one of the first known compelling intermediate-mass black hole (IMBH) candidates, but the origin of its recurrent X-ray outbursts remains unsettled. In this work we fit the HLX--1 outbursts simultaneously with a relativistic thin-disk time-dependent model. The black-hole and disk-geometry parameters are tied across epochs, while the injected mass and timing parameters are fitted separately for each outburst. We also include a contemporaneous \textit{HST} UV/optical/IR spectral energy distribution obtained near the peak of one outburst, which constrains the global temperature and radius scales of the disk. The soft-state data are consistent with a common global solution, with black hole mass $\log_{10}(M_{\bullet}/M_\odot)=4.5\pm0.2$ and disk formation radius $\log_{10}(r_0/r_g)=3.8\pm0.3$. The differences between outbursts are mainly described by modest changes in disk mass and viscous timescales. The inferred injected masses are typically $\sim 10^{-3}\,M_\odot$ per outburst, requiring a total fuel supply of at least a few $\times 10^{-3}\,M_\odot$ across the observed sequence. This mass scale, and the disk size, are consistent with repeated partial stripping of a low-mass donor. A simple Keplerian mapping of the flare gaps and fitted disk radius implies a highly eccentric orbit with a pericenter just outside the donor&#x27;s tidal radius. These results support a repeating partial tidal disruption interpretation for the origin of HLX--1.</p>
+            <p class="card-summary-zh no-math">ESO 243$-$49 HLX--1 是第一个已知的引人注目的中等质量黑洞 (IMBH) 候选者之一，但其反复 X 射线爆发的起源仍然悬而未决。在这项工作中，我们将 HLX--1 爆发与相对论薄盘时间相关模型同时拟合。黑洞和圆盘几何参数在各个历元之间相互关联，而注入的质量和时间参数则针对每次爆发分别进行拟合。我们还包括在一次爆发峰值附近获得的同期 \textit{HST} 紫外/光学/红外光谱能量分布，它限制了圆盘的全局温度和半径尺度。软态数据与通用全局解一致，黑洞质量$\log_{10}(M_{\bullet}/M_\odot)=4.5\pm0.2$，盘形成半径$\log_{10}(r_0/r_g)=3.8\pm0.3$。爆发之间的差异主要通过圆盘质量和粘性时间尺度的适度变化来描述。推断的注入质量通常为每次爆发 $\sim 10^{-3}\,M_\odot$，在观察到的序列中需要至少几个 $\times 10^{-3}\,M_\odot$ 的总燃料供应。该质量尺度和圆盘尺寸与低质量供体的重复部分剥离一致。耀斑间隙和拟合圆盘半径的简单开普勒映射意味着一个高度偏心的轨道，其近心恰好在施主的潮汐半径之外。这些结果支持对 HLX--1 起源的重复部分潮汐破坏解释。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.34102" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.34102" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.38694" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.38694" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -616,25 +616,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">02</span>
             <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
-            <span class="arxiv-id">2609.35733</span>
+            <span class="arxiv-id">2609.38682</span>
           </div>
-          <h3 class="card-title">Fast radio burst - persistent radio source systems III. The relation between PRS luminosity and FRB rotation measure</h3>
-          <p class="card-title-zh no-math">🌐 快速射电爆发-持久射电源系统 III。 PRS光度与FRB旋转测量之间的关系</p>
-          <p class="card-authors">Pelliciari, D. 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Fast radio bursts (FRBs) are millisecond-duration radio transients of extragalactic origin whose physical origin remains uncertain. A small fraction of FRBs are known to repeat, and some of them are associated with persistent radio sources (PRSs), interpreted as synchrotron-emitting nebulae surrounding the FRB source. In the context of magnetar-based models, the rotation measure (RM) of an FRB is… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">New Constraints on $r$-process Nucleosynthesis in Neutron Star Mergers from GW170817 Late-Phase Spectra</h3>
+          <p class="card-title-zh no-math">🌐 GW170817 后期光谱对中子星合并中 $r$ 过程核合成的新限制</p>
+          <p class="card-authors">Rahmouni, Salma 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">The neutron star merger event GW170817 provided the first direct evidence of $r$-process nucleosynthesis. Observed spectra of its electromagnetic counterpart AT2017gfo exhibited several features that encode information on the nature and abundance of the synthesized $r$-process elements. In this study, we investigate the late nebular-phase spectral features of AT2017gfo, which provide important pro… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Fast radio bursts (FRBs) are millisecond-duration radio transients of extragalactic origin whose physical origin remains uncertain. A small fraction of FRBs are known to repeat, and some of them are associated with persistent radio sources (PRSs), interpreted as synchrotron-emitting nebulae surrounding the FRB source. In the context of magnetar-based models, the rotation measure (RM) of an FRB is expected to correlate with the spectral luminosity of its associated PRS, providing a probe of the physical properties and evolution of the nebula. We investigate the relation between FRB RM and PRS spectral luminosity, constrain the characteristic size of the PRS nebulae, and use the intrinsic scatter of the relation to investigate evolutionary scenarios for FRB--PRS systems. We analyse a sample of 50 FRB sources with known RM, including both PRS detections and spectral luminosity upper limits, using a Bayesian MCMC framework that jointly accounts for detections and non-detections. We model the luminosity--RM relation as $L_ν\propto ζ_e γ_c^2 R^2 {\rm RM}^β$, constraining the characteristic nebular size $R$ and the RM scaling index $β$. For the full sample, we obtain $R = 0.016^{+0.115}_{-0.014}$ pc at $1σ$ confidence for a free $β$, while fixing the RM dependence to the canonical linear scaling, $β= 1$, gives $R = 0.008^{+0.058}_{-0.007}$ pc. The data mildly favour super linear RM scalings, although the inferred values of $β$ remain consistent with $β= 1$ within $2σ$. We find a substantial intrinsic scatter in the luminosity--RM relation, significantly larger than previous estimates based on confirmed PRSs alone. Interpreting this scatter within evolutionary models, our results favour scenarios involving efficient particle acceleration and/or rapid nebular expansion.</p>
-            <p class="card-summary-zh no-math">快速射电爆发（FRB）是河外起源的毫秒持续时间的射电瞬变，其物理起源仍不确定。已知一小部分 FRB 会重复，其中一些与持续射电源 (PRS) 有关，被解释为 FRB 源周围的同步加速器发射星云。在基于磁星的模型中，FRB 的旋转测量 (RM) 预计与其相关 PRS 的光谱光度相关，从而提供对星云物理特性和演化的探测。我们研究了 FRB RM 和 PRS 光谱光度之间的关系，限制了 PRS 星云的特征尺寸，并利用该关系的固有散射来研究 FRB--PRS 系统的演化场景。我们使用贝叶斯 MCMC 框架分析了具有已知 RM 的 50 个 FRB 源的样本，包括 PRS 检测和光谱光度上限，该框架共同考虑了检测和未检测。我们将光度-RM 关系建模为 $L_ν\propto ζ_e γ_c^2 R^2 {\rm RM}^β$，约束特征星云大小 $R$ 和 RM 缩放指数 $β$。对于完整样本，我们在免费 $β$ 的置信度为 $1σ$ 时获得 $R = 0.016^{+0.115}_{-0.014}$ pc，同时将 RM 依赖于规范线性缩放 $β= 1$，给出 $R = 0.008^{+0.058}_{-0.007}$ pc。尽管 $β$ 的推断值在 $2σ$ 内与 $β= 1$ 保持一致，但数据略微支持超线性 RM 缩放。我们发现光度-RM 关系存在显着的内在分散，明显大于之前仅根据已确认的 PRS 进行的估计。在进化模型中解释这种分散，我们的结果支持涉及有效粒子加速和/或快速星云膨胀的场景。</p>
+            <p class="card-summary-en">The neutron star merger event GW170817 provided the first direct evidence of $r$-process nucleosynthesis. Observed spectra of its electromagnetic counterpart AT2017gfo exhibited several features that encode information on the nature and abundance of the synthesized $r$-process elements. In this study, we investigate the late nebular-phase spectral features of AT2017gfo, which provide important probes of the elemental abundance of the ejecta. We construct an analytic spectral model that computes emission features produced by the radiative decay of collisionally excited ions through allowed and forbidden transitions. By comparing our model to AT2017gfo, we identify La III and Ce III as the main contributors to the emission features at $1.4\,μ{\rm m}$ and $1.6\,μ{\rm m}$, respectively. We also confirm Te III as the dominant contributor to the $2.1\,μ{\rm m}$ feature proposed in previous works. We infer mass fractions of $X({\rm La})\approx 0.025-0.05$, $X({\rm Ce})\approx 0.05-0.1$, and $X({\rm Te})\approx 0.04-0.08$, although the La and Ce abundance estimates remain tentative due to uncertainties in the radiation field. From the non-detections of Kr and Sb lines, we derive upper limits of $X({\rm Kr})\lesssim 0.03$ and $X({\rm Sb})\lesssim 0.003$. These results suggest that nucleosynthesis in the inner ejecta of GW170817 produced a suppressed first $r$-process peak and an enhanced heavy-element abundance compared to the solar $r$-process pattern, with an estimated lanthanide fraction of $X_{\rm LN}\approx (3-6) \times 10^{-2}$. Our conclusions are consistent with the apparent universality of heavy $r$-process elements and the lanthanide fraction inferred from observations of $r$-enhanced metal-poor stars.</p>
+            <p class="card-summary-zh no-math">中子星合并事件 GW170817 提供了 $r$ 过程核合成的第一个直接证据。其电磁对应物 AT2017gfo 的观测光谱表现出几个特征，这些特征编码有关合成 $r$ 过程元素的性质和丰度的信息。在这项研究中，我们研究了 AT2017gfo 的晚期星云相光谱特征，这为喷射物的元素丰度提供了重要的探针。我们构建了一个分析光谱模型，用于计算碰撞激发离子通过允许和禁止跃迁的辐射衰变产生的发射特征。通过将我们的模型与 AT2017gfo 进行比较，我们确定 La III 和 Ce III 分别是 $1.4\,μ{\rm m}$ 和 $1.6\,μ{\rm m}$ 发射特征的主要贡献者。我们还确认 Te III 是之前作品中提出的 $2.1\,μ{\rm m}$ 特征的主要贡献者。我们推断质量分数为 $X({\rm La})\约 0.025-0.05$、$X({\rm Ce})\约 0.05-0.1$ 和 $X({\rm Te})\约 0.04-0.08$，尽管由于辐射场的不确定性，La 和 Ce 丰度估计值仍然是暂定的。从 Kr 和 Sb 线的未检测到，我们得出 $X({\rm Kr})\lesssim 0.03$ 和 $X({\rm Sb})\lesssim 0.003$ 的上限。这些结果表明，与太阳 $r$ 过程模式相比，GW170817 内部喷射物中的核合成产生了抑制的第一个 $r$ 过程峰值和增强的重元素丰度，估计的镧系元素分数为 $X_{\rm LN}\approx (3-6) \times 10^{-2}$。我们的结论与重$r$过程元素和从$r$增强贫金属恒星的观测中推断出的镧系元素分数的明显普遍性是一致的。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.35733" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.35733" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.38682" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.38682" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -642,25 +642,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">03</span>
             <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
-            <span class="arxiv-id">2609.36632</span>
+            <span class="arxiv-id">2609.38837</span>
           </div>
-          <h3 class="card-title">Combined constraints on the diffuse flux of cosmic neutrinos between 10^16 eV and 10^26 eV</h3>
-          <p class="card-title-zh no-math">🌐 10^16 eV 和 10^26 eV 之间宇宙中微子扩散通量的组合约束</p>
-          <p class="card-authors">Troitsky, S.V.</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Experimental constraints on the diffuse neutrino flux above the PeV range have been obtained with Cherenkov neutrino telescopes, air-shower arrays, radio detectors in and above polar ice, and radio observations of the Moon. Published results use different flavor, energy-bin, and statistical conventions, so their flux limits cannot be combined directly. We reconstruct energy-dependent exposures of… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">Pulsar glitches triggered by quakes when stress reaches a threshold</h3>
+          <p class="card-title-zh no-math">🌐 当压力达到阈值时，地震会引发脉冲星故障</p>
+          <p class="card-authors">Zhou, Zixuan 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">The starquake model of pulsar glitches is revisited in light of accumulated observational data. A statistical comparison between the time-predictable and the magnitude-predictable models, borrowed from seismology and grounded in the classical spring-slider framework, is performed against a sample of 245 glitch events from 9 pulsars. It is found that the data supports the time-predictable model, i.… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Experimental constraints on the diffuse neutrino flux above the PeV range have been obtained with Cherenkov neutrino telescopes, air-shower arrays, radio detectors in and above polar ice, and radio observations of the Moon. Published results use different flavor, energy-bin, and statistical conventions, so their flux limits cannot be combined directly. We reconstruct energy-dependent exposures of the published searches and place them in a common convention for the total all-flavor $ν+\barν$ flux over $10^{16}$-$10^{26}$ eV. Published event counts and expected backgrounds are combined with a Poisson likelihood, and 90% C.L. quasi-differential limits are obtained for one-decade $E_ν^{-1}$ test spectra using a one-sided profile-likelihood construction. Folding theoretical spectra of cosmogenic neutrinos and selected new-physics scenarios with the combined energy-dependent exposure yields constraints on their flux normalizations. This homogeneous analysis provides a reproducible observational benchmark across ten decades in neutrino energy and a common reference for current and projected searches.</p>
-            <p class="card-summary-zh no-math">通过切伦科夫中微子望远镜、空气簇射阵列、极地冰层内外的射电探测器以及对月球的射电观测，已经获得了对 PeV 范围以上的扩散中微子通量的实验限制。已发布的结果使用不同的风味、能量箱和统计约定，因此它们的通量限制不能直接组合。我们重建了已发布搜索的能量相关暴露，并将它们置于通用约定中，以表示超过 $10^{16}$-$10^{26}$ eV 的总全风味 $ν+\barν$ 通量。已发布的事件计数和预期背景与泊松可能性和 90% C.L. 相结合。使用单侧轮廓似然构造获得十年 $E_ν^{-1}$ 测试谱的准微分极限。折叠宇宙中微子的理论光谱和选定的新物理场景以及组合的能量依赖暴露对其通量归一化产生限制。这种均质分析为中微子能量提供了十年间可重复的观测基准，并为当前和预计的搜索提供了共同参考。</p>
+            <p class="card-summary-en">The starquake model of pulsar glitches is revisited in light of accumulated observational data. A statistical comparison between the time-predictable and the magnitude-predictable models, borrowed from seismology and grounded in the classical spring-slider framework, is performed against a sample of 245 glitch events from 9 pulsars. It is found that the data supports the time-predictable model, i.e., a quake resulting in a glitch could be triggered when the developed stress reaches a critical threshold, $τ_{\rm c}$, while the remaining elastic energy (correspondingly the residual stress, $τ_{\rm r}$) after quakes is not fixed. The critical stress could be the order of $τ_{\rm c}\simeq (10^{34}-10^{35})\ {\rm dyn\,cm^{-2}}$ if the residual stress after a quake with maximum stress drops could be considered negligible (i.e., $τ_{\rm r}\simeq 0$), to explain the glitch amplitudes and the intervals. This $τ_{\rm c}$-value is the order of the shear modulus of strangeon stars, but would be several orders higher than that of conventional neutron stars.</p>
+            <p class="card-summary-zh no-math">根据积累的观测数据重新审视脉冲星故障的星震模型。对来自地震学并基于经典弹簧滑块框架的时间可预测模型和震级可预测模型之间的统计比较是针对来自 9 个脉冲星的 245 个故障事件的样本进行的。研究发现，数据支持时间可预测模型，即当产生的应力达到临界阈值$τ_{\rm c}$时，可能会触发导致毛刺的地震，而地震后剩余的弹性能（相应的残余应力，$τ_{\rm r}$）并不固定。如果最大应力下降的地震后的残余应力可以忽略不计（即 $τ_{\rm r}\simeq 0$），则临界应力可以是 $τ_{\rm c}\simeq (10^{34}-10^{35})\ {\rm dyn\,cm^{-2}}$ 的量级，以解释毛刺幅度和间隔。这个 $τ_{\rm c}$ 值是奇子星剪切模量的数量级，但比传统中子星高几个数量级。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.36632" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.36632" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.38837" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.38837" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -668,25 +668,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">04</span>
             <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
-            <span class="arxiv-id">2609.37088</span>
+            <span class="arxiv-id">2609.39224</span>
           </div>
-          <h3 class="card-title">Re-interpreting the GRS 1915+105 observations within the variable TADAF scenario</h3>
-          <p class="card-title-zh no-math">🌐 在可变 TADAF 情景下重新解释 GRS 1915+105 观测结果</p>
-          <p class="card-authors">Xu, Chun</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">The Galactic microquasar GRS 1915+105 is one of the most interesting X-ray binary systems, exhibiting an exceptionally diverse range of observational phenomena. It displays the most complicated and variable X-ray light curves and carries superluminal radio jets. Its X-ray and radio fluxes change on very different timescales, from seconds to minutes to days and even longer. In recent years, its jet… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">Electromagnetic Counterparts of Stellar-mass Binary Black Hole Mergers in AGN Accretion Disks: Theoretical Models and Observational Status</h3>
+          <p class="card-title-zh no-math">🌐 AGN吸积盘中恒星质量双黑洞合并的电磁对应物：理论模型和观测现状</p>
+          <p class="card-authors">He, Lei 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">The discovery of the binary neutron star merger GW170817 and its electromagnetic counterparts marked the beginning of the era of multimessenger gravitational-wave astronomy. In contrast, binary black hole (BBH) mergers, which constitute the majority of gravitational-wave sources detected to date, are generally expected to be electromagnetically dark. However, if BBH mergers occur within the dense… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">The Galactic microquasar GRS 1915+105 is one of the most interesting X-ray binary systems, exhibiting an exceptionally diverse range of observational phenomena. It displays the most complicated and variable X-ray light curves and carries superluminal radio jets. Its X-ray and radio fluxes change on very different timescales, from seconds to minutes to days and even longer. In recent years, its jet has also displayed large position angle shifts. We find that most of the observational phenomena can be well explained within our newly developed variable turbulent ADAF (TADAF) model. The accretion disk is composed of an outer thin disk and an unstable inner TADAF torus whose size is variable. The previously suggested &#x27;disappearance&#x27; and regain of the inner disk is understood as the transition between the thick TADAF and the thin disk. Some types of QSOs are understood in terms of the radius change of the TADAF torus. The jet position angle shift is understood as the direct sideways frame-dragging on the jet by the Lense-Thirring effect from a tilted, spinning black hole. The slower the outshooting jet, the larger the angle shift. We note that such an effect also applies to other sources, such as V404 Cygni and the AGN M87. This mechanism may also be applicable to the famous &#x27;precessing&#x27; jet in SS 433.</p>
-            <p class="card-summary-zh no-math">银河微类星体 GRS 1915+105 是最有趣的 X 射线双星系统之一，展现出极其多样化的观测现象。它显示出最复杂和多变的 X 射线光变曲线，并携带超光速无线电射流。它的 X 射线和射电通量在不同的时间尺度上变化，从几秒到几分钟到几天甚至更长。近年来，其喷气式飞机也表现出较大的位置角变化。我们发现大多数观测现象都可以在我们新开发的可变湍流 ADAF (TADAF) 模型中得到很好的解释。吸积盘由外部薄盘和内部不稳定的TADAF环面组成，其大小可变。先前提出的内盘的“消失”和重新获得被理解为厚TADAF和薄盘之间的过渡。某些类型的 QSO 是根据 TADAF 环面的半径变化来理解的。喷流位置角偏移被理解为倾斜旋转黑洞的透镜-蒂林效应对喷流的直接侧向参考系拖动。射流越慢，角度偏移就越大。我们注意到这种效果也适用于其他源，例如 V404 Cygni 和 AGN M87。这种机制也可能适用于 SS 433 中著名的“进动”射流。</p>
+            <p class="card-summary-en">The discovery of the binary neutron star merger GW170817 and its electromagnetic counterparts marked the beginning of the era of multimessenger gravitational-wave astronomy. In contrast, binary black hole (BBH) mergers, which constitute the majority of gravitational-wave sources detected to date, are generally expected to be electromagnetically dark. However, if BBH mergers occur within the dense gaseous environments of active galactic nucleus (AGN) accretion disks, interactions between the merging black holes and surrounding gas may produce electromagnetic emission across multiple wavelengths. AGN disks may therefore provide a natural multimessenger laboratory for studying BBH mergers and their astrophysical environments. A key question is whether such a scenario is supported by current observations and whether the associated electromagnetic signatures are sufficiently distinctive and detectable. In this review, we summarize the current theoretical and observational status of BBH mergers in AGN accretion disks, focusing on the evidence for their occurrence, the physical mechanisms and expected signatures of electromagnetic emission, and searches for candidate counterparts. We also discuss the major challenges in identifying and confirming these associations and the prospects for future multimessenger observations with current and forthcoming multiwavelength facilities.</p>
+            <p class="card-summary-zh no-math">双中子星合并GW170817及其电磁对应物的发现标志着多信使引力波天文学时代的开始。相比之下，构成迄今为止检测到的大多数引力波源的双黑洞（BBH）合并通常被认为是电磁暗的。然而，如果BBH合并发生在活跃星系核（AGN）吸积盘的致密气体环境中，合并黑洞与周围气体之间的相互作用可能会产生跨多个波长的电磁发射。因此，活动星系核盘可能为研究 BBH 合并及其天体物理环境提供一个天然的多信使实验室。一个关键问题是当前的观测是否支持这种情况，以及相关的电磁特征是否足够独特和可检测。在这篇综述中，我们总结了活动星系核吸积盘中BBH合并的当前理论和观测状况，重点关注其发生的证据、物理机制和电磁发射的预期特征，并寻找候选对应物。我们还讨论了识别和确认这些关联的主要挑战，以及利用当前和即将推出的多波长设施进行未来多信使观测的前景。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.37088" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.37088" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.39224" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.39224" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -694,25 +694,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">05</span>
             <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
-            <span class="arxiv-id">2609.37224</span>
+            <span class="arxiv-id">2609.39057</span>
           </div>
-          <h3 class="card-title">Multi-wavelength polarization degree dependence of Mrk 421 for different particle energy distributions</h3>
-          <p class="card-title-zh no-math">🌐 Mrk 421 对不同粒子能量分布的多波长偏振度依赖性</p>
-          <p class="card-authors">Bora, Hritwik 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">We report on the constraints obtained from the multi-wavelength polarization degree and energy spectra measurements for the High Synchrotron Peaked Blazar (HBL) source Mrk 421 using different forms of the electron energy distribution. We find that the optical and X-ray data are consistent with the electron energy distribution being a broken power-law (BPL) or other distributions, with all electron… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">Improved Population and EOS Joint Inference for Binary Neutron Star Systems</h3>
+          <p class="card-title-zh no-math">🌐 改进的双中子星系统的群体和 EOS 联合推理</p>
+          <p class="card-authors">Ebiri, Marc 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">The extreme environment within neutron stars presents the opportunity to probe the nuclear equation of state at high densities while studying the properties of these stellar remnants. Historically, the equation of state and neutron star mass distribution have been inferred separately, with the latter often simply assumed to be fixed in studies of the former, but the dependence of the equation of s… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">We report on the constraints obtained from the multi-wavelength polarization degree and energy spectra measurements for the High Synchrotron Peaked Blazar (HBL) source Mrk 421 using different forms of the electron energy distribution. We find that the optical and X-ray data are consistent with the electron energy distribution being a broken power-law (BPL) or other distributions, with all electrons experiencing the same magnetic field configuration. This is in contrast to other HBL sources like the Mrk 501, where, for the BPL distribution, the X-ray producing higher energy electrons need to exist in a more ordered magnetic field environment than the optical producing lower energy ones. This is because the break energy of the spectrum produced by the BPL distribution for Mrk 421 lies below the IXPE energy band. We discuss the implications of the findings.</p>
-            <p class="card-summary-zh no-math">我们报告了使用不同形式的电子能量分布从高同步加速器峰值耀变体 (HBL) 源 Mrk 421 的多波长偏振度和能谱测量中获得的约束。我们发现光学和 X 射线数据与电子能量分布是破坏幂律 (BPL) 或其他分布一致，所有电子都经历相同的磁场配置。这与 Mrk 501 等其他 HBL 源形成鲜明对比，其中，对于 BPL 分布，产生较高能量电子的 X 射线需要存在于比产生较低能量电子的光学更有序的磁场环境中。这是因为 Mrk 421 的 BPL 分布产生的光谱断裂能位于 IXPE 能带下方。我们讨论研究结果的含义。</p>
+            <p class="card-summary-en">The extreme environment within neutron stars presents the opportunity to probe the nuclear equation of state at high densities while studying the properties of these stellar remnants. Historically, the equation of state and neutron star mass distribution have been inferred separately, with the latter often simply assumed to be fixed in studies of the former, but the dependence of the equation of state on neutron star mass indicates they should be inferred together. In this work, we extend the generalized version of the popular RIFT algorithm known as Hyperpipe to interface with flexible, user-provided priors that will facilitate joint inference of equation of state and binary neutron star population hyperparameters. We demonstrate this framework&#x27;s utility via application to a combination of several existing observations, particularly including massive galactic pulsars, double neutron star systems, millisecond X-ray pulsars, the gravitational wave event GW170817 and the nuclear symmetry energy, within the context of a widely-adopted parametric EOS family and a simple Gaussian population model. We recover parameters consistent with previous analyses of the EOS and binary neutron star population, finding the latter to fit a bivariate normal distribution with mean $(μ_1,μ_2) = (1.39,1.27) M_{\odot}$ and width $σ= 0.08 M_{\odot}$. Furthermore, we implement novel coordinate transformations in our pipeline, with which we have discovered that the ad hoc prior boundaries used for this EOS family may be too restrictive. We present results with relaxed yet still physical prior boundaries, noting vastly improved hyperparameter posteriors and modestly different equation of state inferences.</p>
+            <p class="card-summary-zh no-math">中子星内的极端环境提供了在研究这些恒星遗迹特性的同时探测高密度核状态方程的机会。历史上，状态方程和中子星质量分布是分开推断的，在前者的研究中常常简单地假设后者是固定的，但状态方程对中子星质量的依赖性表明它们应该一起推断。在这项工作中，我们扩展了流行的 RIFT 算法（称为 Hyperpipe）的通用版本，以与灵活的、用户提供的先验进行交互，这将有助于状态方程和二元中子星布居超参数的联合推理。我们通过在广泛采用的参数EOS族和简单的高斯布居模型的背景下，通过应用到几个现有观测的组合来证明该框架的实用性，特别是包括大质量银河脉冲星、双中子星系统、毫秒X射线脉冲星、引力波事件GW170817和核对称能。我们恢复了与之前对 EOS 和双中子星群的分析一致的参数，发现后者符合均值 $(μ_1,μ_2) = (1.39,1.27) M_{\odot}$ 和宽度 $σ= 0.08 M_{\odot}$ 的二元正态分布。此外，我们在管道中实现了新颖的坐标变换，我们发现用于该 EOS 系列的临时先验边界可能过于严格。我们给出了具有宽松但仍然物理先验边界的结果，注意到超参数后验的极大改进和适度不同的状态方程推论。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.37224" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.37224" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.39057" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.39057" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
 
@@ -720,25 +720,25 @@ body{top:0!important}
           <div class="card-head">
             <span class="seq">06</span>
             <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
-            <span class="arxiv-id">2609.36988</span>
+            <span class="arxiv-id">2609.39428</span>
           </div>
-          <h3 class="card-title">Detecting Extragalactic Exoplanets With Fast Radio Burst Nanolensing</h3>
-          <p class="card-title-zh no-math">🌐 利用快速射电爆发纳米透镜探测河外系外行星</p>
-          <p class="card-authors">Olibrice, Kenneth F. 等</p>
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Fast Radio Bursts (FRBs) are spatially and temporally compact sources at cosmological distances. As background sources, they will be uniquely sensitive to the gravitational lensing of exoplanets outside of our own galaxy. We present a method to detect extragalactic exoplanets using planetary echo nanolensing-periodic, nanosecond-scale variations in the relative time of arrival (ToA) between an ini… <span class="more-hint">…展开全文 ▾</span></p>
+          <h3 class="card-title">Correlating Surface Magnetic Field Decay with Internal Field Depth of Isolated Neutron Stars</h3>
+          <p class="card-title-zh no-math">🌐 将表面磁场衰变与孤立中子星的内部场深度相关联</p>
+          <p class="card-authors">Sellick, Kathleen 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">The long-term evolution of neutron star crustal magnetic fields through Ohmic decay is governed by the transport properties of the crust. In this work, we demonstrate that the depth at which the magnetic flux is anchored plays a significant role in the dissipation timescale. We study the evolution of the magnetic field at the surface of the neutron star due to the crustal field evolution, under th… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Fast Radio Bursts (FRBs) are spatially and temporally compact sources at cosmological distances. As background sources, they will be uniquely sensitive to the gravitational lensing of exoplanets outside of our own galaxy. We present a method to detect extragalactic exoplanets using planetary echo nanolensing-periodic, nanosecond-scale variations in the relative time of arrival (ToA) between an initial FRB and its microlensed echo as the planet orbits its host star. For a simple binary lens model, we demonstrate that measuring the amplitude and period of these ToA fluctuations enables a determination of the exoplanet mass and orbital parameters. FRBs will be most sensitive to echo nanolensing by lenses within ten megaparsecs of the Milky Way as well as within ten megaparsecs of the FRB host, opening the door to detections of planets at a range of redshifts. We estimate that at least one in a million FRBs will exhibit this phenomenon (i.e. an optical depth of $τ_l = 10^{-6}$). While current burst rates and low repeating-FRB fractions make a detection challenging in the immediate term, upcoming high-volume surveys and next-generation arrays (such as the SKA Phase 2) will bring the unambiguous detection of extragalactic exoplanets across cosmological redshifts into possibility.</p>
-            <p class="card-summary-zh no-math">快速射电爆发（FRB）是宇宙学距离上空间和时间上紧凑的源。作为背景源，它们将对我们银河系之外的系外行星的引力透镜特别敏感。我们提出了一种利用行星回波纳透镜探测河外系外行星的方法，即当行星绕其主恒星运行时，初始快速射电暴与其微透镜回波之间的相对到达时间 (ToA) 出现周期性、纳秒级的变化。对于简单的二元透镜模型，我们证明测量这些 ToA 波动的幅度和周期可以确定系外行星质量和轨道参数。 FRB将对银河系十兆秒差距内以及FRB宿主十兆秒差距内的透镜的回波纳米透镜最为敏感，这为探测一系列红移的行星打开了大门。我们估计至少百万分之一的快速射电暴会表现出这种现象（即光学深度 $τ_l = 10^{-6}$）。虽然当前的爆发率和低重复 FRB 分数使得短期内的检测具有挑战性，但即将进行的大容量调查和下一代阵列（例如 SKA 第 2 阶段）将使跨越宇宙学红移的河外系外行星的明确检测成为可能。</p>
+            <p class="card-summary-en">The long-term evolution of neutron star crustal magnetic fields through Ohmic decay is governed by the transport properties of the crust. In this work, we demonstrate that the depth at which the magnetic flux is anchored plays a significant role in the dissipation timescale. We study the evolution of the magnetic field at the surface of the neutron star due to the crustal field evolution, under the assumption of Ohmic diffusion in a curved spacetime. We employ a cumulative distribution function to parameterise the initial current distribution and explore the effects of varying the equation of state and crustal impurity. We compare results across three neutron star models representing varying degrees of compactness. We find that magnetic fields anchored deeper within the inner crust experience negligible decay over timescales up to $10^{10}$ years. Significant field evolution, necessary to explain the deficit of high-field pulsars at advanced ages, is possible if the magnetic currents are confined to the shallow outer crust. This result holds true regardless of the impurity concentration or the specific geometric thickness of the crust determined by the equation of state.</p>
+            <p class="card-summary-zh no-math">中子星地壳磁场通过欧姆衰变的长期演化受到地壳输运特性的控制。在这项工作中，我们证明了磁通量锚定的深度在耗散时间尺度中起着重要作用。我们在弯曲时空中欧姆扩散的假设下，研究由于地壳场演化而导致的中子星表面磁场的演化。我们采用累积分布函数来参数化初始电流分布，并探索改变状态方程和地壳杂质的影响。我们比较了代表不同致密程度的三个中子星模型的结果。我们发现，锚定在地壳深处的磁场在长达 10^{10}$ 年的时间尺度内经历的衰减可以忽略不计。如果磁流仅限于浅层外地壳，则可能会出现显着的场演化，这对于解释高龄脉冲星的缺陷是可能的。无论状态方程确定的杂质浓度或地壳的特定几何厚度如何，该结果都成立。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-meta">
             <span class="meta-rel">昨天</span>
             <span class="meta-sep">·</span>
-            <span class="meta-bj">9月29日 08:00（北京时间）</span>
+            <span class="meta-bj">9月30日 08:00（北京时间）</span>
           </div>
           <div class="card-foot">
-            <a class="btn-primary" href="https://arxiv.org/abs/2609.36988" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
-            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.36988" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            <a class="btn-primary" href="https://arxiv.org/abs/2609.39428" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2609.39428" target="_blank" rel="noopener noreferrer">PDF ↗</a>
           </div>
         </article>
         </div>
@@ -754,6 +754,29 @@ body{top:0!important}
         <article class="card">
           <div class="card-head">
             <span class="seq">01</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            
+            
+            <span class="journal-date">2026-10-01 00:00</span>
+          </div>
+          <h3 class="card-title">The ‘missed disease’ that affects 190 million: endometriosis drug shows early promise</h3>
+          <p class="card-title-zh no-math">🌐 影响 1.9 亿人的“被忽视的疾病”：子宫内膜异位症药物显示出早期前景</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 01 October 2026; doi:10.1038/d41586-026-03042-xModified medication targets the cells implicated in the condition’s tell-tale lesions. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 01 October 2026; doi:10.1038/d41586-026-03042-xModified medication targets the cells implicated in the condition’s tell-tale lesions.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 10 月 1 日； doi:10.1038/d41586-026-03042-x修改后的药物针对与疾病明显病变有关的细胞。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-03042-x" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
             <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
             
             
@@ -776,7 +799,7 @@ body{top:0!important}
 
         <article class="card">
           <div class="card-head">
-            <span class="seq">02</span>
+            <span class="seq">03</span>
             <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
             
             
@@ -799,7 +822,7 @@ body{top:0!important}
 
         <article class="card">
           <div class="card-head">
-            <span class="seq">03</span>
+            <span class="seq">04</span>
             <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
             
             
@@ -822,7 +845,30 @@ body{top:0!important}
 
         <article class="card">
           <div class="card-head">
-            <span class="seq">04</span>
+            <span class="seq">05</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            
+            
+            <span class="journal-date">2026-09-30 00:00</span>
+          </div>
+          <h3 class="card-title">Daily briefing: How to save corals from the El Niño</h3>
+          <p class="card-title-zh no-math">🌐 每日简报：如何从厄尔尼诺现象中拯救珊瑚</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 30 September 2026; doi:10.1038/d41586-026-03138-4Scientists are trying to help coral reefs survive record ocean temperatures. Plus, the aftermath of a deadly attack on Ukraine’s National Academy of Sciences and whether it’s OK to dodge small talk. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 30 September 2026; doi:10.1038/d41586-026-03138-4Scientists are trying to help coral reefs survive record ocean temperatures. Plus, the aftermath of a deadly attack on Ukraine’s National Academy of Sciences and whether it’s OK to dodge small talk.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 9 月 30 日； doi:10.1038/d41586-026-03138-4科学家正在努力帮助珊瑚礁在创纪录的海洋温度下生存。另外，乌克兰国家科学院遭受致命袭击的后果以及是否可以回避闲聊。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-03138-4" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
             <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
             
             
@@ -839,52 +885,6 @@ body{top:0!important}
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
             <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02965-9" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-            
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <span class="seq">05</span>
-            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
-            
-            
-            <span class="journal-date">2026-09-30 00:00</span>
-          </div>
-          <h3 class="card-title">This award-winning microscopy image used AI — igniting controversy in a prestigious competition</h3>
-          <p class="card-title-zh no-math">🌐 这张获奖的显微镜图像使用了人工智能——在一项著名的比赛中引发了争议</p>
-          
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 30 September 2026; doi:10.1038/d41586-026-03086-zResearchers say that using artificial-intelligence tools to visualize scientific images can become problematic when models misrepresent the underlying data. <span class="more-hint">…展开全文 ▾</span></p>
-          <div class="card-summary-full">
-            <p class="card-summary-en">Nature, Published online: 30 September 2026; doi:10.1038/d41586-026-03086-zResearchers say that using artificial-intelligence tools to visualize scientific images can become problematic when models misrepresent the underlying data.</p>
-            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 9 月 30 日； doi:10.1038/d41586-026-03086-z 研究人员表示，当模型歪曲基础数据时，使用人工智能工具可视化科学图像可能会出现问题。</p>
-          </div>
-          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
-          <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-03086-z" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-            
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <span class="seq">06</span>
-            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
-            
-            
-            <span class="journal-date">2026-09-30 00:00</span>
-          </div>
-          <h3 class="card-title">2D semiconductor aims to turbocharge development of high-performance electronics</h3>
-          <p class="card-title-zh no-math">🌐 二维半导体旨在推动高性能电子产品的发展</p>
-          
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 30 September 2026; doi:10.1038/d41586-026-02777-xAn ultrathin semiconductor that conducts electricity using positively charged ‘holes’ might clear the way for next-generation electronic devices. <span class="more-hint">…展开全文 ▾</span></p>
-          <div class="card-summary-full">
-            <p class="card-summary-en">Nature, Published online: 30 September 2026; doi:10.1038/d41586-026-02777-xAn ultrathin semiconductor that conducts electricity using positively charged ‘holes’ might clear the way for next-generation electronic devices.</p>
-            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 9 月 30 日； doi:10.1038/d41586-026-02777-x 利用带正电“空穴”导电的超薄半导体可能为下一代电子设备扫清道路。</p>
-          </div>
-          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
-          <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-02777-x" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -949,7 +949,7 @@ body{top:0!important}
           <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Physics, Published online: 29 September 2026; doi:10.1038/s41567-026-03475-1Complex fluids display unusual flow behaviour that originates from their microstructure, but observing this structure has been challenging. Now, X-ray scattering microscopy is fast enough to follow the tumbling of nan… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
             <p class="card-summary-en">Nature Physics, Published online: 29 September 2026; doi:10.1038/s41567-026-03475-1Complex fluids display unusual flow behaviour that originates from their microstructure, but observing this structure has been challenging. Now, X-ray scattering microscopy is fast enough to follow the tumbling of nanoparticles.</p>
-            <p class="card-summary-zh no-math">《自然物理学》，在线发布：2026 年 9 月 29 日； doi:10.1038/s41567-026-03475-1复杂流体表现出源自其微观结构的异常流动行为，但观察这种结构一直具有挑战性。现在，X 射线散射显微镜的速度足以追踪纳米粒子的翻滚。</p>
+            <p class="card-summary-zh no-math">《自然物理学》，在线发布：2026 年 9 月 29 日； doi:10.1038/s41567-026-03475-1复杂流体表现出源自其微观结构的异常流动行为，但观察这种结构一直具有挑战性。现在，X 射线散射显微镜的速度足以追踪纳米颗粒的翻滚。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
@@ -1033,19 +1033,19 @@ body{top:0!important}
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
             
             
-            <span class="journal-date">2026-09-30 00:00</span>
+            <span class="journal-date">2026-10-01 00:00</span>
           </div>
-          <h3 class="card-title">SARS-CoV-2-specific monoclonal antibody AER002 in Long COVID: an exploratory randomized phase 2a mechanistic trial</h3>
-          <p class="card-title-zh no-math">🌐 SARS-CoV-2 特异性单克隆抗体 AER002 在长新冠肺炎中的应用：一项探索性随机 2a 期机制试验</p>
+          <h3 class="card-title">Molecularly engineered zwitterionic‑fluorinated hydrogel electrolyte for durable Ah-level zinc-ion batteries</h3>
+          <p class="card-title-zh no-math">🌐 用于耐用 Ah 级锌离子电池的分子工程两性离子氟化水凝胶电解质</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-77925-yIn this exploratory randomized trial, the monoclonal antibody AER002 was safe but did not improve clinical or biomarker outcomes in Long COVID. Post-hoc findings suggest baseline antibody levels and drug exposu… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-77562-5Aqueous zinc-ion batteries promise safe energy storage but suffer from dendrites and side reactions. Here, authors engineer a zwitterionic fluorinated hydrogel electrolyte to suppress these issues, enabling durab… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-77925-yIn this exploratory randomized trial, the monoclonal antibody AER002 was safe but did not improve clinical or biomarker outcomes in Long COVID. Post-hoc findings suggest baseline antibody levels and drug exposure may inform future studies.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 9 月 30 日； doi:10.1038/s41467-026-77925-y 在这项探索性随机试验中，单克隆抗体 AER002 是安全的，但没有改善长新冠肺炎的临床或生物标志物结果。事后研究结果表明基线抗体水平和药物暴露可能为未来的研究提供信息。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-77562-5Aqueous zinc-ion batteries promise safe energy storage but suffer from dendrites and side reactions. Here, authors engineer a zwitterionic fluorinated hydrogel electrolyte to suppress these issues, enabling durable, dendrite free, Ah-level pouch cells.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 10 月 1 日； doi:10.1038/s41467-026-77562-5水系锌离子电池有望安全储存能量，但会出现枝晶和副反应。在这里，作者设计了一种两性离子氟化水凝胶电解质来抑制这些问题，从而实现耐用、无枝晶的 Ah 级软包电池。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-77925-y" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-77562-5" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -1056,19 +1056,19 @@ body{top:0!important}
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
             
             
-            <span class="journal-date">2026-09-30 00:00</span>
+            <span class="journal-date">2026-10-01 00:00</span>
           </div>
-          <h3 class="card-title">Magnetic Electroluminescent response as a predictive indicator of operational lifetime in phosphorescent blue OLEDs</h3>
-          <p class="card-title-zh no-math">🌐 磁电致发光响应作为磷光蓝色 OLED 使用寿命的预测指标</p>
+          <h3 class="card-title">Genome mining of the tumor microbiome reveals biosynthetic diversity and potential pathology-modulating metabolites</h3>
+          <p class="card-title-zh no-math">🌐 肿瘤微生物组的基因组挖掘揭示了生物合成多样性和潜在的病理调节代谢物</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-78180-xPredicting the operational lifetime of blue organic light-emitting diodes without destructive and lengthy aging tests remains challenging. Ji et al. identify a magnetic-field electroluminescence response that q… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-78166-9Here, Pulliam and colleagues characterize the metabolites encoded by tumor-inhabiting microbes and their potential role in cancer pathology. <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-78180-xPredicting the operational lifetime of blue organic light-emitting diodes without destructive and lengthy aging tests remains challenging. Ji et al. identify a magnetic-field electroluminescence response that quantitatively predicts operational lifetime.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 9 月 30 日； doi:10.1038/s41467-026-78180-x 在没有破坏性和长时间老化测试的情况下预测蓝色有机发光二极管的使用寿命仍然具有挑战性。吉等人。确定可定量预测使用寿命的磁场电致发光响应。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-78166-9Here, Pulliam and colleagues characterize the metabolites encoded by tumor-inhabiting microbes and their potential role in cancer pathology.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 10 月 1 日； doi:10.1038/s41467-026-78166-9Pulliam 及其同事描述了肿瘤栖息微生物编码的代谢物及其在癌症病理学中的潜在作用。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-78180-x" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-78166-9" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -1079,19 +1079,19 @@ body{top:0!important}
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
             
             
-            <span class="journal-date">2026-09-30 00:00</span>
+            <span class="journal-date">2026-10-01 00:00</span>
           </div>
-          <h3 class="card-title">Stress homogenization enabled by a layered composite electrolyte for high-performance all-solid-state lithium metal batteries</h3>
-          <p class="card-title-zh no-math">🌐 高性能全固态锂金属电池的层状复合电解质实现应力均匀化</p>
+          <h3 class="card-title">Structural basis of voltage gating in a partially activated K+ channel</h3>
+          <p class="card-title-zh no-math">🌐 部分激活的 K+ 通道中电压门控的结构基础</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-78129-0Mechanical stress limits the lifetime of solid-state lithium metal batteries. Here, authors reveal that the mechanical electrochemical coupling governs battery cycling and develop a layered solid electrolyte th… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-78089-5The process by which the voltage sensor electromechanically couples to the pore in K+ channels is not fully understood. A cryo-EM structure of a partially activated state, together with computational modeling and… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-78129-0Mechanical stress limits the lifetime of solid-state lithium metal batteries. Here, authors reveal that the mechanical electrochemical coupling governs battery cycling and develop a layered solid electrolyte that enables uniform lithium deposition and durable solid-state batteries.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 9 月 30 日； doi:10.1038/s41467-026-78129-0机械应力限制了固态锂金属电池的使用寿命。在这里，作者揭示了机械电化学耦合控制电池循环，并开发了一种层状固体电解质，可以实现均匀的锂沉积和耐用的固态电池。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-78089-5The process by which the voltage sensor electromechanically couples to the pore in K+ channels is not fully understood. A cryo-EM structure of a partially activated state, together with computational modeling and MD simulations, clarifies the mechanistic basis for electromechanical coupling.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 10 月 1 日； doi:10.1038/s41467-026-78089-5电压传感器机电耦合到 K+ 通道中的孔的过程尚不完全清楚。部分激活状态的冷冻电镜结构以及计算建模和分子动力学模拟阐明了机电耦合的机械基础。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-78129-0" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-78089-5" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -1102,19 +1102,19 @@ body{top:0!important}
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
             
             
-            <span class="journal-date">2026-09-30 00:00</span>
+            <span class="journal-date">2026-10-01 00:00</span>
           </div>
-          <h3 class="card-title">WeedNet: a foundation model-based global-to-local AI approach for weed species identification and classification</h3>
-          <p class="card-title-zh no-math">🌐 WeedNet：一种基于基础模型的全球到本地人工智能方法，用于杂草物种识别和分类</p>
+          <h3 class="card-title">Parasitological efficacy of sulfadoxine-pyrimethamine and amodiaquine for seasonal malaria chemoprevention in Africa</h3>
+          <p class="card-title-zh no-math">🌐 磺胺多辛-乙胺嘧啶和阿莫地喹对非洲季节性疟疾化学预防的寄生虫学功效</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-78044-4Weeds consistently threaten crop yields worldwide, making early and accurate identification essential for effective management. Trained on 14 million images representing 1,593 weed species, WeedNet achieved 91%… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-78189-2In this study, the authors show that post-treatment desethylamodiaquine concentration is the primary pharmacokinetic determinant of protection against malaria infection in African children who are given sulfadoxi… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-78044-4Weeds consistently threaten crop yields worldwide, making early and accurate identification essential for effective management. Trained on 14 million images representing 1,593 weed species, WeedNet achieved 91% global accuracy and, through global-to-local fine-tuning, reached 97% accuracy for Iowa weeds.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 9 月 30 日； doi:10.1038/s41467-026-78044-4杂草持续威胁着全世界的农作物产量，因此早期、准确的识别对于有效管理至关重要。 WeedNet 对代表 1,593 种杂草物种的 1400 万张图像进行了训练，实现了 91% 的全局准确率，并且通过全局到局部的微调，对爱荷华州杂草的准确率达到了 97%。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-78189-2In this study, the authors show that post-treatment desethylamodiaquine concentration is the primary pharmacokinetic determinant of protection against malaria infection in African children who are given sulfadoxine-pyrimethamine and amodiaquine for seasonal malaria chemoprevention, with little apparent effect f</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 10 月 1 日； doi:10.1038/s41467-026-78189-2在这项研究中，作者表明，治疗后去乙基阿地喹浓度是非洲儿童预防疟疾感染的主要药代动力学决定因素，这些儿童接受磺胺多辛-乙胺嘧啶和阿莫地喹进行季节性疟疾化学预防，但对季节性疟疾的化学预防作用不大。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-78044-4" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-78189-2" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -1125,19 +1125,19 @@ body{top:0!important}
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
             
             
-            <span class="journal-date">2026-09-30 00:00</span>
+            <span class="journal-date">2026-10-01 00:00</span>
           </div>
-          <h3 class="card-title">Metabolization of human milk oligosaccharides by Streptococcus pneumoniae</h3>
-          <p class="card-title-zh no-math">🌐 肺炎链球菌对人乳低聚糖的代谢</p>
+          <h3 class="card-title">A multiplexed wearable microfluidic platform for non-invasive sweat-inspired monitoring of plant guttation biomarkers</h3>
+          <p class="card-title-zh no-math">🌐 多路可穿戴微流体平台，用于植物内脏生物标志物的非侵入性汗液监测</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-77970-7It is unclear whether human milk oligosaccharides (HMOs) can be used as a nutrient source by Streptococcus pneumoniae. Here, Bacher et al. report that these bacteria can metabolize several HMOs, identify genes… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-77955-6Plant sensors are emerging as key tools for precision agriculture, yet continuous monitoring of biomarkers in plant biofluids remains underdeveloped. Here, the authors introduce PlantIonics, a wearable microfluid… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-77970-7It is unclear whether human milk oligosaccharides (HMOs) can be used as a nutrient source by Streptococcus pneumoniae. Here, Bacher et al. report that these bacteria can metabolize several HMOs, identify genes and pathways involved in the process, and show that a non-metabolizable HMO inhibits pneumococcal ad</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 9 月 30 日； doi:10.1038/s41467-026-77970-7尚不清楚母乳低聚糖（HMO）是否可以作为肺炎链球菌的营养源。在这里，巴赫等人。报告称，这些细菌可以代谢多种 HMO，识别参与该过程的基因和途径，并表明不可代谢的 HMO 可以抑制肺炎球菌</p>
+            <p class="card-summary-en">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-77955-6Plant sensors are emerging as key tools for precision agriculture, yet continuous monitoring of biomarkers in plant biofluids remains underdeveloped. Here, the authors introduce PlantIonics, a wearable microfluidic electrochemical platform for multiplexed, in situ analysis of guttation fluid. The system enables</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 10 月 1 日； doi:10.1038/s41467-026-77955-6植物传感器正在成为精准农业的关键工具，但对植物生物液中生物标志物的连续监测仍然不发达。在这里，作者介绍了 PlantIonics，这是一种可穿戴微流体电化学平台，用于对废水进行多重原位分析。该系统使</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-77970-7" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-77955-6" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -1148,19 +1148,19 @@ body{top:0!important}
             <span class="source-chip" title="Nature Communications">Nature Communications</span>
             
             
-            <span class="journal-date">2026-09-30 00:00</span>
+            <span class="journal-date">2026-10-01 00:00</span>
           </div>
-          <h3 class="card-title">Powder-to-membrane transformation affording 2D/3D COF membranes for molecular separations</h3>
-          <p class="card-title-zh no-math">🌐 粉末到膜的转化为分子分离提供 2D/3D COF 膜</p>
+          <h3 class="card-title">Wide-bandgap perovskite with homogeneous crystallization and suppressed halogen segregation for efficient perovskite-organic tandem solar cells</h3>
+          <p class="card-title-zh no-math">🌐 具有均匀结晶和抑制卤素偏析的宽带隙钙钛矿，用于高效钙钛矿-有机串联太阳能电池</p>
           
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-78068-wProcessing covalent organic framework (COF) powders into application-ready membranes with precise separation capacity remains challenging. Here, the authors demonstrate a dual-drive strategy that drives macrosc… <span class="more-hint">…展开全文 ▾</span></p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-78267-5Inhomogeneous crystallization and phase segregation in wide-bandgap perovskite limit the performance of photovoltaic device. Zhu et al. develop an in situ sequential regulation strategy for crystallization, achie… <span class="more-hint">…展开全文 ▾</span></p>
           <div class="card-summary-full">
-            <p class="card-summary-en">Nature Communications, Published online: 30 September 2026; doi:10.1038/s41467-026-78068-wProcessing covalent organic framework (COF) powders into application-ready membranes with precise separation capacity remains challenging. Here, the authors demonstrate a dual-drive strategy that drives macroscopic structural variation and transforms COF powders into defect-free membranes.</p>
-            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 9 月 30 日； doi:10.1038/s41467-026-78068-w 将共价有机骨架 (COF) 粉末加工成具有精确分离能力的即用型膜仍然具有挑战性。在这里，作者展示了一种双驱动策略，可驱动宏观结构变化并将 COF 粉末转化为无缺陷膜。</p>
+            <p class="card-summary-en">Nature Communications, Published online: 01 October 2026; doi:10.1038/s41467-026-78267-5Inhomogeneous crystallization and phase segregation in wide-bandgap perovskite limit the performance of photovoltaic device. Zhu et al. develop an in situ sequential regulation strategy for crystallization, achieving a power conversion efficiency of 28.20% for perovskite-organic tandem solar cells.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 10 月 1 日； doi:10.1038/s41467-026-78267-5宽带隙钙钛矿中的不均匀结晶和相偏析限制了光伏器件的性能。朱等人。开发了结晶的原位顺序调控策略，使钙钛矿-有机串联太阳能电池的功率转换效率达到28.20%。</p>
           </div>
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
-            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-78068-w" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-78267-5" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
@@ -1168,6 +1168,29 @@ body{top:0!important}
         <article class="card">
           <div class="card-head">
             <span class="seq">19</span>
+            <span class="source-chip" title="Science">Science</span>
+            
+            
+            <span class="journal-date">2026-09-30 06:00</span>
+          </div>
+          <h3 class="card-title">Five physics breakthroughs that should have won a Nobel Prize—but didn’t</h3>
+          <p class="card-title-zh no-math">🌐 本应获得诺贝尔奖的五项物理学突破却没有获得</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">How politics, bad timing, and skepticism left foundation stones of modern physics unrecognized <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">How politics, bad timing, and skepticism left foundation stones of modern physics unrecognized</p>
+            <p class="card-summary-zh no-math">政治、糟糕的时机和怀疑主义如何导致现代物理学的基石未被认识到</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.science.org/content/article/five-physics-breakthroughs-should-have-won-nobel-prize-didn-t" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">20</span>
             <span class="source-chip" title="Science">Science</span>
             
             
@@ -1190,7 +1213,7 @@ body{top:0!important}
 
         <article class="card">
           <div class="card-head">
-            <span class="seq">20</span>
+            <span class="seq">21</span>
             <span class="source-chip" title="Science">Science</span>
             
             
@@ -1213,7 +1236,7 @@ body{top:0!important}
 
         <article class="card">
           <div class="card-head">
-            <span class="seq">21</span>
+            <span class="seq">22</span>
             <span class="source-chip" title="Science">Science</span>
             
             
@@ -1236,7 +1259,7 @@ body{top:0!important}
 
         <article class="card">
           <div class="card-head">
-            <span class="seq">22</span>
+            <span class="seq">23</span>
             <span class="source-chip" title="Science">Science</span>
             
             
@@ -1259,7 +1282,7 @@ body{top:0!important}
 
         <article class="card">
           <div class="card-head">
-            <span class="seq">23</span>
+            <span class="seq">24</span>
             <span class="source-chip" title="Science">Science</span>
             
             
@@ -1276,29 +1299,6 @@ body{top:0!important}
           <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
           <div class="card-foot">
             <a class="btn-primary" href="https://www.science.org/content/article/scientists-engineered-glowing-cuttlefish-why-was-it-so-hard" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-            
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-head">
-            <span class="seq">24</span>
-            <span class="source-chip" title="Science">Science</span>
-            
-            
-            <span class="journal-date">2026-09-28 04:45</span>
-          </div>
-          <h3 class="card-title">Russian drone kills at least two in Ukraine science academy attack</h3>
-          <p class="card-title-zh no-math">🌐 俄罗斯无人机在乌克兰科学院袭击中造成至少两人死亡</p>
-          
-          <p class="card-summary-short no-math" onclick="toggleCard(this)">New underground labs are being built as war rages on <span class="more-hint">…展开全文 ▾</span></p>
-          <div class="card-summary-full">
-            <p class="card-summary-en">New underground labs are being built as war rages on</p>
-            <p class="card-summary-zh no-math">随着战争的激烈，新的地下实验室正在建设中</p>
-          </div>
-          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
-          <div class="card-foot">
-            <a class="btn-primary" href="https://www.science.org/content/article/russian-drone-kills-least-two-ukraine-science-academy-attack" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
             
           </div>
         </article>
