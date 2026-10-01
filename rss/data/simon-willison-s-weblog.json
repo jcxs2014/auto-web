@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "He Built This City",
+      "url": "https://simonwillison.net/2026/Sep/30/he-built-this-city/",
+      "summary": "I visited the Museum of the City of New York today and got to see He Built This City: Joe Macken’s Model, the 50 x27 feet model of the city built over a 21 year period from balsa wood and cardboard. It exceeded my already high expectations. The exhibition closes on 12th October so you should absolutely make a priority to see it if you get the chance. Tags: museums, new-york",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-09-30 21:54",
+      "ts": 1790805259,
+      "content": "<p>30th September 2026</p>\n    <p>I visited the Museum of the City of New York today and got to see <a href=\"https://www.mcny.org/exhibition/he-built-city\">He Built This City: Joe Macken’s Model</a>, the 50 x27 feet model of the city built over a 21 year period from balsa wood and cardboard.</p>\n    <p>It exceeded my already high expectations. The exhibition closes on 12th October so you should absolutely make a priority to see it if you get the chance.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/\">OpenAI DevDay 2026 live blog</a> - 29th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/\">2026 in LLMs (so far)</a> - 27th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/\">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</a> - 22nd September 2026</li>\n    </ul>"
+    },
+    {
       "title": "Quoting Anthropic Frontier Red Team",
       "url": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
       "summary": "We evaluate several models on 100 tasks from the [internal Binary Exploitation benchmark] (selected at random), and find that GLM-5.3 develops full control flow hijacks in 4% of the trials; Claude Mythos Preview did so in 6%. Although GLM-5.3 performs below Claude Mythos Preview here, a meaningful threshold has clearly been crossed: earlier models, like Claude Opus 4.6 and GLM-5.2, do not succeed ",
@@ -93,16 +103,6 @@
       "date": "2026-09-27 23:09",
       "ts": 1790550559,
       "content": "<p>27th September 2026</p><p>One thing I find notable about S3 today is that, while it used to drop in price reasonably often, there hasn't been a price drop in a full decade:</p><pre><pre>2006-03-14  $0.150/GB-month\n2010-11-01  $0.140/GB-month\n2012-02-01  $0.125/GB-month\n2012-12-01  $0.095/GB-month\n2014-02-01  $0.085/GB-month\n2014-04-01  $0.030/GB-month\n2016-12-01  $0.023/GB-month\n</pre></pre>\n<p>Today it's still $0.023/GB-month.</p><h2>Recent articles</h2><ul><li><a href=\"https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/\">OpenAI DevDay 2026 live blog</a> - 29th September 2026</li><li><a href=\"https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/\">2026 in LLMs (so far)</a> - 27th September 2026</li><li><a href=\"https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/\">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</a> - 22nd September 2026</li></ul>"
-    },
-    {
-      "title": "Bluesky reply bot checker",
-      "url": "https://simonwillison.net/2026/Sep/27/bluesky-bot-check/",
-      "summary": "Tool: Bluesky reply bot checker Automated reply bots on Twitter are a scourge - as someone with a decent number of followers I attract a swarm of these, such that anything I post there attracts dozens of mindless automated replies. They've started manifesting on Bluesky as well. Unlike Twitter, Bluesky still has a freely available and useful API. The lack of such a thing doesn't slow down the bots",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-09-27 18:41",
-      "ts": 1790534504,
-      "content": "<p>27th September 2026</p>\n    <p>\n      <a href=\"https://simonwillison.net/elsewhere/tool/\">Tool</a>\n    </p>\n    <p><a href=\"https://tools.simonwillison.net/bluesky-bot-check\">Bluesky reply bot checker</a>— Check a Bluesky account for patterns common to automated reply bots by analyzing recent posts for typing speed, posting times, engagement patterns, and other behavioral signals. The tool displays every measurement and rule so you can verify the reasoning and see example replies that triggered the most signals.</p>\n    <p>Automated reply bots on Twitter are a scourge - as someone with a decent number of followers I attract a swarm of these, such that anything I post there attracts dozens of mindless automated replies.</p>\n    <p>They've started manifesting on Bluesky as well.</p>\n    <p>Unlike Twitter, Bluesky still has a freely available and useful API. The lack of such a thing doesn't slow down the bots, but it does make investigating them a lot more frustrating.</p>\n    <p>So I had Opus 5.5 <a href=\"https://github.com/simonw/tools/pull/348\">vibe code this tool</a>, which examines any Bluesky profile for evidence of a likely reply bot.</p>\n    <p>It looks for signals like replies posted within seconds of other posts from the same account, or accounts that never post their own content (or images or links) but instead consistently reply to messages from other, higher-follower users.</p>\n    <p>It also looks for question marks, because I'm extra infuriated by reply bots that trick me into wasting my time answering a question that no human ever posed.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/\">OpenAI DevDay 2026 live blog</a> - 29th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/\">2026 in LLMs (so far)</a> - 27th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/\">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</a> - 22nd September 2026</li>\n    </ul>"
     }
   ]
 }
