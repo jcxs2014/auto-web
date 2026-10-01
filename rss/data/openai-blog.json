@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The eternal complement",
+      "url": "https://openai.com/index/the-eternal-complement",
+      "summary": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-01 17:00",
+      "ts": 1790874000,
+      "content": ""
+    },
+    {
+      "title": "How Albertsons Companies is reimagining retail from the inside out",
+      "url": "https://openai.com/index/albertsons-reimagining-retail",
+      "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-01 16:00",
+      "ts": 1790870400,
+      "content": ""
+    },
+    {
+      "title": "The Den frees up 10-15 hours a week to grow with ChatGPT Work",
+      "url": "https://openai.com/index/the-den-family-social",
+      "summary": "As it opens a new location, the social club prepares grant applications in 2 hours instead of 3 days and liquor-license materials in 3 hours instead of 4 days.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-01 00:00",
+      "ts": 1790812800,
+      "content": ""
+    },
+    {
       "title": "Disrupting a coordinated model-distillation campaign",
       "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
       "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-09-28 19:00",
       "ts": 1790622000,
-      "content": ""
-    },
-    {
-      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
-      "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
-      "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-28 07:00",
-      "ts": 1790578800,
-      "content": ""
-    },
-    {
-      "title": "Are you a Codex Original?",
-      "url": "https://openai.com/form/codex-originals",
-      "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about your story and project below.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-28 00:00",
-      "ts": 1790553600,
-      "content": ""
-    },
-    {
-      "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
-      "url": "https://openai.com/index/basis-tax-workbook-with-astra",
-      "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-28 00:00",
-      "ts": 1790553600,
       "content": ""
     }
   ]

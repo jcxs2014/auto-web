@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Why State is the Hardest Thing in Software Design",
+      "url": "https://blog.bytebytego.com/p/why-state-is-the-hardest-thing-in",
+      "summary": "In this article, we will look at why state is the hardest thing in software development and the multiple strategies that developers can use to manage it.",
+      "source": "ByteByteGo Newsletter",
+      "extra": "",
+      "date": "2026-10-01 15:31",
+      "ts": 1790868681,
+      "content": "<p>State is the information a system retains that affects its functionality in some way. For example, a website might keep track of users who have logged in. A document editor remembers the current text. A background worker logs which tasks it has completed and which ones are pending. A database stores the records written to it for as long as needed.</p>\n    <p>Any useful software usually needs to manage state to carry out its intended functionality. The difficulty is keeping the state correct even as requests overlap, servers are added, machines fail, and software changes are deployed.</p>\n    <p>Often, the common advice is to “make the application stateless”. But this advice needs explanation. It usually means making particular application servers easy to replace while putting their important state elsewhere. It doesn’t signify a complete absence of state. Understanding such a setup requires looking at why state exists, who owns it, and what happens when it becomes unavailable.</p>\n    <p>In this article, we will look at why state is the hardest thing in software development and the multiple strategies that developers can use to manage it.</p>"
+    },
+    {
       "title": "How DoorDash Built a Toolbox for AI Agents",
       "url": "https://blog.bytebytego.com/p/how-doordash-built-a-toolbox-for",
       "summary": "In this article, we will look at how the DoorDash engineering team built this gateway and the decisions they made.",
@@ -53,16 +63,6 @@
       "date": "2026-09-25 15:02",
       "ts": 1790348573,
       "content": "<p>Rebuild YouTube with AI, taught by a former YouTube engineer, kicks off on Saturday, September 26. <a href=\"https://go.bytebytego.com/youtubeai-c1-substack\">Enrollment closes in 24 hours</a>.</p>\n    <h2>What you will learn</h2>\n    <ul>\n      <li>\n        <p>Scope a realistic MVP. Decide which YouTube features to build and break the work into manageable tasks.</p>\n      </li>\n      <li>\n        <p>Work with agents. Plan changes, review generated code, and recover from bad diffs or sessions that go off track.</p>\n      </li>\n      <li>\n        <p>Build across the stack. Turn mockups into React pages and build a backend with Postgres, authentication, and video uploads.</p>\n      </li>\n      <li>\n        <p>Add semantic search and related videos. Use multimodal embeddings and understand how this approach differs from production recommendation systems.</p>\n      </li>\n      <li>\n        <p>Test and deploy your app. Check features with Playwright, deploy to Vercel, and track watch time in an admin dashboard.</p>\n      </li>\n    </ul>\n    <p>This course is part of ByteByteGo Live, giving you 12 full months of access to all current and upcoming courses.</p>\n    <h2>More live courses we offer:</h2>\n    <ul>\n      <li>\n        <p>AI Evals in Practice for Engineers and PMs: Six weeks with Manjeet Singh, Senior Director at Salesforce.</p>\n      </li>\n      <li>\n        <p>AI Cost Optimization: Four weeks with Jeremy Hintz, Engineering Lead at Meta.</p>\n      </li>\n      <li>\n        <p>AI Engineering Fundamentals: Four weeks with Ali Aminian (Google, bestselling author).</p>\n      </li>\n      <li>\n        <p>Build with Claude Code: Two day intensive with John Kim, Senior Staff Engineer at Meta.</p>\n      </li>\n      <li>\n        <p>Build Production Grade AI Systems: Six weeks with Tanya Roosta, Director at AMD, with a PhD from UC Berkeley.</p>\n      </li>\n      <li>\n        <p>Trust optimized AI Development: Two day intensive with Kent Beck, creator of TDD.</p>\n      </li>\n    </ul>"
-    },
-    {
-      "title": "The Life of Data: From Creation to Deletion",
-      "url": "https://blog.bytebytego.com/p/the-life-of-data-from-creation-to",
-      "summary": "In this article, we are going to look at the entire data lifecycle from creation to deletion and the decisions that need to be taken at each step.",
-      "source": "ByteByteGo Newsletter",
-      "extra": "",
-      "date": "2026-09-24 15:31",
-      "ts": 1790263866,
-      "content": "<p>A web application can appear quite simple from the outside. A user submits a form, the application saves the information within the form, and a screen displays it later when the user wants to see the information. When the information is no longer needed, the information can be deleted from the system.</p>\n    <p>However, inside a growing system, the same information or data point can exist in several places. For example, a database holds the original record. A cache might store a copy of that original record for faster access. A search engine index can store some fields of that record to make search more intuitive. An analytics pipeline might produce reports from it. Lastly, backups may preserve earlier versions of that record.</p>\n    <p>Each of these copies has its own purpose, update schedule, and overall lifetime within the system.</p>\n    <p>The lifecycle of data shows how information can enter a system, become useful, spread to other components, become old or stale, and eventually be deleted. Thinking about this lifecycle helps connect decisions that might otherwise seem separate, such as database design, performance, reporting, storage costs, recovery, and privacy.</p>\n    <p>In this article, we are going to look at the entire data lifecycle from creation to deletion and the decisions that need to be taken at each step.</p>"
     }
   ]
 }
