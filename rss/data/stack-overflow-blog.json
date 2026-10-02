@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Constraints that make developers faster",
+      "url": "https://stackoverflow.blog/2026/10/02/constraints-that-make-developers-faster/",
+      "summary": "Ryan chats with Julien Verlaguet, CEO at Skip Labs, about finding the balance between human tolerance and tooling constraints, the spectrum of typed programming languages, and building cost-effective tooling for AI agents.",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-10-02 07:40",
+      "ts": 1790926800,
+      "content": "<p>Ryan chats with Julien Verlaguet, CEO at Skip Labs, about finding the balance between human tolerance and tooling constraints, the spectrum of typed programming languages, and building cost-effective tooling for AI agents.</p>\n    <p>Skip Labs develops a programming language designed for reactive programming alongside specialized constraint-based tooling for AI agents.</p>"
+    },
+    {
       "title": "A look back before we look forward: A Developer Survey retrospective",
       "url": "https://stackoverflow.blog/2026/10/01/a-look-back-before-we-look-forward-a-developer-survey-retrospective/",
       "summary": "This analysis compares the 2024 and 2025 Developer Survey data across three connected stories: the evolution of AI, humans at work, and demographics and community.",
