@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "A model guide for the GPT-6 family",
+      "url": "https://openai.com/index/practical-guide-building-gpt-6",
+      "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-02 16:15",
+      "ts": 1790957700,
+      "content": ""
+    },
+    {
+      "title": "Chatham scales its capital markets expertise with OpenAI",
+      "url": "https://openai.com/index/chatham-financial",
+      "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-02 00:00",
+      "ts": 1790899200,
+      "content": ""
+    },
+    {
       "title": "The eternal complement",
       "url": "https://openai.com/index/the-eternal-complement",
       "summary": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
@@ -55,9 +75,9 @@
       "content": ""
     },
     {
-      "title": "Introducing GPT-6.1 Sol",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
-      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+      "title": "DevDay 2026 Recap",
+      "url": "https://openai.com/index/devday-2026-recap",
+      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-29 10:00",
@@ -65,9 +85,9 @@
       "content": ""
     },
     {
-      "title": "DevDay 2026 Recap",
-      "url": "https://openai.com/index/devday-2026-recap",
-      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "title": "Introducing GPT-6.1 Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-09-29 10:00",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-09-29 00:00",
       "ts": 1790640000,
-      "content": ""
-    },
-    {
-      "title": "How we will do better for Australia",
-      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-      "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-28 19:00",
-      "ts": 1790622000,
-      "content": ""
-    },
-    {
-      "title": "Towards safety cases for frontier AI training",
-      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-      "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-28 19:00",
-      "ts": 1790622000,
       "content": ""
     }
   ]
