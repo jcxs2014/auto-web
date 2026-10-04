@@ -5,6 +5,56 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Puffins",
+      "url": "https://www.theatlantic.com/magazine/2026/11/ange-mlinko-puffins/688694/?utm_source=feed",
+      "summary": "A poem",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-04 16:00",
+      "ts": 1791129600,
+      "content": ""
+    },
+    {
+      "title": "AI’s Real Gift to Science",
+      "url": "https://www.theatlantic.com/science/2026/10/anthropic-artificial-intelligence-science-biology/688878/?utm_source=feed",
+      "summary": "Advanced models can help researchers sort through mountains of biological data.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-04 15:56",
+      "ts": 1791129388,
+      "content": ""
+    },
+    {
+      "title": "The Greatest Monument Builders of All Time",
+      "url": "https://www.theatlantic.com/magazine/2026/11/public-monuments-egyptian-art-exhibits/688700/?utm_source=feed",
+      "summary": "What the ancient pharaohs can teach us about public statuary",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-04 14:00",
+      "ts": 1791122400,
+      "content": ""
+    },
+    {
+      "title": "Should We Ban AI for Kids?",
+      "url": "https://www.theatlantic.com/podcasts/2026/10/should-we-ban-ai-for-kids/688864/?utm_source=feed",
+      "summary": "Jonathan Haidt sounded the alarm on phones in schools. He thinks what’s coming will be even worse.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-04 13:00",
+      "ts": 1791118800,
+      "content": ""
+    },
+    {
+      "title": "Are Mormons Losing Their Distinctiveness?",
+      "url": "https://www.theatlantic.com/health/2026/10/latter-day-saints-retention/688867/?utm_source=feed",
+      "summary": "People born into the Church of Jesus Christ of Latter-day Saints have tended to stay members for life. But that pattern has started to shift.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-04 12:00",
+      "ts": 1791115200,
+      "content": ""
+    },
+    {
       "title": "A Reckoning in Springfield",
       "url": "https://www.theatlantic.com/politics/2026/10/pierre-damas-bel-driver-springfield/688865/?utm_source=feed",
       "summary": "A truck driver out on his route confronts what the country has become.",
@@ -52,56 +102,6 @@
       "extra": "",
       "date": "2026-10-03 13:00",
       "ts": 1791032400,
-      "content": ""
-    },
-    {
-      "title": "Bait and Switch",
-      "url": "https://www.theatlantic.com/magazine/2026/11/ai-images-hobbies/688674/?utm_source=feed",
-      "summary": "Fishermen have always exaggerated the size of their catches. But AI has taken the practice to a different level.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-03 13:00",
-      "ts": 1791032400,
-      "content": ""
-    },
-    {
-      "title": "The Strange Power of Coincidence",
-      "url": "https://www.theatlantic.com/newsletters/2026/10/strange-power-of-coincidence/688880/?utm_source=feed",
-      "summary": "What chance encounters reveal about the way our minds work",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-03 12:00",
-      "ts": 1791028800,
-      "content": ""
-    },
-    {
-      "title": "The Mainstreaming of Anti-Indian Bigotry",
-      "url": "https://www.theatlantic.com/ideas/2026/10/french-rufo-meritocracy-race/688870/?utm_source=feed",
-      "summary": "A Republican schism over a social-media post by a Texas politician revealed that the party’s defense of a color-blind meritocracy has its limits.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-03 12:00",
-      "ts": 1791028800,
-      "content": ""
-    },
-    {
-      "title": "I Quit OpenAI Because Its Culture Is Broken",
-      "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?utm_source=feed",
-      "summary": "The industry’s approach to safety will guarantee more failures unless something changes.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-03 11:00",
-      "ts": 1791025200,
-      "content": ""
-    },
-    {
-      "title": "The Right’s Identity Politics Take a Bizarre Turn",
-      "url": "https://www.theatlantic.com/newsletters/2026/10/maga-sarah-huckabee-sanders-woke/688876/?utm_source=feed",
-      "summary": "MAGA activists are having a meltdown over a throwaway character in Sarah Huckabee Sanders’s political ad.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-02 21:14",
-      "ts": 1790975640,
       "content": ""
     }
   ]

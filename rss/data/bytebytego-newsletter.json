@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Last 3 days: AI Evals, October cohort",
+      "url": "https://blog.bytebytego.com/p/new-course-ai-evals-in-practice-starts",
+      "summary": "Secure your spot in AI Evals in Practice. Enrollment closes in just 3 days! If you’ve been thinking about joining, now’s the time.",
+      "source": "ByteByteGo Newsletter",
+      "extra": "",
+      "date": "2026-10-04 15:57",
+      "ts": 1791129460,
+      "content": "<p>Secure your spot in AI Evals in Practice. Enrollment closes in just 3 days! If you’ve been thinking about joining, now’s the time.</p>\n    <p>ByteByteGo has teamed up with Manjeet Singh, Senior Director at Salesforce, to bring you this live, hands-on course on building reliable evaluation systems for production AI agents.</p>\n    <p>You’ll learn how to:</p>\n    <ul>\n      <li>\n        <p>Design evals for quality, safety, reliability, cost, and latency</p>\n      </li>\n      <li>\n        <p>Build and validate LLM-as-a-Judge systems</p>\n      </li>\n      <li>\n        <p>Red-team agents for prompt injection and jailbreaks</p>\n      </li>\n      <li>\n        <p>Create meaningful eval datasets from real and synthetic data</p>\n      </li>\n      <li>\n        <p>Evaluate tool use, RAG, multi-step execution, and multi-agent handoffs</p>\n      </li>\n      <li>\n        <p>Run evals in CI/CD and production to catch regressions and drift</p>\n      </li>\n      <li>\n        <p>Turn failures into permanent regression tests</p>\n      </li>\n    </ul>"
+    },
+    {
       "title": "EP228: How SSH Works",
       "url": "https://blog.bytebytego.com/p/ep228-how-ssh-works",
       "summary": "Secure shell is a method to access a remote machine securely over an unsecured network. It starts with a TCP connection from the SSH client to the remote machine (SSH server).",
