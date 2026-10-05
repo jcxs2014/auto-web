@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Building advertising for the way people use AI",
+      "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+      "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-05 10:00",
+      "ts": 1791194400,
+      "content": ""
+    },
+    {
       "title": "A model guide for the GPT-6 family",
       "url": "https://openai.com/index/practical-guide-building-gpt-6",
       "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-09-29 10:00",
       "ts": 1790676000,
-      "content": ""
-    },
-    {
-      "title": "Introducing dots",
-      "url": "https://openai.com/index/introducing-dots",
-      "summary": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-29 00:00",
-      "ts": 1790640000,
       "content": ""
     }
   ]
