@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Advancing computer use with Ironclad",
+      "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+      "summary": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-06 10:00",
+      "ts": 1791280800,
+      "content": ""
+    },
+    {
+      "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+      "url": "https://openai.com/index/atlassian-partnership",
+      "summary": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help teams plan, build, and deliver work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-06 16:00",
+      "ts": 1791302400,
+      "content": ""
+    },
+    {
       "title": "Our approach to EU text provenance rules",
       "url": "https://openai.com/index/eu-text-provenance",
       "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
@@ -82,16 +102,6 @@
       "extra": "",
       "date": "2026-09-30 10:30",
       "ts": 1790764200,
-      "content": ""
-    },
-    {
-      "title": "Helping small businesses put AI to work",
-      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
-      "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-30 10:00",
-      "ts": 1790762400,
       "content": ""
     }
   ]
