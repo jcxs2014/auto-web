@@ -93,16 +93,6 @@
       "date": "2026-09-30 10:00",
       "ts": 1790762400,
       "content": ""
-    },
-    {
-      "title": "DevDay 2026 Recap",
-      "url": "https://openai.com/index/devday-2026-recap",
-      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-09-29 10:00",
-      "ts": 1790676000,
-      "content": ""
     }
   ]
 }
