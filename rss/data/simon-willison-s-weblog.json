@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Quoting Jake Boggan",
+      "url": "https://simonwillison.net/2026/Oct/7/jake-boggan/",
+      "summary": "I was a graph theory junkie long ago and even moved to Budapest for awhile to study among the greats. While I was there I started working on Barnette's Conjecture which came to occupy my thoughts over the next 24 years of my life, on and off as I worked in many different fields. Last summer I even thought for a few days that I had actually solved it. But it's supposedly proven here - problem 180. ",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-10-07 04:47",
+      "ts": 1791348475,
+      "content": "<p class=\"mobile-date-eyebrow\">7th October 2026</p>\n    <blockquote>\n      <p>I was a graph theory junkie long ago and even moved to Budapest for awhile to study among the greats. While I was there I started working on Barnette's Conjecture which came to occupy my thoughts over the next 24 years of my life, on and off as I worked in many different fields. Last summer I even thought for a few days that I had actually solved it.</p>\n      <p>But it's supposedly proven here - <a href=\"https://github.com/openai/math/blob/main/lean/docs/180.md\">problem 180</a>. I don't know what to think exactly. I spent thousands of hours on that problem. I really enjoyed it. Hearing that it is solved somehow makes me sad in a far-off way, like hearing an ex-girlfriend died suddenly in a car crash. I don't know, there's probably a lot of people feeling odd emotions tonight.</p>\n    </blockquote>\n    <p>— <a href=\"https://news.ycombinator.com/item?id=49984923#49987367\">Jake Boggan</a>, Hacker News comment on <a href=\"https://github.com/openai/math\">openai/math</a></p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/\">We're going to need default hard budget caps on pretty much everything</a> - 3rd October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/\">OpenAI DevDay 2026 live blog</a> - 29th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/\">2026 in LLMs (so far)</a> - 27th September 2026</li>\n    </ul>"
+    },
+    {
       "title": "OpenAI “rogue” agent activities found on Wikimedia projects",
       "url": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
       "summary": "OpenAI “rogue” agent activities found on Wikimedia projects Given how tempting a target wikis are for rogue agent swarms, it's not a huge surprise that Wikipedia found evidence of that activity once they went looking: The Wikimedia Foundation conducted its own investigation to see whether Wikimedia websites had been similarly affected by AI agents, focusing on those operated by OpenAI. We can conf",
@@ -93,16 +103,6 @@
       "date": "2026-10-06 17:35",
       "ts": 1791308139,
       "content": "<p class=\"mobile-date-eyebrow\">6th October 2026</p>\n    <p>A minor fix for compatibility with the latest Datasette alphas. This meant we could upgrade the <a href=\"https://datasette.io/\">datasette.io</a> site to Datasette 1.0a41.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/\">We're going to need default hard budget caps on pretty much everything</a> - 3rd October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/\">OpenAI DevDay 2026 live blog</a> - 29th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/\">2026 in LLMs (so far)</a> - 27th September 2026</li>\n    </ul>"
-    },
-    {
-      "title": "Scrimshaw Jukebox",
-      "url": "https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/",
-      "summary": "Tool: Scrimshaw Jukebox I wanted to see if Claude Opus 5.5 could compose music, so I tried this: I want you to write some computer game music for me. First design simple text based format for the music and build an artifact that can play it out loud - include some example tracks in that artifact I am looking for music of the quality of the original secret of Monkey Island It leaned a lot harder in",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-10-06 15:17",
-      "ts": 1791299859,
-      "content": "<p class=\"mobile-date-eyebrow\">6th October 2026</p>\n    <p>I wanted to see if Claude Opus 5.5 could compose music, so <a href=\"https://claude.ai/share/1f721c20-2499-4d23-b368-3ab57146d956\">I tried this</a>:</p>\n    <blockquote>\n<p></p><pre>I want you to write some computer game music for me. First design simple text based format for the music and build an artifact that can play it out loud - include some example tracks in that artifact</pre>\n<p></p><pre>I am looking for music of the quality of the original secret of Monkey Island</pre>\n</blockquote>\n    <p>It leaned a lot harder into the Monkey Island theme than I had intended, but the results are surprisingly good.</p>\n    <p>I wonder if the ability to compose competent music is similar to the 3D graphics thing - a new capability for text models that emerged in the past few months?</p>\n    <p>Would need some careful experiments with other recent and not-so-recent models to confirm if this is new or if they've been able to do this for a while.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/\">We're going to need default hard budget caps on pretty much everything</a> - 3rd October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/\">OpenAI DevDay 2026 live blog</a> - 29th September 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/\">2026 in LLMs (so far)</a> - 27th September 2026</li>\n    </ul>"
     }
   ]
 }
