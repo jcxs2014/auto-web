@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Upcoming Next.js Security Update for Upstream Vulnerabilities",
+      "url": "https://nextjs.org/blog/upcoming-nextjs-security-update-october-2026",
+      "summary": "Next.js plans to publish an out-of-band security update next Wednesday, October 14, 2026, addressing two Critical and one High severity vulnerabilities in upstream dependencies.",
+      "source": "Next.js Blog",
+      "extra": "",
+      "date": "2026-10-08 18:00",
+      "ts": 1791482400,
+      "content": "<p><a href=\"https://nextjs.org/blog\">Back to Blog</a></p><p class=\"text-copy-14 text-gray-900\">Thursday, October 8th 2026</p><h1>Upcoming Next.js Security Update for Upstream Vulnerabilities</h1>Posted by<p>Next Wednesday, October 14, 2026, we plan to publish an out-of-band Next.js security update. It will address three vulnerabilities in upstream dependencies: two Critical and one High. Two of these fixes were postponed from the September security release due to upstream coordination.</p><p>We will publish the full advisories with the update, including impact, affected versions, and upgrade instructions. Upgrade to a patched version as soon as the update is available.</p><h2>Our security program</h2><p>We work with security researchers to secure Next.js and other open source frameworks through <a href=\"https://hackerone.com/vercel\">Vercel's Open Source Bug Bounty</a>. Anyone interested in contributing to the security of eligible frameworks is encouraged to participate there.</p><p>Any questions or concerns regarding our security programs or vulnerability management can be sent to <a href=\"mailto:security@vercel.com\">security@vercel.com</a>.</p>"
+    },
+    {
       "title": "Next.js 16.4",
       "url": "https://nextjs.org/blog/next-16-4",
       "summary": "Next.js 16.4 introduces lazy compilation, smaller Turbopack output, React 19.3 features, Cache Components improvements, and new developer tooling.",
