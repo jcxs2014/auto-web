@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "[Subscriber Exclusive] NYC Subscriber Meetups!",
+      "url": "https://www.latent.space/p/nyc2026",
+      "summary": "Tomorrow and Tuesday. If you see this you’re in!",
+      "source": "Latent Space",
+      "extra": "",
+      "date": "2026-10-10 22:07",
+      "ts": 1791670037,
+      "content": "<p>If you’re seeing this you’re part of our very very light subscription/paid tier, and we genuinely appreciate you: your donations have funded our production process indefinitely and it is my sincere i…</p>\n    <h1>[Subscriber Exclusive] NYC Subscriber Meetups!</h1>\n    <h3>Tomorrow and Tuesday. If you see this you’re in!</h3>\n    <h2>Keep reading with a 7-day free trial</h2>\n    <p class=\"pencraft pc-reset reset-PDs18X paywall-subtitle\">Subscribe to Latent.Space to keep reading this post and get 7 days of free access to the full post archives.</p>"
+    },
+    {
       "title": "Building AI for Reliable Execution: Lessons From Industrial Robotics",
       "url": "https://www.latent.space/p/standard-bots",
       "summary": "Inside Standard Bots’ AI stack, pretrained models learn factory tasks from demonstrations and improve through corrections from real deployments.",
