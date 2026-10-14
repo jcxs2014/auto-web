@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The EU’s next chapter in AI is agentic",
+      "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+      "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-14 00:00",
+      "ts": 1791936000,
+      "content": ""
+    },
+    {
       "title": "Higgsfield takes AI video from 1 minute to over 10",
       "url": "https://openai.com/index/higgsfield-longer-videos-voice",
       "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
@@ -82,16 +92,6 @@
       "extra": "",
       "date": "2026-10-07 12:00",
       "ts": 1791374400,
-      "content": ""
-    },
-    {
-      "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
-      "url": "https://openai.com/index/radisson",
-      "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-07 07:00",
-      "ts": 1791356400,
       "content": ""
     }
   ]
