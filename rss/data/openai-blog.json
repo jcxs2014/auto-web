@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Amp puts AI agents to work beyond code with OpenAI models",
+      "url": "https://openai.com/index/amp-beyond-coding",
+      "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-14 12:00",
+      "ts": 1791979200,
+      "content": ""
+    },
+    {
+      "title": "SentinelOne cuts malware analysis from weeks to hours",
+      "url": "https://openai.com/index/sentinelone",
+      "summary": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-14 12:00",
+      "ts": 1791979200,
+      "content": ""
+    },
+    {
       "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
       "url": "https://openai.com/index/third-moment-research",
       "summary": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use.",
@@ -82,16 +102,6 @@
       "extra": "",
       "date": "2026-10-08 12:00",
       "ts": 1791460800,
-      "content": ""
-    },
-    {
-      "title": "Disrupting AI-enabled “false front” operations",
-      "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-      "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-08 00:00",
-      "ts": 1791417600,
       "content": ""
     }
   ]
