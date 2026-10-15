@@ -5,6 +5,66 @@
   "lang": "en",
   "entries": [
     {
+      "title": "A Lab-Leak Story You Haven’t Heard",
+      "url": "https://www.theatlantic.com/health/2026/10/rsv-kennedy-conspiracy-theory-lab-leak/688998/?utm_source=feed",
+      "summary": "Robert F. Kennedy Jr. believes that RSV originated in a government science experiment.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-15 14:53",
+      "ts": 1792076011,
+      "content": ""
+    },
+    {
+      "title": "0 for 26: The Trump Administration’s Astonishing Losing Record",
+      "url": "https://www.theatlantic.com/ideas/2026/10/doj-lawsuits-voter-rolls-losing/689003/?utm_source=feed",
+      "summary": "Not one single court has approved of the Department of Justice’s plans to obtain state voter rolls.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-15 13:25",
+      "ts": 1792070759,
+      "content": ""
+    },
+    {
+      "title": "Have We Reached Peak Testosterone?",
+      "url": "https://www.theatlantic.com/podcasts/2026/10/masculinism-testosterone-men-politics-trump/688989/?utm_source=feed",
+      "summary": "A live taping with Helen Lewis and Sophie Gilbert about the evolution of masculinism",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-15 13:00",
+      "ts": 1792069200,
+      "content": ""
+    },
+    {
+      "title": "Ukraine Finds a New Set of Targets",
+      "url": "https://www.theatlantic.com/national-security/2026/10/ukraine-russia-trump-putin-war/689002/?utm_source=feed",
+      "summary": "As Donald Trump intervenes to protect Russia’s oil refineries, Ukraine plays the few cards it has left.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-15 11:00",
+      "ts": 1792062000,
+      "content": ""
+    },
+    {
+      "title": "The Non-AI AI Jobs",
+      "url": "https://www.theatlantic.com/ideas/2026/10/ai-new-job-creation/689000/?utm_source=feed",
+      "summary": "Will the labor market of the future include cold-plunge installers, psychedelic therapists, and house managers?",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-15 11:00",
+      "ts": 1792062000,
+      "content": ""
+    },
+    {
+      "title": "Invasion of the Self-Replicating AI-Malware Botnet",
+      "url": "https://www.theatlantic.com/ideas/2026/10/ai-malware-botnet/688997/?utm_source=feed",
+      "summary": "An AI risk much dumber—and therefore more likely—than extinction is arriving.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-15 11:00",
+      "ts": 1792062000,
+      "content": ""
+    },
+    {
       "title": "Kimberly Guilfoyle Broke Trump’s Most Important Rule",
       "url": "https://www.theatlantic.com/ideas/2026/10/kimberly-guilfoyle-trump-greece-davos/688996/?utm_source=feed",
       "summary": "The president doesn’t seem to care about corruption; he cares about embarrassment.",
@@ -42,66 +102,6 @@
       "extra": "",
       "date": "2026-10-14 16:53",
       "ts": 1791996799,
-      "content": ""
-    },
-    {
-      "title": "Saudi Arabia Is Running Out of Options",
-      "url": "https://www.theatlantic.com/international/2026/10/houthi-strikes-saudi-arabia/688990/?utm_source=feed",
-      "summary": "Houthi violence is undermining the kingdom’s best-laid plans.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-14 15:43",
-      "ts": 1791992615,
-      "content": ""
-    },
-    {
-      "title": "Going Hungry in Trump’s Economy",
-      "url": "https://www.theatlantic.com/politics/2026/10/arizona-voters-trump-economy-midterms/688980/?utm_source=feed",
-      "summary": "The president said the “American dream is back.” Rural Arizonans don’t think so.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-14 15:31",
-      "ts": 1791991916,
-      "content": ""
-    },
-    {
-      "title": "Welcome to Over/Under",
-      "url": "https://www.theatlantic.com/newsletters/2026/10/welcome-over-under-gambling-prediction-markets/688991/?utm_source=feed",
-      "summary": "A new newsletter on the latest in prediction markets, gambling, and the evolution of everyday risk",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-14 15:16",
-      "ts": 1791990960,
-      "content": ""
-    },
-    {
-      "title": "The Most Cursed Team in American Sports",
-      "url": "https://www.theatlantic.com/magazine/2026/12/josh-allen-buffalo-bills-curse/688982/?utm_source=feed",
-      "summary": "Why Buffalo Bills fans are convinced this is finally their year",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-14 11:00",
-      "ts": 1791975600,
-      "content": ""
-    },
-    {
-      "title": "Hi, I’m Your New Press Secretary, and It’s My First Time Reading Words Out Loud",
-      "url": "https://www.theatlantic.com/newsletters/2026/10/press-secretary-katie-zacharia-first-briefing/688988/?utm_source=feed",
-      "summary": "A very uncomfortable 14 minutes",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-13 23:47",
-      "ts": 1791935220,
-      "content": ""
-    },
-    {
-      "title": "A Novel That Turns the Tables on AI",
-      "url": "https://www.theatlantic.com/books/2026/10/joanna-kavenna-seven-review/688078/?utm_source=feed",
-      "summary": "Joanna Kavenna’s book about the battle of man versus machine is both funny and deadly serious.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-13 20:45",
-      "ts": 1791924300,
       "content": ""
     }
   ]
