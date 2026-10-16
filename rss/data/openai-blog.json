@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-16 00:00",
+      "ts": 1792108800,
+      "content": ""
+    },
+    {
       "title": "Bringing GPT-Rosalind to academic research labs",
       "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
       "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
