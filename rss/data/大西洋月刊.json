@@ -5,6 +5,56 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The Final Defenders",
+      "url": "https://www.theatlantic.com/ideas/2026/10/capital-punishment-mitigators/688995/?utm_source=feed",
+      "summary": "Those facing the death penalty have a last line of protection: the specialists who find explanations for unthinkable crimes and attempt to convince juries that sometimes guilty people deserve mercy.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-17 13:00",
+      "ts": 1792242000,
+      "content": ""
+    },
+    {
+      "title": "Another Battle Between the Catholic Church and the Trump Administration",
+      "url": "https://www.theatlantic.com/culture/2026/10/catholic-church-sacraments/689063/?utm_source=feed",
+      "summary": "The Church has fought the government multiple times to ensure that detained migrants have access to sacraments.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-17 12:00",
+      "ts": 1792238400,
+      "content": ""
+    },
+    {
+      "title": "The Flying Car Must Never Be Built",
+      "url": "https://www.theatlantic.com/ideas/2026/10/tesla-elon-musk-roadster/689059/?utm_source=feed",
+      "summary": "It is not a goal to be reached, but a dream of new freedom deferred.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-17 12:00",
+      "ts": 1792238400,
+      "content": ""
+    },
+    {
+      "title": "All the Comforts of Fall",
+      "url": "https://www.theatlantic.com/newsletters/2026/10/comforts-of-fall/689056/?utm_source=feed",
+      "summary": "Pumpkin-spice treats, cozy reads, and a few more ways to make the most of the season",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-17 12:00",
+      "ts": 1792238400,
+      "content": ""
+    },
+    {
+      "title": "Iran’s ‘Anti-Imperialism’ Is a Dead End",
+      "url": "https://www.theatlantic.com/international/2026/10/west-iran-economy-us/689039/?utm_source=feed",
+      "summary": "An ideology of refusal has not made the international order fairer for Iranians or anyone else.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-17 11:00",
+      "ts": 1792234800,
+      "content": ""
+    },
+    {
       "title": "The Blog Post That Set the AI World on Fire",
       "url": "https://www.theatlantic.com/technology/2026/10/ai-neuron-blog-post/689058/?utm_source=feed",
       "summary": "An incendiary post from a prominent researcher suggests that AI is actually more predictable than we thought.",
@@ -52,56 +102,6 @@
       "extra": "",
       "date": "2026-10-16 17:35",
       "ts": 1792172100,
-      "content": ""
-    },
-    {
-      "title": "Will the New ‘Grand Theft Auto’ Be a Weapon in the Culture Wars?",
-      "url": "https://www.theatlantic.com/podcasts/2026/10/grand-theft-auto-ambition-culture-wars/689036/?utm_source=feed",
-      "summary": "It’s not just stealing cars and running from cops anymore.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-16 17:00",
-      "ts": 1792170000,
-      "content": ""
-    },
-    {
-      "title": "A Bet That Young People Are Willing to Make",
-      "url": "https://www.theatlantic.com/newsletters/2026/10/betting-gambling-young-people-boom/689045/?utm_source=feed",
-      "summary": "Bettors keep losing. Why do they keep coming back?",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-16 16:45",
-      "ts": 1792169100,
-      "content": ""
-    },
-    {
-      "title": "Can Elizabeth Holmes Drop the Act?",
-      "url": "https://www.theatlantic.com/culture/2026/10/you-can-see-everything-review-elizabeth-holmes-documentary/689038/?utm_source=feed",
-      "summary": "Nathan Fielder follows the Theranos founder for a brilliant study of self-perception.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-16 16:02",
-      "ts": 1792166539,
-      "content": ""
-    },
-    {
-      "title": "What the Loss of Starshield Revealed",
-      "url": "https://www.theatlantic.com/international/2026/10/starshield-ukraine-military-technology-vulnerability/689035/?utm_source=feed",
-      "summary": "Ukraine’s defenses depend on the high-speed data links that Washington may have briefly shut down.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-16 14:22",
-      "ts": 1792160568,
-      "content": ""
-    },
-    {
-      "title": "Photos of the Week: Rabbit Jumping, Floating Bazaar, Chief Mouser",
-      "url": "https://www.theatlantic.com/photography/2026/10/photos-week-rabbit-jumping-floating-bazaar-chief-mouser/689007/?utm_source=feed",
-      "summary": "A highland-cattle show in Scotland, traditional sword forging in China, a fuel shortage in Bali, high water flow at Brazil’s Iguazu Falls, anti-government protests in Albania, and much more",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-16 13:00",
-      "ts": 1792155600,
       "content": ""
     }
   ]
