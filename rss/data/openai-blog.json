@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How Itaú is building generative AI for its entire customer base",
+      "url": "https://openai.com/index/itau-generative-ai",
+      "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-16 19:00",
+      "ts": 1792177200,
+      "content": ""
+    },
+    {
       "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
       "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-10-14 00:00",
       "ts": 1791936000,
-      "content": ""
-    },
-    {
-      "title": "Higgsfield takes AI video from 1 minute to over 10",
-      "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-      "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-13 12:00",
-      "ts": 1791892800,
       "content": ""
     }
   ]

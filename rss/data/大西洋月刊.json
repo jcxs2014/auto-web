@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The Blog Post That Set the AI World on Fire",
+      "url": "https://www.theatlantic.com/technology/2026/10/ai-neuron-blog-post/689058/?utm_source=feed",
+      "summary": "An incendiary post from a prominent researcher suggests that AI is actually more predictable than we thought.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-16 21:33",
+      "ts": 1792186405,
+      "content": ""
+    },
+    {
       "title": "Five Fabulous Days of Katie Zacharia",
       "url": "https://www.theatlantic.com/ideas/2026/10/katie-zacharia-press-secretary-trump/689055/?utm_source=feed",
       "summary": "The Trump administration returns to classic form.",
@@ -15,7 +25,17 @@
       "content": ""
     },
     {
-      "title": "Don't Listen to the Romantasy Haters",
+      "title": "How Botched Executions Were Handled in Centuries Past",
+      "url": "https://www.theatlantic.com/newsletters/2026/10/history-lessons-botched-executions/689054/?utm_source=feed",
+      "summary": "The case of Christa Pike, who survived two lethal injections last month, gives new relevance to strange stories across history.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-16 19:43",
+      "ts": 1792179780,
+      "content": ""
+    },
+    {
+      "title": "The Real Selling Point of Romantasy",
       "url": "https://www.theatlantic.com/newsletters/2026/10/books-briefing-dont-listen-romantasy-haters/689049/?utm_source=feed",
       "summary": "The best-selling genre is more than just smut.",
       "source": "大西洋月刊",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-10-16 13:00",
       "ts": 1792155600,
-      "content": ""
-    },
-    {
-      "title": "How the Catholic Church Is Rethinking War",
-      "url": "https://www.theatlantic.com/culture/2026/10/catholic-church-just-war-theory/688941/?utm_source=feed",
-      "summary": "Just-war theory, which has guided Vatican teaching for centuries, may be on its way out.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-16 12:45",
-      "ts": 1792154700,
-      "content": ""
-    },
-    {
-      "title": "Imagine Every AI Agent on Earth Buying the Same Cheap Paper Towels",
-      "url": "https://www.theatlantic.com/technology/2026/10/ai-agent-chaos-e-commerce/689010/?utm_source=feed",
-      "summary": "AI agents are doing our shopping for us, and wreaking havoc on the internet.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-16 12:00",
-      "ts": 1792152000,
       "content": ""
     }
   ]
