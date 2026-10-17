@@ -25,6 +25,16 @@
       "content": ""
     },
     {
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "url": "https://openai.com/index/benefit-street-partners",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-16 00:00",
+      "ts": 1792108800,
+      "content": ""
+    },
+    {
       "title": "Bringing GPT-Rosalind to academic research labs",
       "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
       "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-10-14 07:00",
       "ts": 1791961200,
-      "content": ""
-    },
-    {
-      "title": "The EU’s next chapter in AI is agentic",
-      "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
-      "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-14 00:00",
-      "ts": 1791936000,
       "content": ""
     }
   ]
