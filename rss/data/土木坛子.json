@@ -3,5 +3,36 @@
   "url": "https://tumutanzi.com/feed",
   "category": "中文博客",
   "lang": "zh",
-  "entries": []
+  "entries": [
+    {
+      "title": "Starryblu：跨境资金管理平台Wise的平替？",
+      "url": "https://tumutanzi.com/archives/17648",
+      "summary": "半个月前，我受邀实际使用了Starryblu，感觉是一个值得关注的跨境金融平台。 它是熊猫速汇公司的姐妹产品， […]",
+      "source": "土木坛子",
+      "extra": "",
+      "date": "2026-10-17 16:00",
+      "ts": 1792252807,
+      "content": ""
+    },
+    {
+      "title": "iFAST：值得拥有的英国银行账户",
+      "url": "https://tumutanzi.com/archives/17647",
+      "summary": "经实际使用，我发现iFAST Global Bank这个银行挺不错。它是一家英国持牌银行，隶属于新加坡上市公司 […]",
+      "source": "土木坛子",
+      "extra": "",
+      "date": "2026-10-16 16:00",
+      "ts": 1792166406,
+      "content": ""
+    },
+    {
+      "title": "Neverless：自由兑换加密货币与欧元",
+      "url": "https://tumutanzi.com/archives/17646",
+      "summary": "我最近一直在体验Neverless这个欧洲金融极简APP，由10年前我用过的Revolut团队前高管创建，使用 […]",
+      "source": "土木坛子",
+      "extra": "",
+      "date": "2026-10-15 16:00",
+      "ts": 1792080047,
+      "content": ""
+    }
+  ]
 }
