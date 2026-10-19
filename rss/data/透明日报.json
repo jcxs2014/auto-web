@@ -3,16 +3,5 @@
   "url": "https://daily.xlab.app/atom.xml",
   "category": "中文博客",
   "lang": "zh",
-  "entries": [
-    {
-      "title": "透明日报20261011期",
-      "url": "https://daily.xlab.app/d/20261011/",
-      "summary": "透明日报第20261011期 订阅 今日文章：互联网*1，其他*2，技术*1",
-      "source": "透明日报",
-      "extra": "",
-      "date": "2026-10-11 23:45",
-      "ts": 1791762300,
-      "content": "<p>透明日报20261011期 2026-10-11 文章目录 互联网 • [小天才卖未来，老登卖资源，FA卖交易，家办拿自己的钱验证这一切 其他 • 蘑菇界有哪些特别的存在？ • [我大彻大悟，用AI就像我当年读博一样… 技术 • Your executable is a SQLite database 透明日报第20261011期 订阅 今日文章：互联网*1，其他*2，技术*1 互联网 • [小天才卖未来，老登卖资源，FA卖交易，家办拿自己的钱验证这一切 ](https://mp.weixin.qq.com/s?__biz=Mzg4ODkwNjA3OQ==&mid=2247490352&idx=1&sn=ee4ef54116ef8d66c5262ad081e976a6) 其他 • 蘑菇界有哪些特别的存在？ • [我大彻大悟，用AI就像我当年读博一样… ](https://mp.weixin.qq.com/s?__biz=Mzg2MTg4MDcxMQ==&mid=2247559720&idx=1&sn=d67e08537611c57b4fd29e3f9cc60416) 技术 • Your executable is a SQLite database 原文作者: 透明人 原文链接: https://daily.xlab.app/d/20261011/ 许可协议: 知识共享署名-非商业性使用 4.0 国际许可协议</p>"
-    }
-  ]
+  "entries": []
 }
