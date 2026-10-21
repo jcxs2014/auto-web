@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Recreating the lost studios of women sculptors with Prune Nourry",
+      "url": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/visionaries-petit-palais-art-basel-paris-prune-nourry/",
+      "summary": "Recreating the lost studios of women sculptors with Prune Nourry YouTube video",
+      "source": "The Keyword (Google)",
+      "extra": "",
+      "date": "2026-10-21 14:00",
+      "ts": 1792591200,
+      "content": "\n    <p>Throughout the late 19th and early 20th centuries, talented female sculptors lived and worked across Paris. Despite social constraints and limited access to artistic training, these pioneers made their mark in a predominantly male art world. Yet for a long time, women appeared in art history primarily as models or muses, while their roles as active artists were pushed into the background.</p>\n    <p>On October 20, a new exhibition titled \"Visionaries\" opens at the Petit Palais in Paris, coinciding with Art Basel Paris. The exhibition presents monumental plaster portraits sculpted by Prune Nourry, celebrating 18 historical female sculptors and their creative legacies.</p>\n    <p>To expand on their lives, Prune and Google Arts & Culture collaborated with film director Vincent Lorca on a 10-minute documentary. The project builds on a year of research during which three art historians gathered letters, journals, and photographic portraits of women sculptors who lived and worked in Paris. Because few historical photos of their actual workspaces exist, Lynn Cherny, creative technologist-in-residence at the Google Arts & Culture Lab used Google’s generative AI and image editing models to bring to life the studios of sculptors like Nancy Elizabeth Prophet, Jane Poupelet, and Camille Claudel.</p>\n    <p>Using a custom tool built with Google Gemini, the team created 3D models from archival photos to animate camera paths, allowing viewers to move virtually through the historical studios.</p>\n    <p>In another sequence conceived by Prune and Lorca, AI image editing is used to make the female students slowly fade from an archival photograph of Antoine Bourdelle’s studio, leaving only the men. The effect visually demonstrates how these talented women vanished from history.</p>\n    <p>\"Visionaries\" runs at the Petit Palais from October 20, 2026, through January 30, 2027, alongside the film installation in the museum galleries and a behind-the-scenes trailer <a href=\"https://artsandculture.google.com/experiment/ZAGccbqBKvGigg?e\">online on Google Arts & Culture</a>.</p>\n    <p>To discover more stories of trailblazing women who have shaped global culture, explore more Google Arts & Culture initiatives, such as <a href=\"https://artsandculture.google.com/experiment/surfacing-women-in-smithsonian-history/OwFAZCXxP8zn_w\">Surfacing Women in Smithsonian History</a> with the Smithsonian,<a href=\"https://artsandculture.google.com/project/road-to-equality\"> Road to Equality</a>,<a href=\"https://artsandculture.google.com/project/indias-women-in-culture\"> Women in India: Unheard Stories</a>, and the<a href=\"https://artsandculture.google.com/project/artemisia-gentileschi\"> Artemisia Gentileschi retrospective</a>.</p>"
+    },
+    {
+      "title": "New bidding and budgeting tools can transform your upcoming holiday ad strategy.",
+      "url": "https://blog.google/products/ads-commerce/holiday-shopping-bidding-budgeting/",
+      "summary": "Get actionable insights on bidding and budgeting tools in the latest episode of Google's \"Ads Decoded\" podcast.",
+      "source": "The Keyword (Google)",
+      "extra": "",
+      "date": "2026-10-21 13:00",
+      "ts": 1792587600,
+      "content": "\n    <p>In the latest episode of Ads Decoded, Google Ads Product Liaison Ginny Marvin and Ads Product Director Tal Akabas share actionable insights on the latest bidding and budgeting tools.</p>\n    <p>They also discuss game-changing holiday strategies — including demand-led budgeting and promotion mode — while busting myths around bidding and learning periods.</p>\n    <p>Tune in here.</p>"
+    },
+    {
+      "title": "Drive with “The Cat in the Hat” on Waze.",
+      "url": "https://blog.google/waze/waze-the-cat-in-the-hat/",
+      "summary": "Cat in the hat",
+      "source": "The Keyword (Google)",
+      "extra": "",
+      "date": "2026-10-21 11:39",
+      "ts": 1792582740,
+      "content": "\n    <p>Ready to turn your daily commute into a high-octane joyride? Waze is bringing the connoisseur of happy chaos to your passenger seat for the arrival of The Cat in the Hat, only in theatres November 6.</p>\n    <p>Voiced by comedy icon Bill Hader, the Cat is on a brand-new mission: delivering pure delight to drivers everywhere. Expect turn-by-turn directions packed with Seussian rhymes, unshakeable optimism, and playful sound effects turning everyday traffic into THE. BEST. DRIVE. EVER!</p>\n    <p>Along with the Cat’s voice navigation, you can express yourself with the “Delightful” Mood (his iconic red-and-white stovepipe hat) or the mischievous “Impulsive” Mood (Thing 1). Complete the ride by swapping your navigation arrow for the Cat’s fantastical hero vehicle: the jet-powered Magical Couch.</p>\n    <p>This experience is available globally in English. Open Waze and tap the banner in your menu or <a href=\"https://www.waze.com/ul?bundle_campaign=9889&amp;utm_source=blog&amp;utm_medium=blog_post&amp;utm_campaign=The_Cat_in_the_Hat&amp;utm_content=post\">activate it now.</a></p>"
+    },
+    {
       "title": "Southeast Asia’s digital economy to hit $368 billion",
       "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
       "summary": "Cover image for the e-Conomy SEA 2026 report titled Building the intelligent economy by Google, Temasek, and Bain and Company. A 3D illustration features a glowing yellow star surrounded by miniature scenes representing digital sectors, including data cen",
@@ -73,36 +103,6 @@
       "date": "2026-10-19 17:00",
       "ts": 1792429200,
       "content": "\n    <p>Based on your feedback, <a href=\"https://notebook.google.com/\">Gemini Notebook</a> now offers more creative control from start to finish on two of our popular outputs: Slide Decks and Video Overviews.</p>\n    <p>Instead of jumping from an initial prompt straight to a final output, Gemini Notebook can now walk you through the creation flow in a quick process based directly on your sources.</p>\n    <h3>Steer your content</h3>\n    <p>Start in the chat and ask Gemini Notebook to create slides or a video overview for you. Based on your sources, Notebook will suggest topics to be included in your artifact. Once you confirm, you will be able to steer the content further and guide visual style and format.</p>\n    <p>If you want to have even more creative control, you can use our new Review toggle. With this on, you can review the plan in the studio panel by clicking “Review outline notes” for slides and \"Review producer notes” for video, plus give additional feedback, like asking to include an executive summary at the beginning or swapping the order of a scene, before anything renders. Once everything looks right, select “Proceed” to produce a final artifact.</p>\n    <p>Co-creation Slides walkthrough</p>\n    <p>Co-creation Video Overview walkthrough</p>\n    <h3>Have Notebook take a first pass</h3>\n    <p>If you already know what you want to create, you can specify this in your prompt and the notebook will go straight to the review flow.</p>\n    <p>If you prefer a quick output, you can still just go to the studio panel, click your artifact, skip the review toggle and have Notebook generate the artifacts, as usual.</p>\n    <p>These co-creation capabilities are rolling out globally to all Gemini Notebook users over the upcoming week.</p>"
-    },
-    {
-      "title": "4 tips for styling outfits with Gemini",
-      "url": "https://blog.google/products-and-platforms/products/gemini/stylist-outfit-tips-gemini/",
-      "summary": "UI showing a user asking Gemini to put a person into various outfit items",
-      "source": "The Keyword (Google)",
-      "extra": "",
-      "date": "2026-10-19 16:00",
-      "ts": 1792425600,
-      "content": "\n    <p>Sydney Bordonaro styles top professional athletes, turning the pregame tunnel into a must-watch runway. But because her roster is scattered across the country, being in the same room as clients for a fitting rarely happens. That makes her biggest challenge selling the vision. A photo of a jacket tells a player nothing about how the outfit actually looks on them, and when they can't see the idea, it’s easy to say no. That’s why Sydney uses Gemini to bring her ideas to life before an outfit ever ships.</p>\n    <p>Here’s how she builds looks for clients from hundreds of miles away:</p>\n    <h2>1. Visualize the look.</h2>\n    <p>Sydney uploads pictures of the clothes she sources to visualize them on her client directly in Gemini. It keeps the player looking like herself while showing how the full outfit comes together on her.</p>\n    <p>Try it yourself: Upload a photo of yourself alongside screenshots of items you want to buy. Gemini combines them into a single image so you can see how the full outfit looks before ordering.</p>\n    <h2>2. Swap individual pieces.</h2>\n    <p>Styling rarely lands on the first try. Sydney simply talks to Gemini to tweak details like swapping boots for loafers or cropping a jacket without having to start over from scratch.</p>\n    <p>Try it yourself: Instead of writing a new prompt, ask for single adjustments like \"keep this outfit, but change the jacket to dark denim.\"</p>\n    <h2>3. Get a second opinion.</h2>\n    <p>Once the look comes together, Sydney sends the picture directly to her client. Seeing the complete fit builds confidence, often turning a hesitant \"maybe\" into a quick yes for bolder style choices.</p>\n    <p>Try it yourself: Test outfit ideas for upcoming weddings, job interviews, or trips and share them with friends for a gut check before you commit.</p>\n    <h2>4. Rescue an outfit on the go.</h2>\n    <p>Beyond building outfits, Sydney uses Gemini as a quick problem-solver. When an unexpected makeup smudge lands on a client’s collar right before an event, snapping a quick picture brings up specific, step-by-step instructions to clean it using stuff Sydney already has in the room.</p>\n    <p>Try it yourself: Take a photo of a clothing stain and ask Gemini how to clean it using what you have around the house.</p>\n    <p>Sydney brings the vision, the personal style, and the bold choices. Gemini is how she gets what’s in her head onto the screen so her clients can see it for themselves.</p>"
-    },
-    {
-      "title": "See the top style searches from people in big fashion capitals.",
-      "url": "https://blog.google/products-and-platforms/products/search/fashion-capital-style-searches/",
-      "summary": "We took a look at Google Trends to see what people in seven major fashion capitals are searching for to give them that je ne sais quoi when it comes to their sartorial s…",
-      "source": "The Keyword (Google)",
-      "extra": "",
-      "date": "2026-10-19 16:00",
-      "ts": 1792425600,
-      "content": "\n    <p>We took a look at Google Trends to see what people in seven major fashion capitals are searching for to give them that je ne sais quoi when it comes to their sartorial sensibilities. According to the data, people are experimenting with new silhouettes, clever styling hacks, hands-on alterations, and more. Here are a few trending takeaways:</p>\n    <ul>\n      <li>In London and Milan, searches for empire waist dresses are reaching new highs.</li>\n      <li>Searchers in New York and São Paulo are turning to silk scarves as tops and shawls.</li>\n      <li>Creative layering and robust footwear queries are spiking in Copenhagen.</li>\n      <li>In Tokyo and Paris, ballet flats and loafers are dominating footwear searches.</li>\n      <li>Designer hair accessories and headbands are trending in London.</li>\n      <li>In Milan and São Paulo, queries are rising for seamstress repairs and DIY alterations.</li>\n    </ul>\n    <p>Check out the full <a href=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/2026_Fashion_Capitals_Trends.pdf\">Fashion Capitals Trends Report here</a>.</p>"
-    },
-    {
-      "title": "We’re supporting nature restoration through sustainable farming in Brazil.",
-      "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/brazil-silvopasture/",
-      "summary": "Google is partnering with Working Trees to remove 270,000 tons of CO2 via silvopasture in Brazil. See how this project restores land and ranching.",
-      "source": "The Keyword (Google)",
-      "extra": "",
-      "date": "2026-10-19 12:00",
-      "ts": 1792411200,
-      "content": "\n    <p>Today, through the <a href=\"https://www.symbiosiscoalition.org/perspectives/offtakes-working-trees\">Symbiosis Coalition</a>, we’re announcing a long-term agreement with <a href=\"https://workingtrees.com/localized-files/en/\">Working Trees</a> to remove 270,000 tons of carbon dioxide through their project in Brazil.</p>\n    <p>Working Trees plants trees directly on active pasturelands across Brazil’s Amazon and Cerrado biomes, a practice called silvopasture that restores ranchland without displacing cattle. In addition to removing CO₂, this gives ranchers an opportunity to diversify their income through timber and carbon revenues. As the trees grow, they provide much-needed shade to the cattle, enhancing both soil health and drought resilience, and ultimately boosting land and livestock productivity.</p>\n    <p>The approach provides a highly scalable solution, with the potential to expand across millions of hectares of Brazilian ranchlands. It also uses Working Trees' advanced digital platform to enable ranchers to track every single tree planted, creating a transparent verification trail to monitor impact. It’s a great example of technology helping both people and the planet.</p>"
     }
   ]
 }

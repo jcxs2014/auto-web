@@ -5,6 +5,56 @@
   "lang": "en",
   "entries": [
     {
+      "title": "OpenAI models are coming to Google Cloud",
+      "url": "https://openai.com/index/openai-models-google-cloud",
+      "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 12:00",
+      "ts": 1792584000,
+      "content": ""
+    },
+    {
+      "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+      "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 07:00",
+      "ts": 1792566000,
+      "content": ""
+    },
+    {
+      "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+      "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+      "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 13:00",
+      "ts": 1792587600,
+      "content": ""
+    },
+    {
+      "title": "Using thousands of AI agents to uncover new leads in biological data",
+      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+      "summary": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 04:50",
+      "ts": 1792558200,
+      "content": ""
+    },
+    {
+      "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
+      "url": "https://openai.com/index/building-chatgpt-ad-stack",
+      "summary": "Learn how OpenAI built ChatGPT’s LLM-powered ad stack to understand conversational intent, keep ads separate from answers, and deliver relevant ads at scale.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 07:00",
+      "ts": 1792566000,
+      "content": ""
+    },
+    {
       "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
       "url": "https://openai.com/index/ted-taylor-restaurant",
       "summary": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
@@ -52,56 +102,6 @@
       "extra": "",
       "date": "2026-10-16 19:00",
       "ts": 1792177200,
-      "content": ""
-    },
-    {
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-16 00:00",
-      "ts": 1792108800,
-      "content": ""
-    },
-    {
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "url": "https://openai.com/index/benefit-street-partners",
-      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-16 00:00",
-      "ts": 1792108800,
-      "content": ""
-    },
-    {
-      "title": "Bringing GPT-Rosalind to academic research labs",
-      "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
-      "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-15 19:00",
-      "ts": 1792090800,
-      "content": ""
-    },
-    {
-      "title": "Teaching students to think and learn through questions",
-      "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
-      "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-15 13:00",
-      "ts": 1792069200,
-      "content": ""
-    },
-    {
-      "title": "Sullivan & Cromwell brings legal expertise into agreement review",
-      "url": "https://openai.com/index/sullivan-cromwell",
-      "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-15 00:00",
-      "ts": 1792022400,
       "content": ""
     }
   ]
