@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How AT&T is rethinking in-house legal work with OpenAI",
+      "url": "https://openai.com/index/att-legal",
+      "summary": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 17:00",
+      "ts": 1792602000,
+      "content": ""
+    },
+    {
       "title": "OpenAI models are coming to Google Cloud",
       "url": "https://openai.com/index/openai-models-google-cloud",
       "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
@@ -55,6 +65,16 @@
       "content": ""
     },
     {
+      "title": "Democratic governance of frontier AI, part II: Empowering cyber defenders",
+      "url": "https://openai.com/index/empowering-cyber-defenders",
+      "summary": "OpenAI outlines a blueprint for empowering cyber defenders with frontier AI, stronger safeguards, modernized cybersecurity, and more resilient public institutions.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 00:00",
+      "ts": 1792540800,
+      "content": ""
+    },
+    {
       "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
       "url": "https://openai.com/index/ted-taylor-restaurant",
       "summary": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-10-20 00:00",
       "ts": 1792454400,
-      "content": ""
-    },
-    {
-      "title": "Advancing coding in low‑resource programming languages",
-      "url": "https://openai.com/index/low-resource-programming-languages",
-      "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-19 12:00",
-      "ts": 1792411200,
-      "content": ""
-    },
-    {
-      "title": "How Itaú is building generative AI for its entire customer base",
-      "url": "https://openai.com/index/itau-generative-ai",
-      "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-16 19:00",
-      "ts": 1792177200,
       "content": ""
     }
   ]

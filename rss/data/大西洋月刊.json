@@ -5,9 +5,39 @@
   "lang": "en",
   "entries": [
     {
-      "title": "The Texas Race Worth Watching",
+      "title": "The AI-Hacking Apocalypse Began Last Night",
+      "url": "https://www.theatlantic.com/technology/2026/10/ai-hacking-apocalypse-began-last-night/689106/?utm_source=feed",
+      "summary": "Websites across the internet are going dark to protect themselves against a newly discovered vulnerability.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-21 19:21",
+      "ts": 1792610481,
+      "content": ""
+    },
+    {
+      "title": "Why Is Everyone Avoiding the Biggest Issue Facing Voters?",
+      "url": "https://www.theatlantic.com/newsletters/2026/10/trump-golf-course-dc-potomac/689104/?utm_source=feed",
+      "summary": "Please, I beg you, Mr. President, do not stop talking about the golf course.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-21 18:17",
+      "ts": 1792606620,
+      "content": ""
+    },
+    {
+      "title": "Will the Tech Oligarchs Turn on Trump?",
+      "url": "https://www.theatlantic.com/podcasts/2026/10/david-frum-show-kara-swisher-tech-oligarchs-trump-ai/689101/?utm_source=feed",
+      "summary": "Kara Swisher on whether AI will ever be regulated",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-21 17:00",
+      "ts": 1792602000,
+      "content": ""
+    },
+    {
+      "title": "Like Ken Paxton, Without the Baggage",
       "url": "https://www.theatlantic.com/ideas/2026/10/texas-attorney-general-race/689061/?utm_source=feed",
-      "summary": "The power of the attorney general",
+      "summary": "The most important race in Texas is for attorney general.",
       "source": "大西洋月刊",
       "extra": "",
       "date": "2026-10-21 16:06",
@@ -15,7 +45,7 @@
       "content": ""
     },
     {
-      "title": "The Data Center Rebellion Is Just Beginning",
+      "title": "The Data-Center Rebellion Is Just Beginning",
       "url": "https://www.theatlantic.com/technology/2026/10/year-world-turned-data-centers/689081/?utm_source=feed",
       "summary": "Infrastructure that once flew under the radar is now the subject of national and global outrage.",
       "source": "大西洋月刊",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-10-21 12:00",
       "ts": 1792584000,
-      "content": ""
-    },
-    {
-      "title": "This Is Not a Cycle of Retribution",
-      "url": "https://www.theatlantic.com/ideas/2026/10/slotkin-trump-investigations-corruption/689092/?utm_source=feed",
-      "summary": "The Republican response to Senator Elissa Slotkin is revealing.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-21 11:30",
-      "ts": 1792582200,
-      "content": ""
-    },
-    {
-      "title": "The Contradictions of Troy Jackson",
-      "url": "https://www.theatlantic.com/culture/2026/10/troy-jackson-maine-progressive/689091/?utm_source=feed",
-      "summary": "The Democratic Senate candidate for Maine is courting working-class voters—while championing a set of policies that they don’t support.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-21 11:00",
-      "ts": 1792580400,
-      "content": ""
-    },
-    {
-      "title": "Canadian Officers Don’t Want to Serve in the U.S. Anymore",
-      "url": "https://www.theatlantic.com/national-security/2026/10/military-cooperation-canada-trump/689057/?utm_source=feed",
-      "summary": "Trump’s threats are making a real impact on U.S.-Canada military cooperation.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-21 11:00",
-      "ts": 1792580400,
       "content": ""
     }
   ]
