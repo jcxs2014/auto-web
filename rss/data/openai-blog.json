@@ -15,6 +15,16 @@
       "content": ""
     },
     {
+      "title": "Broad access through consistent standards",
+      "url": "https://openai.com/index/broad-access-through-consistent-standards",
+      "summary": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 21:00",
+      "ts": 1792616400,
+      "content": ""
+    },
+    {
       "title": "OpenAI models are coming to Google Cloud",
       "url": "https://openai.com/index/openai-models-google-cloud",
       "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
@@ -55,6 +65,16 @@
       "content": ""
     },
     {
+      "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
+      "url": "https://openai.com/index/cloudflare-cyber",
+      "summary": "Cloudflare uses OpenAI Daybreak to investigate vulnerabilities and propose fixes for review. Its developers use Codex to build faster and improve code quality.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-21 00:00",
+      "ts": 1792540800,
+      "content": ""
+    },
+    {
       "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
       "url": "https://openai.com/index/building-chatgpt-ad-stack",
       "summary": "Learn how OpenAI built ChatGPT’s LLM-powered ad stack to understand conversational intent, keep ads separate from answers, and deliver relevant ads at scale.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-10-20 10:00",
       "ts": 1792490400,
-      "content": ""
-    },
-    {
-      "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
-      "url": "https://openai.com/index/terminal-x",
-      "summary": "Terminal X’s Eval Agent grades outputs against a 54-criterion rubric, catching 25% more deviances from a fund’s mandate with GPT-6.1 Sol.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-20 07:00",
-      "ts": 1792479600,
-      "content": ""
-    },
-    {
-      "title": "OpenAI acquires Orchestra Bio",
-      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
-      "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-20 00:00",
-      "ts": 1792454400,
       "content": ""
     }
   ]
