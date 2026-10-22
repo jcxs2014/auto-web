@@ -5,7 +5,57 @@
   "lang": "en",
   "entries": [
     {
-      "title": "The Underground Battles Shaping the War in Ukraine",
+      "title": "Why So Many Men Aren’t Working",
+      "url": "https://www.theatlantic.com/ideas/2026/10/job-market-unemployment-men-screentime/689109/?utm_source=feed",
+      "summary": "Jobs exist. The trouble lies in finding men who are willing and able to take them.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-22 13:49",
+      "ts": 1792676955,
+      "content": ""
+    },
+    {
+      "title": "China’s Economy Has a Huge Weakness",
+      "url": "https://www.theatlantic.com/international/2026/10/chinese-companies-profit-problem/689088/?utm_source=feed",
+      "summary": "Local manufacturers are struggling to make one very important thing.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-22 12:13",
+      "ts": 1792671180,
+      "content": ""
+    },
+    {
+      "title": "A Forgotten Fix for American Racial Strife",
+      "url": "https://www.theatlantic.com/books/2026/10/harold-cruse-biography-racism-integration/689110/?utm_source=feed",
+      "summary": "Harold Cruse had a prescient understanding of why social movements stumble—and how they might find more success.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-22 12:00",
+      "ts": 1792670400,
+      "content": ""
+    },
+    {
+      "title": "Sending a Silly Meme Is an Act of Love",
+      "url": "https://www.theatlantic.com/family/2026/10/send-silly-memes/689077/?utm_source=feed",
+      "summary": "The case for a common, occasionally annoying, and secretly sweet digital habit",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-22 12:00",
+      "ts": 1792670400,
+      "content": ""
+    },
+    {
+      "title": "America Is About to See What Happens When Voters Turn to AI",
+      "url": "https://www.theatlantic.com/technology/2026/10/ai-midterm-election-voters-chatbots/689103/?utm_source=feed",
+      "summary": "Chatbots are adding a new layer of chaos ahead of the midterms.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-22 11:30",
+      "ts": 1792668600,
+      "content": ""
+    },
+    {
+      "title": "The New Subterranean Front",
       "url": "https://www.theatlantic.com/national-security/2026/10/ukraine-war-gas-pipelines-russia/689105/?utm_source=feed",
       "summary": "As drones fill the skies over the war zone, the fighting in Ukraine has moved into a network of gas pipelines deep belowground.",
       "source": "大西洋月刊",
@@ -15,9 +65,9 @@
       "content": ""
     },
     {
-      "title": "Maria Bamford Is Tough as Nails",
+      "title": "Maria Bamford on OCD, Pugs, and Getting Paid",
       "url": "https://www.theatlantic.com/podcasts/2026/10/maria-bamford-is-tough-as-nails/689076/?utm_source=feed",
-      "summary": "An interview with the comedian about OCD, family, and the new Judd Apatow documentary about her life",
+      "summary": "An interview with the comedian about Paralyzed by Hope, a new Netflix documentary about her",
       "source": "大西洋月刊",
       "extra": "",
       "date": "2026-10-22 11:00",
@@ -52,56 +102,6 @@
       "extra": "",
       "date": "2026-10-21 21:50",
       "ts": 1792619400,
-      "content": ""
-    },
-    {
-      "title": "Read This Website While You Still Can",
-      "url": "https://www.theatlantic.com/technology/2026/10/ai-hacking-apocalypse-began-last-night/689106/?utm_source=feed",
-      "summary": "Parts of the internet are going dark to protect against a newly discovered vulnerability.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-21 19:21",
-      "ts": 1792610481,
-      "content": ""
-    },
-    {
-      "title": "Why Is Everyone Avoiding the Biggest Issue Facing Voters?",
-      "url": "https://www.theatlantic.com/newsletters/2026/10/trump-golf-course-dc-potomac/689104/?utm_source=feed",
-      "summary": "Please, I beg you, Mr. President, do not stop talking about the golf course.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-21 18:17",
-      "ts": 1792606620,
-      "content": ""
-    },
-    {
-      "title": "Will the Tech Oligarchs Turn on Trump?",
-      "url": "https://www.theatlantic.com/podcasts/2026/10/david-frum-show-kara-swisher-tech-oligarchs-trump-ai/689101/?utm_source=feed",
-      "summary": "Kara Swisher on whether AI will ever be regulated",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-21 17:00",
-      "ts": 1792602000,
-      "content": ""
-    },
-    {
-      "title": "Like Ken Paxton, Without the Baggage",
-      "url": "https://www.theatlantic.com/ideas/2026/10/texas-attorney-general-race/689061/?utm_source=feed",
-      "summary": "The most important race in Texas is for attorney general.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-21 16:06",
-      "ts": 1792598777,
-      "content": ""
-    },
-    {
-      "title": "The Data-Center Rebellion Is Just Beginning",
-      "url": "https://www.theatlantic.com/technology/2026/10/year-world-turned-data-centers/689081/?utm_source=feed",
-      "summary": "Infrastructure that once flew under the radar is now the subject of national and global outrage.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-21 15:00",
-      "ts": 1792594806,
       "content": ""
     }
   ]

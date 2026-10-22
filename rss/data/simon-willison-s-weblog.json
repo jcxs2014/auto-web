@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Quoting Armin Ronacher",
+      "url": "https://simonwillison.net/2026/Oct/22/armin-ronacher/",
+      "summary": "As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins. — Armin Ronacher Tags: security, generative-ai, armin-ronacher, ai, ai-security-research, llms",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-10-22 15:34",
+      "ts": 1792683253,
+      "content": "<p class=\"mobile-date-eyebrow\">22nd October 2026</p>\n    <blockquote>\n      <p>As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins.</p>\n    </blockquote>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
+    },
+    {
       "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
       "url": "https://simonwillison.net/2026/Oct/21/php-security-release/",
       "summary": "Today's PHP Security Release, and How We're Strengthening PHP Security If you're running anything on PHP it's vital you upgrade - today's updates (across the entire PHP 8.x line) address two remote code execution holes, and there have been exploits circulating since last night, thanks to a leak in the coordinated disclosure process. This post from the PHP Foundation explain what went so wrong: On ",
@@ -93,16 +103,6 @@
       "date": "2026-10-17 13:16",
       "ts": 1792243009,
       "content": "<p class=\"mobile-date-eyebrow\">17th October 2026</p>\n    <p>web-edit (<a href=\"https://simonwillison.net/2026/Oct/12/web-edit/\">previously</a>) is my tiny web app for browsing and editing files in a folder. I mainly built it for editing files on different machines via Tailscale.</p>\n    <p>I added a \"copy to clipboard\" option for both text and image data. I needed this because I was running pelican prompts on a laptop from my phone (here's <a href=\"https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fb1cec9726b6aa62d4de47100f90f0c1a\">DeepSeek 4.1 Flash 1017</a>) and I wanted an easy way to copy the resulting logs into a Gist.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
-    },
-    {
-      "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
-      "url": "https://simonwillison.net/2026/Oct/16/code-review/",
-      "summary": "We think \"did a human read the code?\" is an imprecise proxy for \"what could go wrong with this change, and which check—automated or human—is the right one to catch it?\" Asking that question also changed when review happens. Before, review was a gate at the end of the road: write the code, open a PR, wait for your colleague. Now, review runs continuously, more like spellcheck while you write. Most ",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-10-16 22:06",
-      "ts": 1792188397,
-      "content": "<p class=\"mobile-date-eyebrow\">16th October 2026</p>\n    <blockquote>\n      <p>We think \"did a human read the code?\" is an imprecise proxy for \"what could go wrong with this change, and which check—automated or human—is the right one to catch it?\"</p>\n      <p>Asking that question also changed when review happens. Before, review was a gate at the end of the road: write the code, open a PR, wait for your colleague.</p>\n      <p>Now, review runs continuously, more like spellcheck while you write. Most changes have been reviewed and fixed by Claude at least once before a human is asked to look. This catches most routine mistakes, and saves team attention for higher-level questions and scrutiny.</p>\n    </blockquote>\n    <p>— <a href=\"https://claude.dev/blog/solving-code-review-at-anthropic/\">Addy Osmani, Morgan Westlee Lunt, and Qing Wang</a>, How the Claude Code team does code review</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
     }
   ]
 }
