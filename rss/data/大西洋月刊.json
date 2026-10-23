@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "‘If Anything Happens to This Guy … Everyone Is Screwed’",
+      "url": "https://www.theatlantic.com/technology/2026/10/man-who-saved-internet-php-vulnerability/689123/?utm_source=feed",
+      "summary": "Ondřej Surý was a relatively anonymous volunteer working on PHP security. Then the internet exploded.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-22 23:47",
+      "ts": 1792712820,
+      "content": ""
+    },
+    {
+      "title": "Trump’s Gamble to End the Iran War",
+      "url": "https://www.theatlantic.com/national-security/2026/10/trump-iran-war-strikes-after-midterms/689121/?utm_source=feed",
+      "summary": "The president is considering another escalation in the Middle East.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-22 21:41",
+      "ts": 1792705310,
+      "content": ""
+    },
+    {
       "title": "When Rivers Run Low in the American West",
       "url": "https://www.theatlantic.com/newsletters/2026/10/the-one-resource-the-american-west-will-never-stop-fighting-over/689120/?utm_source=feed",
       "summary": "Water is the one resource that the region will never stop fighting over.",
@@ -35,7 +55,7 @@
       "content": ""
     },
     {
-      "title": "A Congressional Race That’s a Referendum on the War",
+      "title": "A Congressional District Where the Iran War Is Personal",
       "url": "https://www.theatlantic.com/politics/2026/10/iran-war-virginia-midterms/688948/?utm_source=feed",
       "summary": "How voters in Virginia’s veteran-rich Second Congressional District feel about the war could determine control of Congress.",
       "source": "大西洋月刊",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-10-22 12:00",
       "ts": 1792670400,
-      "content": ""
-    },
-    {
-      "title": "Sending a Silly Meme Is an Act of Love",
-      "url": "https://www.theatlantic.com/family/2026/10/send-silly-memes/689077/?utm_source=feed",
-      "summary": "The case for a common, occasionally annoying, and secretly sweet digital habit",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-22 12:00",
-      "ts": 1792670400,
-      "content": ""
-    },
-    {
-      "title": "America Is About to See What Happens When Voters Turn to AI",
-      "url": "https://www.theatlantic.com/technology/2026/10/ai-midterm-election-voters-chatbots/689103/?utm_source=feed",
-      "summary": "Chatbots are adding a new layer of chaos ahead of the midterms.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-22 11:30",
-      "ts": 1792668600,
       "content": ""
     }
   ]
