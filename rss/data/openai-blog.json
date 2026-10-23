@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+      "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-23 17:00",
+      "ts": 1792774800,
+      "content": ""
+    },
+    {
       "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
       "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
       "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-10-21 13:00",
       "ts": 1792587600,
-      "content": ""
-    },
-    {
-      "title": "Using thousands of AI agents to uncover new leads in biological data",
-      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
-      "summary": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-21 04:50",
-      "ts": 1792558200,
       "content": ""
     }
   ]
