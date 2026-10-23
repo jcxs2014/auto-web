@@ -15,6 +15,16 @@
       "content": ""
     },
     {
+      "title": "Securing our frontier model training environment",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-23 10:00",
+      "ts": 1792749600,
+      "content": ""
+    },
+    {
       "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
       "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
       "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-10-21 07:00",
       "ts": 1792566000,
-      "content": ""
-    },
-    {
-      "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
-      "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
-      "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-21 13:00",
-      "ts": 1792587600,
       "content": ""
     }
   ]

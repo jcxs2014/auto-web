@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Rumors of the SaaS demise are greatly exaggerated",
+      "url": "https://stackoverflow.blog/2026/10/23/rumors-of-the-saas-demise-are-greatly-exaggerated/",
+      "summary": "Recorded on the floor of LDX3, Ryan chats with Nivia Henry, an engineering leader most recently at Netflix, about the reality of the supposed SaaS apocalypse, the complex calculus of the modern build-versus-buy decision in the era of AI, and the critical importance of understanding system architectures to manage long-term infrastructure costs.",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-10-23 07:40",
+      "ts": 1792741200,
+      "content": "<p>Recorded on the floor of LDX3, Ryan chats with Nivia Henry, an engineering leader most recently at Netflix, about the reality of the supposed SaaS apocalypse, the complex calculus of the modern build-versus-buy decision in the era of AI, and the critical importance of understanding system architectures to manage long-term infrastructure costs.</p>\n    <p>This episode was recorded at this year’s LDX3 by LeadDev, a conference focused on modern engineering leadership, management, and technical strategy</p>\n    <p>Nivia recently spent two and a half years tackling complex data and engineering challenges at Netflix and previously spent eight years driving product innovation at Spotify.</p>"
+    },
+    {
       "title": "The Regression Tests Nobody Writes: Capturing How Software Actually Behaves",
       "url": "https://stackoverflow.blog/2026/10/22/the-regression-tests-nobody-writes-capturing-how-software-actually-behaves/",
       "summary": "",
