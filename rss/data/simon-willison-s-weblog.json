@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Quick Study",
+      "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+      "summary": "Tool: Quick Study Prompt to Claude Opus 5.5 High: Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a watercolor illustration with P5.js. Quick Study uses Sobel edge detection, with no external libraries beyond Google Fonts. Tags: ",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-10-23 21:35",
+      "ts": 1792791313,
+      "content": "<p class=\"mobile-date-eyebrow\">23rd October 2026</p>\n    <p>Prompt <a href=\"https://claude.ai/share/71adda96-193f-4f2a-97c0-454e08066afb\">to Claude Opus 5.5 High</a>:</p>\n    <blockquote>\n<p></p><pre>Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush</pre>\n</blockquote>\n    <p>See also <a href=\"https://simonwillison.net/2026/Aug/25/pelican-watercolor/\">my previous experiment</a> getting Claude Fable to simulate a watercolor illustration with P5.js.</p>\n    <p>Quick Study uses <a href=\"https://en.wikipedia.org/wiki/Sobel_operator\">Sobel edge detection</a>, with no external libraries beyond Google Fonts.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
+    },
+    {
       "title": "Introducing Kimi K3.1 Pro",
       "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
       "summary": "Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the same). The US dollar pricing is $2.00/million tokens for input and $10/million for outp",
@@ -93,16 +103,6 @@
       "date": "2026-10-19 23:58",
       "ts": 1792454305,
       "content": "<p class=\"mobile-date-eyebrow\">19th October 2026 - Link Blog</p>\n    <p><a href=\"https://dumbmatter.com/2026/10/programming-obituary/\">My obituary for programming</a> (<a href=\"https://lobste.rs/s/wtobpt/my_obituary_for_programming\">via</a>) Jeremy Scheff poignantly captures the key loss caused by coding agents for career programmers who enjoyed the puzzle of developing code:</p>\n    <blockquote>\n<p>Programming turned into one of the greatest jobs you could imagine. You got paid to work on tricky little logic puzzles. The trickier the puzzle, the more you got paid. But even pretty simple puzzles were worth a lot of money because regular people just couldn't do it! No, they needed us. They would give us a problem and we would solve it the way we wanted. We set the strategy, we made the timeline, we defined what was and was not possible.</p></blockquote>\n    <p>If you're a programmer who thrives on building working systems and doesn't care too deeply about the problems solved along the way, LLMs are the gift that keeps on giving.</p>\n    <p>If directly solving those problems was a big part of your enjoyment, the loss is very real.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
-    },
-    {
-      "title": "llm-tools-datasette 0.1.1",
-      "url": "https://simonwillison.net/2026/Oct/18/llm-tools-datasette/",
-      "summary": "Release: llm-tools-datasette 0.1.1 When I switched LLM over to httpx2 in LLM 0.33 I forget that this would break any plugins which used httpx without directly depending on it. llm-tools-datasette was one of those plugins, now fixed. Tags: datasette, llm",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-10-18 23:43",
-      "ts": 1792366989,
-      "content": "<p class=\"mobile-date-eyebrow\">18th October 2026</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
     }
   ]
 }
