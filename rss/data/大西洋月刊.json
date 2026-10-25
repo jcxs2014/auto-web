@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Peeling the Orange",
+      "url": "https://www.theatlantic.com/books/2026/10/poem-howard-altmann-peeling/689127/?utm_source=feed",
+      "summary": "A poem",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-10-25 16:00",
+      "ts": 1792944000,
+      "content": ""
+    },
+    {
       "title": "Do Miracles Really Happen?",
       "url": "https://www.theatlantic.com/podcasts/2026/10/do-miracles-really-happen/689116/?utm_source=feed",
       "summary": "People throughout history have claimed to witness impossible occurrences. Historian Carlos Eire asks: What if they’re telling the truth?",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-10-24 01:01",
       "ts": 1792803685,
-      "content": ""
-    },
-    {
-      "title": "The GOP’s Midterms-Money Advantage Has Its Limits",
-      "url": "https://www.theatlantic.com/newsletters/2026/10/midterm-fundraising-republican-money-advantages/689136/?utm_source=feed",
-      "summary": "Cash can’t necessarily solve the challenges that Republican candidates face.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-10-23 19:45",
-      "ts": 1792784700,
       "content": ""
     }
   ]
