@@ -5,6 +5,66 @@
   "lang": "en",
   "entries": [
     {
+      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+      "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+      "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-26 13:45",
+      "ts": 1793022300,
+      "content": ""
+    },
+    {
+      "title": "ChatGPT’s expanding world of work",
+      "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "summary": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-26 10:00",
+      "ts": 1793008800,
+      "content": ""
+    },
+    {
+      "title": "How Fanatics and OpenAI streamline the fan experience",
+      "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+      "summary": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-26 07:00",
+      "ts": 1792998000,
+      "content": ""
+    },
+    {
+      "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+      "url": "https://openai.com/index/openai-cut-incident-investigation",
+      "summary": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-26 07:00",
+      "ts": 1792998000,
+      "content": ""
+    },
+    {
+      "title": "Working with academic communities to build scientific understanding",
+      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+      "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-26 00:00",
+      "ts": 1792972800,
+      "content": ""
+    },
+    {
+      "title": "Introducing GPT-6.1 Terra",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "summary": "Bringing fast and capable computer use to everyone",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-26 00:00",
+      "ts": 1792972800,
+      "content": ""
+    },
+    {
       "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
       "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
       "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
@@ -42,66 +102,6 @@
       "extra": "",
       "date": "2026-10-22 19:00",
       "ts": 1792695600,
-      "content": ""
-    },
-    {
-      "title": "What FDE means at OpenAI",
-      "url": "https://openai.com/index/forward-deployed-engineering-means",
-      "summary": "What forward deployed engineering means at OpenAI",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-22 06:00",
-      "ts": 1792648800,
-      "content": ""
-    },
-    {
-      "title": "Uber brings ChatGPT Work to all employees with OpenAI",
-      "url": "https://openai.com/index/uber-chatgpt-work-rollout",
-      "summary": "Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research, analyze data, create presentations, and complete complex workflows.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-22 00:00",
-      "ts": 1792627200,
-      "content": ""
-    },
-    {
-      "title": "How AT&T is rethinking in-house legal work with OpenAI",
-      "url": "https://openai.com/index/att-legal",
-      "summary": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-21 17:00",
-      "ts": 1792602000,
-      "content": ""
-    },
-    {
-      "title": "Broad access through consistent standards",
-      "url": "https://openai.com/index/broad-access-through-consistent-standards",
-      "summary": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-21 21:00",
-      "ts": 1792616400,
-      "content": ""
-    },
-    {
-      "title": "OpenAI models are coming to Google Cloud",
-      "url": "https://openai.com/index/openai-models-google-cloud",
-      "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-21 12:00",
-      "ts": 1792584000,
-      "content": ""
-    },
-    {
-      "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
-      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
-      "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-21 07:00",
-      "ts": 1792566000,
       "content": ""
     }
   ]
