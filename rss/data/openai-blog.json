@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+      "url": "https://openai.com/index/greptile-code-review-codex-astra",
+      "summary": "How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-26 22:00",
+      "ts": 1793052000,
+      "content": ""
+    },
+    {
+      "title": "Working with academic communities to build scientific understanding",
+      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+      "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-26 14:30",
+      "ts": 1793025000,
+      "content": ""
+    },
+    {
       "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
       "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
       "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
@@ -45,16 +65,6 @@
       "content": ""
     },
     {
-      "title": "Working with academic communities to build scientific understanding",
-      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
-      "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-26 00:00",
-      "ts": 1792972800,
-      "content": ""
-    },
-    {
       "title": "Introducing GPT-6.1 Terra",
       "url": "https://openai.com/index/introducing-gpt-6-1-terra",
       "summary": "Bringing fast and capable computer use to everyone",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-10-23 00:00",
       "ts": 1792713600,
-      "content": ""
-    },
-    {
-      "title": "Build more responsive apps with the Decisions API",
-      "url": "https://openai.com/index/decisions-api",
-      "summary": "Fast, focused, low-cost decisions for any application.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-22 19:00",
-      "ts": 1792695600,
       "content": ""
     }
   ]
