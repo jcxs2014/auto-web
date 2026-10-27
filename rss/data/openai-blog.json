@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+      "summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-27 07:00",
+      "ts": 1793084400,
+      "content": ""
+    },
+    {
       "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
       "url": "https://openai.com/index/greptile-code-review-codex-astra",
       "summary": "How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-10-23 10:00",
       "ts": 1792749600,
-      "content": ""
-    },
-    {
-      "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-      "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-      "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-23 00:00",
-      "ts": 1792713600,
       "content": ""
     }
   ]
