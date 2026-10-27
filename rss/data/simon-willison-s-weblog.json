@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Game Boy Color on My Conference Badge",
+      "url": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
+      "summary": "Game Boy Color on My Conference Badge I'm at GitHub Universe this week and, similar to last year, the conference badge is a full-blown color screen computer. I've been hacking around with it again, and then I ran into with Steve Francia... who worked with Gemini to get a full NES emulator working on it, and then went a step further and deployed an emulator for both the Game Boy and the Game Boy Co",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-10-27 19:34",
+      "ts": 1793129658,
+      "content": "<p class=\"mobile-date-eyebrow\">27th October 2026 - Link Blog</p>\n    <p><a href=\"https://spf13.com/p/game-boy-color-on-my-conference-badge/\">Game Boy Color on My Conference Badge</a>. I'm at GitHub Universe this week and, <a href=\"https://simonwillison.net/2025/Oct/28/github-universe-badge/\">similar to last year</a>, the conference badge is a full-blown color screen computer.</p>\n    <p>I've been hacking around with it again, and then I ran into with Steve Francia... who worked with Gemini to get a <a href=\"https://spf13.com/p/zelda-on-my-conference-badge/\">full NES emulator</a> working on it, and then went a step further and deployed an emulator for both the Game Boy and the Game Boy Color.</p>\n    <p>Which means, if you can obtain the ROM, you can run <a href=\"https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Link%27s_Awakening\">The Legend of Zelda: Link's Awakening</a> on your conference badge!</p>\n    <p>A neat feature of the badge is that you can turn it upside down and then use game controller touch buttons that are built into the badge body.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
+    },
+    {
       "title": "GPT-6.1 Terra",
       "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
       "summary": "GPT-6.1 Terra It's always interesting to note which aspects of a new model are emphasized in the release announcement. In the case of GPT-6.1 Terra, OpenAI went with visual reasoning and computer use: We’re introducing GPT-6.1 Terra, a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more natural writing. A significant step up from GPT‑5.6 T",
@@ -93,16 +103,6 @@
       "date": "2026-10-22 18:09",
       "ts": 1792692596,
       "content": "<p class=\"mobile-date-eyebrow\">22nd October 2026 - Link Blog</p>\n    <p><a href=\"https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation\">Donating Agent Skills to the Agentic AI Foundation</a>. News today from Anthropic:</p>\n    <blockquote>\n<p>We’re committed to keeping Agent Skills open, community-driven, and vendor-neutral. Today, we are donating the standard to the Agentic AI Foundation (AAIF) under the Linux Foundation, <a href=\"https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation\">which we co-founded</a> with Block and OpenAI last year, and to which we donated the Model Context Protocol (MCP).</p>\n</blockquote>\n    <p>I'm pleased to note I called this one <a href=\"https://simonwillison.net/2025/Dec/19/agent-skills/\">last December</a>, when Anthropic first declared skills to be an \"open standard\":</p>\n    <blockquote>\n<p>I wouldn't be surprised to see this end up <a href=\"https://simonwillison.net/2025/Dec/9/agentic-ai-foundation/\">in the AAIF</a>, recently the new home of the MCP specification.</p>\n</blockquote>\n    <p>Fun side note: since my blog content is available to Claude via the <a href=\"https://github.com/datasette/datasette-mcp\">datasette-mcp</a>\nplugin I found that post by <a href=\"https://claude.ai/share/80b341de-590b-4834-bca9-0d9c9a3a0298\">prompting Claude</a> to \"</p><pre>Use simonwillison.net MCP to find if I ever talked about how I want skills to be donated to a standards body</pre>\".\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
-    },
-    {
-      "title": "Quoting Armin Ronacher",
-      "url": "https://simonwillison.net/2026/Oct/22/armin-ronacher/",
-      "summary": "As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins. — Armin Ronacher Tags: security, generative-ai, armin-ronacher, ai, ai-security-research, llms",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-10-22 15:34",
-      "ts": 1792683253,
-      "content": "<p class=\"mobile-date-eyebrow\">22nd October 2026</p>\n    <blockquote>\n      <p>As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins.</p>\n    </blockquote>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battle Drones - a vibe coded RTS with audio-based multiplayer</a> - 20th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/12/python-3-15/\">Hello Python 3.15, goodbye 3.10, and now I can use 3.11</a> - 12th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/9/built-using-my-voice/\">A new feature for my blog, built using my voice</a> - 9th October 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\">Claude Haiku 5.5</a> - 7th October 2026</li>\n    </ul>"
     }
   ]
 }
