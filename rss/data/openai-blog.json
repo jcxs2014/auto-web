@@ -5,8 +5,28 @@
   "lang": "en",
   "entries": [
     {
+      "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+      "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+      "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-28 13:15",
+      "ts": 1793193300,
+      "content": ""
+    },
+    {
+      "title": "The future of the firm",
+      "url": "https://openai.com/index/the-future-of-the-firm",
+      "summary": "How AI might enter the org chart—beneath, beside, and between us.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-28 10:00",
+      "ts": 1793181600,
+      "content": ""
+    },
+    {
       "title": "Legora is building the agentic operating system for legal work",
-      "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
+      "url": "https://openai.com/index/legora",
       "summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
       "source": "OpenAI Blog",
       "extra": "",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-10-26 10:00",
       "ts": 1793008800,
-      "content": ""
-    },
-    {
-      "title": "How Fanatics and OpenAI streamline the fan experience",
-      "url": "https://openai.com/index/fanatics-streamline-fan-experience",
-      "summary": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-26 07:00",
-      "ts": 1792998000,
-      "content": ""
-    },
-    {
-      "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
-      "url": "https://openai.com/index/openai-cut-incident-investigation",
-      "summary": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-26 07:00",
-      "ts": 1792998000,
       "content": ""
     }
   ]
