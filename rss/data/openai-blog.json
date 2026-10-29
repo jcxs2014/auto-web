@@ -5,6 +5,36 @@
   "lang": "en",
   "entries": [
     {
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "url": "https://openai.com/index/updated-model-spec",
+      "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-29 17:00",
+      "ts": 1793293200,
+      "content": ""
+    },
+    {
+      "title": "How we detect frontier model misalignment",
+      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-29 09:00",
+      "ts": 1793264400,
+      "content": ""
+    },
+    {
+      "title": "How Ropes & Gray is developing AI for transactional diligence",
+      "url": "https://openai.com/index/ropes-gray-ai-diligence",
+      "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-10-29 07:00",
+      "ts": 1793257200,
+      "content": ""
+    },
+    {
       "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
       "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
       "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-10-26 22:00",
       "ts": 1793052000,
-      "content": ""
-    },
-    {
-      "title": "Working with academic communities to build scientific understanding",
-      "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
-      "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-26 14:30",
-      "ts": 1793025000,
-      "content": ""
-    },
-    {
-      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
-      "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
-      "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-26 13:45",
-      "ts": 1793022300,
-      "content": ""
-    },
-    {
-      "title": "ChatGPT’s expanding world of work",
-      "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
-      "summary": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-26 10:00",
-      "ts": 1793008800,
       "content": ""
     }
   ]
