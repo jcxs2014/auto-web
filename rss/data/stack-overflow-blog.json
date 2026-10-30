@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "It’s ok that computers are (sometimes) better than us",
+      "url": "https://stackoverflow.blog/2026/10/30/it-s-ok-that-computers-are-sometimes-better-than-us/",
+      "summary": "Ryan is joined by Charity Majors, co-founder and CTO at Honeycomb, for a conversation about applying the concept of immutable infrastructure to software development to treat code like cattle instead of pets, shifting the paradigm of system specifications to accommodate the rapid influx of AI-generated code, and navigating the complex ethical boundaries between system observability and human survei",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-10-30 07:40",
+      "ts": 1793346000,
+      "content": "<p>It’s ok that computers are (sometimes) better than us</p>\n    <p>Ryan is joined by Charity Majors, co-founder and CTO at Honeycomb, for a conversation about applying the concept of immutable infrastructure to software development to treat code like cattle instead of pets, shifting the paradigm of system specifications to accommodate the rapid influx of AI-generated code, and navigating the complex ethical boundaries between system observability and human surveillance in modern technology ecosystems.</p>\n    <p>Honeycomb is an observability platform that empowers engineering teams to visualize, analyze, and understand the behavior of their complex cloud systems.</p>\n    <p>Connect with Charity on her blog at charity.wtf and read her team's posts on AI norms and values on the Honeycomb blog.</p>"
+    },
+    {
       "title": "The reports of Stack Overflow's death are greatly exaggerated",
       "url": "https://stackoverflow.blog/2026/10/29/the-reports-of-stack-overflow-s-death-are-greatly-exaggerated/",
       "summary": "I’ve seen the recent predictions about Stack Overflow’s demise. They make for compelling headlines, but they confuse a change in how people access knowledge with the disappearance of the knowledge—and the company—behind it.",
@@ -43,16 +53,6 @@
       "date": "2026-10-27 07:40",
       "ts": 1793086800,
       "content": "<p>Ryan sits down with James Gosling, creator of Java at Sun Microsystems, to talk about the early networking friction that drove the need for interconnectedness, the stringent reliability requirements of consumer electronics companies that inspired the Java virtual machine, and the evolution of garbage collectors that allow Java to handle large-scale concurrent memory management.</p>\n    <p>Check out CultRepo’s recently released Java documentary to learn more about the early history of the language and the engineers who built it.</p>"
-    },
-    {
-      "title": "Rumors of the SaaS demise are greatly exaggerated",
-      "url": "https://stackoverflow.blog/2026/10/23/rumors-of-the-saas-demise-are-greatly-exaggerated/",
-      "summary": "Recorded on the floor of LDX3, Ryan chats with Nivia Henry, an engineering leader most recently at Netflix, about the reality of the supposed SaaS apocalypse, the complex calculus of the modern build-versus-buy decision in the era of AI, and the critical importance of understanding system architectures to manage long-term infrastructure costs.",
-      "source": "Stack Overflow Blog",
-      "extra": "",
-      "date": "2026-10-23 07:40",
-      "ts": 1792741200,
-      "content": "<p>Recorded on the floor of LDX3, Ryan chats with Nivia Henry, an engineering leader most recently at Netflix, about the reality of the supposed SaaS apocalypse, the complex calculus of the modern build-versus-buy decision in the era of AI, and the critical importance of understanding system architectures to manage long-term infrastructure costs.</p>\n    <p>This episode was recorded at this year’s LDX3 by LeadDev, a conference focused on modern engineering leadership, management, and technical strategy</p>\n    <p>Nivia recently spent two and a half years tackling complex data and engineering challenges at Netflix and previously spent eight years driving product innovation at Spotify.</p>"
     }
   ]
 }
