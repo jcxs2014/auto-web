@@ -22,7 +22,7 @@ from archive_util import write_archive
 from nav_util import NAV_CSS, build_nav, FOOTER_CSS, build_footer
 from sources_util import fetch_hf_papers, fetch_hn_ai, fetch_arxiv_cs, dedup, attach_cn
 
-BASE = "https://aihot.virxact.com"
+BASE = "https://aihot.news"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 BJ = timezone(timedelta(hours=8))
 
@@ -59,20 +59,22 @@ def fetch(path: str) -> dict:
         return {"_error": str(e), "_path": path}
 
 
+def _report_items_total(rep: dict) -> int:
+    return sum(len(s.get("items", [])) for s in rep.get("sections", []))
+
+
 def fetch_daily() -> dict:
-    """Fetch today's daily; fall back to most recent if today empty/missing."""
-    d = fetch("/api/public/daily")
-    # Validate: must have sections with at least one item total
-    if isinstance(d, dict) and d.get("sections"):
-        total = sum(len(s.get("items", [])) for s in d["sections"])
-        if total > 0:
-            return d
-    # Fallback: list dailies, pick most recent
-    listing = fetch("/api/public/dailies?take=5")
+    """Fetch latest daily report (v1 API); fall back to index -> dated endpoint."""
+    d = fetch("/api/v1/dailies/latest")
+    rep = d.get("report") if isinstance(d, dict) else None
+    if isinstance(rep, dict) and rep.get("sections") and _report_items_total(rep) > 0:
+        return rep
+    # Fallback: list dailies (v1: limit instead of take), pick most recent date
+    listing = fetch("/api/v1/dailies?limit=5")
     recent_date = None
-    if isinstance(listing, dict) and listing.get("items"):
-        # items may be list of {date: "..."} or similar
-        for it in listing["items"][:5]:
+    items = listing.get("items") if isinstance(listing, dict) else None
+    if isinstance(items, list):
+        for it in items[:5]:
             cand = it.get("date") if isinstance(it, dict) else None
             if cand:
                 recent_date = cand
@@ -82,15 +84,14 @@ def fetch_daily() -> dict:
         if cand:
             recent_date = cand
     if recent_date:
-        d2 = fetch(f"/api/public/daily/{recent_date}")
-        if isinstance(d2, dict) and d2.get("sections"):
-            total2 = sum(len(s.get("items", [])) for s in d2["sections"])
-            if total2 > 0:
-                return d2
-    # If we got here with a non-empty d (had sections but zero items), return it anyway
-    if isinstance(d, dict) and d.get("sections"):
-        return d
-    raise RuntimeError(f"无法从 AI HOT 拉到任何日报数据。daily={d!r}, listing={listing!r}")
+        d2 = fetch(f"/api/v1/dailies/{recent_date}")
+        rep2 = d2.get("report") if isinstance(d2, dict) else None
+        if isinstance(rep2, dict) and rep2.get("sections") and _report_items_total(rep2) > 0:
+            return rep2
+    # If we got here with a report that had sections but zero items, return it anyway
+    if isinstance(rep, dict) and rep.get("sections"):
+        return rep
+    raise RuntimeError(f"无法从 AI HOT 拉到任何日报数据。latest={d!r}, listing={listing!r}")
 
 
 def cn_truncate(s: str, n: int = 60) -> str:
@@ -156,7 +157,7 @@ def build_html(d: dict) -> tuple[str, str, int, dict]:
     # 本页真正被重生成的时间（随每次自动更新变化），区别于 AI HOT 数据源期次
     _now = datetime.now(BJ)
     page_updated = f"{_now.month}月{_now.day}日 {_now.strftime('%H:%M')}（北京时间）"
-    canonical = d.get("attribution", {}).get("canonical", f"{BASE}/daily/{date_str}")
+    canonical = d.get("links", {}).get("aihot", f"{BASE}/daily/{date_str}")
 
     sections_by_label = {s["label"]: s["items"] for s in d["sections"]}
     grouped = []
@@ -191,9 +192,10 @@ def build_html(d: dict) -> tuple[str, str, int, dict]:
         for seq, it in indexed:
             title = html.escape(it["title"])
             summary = html.escape(cn_truncate(it.get("summary", ""), 60))
-            source = html.escape(it.get("sourceName", "未知来源"))
-            url = html.escape(it.get("sourceUrl", it.get("permalink", "#")))
-            permalink = html.escape(it.get("permalink", ""))
+            source = html.escape((it.get("source") or {}).get("name", "未知来源"))
+            links = it.get("links") or {}
+            url = html.escape(links.get("original", "#"))
+            permalink = html.escape(links.get("aihot", ""))
             cards.append(f"""
         <article class="card">
           <div class="card-head">
