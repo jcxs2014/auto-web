@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Rakuten Kobo and Kindle ereaders have a timezone bug",
+      "url": "https://goodereader.com/blog/kindle/rakuten-kobo-and-kindle-ereaders-have-a-timezone-bug",
+      "summary": "Amazon Kindle and Kobo ereaders are having an automatic time zone bug for residents of British Columbia. The post Rakuten Kobo and Kindle ereaders have a timezone bug first appeared on Good e-Reader.",
+      "source": "Good e-Reader",
+      "extra": "",
+      "date": "2026-11-01 15:27",
+      "ts": 1793546852,
+      "content": "<p>Rakuten Kobo ereaders and Amazon Kindles are having a time zone bug for people who live in British Columbia, Canada. The automatic time zone system is not taking into account the elimination of going forward or back at various points of the year.</p>\n    <p>The province officially abolished the seasonal clock change. Instead of “falling back” to standard time, B.C. has remained permanently on daylight saving time.</p>\n    <p>Because B.C. did not turn its clocks back, it is now one hour ahead of me Washington State and California during the winter months.</p>\n    <p>Until a possible patch is pushed out on the future users will have to disable automatic time zone and manually set it in the settings menu.</p>\n    <p></p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
+    },
+    {
+      "title": "Readwise Books is now available",
+      "url": "https://goodereader.com/blog/digital-publishing/readwise-books-is-now-available",
+      "summary": "Runs out of the box on BOOX, BIGME, Daylight Computer, and any other Android e-ink device. The post Readwise Books is now available first appeared on Good e-Reader.",
+      "source": "Good e-Reader",
+      "extra": "",
+      "date": "2026-11-01 13:57",
+      "ts": 1793541420,
+      "content": "<p><br></br>\nReadwise has been building tools for power readers. There’s the eponymous product, Readwise, which stores and categorizes your Kindle highlights to help you remember what you’ve read. There’s Readwise Reader, an app for reading newsletters, PDFs, and web articles you’ve saved for later.</p>\n    <p>The newest evolution in the suite, Readwise Books, is a dedicated digital bookstore and full-fledged e-reader platform. Built as a direct alternative to native Kindle or Kobo storefronts, it handles Digital Rights Management (DRM) for purchased books, keeping a free-to-access ecosystem distinct from the short-form processing in Reader.</p>\n    <p>If you already pay for a standard Readwise subscription, you have instant access to the mobile app and beta. Non-subscribers can join a rolling waitlist on the official website or get an invite code from an existing user.</p>\n    <p>Runs out of the box on BOOX, Daylight Computer, and any other Android e-ink device.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
+    },
+    {
       "title": "Ask this book feature now on Kindle ereaders",
       "url": "https://goodereader.com/blog/kindle/ask-this-book-feature-now-on-kindle-ereaders",
       "summary": "Kindle Software Update 5.20.2 brings the AI-powered \"Ask This Book\" feature directly to Kindle e-readers. The post Ask this book feature now on Kindle ereaders first appeared on Good e-Reader.",
