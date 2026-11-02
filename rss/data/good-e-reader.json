@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Musnap Air Pro 8 ereader is now available",
+      "url": "https://goodereader.com/blog/electronic-readers/musnap-air-pro-8-ereader-is-now-available",
+      "summary": "The powerful 8-core chip ensures a fluid system performance, allowing apps to open and run seamlessly.​You have the freedom to install your favorite apps. The post Musnap Air Pro 8 ereader is now available first appeared on Good e-Reader.",
+      "source": "Good e-Reader",
+      "extra": "",
+      "date": "2026-11-02 02:30",
+      "ts": 1793586626,
+      "content": "<p>The Musnap Air Pro is an 8.2-inch Android-based E Ink e-reader and paper tablet. It positions itself as a highly portable, premium device built for both intensive reading and digital note-taking.</p>\n    <p>The Musnap Air Pro is a highly compelling 8.2-inch e-ink tablet that perfectly bridges the gap between smaller pocket-sized readers and cumbersome 10-inch devices. Its standout physical engineering features a remarkably sleek 5.4mm unibody metal frame that weighs a mere 270g, yet provides an embedded reinforced structure for excellent daily durability. The monochrome screen utilises cutting-edge Carta 1300 e-ink technology at a sharp 293 PPI, paired with an adaptable front light and an anti-glare finish that beautifully mimics paper even under direct sunlight.</p>\n    <p>Performance is noticeably fluid courtesy of a 6nm octa-core processor and 4GB of RAM, enabling smooth third-party Android app navigation while proprietary TurboRefresh technology manages screen ghosting exceptionally well.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
+    },
+    {
       "title": "Rakuten Kobo and Kindle ereaders have a timezone bug",
       "url": "https://goodereader.com/blog/kindle/rakuten-kobo-and-kindle-ereaders-have-a-timezone-bug",
       "summary": "Amazon Kindle and Kobo ereaders are having an automatic time zone bug for residents of British Columbia. The post Rakuten Kobo and Kindle ereaders have a timezone bug first appeared on Good e-Reader.",
@@ -73,16 +83,6 @@
       "date": "2026-10-26 11:42",
       "ts": 1793014967,
       "content": "<p>Amazon added handwriting and stylus support to the Kindle Android app, allowing you to write handwritten notes, sticky notes, and active canvas notes directly on supported Android phones and tablets. You can write with a stylus on select Android devices such as Galaxy Tab and Onyx Boox products.</p>\n    <p>The app update also makes text in the book automatically flow around your handwritten notes, similar to the Kindle Scribe experience. You can choose different pen styles, sizes, and colors, which is useful for people who love using the Kindle app to read e-books, comics, and manga. The rollout appears to be exclusive to Android tablets and phones, as the feature has yet to find its way to Apple devices such as the iPad or iPhone.</p>\n    <p>Early user feedback has praised the feature as a massive upgrade for productivity, allowing readers to seamlessly review, annotate, and color-code text without being chained to physical paper or dedicated e-ink devices. By expanding on recent updates that introduced text underlining and outlines, Amazon has closed a frustrating gap between its mobile app and hardware readers. While Apple iPadOS users are still waiting for their version of the feature, Android users now have access to a versatile, centralized hub where typed text highlights and fluid handwriting live side by side.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
-    },
-    {
-      "title": "Kindle Software update fixes Kindle Clip bugs",
-      "url": "https://goodereader.com/blog/kindle/kindle-software-update-fixes-kindle-clip-bugs",
-      "summary": "An upcoming Kindle software update fixes Bluetooth remotes, extends battery life, and includes the new Kindle+ rebrand. The post Kindle Software update fixes Kindle Clip bugs first appeared on Good e-Reader.",
-      "source": "Good e-Reader",
-      "extra": "",
-      "date": "2026-10-25 23:40",
-      "ts": 1792971600,
-      "content": "<p>Amazon is slowly rolling out a new software update for several current-generation e-readers and Scribe e-notebooks, as well as some older models. The 5.20.1.0.2 firmware fixes the Kindle Clip and other <a href=\"https://www.xiaohongshu.com/explore/6adcbc39000000002a0396fe?app_platform=ios&amp;app_version=9.48&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;noteAttributes=buyable_goods&amp;xsec_token=CB4LDzxTTb-DoWQnAarT2QikCrvbUs5UytI9Qk1Fu5eLE=&amp;author_share=1&amp;xhsshare=CopyLink&amp;shareRedId=ODg1NUU3Okw2NzUyOTgwNjczOTdGR0g6&amp;apptime=1792858676&amp;share_id=c55ed201aee94eb19c57c6426ea8fe86&amp;track_code=782xVnX5niD\">Bluetooth page-turners</a> that don’t count page turns as user activity, so the screen would often time out and switch to the lock screen. After the update, page turns from the remote are now recognized as activity. The Kindle stays awake while you’re reading and only goes to sleep after the configured period of inactivity.</p>\n    <p>The update also switches the branding on the e-readers and e-notebooks from Kindle Unlimited to Kindle+. Amazon switched the branding last week because Kindle Unlimited suggested an unlimited number of books, while the service offers manga, magazines, audiobooks, and other digital content. The biggest change in the rebrand is a major expansion of the audiobook library, including both human-narrated titles and AI-generated narration through Amazon’s Virtual Voice program.</p>\n    <p>Social media also claims the update extends battery life by a moderate amount, giving more reading and listening time on the Kindle.</p>\n    <p>Amazon has not posted the change log yet on its website, but many Kindle users all over the world are already receiving it.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
     }
   ]
 }
