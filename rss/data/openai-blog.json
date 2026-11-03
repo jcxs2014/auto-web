@@ -5,6 +5,46 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Scaling Git at OpenAI",
+      "url": "https://openai.com/index/scaling-git-at-openai",
+      "summary": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-02 15:30",
+      "ts": 1793633400,
+      "content": ""
+    },
+    {
+      "title": "Introducing the Grid Protectors Program",
+      "url": "https://openai.com/index/grid-protectors-program",
+      "summary": "OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-02 15:00",
+      "ts": 1793631600,
+      "content": ""
+    },
+    {
+      "title": "LifeVal",
+      "url": "https://openai.com/index/lifeval",
+      "summary": "Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-02 09:00",
+      "ts": 1793610000,
+      "content": ""
+    },
+    {
+      "title": "Qodo builds context into AI code review with Codex",
+      "url": "https://openai.com/index/qodo-codex-plugin",
+      "summary": "Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-02 00:00",
+      "ts": 1793577600,
+      "content": ""
+    },
+    {
       "title": "Making it easier for websites to express AI training preferences",
       "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
       "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
@@ -62,46 +102,6 @@
       "extra": "",
       "date": "2026-10-29 07:00",
       "ts": 1793257200,
-      "content": ""
-    },
-    {
-      "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
-      "url": "https://openai.com/index/credit-saison",
-      "summary": "Credit Saison’s ChatGPT Enterprise pilot delivered 954% ROI. See how leaders and employees helped turn the results into companywide adoption.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-29 00:00",
-      "ts": 1793232000,
-      "content": ""
-    },
-    {
-      "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
-      "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
-      "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-28 13:15",
-      "ts": 1793193300,
-      "content": ""
-    },
-    {
-      "title": "The future of the firm",
-      "url": "https://openai.com/index/the-future-of-the-firm",
-      "summary": "How AI might enter the org chart—beneath, beside, and between us.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-28 10:00",
-      "ts": 1793181600,
-      "content": ""
-    },
-    {
-      "title": "Legora is building the agentic operating system for legal work",
-      "url": "https://openai.com/index/legora",
-      "summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-28 09:30",
-      "ts": 1793179800,
       "content": ""
     }
   ]
