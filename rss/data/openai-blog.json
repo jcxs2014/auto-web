@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Accelerating engineering for the physical world",
+      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+      "summary": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-03 12:00",
+      "ts": 1793707200,
+      "content": ""
+    },
+    {
+      "title": "How Cisco defends at machine speed with OpenAI",
+      "url": "https://openai.com/index/cisco-cyber",
+      "summary": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-03 08:00",
+      "ts": 1793692800,
+      "content": ""
+    },
+    {
       "title": "Heimstaden is changing residential real estate management with AI",
       "url": "https://openai.com/index/heimstaden",
       "summary": "Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe.",
@@ -12,6 +32,16 @@
       "extra": "",
       "date": "2026-11-03 08:00",
       "ts": 1793692800,
+      "content": ""
+    },
+    {
+      "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+      "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
+      "summary": "Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-03 00:00",
+      "ts": 1793664000,
       "content": ""
     },
     {
@@ -35,9 +65,9 @@
       "content": ""
     },
     {
-      "title": "Rewarding defenders with bigger bug bounties",
-      "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
-      "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
+      "title": "Preparing our next security sprint to harden OpenAI",
+      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+      "summary": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-11-02 18:00",
@@ -45,9 +75,9 @@
       "content": ""
     },
     {
-      "title": "Preparing our next security sprint to harden OpenAI",
-      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-      "summary": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+      "title": "Rewarding defenders with bigger bug bounties",
+      "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+      "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-11-02 18:00",
@@ -65,16 +95,6 @@
       "content": ""
     },
     {
-      "title": "Qodo builds context into AI code review with Codex",
-      "url": "https://openai.com/index/qodo-codex-plugin",
-      "summary": "Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-02 00:00",
-      "ts": 1793577600,
-      "content": ""
-    },
-    {
       "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
       "url": "https://openai.com/index/dan-driscoll-joins-openai",
       "summary": "OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-11-02 00:00",
       "ts": 1793577600,
-      "content": ""
-    },
-    {
-      "title": "Making it easier for websites to express AI training preferences",
-      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
-      "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-30 09:30",
-      "ts": 1793352600,
-      "content": ""
-    },
-    {
-      "title": "Community safety report and new protections for teens",
-      "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
-      "summary": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-10-30 09:00",
-      "ts": 1793350800,
       "content": ""
     }
   ]
