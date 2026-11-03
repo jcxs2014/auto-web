@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI HOT 日报 · 2026-11-03</title>
+<style>
+  :root {
+    --bg: #f5f7fb; --bg-soft: #eaeef5; --bg-card: #ffffff; --bg-card-hover: #eef2f9;
+    --border: #e1e6ef; --text: #1a2030; --text-dim: #59647a; --text-mute: #8b95a8;
+    --accent: #3b7df0; --accent-2: #6a4cf0; --accent-3: #0c9e8b;
+    --shadow: 0 6px 24px rgba(20,30,60,0.10);
+    --nav-bg: rgba(255,255,255,0.85);
+    --pill-bg: rgba(15,23,42,0.05);
+    --accent-soft: rgba(59,125,240,0.12);
+    --accent-soft-border: rgba(59,125,240,0.30);
+    --accent3-soft: rgba(12,158,139,0.10);
+    --accent3-soft-border: rgba(12,158,139,0.28);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1115; --bg-soft: #161a22; --bg-card: #1a1f29; --bg-card-hover: #1f2531;
+    --border: #2a3140; --text: #e6e9ef; --text-dim: #9aa3b2; --text-mute: #6b7384;
+    --accent: #6ea8ff; --accent-2: #8b7bff; --accent-3: #4fd1c5;
+    --shadow: 0 6px 24px rgba(0,0,0,0.35);
+    --nav-bg: rgba(15,17,21,0.92);
+    --pill-bg: rgba(255,255,255,0.06);
+    --accent-soft: rgba(110,168,255,0.1);
+    --accent-soft-border: rgba(110,168,255,0.25);
+    --accent3-soft: rgba(79,209,197,0.08);
+    --accent3-soft-border: rgba(79,209,197,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    -webkit-font-smoothing: antialiased; min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+  .hero {
+    background: linear-gradient(135deg, rgba(110,168,255,0.08), rgba(139,123,255,0.06) 50%, rgba(79,209,197,0.05)),
+                radial-gradient(circle at 80% 0%, rgba(246,135,179,0.08), transparent 50%), var(--bg-soft);
+    border-bottom: 1px solid var(--border); padding: 48px 24px 40px;
+  }
+  .hero-inner { max-width: 1200px; margin: 0 auto; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 2px;
+    color: var(--accent); text-transform: uppercase;
+    background: var(--accent-soft); border: 1px solid var(--accent-soft-border);
+    padding: 4px 10px; border-radius: 999px; margin-bottom: 16px;
+  }
+  .hero-title {
+    font-size: clamp(28px, 4vw, 42px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px;
+    background: linear-gradient(90deg, var(--text), var(--accent));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-date { color: var(--text-dim); font-size: 15px; margin-bottom: 6px; }
+  .hero-window { color: var(--text-mute); font-size: 13px; margin-bottom: 28px; }
+  .updated-badge { color: var(--accent); font-weight: 700; }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .total-pill {
+    display: inline-flex; align-items: baseline; gap: 6px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #0b0d12; padding: 10px 18px; border-radius: 12px; font-weight: 700; box-shadow: var(--shadow);
+  }
+  .total-pill .num { font-size: 24px; } .total-pill .lbl { font-size: 12px; opacity: 0.85; }
+  .chip-stat {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 8px 14px; border-radius: 10px; font-size: 13px;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .chip-stat:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .chip-emoji { font-size: 16px; } .chip-label { color: var(--text-dim); } .chip-num { color: var(--text); font-weight: 700; }
+  
+:root{
+  --nav-line:var(--line, var(--border));
+  --nav-mute:var(--muted, var(--text-mute));
+}
+.nav{position:sticky;top:0;z-index:30;background:var(--nav-bg);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--nav-line)}
+.nav-inner{max-width:1180px;width:100%;margin:0 auto;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;
+  padding:11px max(20px,env(safe-area-inset-right)) 11px max(20px,env(safe-area-inset-left));overflow-x:clip}
+.nav-brand{font-weight:800;font-size:17px;margin-right:auto;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex:1 1 auto;min-width:0;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-link{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;
+  background:var(--pill-bg);color:var(--text);text-decoration:none;font-size:13.5px;white-space:nowrap;transition:filter .15s}
+.nav-link:hover{filter:brightness(.95)}
+.nav-emoji{font-size:14px}
+.nav-count{font-size:11px;color:var(--nav-mute)}
+.home-link,.theme-toggle,.nav-toggle,.hamburger{display:inline-flex;align-items:center;gap:5px;
+  padding:5px 12px;border-radius:999px;font-size:13.5px;color:var(--text);background:var(--pill-bg);
+  border:1px solid var(--nav-line);text-decoration:none;white-space:nowrap;cursor:pointer;transition:border-color .15s,filter .15s}
+.home-link:hover,.theme-toggle:hover,.nav-toggle:hover{border-color:var(--accent)}
+.hamburger{border-radius:10px;font-size:18px;line-height:1;display:none;justify-content:center}
+.nav-toggle.off{opacity:.5}
+@media(max-width:1024px){
+  /* 单行布局：品牌可收缩+省略号兜底，其余控件不收缩，确保汉堡永远落在右 padding 内、绝不溢出视口 */
+  .nav-inner{flex-wrap:nowrap;gap:8px;overflow:hidden}
+  .nav-brand{font-size:15px;margin-right:auto;flex:1 1 auto;min-width:0;
+    display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .home-link{padding:5px 9px;font-size:12.5px;flex-shrink:0}
+  .theme-toggle,.nav-toggle{padding:5px 9px;font-size:12.5px;flex-shrink:0}
+  .hamburger{flex-shrink:0;display:inline-flex}
+  .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:6px;
+    padding:10px max(16px,env(safe-area-inset-left)) 14px max(16px,env(safe-area-inset-right));
+    background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--nav-line);box-shadow:var(--shadow);z-index:40}
+  .nav.menu-open .nav-links{display:flex}
+  .nav-link{width:100%;justify-content:space-between;padding:11px 14px;font-size:15px;border-radius:10px}
+  .nav-count{font-size:12px}
+  /* 翻译控件默认收进汉堡抽屉，避免与汉堡并排横向溢出视口 */
+  .nav-translate{display:none}
+  .nav.menu-open .nav-translate{display:inline-flex}
+}
+/* Google 网站翻译器：隐藏其默认顶部横幅（避免把页面下推）；让小工具融入导航栏 */
+.goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}
+body{top:0!important}
+#google_translate_element{display:inline-flex;align-items:center;font-size:13px;color:var(--text)}
+#google_translate_element .goog-te-gadget{font-size:13px!important;color:var(--text)}
+#google_translate_element .goog-te-gadget-simple{background:var(--pill-bg);border:1px solid var(--nav-line);border-radius:999px;padding:3px 8px}
+#google_translate_element img{display:none!important}
+#google_translate_element select{font-size:13px;color:var(--text)}
+/* 翻译控件容器：Google 条 + Bing 兜底链接 并排；Bing 作为 Google 加载失败时的国内兜底 */
+.nav-translate{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
+.nav-bing-translate{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;
+  background:var(--pill-bg);border:1px solid var(--nav-line);color:var(--text);
+  text-decoration:none;font-size:13px;white-space:nowrap;transition:border-color .15s,background .15s}
+.nav-bing-translate:hover{border-color:var(--accent)}
+.nav-bing-translate.warn{border-color:#d97706;background:#fff7ed;color:#b45309}
+@media(max-width:1024px){
+  .nav-translate{width:100%;margin-left:0;justify-content:flex-start;
+    padding:8px max(16px,env(safe-area-inset-left)) 2px max(16px,env(safe-area-inset-left));
+    border-top:1px solid var(--nav-line)}
+}
+
+  
+.ext-res{max-width:1080px;margin:36px auto 0;padding:22px 18px 6px;border-top:1px solid var(--line)}
+.ext-res h3{font-size:16px;margin-bottom:16px;color:var(--text);display:flex;align-items:center;gap:8px}
+.ext-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:18px 22px}
+@media(max-width:900px){.ext-cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ext-cols{grid-template-columns:1fr}}
+.ext-col h4{font-size:13.5px;color:var(--accent2);margin:0 0 9px;font-weight:700}
+.ext-col a{display:block;color:var(--text);text-decoration:none;font-size:13px;padding:5px 0;
+  border-bottom:1px solid var(--line);transition:color .15s, padding-left .15s}
+.ext-col a:hover{color:var(--accent2);padding-left:5px}
+.ext-note{margin-top:18px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7}
+
+
+  main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 64px; }
+  .section { margin-bottom: 48px; }
+  .section-head {
+    display: flex; align-items: center; gap: 12px; padding-bottom: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--border);
+  }
+  .section-head h2 { font-size: 20px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+  .sec-emoji { font-size: 22px; }
+  .sec-count { color: var(--text-mute); font-size: 13px; background: var(--bg-card); padding: 2px 10px; border-radius: 999px; border: 1px solid var(--border); }
+  .back-top { margin-left: auto; color: var(--text-mute); font-size: 14px; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border); transition: all 0.15s; }
+  .back-top:hover { color: var(--accent); border-color: var(--accent); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 12px;
+    transition: transform 0.18s, border-color 0.18s, background 0.18s; position: relative; overflow: hidden;
+  }
+  .card::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, var(--accent), transparent); opacity: 0.6; transition: opacity 0.18s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: rgba(110,168,255,0.4); background: var(--bg-card-hover); box-shadow: var(--shadow); }
+  .card:hover::before { opacity: 1; }
+  .card-head { display: flex; align-items: center; gap: 10px; }
+  .seq {
+    font-family: "SF Mono", "JetBrains Mono", Menlo, monospace; font-size: 13px; font-weight: 700;
+    color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-soft-border);
+    padding: 2px 8px; border-radius: 6px; letter-spacing: 0.5px; flex-shrink: 0;
+  }
+  .source-chip {
+    font-size: 11px; color: var(--text-dim); background: var(--pill-bg);
+    border: 1px solid var(--border); padding: 3px 10px; border-radius: 999px;
+    max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .card-extra { font-size: 11px; color: var(--accent-3); background: var(--accent3-soft); border: 1px solid var(--accent3-soft-border); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .card-date { font-size: 11px; color: var(--text-mute); }
+  .card-title { font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); }
+  .card-summary { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+  .card-title-zh { font-size: 13px; font-weight: 500; line-height: 1.5; color: var(--accent); }
+  .card-summary-zh { font-size: 13px; color: var(--text-dim); line-height: 1.7; margin-top: 2px; border-left: 2px solid var(--accent-soft-border); padding-left: 8px; }
+  .card-foot { display: flex; gap: 8px; margin-top: auto; padding-top: 4px; }
+  .btn-primary, .btn-ghost {
+    display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 8px;
+    font-size: 12px; font-weight: 500; transition: all 0.15s; border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--accent); color: #0b0d12; }
+  .btn-primary:hover { background: #82b6ff; transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--text-mute); border-color: var(--border); }
+  .btn-ghost:hover { color: var(--text); border-color: var(--text-mute); }
+  footer {
+    max-width: 1200px; margin: 0 auto; padding: 32px 24px 48px;
+    border-top: 1px solid var(--border); text-align: center; color: var(--text-mute); font-size: 12px; line-height: 1.8;
+  }
+  footer a { color: var(--accent); } footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .hero { padding: 32px 16px 28px; }
+    .hero-stats { gap: 8px; }
+    .chip-stat { padding: 6px 10px; font-size: 12px; }
+    main { padding: 24px 16px 48px; }
+    .grid { grid-template-columns: 1fr; gap: 12px; }
+    .card { padding: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+<script>
+  (function(){ try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') { document.documentElement.setAttribute('data-theme', t); } } catch(e) {} })();
+</script>
+</head>
+<body>
+<div id="top"></div>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">⚡ AI HOT · Daily Briefing</span>
+    <h1 class="hero-title">AI 日报 · 2026年11月3日 周二</h1>
+    <p class="hero-date">数据窗口：11月2日 08:00 — 11月3日 08:00（北京时间） · 数据生成：11月3日 08:00（北京时间）（AI HOT 期次）</p>
+    <p class="hero-window">本页更新：<span class="updated-badge">11月3日 20:44（北京时间）</span> · 多源聚合：AI HOT · Hugging Face · Hacker News · arXiv</p>
+    <div class="hero-stats">
+      <span class="total-pill"><span class="num">40</span><span class="lbl">条精选</span></span>
+      <span class="chip-stat"><span class="chip-emoji">🧠</span><span class="chip-label">模型发布/更新</span><span class="chip-num">0</span></span><span class="chip-stat"><span class="chip-emoji">🚀</span><span class="chip-label">产品发布/更新</span><span class="chip-num">2</span></span><span class="chip-stat"><span class="chip-emoji">📰</span><span class="chip-label">行业动态</span><span class="chip-num">2</span></span><span class="chip-stat"><span class="chip-emoji">📄</span><span class="chip-label">论文研究</span><span class="chip-num">1</span></span><span class="chip-stat"><span class="chip-emoji">💡</span><span class="chip-label">技巧与观点</span><span class="chip-num">1</span></span><span class="chip-stat"><span class="chip-emoji">🔬</span><span class="chip-label"> Hugging Face 论文</span><span class="chip-num">12</span></span><span class="chip-stat"><span class="chip-emoji">💬</span><span class="chip-label"> Hacker News 热议</span><span class="chip-num">14</span></span><span class="chip-stat"><span class="chip-emoji">📄</span><span class="chip-label"> arXiv 最新 AI</span><span class="chip-num">8</span></span>
+    </div>
+  </div>
+</header>
+<nav class="nav"><div class="nav-inner"><a class="home-link" href="../index.html" title="返回首页">← 首页</a><span class="nav-brand">📰 AI HOT 科技日报</span><span class="nav-links"><a href="#models" class="nav-link"><span class="nav-emoji">🧠</span>模型发布/更新<span class="nav-count">0</span></a><a href="#products" class="nav-link"><span class="nav-emoji">🚀</span>产品发布/更新<span class="nav-count">2</span></a><a href="#industry" class="nav-link"><span class="nav-emoji">📰</span>行业动态<span class="nav-count">2</span></a><a href="#papers" class="nav-link"><span class="nav-emoji">📄</span>论文研究<span class="nav-count">1</span></a><a href="#tips" class="nav-link"><span class="nav-emoji">💡</span>技巧与观点<span class="nav-count">1</span></a><a class="nav-link" href="../rss/index.html">📡 RSS</a><a href="#hf" class="nav-link"><span class="nav-emoji">🔬</span> Hugging Face 论文<span class="nav-count">12</span></a><a href="#hn" class="nav-link"><span class="nav-emoji">💬</span> Hacker News 热议<span class="nav-count">14</span></a><a href="#arxiv" class="nav-link"><span class="nav-emoji">📄</span> arXiv 最新 AI<span class="nav-count">8</span></a></span><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button></div></nav><span id="nav-translate" class="nav-translate"><div id="google_translate_element"></div><a id="nav-bing-translate" class="nav-bing-translate" href="#" onclick="openBingTranslate();return false;" title="用 Bing 整页翻译（国内可用）">🌐 Bing 翻译</a><script>function googleTranslateElementInit(){  try{ new google.translate.TranslateElement({    pageLanguage:"zh-CN",    includedLanguages:"en,zh-CN,ja,fr,de,ko,ru,es,it,pt",    layout:google.translate.TranslateElement.InlineLayout.SIMPLE,    autoDisplay:false  }, "google_translate_element"); }catch(e){}}function openBingTranslate(){  var u=encodeURIComponent(location.href);  window.open("https://cn.bing.com/translator?from=en&to=zh-CHS&text="+u,"_blank");}setTimeout(function(){  var g=document.querySelector(".goog-te-combo");  var b=document.getElementById("nav-bing-translate");  if(!g && b){ b.classList.add("warn"); b.title="Google 翻译不可用，请改用 Bing 翻译"; }},3500);</script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script></span>
+<main>
+
+      <section id="models" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🧠</span>模型发布/更新</h2>
+          <span class="sec-count">0 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        </div>
+      </section>
+
+      <section id="products" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🚀</span>产品发布/更新</h2>
+          <span class="sec-count">2 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="Claude：Blog（网页）">Claude：Blog（网页）</span>
+          </div>
+          <h3 class="card-title">Claude Platform 推出 message threads 公测，降低长会话智能体延迟</h3>
+          <p class="card-summary">Anthropic 在 Claude Platform 推出 message threads 公测，智能体每轮只需发送新…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://claude.com/blog/message-threads" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/sg5u3u91kw42j1grtyp3ny65n" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="公众号：腾讯混元">公众号：腾讯混元</span>
+          </div>
+          <h3 class="card-title">腾讯混元发布 Hyra 2.0：让通用 agent 研发可复用的科学工具与模型</h3>
+          <p class="card-summary">腾讯混元发布 Hyra 2.0，将自动化科研重点从直接解题转向由 agent 研发和升级科学模型、工作流与软件工具。系统…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&amp;mid=2247498763&amp;idx=1&amp;sn=279f8fb4e43a987fdc0aa2af0b0f7958" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/l37ydaic43icz85huclc2io6c" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="industry" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">📰</span>行业动态</h2>
+          <span class="sec-count">2 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="OpenAI：官网动态（RSS · 排除企业/客户案例）">OpenAI：官网动态（RSS · 排除企业/客户案例）</span>
+          </div>
+          <h3 class="card-title">OpenAI 推出 Grid Protectors 计划，从 Georgia 校园开始支持电网削峰</h3>
+          <p class="card-summary">OpenAI 推出 Grid Protectors 计划，与电力公司、监管机构和政策制定者合作，让未来算力校园在电网紧张…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://openai.com/index/grid-protectors-program" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/sxbs5a90fgybhyucacmzvrc6w" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="The Decoder：AI News（RSS）">The Decoder：AI News（RSS）</span>
+          </div>
+          <h3 class="card-title">Anthropic 季度营收增长十二倍至近 170 亿美元，但净亏损达 233 亿美元</h3>
+          <p class="card-summary">据 Bloomberg 与 The Information，Anthropic 该季度营收近 170 亿美元，为一年前的…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/owfopy087lszd1cpfp3c82pxv" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="papers" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">📄</span>论文研究</h2>
+          <span class="sec-count">1 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="OpenAI：Alignment 研究博客（RSS）">OpenAI：Alignment 研究博客（RSS）</span>
+          </div>
+          <h3 class="card-title">OpenAI 训练并部署激活分类器作为前沿模型安全监控层</h3>
+          <p class="card-summary">OpenAI 自 GPT-5.6 起在其最强模型的内部和外部流量上部署激活分类器（probes），利用模型内部激活逐 t…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://alignment.openai.com/training-activation-classifiers/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/wlmiqh13694tqabyvu6nzvlrs" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="tips" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">💡</span>技巧与观点</h2>
+          <span class="sec-count">1 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="公众号：数字生命卡兹克">公众号：数字生命卡兹克</span>
+          </div>
+          <h3 class="card-title">数字生命卡兹克分享折腾一年的Agent自动化系统架构</h3>
+          <p class="card-summary">自媒体作者卡兹克分享自己搭建近一年的Agent自动化系统，核心是把任务起点从人身上移开，由事件触发Agent工作。系统分…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&amp;mid=2647688060&amp;idx=1&amp;sn=e00d7e57b6f0e3670f0e267e677047df" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/dzwfvd9xp6v4qaj6olxezpier" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section id="hf" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🔬</span> Hugging Face 论文</h2>
+          <span class="sec-count">12 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Wave Forcing: Towards Speed-of-Light Streaming Video Generation</h3>
+          <p class="card-title-zh">🌐 波力：迈向光速流媒体视频生成</p>
+          <p class="card-summary">Real-time long-video generation requires continuous output w…</p>
+          <p class="card-summary-zh">实时长视频生成需要具有一致的外观和自然运动的连续输出。现有的分块自回归方法在生成效率和长视频质量方面面临挑战：即使是一步去噪，序列化去噪和历史缓存刷新也需要两次前向传递，而较长的推出时间会降低质量并导致相机漂移。我们建议佤</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.00859" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-10-31</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">CoworkOS:Scaling Agent Coworkers for Real-world Automation</h3>
+          <p class="card-title-zh">🌐 CoworkOS：扩展代理同事以实现现实世界的自动化</p>
+          <p class="card-summary">Rapid advances in cowork agents are shifting human-AI collab…</p>
+          <p class="card-summary-zh">协同工作代理的快速发展正在将人类与人工智能的协作转向现实世界的自动化，交付软件、设计和其他工件。然而，这种生产力工作既需要高质量地交付复杂的生产力任务，又需要长期持续的监控和决策，这两者的结合仍然是一个开放的挑战。我们推出 CoworkOS，一个通用操作系统</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.03178" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement</h3>
+          <p class="card-title-zh">🌐 视频生成与智能体装备的结合：智能体视频生成、智能体世界建模和递归自我改进</p>
+          <p class="card-summary">Video generation is shifting from end-to-end synthesis towar…</p>
+          <p class="card-summary-zh">视频生成正在从端到端合成转向代理生成，其中规划、工具使用和反馈可实现连贯、可控的多镜头视频。与此同时，视频世界模型提供以动作为条件的观察和预测的未来，作为代理的交互环境。我们通过代理工具研究它们的交集：一个可执行的运行时，常量</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2610.40191" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-10-29</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements</h3>
+          <p class="card-title-zh">🌐 CUA-Master：通过开放世界递归改进扩展计算机使用代理</p>
+          <p class="card-summary">Despite recent advances in CUAs, their development remains c…</p>
+          <p class="card-summary-zh">尽管 CUA 最近取得了进展，但其发展仍然受到交互数据有限的多样性、可控性和可靠性的限制。此外，传统的优化流程缺乏迭代反馈，而现有的递归改进方法往往依赖于自我生成的经验，限制了能力扩展并产生收益递减。为了应对这些挑战</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.03126" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Advances in Agentic Computer Graphics</h3>
+          <p class="card-title-zh">🌐 代理计算机图形学的进展</p>
+          <p class="card-summary">Computer graphics is built on code. Large language model (LL…</p>
+          <p class="card-summary-zh">计算机图形学是建立在代码之上的。大型语言模型 (LLM) 代理现在可以生成图形代码并通过各种反馈迭代地完善它。这一功能为计算机图形学的潜在新范式打开了大门，图形算法越来越多地围绕代理系统构建，以自动执行逐渐复杂的任务。在过去的几年里，代理图形的研究已经取得了长足的进步。</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.01860" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-01</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Democratizing Robot-Use Agents: A Unified Harness with Open Models</h3>
+          <p class="card-title-zh">🌐 机器人使用代理的民主化：具有开放模型的统一框架</p>
+          <p class="card-summary">Robot-use Agents (RUAs) have shown promising zero-shot manip…</p>
+          <p class="card-summary-zh">机器人使用代理（RUA）已经显示出有前途的零射击操纵能力，但对前沿专有模型的依赖限制了对进一步训练的研究。为了使 RUA 研究民主化，我们引入了 uni-robot-agent，这是一种用于竞争性开放重量机器人使用的统一工具，支持进一步的训练。无需特权输入，开箱即用的 Qwen3.8-Flash-Next 即可实现 RoboDojo Sco</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.01560" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-01</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">NorthCUA Technical Report: Turbocharging Computer-Use Agents through Experience at Scale</h3>
+          <p class="card-title-zh">🌐 NorthCUA 技术报告：通过大规模经验增强计算机使用代理的能力</p>
+          <p class="card-summary">Scaling computer-use agents from individual actions to compl…</p>
+          <p class="card-summary-zh">将计算机使用代理从个人操作扩展到复杂的软件工作需要将决策与完整结果联系起来的经验。我们推出 NorthCUA，这是一个通过大规模经验增强计算机使用代理的集成系统。其 Experience Flywheel 为 NorthCUA Harness 提供多种可执行任务，可维持长时间交互、记录决策并检查</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.02102" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-01</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Lost in Recovery: Demystifying Recovery Behavior of Computer-Use Agents via Goal-Oriented Action Replay</h3>
+          <p class="card-title-zh">🌐 恢复中的迷失：通过目标导向的动作重放揭秘计算机使用代理的恢复行为</p>
+          <p class="card-summary">Recent advances in large (vision) language models have enabl…</p>
+          <p class="card-summary-zh">大型（视觉）语言模型的最新进展使得计算机使用代理能够通过细粒度的键盘和鼠标操作来自动化数字工作流程。然而，此类代理在长期环境中仍然脆弱，错误会累积，执行的操作会产生意想不到的副作用，因此从故障中恢复的能力至关重要。然而，现有的补救措施仍然不足：env</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2610.27954" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-10-20</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">09</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning</h3>
+          <p class="card-title-zh">🌐 Reviso：并非所有视觉证据都值得在视频字幕中受到同等重视</p>
+          <p class="card-summary">Multimodal large language models (MLLMs) can generate detail…</p>
+          <p class="card-summary-zh">多模态大语言模型 (MLLM) 可以生成详细的视频字幕，但它们可能会过分强调次要细节，而忽略重要的上下文和关键事件。我们认为，并非所有视觉证据都值得同等关注，因为视觉信息的重要性取决于每个视频的内容。受这一观察的启发，我们提出了 Reviso，一种代理视频字幕框架</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.03602" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">10</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">From Fragmentation to Fusion: A Survey and Roadmap for Omnimodal Embeddings</h3>
+          <p class="card-title-zh">🌐 从碎片到融合：全模态嵌入的调查和路线图</p>
+          <p class="card-summary">Embedding models underpin virtually every modern AI system,…</p>
+          <p class="card-summary-zh">嵌入模型几乎支撑着从搜索引擎到推荐系统的所有现代人工智能系统。尽管拥有共同的数学基础，但嵌入模型的研究仍然在形式上支离破碎：社区基本上是孤立发展的，很少交流见解。我们认为这种分裂掩盖了更深层次的融合。在对比学习的驱动下，Transformer 架构师</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.00172" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-10-30</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">11</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">CrossSWE: Benchmarking Cross-Repository Joint Development for Coding Agents</h3>
+          <p class="card-title-zh">🌐 CrossSWE：编码代理跨存储库联合开发基准测试</p>
+          <p class="card-summary">As coding agents achieve increasingly high success rates on…</p>
+          <p class="card-summary-zh">随着编码代理在软件工程基准上取得越来越高的成功率，最近的努力试图通过更长的视野和更广泛的代码修改来增加任务复杂性。然而，现实世界的软件开发通常跨越多个相互依赖的存储库，从而在依赖性推理、变更传播和接口设计方面引入了额外的挑战。</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.01484" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-01</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">12</span>
+            <span class="source-chip" title="Hugging Face">Hugging Face</span>
+            
+          </div>
+          <h3 class="card-title">PhotoGuider: Composition-Aware Cropping and 360^{circ} View Framing with Explainable Photographic Assessments</h3>
+          <p class="card-title-zh">🌐 PhotoGuider：构图感知裁剪和 360^{circ} 视图取景以及可解释的摄影评估</p>
+          <p class="card-summary">Traditional image cropping assumes the photograph already co…</p>
+          <p class="card-summary-zh">传统的图像裁剪假设照片已经包含值得保留的构图，并且只询问在哪里裁剪。完整的 360^{circ} 场景无法提供这样的保证：必须先发现场景中的观看方向，然后才能对任何内容进行构图。我们提出了 PhotoGuider，这是一种先测量后框架的方法，它可以通过一组共享组合上的紧凑学习评分器来回答这两个问题</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://huggingface.co/papers/2611.02897" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="hn" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">💬</span> Hacker News 热议</h2>
+          <span class="sec-count">14 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Ask HN: Do you have any kind of sandboxing for those who run LLMs locally?</h3>
+          <p class="card-title-zh">🌐 问 HN：对于那些在本地运行法学硕士的人，你们有任何类型的沙箱吗？</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://news.ycombinator.com/item?id=50351285" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Show HN: A tool to optimize AI model cost without benchmark score trade-offs</h3>
+          <p class="card-title-zh">🌐 Show HN：一种无需权衡基准分数即可优化 AI 模型成本的工具</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://jeff-kline.github.io/posts/same-ai-results-for-less/index.html" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 1</span>
+          </div>
+          <h3 class="card-title">Show HN: Onira Self Hypnosis App</h3>
+          <p class="card-title-zh">🌐 Show HN：Onira 自我催眠应用程序</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.oytaub.mindease&amp;hl=en_US" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 1</span>
+          </div>
+          <h3 class="card-title">The Beleaguered Chip Sellers Getting Their Revenge on Apple</h3>
+          <p class="card-title-zh">🌐 陷入困境的芯片销售商向苹果公司发起报复</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.wsj.com/tech/apple-iphone-memory-chips-ai-c0084cc9" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Fujifilm to boost tape production 5x as AI fuels archiving demand</h3>
+          <p class="card-title-zh">🌐 人工智能推动归档需求，富士胶片将磁带产量提高 5 倍</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">&#x27;A serious failure&#x27;: CPS prosecutor cites fake case after AI search</h3>
+          <p class="card-title-zh">🌐 “严重失败”：CPS检察官在人工智能搜索后引用虚假案件</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.theguardian.com/technology/2026/nov/03/a-serious-failure-cps-prosecutor-cites-imaginary-case-to-high-court-after-ai-search" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Harms of the Generative AI</h3>
+          <p class="card-title-zh">🌐 生成式人工智能的危害</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://andreyor.st/posts/2026-11-02-harms-of-the-generative-ai/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">A350</h3>
+          <p class="card-title-zh">🌐 A350</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://en.wikipedia.org/wiki/Airbus_A350" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">09</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 4 · 💬 1</span>
+          </div>
+          <h3 class="card-title">Show HN: Airy Studio – Free TTS in 7 languages (zh, hi, ar, th, vi, ko, en)</h3>
+          <p class="card-title-zh">🌐 Show HN：Airy Studio – 7 种语言的免费 TTS（zh、hi、ar、th、vi、ko、en）</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://airy.so/studio" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">10</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 0</span>
+          </div>
+          <h3 class="card-title">nRF71 Series: Wi-Fi, Bluetooth LE, Thread, and On-Device AI on a Single Chip</h3>
+          <p class="card-title-zh">🌐 nRF71 系列：单芯片上的 Wi-Fi、蓝牙 LE、Thread 和设备上 AI</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nordicsemi.com/Nordic-news/2026/11/Nordic-brings-edge-AI-to-battery-powered-WiFi-devices-20-times-lower-standby-power-with-nRF71-Series" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">11</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">A Human Corrected the AI. Then the Data Changed</h3>
+          <p class="card-title-zh">🌐 人类纠正了人工智能。然后数据改变了</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.zingg.ai/post/human-corrected-the-ai-then-the-data-changed" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">12</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 3 · 💬 1</span>
+          </div>
+          <h3 class="card-title">AI could break legal systems by finding previously hidden loopholes</h3>
+          <p class="card-title-zh">🌐 人工智能可以通过发现以前隐藏的漏洞来打破法律体系</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.theregister.com/ai-and-ml/2026/11/02/ai-could-break-legal-systems-by-finding-previously-hidden-loopholes/5307066" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">13</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">We Open Sourced the Flapping Airplanes Megakernel</h3>
+          <p class="card-title-zh">🌐 我们开源扑翼飞机 Megakernel</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://twitter.com/Bobliuuu/status/2117450429864853536" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">14</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">CrowdStrike launches AI Kill Switch to terminate rogue AI agents</h3>
+          <p class="card-title-zh">🌐 CrowdStrike 推出 AI Kill Switch 以终止流氓 AI 特工</p>
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://app.dealroom.co/news/feed/crowdstrike-launches-ai-kill-switch-to-terminate-rogue-ai-agents" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-03</span>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="arxiv" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">📄</span> arXiv 最新 AI</h2>
+          <span class="sec-count">8 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations</h3>
+          <p class="card-title-zh">🌐 Pixel-UMI：通过传感人体演示学习环境感知全身操作</p>
+          <p class="card-summary">Sensorized human demonstrations offer scalable data for mobi…</p>
+          <p class="card-summary-zh">传感人体演示为移动操作提供了可扩展的数据，但实施差异使策略学习变得复杂。我们推出 Pixel-UMI，这是一个从人类数据中学习环境感知全身策略的管道。我们首先介绍环境感知重定向（EAR），它将重建的场景几何形状与演示的头部和夹具轨迹相结合来确定机器人</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.03647v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation</h3>
+          <p class="card-title-zh">🌐 Pixel：共同设计的全栈机器人系统，用于学习通用移动操作</p>
+          <p class="card-summary">General-purpose mobile manipulation requires a combination o…</p>
+          <p class="card-summary-zh">通用移动操纵需要强大的机器人硬件、可扩展的演示集合、富有表现力的全身控制和有效的策略学习的组合。然而，这些组件通常是独立开发的，从而造成不匹配，从而限制了整个系统的功能。我们推出 Pixel，一个共同设计的全栈系统，用于学习通用移动人</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.03648v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">From Natural Language to Exact Cover: A Neuro-Symbolic Approach to Zebra Puzzles</h3>
+          <p class="card-title-zh">🌐 从自然语言到精确覆盖：斑马谜题的神经符号方法</p>
+          <p class="card-summary">Chain-of-Thought (CoT) generation has substantially improved…</p>
+          <p class="card-summary-zh">思想链 (CoT) 生成极大地提高了大型语言模型 (LLM) 在复杂推理任务上的性能，包括代码生成、数据分析和考试式问答。尽管取得了这些进步，纯神经法学硕士仍然在与基本的逻辑推理问题作斗争，并且缺乏符号学的确定性、健全性和可靠性特征。</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.03641v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">WebHarbor: Docking Real Websites for Evolving GUI Agent Environments</h3>
+          <p class="card-title-zh">🌐 WebHarbor：对接真实网站以适应不断发展的 GUI 代理环境</p>
+          <p class="card-summary">GUI web agents require realistic and interactive environment…</p>
+          <p class="card-summary-zh">GUI Web 代理需要在评估和培训期间保持稳定的真实交互式环境。实时网站评估受到内容变化、访问限制和经过身份验证的工作流程覆盖范围有限的影响，而现有的培训合成环境通常缺乏功能深度和视觉保真度。我们提出了 WebHarbor，这是一套包含 153 个可执行文件和坞站的套件</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.03634v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.LG]</span>
+          </div>
+          <h3 class="card-title">Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap</h3>
+          <p class="card-title-zh">🌐 预训练数据规模扭转了 Muon-AdamW 微调差距</p>
+          <p class="card-summary">Muon has recently emerged as a promising optimizer for pretr…</p>
+          <p class="card-summary-zh">Muon 最近成为一种有前途的预训练大型语言模型优化器，在最小化预训练损失方面比 AdamW 提供了加速。然而，目前尚不清楚微调后 Muon 的优势是否仍然存在。在本文中，我们研究了 Muon 和 AdamW 的下游行为，并发现了一个令人惊讶的趋势：超出足够大的预训练数据预算，AdamW 表现优于</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.03633v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.CL]</span>
+          </div>
+          <h3 class="card-title">D&amp;A: Decoupling Description and Assessment Enables VLMs as Zero-Shot Robotic Reward Models</h3>
+          <p class="card-title-zh">🌐 D&amp;A：解耦描述和评估使 VLM 成为零样本机器人奖励模型</p>
+          <p class="card-summary">Vision-Language Models (VLMs) hold promise for zero-shot vid…</p>
+          <p class="card-summary-zh">视觉语言模型（VLM）有望在机器人学习中实现零镜头视频任务进度估计，但现有框架经常遭受确认偏差，由于隐含的成功假设或相对时间排名设计而导致失败执行中出现进度幻觉。前沿模型的天真提示崩溃成一个二元成功检测器，无法捕获细微差别，不</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.03622v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.CL]</span>
+          </div>
+          <h3 class="card-title">Strategist: Evolving Reasoning with Agents</h3>
+          <p class="card-title-zh">🌐 策略师：与智能体一起进化推理</p>
+          <p class="card-summary">A model is only half of an AI agent system. The other half i…</p>
+          <p class="card-summary-zh">模型只是人工智能代理系统的一半。另一半是推理策略：将模型调用转化为响应的推理过程。如今，后半部分是手写的，制定一个策略的经验永远不会延续到下一个策略。我们引入了 Strategist，一种可以跨任务发展推理策略的元代理。每个策略都被写成蓝图，可执行</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.03618v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.CL]</span>
+          </div>
+          <h3 class="card-title">Tracing the Scientific Discovery Capacity of LLMs to Their Training Data</h3>
+          <p class="card-title-zh">🌐 将法学硕士的科学发现能力追溯到他们的培训数据</p>
+          <p class="card-summary">Large language models (LLMs) show growing promise for scient…</p>
+          <p class="card-summary-zh">大型语言模型 (LLM) 在科学发现方面显示出越来越大的前景，但关于如何实现可靠发现的基本问题仍然存在。我们如何将法学硕士的科学发现能力追溯到他们的训练数据？我们将这个问题作为缺失概率质量之一来研究，并开发了一种理论解释，其中单事实（训练期间观察到的事实）设置了发现能力</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.03617v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-02</span>
+          </div>
+        </article>
+        </div>
+      </section>
+</main>
+<section class="ext-res"><h3>🔗 延伸资源</h3><div class="ext-cols"><div class="ext-col"><h4>综合热榜</h4><a href="https://tophub.today" target="_blank" rel="noopener noreferrer">今日热榜</a><a href="https://top.baidu.com/board" target="_blank" rel="noopener noreferrer">百度热搜</a><a href="https://s.weibo.com/top/summary" target="_blank" rel="noopener noreferrer">微博热搜</a><a href="https://www.bilibili.com/v/popular/all" target="_blank" rel="noopener noreferrer">B站热门</a></div><div class="ext-col"><h4>科技 / AI</h4><a href="https://news.ycombinator.com" target="_blank" rel="noopener noreferrer">Hacker News</a><a href="https://www.reddit.com/r/technology/" target="_blank" rel="noopener noreferrer">Reddit · technology</a><a href="https://huggingface.co/papers" target="_blank" rel="noopener noreferrer">Hugging Face Papers</a><a href="https://paperswithcode.com" target="_blank" rel="noopener noreferrer">Papers with Code</a></div><div class="ext-col"><h4>学术 / 物理</h4><a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://www.semanticscholar.org" target="_blank" rel="noopener noreferrer">Semantic Scholar</a><a href="https://www.nature.com" target="_blank" rel="noopener noreferrer">Nature</a></div><div class="ext-col"><h4>新闻聚合</h4><a href="https://news.google.com" target="_blank" rel="noopener noreferrer">Google News</a><a href="https://ground.news" target="_blank" rel="noopener noreferrer">Ground News</a><a href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer">BBC News</a><a href="https://www.news.cn" target="_blank" rel="noopener noreferrer">新华社</a></div></div><p class="ext-note">以上为同类信息聚合 / 新闻站点，供延伸阅读 · 本站仅聚合公开热榜与新闻接口，与所列站点无隶属关系</p></section>
+<footer>
+  共 <strong>40</strong> 条 · 多源聚合：AI HOT · Hugging Face Papers · Hacker News · arXiv cs.AI/LG/CL · 时间已转换为北京时间
+</footer>
+<script>
+  (function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function sync() {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.innerHTML = dark ? '☀️ 亮色' : '🌙 暗色';
+    }
+    sync();
+    btn.addEventListener('click', function() {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var next = dark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch(e) {}
+      sync();
+    });
+  })();
+  (function() {
+    var h = document.getElementById('nav-hamburger');
+    var nav = document.querySelector('.nav');
+    if (!h || !nav) return;
+    function set(open) { nav.classList.toggle('menu-open', open); h.textContent = open ? '✕' : '☰'; h.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+    h.addEventListener('click', function() { set(!nav.classList.contains('menu-open')); });
+    Array.prototype.forEach.call(nav.querySelectorAll('.nav-link'), function(a) { a.addEventListener('click', function() { set(false); }); });
+    document.addEventListener('click', function(e) { if (nav.classList.contains('menu-open') && !nav.contains(e.target)) set(false); });
+  })();
+</script>
+</body>
+</html>
