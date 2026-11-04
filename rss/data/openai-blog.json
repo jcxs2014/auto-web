@@ -5,6 +5,46 @@
   "lang": "en",
   "entries": [
     {
+      "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+      "url": "https://openai.com/index/openai-to-acquire-pierre",
+      "summary": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-04 14:30",
+      "ts": 1793802600,
+      "content": ""
+    },
+    {
+      "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+      "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+      "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-04 07:00",
+      "ts": 1793775600,
+      "content": ""
+    },
+    {
+      "title": "A thousand fewer paths to root",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+      "summary": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-04 08:00",
+      "ts": 1793779200,
+      "content": ""
+    },
+    {
+      "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+      "url": "https://openai.com/index/devrev-enterprise-self-service",
+      "summary": "DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-04 00:00",
+      "ts": 1793750400,
+      "content": ""
+    },
+    {
       "title": "Accelerating engineering for the physical world",
       "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
       "summary": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
@@ -62,46 +102,6 @@
       "extra": "",
       "date": "2026-11-02 15:00",
       "ts": 1793631600,
-      "content": ""
-    },
-    {
-      "title": "Preparing our next security sprint to harden OpenAI",
-      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-      "summary": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-02 18:00",
-      "ts": 1793642400,
-      "content": ""
-    },
-    {
-      "title": "Rewarding defenders with bigger bug bounties",
-      "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
-      "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-02 18:00",
-      "ts": 1793642400,
-      "content": ""
-    },
-    {
-      "title": "LifeVal",
-      "url": "https://openai.com/index/lifeval",
-      "summary": "Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-02 09:00",
-      "ts": 1793610000,
-      "content": ""
-    },
-    {
-      "title": "Qodo builds context into AI code review with Codex",
-      "url": "https://openai.com/index/qodo-codex-plugin",
-      "summary": "Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-02 00:00",
-      "ts": 1793577600,
       "content": ""
     }
   ]
