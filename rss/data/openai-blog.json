@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Setting a new standard for responsible AI infrastructure",
+      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+      "summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-05 02:00",
+      "ts": 1793844000,
+      "content": ""
+    },
+    {
       "title": "OpenAI to acquire Pierre Computer Company, Inc.",
       "url": "https://openai.com/index/openai-to-acquire-pierre",
       "summary": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-11-03 00:00",
       "ts": 1793664000,
-      "content": ""
-    },
-    {
-      "title": "Scaling Git at OpenAI",
-      "url": "https://openai.com/index/scaling-git-at-openai",
-      "summary": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-02 15:30",
-      "ts": 1793633400,
       "content": ""
     }
   ]
