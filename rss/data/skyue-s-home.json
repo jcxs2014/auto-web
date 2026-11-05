@@ -5,6 +5,16 @@
   "lang": "zh",
   "entries": [
     {
+      "title": "Feedglot支持Agent调用了",
+      "url": "https://www.skyue.com/26110522.html",
+      "summary": "这周Feedglot发布了重要更新：macOS版支持本地Agent调用。本地Agent包括Codex、Claude、DeepSeek Harness、Qoder、WorkBuddy、豆包工作等等...",
+      "source": "SKYue's Home",
+      "extra": "",
+      "date": "2026-11-05 14:27",
+      "ts": 1793888820,
+      "content": "\n    <p>这周Feedglot发布了重要更新：macOS版支持本地Agent调用。</p>\n    <p>本地Agent包括Codex、Claude、DeepSeek Harness、Qoder、WorkBuddy、豆包工作等等。现在，你可以使用他们阅读和管理订阅，比如挑选值得阅读的文章、自动清理失效的RSS源等。目前该功能需要开通Pro用户权益。</p>\n    <p>这个点子是受<a href=\"https://www.leolin86.com/\">拾风</a>的启发，感谢拾风的留评建议。</p>\n    <h2>使用方法</h2>\n    <p>下图是设置中Agent工具的开关设置，支持「只读」和「允许修改」分开设置，方便根据需求精准控制权限。</p>\n    <p>打开开关后，复制Agent接入说明发给你的Agent，再说出你的需求，Agent就能按使用说明读取或修改Feedglot中的订阅数据。需要注意，Feedglot需要保持运行状态，Agent才能访问。</p>\n    <p>下面是我使用DeepSeek Harness调用Feedglot的一些案例。</p>\n    <p>1、挑选近期值得阅读的文章</p>\n    <p>2、分析订阅有效性、并删除无效和重复订阅</p>\n    <p>因为修改是高风险操作，建议每次修改订阅前，先让Agent展示操作预览，确认影响范围后再执行。</p>\n    <p>我相信还有很多玩法，大家可以自行探索。</p>"
+    },
+    {
       "title": "2026年第44周",
       "url": "https://www.skyue.com/26110118.html",
       "summary": "2026年第33周周记，草莓生病、周末阿里公园溜娃，Codex无法使用、拔草NAS……",
