@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+      "url": "https://openai.com/index/partnering-with-hacktron",
+      "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-06 08:00",
+      "ts": 1793952000,
+      "content": ""
+    },
+    {
+      "title": "Measuring how AI agents handle everyday wet-lab science",
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-06 00:00",
+      "ts": 1793923200,
+      "content": ""
+    },
+    {
       "title": "Australian universities are creating AI-native graduates",
       "url": "https://openai.com/index/australian-universities-ai-native-graduates",
       "summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-11-04 14:30",
       "ts": 1793802600,
-      "content": ""
-    },
-    {
-      "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
-      "url": "https://openai.com/index/daybreak-red-aws-govcloud",
-      "summary": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-04 07:00",
-      "ts": 1793775600,
-      "content": ""
-    },
-    {
-      "title": "A thousand fewer paths to root",
-      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
-      "summary": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-04 08:00",
-      "ts": 1793779200,
       "content": ""
     }
   ]

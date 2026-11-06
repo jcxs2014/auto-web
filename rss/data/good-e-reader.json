@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "New Send to Kobo costs money to use the service",
+      "url": "https://goodereader.com/blog/kobo-ereader-news/new-send-to-kobo-costs-money-to-use-the-service",
+      "summary": "Send to Kobo is a new system that will be available on modern e-readers soon and requires a $3.99 monthly subscription, but offers a host of new benefits. The post New Send to Kobo costs money to use the service first appeared on Good e-Reader.",
+      "source": "Good e-Reader",
+      "extra": "",
+      "date": "2026-11-06 18:26",
+      "ts": 1793989609,
+      "content": "<p>Rakuten Kobo is testing a software feature in its new beta update 6.0+. Send to Kobo is a new system that will allow users to use the Kobo Libra Colour, the Clara Colour and the Clara BW to securely send files to their e-readers. However, Send to Kobo uses the <a href=\"https://www.kobo.com/stack\">Kobo Stack</a>, which costs $3.99 per month. </p>\n    <p>Here is how the <a href=\"https://help.kobo.com/hc/en-us/articles/38802863972503-About-Kobo-Stack-features-supported-devices-and-how-to-sign-up\">Kobo Stack</a> works. Email your e-books (PDF, EPUB, and LCP EPUB) and documents to your unique Kobo Stack address. They’ll instantly appear in your library on any connected device. Drag and drop EPUB and PDF files using the upload tool in the Kobo Cloud on the main Kobo website. A subscription will also support Libby using multiple library cards. If you have a Libra Color, you can sync uploaded content & annotations across devices and use exclusive journaling and note-taking workbooks.</p>\n    <p>Finally, a Kobo Stack subscription provides three years of worry-free reading. The extended manufacturer’s warranty offers comprehensive protection for your Kobo eReader, instead of the default one-year warranty.</p>\n    <p>Kobo is the first company to charge for Send to Service. Amazon offers similar functionality for free; PocketBook and Onyx Boox also offer similar functionality. However, Kobo does offer a few extra. It offers features that might be worth it, such as syncing and the extra warranty.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
+    },
+    {
       "title": "Barnes and Noble branded TCL TAB A1 NXTPAPER 11 Available Soon",
       "url": "https://goodereader.com/blog/barnes-and-noble-nook-ereader-news/barnes-and-noble-branded-tcl-tab-a1-nxtpaper-11-available-soon",
       "summary": "The device appears to be full HD, so it may offer better text clarity than the previous Lenovo Android tablet. The post Barnes and Noble branded TCL TAB A1 NXTPAPER 11 Available Soon first appeared on Good e-Reader.",
@@ -93,16 +103,6 @@
       "date": "2026-11-02 02:30",
       "ts": 1793586626,
       "content": "<p>The Musnap Air Pro is an 8.2-inch Android-based E Ink e-reader and paper tablet. It positions itself as a highly portable, premium device built for both intensive reading and digital note-taking.</p>\n    <p>The Musnap Air Pro is a highly compelling 8.2-inch e-ink tablet that perfectly bridges the gap between smaller pocket-sized readers and cumbersome 10-inch devices. Its standout physical engineering features a remarkably sleek 5.4mm unibody metal frame that weighs a mere 270g, yet provides an embedded reinforced structure for excellent daily durability. The monochrome screen utilises cutting-edge Carta 1300 e-ink technology at a sharp 293 PPI, paired with an adaptable front light and an anti-glare finish that beautifully mimics paper even under direct sunlight.</p>\n    <p>Performance is noticeably fluid courtesy of a 6nm octa-core processor and 4GB of RAM, enabling smooth third-party Android app navigation while proprietary TurboRefresh technology manages screen ghosting exceptionally well.</p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
-    },
-    {
-      "title": "Rakuten Kobo and Kindle ereaders have a timezone bug",
-      "url": "https://goodereader.com/blog/kindle/rakuten-kobo-and-kindle-ereaders-have-a-timezone-bug",
-      "summary": "Amazon Kindle and Kobo ereaders are having an automatic time zone bug for residents of British Columbia. The post Rakuten Kobo and Kindle ereaders have a timezone bug first appeared on Good e-Reader.",
-      "source": "Good e-Reader",
-      "extra": "",
-      "date": "2026-11-01 15:27",
-      "ts": 1793546852,
-      "content": "<p>Rakuten Kobo ereaders and Amazon Kindles are having a time zone bug for people who live in British Columbia, Canada. The automatic time zone system is not taking into account the elimination of going forward or back at various points of the year.</p>\n    <p>The province officially abolished the seasonal clock change. Instead of “falling back” to standard time, B.C. has remained permanently on daylight saving time.</p>\n    <p>Because B.C. did not turn its clocks back, it is now one hour ahead of me Washington State and California during the winter months.</p>\n    <p>Until a possible patch is pushed out on the future users will have to disable automatic time zone and manually set it in the settings menu.</p>\n    <p></p>\n    <p>Michael Kozlowski is the editor-in-chief at Good e-Reader and has written about audiobooks and e-readers for the past fifteen years. Newspapers and websites such as the CBC, CNET, Engadget, Huffington Post and the New York Times have picked up his articles. He Lives in Vancouver, British Columbia, Canada.</p>"
     }
   ]
 }
