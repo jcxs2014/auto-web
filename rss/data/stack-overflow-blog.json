@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Welcome to life in the chip age",
+      "url": "https://stackoverflow.blog/2026/11/06/welcome-to-life-in-the-chip-age/",
+      "summary": "Ryan sits down with Rakesh Kumar, professor of computer engineering at the University of Illinois Urbana-Champaign, about the astounding complexity of manufacturing modern semiconductors, the massive environmental and geopolitical footprint of AI data centers, and how AI models are rapidly shifting the future of chip design.",
+      "source": "Stack Overflow Blog",
+      "extra": "",
+      "date": "2026-11-06 08:40",
+      "ts": 1793954400,
+      "content": "<p>Ryan sits down with Rakesh Kumar, professor of computer engineering at the University of Illinois Urbana-Champaign, about the astounding complexity of manufacturing modern semiconductors, the massive environmental and geopolitical footprint of AI data centers, and how AI models are rapidly shifting the future of chip design.</p>\n    <p>Dive deeper into the history and future of semiconductors by checking out Rakesh's book, The Chip Age.</p>"
+    },
+    {
       "title": "Don’t Build the Reusable Component Yet",
       "url": "https://stackoverflow.blog/2026/11/05/don-t-build-the-reusable-component-yet/",
       "summary": "",
@@ -33,16 +43,6 @@
       "date": "2026-11-03 08:40",
       "ts": 1793695200,
       "content": "<p>Recorded at LDX3 by LeadDev, Ryan chats with Dan Moore, Senior Director of CIAM Strategy and Identity Standards at FusionAuth, about adapting established OAuth2 protocols for the agentic era, the security necessity of giving autonomous AI agents their own distinct identities, and how AI coding tools are shifting developers' focus toward solving core business problems.</p>\n    <p>FusionAuth is an identity and access management platform that provides customer authentication, OAuth, and security solutions for developers.</p>\n    <p>This episode was recorded at LDX3. Listen to our other LDX3 conversation with engineering leaders Nivia Henry and Charity Majors.</p>"
-    },
-    {
-      "title": "It’s ok that computers are (sometimes) better than us",
-      "url": "https://stackoverflow.blog/2026/10/30/it-s-ok-that-computers-are-sometimes-better-than-us/",
-      "summary": "Ryan is joined by Charity Majors, co-founder and CTO at Honeycomb, for a conversation about applying the concept of immutable infrastructure to software development to treat code like cattle instead of pets, shifting the paradigm of system specifications to accommodate the rapid influx of AI-generated code, and navigating the complex ethical boundaries between system observability and human survei",
-      "source": "Stack Overflow Blog",
-      "extra": "",
-      "date": "2026-10-30 07:40",
-      "ts": 1793346000,
-      "content": "<p>It’s ok that computers are (sometimes) better than us</p>\n    <p>Ryan is joined by Charity Majors, co-founder and CTO at Honeycomb, for a conversation about applying the concept of immutable infrastructure to software development to treat code like cattle instead of pets, shifting the paradigm of system specifications to accommodate the rapid influx of AI-generated code, and navigating the complex ethical boundaries between system observability and human surveillance in modern technology ecosystems.</p>\n    <p>Honeycomb is an observability platform that empowers engineering teams to visualize, analyze, and understand the behavior of their complex cloud systems.</p>\n    <p>Connect with Charity on her blog at charity.wtf and read her team's posts on AI norms and values on the Honeycomb blog.</p>"
     }
   ]
 }
