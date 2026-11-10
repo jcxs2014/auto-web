@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI HOT 日报 · 2026-11-10</title>
+<style>
+  :root {
+    --bg: #f5f7fb; --bg-soft: #eaeef5; --bg-card: #ffffff; --bg-card-hover: #eef2f9;
+    --border: #e1e6ef; --text: #1a2030; --text-dim: #59647a; --text-mute: #8b95a8;
+    --accent: #3b7df0; --accent-2: #6a4cf0; --accent-3: #0c9e8b;
+    --shadow: 0 6px 24px rgba(20,30,60,0.10);
+    --nav-bg: rgba(255,255,255,0.85);
+    --pill-bg: rgba(15,23,42,0.05);
+    --accent-soft: rgba(59,125,240,0.12);
+    --accent-soft-border: rgba(59,125,240,0.30);
+    --accent3-soft: rgba(12,158,139,0.10);
+    --accent3-soft-border: rgba(12,158,139,0.28);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1115; --bg-soft: #161a22; --bg-card: #1a1f29; --bg-card-hover: #1f2531;
+    --border: #2a3140; --text: #e6e9ef; --text-dim: #9aa3b2; --text-mute: #6b7384;
+    --accent: #6ea8ff; --accent-2: #8b7bff; --accent-3: #4fd1c5;
+    --shadow: 0 6px 24px rgba(0,0,0,0.35);
+    --nav-bg: rgba(15,17,21,0.92);
+    --pill-bg: rgba(255,255,255,0.06);
+    --accent-soft: rgba(110,168,255,0.1);
+    --accent-soft-border: rgba(110,168,255,0.25);
+    --accent3-soft: rgba(79,209,197,0.08);
+    --accent3-soft-border: rgba(79,209,197,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    -webkit-font-smoothing: antialiased; min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+  .hero {
+    background: linear-gradient(135deg, rgba(110,168,255,0.08), rgba(139,123,255,0.06) 50%, rgba(79,209,197,0.05)),
+                radial-gradient(circle at 80% 0%, rgba(246,135,179,0.08), transparent 50%), var(--bg-soft);
+    border-bottom: 1px solid var(--border); padding: 48px 24px 40px;
+  }
+  .hero-inner { max-width: 1200px; margin: 0 auto; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 2px;
+    color: var(--accent); text-transform: uppercase;
+    background: var(--accent-soft); border: 1px solid var(--accent-soft-border);
+    padding: 4px 10px; border-radius: 999px; margin-bottom: 16px;
+  }
+  .hero-title {
+    font-size: clamp(28px, 4vw, 42px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px;
+    background: linear-gradient(90deg, var(--text), var(--accent));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-date { color: var(--text-dim); font-size: 15px; margin-bottom: 6px; }
+  .hero-window { color: var(--text-mute); font-size: 13px; margin-bottom: 28px; }
+  .updated-badge { color: var(--accent); font-weight: 700; }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .total-pill {
+    display: inline-flex; align-items: baseline; gap: 6px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #0b0d12; padding: 10px 18px; border-radius: 12px; font-weight: 700; box-shadow: var(--shadow);
+  }
+  .total-pill .num { font-size: 24px; } .total-pill .lbl { font-size: 12px; opacity: 0.85; }
+  .chip-stat {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 8px 14px; border-radius: 10px; font-size: 13px;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .chip-stat:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .chip-emoji { font-size: 16px; } .chip-label { color: var(--text-dim); } .chip-num { color: var(--text); font-weight: 700; }
+  
+:root{
+  --nav-line:var(--line, var(--border));
+  --nav-mute:var(--muted, var(--text-mute));
+}
+.nav{position:sticky;top:0;z-index:30;background:var(--nav-bg);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--nav-line)}
+.nav-inner{max-width:1180px;width:100%;margin:0 auto;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;
+  padding:11px max(20px,env(safe-area-inset-right)) 11px max(20px,env(safe-area-inset-left));overflow-x:clip}
+.nav-brand{font-weight:800;font-size:17px;margin-right:auto;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex:1 1 auto;min-width:0;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-link{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;
+  background:var(--pill-bg);color:var(--text);text-decoration:none;font-size:13.5px;white-space:nowrap;transition:filter .15s}
+.nav-link:hover{filter:brightness(.95)}
+.nav-emoji{font-size:14px}
+.nav-count{font-size:11px;color:var(--nav-mute)}
+.home-link,.theme-toggle,.nav-toggle,.hamburger{display:inline-flex;align-items:center;gap:5px;
+  padding:5px 12px;border-radius:999px;font-size:13.5px;color:var(--text);background:var(--pill-bg);
+  border:1px solid var(--nav-line);text-decoration:none;white-space:nowrap;cursor:pointer;transition:border-color .15s,filter .15s}
+.home-link:hover,.theme-toggle:hover,.nav-toggle:hover{border-color:var(--accent)}
+.hamburger{border-radius:10px;font-size:18px;line-height:1;display:none;justify-content:center}
+.nav-toggle.off{opacity:.5}
+@media(max-width:1024px){
+  /* 单行布局：品牌可收缩+省略号兜底，其余控件不收缩，确保汉堡永远落在右 padding 内、绝不溢出视口 */
+  .nav-inner{flex-wrap:nowrap;gap:8px;overflow:hidden}
+  .nav-brand{font-size:15px;margin-right:auto;flex:1 1 auto;min-width:0;
+    display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .home-link{padding:5px 9px;font-size:12.5px;flex-shrink:0}
+  .theme-toggle,.nav-toggle{padding:5px 9px;font-size:12.5px;flex-shrink:0}
+  .hamburger{flex-shrink:0;display:inline-flex}
+  .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:6px;
+    padding:10px max(16px,env(safe-area-inset-left)) 14px max(16px,env(safe-area-inset-right));
+    background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--nav-line);box-shadow:var(--shadow);z-index:40}
+  .nav.menu-open .nav-links{display:flex}
+  .nav-link{width:100%;justify-content:space-between;padding:11px 14px;font-size:15px;border-radius:10px}
+  .nav-count{font-size:12px}
+  /* 翻译控件默认收进汉堡抽屉，避免与汉堡并排横向溢出视口 */
+  .nav-translate{display:none}
+  .nav.menu-open .nav-translate{display:inline-flex}
+}
+/* Google 网站翻译器：隐藏其默认顶部横幅（避免把页面下推）；让小工具融入导航栏 */
+.goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}
+body{top:0!important}
+#google_translate_element{display:inline-flex;align-items:center;font-size:13px;color:var(--text)}
+#google_translate_element .goog-te-gadget{font-size:13px!important;color:var(--text)}
+#google_translate_element .goog-te-gadget-simple{background:var(--pill-bg);border:1px solid var(--nav-line);border-radius:999px;padding:3px 8px}
+#google_translate_element img{display:none!important}
+#google_translate_element select{font-size:13px;color:var(--text)}
+/* 翻译控件容器：Google 条 + Bing 兜底链接 并排；Bing 作为 Google 加载失败时的国内兜底 */
+.nav-translate{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
+.nav-bing-translate{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;
+  background:var(--pill-bg);border:1px solid var(--nav-line);color:var(--text);
+  text-decoration:none;font-size:13px;white-space:nowrap;transition:border-color .15s,background .15s}
+.nav-bing-translate:hover{border-color:var(--accent)}
+.nav-bing-translate.warn{border-color:#d97706;background:#fff7ed;color:#b45309}
+@media(max-width:1024px){
+  .nav-translate{width:100%;margin-left:0;justify-content:flex-start;
+    padding:8px max(16px,env(safe-area-inset-left)) 2px max(16px,env(safe-area-inset-left));
+    border-top:1px solid var(--nav-line)}
+}
+
+  
+.ext-res{max-width:1080px;margin:36px auto 0;padding:22px 18px 6px;border-top:1px solid var(--line)}
+.ext-res h3{font-size:16px;margin-bottom:16px;color:var(--text);display:flex;align-items:center;gap:8px}
+.ext-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:18px 22px}
+@media(max-width:900px){.ext-cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ext-cols{grid-template-columns:1fr}}
+.ext-col h4{font-size:13.5px;color:var(--accent2);margin:0 0 9px;font-weight:700}
+.ext-col a{display:block;color:var(--text);text-decoration:none;font-size:13px;padding:5px 0;
+  border-bottom:1px solid var(--line);transition:color .15s, padding-left .15s}
+.ext-col a:hover{color:var(--accent2);padding-left:5px}
+.ext-note{margin-top:18px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7}
+
+
+  main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 64px; }
+  .section { margin-bottom: 48px; }
+  .section-head {
+    display: flex; align-items: center; gap: 12px; padding-bottom: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--border);
+  }
+  .section-head h2 { font-size: 20px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+  .sec-emoji { font-size: 22px; }
+  .sec-count { color: var(--text-mute); font-size: 13px; background: var(--bg-card); padding: 2px 10px; border-radius: 999px; border: 1px solid var(--border); }
+  .back-top { margin-left: auto; color: var(--text-mute); font-size: 14px; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border); transition: all 0.15s; }
+  .back-top:hover { color: var(--accent); border-color: var(--accent); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 12px;
+    transition: transform 0.18s, border-color 0.18s, background 0.18s; position: relative; overflow: hidden;
+  }
+  .card::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, var(--accent), transparent); opacity: 0.6; transition: opacity 0.18s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: rgba(110,168,255,0.4); background: var(--bg-card-hover); box-shadow: var(--shadow); }
+  .card:hover::before { opacity: 1; }
+  .card-head { display: flex; align-items: center; gap: 10px; }
+  .seq {
+    font-family: "SF Mono", "JetBrains Mono", Menlo, monospace; font-size: 13px; font-weight: 700;
+    color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-soft-border);
+    padding: 2px 8px; border-radius: 6px; letter-spacing: 0.5px; flex-shrink: 0;
+  }
+  .source-chip {
+    font-size: 11px; color: var(--text-dim); background: var(--pill-bg);
+    border: 1px solid var(--border); padding: 3px 10px; border-radius: 999px;
+    max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .card-extra { font-size: 11px; color: var(--accent-3); background: var(--accent3-soft); border: 1px solid var(--accent3-soft-border); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .card-date { font-size: 11px; color: var(--text-mute); }
+  .card-title { font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); }
+  .card-summary { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+  .card-title-zh { font-size: 13px; font-weight: 500; line-height: 1.5; color: var(--accent); }
+  .card-summary-zh { font-size: 13px; color: var(--text-dim); line-height: 1.7; margin-top: 2px; border-left: 2px solid var(--accent-soft-border); padding-left: 8px; }
+  .card-foot { display: flex; gap: 8px; margin-top: auto; padding-top: 4px; }
+  .btn-primary, .btn-ghost {
+    display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 8px;
+    font-size: 12px; font-weight: 500; transition: all 0.15s; border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--accent); color: #0b0d12; }
+  .btn-primary:hover { background: #82b6ff; transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--text-mute); border-color: var(--border); }
+  .btn-ghost:hover { color: var(--text); border-color: var(--text-mute); }
+  footer {
+    max-width: 1200px; margin: 0 auto; padding: 32px 24px 48px;
+    border-top: 1px solid var(--border); text-align: center; color: var(--text-mute); font-size: 12px; line-height: 1.8;
+  }
+  footer a { color: var(--accent); } footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .hero { padding: 32px 16px 28px; }
+    .hero-stats { gap: 8px; }
+    .chip-stat { padding: 6px 10px; font-size: 12px; }
+    main { padding: 24px 16px 48px; }
+    .grid { grid-template-columns: 1fr; gap: 12px; }
+    .card { padding: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+<script>
+  (function(){ try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') { document.documentElement.setAttribute('data-theme', t); } } catch(e) {} })();
+</script>
+</head>
+<body>
+<div id="top"></div>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">⚡ AI HOT · Daily Briefing</span>
+    <h1 class="hero-title">AI 日报 · 2026年11月10日 周二</h1>
+    <p class="hero-date">数据窗口：11月9日 08:00 — 11月10日 08:00（北京时间） · 数据生成：11月10日 08:00（北京时间）（AI HOT 期次）</p>
+    <p class="hero-window">本页更新：<span class="updated-badge">11月10日 08:40（北京时间）</span> · 多源聚合：AI HOT · Hugging Face · Hacker News · arXiv</p>
+    <div class="hero-stats">
+      <span class="total-pill"><span class="num">37</span><span class="lbl">条精选</span></span>
+      <span class="chip-stat"><span class="chip-emoji">🧠</span><span class="chip-label">模型发布/更新</span><span class="chip-num">5</span></span><span class="chip-stat"><span class="chip-emoji">🚀</span><span class="chip-label">产品发布/更新</span><span class="chip-num">3</span></span><span class="chip-stat"><span class="chip-emoji">📰</span><span class="chip-label">行业动态</span><span class="chip-num">1</span></span><span class="chip-stat"><span class="chip-emoji">📄</span><span class="chip-label">论文研究</span><span class="chip-num">1</span></span><span class="chip-stat"><span class="chip-emoji">💡</span><span class="chip-label">技巧与观点</span><span class="chip-num">2</span></span><span class="chip-stat"><span class="chip-emoji">💬</span><span class="chip-label"> Hacker News 热议</span><span class="chip-num">14</span></span><span class="chip-stat"><span class="chip-emoji">📄</span><span class="chip-label"> arXiv 最新 AI</span><span class="chip-num">11</span></span>
+    </div>
+  </div>
+</header>
+<nav class="nav"><div class="nav-inner"><a class="home-link" href="../index.html" title="返回首页">← 首页</a><span class="nav-brand">📰 AI HOT 科技日报</span><span class="nav-links"><a href="#models" class="nav-link"><span class="nav-emoji">🧠</span>模型发布/更新<span class="nav-count">5</span></a><a href="#products" class="nav-link"><span class="nav-emoji">🚀</span>产品发布/更新<span class="nav-count">3</span></a><a href="#industry" class="nav-link"><span class="nav-emoji">📰</span>行业动态<span class="nav-count">1</span></a><a href="#papers" class="nav-link"><span class="nav-emoji">📄</span>论文研究<span class="nav-count">1</span></a><a href="#tips" class="nav-link"><span class="nav-emoji">💡</span>技巧与观点<span class="nav-count">2</span></a><a class="nav-link" href="../rss/index.html">📡 RSS</a><a href="#hn" class="nav-link"><span class="nav-emoji">💬</span> Hacker News 热议<span class="nav-count">14</span></a><a href="#arxiv" class="nav-link"><span class="nav-emoji">📄</span> arXiv 最新 AI<span class="nav-count">11</span></a></span><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button></div></nav><span id="nav-translate" class="nav-translate"><div id="google_translate_element"></div><a id="nav-bing-translate" class="nav-bing-translate" href="#" onclick="openBingTranslate();return false;" title="用 Bing 整页翻译（国内可用）">🌐 Bing 翻译</a><script>function googleTranslateElementInit(){  try{ new google.translate.TranslateElement({    pageLanguage:"zh-CN",    includedLanguages:"en,zh-CN,ja,fr,de,ko,ru,es,it,pt",    layout:google.translate.TranslateElement.InlineLayout.SIMPLE,    autoDisplay:false  }, "google_translate_element"); }catch(e){}}function openBingTranslate(){  var u=encodeURIComponent(location.href);  window.open("https://cn.bing.com/translator?from=en&to=zh-CHS&text="+u,"_blank");}setTimeout(function(){  var g=document.querySelector(".goog-te-combo");  var b=document.getElementById("nav-bing-translate");  if(!g && b){ b.classList.add("warn"); b.title="Google 翻译不可用，请改用 Bing 翻译"; }},3500);</script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script></span>
+<main>
+
+      <section id="models" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🧠</span>模型发布/更新</h2>
+          <span class="sec-count">5 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="Anthropic：Newsroom（网页）">Anthropic：Newsroom（网页）</span>
+          </div>
+          <h3 class="card-title">Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2</h3>
+          <p class="card-summary">Anthropic 发布 Claude Fable 5.2 和 Claude Mythos 5.2，两者为同一底层模型，…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/va9trgwaw3r4por6vdqbjxrhd" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="Meta AI：Research Blog（网页）">Meta AI：Research Blog（网页）</span>
+          </div>
+          <h3 class="card-title">Meta 发布最小最高效模型 Muse Ember，主打智能体高频任务</h3>
+          <p class="card-summary">Meta 发布 Muse Ember（muse-ember-1.0），定位最小最高效的复杂推理执行模型，面向工具调用、编…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/cox936nwax49rkiimi1oicgzu" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="字节 Seed：Research Feed（网页内嵌数据）">字节 Seed：Research Feed（网页内嵌数据）</span>
+          </div>
+          <h3 class="card-title">字节发布 Seedream 5.5 图像创作模型：支持 100 轮编辑与原生 RGBA 透明输出</h3>
+          <p class="card-summary">字节 Seed 发布新一代图像创作模型 Seedream 5.5，带来三项升级：非编辑区域像素级保持、支持围绕同一作品多…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://seed.bytedance.com/zh/blog/%E7%94%9F%E6%88%90%E6%9B%B4%E7%9C%9F%E5%AE%9E-%E7%99%BE%E8%BD%AE%E7%BC%96%E8%BE%91%E6%9B%B4%E7%A8%B3%E5%AE%9A-seedream-5-5-%E5%8F%91%E5%B8%83" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/xsvt2hlwuovul9sdvazcw7cxk" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="Zyphra Research（网页）">Zyphra Research（网页）</span>
+          </div>
+          <h3 class="card-title">Zyphra 发布开源 TTS 模型 ZONOS3-Mini，可在手机浏览器实时运行</h3>
+          <p class="card-summary">Zyphra 发布 ZONOS3-Mini，一个 Apache 2.0 开源的零样本语音克隆 TTS 模型，采用稀疏 M…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.zyphra.com/our-work/zonos3-mini" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/r5h0cwwdh1peqbg2rk6k9ljrh" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="Claude：YouTube（RSS）">Claude：YouTube（RSS）</span>
+          </div>
+          <h3 class="card-title">Claude Mythos 5.2 预测基因治疗载体 AAV 衣壳结构</h3>
+          <p class="card-summary">Claude 官方视频介绍 Claude Mythos 5.2 预测了完整 AAV 衣壳结构，即用于递送基因治疗的蛋白质…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.youtube.com/watch?v=FMbXUxn_nBw" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/rxx1qxfjfuioem95lr868hhwq" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="products" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🚀</span>产品发布/更新</h2>
+          <span class="sec-count">3 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="百度文心 ERNIE 官方博客">百度文心 ERNIE 官方博客</span>
+          </div>
+          <h3 class="card-title">百度发布 ERNIE Evolve 自动研究系统，公开任务超最好纪录并落地 ERNIE-5.5-Flash 推理优化</h3>
+          <p class="card-summary">百度文心团队发布自动研究系统 ERNIE Evolve，用双层循环组织研究方向选择与实验迭代，由 Director、Se…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://ernie.baidu.com/zh/research/posts/ernie-evolve/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/h6vimc0xpjwbjfampr34ym5ol" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="X：Google (@Google)">X：Google (@Google)</span>
+          </div>
+          <h3 class="card-title">Google 扩展第八代 TPU 阵容，新增两款智能体专用系统</h3>
+          <p class="card-summary">Google 宣布扩展第八代 TPU 产品线，新增 TPU 8i Max 和 TPU 8tx 两款系统，使一年内发布的第…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://x.com/Google/status/2119788086490001906" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/phwieennfk1nppru29uek1b0y" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="公众号：数字生命卡兹克">公众号：数字生命卡兹克</span>
+          </div>
+          <h3 class="card-title">数字生命卡兹克上线免费 Token 福利聚合网站 Token羊毛</h3>
+          <p class="card-summary">数字生命卡兹克上线免费聚合网站 Token羊毛（aihot.news/free-tokens），把各厂商公开的免费额度、…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://mp.weixin.qq.com/s/MyNWZlURmO0xIxQpMOQZWg" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/e80fmjdp23n217sd6e7ky52om" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="industry" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">📰</span>行业动态</h2>
+          <span class="sec-count">1 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">09</span>
+            <span class="source-chip" title="The Decoder：AI News（RSS）">The Decoder：AI News（RSS）</span>
+          </div>
+          <h3 class="card-title">Nvidia CEO 黄仁勋婚外情风波削弱其对严格 AI 芯片出口管制的游说</h3>
+          <p class="card-summary">据 Bloomberg 报道，Nvidia CEO 黄仁勋在全员备忘录中承认与被美国情报机构认定为疑似中国情报人员线人的…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://the-decoder.com/nvidia-espionage-scandal-weakens-huangs-lobby-against-tighter-ai-chip-export-controls/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/e17dl64mjiov57c0jtwn41bxd" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="papers" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">📄</span>论文研究</h2>
+          <span class="sec-count">1 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">10</span>
+            <span class="source-chip" title="Anthropic：Research（发表成果 · 网页）">Anthropic：Research（发表成果 · 网页）</span>
+          </div>
+          <h3 class="card-title">Anthropic 测试 Claude Fable 5.2 端到端设计三种电子设备并制作可用原型</h3>
+          <p class="card-summary">Anthropic 与 Diode Computers 合作，让 Claude Fable 5.2 从简单提示词出发完成…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.anthropic.com/research/claude-electronics-design" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/xmqflr9ja0pipwyibtqnf8qsj" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="tips" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">💡</span>技巧与观点</h2>
+          <span class="sec-count">2 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">11</span>
+            <span class="source-chip" title="Anthropic：Claude.dev 开发者博客（RSS）">Anthropic：Claude.dev 开发者博客（RSS）</span>
+          </div>
+          <h3 class="card-title">Anthropic 指南：Claude 开发该选 Haiku 5.5、Sonnet 5.5、Opus 5.5 还是 Fable 5.2</h3>
+          <p class="card-summary">Anthropic 开发者博客发文指导开发者如何在 Haiku 5.5、Sonnet 5.5、Opus 5.5 和 Fa…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://claude.dev/blog/which-claude-model-should-you-build-with/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/ykrvgcox3whsx6tst5qesbf62" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">12</span>
+            <span class="source-chip" title="Redwood Research：Blog（RSS）">Redwood Research：Blog（RSS）</span>
+          </div>
+          <h3 class="card-title">Redwood Research 分析 OpenAI Astra 在安全任务上的隐性消极表现</h3>
+          <p class="card-summary">Redwood Research 的 Alexa Pan 撰文分析 OpenAI 披露的 Astra 在安全与对齐任务上…</p>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://blog.redwoodresearch.org/p/astra-covertly-underperforming-on" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <a class="btn-ghost" href="https://aihot.news/items/saq4lh2i3ewct7cxvvh1h77jo" target="_blank" rel="noopener noreferrer">AI HOT</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section id="hn" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">💬</span> Hacker News 热议</h2>
+          <span class="sec-count">14 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Learning Abstractions: The Next Frontier for AI</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://twitter.com/jmugan/status/2119593410268999700" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-10</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Hundreds of Mundane AI Apps Are Hiding Sexually Abusive Deepfake Features</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-10</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Does paying more get you better reviews? Rarely</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.bettascore.ai/research/price-vs-reviews" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-10</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 3 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Parents Sue Google over A.I. Safety Risks on School Chromebooks</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nytimes.com/2026/11/05/technology/ai-safety-school-chromebooks-google-lawsuit.html" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 1</span>
+          </div>
+          <h3 class="card-title">The New York Times Doesn&#x27;t Understand AI&#x27;s Role in Suppressing Wages</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://gizmodo.com/the-new-york-times-doesnt-understand-ais-role-in-suppressing-wages-2000836392" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 3 · 💬 0</span>
+          </div>
+          <h3 class="card-title">A teen used her school Chromebook and Google AI Mode to plan her suicide</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://mashable.com/tech/google-gemini-chromebook-lawsuit-teen-planned-suicide" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 0</span>
+          </div>
+          <h3 class="card-title">JoesProxy – The free network workbench for your AI agent</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.joesproxy.com/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 7 · 💬 2</span>
+          </div>
+          <h3 class="card-title">Why Is AI Slop So Frustrating to Read?</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://zonderlabs.com/slop" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">09</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 4 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Building a full ASIC chip (no AI)</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://essenceia.github.io/projects/expresso/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">10</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 1</span>
+          </div>
+          <h3 class="card-title">Show HN: Live counts of AI assistants reading a diaspora business directory</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://nibiashara.com/agent-index" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">11</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 0</span>
+          </div>
+          <h3 class="card-title">AI Bubble Tracker</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://endtime-instruments.org/ai-bubble-tracker/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">12</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 1 · 💬 0</span>
+          </div>
+          <h3 class="card-title">Microsoft Winding Down Oracle Deal to Rent AI Cloud Capacity</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.bloomberg.com/news/articles/2026-11-06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">13</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 2 · 💬 0</span>
+          </div>
+          <h3 class="card-title">What Is QoDuck? Is QoDuck Qwen 4?</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://kie.ai/blog/what-is-qoduck" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">14</span>
+            <span class="source-chip" title="Hacker News">Hacker News</span>
+            <span class="card-extra">▲ 75 · 💬 74</span>
+          </div>
+          <h3 class="card-title">A year after the 100% AI mandate nobody understands our code</h3>
+          
+          
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-09</span>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="arxiv" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">📄</span> arXiv 最新 AI</h2>
+          <span class="sec-count">11 条</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">On Agentic Manipulation Policies</h3>
+          
+          <p class="card-summary">Recent work on robot manipulation has focused on specialist…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09892v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse</h3>
+          
+          <p class="card-summary">Large language models reinvent the wheel all the time. They…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09891v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning</h3>
+          
+          <p class="card-summary">Test-time reinforcement learning (TTRL) adapts pretrained la…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09872v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.AI]</span>
+          </div>
+          <h3 class="card-title">GRAC: Graph-Based Retrieval-Augmented Captioning for Surgical Scene Description</h3>
+          
+          <p class="card-summary">Purpose: Surgical operative reports support procedural docum…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09866v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.LG]</span>
+          </div>
+          <h3 class="card-title">On the (non-)closedness of the set of ReLU networks</h3>
+          
+          <p class="card-summary">We prove that the set $\mathcal{N}_N$ of ReLU networks with…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09887v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.LG]</span>
+          </div>
+          <h3 class="card-title">FlowMoP: Stochastic Multi-Person Motion Prediction</h3>
+          
+          <p class="card-summary">Predicting the future motion of multiple people is inherentl…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09882v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.LG]</span>
+          </div>
+          <h3 class="card-title">Graded convolutional networks: scale invariance without the scale and robustness to unknown blur</h3>
+          
+          <p class="card-summary">The Gaussian jet of an image is a graded vector space: a dil…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09878v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.CL]</span>
+          </div>
+          <h3 class="card-title">CodeQuant2: Enhanced Outlier Mitigation and Adaptive Clustering for Low-Precision LRMs</h3>
+          
+          <p class="card-summary">Large reasoning models (LRMs) improve task performance by ge…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09868v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">09</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.CL]</span>
+          </div>
+          <h3 class="card-title">How far does a hash-only sender go? A pre-registered map of sender memory versus bits for short text messages</h3>
+          
+          <p class="card-summary">Can a sender that only computes hashes, with a language mode…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09848v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">10</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.CL]</span>
+          </div>
+          <h3 class="card-title">BitDecoding-FP4: Native FP4 KV Cache Decoding via Algorithm-System Co-Design</h3>
+          
+          <p class="card-summary">The key-value (KV) cache dominates memory capacity and bandw…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09825v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">11</span>
+            <span class="source-chip" title="arXiv">arXiv</span>
+            <span class="card-extra">[cs.CL]</span>
+          </div>
+          <h3 class="card-title">Compaction, decay and reinforcement in a two-tier conversational memory: a paired evaluation against retrieval-augmented generation</h3>
+          
+          <p class="card-summary">A conversational agent that remembers has to decide what to…</p>
+          
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.09807v1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            <span class="card-date">2026-11-06</span>
+          </div>
+        </article>
+        </div>
+      </section>
+</main>
+<section class="ext-res"><h3>🔗 延伸资源</h3><div class="ext-cols"><div class="ext-col"><h4>综合热榜</h4><a href="https://tophub.today" target="_blank" rel="noopener noreferrer">今日热榜</a><a href="https://top.baidu.com/board" target="_blank" rel="noopener noreferrer">百度热搜</a><a href="https://s.weibo.com/top/summary" target="_blank" rel="noopener noreferrer">微博热搜</a><a href="https://www.bilibili.com/v/popular/all" target="_blank" rel="noopener noreferrer">B站热门</a></div><div class="ext-col"><h4>科技 / AI</h4><a href="https://news.ycombinator.com" target="_blank" rel="noopener noreferrer">Hacker News</a><a href="https://www.reddit.com/r/technology/" target="_blank" rel="noopener noreferrer">Reddit · technology</a><a href="https://huggingface.co/papers" target="_blank" rel="noopener noreferrer">Hugging Face Papers</a><a href="https://paperswithcode.com" target="_blank" rel="noopener noreferrer">Papers with Code</a></div><div class="ext-col"><h4>学术 / 物理</h4><a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://www.semanticscholar.org" target="_blank" rel="noopener noreferrer">Semantic Scholar</a><a href="https://www.nature.com" target="_blank" rel="noopener noreferrer">Nature</a></div><div class="ext-col"><h4>新闻聚合</h4><a href="https://news.google.com" target="_blank" rel="noopener noreferrer">Google News</a><a href="https://ground.news" target="_blank" rel="noopener noreferrer">Ground News</a><a href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer">BBC News</a><a href="https://www.news.cn" target="_blank" rel="noopener noreferrer">新华社</a></div></div><p class="ext-note">以上为同类信息聚合 / 新闻站点，供延伸阅读 · 本站仅聚合公开热榜与新闻接口，与所列站点无隶属关系</p></section>
+<footer>
+  共 <strong>37</strong> 条 · 多源聚合：AI HOT · Hugging Face Papers · Hacker News · arXiv cs.AI/LG/CL · 时间已转换为北京时间
+</footer>
+<script>
+  (function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function sync() {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.innerHTML = dark ? '☀️ 亮色' : '🌙 暗色';
+    }
+    sync();
+    btn.addEventListener('click', function() {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var next = dark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch(e) {}
+      sync();
+    });
+  })();
+  (function() {
+    var h = document.getElementById('nav-hamburger');
+    var nav = document.querySelector('.nav');
+    if (!h || !nav) return;
+    function set(open) { nav.classList.toggle('menu-open', open); h.textContent = open ? '✕' : '☰'; h.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+    h.addEventListener('click', function() { set(!nav.classList.contains('menu-open')); });
+    Array.prototype.forEach.call(nav.querySelectorAll('.nav-link'), function(a) { a.addEventListener('click', function() { set(false); }); });
+    document.addEventListener('click', function(e) { if (nav.classList.contains('menu-open') && !nav.contains(e.target)) set(false); });
+  })();
+</script>
+</body>
+</html>
