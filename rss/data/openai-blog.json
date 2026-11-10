@@ -5,6 +5,46 @@
   "lang": "en",
   "entries": [
     {
+      "title": "ChatGPT Enterprise now available in AWS Marketplace",
+      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+      "summary": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-09 19:00",
+      "ts": 1794250800,
+      "content": ""
+    },
+    {
+      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+      "url": "https://openai.com/index/control-room",
+      "summary": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-09 13:00",
+      "ts": 1794229200,
+      "content": ""
+    },
+    {
+      "title": "CodeRabbit scales agentic software development and ships 20x more",
+      "url": "https://openai.com/index/coderabbit-codex-daybreak",
+      "summary": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-09 08:00",
+      "ts": 1794211200,
+      "content": ""
+    },
+    {
+      "title": "Kuken Industries searches 70 years of drawings in minutes",
+      "url": "https://openai.com/index/kuken",
+      "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-09 08:00",
+      "ts": 1794211200,
+      "content": ""
+    },
+    {
       "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
       "url": "https://openai.com/index/partnering-with-hacktron",
       "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
@@ -62,46 +102,6 @@
       "extra": "",
       "date": "2026-11-05 08:00",
       "ts": 1793865600,
-      "content": ""
-    },
-    {
-      "title": "Setting a new standard for responsible AI infrastructure",
-      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
-      "summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-05 02:00",
-      "ts": 1793844000,
-      "content": ""
-    },
-    {
-      "title": "Flipsnack grows product signups with conversion optimization",
-      "url": "https://openai.com/ads/customers/flipsnack",
-      "summary": "Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while lowering the cost per signup.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-05 00:45",
-      "ts": 1793839515,
-      "content": ""
-    },
-    {
-      "title": "Franklin Templeton uses OpenAI to support investment research",
-      "url": "https://openai.com/index/franklin-templeton",
-      "summary": "Starting with equity research, Franklin Templeton is developing AI workflows to help portfolio managers compare research views and examine investment risks.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-05 00:00",
-      "ts": 1793836800,
-      "content": ""
-    },
-    {
-      "title": "OpenAI to acquire Pierre Computer Company, Inc.",
-      "url": "https://openai.com/index/openai-to-acquire-pierre",
-      "summary": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-04 14:30",
-      "ts": 1793802600,
       "content": ""
     }
   ]
