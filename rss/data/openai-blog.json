@@ -15,6 +15,16 @@
       "content": ""
     },
     {
+      "title": "ChatGPT Plus for veterans and servicemembers",
+      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+      "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-11 08:00",
+      "ts": 1794384000,
+      "content": ""
+    },
+    {
       "title": "Helping caregivers use AI in everyday life",
       "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
       "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
@@ -45,6 +55,16 @@
       "content": ""
     },
     {
+      "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+      "url": "https://openai.com/index/singapore-airlines-travel-work",
+      "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-10 08:00",
+      "ts": 1794297600,
+      "content": ""
+    },
+    {
       "title": "Work at the Frontier: AI’s effect on freelance work",
       "url": "https://openai.com/index/ai-effect-on-freelance-work",
       "summary": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
@@ -52,6 +72,16 @@
       "extra": "",
       "date": "2026-11-10 07:00",
       "ts": 1794294000,
+      "content": ""
+    },
+    {
+      "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+      "url": "https://openai.com/index/cogent-security",
+      "summary": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-10 00:00",
+      "ts": 1794268800,
       "content": ""
     },
     {
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-11-09 13:00",
       "ts": 1794229200,
-      "content": ""
-    },
-    {
-      "title": "CodeRabbit scales agentic software development and ships 20x more",
-      "url": "https://openai.com/index/coderabbit-codex-daybreak",
-      "summary": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-09 08:00",
-      "ts": 1794211200,
-      "content": ""
-    },
-    {
-      "title": "Kuken Industries searches 70 years of drawings in minutes",
-      "url": "https://openai.com/index/kuken",
-      "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-09 08:00",
-      "ts": 1794211200,
-      "content": ""
-    },
-    {
-      "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
-      "url": "https://openai.com/index/partnering-with-hacktron",
-      "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-06 08:00",
-      "ts": 1793952000,
       "content": ""
     }
   ]
