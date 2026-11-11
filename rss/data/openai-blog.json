@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Gilbert + Tobin rethinks the business of law with AI",
+      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "summary": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-12 00:00",
+      "ts": 1794441600,
+      "content": ""
+    },
+    {
       "title": "Helping caregivers use AI in everyday life",
       "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
       "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-11-06 08:00",
       "ts": 1793952000,
-      "content": ""
-    },
-    {
-      "title": "Measuring how AI agents handle everyday wet-lab science",
-      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
-      "summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-06 00:00",
-      "ts": 1793923200,
       "content": ""
     }
   ]
