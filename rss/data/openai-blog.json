@@ -25,6 +25,16 @@
       "content": ""
     },
     {
+      "title": "JioStar’s chief architect on AI discovery at 500M-user scale",
+      "url": "https://openai.com/index/jiostar-vijay-seshadri",
+      "summary": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-11 00:00",
+      "ts": 1794355200,
+      "content": ""
+    },
+    {
       "title": "Helping caregivers use AI in everyday life",
       "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
       "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-11-09 19:00",
       "ts": 1794250800,
-      "content": ""
-    },
-    {
-      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
-      "url": "https://openai.com/index/control-room",
-      "summary": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-09 13:00",
-      "ts": 1794229200,
       "content": ""
     }
   ]
