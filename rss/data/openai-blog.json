@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Holiday Extras is rethinking what it can build with Codex",
+      "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+      "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-12 09:30",
+      "ts": 1794475800,
+      "content": ""
+    },
+    {
+      "title": "Supporting research on AI and children’s safety",
+      "url": "https://openai.com/index/children-first-declaration",
+      "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-12 00:00",
+      "ts": 1794441600,
+      "content": ""
+    },
+    {
       "title": "Gilbert + Tobin rethinks the business of law with AI",
       "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
       "summary": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-11-10 07:00",
       "ts": 1794294000,
-      "content": ""
-    },
-    {
-      "title": "Cogent and OpenAI build cyber defense factories for enterprises",
-      "url": "https://openai.com/index/cogent-security",
-      "summary": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-10 00:00",
-      "ts": 1794268800,
-      "content": ""
-    },
-    {
-      "title": "ChatGPT Enterprise now available in AWS Marketplace",
-      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
-      "summary": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-09 19:00",
-      "ts": 1794250800,
       "content": ""
     }
   ]
