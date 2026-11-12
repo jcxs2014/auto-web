@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "url": "https://openai.com/index/amplitude",
+      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-12 20:00",
+      "ts": 1794513600,
+      "content": ""
+    },
+    {
       "title": "Holiday Extras is rethinking what it can build with Codex",
       "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
       "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-11-10 08:00",
       "ts": 1794297600,
-      "content": ""
-    },
-    {
-      "title": "Work at the Frontier: AI’s effect on freelance work",
-      "url": "https://openai.com/index/ai-effect-on-freelance-work",
-      "summary": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-10 07:00",
-      "ts": 1794294000,
       "content": ""
     }
   ]
