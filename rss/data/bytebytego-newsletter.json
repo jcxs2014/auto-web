@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Free Live Masterclass: Building AI Agents That Work in the Real World",
+      "url": "https://blog.bytebytego.com/p/free-live-masterclass-building-ai",
+      "summary": "An agent needs context to make decisions, tools to take action, guardrails to stay within bounds, and checks to verify the results.",
+      "source": "ByteByteGo Newsletter",
+      "extra": "",
+      "date": "2026-11-13 17:04",
+      "ts": 1794589489,
+      "content": "<p>An agent needs context to make decisions, tools to take action, guardrails to stay within bounds, and checks to verify the results.</p>\n    <p>How do these pieces fit together?</p>\n    <p>Join ByteByteGo’s FREE live masterclass: “Don’t Build AI Agents Without Learning These Techniques.”</p>\n    <p>📅 Sunday, Nov 15</p>\n    <p>🕛 12 PM PT · 1 hour</p>\n    <p>💻 Live on Zoom</p>"
+    },
+    {
       "title": "Top Types of Hidden Coupling and How to Deal With Them",
       "url": "https://blog.bytebytego.com/p/top-types-of-hidden-coupling-and",
       "summary": "When you create an architecture diagram, you usually try to show the services, databases, queues, and the connections between these different components.",

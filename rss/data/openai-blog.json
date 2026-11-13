@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Introducing ChatGPT Wallet",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-13 15:00",
+      "ts": 1794582000,
+      "content": ""
+    },
+    {
       "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
       "url": "https://openai.com/business/customer-stories/amplitude",
       "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-11-10 10:00",
       "ts": 1794304800,
-      "content": ""
-    },
-    {
-      "title": "Closing the AI guidance gap in education",
-      "url": "https://openai.com/index/closing-ai-guidance-gap-education",
-      "summary": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-10 09:00",
-      "ts": 1794301200,
       "content": ""
     }
   ]
