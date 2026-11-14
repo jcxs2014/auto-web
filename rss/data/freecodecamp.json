@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Build and Train a GLM-5.3-Flash Model From Scratch with Python",
+      "url": "https://www.freecodecamp.org/news/build-and-train-a-glm-53-flash-model-from-scratch-with-python/",
+      "summary": "GLM-5.3-Flash combines linear and sparse attention, a mixture-of-experts design, and manifold constrained hyperconnections. A scaled-down version with 25 million parameters can be built in Python and",
+      "source": "freeCodeCamp",
+      "extra": "",
+      "date": "2026-11-14 16:02",
+      "ts": 1794672176,
+      "content": "<p>GLM-5.3-Flash combines linear and sparse attention, a mixture-of-experts design, and manifold constrained hyperconnections. A scaled-down version with 25 million parameters can be built in Python and trained on a standard CPU.</p>\n    <p>We just published a course on the freeCodeCamp.org YouTube channel that will teach you how to build and train a multimodal language model from scratch, covering both pre-training and post-training. The course is from @vukrosic, and all of the code, slides, and experiments are in the GitHub repository linked in the video description.</p>\n    <p>The model uses a 260-token byte-level vocabulary, a 192-token context, and a small vision encoder that turns a 32 by 32 image into 16 tokens.</p>\n    <p>In this course, you will learn:</p>\n    <ul>\n      <li>Tokenization & Embeddings<br></br>Why a small model needs a small byte-level vocabulary and how weight tying shares one matrix between the embeddings and the output head.</li>\n      <li>Linear & Sparse Attention<br></br>How linear attention keeps a fixed-size memory of recent tokens while every fourth layer uses sparse attention with an indexer to find distant details.</li>\n      <li>Mixture of Experts<br></br>How tokens are routed to a few chosen experts plus a shared expert that learns information common to every token.</li>\n      <li>Adding Vision<br></br>How images are split into patches with 2D RoPE and merged into image tokens so the model can recognize digits.</li>\n      <li>Pre-Training Experiments<br></br>How data diversity, interleaving, and curriculums affect learning, including how interleaving helps prevent catastrophic forgetting.</li>\n      <li>Reinforcement Learning<br></br>How to design reward functions, compute advantages as in GRPO, update only the final layers, and test group size, temperature, and seeds.</li>\n    </ul>\n    <p>After reinforcement learning, the model goes from solving 0 of 24 Python tasks to 16 of 24.</p>\n    <p>Watch the full course on the <a href=\"https://youtu.be/-gfgQfw2g_E\">freeCodeCamp.org YouTube channel</a> (44-minute watch).</p>"
+    },
+    {
       "title": "How to Speed Up CI in the Age of AI-Written Code",
       "url": "https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/",
       "summary": "Coding agents now write code faster than most CI pipelines can check it. In April 2026, GitHub COO Kyle Daigle said that his platform was handling 275 million commits a week, on pace for 14 billion in",
