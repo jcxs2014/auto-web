@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "LAST CALL FOR ENROLLMENT: AI Engineering Fundamentals",
+      "url": "https://blog.bytebytego.com/p/last-call-for-enrollment-ai-engineering",
+      "summary": "decision time",
+      "source": "ByteByteGo Newsletter",
+      "extra": "",
+      "date": "2026-11-15 22:15",
+      "ts": 1794780941,
+      "content": "<p>One final reminder: the AI Engineering Fundamentals cohort starts tomorrow, Monday, November 16, 5 PM PT.</p>\n    <p>Enrollment closes in less than 24 hours. Today is your last day to enroll!</p>\n    <p>Join Ali Aminian, Google engineer, bestselling AI author, and Stanford course contributor, for live, hands-on sessions where you’ll learn how to:</p>\n    <ul>\n      <li>\n        <p>Understand how LLMs work and choose the right models.</p>\n      </li>\n    </ul>\n    <ul>\n      <li>\n        <p>Build RAG pipelines that retrieve information from your own data and use it to generate answers.</p>\n      </li>\n    </ul>\n    <ul>\n      <li>\n        <p>Create AI agents that use tools, search the web, and complete multi-step tasks.</p>\n      </li>\n    </ul>\n    <ul>\n      <li>\n        <p>Build AI apps using reasoning models and advanced prompting techniques.</p>\n      </li>\n    </ul>\n    <ul>\n      <li>\n        <p>Put your skills into practice by building four real-world AI projects in four weeks.</p>\n      </li>\n    </ul>\n    <p>If you’ve been thinking about building your AI engineering skills to future-proof your career, now’s the time.</p>\n    <p>Hope to see you inside!</p>\n    <p>The ByteByteGo Team</p>"
+    },
+    {
       "title": "EP233: Kubernetes Explained for Busy Engineers",
       "url": "https://blog.bytebytego.com/p/ep233-kubernetes-explained-for-busy",
       "summary": "Kubernetes is an orchestration platform that manages the deployment and maintenance of containerized applications, particularly on multiple machines.",

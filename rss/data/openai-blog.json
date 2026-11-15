@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "A step toward defining the Standard Model on a lattice",
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+      "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-15 22:00",
+      "ts": 1794780001,
+      "content": ""
+    },
+    {
+      "title": "Our new blog for science",
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-15 22:00",
+      "ts": 1794780000,
+      "content": ""
+    },
+    {
       "title": "Introducing ChatGPT Wallet",
       "url": "https://openai.com/index/introducing-chatgpt-wallet",
       "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-11-11 08:00",
       "ts": 1794384000,
-      "content": ""
-    },
-    {
-      "title": "JioStar’s chief architect on AI discovery at 500M-user scale",
-      "url": "https://openai.com/index/jiostar-vijay-seshadri",
-      "summary": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-11 00:00",
-      "ts": 1794355200,
-      "content": ""
-    },
-    {
-      "title": "Helping caregivers use AI in everyday life",
-      "url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
-      "summary": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-10 12:00",
-      "ts": 1794312000,
       "content": ""
     }
   ]
