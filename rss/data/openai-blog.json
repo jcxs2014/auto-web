@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+      "url": "https://openai.com/index/lvmh-media-division-partnership",
+      "summary": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-16 09:00",
+      "ts": 1794819600,
+      "content": ""
+    },
+    {
+      "title": "The King’s Trust and OpenAI launch £1m partnership",
+      "url": "https://openai.com/index/the-kings-trust-and-openai",
+      "summary": "The King’s Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-16 00:00",
+      "ts": 1794787200,
+      "content": ""
+    },
+    {
       "title": "A step toward defining the Standard Model on a lattice",
       "url": "https://openai.com/index/step-toward-defining-the-standard-model",
       "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
@@ -82,26 +102,6 @@
       "extra": "",
       "date": "2026-11-12 00:00",
       "ts": 1794441600,
-      "content": ""
-    },
-    {
-      "title": "Gilbert + Tobin rethinks the business of law with AI",
-      "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
-      "summary": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-12 00:00",
-      "ts": 1794441600,
-      "content": ""
-    },
-    {
-      "title": "ChatGPT Plus for veterans and servicemembers",
-      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
-      "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-11 08:00",
-      "ts": 1794384000,
       "content": ""
     }
   ]

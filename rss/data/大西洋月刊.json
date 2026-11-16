@@ -5,9 +5,59 @@
   "lang": "en",
   "entries": [
     {
+      "title": "America’s Most Important EV Is a Delivery Van",
+      "url": "https://www.theatlantic.com/technology/2026/11/electric-cars-delivery-vans-robotaxis/689423/?utm_source=feed",
+      "summary": "Car shoppers remain wary of going electric. Yet the vehicles that surround us are still shifting toward battery power.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-16 14:00",
+      "ts": 1794837600,
+      "content": ""
+    },
+    {
+      "title": "In the Race for AI, China Is Falling Behind",
+      "url": "https://www.theatlantic.com/international/2026/11/ai-race-china-us/689439/?utm_source=feed",
+      "summary": "The Nvidia scandal promises to compound the country’s disadvantages.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-16 13:37",
+      "ts": 1794836220,
+      "content": ""
+    },
+    {
+      "title": "Who Is Anthropic Kidding?",
+      "url": "https://www.theatlantic.com/economy/2026/11/anthropic-ipo-ai-safety/689440/?utm_source=feed",
+      "summary": "The company’s pitch to investors depends on pursuing the very strategy that it warns could lead to human extinction.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-16 12:00",
+      "ts": 1794830400,
+      "content": ""
+    },
+    {
+      "title": "One Word to Explain America",
+      "url": "https://www.theatlantic.com/books/2026/11/four-letter-nation-steven-h-jaffe-excerpt-curseword-history/689431/?utm_source=feed",
+      "summary": "The curse that’s gone from a political taboo to a mark of authenticity",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-16 12:00",
+      "ts": 1794830400,
+      "content": ""
+    },
+    {
+      "title": "Trump Sets the Olive Branch on Fire",
+      "url": "https://www.theatlantic.com/politics/2026/11/trump-jeffries-schumer-2027/689433/?utm_source=feed",
+      "summary": "As the president’s blip of graciousness gives way to political combat, Democrats weigh how much to engage.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-16 10:00",
+      "ts": 1794823200,
+      "content": ""
+    },
+    {
       "title": "Awesome",
       "url": "https://www.theatlantic.com/technology/2026/11/spacex-starship-catch/689453/?utm_source=feed",
-      "summary": "The future of space travel looks very cool.",
+      "summary": "SpaceX’s historic landing is a reminder that even extraordinary technology will be reinvented.",
       "source": "大西洋月刊",
       "extra": "",
       "date": "2026-11-16 01:52",
@@ -52,56 +102,6 @@
       "extra": "",
       "date": "2026-11-15 14:00",
       "ts": 1794751200,
-      "content": ""
-    },
-    {
-      "title": "ChatGPT Analyzed 32,245 of My Text Messages",
-      "url": "https://www.theatlantic.com/family/2026/11/ai-text-message-analysis-friendship/689436/?utm_source=feed",
-      "summary": "I fed it a digital archive of one of my most intimate friendships. It had a lot to say.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-15 13:00",
-      "ts": 1794747600,
-      "content": ""
-    },
-    {
-      "title": "Five Books That Would Make Great Movies",
-      "url": "https://www.theatlantic.com/newsletters/2026/11/five-books-that-would-make-great-movies/689442/?utm_source=feed",
-      "summary": "These stories would translate well to the big screen.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-15 12:00",
-      "ts": 1794744000,
-      "content": ""
-    },
-    {
-      "title": "Investigate Trump Like a Mob Boss",
-      "url": "https://www.theatlantic.com/ideas/2026/11/trump-investigation-strategy/689427/?utm_source=feed",
-      "summary": "Democrats will be tempted to go directly after Trump. They should focus first on the misconduct of those around him.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-15 12:00",
-      "ts": 1794744000,
-      "content": ""
-    },
-    {
-      "title": "30 Years for Moving a Box",
-      "url": "https://www.theatlantic.com/politics/2026/11/daniel-sanchez-prairieland-ice-protest/689372/?utm_source=feed",
-      "summary": "A man who relocated a collection of radical art, zines, and handbooks will spend the next three decades in prison.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-15 12:00",
-      "ts": 1794744000,
-      "content": ""
-    },
-    {
-      "title": "The Only Thing Nathan Fielder Won’t Show",
-      "url": "https://www.theatlantic.com/ideas/2026/11/holmes-documentary-journalistic-ethics/689350/?utm_source=feed",
-      "summary": "Why shouldn’t the subject of a documentary get paid?",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-15 12:00",
-      "ts": 1794744000,
       "content": ""
     }
   ]
