@@ -5,6 +5,26 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Strengthening NATO and allied cyber defenses with AI",
+      "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+      "summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-17 00:00",
+      "ts": 1794873600,
+      "content": ""
+    },
+    {
+      "title": "Introducing OpenAI for Chile",
+      "url": "https://openai.com/index/introducing-openai-for-chile",
+      "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-17 00:00",
+      "ts": 1794873600,
+      "content": ""
+    },
+    {
       "title": "Broadening access to AI for scientists",
       "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
       "summary": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
@@ -35,6 +55,16 @@
       "content": ""
     },
     {
+      "title": "How Revolut raises ambition without lowering the bar",
+      "url": "https://openai.com/business/customer-stories/revolut",
+      "summary": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-16 09:30",
+      "ts": 1794821400,
+      "content": ""
+    },
+    {
       "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
       "url": "https://openai.com/index/lvmh-media-division-partnership",
       "summary": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
@@ -55,16 +85,6 @@
       "content": ""
     },
     {
-      "title": "Advancing computer-use agents for healthcare teams",
-      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "summary": "",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-16 06:00",
-      "ts": 1794808800,
-      "content": ""
-    },
-    {
       "title": "More ways to move care forward with ChatGPT for Healthcare",
       "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
       "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
@@ -75,33 +95,13 @@
       "content": ""
     },
     {
-      "title": "The King’s Trust and OpenAI launch £1m partnership",
-      "url": "https://openai.com/index/the-kings-trust-and-openai",
-      "summary": "The King’s Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+      "title": "Advancing computer-use agents for healthcare teams",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "summary": "",
       "source": "OpenAI Blog",
       "extra": "",
-      "date": "2026-11-16 00:00",
-      "ts": 1794787200,
-      "content": ""
-    },
-    {
-      "title": "At Holiday Extras, dots get to work before anyone asks",
-      "url": "https://openai.com/business/customer-stories/holiday-extras-dots",
-      "summary": "Dots deliver launch reports unprompted, flag issues people might miss, and talk through upcoming meetings on the commute to work.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-16 00:00",
-      "ts": 1794787200,
-      "content": ""
-    },
-    {
-      "title": "A step toward defining the Standard Model on a lattice",
-      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
-      "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-15 22:00",
-      "ts": 1794780001,
+      "date": "2026-11-16 06:00",
+      "ts": 1794808800,
       "content": ""
     }
   ]

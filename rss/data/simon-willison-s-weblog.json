@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Quoting Go Proverbs",
+      "url": "https://simonwillison.net/2026/Nov/17/go-proverbs/",
+      "summary": "A little copying is better than a little dependency. — Go Proverbs, via Tags: go, programming",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-11-17 06:16",
+      "ts": 1794896186,
+      "content": "<p class=\"mobile-date-eyebrow\">17th November 2026</p>\n    <blockquote>\n      <p>A little copying is better than a little dependency.</p>\n    </blockquote>\n    <p>— <a href=\"https://go-proverbs.github.io\">Go Proverbs</a>, <a href=\"https://news.ycombinator.com/item?id=50516689#50526408\">via</a></p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/\">The U.S. Census Bureau and “Super Intelligence”</a> - 2nd November 2026</li>\n    </ul>"
+    },
+    {
       "title": "llm 0.37.3",
       "url": "https://simonwillison.net/2026/Nov/16/llm/",
       "summary": "Release: llm 0.37.3 A bug fix release for LLM, mainly to cover a problem with the most recent Homebrew package of the software. Homebrew now ships the latest SQLite, 3.54.1, which includes a fix that broke LLM's logging code. Short version: in SQLite 3.54.0 the following SQL: select json_object('a', (select json_array(1))) Returns this: {\"a\":[1]} But in 3.54.1 the same query returns this: {\"a\":\"[1",
@@ -93,16 +103,6 @@
       "date": "2026-11-13 23:02",
       "ts": 1794610965,
       "content": "<p class=\"mobile-date-eyebrow\">13th November 2026</p>\n    <p>\n      <a href=\"https://simonwillison.net/elsewhere/release/\">Release</a>\n    </p>\n    <p><a href=\"https://github.com/simonw/datasette-cluster-map/releases/tag/0.19\">datasette-cluster-map 0.19</a>— Datasette plugin that shows a map for any data with latitude/longitude columns</p>\n    <p>One of the oldest Datasette plugins, and still one of my favorites. It now works with Datasette 1.0a42, and depends on <a href=\"https://simonwillison.net/2026/Nov/13/datasette-leaflet/\">the new datasette-leaflet</a> to ensure OpenStreetMap tiles are requested with a referrer header.</p>\n    <p>Here's <a href=\"https://datasette.io/global-power-plants/global-power-plants?owner=Pacific+Gas+%26+Electric+Co.\">a map of power plants owned by California's PG&E</a>, also demonstrating Datasette's recently <a href=\"https://github.com/simonw/datasette/pull/3032\">redesigned facets</a>:</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/\">The U.S. Census Bureau and “Super Intelligence”</a> - 2nd November 2026</li>\n    </ul>"
-    },
-    {
-      "title": "datasette-leaflet 0.3",
-      "url": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
-      "summary": "Release: datasette-leaflet 0.3 OpenStreetMap have a very reasonable policy that hits to their hosted tile server should send a referrer header. Datasette table pages used the Referrer-Policy: no-referrer HTTP header, causing plugins that loaded tiles from OpenStreetMap to violate that policy. datasette-leaflet is the plugin that loads a bundled Leaflet so other Datasette plugins can depend on it. ",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-11-13 22:30",
-      "ts": 1794609054,
-      "content": "<p class=\"mobile-date-eyebrow\">13th November 2026</p>\n    <p>OpenStreetMap have a very reasonable policy that hits to their hosted tile server <a href=\"https://wiki.openstreetmap.org/wiki/Referer\">should send a referrer header</a>. Datasette table pages used the </p><pre>Referrer-Policy: no-referrer</pre> HTTP header, causing plugins that loaded tiles from OpenStreetMap to violate that policy.\n    <p></p><pre>datasette-leaflet</pre> is the plugin that loads a bundled Leaflet so other Datasette plugins can depend on it. It now sets the referrer policy on the tile requests themselves to <pre>strict-origin-when-cross-origin</pre>, passing the host but not the full path to the page.\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/\">The U.S. Census Bureau and “Super Intelligence”</a> - 2nd November 2026</li>\n    </ul>"
     }
   ]
 }
