@@ -5,9 +5,39 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-17 17:45",
+      "ts": 1794937500,
+      "content": ""
+    },
+    {
       "title": "Strengthening NATO and allied cyber defenses with AI",
       "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
       "summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-17 00:00",
+      "ts": 1794873600,
+      "content": ""
+    },
+    {
+      "title": "Introducing ChatGPT for Sales",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
+      "source": "OpenAI Blog",
+      "extra": "",
+      "date": "2026-11-17 08:00",
+      "ts": 1794902400,
+      "content": ""
+    },
+    {
+      "title": "Astra for Law leads in legal intelligence",
+      "url": "https://openai.com/index/astra-law-6-2",
+      "summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
       "source": "OpenAI Blog",
       "extra": "",
       "date": "2026-11-17 00:00",
@@ -72,36 +102,6 @@
       "extra": "",
       "date": "2026-11-16 09:00",
       "ts": 1794819600,
-      "content": ""
-    },
-    {
-      "title": "Our first phase of embedded assessments",
-      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
-      "summary": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-16 08:00",
-      "ts": 1794816000,
-      "content": ""
-    },
-    {
-      "title": "More ways to move care forward with ChatGPT for Healthcare",
-      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-      "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-16 06:00",
-      "ts": 1794808800,
-      "content": ""
-    },
-    {
-      "title": "Advancing computer-use agents for healthcare teams",
-      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "summary": "",
-      "source": "OpenAI Blog",
-      "extra": "",
-      "date": "2026-11-16 06:00",
-      "ts": 1794808800,
       "content": ""
     }
   ]
