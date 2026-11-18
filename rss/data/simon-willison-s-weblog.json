@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The PSF end-of-year fundraiser",
+      "url": "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
+      "summary": "The PSF end-of-year fundraiser With my Python Software Foundation board director hat on: we've launched our end-of-year fundraiser for the non-profit that supports Python development and the Python community. If your company or your work benefits from Python, please consider donating this year! The PSF looks after the IP behind Python, operates PyPI, sponsors core developer sprints, supports commu",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-11-18 14:44",
+      "ts": 1795013088,
+      "content": "<p class=\"mobile-date-eyebrow\">18th November 2026 - Link Blog</p>\n    <p><a href=\"https://donate.python.org\">The PSF end-of-year fundraiser</a>. With my Python Software Foundation board director hat on: we've launched our end-of-year fundraiser for the non-profit that supports Python development and the Python community.</p>\n    <p>If your company or your work benefits from Python, please consider donating this year!</p>\n    <p>The PSF looks after the IP behind Python, operates PyPI, sponsors core developer sprints, supports community events (including running PyCon US every year), and employs a small and excellent staff team to keep everything running.</p>\n    <p>We also operate the <a href=\"https://www.python.org/psf/developersinresidence/\">Developers in Residence program</a>, which now includes three security developers (welcome, Brett Smith) focused on helping secure Python, PyPI, and the wider ecosystem.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/17/datasette-lite/\">Running the full server-side Datasette Python app in the browser with service workers and Pyodide</a> - 17th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n    </ul>"
+    },
+    {
       "title": "External sandboxes for coding agents",
       "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
       "summary": "External sandboxes for coding agents I've been exploring new ways to sandbox code that is executed by agents, with a focus on making it safer to try out local models without worrying that a mistake or prompt injection attack might cause them to take damaging actions on a machine. I worked on this project with Prime Radiant, the AI research lab behind Superpowers and other projects. My post on the ",
@@ -93,16 +103,6 @@
       "date": "2026-11-15 04:02",
       "ts": 1794715365,
       "content": "<p class=\"mobile-date-eyebrow\">15th November 2026</p>\n    <p>Datasette Apps are sandboxed HTML and JavaScript applications that live inside Datasette - think Claude Artifacts, but these ones can run SQL queries against your data.</p>\n    <p>0.4a0 adds support for linking: you can link to an app with </p><pre>#fragments</pre> in the URL and the app can see and use those, plus supported URL schemes are reported back to Datasette Agent so it can help write apps that link to each other.\n    <p>This means you can have e.g. an app that shows details about a specific record, and a completely separate app that searches those records and links to their representations in the first app.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/17/datasette-lite/\">Running the full server-side Datasette Python app in the browser with service workers and Pyodide</a> - 17th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n    </ul>"
-    },
-    {
-      "title": "datasette-agent 0.6a0",
-      "url": "https://simonwillison.net/2026/Nov/15/datasette-agent/",
-      "summary": "Release: datasette-agent 0.6a0 Accumulated small fixes for Datasette Agent, my agent plugin for Datasette that lets you ask questions about your data. Most notably, it now adds an agent prompt directly to the Datasette homepage, with support for hash-mentions of tables and queries: Tags: datasette-agent, llm, datasette, llms, ai, generative-ai",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-11-15 03:49",
-      "ts": 1794714587,
-      "content": "<p class=\"mobile-date-eyebrow\">15th November 2026</p>\n    <p>Accumulated small fixes for Datasette Agent, my agent plugin for Datasette that lets you ask questions about your data. Most notably, it now adds an agent prompt directly to the Datasette homepage, with support for hash-mentions of tables and queries:</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/17/datasette-lite/\">Running the full server-side Datasette Python app in the browser with service workers and Pyodide</a> - 17th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n    </ul>"
     }
   ]
 }
