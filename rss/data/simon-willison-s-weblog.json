@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Quoting Daniel Stenberg",
+      "url": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+      "summary": "During the time these agents converted 185,000 lines of C code into 340,000 lines of Rust code (I counted), we merged over 300 commits in the actual curl project. We actually improved curl during these a little more than three weeks. A little over 200 bugfixes actually. 200 bugfixes that none of those rust rewrites have. We also fixed a few vulnerabilities. In another month we have done another 20",
+      "source": "Simon Willison's Weblog",
+      "extra": "",
+      "date": "2026-11-18 15:58",
+      "ts": 1795017507,
+      "content": "<p class=\"mobile-date-eyebrow\">18th November 2026</p>\n    <blockquote>\n      <p>During the time these agents converted 185,000 lines of C code into 340,000 lines of Rust code (I counted), we merged over 300 commits in the actual curl project. We actually improved curl during these a little more than three weeks. A little over 200 bugfixes actually. 200 bugfixes that none of those rust rewrites have. We also fixed a few vulnerabilities. In another month we have done another 200 and maybe fixed a few more vulnerabilities. Will these clones keep up?</p>\n    </blockquote>\n    <p>— <a href=\"https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/\">Daniel Stenberg</a>, Actual curl rewrites in Rust</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/17/datasette-lite/\">Running the full server-side Datasette Python app in the browser with service workers and Pyodide</a> - 17th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n    </ul>"
+    },
+    {
       "title": "The PSF end-of-year fundraiser",
       "url": "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
       "summary": "The PSF end-of-year fundraiser With my Python Software Foundation board director hat on: we've launched our end-of-year fundraiser for the non-profit that supports Python development and the Python community. If your company or your work benefits from Python, please consider donating this year! The PSF looks after the IP behind Python, operates PyPI, sponsors core developer sprints, supports commu",
@@ -93,16 +103,6 @@
       "date": "2026-11-15 23:18",
       "ts": 1794784697,
       "content": "<p class=\"mobile-date-eyebrow\">15th November 2026</p>\n    <p>I backported a minor security fix from 1.0a43:</p>\n    <blockquote>\n<p>Fixed a security issue where a database registered using </p><pre>add_database(db, name=..., route=...)</pre> with a route that differs from its name could be downloaded from <pre>/<route>.db</pre> by actors who were denied access to it. [...]\n</blockquote>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/17/datasette-lite/\">Running the full server-side Datasette Python app in the browser with service workers and Pyodide</a> - 17th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n    </ul>"
-    },
-    {
-      "title": "datasette-apps 0.4a0",
-      "url": "https://simonwillison.net/2026/Nov/15/datasette-apps/",
-      "summary": "Release: datasette-apps 0.4a0 Datasette Apps are sandboxed HTML and JavaScript applications that live inside Datasette - think Claude Artifacts, but these ones can run SQL queries against your data. 0.4a0 adds support for linking: you can link to an app with #fragments in the URL and the app can see and use those, plus supported URL schemes are reported back to Datasette Agent so it can help write",
-      "source": "Simon Willison's Weblog",
-      "extra": "",
-      "date": "2026-11-15 04:02",
-      "ts": 1794715365,
-      "content": "<p class=\"mobile-date-eyebrow\">15th November 2026</p>\n    <p>Datasette Apps are sandboxed HTML and JavaScript applications that live inside Datasette - think Claude Artifacts, but these ones can run SQL queries against your data.</p>\n    <p>0.4a0 adds support for linking: you can link to an app with </p><pre>#fragments</pre> in the URL and the app can see and use those, plus supported URL schemes are reported back to Datasette Agent so it can help write apps that link to each other.\n    <p>This means you can have e.g. an app that shows details about a specific record, and a completely separate app that searches those records and links to their representations in the first app.</p>\n    <h2>Recent articles</h2>\n    <ul>\n      <li><a href=\"https://simonwillison.net/2026/Nov/17/datasette-lite/\">Running the full server-side Datasette Python app in the browser with service workers and Pyodide</a> - 17th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/mysterious-beeps/\">Locating the source of a mysterious beep with Claude</a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/9/details-summary/\">Hide your slop PR descriptions behind <details><summary></a> - 9th November 2026</li>\n      <li><a href=\"https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/\">Qwen 3.8 27B on my laptop can interpret model weights, too</a> - 3rd November 2026</li>\n    </ul>"
     }
   ]
 }

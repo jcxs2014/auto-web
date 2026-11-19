@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Learn Data Structures and Algorithms in Python with Visualizations",
+      "url": "https://www.freecodecamp.org/news/learn-data-structures-and-algorithms-in-python-with-visualizations/",
+      "summary": "Data structures such as arrays, linked lists, stacks, queues, hash tables, trees, heaps, and graphs determine how a program stores data and how fast it can search, insert, and remove items. Big O nota",
+      "source": "freeCodeCamp",
+      "extra": "",
+      "date": "2026-11-18 15:48",
+      "ts": 1795016896,
+      "content": "<p>Data structures such as arrays, linked lists, stacks, queues, hash tables, trees, heaps, and graphs determine how a program stores data and how fast it can search, insert, and remove items. Big O notation describes how the number of steps grows as the input grows.</p>\n    <p>We just published a course on the freeCodeCamp.org YouTube channel that will teach you data structures and algorithms in Python, with every topic explained through custom animations and visualizations alongside Python code examples. This course is taught by Javid Bodurov.</p>\n    <p>The course is for beginners and only assumes the basics of Python: variables, loops, functions, and lists. You build each structure yourself, then compare it with tools Python already has, such as dict, set, deque, and heapq.</p>\n    <p>In this course, you will learn:</p>\n    <ul>\n      <li>Big O, Arrays & Linked Lists<br></br>How to measure how a program's steps grow, how data lives in memory, and why inserting at the head of a linked list changes only two pointers.</li>\n      <li>Stacks, Queues & Hash Tables<br></br>How to solve the balanced brackets problem with a stack, use deque for fast queues, and handle collisions in a hash table.</li>\n      <li>Trees, Heaps & Graphs<br></br>How binary search trees keep values ordered, how a heap gives you the smallest value first, and how breadth first search, depth first search, and Dijkstra's algorithm work on graphs.</li>\n      <li>Recursion, Searching & Sorting<br></br>How memoization fixes a slow recursive Fibonacci, how binary search works on a sorted list, and how bubble, selection, insertion, merge, and quick sort compare.</li>\n      <li>Problem-Solving Patterns & Interview Problems<br></br>How to recognize patterns such as two pointers and sliding windows, then bring everything together to approach coding interview problems.</li>\n    </ul>\n    <p>Watch the full course on the <a href=\"https://youtu.be/ybe6EGe_wjo\">freeCodeCamp.org YouTube channel</a> (2.5-hour watch).</p>"
+    },
+    {
       "title": "How to Build an NLP Pipeline in Python to Analyze Therapy Progress Notes",
       "url": "https://www.freecodecamp.org/news/build-nlp-pipeline-python-therapy-notes/",
       "summary": "Therapy progress notes are written records of what happened during a therapy session. They may include what a client said, what the therapist observed, the topics discussed, and plans for the next ses",
