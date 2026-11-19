@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Everything Is Breaking",
+      "url": "https://www.theatlantic.com/technology/2026/11/why-mass-digital-outages/689501/?utm_source=feed",
+      "summary": "Three theories that explain the internet outages",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-19 01:32",
+      "ts": 1795051920,
+      "content": ""
+    },
+    {
       "title": "‘No Take, Only Throw’ Politics",
       "url": "https://www.theatlantic.com/ideas/2026/11/no-take-only-throw-democrats-budget-taxes/689497/?utm_source=feed",
       "summary": "How a cute dog meme explains Democrats’ biggest problem",
@@ -17,7 +27,7 @@
     {
       "title": "Jared Kushner’s Undisclosed Investment",
       "url": "https://www.theatlantic.com/politics/2026/11/jared-kushner-affinity-arxis/689488/?utm_source=feed",
-      "summary": "SEC filings reveal the president’s son-in-law is negotiating for peace while profiting from war.",
+      "summary": "SEC filings reveal that the president’s son-in-law is negotiating for peace while profiting from war.",
       "source": "大西洋月刊",
       "extra": "",
       "date": "2026-11-18 21:53",
@@ -92,16 +102,6 @@
       "extra": "",
       "date": "2026-11-18 12:30",
       "ts": 1795005000,
-      "content": ""
-    },
-    {
-      "title": "Black Politicians Can Be Like This",
-      "url": "https://www.theatlantic.com/ideas/2026/11/democrats-midterms-black-politicians/689477/?utm_source=feed",
-      "summary": "More elected officials are not hiding their accents, their backgrounds, or their culture.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-18 12:00",
-      "ts": 1795003200,
       "content": ""
     }
   ]
