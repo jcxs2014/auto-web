@@ -5,6 +5,86 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Art Museums Shouldn’t Need Taylor Swift",
+      "url": "https://www.theatlantic.com/culture/2026/11/taylor-swift-museum-boston/689520/?utm_source=feed",
+      "summary": "The fact that they think they do is worrying.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 14:00",
+      "ts": 1795183200,
+      "content": ""
+    },
+    {
+      "title": "The Old-School Dating Ritual People Can’t Seem to Shake",
+      "url": "https://www.theatlantic.com/family/2026/11/split-bill-first-date-debate/689516/?utm_source=feed",
+      "summary": "Who pays the bill matters less than many people think.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 13:00",
+      "ts": 1795179600,
+      "content": ""
+    },
+    {
+      "title": "My Week as a Kardashian",
+      "url": "https://www.theatlantic.com/health/2026/11/kardashian-products-week/689363/?utm_source=feed",
+      "summary": "The Kardashians now have so many brands that approximating their lifestyle is more possible than ever before.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 13:00",
+      "ts": 1795179600,
+      "content": ""
+    },
+    {
+      "title": "Hollywood’s Worst Tendencies, in One Movie",
+      "url": "https://www.theatlantic.com/culture/2026/11/hunger-games-sunrise-on-the-reaping-movie-review/689509/?utm_source=feed",
+      "summary": "The Hunger Games franchise once found meaning in its violent spectacle.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 12:30",
+      "ts": 1795177800,
+      "content": ""
+    },
+    {
+      "title": "Gerrymandering Worked",
+      "url": "https://www.theatlantic.com/ideas/2026/11/gerrymandering-redistricting-black-voters/689492/?utm_source=feed",
+      "summary": "It just isn’t magic.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 12:30",
+      "ts": 1795177800,
+      "content": ""
+    },
+    {
+      "title": "What War Has Brought Iran’s Opposition",
+      "url": "https://www.theatlantic.com/international/2026/11/iran-opposition-strategic-options/689510/?utm_source=feed",
+      "summary": "Domestic repression and exile infighting leave few strategic options.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 12:00",
+      "ts": 1795176000,
+      "content": ""
+    },
+    {
+      "title": "Welcome to the Melaniaverse",
+      "url": "https://www.theatlantic.com/newsletters/2026/11/melania-tv-show-melaniaverse/689519/?utm_source=feed",
+      "summary": "We are bringing back the monoculture. Melania is that monoculture.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 11:00",
+      "ts": 1795172400,
+      "content": ""
+    },
+    {
+      "title": "‘I’m Not MAGA,’ Says Man in MAGA Hat",
+      "url": "https://www.theatlantic.com/technology/2026/11/elon-musk-maga-pivot/689517/?utm_source=feed",
+      "summary": "Elon Musk would like to pretend that the past two years didn’t happen.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 00:51",
+      "ts": 1795135860,
+      "content": ""
+    },
+    {
       "title": "The Limits of Positive Thinking",
       "url": "https://www.theatlantic.com/politics/2026/11/trump-ai-tech-outages/689512/?utm_source=feed",
       "summary": "Trump is acting like there’s no problem. Persistent outages tell a different story.",
@@ -15,93 +95,13 @@
       "content": ""
     },
     {
-      "title": "Postcards From Grand Theft Auto VI",
+      "title": "Grand Theft Auto VI Is Really Weird",
       "url": "https://www.theatlantic.com/ideas/2026/11/grand-theft-auto-vi-review/689514/?utm_source=feed",
       "summary": "A dispatch from the smallest room in the biggest video game ever",
       "source": "大西洋月刊",
       "extra": "",
       "date": "2026-11-19 22:56",
       "ts": 1795128998,
-      "content": ""
-    },
-    {
-      "title": "I Baked My Way Through The Atlantic’s Archives",
-      "url": "https://www.theatlantic.com/newsletters/2026/11/old-traditional-cooking-recipes-dessert-thanksgiving/689496/?utm_source=feed",
-      "summary": "I tested six recipes, from 1865 to 2010. Here’s how I fared.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 22:19",
-      "ts": 1795126740,
-      "content": ""
-    },
-    {
-      "title": "Silicon Valley is Suffering From Model Collapse",
-      "url": "https://www.theatlantic.com/technology/2026/11/silicon-valley-model-collapse/689505/?utm_source=feed",
-      "summary": "Why do tech leaders sound so illogical and off-putting?",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 21:46",
-      "ts": 1795124816,
-      "content": ""
-    },
-    {
-      "title": "Welcome to Software Beirut",
-      "url": "https://www.theatlantic.com/ideas/2026/11/software-beirut-ai-outages/689508/?utm_source=feed",
-      "summary": "The internet’s roads are breaking down.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 18:17",
-      "ts": 1795112220,
-      "content": ""
-    },
-    {
-      "title": "Xi Jinping’s Grandiose Timidity",
-      "url": "https://www.theatlantic.com/national-security/2026/11/us-china-russia-apec-summit/689502/?utm_source=feed",
-      "summary": "When the world’s biggest nuclear powers gathered this week in China, the host kept the wars in Europe and the Middle East off the agenda.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 18:04",
-      "ts": 1795111462,
-      "content": ""
-    },
-    {
-      "title": "The Anti-Semitism Playbook Comes for Indian Americans",
-      "url": "https://www.theatlantic.com/technology/2026/11/indian-american-anti-semitism-far-right/689487/?utm_source=feed",
-      "summary": "The far right’s tactics are all too familiar.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 17:19",
-      "ts": 1795108745,
-      "content": ""
-    },
-    {
-      "title": "Trump’s Embarrassing, Inconsequential Summit",
-      "url": "https://www.theatlantic.com/ideas/2026/11/trump-xi-putin-summit/689503/?utm_source=feed",
-      "summary": "Why the president tried to cosplay Yalta",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 15:28",
-      "ts": 1795102138,
-      "content": ""
-    },
-    {
-      "title": "Making Oil Companies Pay for Climate Damages",
-      "url": "https://www.theatlantic.com/podcasts/2026/11/suing-our-way-out-of-climate-change/689500/?utm_source=feed",
-      "summary": "The Supreme Court will decide whether cities and counties can take Big Oil to court over climate change.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 14:00",
-      "ts": 1795096800,
-      "content": ""
-    },
-    {
-      "title": "Let’s Not Make Reading a Wellness Trend",
-      "url": "https://www.theatlantic.com/culture/2026/11/reading-tracking-app/689499/?utm_source=feed",
-      "summary": "Books have long been considered morally and intellectually virtuous. Now some influencers are claiming that they’re good for your physical health.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 13:00",
-      "ts": 1795093200,
       "content": ""
     }
   ]
