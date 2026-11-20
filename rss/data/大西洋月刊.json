@@ -5,9 +5,49 @@
   "lang": "en",
   "entries": [
     {
-      "title": "Art Museums Shouldn’t Need Taylor Swift",
+      "title": "Trump vs. America",
+      "url": "https://www.theatlantic.com/ideas/2026/11/trump-putin-ukraine-collins/689537/?utm_source=feed",
+      "summary": "The president finally admitted that his interests do not always align with the nation’s.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 21:36",
+      "ts": 1795210616,
+      "content": ""
+    },
+    {
+      "title": "Silicon Valley Is Scrambling Now",
+      "url": "https://www.theatlantic.com/newsletters/2026/11/karp-musk-trump-midterms/689534/?utm_source=feed",
+      "summary": "Companies’ attempts to prepare for a post-Trump moment are making them look foolish.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 21:00",
+      "ts": 1795208400,
+      "content": ""
+    },
+    {
+      "title": "What’s So Important About Nvidia’s Chips?",
+      "url": "https://www.theatlantic.com/podcasts/2026/11/whats-so-important-about-nvidias-chips/689521/?utm_source=feed",
+      "summary": "The truth about chip smuggling and the AI race with China",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 18:00",
+      "ts": 1795197600,
+      "content": ""
+    },
+    {
+      "title": "The Benefits of Reading Are Incalculable",
+      "url": "https://www.theatlantic.com/newsletters/2026/11/books-briefing-benefits-reading-incalculable/689527/?utm_source=feed",
+      "summary": "Books can alter a life, undermine foundational beliefs, even change the world.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-20 16:50",
+      "ts": 1795193400,
+      "content": ""
+    },
+    {
+      "title": "The Taylor Swift Museum Exhibition Is an SOS Call",
       "url": "https://www.theatlantic.com/culture/2026/11/taylor-swift-museum-boston/689520/?utm_source=feed",
-      "summary": "The fact that they think they do is worrying.",
+      "summary": "Art museums have to get creative right now. They can do better than this.",
       "source": "大西洋月刊",
       "extra": "",
       "date": "2026-11-20 14:00",
@@ -25,7 +65,7 @@
       "content": ""
     },
     {
-      "title": "My Week as a Kardashian",
+      "title": "I Went Full Kardashian",
       "url": "https://www.theatlantic.com/health/2026/11/kardashian-products-week/689363/?utm_source=feed",
       "summary": "The Kardashians now have so many brands that approximating their lifestyle is more possible than ever before.",
       "source": "大西洋月刊",
@@ -62,46 +102,6 @@
       "extra": "",
       "date": "2026-11-20 12:00",
       "ts": 1795176000,
-      "content": ""
-    },
-    {
-      "title": "Welcome to the Melaniaverse",
-      "url": "https://www.theatlantic.com/newsletters/2026/11/melania-tv-show-melaniaverse/689519/?utm_source=feed",
-      "summary": "We are bringing back the monoculture. Melania is that monoculture.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-20 11:00",
-      "ts": 1795172400,
-      "content": ""
-    },
-    {
-      "title": "‘I’m Not MAGA,’ Says Man in MAGA Hat",
-      "url": "https://www.theatlantic.com/technology/2026/11/elon-musk-maga-pivot/689517/?utm_source=feed",
-      "summary": "Elon Musk would like to pretend that the past two years didn’t happen.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-20 00:51",
-      "ts": 1795135860,
-      "content": ""
-    },
-    {
-      "title": "The Limits of Positive Thinking",
-      "url": "https://www.theatlantic.com/politics/2026/11/trump-ai-tech-outages/689512/?utm_source=feed",
-      "summary": "Trump is acting like there’s no problem. Persistent outages tell a different story.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 23:34",
-      "ts": 1795131274,
-      "content": ""
-    },
-    {
-      "title": "Grand Theft Auto VI Is Really Weird",
-      "url": "https://www.theatlantic.com/ideas/2026/11/grand-theft-auto-vi-review/689514/?utm_source=feed",
-      "summary": "A dispatch from the smallest room in the biggest video game ever",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-19 22:56",
-      "ts": 1795128998,
       "content": ""
     }
   ]
