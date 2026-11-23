@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>arXiv 物理最新论文 · 2026-11-24</title>
+<style>
+  :root {
+    --bg: #f5f7fb; --bg-soft: #eaeef5; --bg-card: #ffffff; --bg-card-hover: #eef2f9;
+    --border: #e1e6ef; --text: #1a2030; --text-dim: #59647a; --text-mute: #8b95a8;
+    --accent: #7c5cf0; --accent-2: #3b7df0; --accent-3: #0c9e8b;
+    --shadow: 0 6px 24px rgba(20,30,60,0.10);
+    --nav-bg: rgba(255,255,255,0.85);
+    --pill-bg: rgba(15,23,42,0.05);
+    --accent-soft: rgba(124,92,240,0.12);
+    --accent-soft-border: rgba(124,92,240,0.30);
+    --accent3-soft: rgba(12,158,139,0.10);
+    --accent3-soft-border: rgba(12,158,139,0.28);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d0f14; --bg-soft: #141824; --bg-card: #181d2a; --bg-card-hover: #1d2333;
+    --border: #283042; --text: #e6e9ef; --text-dim: #9aa3b2; --text-mute: #6b7384;
+    --accent: #a78bfa; --accent-2: #6ea8ff; --accent-3: #4fd1c5;
+    --shadow: 0 6px 24px rgba(0,0,0,0.4);
+    --nav-bg: rgba(13,15,20,0.92);
+    --pill-bg: rgba(255,255,255,0.06);
+    --accent-soft: rgba(167,139,250,0.1);
+    --accent-soft-border: rgba(167,139,250,0.28);
+    --accent3-soft: rgba(79,209,197,0.08);
+    --accent3-soft-border: rgba(79,209,197,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    -webkit-font-smoothing: antialiased; min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+  .hero {
+    background: linear-gradient(135deg, rgba(167,139,250,0.10), rgba(110,168,255,0.07) 50%, rgba(79,209,197,0.05)),
+                radial-gradient(circle at 85% 0%, rgba(167,139,250,0.10), transparent 55%), var(--bg-soft);
+    border-bottom: 1px solid var(--border); padding: 48px 24px 40px;
+  }
+  .hero-inner { max-width: 1240px; margin: 0 auto; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 2px;
+    color: var(--accent); text-transform: uppercase;
+    background: var(--accent-soft); border: 1px solid var(--accent-soft-border);
+    padding: 4px 10px; border-radius: 999px; margin-bottom: 16px;
+  }
+  .hero-title {
+    font-size: clamp(26px, 4vw, 40px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px;
+    background: linear-gradient(90deg, var(--text), var(--accent));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-sub { color: var(--text-dim); font-size: 15px; margin-bottom: 6px; }
+  .hero-window { color: var(--text-mute); font-size: 13px; margin-bottom: 10px; }
+  .hero-cats { color: var(--text-mute); font-size: 12px; margin-bottom: 26px; line-height: 1.7; word-break: break-all; }
+  .hero-cats code { font-family: "SF Mono", "JetBrains Mono", Menlo, monospace; color: var(--accent-3); background: var(--accent3-soft); padding: 1px 6px; border-radius: 4px; }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .total-pill {
+    display: inline-flex; align-items: baseline; gap: 6px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #0b0d12; padding: 10px 18px; border-radius: 12px; font-weight: 700; box-shadow: var(--shadow);
+  }
+  .total-pill .num { font-size: 24px; } .total-pill .lbl { font-size: 12px; opacity: 0.85; }
+  .chip-stat {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 8px 14px; border-radius: 10px; font-size: 13px;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .chip-stat:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .chip-emoji { font-size: 16px; } .chip-label { color: var(--text-dim); } .chip-num { color: var(--text); font-weight: 700; }
+  
+:root{
+  --nav-line:var(--line, var(--border));
+  --nav-mute:var(--muted, var(--text-mute));
+}
+.nav{position:sticky;top:0;z-index:30;background:var(--nav-bg);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--nav-line)}
+.nav-inner{max-width:1180px;width:100%;margin:0 auto;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;
+  padding:11px max(20px,env(safe-area-inset-right)) 11px max(20px,env(safe-area-inset-left));overflow-x:clip}
+.nav-brand{font-weight:800;font-size:17px;margin-right:auto;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex:1 1 auto;min-width:0;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-link{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;
+  background:var(--pill-bg);color:var(--text);text-decoration:none;font-size:13.5px;white-space:nowrap;transition:filter .15s}
+.nav-link:hover{filter:brightness(.95)}
+.nav-emoji{font-size:14px}
+.nav-count{font-size:11px;color:var(--nav-mute)}
+.home-link,.theme-toggle,.nav-toggle,.hamburger{display:inline-flex;align-items:center;gap:5px;
+  padding:5px 12px;border-radius:999px;font-size:13.5px;color:var(--text);background:var(--pill-bg);
+  border:1px solid var(--nav-line);text-decoration:none;white-space:nowrap;cursor:pointer;transition:border-color .15s,filter .15s}
+.home-link:hover,.theme-toggle:hover,.nav-toggle:hover{border-color:var(--accent)}
+.hamburger{border-radius:10px;font-size:18px;line-height:1;display:none;justify-content:center}
+.nav-toggle.off{opacity:.5}
+@media(max-width:1024px){
+  /* 单行布局：品牌可收缩+省略号兜底，其余控件不收缩，确保汉堡永远落在右 padding 内、绝不溢出视口 */
+  .nav-inner{flex-wrap:nowrap;gap:8px;overflow:hidden}
+  .nav-brand{font-size:15px;margin-right:auto;flex:1 1 auto;min-width:0;
+    display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .home-link{padding:5px 9px;font-size:12.5px;flex-shrink:0}
+  .theme-toggle,.nav-toggle{padding:5px 9px;font-size:12.5px;flex-shrink:0}
+  .hamburger{flex-shrink:0;display:inline-flex}
+  .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:6px;
+    padding:10px max(16px,env(safe-area-inset-left)) 14px max(16px,env(safe-area-inset-right));
+    background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--nav-line);box-shadow:var(--shadow);z-index:40}
+  .nav.menu-open .nav-links{display:flex}
+  .nav-link{width:100%;justify-content:space-between;padding:11px 14px;font-size:15px;border-radius:10px}
+  .nav-count{font-size:12px}
+  /* 翻译控件默认收进汉堡抽屉，避免与汉堡并排横向溢出视口 */
+  .nav-translate{display:none}
+  .nav.menu-open .nav-translate{display:inline-flex}
+}
+/* Google 网站翻译器：隐藏其默认顶部横幅（避免把页面下推）；让小工具融入导航栏 */
+.goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}
+body{top:0!important}
+#google_translate_element{display:inline-flex;align-items:center;font-size:13px;color:var(--text)}
+#google_translate_element .goog-te-gadget{font-size:13px!important;color:var(--text)}
+#google_translate_element .goog-te-gadget-simple{background:var(--pill-bg);border:1px solid var(--nav-line);border-radius:999px;padding:3px 8px}
+#google_translate_element img{display:none!important}
+#google_translate_element select{font-size:13px;color:var(--text)}
+/* 翻译控件容器：Google 条 + Bing 兜底链接 并排；Bing 作为 Google 加载失败时的国内兜底 */
+.nav-translate{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
+.nav-bing-translate{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;
+  background:var(--pill-bg);border:1px solid var(--nav-line);color:var(--text);
+  text-decoration:none;font-size:13px;white-space:nowrap;transition:border-color .15s,background .15s}
+.nav-bing-translate:hover{border-color:var(--accent)}
+.nav-bing-translate.warn{border-color:#d97706;background:#fff7ed;color:#b45309}
+@media(max-width:1024px){
+  .nav-translate{width:100%;margin-left:0;justify-content:flex-start;
+    padding:8px max(16px,env(safe-area-inset-left)) 2px max(16px,env(safe-area-inset-left));
+    border-top:1px solid var(--nav-line)}
+}
+
+  
+.ext-res{max-width:1080px;margin:36px auto 0;padding:22px 18px 6px;border-top:1px solid var(--line)}
+.ext-res h3{font-size:16px;margin-bottom:16px;color:var(--text);display:flex;align-items:center;gap:8px}
+.ext-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:18px 22px}
+@media(max-width:900px){.ext-cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ext-cols{grid-template-columns:1fr}}
+.ext-col h4{font-size:13.5px;color:var(--accent2);margin:0 0 9px;font-weight:700}
+.ext-col a{display:block;color:var(--text);text-decoration:none;font-size:13px;padding:5px 0;
+  border-bottom:1px solid var(--line);transition:color .15s, padding-left .15s}
+.ext-col a:hover{color:var(--accent2);padding-left:5px}
+.ext-note{margin-top:18px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7}
+
+  /* 以下为页面专属非-nav 样式 */
+  main { max-width: 1240px; margin: 0 auto; padding: 32px 24px 64px; }
+  .section { margin-bottom: 48px; }
+  .section-head { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .section-head h2 { font-size: 20px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+  .sec-emoji { font-size: 22px; }
+  .sec-count { color: var(--text-mute); font-size: 13px; background: var(--bg-card); padding: 2px 10px; border-radius: 999px; border: 1px solid var(--border); }
+  .back-top { margin-left: auto; color: var(--text-mute); font-size: 14px; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border); transition: all 0.15s; }
+  .back-top:hover { color: var(--accent); border-color: var(--accent); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;
+    transition: transform 0.18s, border-color 0.18s, background 0.18s; position: relative; overflow: hidden;
+  }
+  .card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--accent), transparent); opacity: 0.6; transition: opacity 0.18s; }
+  .card:hover { transform: translateY(-3px); border-color: rgba(167,139,250,0.4); background: var(--bg-card-hover); box-shadow: var(--shadow); }
+  .card:hover::before { opacity: 1; }
+  .card-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .seq {
+    font-family: "SF Mono", "JetBrains Mono", Menlo, monospace; font-size: 13px; font-weight: 700;
+    color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-soft-border);
+    padding: 2px 8px; border-radius: 6px; letter-spacing: 0.5px; flex-shrink: 0;
+  }
+  .source-chip { font-size: 11px; color: var(--accent-3); background: var(--accent3-soft); border: 1px solid var(--accent3-soft-border); padding: 3px 8px; border-radius: 999px; font-family: "SF Mono","JetBrains Mono",Menlo,monospace; }
+  .arxiv-cat-chip { font-size: 11px; color: var(--accent-2); background: rgba(59,125,240,0.10); border: 1px solid rgba(59,125,240,0.28); padding: 3px 8px; border-radius: 999px; font-family: "SF Mono","JetBrains Mono",Menlo,monospace; }
+  .ed-sug-chip { font-size: 11px; color: #b8860b; background: rgba(255,193,7,0.12); border: 1px solid rgba(255,193,7,0.35); padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+  .arxiv-id { font-size: 11px; color: var(--text-mute); font-family: "SF Mono","JetBrains Mono",Menlo,monospace; margin-left: auto; }
+  .journal-date { font-size: 11px; color: var(--text-mute); }
+  .journal-tag { font-size: 11px; color: var(--accent-3); background: var(--accent3-soft); border: 1px solid var(--accent3-soft-border); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .card-title { font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); }
+  .card-authors { font-size: 12px; color: var(--text-mute); font-style: italic; }
+  .card-summary-short { font-size: 13px; color: var(--text-dim); line-height: 1.6; cursor: pointer; }
+  .card-summary-full { display: none; font-size: 13px; color: var(--text-dim); line-height: 1.65; margin-top: 8px; }
+  .card-summary-full .card-summary-en { margin: 0 0 8px; }
+  .card.expanded .card-summary-short { display: none; }
+  .card.expanded .card-summary-full { display: block; }
+  .expand-btn { align-self: flex-start; margin-top: 8px; background: transparent; border: 1px solid var(--border); color: var(--accent); font-size: 12px; padding: 4px 11px; border-radius: 7px; cursor: pointer; transition: all 0.15s; }
+  .expand-btn:hover { border-color: var(--accent); background: rgba(110,168,255,0.08); }
+  .more-hint { color: var(--accent); font-size: 12px; white-space: nowrap; }
+  .card-meta { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-mute); padding-top: 2px; }
+  .meta-rel { color: var(--accent-2); font-weight: 500; }
+  .meta-sep { opacity: 0.5; }
+  .card-foot { display: flex; gap: 8px; margin-top: auto; padding-top: 4px; }
+  .btn-primary, .btn-ghost { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 500; transition: all 0.15s; border: 1px solid transparent; }
+  .btn-primary { background: var(--accent); color: #0b0d12; }
+  .btn-primary:hover { background: #b89dff; transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--text-mute); border-color: var(--border); }
+  .btn-ghost:hover { color: var(--text); border-color: var(--text-mute); }
+  footer { max-width: 1240px; margin: 0 auto; padding: 32px 24px 48px; border-top: 1px solid var(--border); text-align: center; color: var(--text-mute); font-size: 12px; line-height: 1.8; }
+  footer a { color: var(--accent); } footer a:hover { text-decoration: underline; }
+  .card-title-zh { font-size: 13px; color: var(--text-dim); font-weight: 500; margin-top: -4px; line-height: 1.5; }
+  .card-summary-zh { font-size: 12.5px; color: var(--text-mute); line-height: 1.6; padding-left: 8px; border-left: 2px solid var(--border); }
+  body.zh-hidden .card-title-zh, body.zh-hidden .card-summary-zh { display: none; }
+  /* nav 规则（.nav-toggle/.theme-toggle/.nav-links/.hamburger/.home-link）已统一到 NAV_CSS */
+  @media (max-width: 1024px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  /* 768px nav 响应式规则已统一到 NAV_CSS */
+  @media (max-width: 640px) {
+    .hero { padding: 32px 16px 28px; }
+    .hero-stats { gap: 8px; }
+    .chip-stat { padding: 6px 10px; font-size: 12px; }
+    main { padding: 24px 16px 48px; }
+    .grid { grid-template-columns: 1fr; gap: 12px; }
+    .card { padding: 16px; }
+    .arxiv-id { margin-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+</style>
+<script>
+  (function(){ try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') { document.documentElement.setAttribute('data-theme', t); } } catch(e) {} })();
+</script>
+<script>
+  MathJax = { tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']], ignoreHtmlClass: "no-math" }, svg: { fontCache: 'global' }, options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+
+</head>
+<body>
+<div id="top"></div>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">⚛️ arXiv · Physics Latest</span>
+    <h1 class="hero-title">物理最新论文 · 2026年11月24日 周二</h1>
+    <p class="hero-sub">按提交时间倒序，每主题取最近 6 篇，共 <strong>18</strong> 篇</p>
+    <p class="hero-window">抓取时间：11月24日 01:57（北京时间） · 数据源：arXiv API · Nature 主刊 / Nature Physics / Nature Communications / Science / PRL（含已正式发表期刊）</p>
+    <p class="hero-cats">覆盖类别：<code>hep-th/hep-ph/hep-ex · physics.space-ph · astro-ph.HE</code></p>
+    <div class="hero-stats">
+      <span class="total-pill"><span class="num">18</span><span class="lbl">篇论文</span></span>
+      <span class="chip-stat"><span class="chip-emoji">⚛️</span><span class="chip-label">高能物理</span><span class="chip-num">6</span></span><span class="chip-stat"><span class="chip-emoji">🛰️</span><span class="chip-label">空间物理</span><span class="chip-num">6</span></span><span class="chip-stat"><span class="chip-emoji">🌌</span><span class="chip-label">高能天体物理</span><span class="chip-num">6</span></span><span class="chip-stat"><span class="chip-emoji">🏛️</span><span class="chip-label">前沿期刊</span><span class="chip-num">24</span></span>
+    </div>
+  </div>
+</header>
+<nav class="nav"><div class="nav-inner"><a class="home-link" href="../index.html" title="返回首页">← 首页</a><span class="nav-brand">🔭 arXiv 物理最新论文</span><span class="nav-links"><a href="#hep" class="nav-link"><span class="nav-emoji">⚛️</span>高能物理<span class="nav-count">6</span></a><a href="#space" class="nav-link"><span class="nav-emoji">🛰️</span>空间物理<span class="nav-count">6</span></a><a href="#astrohe" class="nav-link"><span class="nav-emoji">🌌</span>高能天体物理<span class="nav-count">6</span></a><a class="nav-link" href="../rss/index.html">📡 RSS</a><a href="#journals" class="nav-link"><span class="nav-emoji">🏛️</span>前沿期刊<span class="nav-count">24</span></a></span><button id="zh-toggle" class="nav-toggle" type="button">🌐 中文</button><button id="theme-toggle" class="theme-toggle" type="button">🌙 暗色</button><button id="nav-hamburger" class="hamburger" type="button" aria-label="导航菜单" aria-expanded="false">☰</button></div></nav><span id="nav-translate" class="nav-translate"><div id="google_translate_element"></div><a id="nav-bing-translate" class="nav-bing-translate" href="#" onclick="openBingTranslate();return false;" title="用 Bing 整页翻译（国内可用）">🌐 Bing 翻译</a><script>function googleTranslateElementInit(){  try{ new google.translate.TranslateElement({    pageLanguage:"zh-CN",    includedLanguages:"en,zh-CN,ja,fr,de,ko,ru,es,it,pt",    layout:google.translate.TranslateElement.InlineLayout.SIMPLE,    autoDisplay:false  }, "google_translate_element"); }catch(e){}}function openBingTranslate(){  var u=encodeURIComponent(location.href);  window.open("https://cn.bing.com/translator?from=en&to=zh-CHS&text="+u,"_blank");}setTimeout(function(){  var g=document.querySelector(".goog-te-combo");  var b=document.getElementById("nav-bing-translate");  if(!g && b){ b.classList.add("warn"); b.title="Google 翻译不可用，请改用 Bing 翻译"; }},3500);</script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script></span>
+<main>
+
+      <section id="hep" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">⚛️</span>高能物理</h2>
+          <span class="sec-count">6 篇</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="arXiv 主分类">hep-ph</span>
+            <span class="arxiv-id">2611.27079</span>
+          </div>
+          <h3 class="card-title">Weight-space programming and mechanistic interpretability for model editing in particle physics</h3>
+          <p class="card-title-zh no-math">🌐 粒子物理模型编辑的权重空间编程和机械解释</p>
+          <p class="card-authors">Bonnet-Guerrini, Raphaël 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We demonstrate that weight-space programming and edits guided by sparse autoencoders can remove unwanted aspects of a particle-physics foundation model through direct edits to its weights. In a foundation model trained on jets, we observe that adding a single soft neutral particle causes large changes in jet classification, violating infrared safety. We locate the responsible attention heads with… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We demonstrate that weight-space programming and edits guided by sparse autoencoders can remove unwanted aspects of a particle-physics foundation model through direct edits to its weights. In a foundation model trained on jets, we observe that adding a single soft neutral particle causes large changes in jet classification, violating infrared safety. We locate the responsible attention heads with mechanistic analysis and trace the flaw&#x27;s origin to pretraining on datasets with different reconstruction thresholds. We then propose two targeted approaches to repair the flaw: by removing three latent directions identified with sparse autoencoders, and by letting language-model agents edit the weights directly, without gradients and with only 50 queries to the model. Both their edits individually remove almost the entire flaw and leave the rest of the model&#x27;s response nearly unchanged. Compared to fine-tuning, both methods change far fewer parameters. Although built only on $W$ and QCD jets, the edits carry over to all signal classes, the pretrained generator, and a newly trained regression head.</p>
+            <p class="card-summary-zh no-math">我们证明，由稀疏自动编码器引导的权重空间编程和编辑可以通过直接编辑其权重来消除粒子物理基础模型中不需要的方面。在对射流进行训练的基础模型中，我们观察到添加单个软中性粒子会导致射流分类发生巨大变化，从而违反了红外安全性。我们通过机制分析找到负责的注意力头，并追踪缺陷的起源，以对具有不同重建阈值的数据集进行预训练。然后，我们提出了两种有针对性的方法来修复该缺陷：通过删除稀疏自动编码器识别的三个潜在方向，并让语言模型代理直接编辑权重，无需梯度，并且仅对模型进行 50 次查询。他们的两次编辑都分别消除了几乎整个缺陷，并使模型响应的其余部分几乎保持不变。与微调相比，这两种方法改变的参数要少得多。尽管仅基于 $W$ 和 QCD 喷气机构建，但编辑会延续到所有信号类别、预训练生成器和新训练的回归头。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27079" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27079" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="arXiv 主分类">hep-th</span>
+            <span class="arxiv-id">2611.26974</span>
+          </div>
+          <h3 class="card-title">Calabi-Yau at 50: mathematical discovery in the age of AI</h3>
+          <p class="card-title-zh no-math">🌐 卡拉比-丘 50 岁：人工智能时代的数学发现</p>
+          <p class="card-authors">He, Yang-Hui</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Using the golden jubilee of Yau&#x27;s proof of the Calabi conjecture as a spring-board, we discuss how the dataset of Calabi-Yau manifolds brought together mathematicians and physicists since the 1980s, and then further brought in the world of machine-learning and AI since 2017. We give a historical account on the growth of the field of ``AI-assisted mathematics&#x27;&#x27; in the last decade, and comment on wh… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Using the golden jubilee of Yau&#x27;s proof of the Calabi conjecture as a spring-board, we discuss how the dataset of Calabi-Yau manifolds brought together mathematicians and physicists since the 1980s, and then further brought in the world of machine-learning and AI since 2017. We give a historical account on the growth of the field of ``AI-assisted mathematics&#x27;&#x27; in the last decade, and comment on what culminated in 2026 as perhaps the most dramatic year in the history of mathematics since Euclid.</p>
+            <p class="card-summary-zh no-math">以丘证明卡拉比猜想的金禧年为跳板，我们讨论了卡拉比-丘流形数据集如何将 20 世纪 80 年代以来的数学家和物理学家聚集在一起，然后自 2017 年以来进一步引入机器学习和人工智能的世界。我们对过去十年“人工智能辅助数学”领域的发展进行了历史叙述，并对 2026 年达到顶峰的情况进行了评论这也许是自欧几里得以来数学史上最戏剧性的一年。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.26974" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.26974" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="arXiv 主分类">hep-th</span>
+            <span class="arxiv-id">2611.27378</span>
+          </div>
+          <h3 class="card-title">Pairing and modular: Generalized electrons and quasiholes inside the $\boxtimes$ of topological orders</h3>
+          <p class="card-title-zh no-math">🌐 配对和模块化：拓扑序 $\boxtimes$ 内的广义电子和准空穴</p>
+          <p class="card-authors">Fukusumi, Yoshiki 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We study the relationship between the pair creation mechanism in physics and the pairing ($\boxtimes_{\mathbf{A}_{\text{ub}}}$) in mathematics, focusing on the modular and algebraic properties. We provide a way to couple two topologically ordered systems, $\mathbf{A}$ and $\mathbf{A&#x27;}$ sharing the common (non-group-like) structure $\mathbf{A}_{\text{ub}}=\overline{\mathbf{A&#x27;}_{\text{ub}}}$, throug… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We study the relationship between the pair creation mechanism in physics and the pairing ($\boxtimes_{\mathbf{A}_{\text{ub}}}$) in mathematics, focusing on the modular and algebraic properties. We provide a way to couple two topologically ordered systems, $\mathbf{A}$ and $\mathbf{A&#x27;}$ sharing the common (non-group-like) structure $\mathbf{A}_{\text{ub}}=\overline{\mathbf{A&#x27;}_{\text{ub}}}$, through the nonabelian anyon analog of the pair creation mechanism denoted as $\mathbf{A}_{\text{ub},\boxtimes}=\mathbf{A}_{\text{ub}}\boxtimes \mathbf{A&#x27;}_{\text{ub}}$. We identify $\mathbf{A}_{\text{ub},\boxtimes}$ as the generalized version of electron operators in general topological orders or hidden current with (half-)integer spin involving the conformal embeddings. We provide a way to construct $\mathbf{A}_{\text{ub},\boxtimes}$ as the hidden topological operator and identify $\mathbf{A}\boxtimes_{\mathbf{A}_{\text{ub}}}\mathbf{A&#x27;}$, a general class of topoloical orders, as the $\mathbf{A}_{\text{ub},\boxtimes}$-extended symmetry topological field theory. We also conjecture a series of underlying (unexplored) modular invariants, connecting the conformal embedding and the pairing.</p>
+            <p class="card-summary-zh no-math">我们研究物理中的配对生成机制与数学中的配对 ($\boxtimes_{\mathbf{A}_{\text{ub}}}$) 之间的关系，重点关注模和代数性质。我们提供了一种方法来耦合两个拓扑有序系统 $\mathbf{A}$ 和 $\mathbf{A&#x27;}$ 共享公共（非类群）结构 $\mathbf{A}_{\text{ub}}=\overline{\mathbf{A&#x27;}_{\text{ub}}}$，通过对创建机制的非阿贝尔任意子模拟表示为$\mathbf{A}_{\text{ub},\boxtimes}=\mathbf{A}_{\text{ub}}\boxtimes \mathbf{A&#x27;}_{\text{ub}}$。我们将 $\mathbf{A}_{\text{ub},\boxtimes}$ 识别为一般拓扑顺序中电子算子的广义版本或涉及共形嵌入的具有（半）整数自旋的隐藏电流。我们提供了一种方法来构造 $\mathbf{A}_{\text{ub},\boxtimes}$ 作为隐藏拓扑算子，并将 $\mathbf{A}\boxtimes_{\mathbf{A}_{\text{ub}}}\mathbf{A&#x27;}$ 识别为拓扑阶的一般类，作为 $\mathbf{A}_{\text{ub},\boxtimes}$ 的扩展对称拓扑场论。我们还推测了一系列潜在的（未探索的）模块化不变量，将共形嵌入和配对连接起来。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27378" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27378" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="arXiv 主分类">hep-th</span>
+            <span class="arxiv-id">2611.27271</span>
+          </div>
+          <h3 class="card-title">A covariant analysis of massless Dirac fields in LRS spacetimes</h3>
+          <p class="card-title-zh no-math">🌐 LRS 时空中无质量狄拉克场的协变分析</p>
+          <p class="card-authors">Bittencourt, Eduardo 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We investigate the massless Dirac field in locally rotationally symmetric (LRS) spacetimes using a covariant spinorial-fluid representation, with the spinor current and spin direction aligned with the LRS frame. When the current has both vorticity and sheet twist, characterized by a constant ratio $λ$, the LRS integrability condition relates evolution and propagation derivatives, reducing the fiel… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We investigate the massless Dirac field in locally rotationally symmetric (LRS) spacetimes using a covariant spinorial-fluid representation, with the spinor current and spin direction aligned with the LRS frame. When the current has both vorticity and sheet twist, characterized by a constant ratio $λ$, the LRS integrability condition relates evolution and propagation derivatives, reducing the field equations to an ordinary differential system that can be integrated exactly. The integrability of the chiral angle forces the heat flux to vanish and the source to saturate the null energy condition along the two radial null directions. A constant boost in the radial Lorentzian two-plane maps the spinor current to a canonical congruence, which is stationary (LRS~I) for $|λ|&gt;1$ and irrotational and geodesic (LRS~III) for $|λ|&lt;1$. In this frame, the local metric is reconstructed in the Goode--Wainwright--Van den Bergh canonical form. For $|λ|&gt;1$ the energy density is positive, and the metric is locally isometric to the horizonless charged Taub--NUT (Brill) metric: in the polar representation, the massless Dirac field supplies a stress--energy tensor algebraically identical to that of the Brill electromagnetic field, with no Maxwell field present. For $|λ|&lt;1$, the energy density is negative and the metric is the hyperbolic ($k=-1$) charged NUT metric with a formal negative squared-charge parameter, whose homogeneous slices are of LRS Bianchi type~VIII.</p>
+            <p class="card-summary-zh no-math">我们使用协变旋量流体表示研究局部旋转对称 (LRS) 时空中的无质量狄拉克场，其中旋量电流和自旋方向与 LRS 框架对齐。当电流同时具有涡度和片扭曲（以恒定比率 $λ$ 为特征）时，LRS 可积条件将演化导数和传播导数联系起来，将场方程简化为可精确积分的常微分系统。手性角的可积性迫使热通量消失，并且源沿着两个径向零方向使零能量条件饱和。径向洛伦兹两平面中的恒定增强将旋量电流映射到正则同余，对于 $|λ|&gt;1$ 是静止的 (LRS~I)，对于 $|λ|&lt;1$ 是无旋和测地线 (LRS~III)。在此框架中，局部度量以 Goode-Wainwright-Van den Bergh 规范形式重建。对于$|λ|&gt;1$，能量密度为正，并且度量与无水平带电Taub--NUT（布里尔）度量局部等距：在极坐标表示中，无质量狄拉克场提供了与布里尔电磁场代数上相同的应力-能量张量，但不存在麦克斯韦场。对于 $|λ|&lt;1$，能量密度为负，度量为双曲 ($k=-1$) 带电 NUT 度量，具有正式的负平方电荷参数，其齐次切片为 LRS Bianchi 型~VIII。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27271" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27271" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="arXiv 主分类">hep-th</span>
+            <span class="arxiv-id">2611.26997</span>
+          </div>
+          <h3 class="card-title">On a Supersymmetric Generalization of the Matytsin Formula</h3>
+          <p class="card-title-zh no-math">🌐 Matytsin 公式的超对称推广</p>
+          <p class="card-authors">Porubov, Evgeny</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We derive the leading asymptotics of the supersymmetric analogue of the Itzykson-Zuber integral for the supergroup $U(n|m)$ in the limit $n,m\to\infty$ when $n/m$ is kept finite. This generalizes the Matytsin result for $U(N)$. We show that it is described by the classical action of two independent Hamiltonian systems corresponding to the bosonic and fermionic sectors. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We derive the leading asymptotics of the supersymmetric analogue of the Itzykson-Zuber integral for the supergroup $U(n|m)$ in the limit $n,m\to\infty$ when $n/m$ is kept finite. This generalizes the Matytsin result for $U(N)$. We show that it is described by the classical action of two independent Hamiltonian systems corresponding to the bosonic and fermionic sectors.</p>
+            <p class="card-summary-zh no-math">当 $n/m$ 保持有限时，我们推导了超群 $U(n|m)$ 在极限 $n,m\to\infty$ 上的 Itzykson-Zuber 积分的超对称模拟的领先渐进性。这概括了 $U(N)$ 的 Matytsin 结果。我们证明它是由对应于玻色子和费米子扇区的两个独立的哈密顿系统的经典作用来描述的。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.26997" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.26997" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="arXiv 主分类">hep-th</span>
+            <span class="arxiv-id">2611.27546</span>
+          </div>
+          <h3 class="card-title">Banana D-modules</h3>
+          <p class="card-title-zh no-math">🌐 香蕉 D 模块</p>
+          <p class="card-authors">Brunello, Giacomo 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We study the holonomic $D$-module whose solutions are generic-mass banana Feynman integrals with complex propagator powers and spacetime dimension. We call this the banana $D$-module. Two properties of the banana $D$-module are studied: its holonomic rank and the irreducibility of the monodromy representation. This is achieved by relating the banana $D$-module to Lauricella $F_{C}$ hypergeometric… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We study the holonomic $D$-module whose solutions are generic-mass banana Feynman integrals with complex propagator powers and spacetime dimension. We call this the banana $D$-module. Two properties of the banana $D$-module are studied: its holonomic rank and the irreducibility of the monodromy representation. This is achieved by relating the banana $D$-module to Lauricella $F_{C}$ hypergeometric systems. Further, we expand the generic-mass banana Feynman integral and the associated discontinuity integral in terms of series solutions. Finally, we analyze the Pfaffian system arising from the banana $D$-module and construct an explicit $d\log$ representation in the equal-mass specialization.</p>
+            <p class="card-summary-zh no-math">我们研究完整 $D$ 模块，其解决方案是具有复杂传播器功率和时空维度的通用质量香蕉费曼积分。我们称之为香蕉 $D$ 模块。研究了香蕉 $D$ 模块的两个属性：完整秩和单性表示的不可约性。这是通过将香蕉 $D$ 模块与 Lauricella $F_{C}$ 超几何系统相关联来实现的。此外，我们根据级数解扩展了通用质量香蕉费曼积分和相关的不连续积分。最后，我们分析了由香蕉 $D$ 模块产生的普法夫系统，并在等质量特化中构造了显式的 $d\log$ 表示。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27546" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27546" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="space" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🛰️</span>空间物理</h2>
+          <span class="sec-count">6 篇</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="arXiv 主分类">physics.space-ph</span>
+            <span class="arxiv-id">2611.14455</span>
+          </div>
+          <h3 class="card-title">Gravitational radiation from a particle in circular orbit around a wormhole: the nonrotating case</h3>
+          <p class="card-title-zh no-math">🌐 来自虫洞周围圆形轨道上的粒子的引力辐射：非旋转情况</p>
+          <p class="card-authors">Biswas, Shauvik 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">In this paper, we have generalized Poisson&#x27;s(1993) calculation for the case of gravitational radiation from a particle in a circular orbit around a black hole to the case of the wormhole. Considering the motion of a test particle around a Schwarzschild like wormhole and using Teukolsky formalism, we have obtained an analytical result of flux at infinity under the assumption of small velocities. Fo… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">In this paper, we have generalized Poisson&#x27;s(1993) calculation for the case of gravitational radiation from a particle in a circular orbit around a black hole to the case of the wormhole. Considering the motion of a test particle around a Schwarzschild like wormhole and using Teukolsky formalism, we have obtained an analytical result of flux at infinity under the assumption of small velocities. Focusing on the 22-mode, we have found a novel 0.5PN order term beyond the quadrupole order, which vanishes in the black hole limit. On the other hand, all higher order terms are getting modified in such a way that they give correct correspondence in the black hole limit. We have further corroborated our results with the numerical investigations, which show that the two waveforms match well when the particle lies far from ISCO. Thus, our work provides one of the first attempts toward the study of the post-Newtonian waveforms involving wormholes (ECOs).</p>
+            <p class="card-summary-zh no-math">在本文中，我们将泊松（Poisson）（1993）的计算从围绕黑洞的圆形轨道上的粒子的引力辐射的情况推广到虫洞的情况。考虑测试粒子围绕类史瓦西虫洞的运动，利用Teukolsky形式主义，我们得到了小速度假设下无穷远通量的解析结果。着眼于 22 模，我们发现了一种超越四极阶的新颖的 0.5PN 阶项，它在黑洞极限中消失。另一方面，所有高阶项都以这样的方式进行修改，以便它们在黑洞极限中给出正确的对应关系。我们通过数值研究进一步证实了我们的结果，表明当粒子远离 ISCO 时，两个波形匹配得很好。因此，我们的工作为研究涉及虫洞（ECO）的后牛顿波形提供了初步尝试之一。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">13 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月10日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.14455" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.14455" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="arXiv 主分类">physics.space-ph</span>
+            <span class="arxiv-id">2611.14623</span>
+          </div>
+          <h3 class="card-title">Towards Distributed Quantum Computing: Quantum Gate Teleportation via Satellite-Distributed Entanglement under Atmospheric Depolarization</h3>
+          <p class="card-title-zh no-math">🌐 迈向分布式量子计算：大气去极化下通过卫星分布式纠缠实现量子门隐形传态</p>
+          <p class="card-authors">Czerwinski, Artur 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We investigate quantum gate teleportation as a primitive for satellite-enabled distributed quantum computing. In the considered architecture, a satellite distributes entangled photon pairs to two optical ground stations, which transfer the shared quantum resource to remote quantum processing units. This entanglement is then used to implement a nonlocal controlled-NOT gate between two circuit qubit… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We investigate quantum gate teleportation as a primitive for satellite-enabled distributed quantum computing. In the considered architecture, a satellite distributes entangled photon pairs to two optical ground stations, which transfer the shared quantum resource to remote quantum processing units. This entanglement is then used to implement a nonlocal controlled-NOT gate between two circuit qubits located in different processors. We formulate the minimal four-qubit protocol, consisting of two network qubits that provide the entangled resource and two circuit qubits on which the distributed gate is performed. Atmospheric propagation effects in the gravitational field are modeled through an effective two-qubit depolarizing channel whose parameters depend on atmospheric and optical quantities, including the Fried parameter and receiver aperture. The performance of the protocol is quantified by the fidelity between the ideal CNOT output state and the state produced by noisy quantum gate teleportation. Our results show that the fidelity is governed by the quality of the distributed entanglement and depends jointly on atmospheric coherence, aperture size, and effective depolarization strength. These findings connect physical-layer modeling of satellite optical channels with gate-level performance in distributed quantum computing.</p>
+            <p class="card-summary-zh no-math">我们研究量子门隐形传态作为卫星分布式量子计算的原语。在所考虑的架构中，卫星将纠缠光子对分配到两个光学地面站，这两个光学地面站将共享的量子资源传输到远程量子处理单元。然后，使用这种纠缠来实现位于不同处理器中的两个电路量子位之间的非局部受控非门。我们制定了最小的四量子位协议，由两个提供纠缠资源的网络量子位和两个执行分布式门的电路量子位组成。引力场中的大气传播效应通过有效的双量子位去极化通道进行建模，其参数取决于大气和光学量，包括弗里德参数和接收器孔径。该协议的性能通过理想 CNOT 输出状态与噪声量子门隐形传态产生的状态之间的保真度来量化。我们的结果表明，保真度由分布式纠缠的质量决定，并共同取决于大气相干性、孔径大小和有效去偏振强度。这些发现将卫星光通道的物理层建模与分布式量子计算中的门级性能联系起来。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">13 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月10日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.14623" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.14623" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="arXiv 主分类">physics.space-ph</span>
+            <span class="arxiv-id">2611.14740</span>
+          </div>
+          <h3 class="card-title">General Relativistic and Non-Inertial Effects on Magnetic Reconnection Rates</h3>
+          <p class="card-title-zh no-math">🌐 广义相对论和非惯性对磁重联率的影响</p>
+          <p class="card-authors">Willard, Jake 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We develop a gauge-independent theory of magnetic reconnection beyond the standard special-relativistic framework of inertial systems in flat spacetime. Our definitions of reconnection and its rate are independent of reference frame and coordinate system, allowing physical effects of gravity and net linear acceleration to be distinguished from coordinate effects. We extend the mesoscale theory of… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We develop a gauge-independent theory of magnetic reconnection beyond the standard special-relativistic framework of inertial systems in flat spacetime. Our definitions of reconnection and its rate are independent of reference frame and coordinate system, allowing physical effects of gravity and net linear acceleration to be distinguished from coordinate effects. We extend the mesoscale theory of Liu et al. [PRL 118, 085101 (2017)], in which the reconnection rate depends on physics both within the diffusion region and in an upstream ideal, force-free region. The theory identifies three non-inertial and curved-spacetime (NICS) effects, including gravitationally induced magnetic tension: gravitational distortion of the reconnection plane changes the curvature of magnetic field lines. Applying the theory to a simplified accretion plasma near )a compact object, we find that (1) whether gravity increases or decreases the reconnection rate depends on the system&#x27;s orientation relative to the gravitational source, with the greatest increase occurring when the outflow jet points toward or away from the source; and (2) the magnitude of the gravitational effect scales with the dimensionless parameter $\barκ \equiv r_sΔy^2/r^3$, where $r$ is the Schwarzschild radial coordinate, $r_s$ is the source&#x27;s Schwarzschild radius, and $Δy$ is the mesoscale length.</p>
+            <p class="card-summary-zh no-math">我们开发了一种与规范无关的磁重联理论，超越了平坦时空中惯性系统的标准狭义相对论框架。我们对重连及其速率的定义独立于参考系和坐标系，从而可以将重力和净线性加速度的物理效应与坐标效应区分开来。我们扩展了刘等人的介尺度理论。 [PRL 118, 085101 (2017)]，其中重连率取决于扩散区域内和上游理想无力区域内的物理场。该理论确定了三种非惯性弯曲时空（NICS）效应，包括引力感应磁张力：重联平面的引力扭曲改变了磁场线的曲率。将该理论应用于致密物体附近的简化吸积等离子体，我们发现（1）重力是否增加或减少重联率取决于系统相对于重力源的方向，当流出射流指向或远离源时，增加最大； (2) 引力效应的大小与无量纲参数 $\barκ \equiv r_sΔy^2/r^3$ 成正比，其中 $r$ 是史瓦西径向坐标，$r_s$ 是源史瓦西半径，$Δy$ 是介尺度长度。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">13 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月10日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.14740" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.14740" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="arXiv 主分类">physics.space-ph</span>
+            <span class="arxiv-id">2611.08062</span>
+          </div>
+          <h3 class="card-title">Charge Retention in Lunar Regolith: Microscopic Processes and Constraints on Subsurface Charging</h3>
+          <p class="card-title-zh no-math">🌐 月球风化层中的电荷保留：微观过程和地下充电的约束</p>
+          <p class="card-authors">Jung, Ashley Daeun 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Energetic-particle irradiation can produce persistent charge separation within lunar regolith, but the internal fields predicted by subsurface-charging models depend on how particle interactions are translated into retained charge. This critical review examines the evidence and assumptions connecting microscopic charge formation to macroscopic charging. We distinguish energy deposition, net charge… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Energetic-particle irradiation can produce persistent charge separation within lunar regolith, but the internal fields predicted by subsurface-charging models depend on how particle interactions are translated into retained charge. This critical review examines the evidence and assumptions connecting microscopic charge formation to macroscopic charging. We distinguish energy deposition, net charge transfer across a specified boundary, and the spatial distribution of signed excess charge. We organize these distinctions using an average retained-charge response defined for specified material, irradiation, electrical-state, and evaluation conditions. Its use as a volumetric source requires consistent charge accounting, compatible incident-flux definitions, and an adequate separation between response formation and subsequent transport. Applying these criteria to existing models, emission studies, and silicate irradiation experiments yields three assessments. First, emission measurements constrain electron loss across the measured boundary but do not locate internally redistributed charge. Second, evidence of internal reabsorption does not by itself establish that the charge separation sustaining subsurface fields is reduced; an illustrative calculation shows that the same net charge supply can produce different peak fields depending on transfer depths. Third, laboratory electrical damage in silicate crystals does not determine breakdown rates in cryogenic, porous regolith, which additionally require constraints on local fields, failure properties, and discharge recurrence. Joint constraints on boundary charge transfer, spatial charge separation, and post-irradiation relaxation are central to evaluating lunar subsurface-charging predictions.</p>
+            <p class="card-summary-zh no-math">高能粒子辐照可以在月球风化层内产生持久的电荷分离，但地下充电模型预测的内部场取决于粒子相互作用如何转化为保留电荷。这篇批判性评论研究了将微观电荷形成与宏观充电联系起来的证据和假设。我们区分能量沉积、跨指定边界的净电荷转移以及有符号过剩电荷的空间分布。我们使用针对特定材料、辐照、电状态和评估条件定义的平均保留电荷响应来组织这些区别。其作为体积源的使用需要一致的电荷计算、兼容的事件通量定义以及响应形成和后续传输之间的充分分离。将这些标准应用于现有模型、排放研究和硅酸盐辐照实验可得出三项评估。首先，发射测量限制了跨测量边界的电子损失，但不定位内部重新分布的电荷。其次，内部重吸收的证据本身并不能证明维持地下场的电荷分离减少了；说明性计算表明，相同的净电荷供应可以根据传输深度产生不同的峰值场。第三，硅酸盐晶体的实验室电损伤并不能确定低温多孔风化层的击穿率，这还需要对局部场、失效特性和放电重现进行限制。边界电荷转移、空间电荷分离和辐照后弛豫的联合约束是评估月球地下充电预测的核心。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">18 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月5日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.08062" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.08062" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="arXiv 主分类">physics.space-ph</span>
+            <span class="arxiv-id">2611.01821</span>
+          </div>
+          <h3 class="card-title">Quantum Recovery from Black-Hole Radiation Beyond the Emission Yield</h3>
+          <p class="card-title-zh no-math">🌐 超越发射率的黑洞辐射量子恢复</p>
+          <p class="card-authors">Yasir, Kashif Ammar</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">A proposed resolution of the black-hole information paradox must explain which information an outside observer can recover from escaping radiation\cite{Hawking,Page,Hayden,Almheiri}. Environmental memory can return correlations to the source without delivering them to that observer\cite{ChenQi,ChenMemory}. Here we establish a sharp recovery frontier at fixed mean radiation yield for single-excitat… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">A proposed resolution of the black-hole information paradox must explain which information an outside observer can recover from escaping radiation\cite{Hawking,Page,Hayden,Almheiri}. Environmental memory can return correlations to the source without delivering them to that observer\cite{ChenQi,ChenMemory}. Here we establish a sharp recovery frontier at fixed mean radiation yield for single-excitation channels and realize its qubit limit with an autonomous quantum-memory emitter. Unequal transmissions balance retained coherence against information in failed collection events. A reference--radiation correlation test distinguishes this gain even when the mean collected energy is unchanged. Identical transmission channels instead give the same recovery at matched collection, regardless of their emission timescales. For a broader class of interacting sources, an ordering of collected and inaccessible coupling spectra forbids unassisted quantum transmission irrespective of internal memory. A separate coding example supports a positive rate where uniform transmission at matched actual yield has zero capacity. Together, these results identify what openness must change to assist recovery: the accessible transmission structure. They supply a physically constrained comparison of evaporation mechanisms, separating information delivered to radiation from coherence retained elsewhere or an increase in the collected output.</p>
+            <p class="card-summary-zh no-math">黑洞信息悖论的拟议解决方案必须解释外部观察者可以从逃逸辐射中恢复哪些信息\引用{霍金，佩奇，海登，阿尔姆海里}。环境记忆可以将相关性返回到源，而不将它们传递给观察者\cite{ChenQi，ChenMemory}。在这里，我们为单激发通道建立了固定平均辐射产率的尖锐恢复前沿，并通过自主量子存储发射器实现了其量子位极限。不平等的传输平衡了失败收集事件中信息的保留一致性。即使平均收集能量不变，参考辐射相关性测试也能区分该增益。相反，相同的传输通道在匹配收集时提供相同的恢复，无论其发射时间尺度如何。对于更广泛的相互作用源，收集的和不可访问的耦合光谱的排序禁止无辅助的量子传输，无论内部存储器如何。单独的编码示例支持正速率，其中以匹配的实际产量进行均匀传输的容量为零。总之，这些结果确定了必须改变哪些开放性才能帮助恢复：可访问的传输结构。它们提供了蒸发机制的物理约束比较，将传递到辐射的信息与其他地方保留的相干性或收集的输出的增加分开。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">22 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月1日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.01821" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.01821" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="arXiv 主分类">physics.space-ph</span>
+            <span class="arxiv-id">2610.39587</span>
+          </div>
+          <h3 class="card-title">The Pointing Error Due To Laser Propagation in Space Plasma for TianQin Gravitational Wave Detection</h3>
+          <p class="card-title-zh no-math">🌐 天琴引力波探测中激光在空间等离子体中传播引起的指向误差</p>
+          <p class="card-authors">Zhou, S.W. 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">TianQin, a space-borne gravitational wave observatory, is designed to detect gravitational-wave signals via laser interferometry. As the inhomogeneous space plasma surrounds the inter-satellite laser links, the propagation of the laser in space plasma can introduce pointing error noise. In this work, we quantitatively assess the effect of plasma on the pointing accuracy of TQ&#x27;s inter-satellite las… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">TianQin, a space-borne gravitational wave observatory, is designed to detect gravitational-wave signals via laser interferometry. As the inhomogeneous space plasma surrounds the inter-satellite laser links, the propagation of the laser in space plasma can introduce pointing error noise. In this work, we quantitatively assess the effect of plasma on the pointing accuracy of TQ&#x27;s inter-satellite laser links. We employ a magnetohydrodynamic model to simulate the plasma distribution around the TQ orbit for different orbital orientations. Using the fourth-order Runge-Kutta method to conduct the ray-tracing calculations over a TQ orbital cycle under a solar wind dynamic pressure close to the 23-year average, we find that the plasma-induced laser deflection angle and pointing eccentricity are on the order of $10^{-20} \ \mathrm{rad}$ and picometers, respectively. These values are significantly lower than TQ&#x27;s requirements. Our results demonstrate that the impact of space plasma on TQ&#x27;s pointing error is negligible in moderate space weather conditions, indicating a positive outlook for the TQ mission.</p>
+            <p class="card-summary-zh no-math">天琴星载引力波观测站旨在通过激光干涉技术探测引力波信号。由于不均匀的空间等离子体包围着卫星间激光链路，激光在空间等离子体中的传播会引入指向误差噪声。在这项工作中，我们定量评估了等离子体对 TQ 星间激光链路指向精度的影响。我们采用磁流体动力学模型来模拟不同轨道方向的 TQ 轨道周围的等离子体分布。利用四阶龙格-库塔法对接近23年平均的太阳风动压下的TQ轨道周期进行射线追迹计算，发现等离子体诱导激光的偏转角和指向偏心率分别约为$10^{-20} \ \mathrm{rad}$和皮米量级。这些值明显低于 TQ 的要求。我们的结果表明，在温和的太空天气条件下，空间等离子体对 TQ 指向误差的影响可以忽略不计，这表明 TQ 任务的前景乐观。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">25 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">10月29日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2610.39587" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2610.39587" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section id="astrohe" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🌌</span>高能天体物理</h2>
+          <span class="sec-count">6 篇</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
+            <span class="arxiv-id">2611.26973</span>
+          </div>
+          <h3 class="card-title">Accretor Luminosity as Probe of Orbital Evolution and Magnetic Braking in AM CVn Binaries</h3>
+          <p class="card-title-zh no-math">🌐 Accretor 光度作为 AM CVn 双星轨道演化和磁制动的探针</p>
+          <p class="card-authors">Wong, Tin Long Sunny 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">AM CVn binaries are ultracompact systems with orbital periods $P_{\rm orb} \lesssim 70$ min, where a white dwarf accretes from a He-rich semidegenerate donor. At short orbital periods ($P_{\rm orb} \lesssim 20$ min), rapid accretion reheats the accretor. As the system widens and the mass transfer rate decreases, the accretor follows standard white dwarf cooling at longer orbital periods (… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">AM CVn binaries are ultracompact systems with orbital periods $P_{\rm orb} \lesssim 70$ min, where a white dwarf accretes from a He-rich semidegenerate donor. At short orbital periods ($P_{\rm orb} \lesssim 20$ min), rapid accretion reheats the accretor. As the system widens and the mass transfer rate decreases, the accretor follows standard white dwarf cooling at longer orbital periods ($P_{\rm orb} \gtrsim 30$ min). The accretor cooling luminosity then acts as a powerful probe into the orbital evolution of the binary. Recent observations show that the accretor appears brighter (younger) at long orbital periods, compared to models where orbital angular momentum loss is solely set by gravitational wave emission. We show that additional angular momentum loss, which we ascribe to magnetic braking of the donor, can better reproduce observations of accretor luminosity. We test and constrain various proposed magnetic braking formalisms, for the white dwarf, helium star, and evolved cataclysmic variable (CV) channels for AM CVn formation. None of the magnetic braking formalisms in their original form can reproduce the observations, but the widely popular magnetic braking proposed by Rappaport et al. 1983 boosted by a factor $\approx 5$, or the saturated magnetic braking proposed by Matt et al. 2015 boosted by a factor of $\approx 150$, yields satisfactory results. We also find that the CARB formalism, recently applied to the evolved CV channel, is strongly in tension with observations of accretor luminosity. Our models motivate UV spectroscopy observations, and dedicated WD atmosphere models for AM CVn accretors.</p>
+            <p class="card-summary-zh no-math">AM CVn 双星是轨道周期 $P_{\rm orb} \lesssim 70$ min 的超紧凑系统，其中一颗白矮星由富含 He 的半简并供体吸积而成。在短轨道周期（$P_{\rm orb} \lesssim 20$ min），快速吸积会重新加热吸积器。随着系统变宽和传质速率降低，吸积体在更长的轨道周期上遵循标准白矮星冷却（$P_{\rm orb} \gtrsim 30$ min）。然后，吸积子的冷却光度充当了双星轨道演化的有力探测器。最近的观测表明，与轨道角动量损失仅由引力波发射决定的模型相比，吸积体在长轨道周期下显得更亮（更年轻）。我们表明，额外的角动量损失（归因于供体的磁制动）可以更好地再现增生体光度的观测结果。我们测试并约束了白矮星、氦星和 AM CVn 形成的演化灾变变量 (CV) 通道的各种提出的磁制动形式。原始形式的磁制动形式都不能重现观察结果，但 Rappaport 等人提出的广泛流行的磁制动。 1983 年提高了约 5$ 倍，即 Matt 等人提出的饱和磁力制动。 2015 年增长了约 150 美元，取得了令人满意的结果。我们还发现，最近应用于进化的 CV 通道的 CARB 形式主义与增殖体光度的观测结果存在强烈的张力。我们的模型激发了紫外光谱观测，以及 AM CVn 增殖体的专用 WD 大气模型。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.26973" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.26973" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
+            <span class="arxiv-id">2611.27051</span>
+          </div>
+          <h3 class="card-title">Disentangling Disk and Broad-Line Region Continuum Emission in a Sample of Active Galactic Nuclei</h3>
+          <p class="card-title-zh no-math">🌐 解开活跃星系核样本中的盘和宽线区域连续发射</p>
+          <p class="card-authors">Fu, Manqi 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Recent continuum reverberation-mapping measurements of active galactic nuclei (AGNs) indicate that the inter-band time lags are significantly larger than those predicted by the light travel times across the standard thin model. In addition, the observed $u$-band excess suggests the presence of diffuse continuum (DC) radiation originating in the broad-line region (BLR). Spectroscopically, the Balme… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Recent continuum reverberation-mapping measurements of active galactic nuclei (AGNs) indicate that the inter-band time lags are significantly larger than those predicted by the light travel times across the standard thin model. In addition, the observed $u$-band excess suggests the presence of diffuse continuum (DC) radiation originating in the broad-line region (BLR). Spectroscopically, the Balmer and Paschen jumps in DC emission are unique indicators to quantify the contributions of the BLR to the observed continuum. Here, we study the DC contributions of 31 AGNs, whose spectra are obtained with the Space Telescope Imaging Spectrograph (STIS) on the Hubble Space Telescope (HST) and with X-shooter on the Very Large Telescope (VLT). In each spectrum, at least one of the Balmer and Paschen jumps is covered. For each object, we performed radiative transfer calculations using Cloudy within the Locally Optimally-emitting Clouds (LOC) model to construct source-specific DC spectral templates. We quantified the DC contribution by incorporating these templates as continuum components in spectral decomposition. The average ratio of the DC to total (i.e., disk+DC) continua is ~33% just below the Balmer jump (~3625 Å). The Balmer jump provides a stronger constraint on the DC component than the Paschen jump. Simulations based on mock spectra further demonstrate that an unsuitable template can introduce systematic, wavelength-dependent biases to the inferred DC fraction. Our results underscore the importance of employing appropriate DC templates in the spectral decomposition to infer the substantial DC contribution. Upcoming time-resolved spectra will enable more detailed modelling and tighter constraints on the disk and BLR.</p>
+            <p class="card-summary-zh no-math">最近对活动星系核（AGN）的连续混响映射测量表明，带间时滞明显大于通过标准薄模型的光传播时间预测的时滞。此外，观察到的 $u$ 波段过量表明存在源自宽线区 (BLR) 的漫射连续谱 (DC) 辐射。从光谱上看，直流发射的巴尔默和帕邢跳跃是量化 BLR 对观察到的连续体的贡献的独特指标。在这里，我们研究了 31 个 AGN 的 DC 贡献，其光谱是通过哈勃太空望远镜 (HST) 上的太空望远镜成像摄谱仪 (STIS) 和甚大望远镜 (VLT) 上的 X 射手获得的。在每个频谱中，至少包含巴尔默和帕申跳跃之一。对于每个物体，我们使用局部最优发射云 (LOC) 模型中的 Cloudy 进行辐射传输计算，以构建特定源的 DC 光谱模板。我们通过将这些模板作为频谱分解中的连续分量来量化 DC 贡献。 DC 与总连续体（即圆盘 + DC）的平均比率约为 33%，略低于巴尔默跳跃 (~3625 Å)。巴尔默跳跃比帕邢跳跃对直流分量提供了更强的约束。基于模拟光谱的模拟进一步证明，不合适的模板可能会给推断的直流分数引入系统的、与波长相关的偏差。我们的结果强调了在频谱分解中采用适当的 DC 模板来推断实质性 DC 贡献的重要性。即将推出的时间分辨光谱将实现更详细的建模以及对磁盘和 BLR 更严格的约束。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27051" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27051" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
+            <span class="arxiv-id">2611.27527</span>
+          </div>
+          <h3 class="card-title">Modelling scintillation in Fast Radio Bursts</h3>
+          <p class="card-title-zh no-math">🌐 快速射电暴中的闪烁建模</p>
+          <p class="card-authors">Nicotera, L. 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Fast Radio Bursts (FRBs) are bright, ms-duration, extragalactic radio transients. Propagation through inhomogeneities in the ionised medium produces scintillation, observed as frequency-dependent intensity variations in their spectra, with bright patches, called scintles. The characteristic scintillation bandwidth probes scattering material along the line of sight. Measuring this scale can be chal… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Fast Radio Bursts (FRBs) are bright, ms-duration, extragalactic radio transients. Propagation through inhomogeneities in the ionised medium produces scintillation, observed as frequency-dependent intensity variations in their spectra, with bright patches, called scintles. The characteristic scintillation bandwidth probes scattering material along the line of sight. Measuring this scale can be challenging when the observing bandwidth of the burst spectra contains a few scintles. We study the uncertainties associated with recovering $ν_s$ from frequency autocorrelation functions (ACFs) under finite-bandwidth conditions. We examine the recovery of $ν_s$ from individual ACFs and investigate if averaging multiple independent ACFs provides a more robust measurement. Using simulations, we reproduce observational conditions to investigate the modelling of scintillation in ACFs and the associated measurement uncertainties. We use these simulations to test the finite scintle error (FSE) prescription and assess its applicability to real observations. We test the resulting modelling framework on Effelsberg Ultra Broad Band receiver observations of the repeating FRB 20240114A. As the number of scintles decreases, individual ACFs develop fluctuations that deviate from the expected Lorentzian profile. This results in increased scatter in the recovered $ν_s$ and a less reliable FSE prescription. Averaging multiple independent ACFs mitigates these effects and improves the recovery of $ν_s$ in the low-scintle regime. Our results provide a framework for ACF modelling and uncertainty estimation in FRBs. For individual bursts, the FSE is effective with sufficient scintles; we find $η= 0.055$ more suitable for FRB analysis and update the FSE accordingly. For repeaters, averaging multiple ACFs and bootstrap resampling improve the recovery and uncertainty estimation of $ν_s$.</p>
+            <p class="card-summary-zh no-math">快速射电爆发 (FRB) 是明亮的、ms 持续时间的河外射电瞬变。通过电离介质中的不均匀性传播会产生闪烁，观察到其光谱中随频率变化的强度变化，并带有明亮的斑块，称为闪烁。特征闪烁带宽探测沿视线的散射材料。当突发光谱的观测带宽包含几个闪烁时，测量这种规模可能具有挑战性。我们研究在有限带宽条件下从频率自相关函数 (ACF) 恢复 $ν_s$ 相关的不确定性。我们检查单个 ACF 的 $ν_s$ 恢复情况，并研究对多个独立 ACF 进行平均是否可以提供更稳健的测量。通过模拟，我们重现了观测条件，以研究 ACF 中闪烁的建模以及相关的测量不确定性。我们使用这些模拟来测试有限闪烁误差（FSE）规定并评估其对实际观测的适用性。我们在 Effelsberg 超宽带接收器对重复 FRB 20240114A 的观测中测试了所得的建模框架。随着闪烁数量的减少，单个 ACF 会出现偏离预期洛伦兹分布的波动。这会导致恢复的 $ν_s$ 中的分散性增加，并且 FSE 处方的可靠性较低。对多个独立 ACF 进行平均可以减轻这些影响并提高低闪烁状态下 $ν_s$ 的恢复。我们的结果为 ACF 建模和快速射电暴的不确定性估计提供了框架。对于单个爆发，FSE 在足够闪烁的情况下是有效的；我们发现 $η= 0.055$ 更适合 FRB 分析，并相应更新 FSE。对于中继器，平均多个 ACF 和自举重采样可改善 $ν_s$ 的恢复和不确定性估计。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27527" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27527" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
+            <span class="arxiv-id">2611.27442</span>
+          </div>
+          <h3 class="card-title">A Relativistic Newton&#x27;s Third Law for Binaries in Environments</h3>
+          <p class="card-title-zh no-math">🌐 环境中双星的相对论牛顿第三定律</p>
+          <p class="card-authors">Dyson, Conor 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We derive the relativistic form of Newton&#x27;s Third Law governing the interaction between intermediate- and extreme-mass-ratio inspirals and surrounding relativistic matter fields. Working within a two-parameter expansion, we rewrite the evolution of the secondary&#x27;s orbital elements in a form resembling the integrated forces acting on the environment, avoiding the need to calculate any gravitational… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We derive the relativistic form of Newton&#x27;s Third Law governing the interaction between intermediate- and extreme-mass-ratio inspirals and surrounding relativistic matter fields. Working within a two-parameter expansion, we rewrite the evolution of the secondary&#x27;s orbital elements in a form resembling the integrated forces acting on the environment, avoiding the need to calculate any gravitational perturbations sourced by the dynamical matter content. Using the retarded and advanced Green&#x27;s functions, we obtain both instantaneous and orbit-averaged laws relating the rate of change of the secondary&#x27;s orbital energy and angular momentum to that of the matter and the gravitational-wave fluxes at that order. Our results clarify and correct the mixture of ad hoc balance prescriptions currently employed in the literature, providing first-principles forcing functions for the secondary&#x27;s orbital elements in two ready-to-use forms: a leading-order formulation suitable for fast evaluation with complex relativistic matter simulations, and a first-post-adiabatic formulation of the energy and angular-momentum evolution in environments that are stationary and axisymmetric at leading order.</p>
+            <p class="card-summary-zh no-math">我们推导出牛顿第三定律的相对论形式，该定律控制中等质量比和极端质量比螺旋与周围相对论物质场之间的相互作用。在双参数展开中，我们以类似于作用于环境的综合力的形式重写了次级轨道元素的演化，避免了计算由动态物质含量引起的任何重力扰动的需要。利用延迟和先进的格林函数，我们获得了瞬时定律和轨道平均定律，将次级轨道能量和角动量的变化率与物质的变化率和该级别的引力波通量联系起来。我们的结果澄清并纠正了目前文献中使用的临时平衡规定的混合，以两种现成的形式为次级轨道元素提供了第一原理强迫函数：适用于复杂相对论物质模拟快速评估的主阶公式，以及在主阶静止和轴对称环境中能量和角动量演化的第一后绝热公式。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27442" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27442" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
+            <span class="arxiv-id">2611.27508</span>
+          </div>
+          <h3 class="card-title">Hard X-ray spectroscopy of a short-period asynchronous polar: IGR J19552+0044</h3>
+          <p class="card-title-zh no-math">🌐 短周期异步极的硬X射线光谱：IGR J19552+0044</p>
+          <p class="card-authors">Agarwal, Akash 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">IGR J19552+0044 is an asynchronous polar with a beat modulation of $\approx2$ days due to $\approx3$% spin-orbit asynchronism. We present the first hard X-ray properties of this system using a NuSTAR observation. Spectral modeling yields a shock temperature of $kT_{\rm s}=44.50^{+3.60}_{-3.29}$ keV, implying a white dwarf mass of $M_{\rm WD}\geq 0.85\,M_\odot$. We infer an average accretion rate o… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">IGR J19552+0044 is an asynchronous polar with a beat modulation of $\approx2$ days due to $\approx3$% spin-orbit asynchronism. We present the first hard X-ray properties of this system using a NuSTAR observation. Spectral modeling yields a shock temperature of $kT_{\rm s}=44.50^{+3.60}_{-3.29}$ keV, implying a white dwarf mass of $M_{\rm WD}\geq 0.85\,M_\odot$. We infer an average accretion rate of $\dot{M}\sim 3.0\times 10^{-11}\,M_\odot\,{\rm yr}^{-1}$, consistent with expectations for short-period systems (orbital period $&lt;2$ h). Even at this low accretion rate, we detect a significant Compton reflection component that gives a shock height of $H\sim 0.3\,R_{\rm WD}$. Time-resolved spectroscopy of the observation, covering $\approx61$% of a beat cycle, reveals a variation in $\dot{M}$ by a factor of $\sim 4.5$, providing X-ray evidence for the magnetic valve mechanism. Despite the large variations in $\dot{M}$, no significant change in shock temperature is observed. This weak thermal response constrains the shock structure on the white dwarf surface, favoring a shock height that remains approximately constant as $\dot{M}$ changes, potentially due to variations in the fractional accretion area $f$.</p>
+            <p class="card-summary-zh no-math">IGR J19552+0044 是一个异步极，由于 $\approx3$% 自旋轨道异步性，节拍调制为 $\approx2$ 天。我们使用 NuSTAR 观测首次展示了该系统的硬 X 射线特性。光谱模型得出的冲击温度为 $kT_{\rm s}=44.50^{+3.60}_{-3.29}$ keV，这意味着白矮星质量为 $M_{\rm WD}\geq 0.85\,M_\odot$。我们推断平均吸积率为 $\dot{M}\sim 3.0\times 10^{-11}\,M_\odot\,{\rm yr}^{-1}$，与短周期系统的预期一致（轨道周期 $&lt;2$ h）。即使在如此低的吸积率下，我们也检测到一个显着的康普顿反射分量，该分量给出了 $H\sim 0.3\,R_{\rm WD}$ 的激波高度。观测的时间分辨光谱覆盖了节拍周期的 $\approx61$%，揭示了 $\dot{M}$ 的变化 $\sim 4.5$，为磁阀机制提供了 X 射线证据。尽管 $\dot{M}$ 变化很大，但没有观察到冲击温度的显着变化。这种微弱的热响应限制了白矮星表面的激波结构，有利于激波高度在 $\dot{M}$ 变化时保持近似恒定，这可能是由于分数吸积面积 $f$ 的变化。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27508" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27508" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="arXiv 主分类">astro-ph.HE</span>
+            <span class="arxiv-id">2611.27628</span>
+          </div>
+          <h3 class="card-title">Nuclear Urca cooling in magnetar crust and anomalous heating</h3>
+          <p class="card-title-zh no-math">🌐 磁星地壳中的核乌卡冷却和异常加热</p>
+          <p class="card-authors">Qi, LInjing 等</p>
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">We present a new result that the nuclear Urca process in magnetars, associated with ultrastrong magnetic field, dramatically alters the neutrino cooling efficiency to support higher surface temper ature, which is not common in ordinary neutron stars. A new formalism for neutrino luminosity accommodating finite temperature on top of magnetic field is extended with the use of realistic nuclear struc… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">We present a new result that the nuclear Urca process in magnetars, associated with ultrastrong magnetic field, dramatically alters the neutrino cooling efficiency to support higher surface temper ature, which is not common in ordinary neutron stars. A new formalism for neutrino luminosity accommodating finite temperature on top of magnetic field is extended with the use of realistic nuclear structure inputs for the Urca pair 29Na-29Mg. We find that the neutrino luminosity of Urca pair shows a spiral variation as a function of magnetic field and crust density, while the Urca pair persists, in contrast to previous studies. Applying geometrically correct volumetric energy loss rate to Urca shell at fixed density with varying magnetic field strength, our results show that thermally populated excited states at finite temperature enhance neutrino luminosity, whereas conditions con strained Urca-pair formation driven by ultrastrong magnetic field reduce cooling efficiency, which can explain high temperature of magnetar surface as a new possibility.</p>
+            <p class="card-summary-zh no-math">我们提出了一个新结果，即磁星中与超强磁场相关的核乌尔卡过程极大地改变了中微子冷却效率以支持更高的表面温度，这在普通中子星中并不常见。通过使用 Urca 对 29Na-29Mg 的真实核结构输入，扩展了适应磁场顶部有限温度的中微子光度的新形式。我们发现，与之前的研究相比，乌卡对的中微子光度随着磁场和地壳密度的变化而呈现螺旋变化，而乌卡对的中微子光度仍然存在。将几何正确的体积能量损失率应用于固定密度和变化磁场强度的乌卡壳，我们的结果表明，有限温度下的热填充激发态增强了中微子的光度，而超强磁场驱动的乌卡对形成条件限制降低了冷却效率，这可以解释磁星表面的高温作为一种新的可能性。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-meta">
+            <span class="meta-rel">3 天前</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-bj">11月20日 08:00（北京时间）</span>
+          </div>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://arxiv.org/abs/2611.27628" target="_blank" rel="noopener noreferrer">摘要页 ↗</a>
+            <a class="btn-ghost" href="https://arxiv.org/pdf/2611.27628" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section id="journals" class="section">
+        <header class="section-head">
+          <h2><span class="sec-emoji">🏛️</span>前沿期刊</h2>
+          <span class="sec-count">24 条 · 已正式发表</span>
+          <a href="#top" class="back-top" title="返回顶部">↑</a>
+        </header>
+        <div class="grid">
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">01</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">Hexa-substituted benzene synthesis with non-classical carbocations</h3>
+          <p class="card-title-zh no-math">🌐 非经典碳正离子合成六取代苯</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 23 November 2026; doi:10.1038/s41586-026-11449-9Hexa-substituted benzene synthesis with non-classical carbocations <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 23 November 2026; doi:10.1038/s41586-026-11449-9Hexa-substituted benzene synthesis with non-classical carbocations</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 11 月 23 日； doi:10.1038/s41586-026-11449-9非经典碳正离子合成六取代苯</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41586-026-11449-9" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">02</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">Continuous N-to-C Peptide Synthesis</h3>
+          <p class="card-title-zh no-math">🌐 连续 N-C 肽合成</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 23 November 2026; doi:10.1038/s41586-026-11448-wContinuous N-to-C Peptide Synthesis <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 23 November 2026; doi:10.1038/s41586-026-11448-wContinuous N-to-C Peptide Synthesis</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 11 月 23 日； doi:10.1038/s41586-026-11448-w连续N-C肽合成</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41586-026-11448-w" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">03</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">Architecture of the poxvirus early-transcription machinery and portal complex</h3>
+          <p class="card-title-zh no-math">🌐 痘病毒早期转录机制和门户复合体的结构</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 23 November 2026; doi:10.1038/s41586-026-11458-8Architecture of the poxvirus early-transcription machinery and portal complex <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 23 November 2026; doi:10.1038/s41586-026-11458-8Architecture of the poxvirus early-transcription machinery and portal complex</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 11 月 23 日； doi:10.1038/s41586-026-11458-8痘病毒早期转录机制和门户复合体的体系结构</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41586-026-11458-8" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">04</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">Build for the future climate — or waste trillions of dollars</h3>
+          <p class="card-title-zh no-math">🌐 为未来气候而建设——否则将浪费数万亿美元</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 23 November 2026; doi:10.1038/d41586-026-03722-8Development planning needs a permanent system that connects climate projections to the decisions that shape what infrastructure gets built. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 23 November 2026; doi:10.1038/d41586-026-03722-8Development planning needs a permanent system that connects climate projections to the decisions that shape what infrastructure gets built.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 11 月 23 日； doi:10.1038/d41586-026-03722-8发展规划需要一个永久系统，将气候预测与决定基础设施建设的决策联系起来。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-03722-8" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">05</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">‘Mozart of maths’ Terence Tao is your guide to what underpins reality</h3>
+          <p class="card-title-zh no-math">🌐 “数学莫扎特”陶哲轩是你了解支撑现实的指南</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 23 November 2026; doi:10.1038/d41586-026-03720-wA Fields Medallist reveals how curiosity about numbers can lead to solutions in the real world. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 23 November 2026; doi:10.1038/d41586-026-03720-wA Fields Medallist reveals how curiosity about numbers can lead to solutions in the real world.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 11 月 23 日； doi:10.1038/d41586-026-03720-wA 菲尔兹奖得主揭示了对数字的好奇心如何在现实世界中带来解决方案。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-03720-w" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">06</span>
+            <span class="source-chip" title="Nature 主刊">Nature 主刊</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">How to make climate anxiety your superpower</h3>
+          <p class="card-title-zh no-math">🌐 如何让气候焦虑成为你的超能力</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature, Published online: 23 November 2026; doi:10.1038/d41586-026-03818-1Climate change can provoke anxiety in many. Here’s how one Nature reporter channelled his anxiety into action. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature, Published online: 23 November 2026; doi:10.1038/d41586-026-03818-1Climate change can provoke anxiety in many. Here’s how one Nature reporter channelled his anxiety into action.</p>
+            <p class="card-summary-zh no-math">《自然》，在线发表：2026 年 11 月 23 日； doi:10.1038/d41586-026-03818-1气候变化会引起许多人的焦虑。以下是一位《自然》杂志记者如何将他的焦虑转化为行动。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/d41586-026-03818-1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">07</span>
+            <span class="source-chip" title="Nature Physics">Nature Physics</span>
+            
+            
+            <span class="journal-date">2026-11-16 00:00</span>
+          </div>
+          <h3 class="card-title">150 years proving fundamental science is worth the wait</h3>
+          <p class="card-title-zh no-math">🌐 150 年的历史证明基础科学值得等待</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Physics, Published online: 16 November 2026; doi:10.1038/s41567-026-03538-3Founded in 1876, the Indian Association for the Cultivation of Science created an early space for Indians to pursue science. Its achievements offer valuable lessons for strengthening today’s research landscape in India… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Physics, Published online: 16 November 2026; doi:10.1038/s41567-026-03538-3Founded in 1876, the Indian Association for the Cultivation of Science created an early space for Indians to pursue science. Its achievements offer valuable lessons for strengthening today’s research landscape in India.</p>
+            <p class="card-summary-zh no-math">《自然物理学》，在线发布：2026 年 11 月 16 日； doi:10.1038/s41567-026-03538-3印度科学培育协会成立于1876年，为印度人追求科学创造了早期的空间。它的成就为加强印度当今的研究格局提供了宝贵的经验教训。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41567-026-03538-3" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">08</span>
+            <span class="source-chip" title="Nature Physics">Nature Physics</span>
+            
+            
+            <span class="journal-date">2026-11-16 00:00</span>
+          </div>
+          <h3 class="card-title">Extension of coherence time beyond breakeven point using only drives and dissipation</h3>
+          <p class="card-title-zh no-math">🌐 仅使用驱动和耗散即可将相干时间延长至盈亏平衡点以上</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Physics, Published online: 16 November 2026; doi:10.1038/s41567-026-03528-5An autonomous quantum error correction protocol based on engineered drives and dissipation extends the coherence time of a bosonic logical qubit beyond that of the best physical qubit in the same system. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Physics, Published online: 16 November 2026; doi:10.1038/s41567-026-03528-5An autonomous quantum error correction protocol based on engineered drives and dissipation extends the coherence time of a bosonic logical qubit beyond that of the best physical qubit in the same system.</p>
+            <p class="card-summary-zh no-math">《自然物理学》，在线发布：2026 年 11 月 16 日； doi:10.1038/s41567-026-03528-5基于工程驱动和耗散的自主量子纠错协议将玻色逻辑量子位的相干时间延长到超过同一系统中最佳物理量子位的相干时间。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41567-026-03528-5" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">09</span>
+            <span class="source-chip" title="Nature Physics">Nature Physics</span>
+            
+            
+            <span class="journal-date">2026-11-16 00:00</span>
+          </div>
+          <h3 class="card-title">Extending qubit lifetime beyond break-even and enhancing quantum sensing by autonomous quantum error correction</h3>
+          <p class="card-title-zh no-math">🌐 通过自主量子纠错将量子位寿命延长至盈亏平衡并增强量子传感</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Physics, Published online: 16 November 2026; doi:10.1038/s41567-026-03493-zA measurement-free quantum error-correction protocol is shown to extend the lifetime of a bosonic logical qubit beyond the best physical qubit in the same system. This also offers prospects for enhanced quantum sensing… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Physics, Published online: 16 November 2026; doi:10.1038/s41567-026-03493-zA measurement-free quantum error-correction protocol is shown to extend the lifetime of a bosonic logical qubit beyond the best physical qubit in the same system. This also offers prospects for enhanced quantum sensing.</p>
+            <p class="card-summary-zh no-math">《自然物理学》，在线发布：2026 年 11 月 16 日； doi:10.1038/s41567-026-03493-z 无需测量的量子纠错协议被证明可以将玻色逻辑量子位的寿命延长到超过同一系统中最佳物理量子位。这也为增强量子传感提供了前景。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41567-026-03493-z" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">10</span>
+            <span class="source-chip" title="Nature Physics">Nature Physics</span>
+            
+            
+            <span class="journal-date">2026-11-13 00:00</span>
+          </div>
+          <h3 class="card-title">Just publish it</h3>
+          <p class="card-title-zh no-math">🌐 就发布吧</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Physics, Published online: 13 November 2026; doi:10.1038/s41567-026-03524-9Just publish it <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Physics, Published online: 13 November 2026; doi:10.1038/s41567-026-03524-9Just publish it</p>
+            <p class="card-summary-zh no-math">《自然物理学》，在线发布：2026 年 11 月 13 日； doi:10.1038/s41567-026-03524-9发布即可</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41567-026-03524-9" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">11</span>
+            <span class="source-chip" title="Nature Physics">Nature Physics</span>
+            
+            
+            <span class="journal-date">2026-11-12 00:00</span>
+          </div>
+          <h3 class="card-title">Optimal learning of quantum channels in diamond distance</h3>
+          <p class="card-title-zh no-math">🌐 钻石距离量子通道的优化学习</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Physics, Published online: 12 November 2026; doi:10.1038/s41567-026-03499-7Quantum channels can be used to describe the evolution of quantum states, including both unitary evolution and measurement. Now the optimal number of uses needed to learn an unknown channel to any fixed accuracy has be… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Physics, Published online: 12 November 2026; doi:10.1038/s41567-026-03499-7Quantum channels can be used to describe the evolution of quantum states, including both unitary evolution and measurement. Now the optimal number of uses needed to learn an unknown channel to any fixed accuracy has been found.</p>
+            <p class="card-summary-zh no-math">《自然物理学》，在线发布：2026 年 11 月 12 日； doi:10.1038/s41567-026-03499-7量子通道可用于描述量子态的演化，包括幺正演化和测量。现在已经找到了将未知通道学习到任何固定精度所需的最佳使用次数。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41567-026-03499-7" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">12</span>
+            <span class="source-chip" title="Nature Physics">Nature Physics</span>
+            
+            
+            <span class="journal-date">2026-11-11 00:00</span>
+          </div>
+          <h3 class="card-title">Altermagnetism in a new light</h3>
+          <p class="card-title-zh no-math">🌐 新视角下的交变磁学</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Physics, Published online: 11 November 2026; doi:10.1038/s41567-026-03532-9Altermagnets host spin-split bands despite zero net magnetization. A photonic crystal now reproduces this symmetry-driven phenomenon using circular polarization as a spin analogue. <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Physics, Published online: 11 November 2026; doi:10.1038/s41567-026-03532-9Altermagnets host spin-split bands despite zero net magnetization. A photonic crystal now reproduces this symmetry-driven phenomenon using circular polarization as a spin analogue.</p>
+            <p class="card-summary-zh no-math">《自然物理学》，在线发布：2026 年 11 月 11 日； doi:10.1038/s41567-026-03532-9尽管净磁化强度为零，Altermagnets 仍然存在自旋分裂能带。现在，光子晶体使用圆偏振作为自旋模拟来重现这种对称驱动的现象。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41567-026-03532-9" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">13</span>
+            <span class="source-chip" title="Nature Communications">Nature Communications</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">ORE1 stabilizes PIF4 protein through a UBP12/UBP13-dependent regulatory module in thermomorphogenesis</h3>
+          <p class="card-title-zh no-math">🌐 ORE1 通过热形态发生中依赖于 UBP12/UBP13 的调节模块稳定 PIF4 蛋白</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79802-0Plants adapt their growth to warmth, but how aging signals tune protein stability remains unclear. Here, the authors show that the senescence factor ORE1 acts as a scaffold to stabilize the heat regulator PIF4 v… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79802-0Plants adapt their growth to warmth, but how aging signals tune protein stability remains unclear. Here, the authors show that the senescence factor ORE1 acts as a scaffold to stabilize the heat regulator PIF4 via UBP12/UBP13-mediated deubiquitination, driving warmth induced growth.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 11 月 23 日； doi:10.1038/s41467-026-79802-0植物使生长适应温暖，但衰老信号如何调节蛋白质稳定性仍不清楚。在这里，作者表明，衰老因子 ORE1 作为支架，通过 UBP12/UBP13 介导的去泛素化来稳定热调节因子 PIF4，从而驱动温暖诱导的生长。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-79802-0" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">14</span>
+            <span class="source-chip" title="Nature Communications">Nature Communications</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">A conceptual analysis of One Health and Person-Centred Practice</h3>
+          <p class="card-title-zh no-math">🌐 “同一个健康”和以人为本的实践的概念分析</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79922-7This Review examines how One Health and person-centred practice can strengthen each other. The authors argue that care should account for animal and ecosystem health, while One Health should attend to people’s l… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79922-7This Review examines how One Health and person-centred practice can strengthen each other. The authors argue that care should account for animal and ecosystem health, while One Health should attend to people’s lived experience.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 11 月 23 日； doi:10.1038/s41467-026-79922-7本次审查探讨了“One Health”和以人为本的实践如何相互加强。作者认为，护理应该考虑动物和生态系统的健康，而同一个健康应该关注人们的生活经历。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-79922-7" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">15</span>
+            <span class="source-chip" title="Nature Communications">Nature Communications</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">Non Hermitian synthetic phase shifter with topologically protected phase control via tunable losses</h3>
+          <p class="card-title-zh no-math">🌐 非埃尔米特合成移相器，通过可调谐损耗进行拓扑保护相位控制</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79534-1Programmable photonic circuits typically rely on refractive-index modulation for active control, limiting scalability. Here, authors develop and validate a synthetic phase-shifter framework using optical loss mo… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79534-1Programmable photonic circuits typically rely on refractive-index modulation for active control, limiting scalability. Here, authors develop and validate a synthetic phase-shifter framework using optical loss modulation to achieve full-cycle phase control protected by topological quantities.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 11 月 23 日； doi:10.1038/s41467-026-79534-1可编程光子电路通常依赖折射率调制进行主动控制，限制了可扩展性。在这里，作者开发并验证了一种使用光损耗调制的合成移相器框架，以实现受拓扑量保护的全周期相位控制。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-79534-1" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">16</span>
+            <span class="source-chip" title="Nature Communications">Nature Communications</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">Biomass-based platform for pesticide management balancing field efficacy with postharvest residue via dynamic adhesion switch</h3>
+          <p class="card-title-zh no-math">🌐 基于生物质的农药管理平台，通过动态粘附开关平衡田间药效和采后残留</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79321-yPesticide formulations must balance two competing requirements—robust adhesion during cultivation and efficient removal in postharvest. Here, the authors developed a thermoresponsive biomass-based dynamic adhesi… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79321-yPesticide formulations must balance two competing requirements—robust adhesion during cultivation and efficient removal in postharvest. Here, the authors developed a thermoresponsive biomass-based dynamic adhesion switch and constructed a Pickering emulsion system loaded with the UV-sensitive pesticide emamect</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 11 月 23 日； doi:10.1038/s41467-026-79321-y农药制剂必须平衡两个相互竞争的要求——种植期间的牢固粘附和收获后的有效去除。在这里，作者开发了一种基于生物质的热响应动态粘附开关，并构建了装载有紫外线敏感农药 emamect 的 Pickering 乳液系统</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-79321-y" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">17</span>
+            <span class="source-chip" title="Nature Communications">Nature Communications</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">Mesophase-induced vitrification in coordination polymers via aliphatic chain dynamics</h3>
+          <p class="card-title-zh no-math">🌐 通过脂肪链动力学介导配位聚合物的玻璃化</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79687-zCoordination-polymer glasses offer structural functionality and processability but are hindered by poor thermal stability and high melting points. Here, the authors report mesophase-induced vitrification in magn… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79687-zCoordination-polymer glasses offer structural functionality and processability but are hindered by poor thermal stability and high melting points. Here, the authors report mesophase-induced vitrification in magnesium-based frameworks, enabling glass formation without melting while preserving network integrity </p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 11 月 23 日； doi:10.1038/s41467-026-79687-z 配位聚合物玻璃具有结构功能和可加工性，但热稳定性差和熔点高。在此，作者报告了镁基框架中的中间相诱导玻璃化，从而无需熔化即可形成玻璃，同时保持网络完整性</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-79687-z" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">18</span>
+            <span class="source-chip" title="Nature Communications">Nature Communications</span>
+            
+            
+            <span class="journal-date">2026-11-23 00:00</span>
+          </div>
+          <h3 class="card-title">Quasi-degenerate cation occupation enables oxygen-vacancy defect healing in nonlinear optical crystals</h3>
+          <p class="card-title-zh no-math">🌐 准简并阳离子占据能够修复非线性光学晶体中的氧空位缺陷</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79746-5A quasi-degenerate cation occupation strategy offers a pathway to overcome substitution-induced defects in functional crystals. Its validation in La3TiGa5O14 demonstrates effective oxygen-vacancy healing and imp… <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Nature Communications, Published online: 23 November 2026; doi:10.1038/s41467-026-79746-5A quasi-degenerate cation occupation strategy offers a pathway to overcome substitution-induced defects in functional crystals. Its validation in La3TiGa5O14 demonstrates effective oxygen-vacancy healing and improved nonlinear optical performance.</p>
+            <p class="card-summary-zh no-math">《自然通讯》，在线发布：2026 年 11 月 23 日； doi:10.1038/s41467-026-79746-5A 准简并阳离子占据策略提供了克服功能晶体中取代引起的缺陷的途径。它在 La3TiGa5O14 中的验证证明了有效的氧空位修复和改进的非线性光学性能。</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.nature.com/articles/s41467-026-79746-5" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">19</span>
+            <span class="source-chip" title="Science">Science</span>
+            
+            
+            <span class="journal-date">2026-11-23 11:35</span>
+          </div>
+          <h3 class="card-title">Tiny tracking device documents a record-breaking hummingbird journey</h3>
+          <p class="card-title-zh no-math">🌐 微型跟踪设备记录了破纪录的蜂鸟旅程</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Solar-powered transmitter allows researchers to follow a bird’s 6526-kilometer migration from Alabama to Alaska <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Solar-powered transmitter allows researchers to follow a bird’s 6526-kilometer migration from Alabama to Alaska</p>
+            <p class="card-summary-zh no-math">太阳能发射器让研究人员能够追踪鸟类从阿拉巴马州到阿拉斯加 6526 公里的迁徙过程</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.science.org/content/article/tiny-tracking-device-documents-record-breaking-hummingbird-journey" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">20</span>
+            <span class="source-chip" title="Science">Science</span>
+            
+            
+            <span class="journal-date">2026-11-23 11:00</span>
+          </div>
+          <h3 class="card-title">Fire at Brazilian university scorches research into debilitating mosquito-borne disease</h3>
+          <p class="card-title-zh no-math">🌐 巴西大学火灾烧毁了对蚊媒疾病的研究</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">More than 80,000 samples from patients with chikungunya were lost when fire struck the Federal University of Pernambuco last month <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">More than 80,000 samples from patients with chikungunya were lost when fire struck the Federal University of Pernambuco last month</p>
+            <p class="card-summary-zh no-math">上个月伯南布哥联邦大学发生火灾，导致超过 80,000 份基孔肯雅热患者样本丢失</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.science.org/content/article/fire-brazilian-university-scorches-research-debilitating-mosquito-borne-disease" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">21</span>
+            <span class="source-chip" title="Science">Science</span>
+            
+            
+            <span class="journal-date">2026-11-20 04:15</span>
+          </div>
+          <h3 class="card-title">Scientists control a virtual fruit fly with map of insect’s brain</h3>
+          <p class="card-title-zh no-math">🌐 科学家利用昆虫大脑图谱控制虚拟果蝇</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Modeling effort aims to predict how neuron activity drives animal movement <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Modeling effort aims to predict how neuron activity drives animal movement</p>
+            <p class="card-summary-zh no-math">建模工作旨在预测神经元活动如何驱动动物运动</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.science.org/content/article/scientists-control-virtual-fruit-fly-map-insect-s-brain" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">22</span>
+            <span class="source-chip" title="Science">Science</span>
+            
+            
+            <span class="journal-date">2026-11-20 07:35</span>
+          </div>
+          <h3 class="card-title">AI may have solved math’s greatest mystery. Can humans understand the answer?</h3>
+          <p class="card-title-zh no-math">🌐 人工智能可能已经解决了数学最大的谜团。人类能理解答案吗？</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Anthropic researcher says Claude cracked 166-year-old Riemann hypothesis, but sprawling proof could take years to decipher <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Anthropic researcher says Claude cracked 166-year-old Riemann hypothesis, but sprawling proof could take years to decipher</p>
+            <p class="card-summary-zh no-math">人类研究人员称克劳德破解了 166 年前的黎曼猜想，但庞大的证据可能需要数年时间才能破译</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.science.org/content/article/ai-may-have-solved-math-s-greatest-mystery-can-humans-understand-answer" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">23</span>
+            <span class="source-chip" title="Science">Science</span>
+            
+            
+            <span class="journal-date">2026-11-19 02:00</span>
+          </div>
+          <h3 class="card-title">Killing more sea lions won’t help endangered salmon recover, model suggests</h3>
+          <p class="card-title-zh no-math">🌐 模型表明，杀死更多海狮无助于濒临灭绝的鲑鱼恢复</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Surprising result contrasts with earlier studies and complicates policy debates about culling <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Surprising result contrasts with earlier studies and complicates policy debates about culling</p>
+            <p class="card-summary-zh no-math">令人惊讶的结果与早期的研究形成鲜明对比，并使有关扑杀的政策辩论变得复杂</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.science.org/content/article/killing-more-sea-lions-won-t-help-endangered-salmon-recover-model-suggests" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="seq">24</span>
+            <span class="source-chip" title="Science">Science</span>
+            
+            
+            <span class="journal-date">2026-11-19 04:15</span>
+          </div>
+          <h3 class="card-title">Flawed research papers should be retracted faster, U.S. academy urges</h3>
+          <p class="card-title-zh no-math">🌐 美国科学院敦促尽快撤回有缺陷的研究论文</p>
+          
+          <p class="card-summary-short no-math" onclick="toggleCard(this)">Report recommends deadlines and destigmatizing errors <span class="more-hint">…展开全文 ▾</span></p>
+          <div class="card-summary-full">
+            <p class="card-summary-en">Report recommends deadlines and destigmatizing errors</p>
+            <p class="card-summary-zh no-math">报告建议截止日期并消除错误</p>
+          </div>
+          <button class="expand-btn" type="button" aria-expanded="false" onclick="toggleCard(this)">展开全文 ▾</button>
+          <div class="card-foot">
+            <a class="btn-primary" href="https://www.science.org/content/article/flawed-research-papers-should-be-retracted-faster-u-s-academy-urges" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+            
+          </div>
+        </article>
+        </div>
+      </section>
+</main>
+<section class="ext-res"><h3>🔗 延伸资源</h3><div class="ext-cols"><div class="ext-col"><h4>综合热榜</h4><a href="https://tophub.today" target="_blank" rel="noopener noreferrer">今日热榜</a><a href="https://top.baidu.com/board" target="_blank" rel="noopener noreferrer">百度热搜</a><a href="https://s.weibo.com/top/summary" target="_blank" rel="noopener noreferrer">微博热搜</a><a href="https://www.bilibili.com/v/popular/all" target="_blank" rel="noopener noreferrer">B站热门</a></div><div class="ext-col"><h4>科技 / AI</h4><a href="https://news.ycombinator.com" target="_blank" rel="noopener noreferrer">Hacker News</a><a href="https://www.reddit.com/r/technology/" target="_blank" rel="noopener noreferrer">Reddit · technology</a><a href="https://huggingface.co/papers" target="_blank" rel="noopener noreferrer">Hugging Face Papers</a><a href="https://paperswithcode.com" target="_blank" rel="noopener noreferrer">Papers with Code</a></div><div class="ext-col"><h4>学术 / 物理</h4><a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://www.semanticscholar.org" target="_blank" rel="noopener noreferrer">Semantic Scholar</a><a href="https://www.nature.com" target="_blank" rel="noopener noreferrer">Nature</a></div><div class="ext-col"><h4>新闻聚合</h4><a href="https://news.google.com" target="_blank" rel="noopener noreferrer">Google News</a><a href="https://ground.news" target="_blank" rel="noopener noreferrer">Ground News</a><a href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer">BBC News</a><a href="https://www.news.cn" target="_blank" rel="noopener noreferrer">新华社</a></div></div><p class="ext-note">以上为同类信息聚合 / 新闻站点，供延伸阅读 · 本站仅聚合公开热榜与新闻接口，与所列站点无隶属关系</p></section>
+<footer>
+  共 <strong>18</strong> 篇 · 数据来源 arXiv.org + 前沿期刊（Nature 主刊 / Nature Physics / Nature Communications / Science / PRL）· 时间已转换为北京时间 · 摘要悬停可看全文 · 数学公式由 <a href="https://www.mathjax.org" target="_blank" rel="noopener noreferrer">MathJax</a> 渲染（需联网）· 中文译文由 Google 翻译（仅供参考，以英文原文为准）
+</footer>
+<script>
+  (function(){
+    try {
+      var b = document.getElementById('zh-toggle');
+      if (localStorage.getItem('arxiv-zh') === 'off') { document.body.classList.add('zh-hidden'); if(b) b.classList.add('off'); }
+      if (b) b.addEventListener('click', function(){
+        document.body.classList.toggle('zh-hidden');
+        localStorage.setItem('arxiv-zh', document.body.classList.contains('zh-hidden') ? 'off' : 'on');
+        b.classList.toggle('off');
+      });
+    } catch(e) {}
+  })();
+
+  // 摘要展开/收起：点短摘要或按钮均可切换，更新按钮文案与 aria
+  function toggleCard(el) {{
+    try {{
+      var card = el.closest('.card');
+      if (!card) return;
+      var on = card.classList.toggle('expanded');
+      var btn = card.querySelector('.expand-btn');
+      if (btn) {{
+        btn.textContent = on ? '收起 ▴' : '展开全文 ▾';
+        btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+      }}
+      var hint = card.querySelector('.more-hint');
+      if (hint) hint.style.display = on ? 'none' : '';
+    }} catch(e) {{}}
+  }}
+</script>
+
+<script>
+  (function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function sync() {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.innerHTML = dark ? '☀️ 亮色' : '🌙 暗色';
+    }
+    sync();
+    btn.addEventListener('click', function() {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var next = dark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch(e) {}
+      sync();
+    });
+  })();
+  (function() {
+    var h = document.getElementById('nav-hamburger');
+    var nav = document.querySelector('.nav');
+    if (!h || !nav) return;
+    function set(open) { nav.classList.toggle('menu-open', open); h.textContent = open ? '✕' : '☰'; h.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+    h.addEventListener('click', function() { set(!nav.classList.contains('menu-open')); });
+    Array.prototype.forEach.call(nav.querySelectorAll('.nav-link'), function(a) { a.addEventListener('click', function() { set(false); }); });
+    document.addEventListener('click', function(e) { if (nav.classList.contains('menu-open') && !nav.contains(e.target)) set(false); });
+  })();
+</script>
+</body>
+</html>
