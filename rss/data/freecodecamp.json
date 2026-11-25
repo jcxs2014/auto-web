@@ -5,6 +5,16 @@
   "lang": "en",
   "entries": [
     {
+      "title": "Pass the Microsoft Azure AI Fundamentals (AI-901) Certification Exam",
+      "url": "https://www.freecodecamp.org/news/pass-the-microsoft-azure-ai-fundamentals-ai-901-certification-exam/",
+      "summary": "The Microsoft Azure AI Fundamentals (AI-901) is an entry-level certification that covers AI concepts, Microsoft Foundry, and a set of Azure AI services. It replaces the AI-900, and its exam guide is o",
+      "source": "freeCodeCamp",
+      "extra": "",
+      "date": "2026-11-24 15:54",
+      "ts": 1795535689,
+      "content": "<p>The Microsoft Azure AI Fundamentals (AI-901) is an entry-level certification that covers AI concepts, Microsoft Foundry, and a set of Azure AI services. It replaces the AI-900, and its exam guide is organized into just two domains.</p>\n    <p>We just published a course on the freeCodeCamp.org YouTube channel that will help you prepare for and pass the AI-901 exam. This course is taught by Andrew Brown of ExamPro.</p>\n    <p>The course combines lectures with hands-on labs that you complete in your own Azure account. You will need some knowledge of Python syntax, and Andrew recommends taking Azure Fundamentals first, since this course does not cover basic Azure knowledge.</p>\n    <p>In this course, you will learn:</p>\n    <ul>\n      <li>Machine Learning & AI Concepts<br></br>How datasets, labeling, features, regression, classification, clustering, and neural networks fit into a simple ML pipeline.</li>\n      <li>Generative AI Foundations<br></br>How large language models work, including transformer architecture, tokenization, embeddings, positional encoding, and attention.</li>\n      <li>Responsible AI<br></br>The principles of fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability, along with Microsoft's Responsible AI Standard V2.</li>\n      <li>Microsoft Foundry & Azure AI Services<br></br>How to compare and deploy models from the Foundry model catalog and work with Azure Speech, Azure Language, OCR, and Content Understanding.</li>\n      <li>Prompt Engineering & Model Testing<br></br>How system prompts, zero-shot and few-shot prompting, chaining, and chain of thought work in the Foundry playground, plus how model pricing is calculated.</li>\n      <li>Foundry Applications & Agents<br></br>How to use the Microsoft Foundry SDK to connect to a deployed model, control tool calls, and create a Foundry agent.</li>\n    </ul>\n    <p>Watch the full course on the <a href=\"https://youtu.be/rCx4SCd4N-s\">freeCodeCamp.org YouTube channel</a> (4.5-hour watch).</p>"
+    },
+    {
       "title": "How to Use the GitHub CLI with GitHub Actions",
       "url": "https://www.freecodecamp.org/news/how-to-use-the-github-cli-with-github-actions/",
       "summary": "GitHub CLI is a command-line tool that lets you manage GitHub's web features right in your local terminal. You can manage repositories, issues, pull requests, and automation workflows without needing",
