@@ -5,6 +5,56 @@
   "lang": "en",
   "entries": [
     {
+      "title": "The Forecast for Christmas Is Muddy",
+      "url": "https://www.theatlantic.com/science/2026/11/christmas-weather-el-nino-polar-vortex/689554/?utm_source=feed",
+      "summary": "El Niño is lowering the chance of snow across much of the country. But the polar vortex could still intervene.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-28 14:00",
+      "ts": 1795874400,
+      "content": ""
+    },
+    {
+      "title": "The Familiar Strangeness of Home",
+      "url": "https://www.theatlantic.com/newsletters/2026/11/familiar-strangeness-family-home-nostalgia/689592/?utm_source=feed",
+      "summary": "The complicated nostalgia of reconnecting with our former self",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-28 13:00",
+      "ts": 1795870800,
+      "content": ""
+    },
+    {
+      "title": "Maybe She’s Born With It. Maybe It’s Aura Farming.",
+      "url": "https://www.theatlantic.com/culture/2026/11/aura-farming-modern-cool/689472/?utm_source=feed",
+      "summary": "Online, charisma is something that can be optimized—and lost.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-28 13:00",
+      "ts": 1795870800,
+      "content": ""
+    },
+    {
+      "title": "The Civil-Rights Law That Activists Say Prohibits Civil-Rights Programs",
+      "url": "https://www.theatlantic.com/ideas/2026/11/civil-rights-discrimination-law/689565/?utm_source=feed",
+      "summary": "Conservative advocacy groups are turning to an 1866 statute to say that scholarships and other efforts to help minority groups are no longer legal.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-28 12:00",
+      "ts": 1795867200,
+      "content": ""
+    },
+    {
+      "title": "The Houthis Are the Future of Warfare",
+      "url": "https://www.theatlantic.com/ideas/2026/11/houthis-future-warfare-technology/689559/?utm_source=feed",
+      "summary": "The fate of the Saudis holds lessons for the U.S.",
+      "source": "大西洋月刊",
+      "extra": "",
+      "date": "2026-11-28 12:00",
+      "ts": 1795867200,
+      "content": ""
+    },
+    {
       "title": "Jared Kushner’s Strategic Pixie Dust",
       "url": "https://www.theatlantic.com/ideas/2026/11/kushner-ukraine/689599/?utm_source=feed",
       "summary": "Deterrence is the by-product of the will and ability to fight—not a substitute for those qualities.",
@@ -52,56 +102,6 @@
       "extra": "",
       "date": "2026-11-27 12:00",
       "ts": 1795780800,
-      "content": ""
-    },
-    {
-      "title": "A Little The Crucible. A Little The Craft. A Lot of Catholic Guilt.",
-      "url": "https://www.theatlantic.com/culture/2026/11/the-body-netflix-show-girlhood-catholicism/689595/?utm_source=feed",
-      "summary": "Netflix’s religious-teen drama The Body has caused a stir, but its point is surprisingly simple.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-26 14:00",
-      "ts": 1795701600,
-      "content": ""
-    },
-    {
-      "title": "2026 Close-Up Photographer of the Year: Shortlisted Images",
-      "url": "https://www.theatlantic.com/photography/2026/11/2026-close-up-photographer-year-shortlisted-images/689396/?utm_source=feed",
-      "summary": "Selected images from this annual competition that celebrates photographers who reveal the hidden world through “macro, micro and close-up imagery.”",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-26 14:00",
-      "ts": 1795701600,
-      "content": ""
-    },
-    {
-      "title": "This Thanksgiving, I’m Grateful for Claude",
-      "url": "https://www.theatlantic.com/family/2026/11/ai-claude-family-dinner/689550/?utm_source=feed",
-      "summary": "In one important way, AI has transformed my family’s life.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-26 13:00",
-      "ts": 1795698000,
-      "content": ""
-    },
-    {
-      "title": "Measles, MAHA, and the Future of Disease in America",
-      "url": "https://www.theatlantic.com/podcasts/2026/11/measles-maha-and-future-disease-america/689567/?utm_source=feed",
-      "summary": "How RFK Jr.’s uneasy coalition is fracturing",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-26 11:00",
-      "ts": 1795690800,
-      "content": ""
-    },
-    {
-      "title": "The Scandinavian Compromise",
-      "url": "https://www.theatlantic.com/ideas/2026/11/scandinavia-inclusion-dynamism-welfare-sweden/689556/?utm_source=feed",
-      "summary": "America needs a new model.",
-      "source": "大西洋月刊",
-      "extra": "",
-      "date": "2026-11-26 11:00",
-      "ts": 1795690800,
       "content": ""
     }
   ]
